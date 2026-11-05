@@ -34,6 +34,11 @@ class MT5:
         sym, _ = self.resolve(symbol); t = self.m.symbol_info_tick(sym); return dict(symbol=sym, bid=t.bid, ask=t.ask)
     def positions(self):
         self.connect(); return [dict(ticket=p.ticket, symbol=p.symbol, side='BUY' if p.type == 0 else 'SELL', volume=p.volume, entry=p.price_open, sl=p.sl, tp=p.tp, pnl=p.profit) for p in (self.m.positions_get() or [])]
+    def pending(self):
+        """Resting (pending) orders: they can fill later, so the guard counts them like positions."""
+        self.connect(); return [dict(ticket=o.ticket, symbol=o.symbol) for o in (getattr(self.m, 'orders_get', lambda **k: None)() or [])]
+    def cancel_all_pending(self):
+        return [dict(ticket=o['ticket'], symbol=o['symbol'], **self.cancel(o['ticket'])) for o in self.pending()]
     def day_pnl(self):
         self.connect(); t0 = dt.datetime.now(dt.timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
         deals = self.m.history_deals_get(t0, dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=1)) or []
@@ -43,7 +48,9 @@ class MT5:
         px = float(price) if (type_ == 'LIMIT' and price) else (t.ask if side == 'BUY' else t.bid)
         ot = m.ORDER_TYPE_BUY if side == 'BUY' else m.ORDER_TYPE_SELL
         if stop is not None and ((side == 'BUY' and stop >= px) or (side == 'SELL' and stop <= px)): raise MT5Error('the stop is on the wrong side of the price')
-        loss1 = abs(m.order_calc_profit(ot, sym, 1.0, px, float(stop))) if stop is not None else None    # loss for 1 lot if the stop is hit
+        loss1 = m.order_calc_profit(ot, sym, 1.0, px, float(stop)) if stop is not None else None         # loss for 1 lot if the stop is hit
+        if stop is not None and loss1 is None: raise MT5Error(f'MT5 could not compute the risk for {sym}: {m.last_error()}')
+        loss1 = abs(loss1) if loss1 is not None else None
         if volume is None:
             if risk_usd is None or not loss1: raise MT5Error('give a volume in lots, or a risk in USD together with a stop')
             volume = risk_usd/loss1
@@ -70,7 +77,8 @@ class MT5:
             t = self.m.symbol_info_tick(sym); side = 'SELL' if p.type == 0 else 'BUY'
             req = dict(action=self.m.TRADE_ACTION_DEAL, symbol=sym, volume=p.volume, type=self.m.ORDER_TYPE_SELL if side == 'SELL' else self.m.ORDER_TYPE_BUY, position=p.ticket,
                        price=t.bid if side == 'SELL' else t.ask, deviation=int(self.cfg.get('deviation_points', 20)), magic=int(self.cfg.get('magic', 77777)), comment='OMEGA Bridge close')
-            r = self.m.order_send(req); out.append(dict(ticket=p.ticket, retcode=getattr(r, 'retcode', None)))
-        return dict(closed=bool(out), results=out)
+            r = self.m.order_send(req); rc = getattr(r, 'retcode', None)
+            out.append(dict(ticket=p.ticket, retcode=rc, ok=rc == self.m.TRADE_RETCODE_DONE, comment=getattr(r, 'comment', None)))
+        return dict(closed=bool(out) and all(x['ok'] for x in out), results=out)
     def cancel(self, order_id):
         r = self.m.order_send(dict(action=self.m.TRADE_ACTION_REMOVE, order=int(order_id))); return dict(retcode=getattr(r, 'retcode', None))

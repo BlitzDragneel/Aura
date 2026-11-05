@@ -27,6 +27,7 @@ def load_tf(sym, tf):
     src = {"5m": "5m", "15m": "5m", "1h": "1h", "4h": "1h"}[tf]
     d = bt.load(sym, src)[["o", "h", "l", "c", "v", "qv"]]
     d = d[~d.index.duplicated()]
+    d.index = d.index.as_unit("ns")
     step = pd.Timedelta(minutes=TFMIN[src])
     full = pd.date_range(d.index[0], d.index[-1], freq=step, tz="UTC")
     d = d.reindex(full)
@@ -70,8 +71,8 @@ def fund_cum(sym):
     if sym not in _FUND:
         try:
             f = bt.funding(sym)
-            ts = (f.index.astype("int64") // 10**6).values  # ms
-            ts = (np.round(ts / 60000.0) * 60000).astype(np.int64)
+            ts = pd.DatetimeIndex(f.index).as_unit("ms").asi8
+            ts = (np.round(ts / 60000.0) * 60000).astype(np.int64)  # settlement ms, rounded to the minute
             _FUND[sym] = (ts, np.concatenate([[0.0], np.cumsum(f.values)]))
         except FileNotFoundError:
             _FUND[sym] = None
@@ -165,7 +166,7 @@ def to_trades(rows, d, tf, sym, q24, entry, side=1, hold_h=None):
     gross = side * (rows[:, 4] / rows[:, 3] - 1)
     cost = bt.round_trip_cost(np.nan_to_num(q24[ti], nan=0.0), entry=entry, exit="taker")
     held_h = (exit_t - fill_t).total_seconds().values / 3600
-    fund = funding_paid(sym, fill_t.asi8 // 10**6, exit_t.asi8 // 10**6)
+    fund = funding_paid(sym, fill_t.as_unit("ms").asi8, exit_t.as_unit("ms").asi8)
     fund = np.where(held_h > 8, fund, 0.0) * side
     net = gross - cost - fund
     return pd.DataFrame(dict(time=time, sym=sym, exit_time=exit_t, gross=gross, cost=cost, fund=fund, net=net,

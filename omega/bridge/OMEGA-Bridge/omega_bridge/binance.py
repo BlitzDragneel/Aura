@@ -1,9 +1,12 @@
 """Binance USDT-M futures over its REST API: signed requests (HMAC-SHA256), exchange rounding, bracket orders. Testnet by default."""
-import hmac, hashlib, time, math, datetime as dt, urllib.parse
+import hmac, hashlib, time, math, uuid, datetime as dt, urllib.parse
 import httpx
 from . import secrets
 class BinanceError(Exception): pass
 class BinanceTransportError(BinanceError): pass                            # network failure: the request's outcome is unknown
+class BinanceProtectError(BinanceError):
+    """The entry went out but its stop could not be placed. The Bridge has tried to undo the entry; detail says what happened."""
+    def __init__(self, msg, detail): super().__init__(msg); self.detail = detail
 def _dec(step):
     s = ('%.12f' % float(step)).rstrip('0'); return len(s.split('.')[1]) if '.' in s else 0
 def _floor(x, step): return math.floor(x/step + 1e-9)*step
@@ -15,19 +18,19 @@ class Binance:
         k = self._key or secrets.get('binance_key'); s = self._secret or secrets.get('binance_secret')
         if not (k and s): raise BinanceError('no Binance key in the Windows vault: run  python -m omega_bridge setkey binance')
         return k, s
-    def _req(self, method, path, params=None, signed=False, _retry=True):
+    def _req(self, method, path, params=None, signed=False, _retry=True, base=None):
         p = dict(params or {}); headers = {}
         if signed:
             k, s = self._creds(); p['timestamp'] = int(time.time()*1000) + self._offset; p['recvWindow'] = int(self.cfg.get('recv_window', 5000))
             q = urllib.parse.urlencode(p); p['signature'] = hmac.new(s.encode(), q.encode(), hashlib.sha256).hexdigest(); headers['X-MBX-APIKEY'] = k
-        try: r = self.c.request(method, self.base + path, params=p, headers=headers)
+        try: r = self.c.request(method, (base or self.base) + path, params=p, headers=headers)
         except httpx.HTTPError as e:                                           # never let the URL (signed query) reach a message or log
             raise BinanceTransportError(f'Binance unreachable on {path}: {type(e).__name__}') from None
         if r.status_code >= 400:
             try: j = r.json(); code, msg = j.get('code'), j.get('msg')
             except Exception: code, msg = None, r.text[:200]
             if signed and _retry and code == -1021:                            # clock drift: resync with the server once and retry (the request was rejected, so a retry cannot double it)
-                self.sync_time(); return self._req(method, path, params, signed, _retry=False)
+                self.sync_time(); return self._req(method, path, params, signed, _retry=False, base=base)
             raise BinanceError(f'Binance {r.status_code} on {path}: {code}: {msg}')
         return r.json()
     def sync_time(self):
@@ -64,17 +67,56 @@ class Binance:
         o['notional_usd'] = o['quantity']*px; o['risk_usd'] = abs(px - o['stop'])*o['quantity'] if o['stop'] else None; o['has_stop'] = o['stop'] is not None
         if o['stop'] and ((side == 'BUY' and o['stop'] >= px) or (side == 'SELL' and o['stop'] <= px)): raise BinanceError('the stop is on the wrong side of the price')
         return o
+    def pending_entries(self):
+        """Symbols with an open entry order (not a stop/target): a resting LIMIT can fill later, so it counts like a position."""
+        return sorted({x['symbol'] for x in self.open_orders() if str(x.get('reduceOnly')).lower() != 'true' and str(x.get('closePosition')).lower() != 'true'})
+    def key_restrictions(self):
+        """The API key's own permissions (Binance spot API). Live trading is refused when withdrawals are enabled or this cannot be read."""
+        if self._restrictions is None:
+            self._restrictions = self._req('GET', '/sapi/v1/account/apiRestrictions', signed=True, base=self.cfg.get('spot_url', 'https://api.binance.com').rstrip('/'))
+        return self._restrictions
+    def _conditional(self, symbol, side, type_, trigger):
+        p = dict(symbol=symbol, side=side, type=type_, stopPrice=trigger, closePosition='true', workingType='MARK_PRICE')
+        try: return self._req('POST', '/fapi/v1/order', p, signed=True)
+        except BinanceError as e:
+            if '-4120' not in str(e): raise                                    # -4120: conditional orders moved to the Algo Order API (Binance, Dec 2025)
+            a = dict(algoType='CONDITIONAL', symbol=symbol, side=side, type=type_, triggerPrice=trigger, closePosition='true', workingType='MARK_PRICE')
+            return dict(self._req('POST', '/fapi/v1/algoOrder', a, signed=True), via='algoOrder')
+    def _find(self, symbol, cid):
+        try: return self._req('GET', '/fapi/v1/order', {'symbol': symbol, 'origClientOrderId': cid}, signed=True)
+        except BinanceTransportError: raise
+        except BinanceError: return None                                       # -2013: no such order, so it was never placed
+    def _unwind(self, symbol, cid):
+        out = {}
+        try: out['cancel_entry'] = self._req('DELETE', '/fapi/v1/order', {'symbol': symbol, 'origClientOrderId': cid}, signed=True)
+        except BinanceError as e: out['cancel_entry'] = f'not cancelled: {e}'        # filled already (or gone): close below
+        try: out['close'] = self.close(symbol)
+        except BinanceError as e: out['close'] = f'FAILED: {e}'
+        out['unprotected'] = isinstance(out['close'], str); return out
     def send(self, o):
         try: self._req('POST', '/fapi/v1/marginType', {'symbol': o['symbol'], 'marginType': self.cfg.get('margin', 'ISOLATED')}, signed=True)
         except BinanceError as e:
             if '-4046' not in str(e): raise                                     # -4046: already isolated
         self._req('POST', '/fapi/v1/leverage', {'symbol': o['symbol'], 'leverage': int(self.cfg.get('leverage', 1))}, signed=True)
-        p = dict(symbol=o['symbol'], side=o['side'], type=o['type'], quantity=o['quantity'], newOrderRespType='RESULT')
+        cid = 'omega-' + uuid.uuid4().hex[:24]                                  # lets a timed-out entry be looked up instead of re-sent
+        p = dict(symbol=o['symbol'], side=o['side'], type=o['type'], quantity=o['quantity'], newOrderRespType='RESULT', newClientOrderId=cid)
         if o['type'] == 'LIMIT': p.update(price=o['price'], timeInForce='GTC')
-        main = self._req('POST', '/fapi/v1/order', p, signed=True); out = dict(entry=main)
+        try: main = self._req('POST', '/fapi/v1/order', p, signed=True)
+        except BinanceTransportError:
+            try: main = self._find(o['symbol'], cid)
+            except BinanceTransportError: raise BinanceError(f'network failure while sending {o["symbol"]}: the entry may or may not exist (client id {cid}). Check positions in the Binance app now.')
+            if main is None: raise BinanceError('network failure: the entry was not placed (checked)')
+        out = dict(entry=main, client_order_id=cid)
         exit_side = 'SELL' if o['side'] == 'BUY' else 'BUY'
-        if o['stop']: out['stop'] = self._req('POST', '/fapi/v1/order', dict(symbol=o['symbol'], side=exit_side, type='STOP_MARKET', stopPrice=o['stop'], closePosition='true', workingType='MARK_PRICE'), signed=True)
-        if o['target']: out['target'] = self._req('POST', '/fapi/v1/order', dict(symbol=o['symbol'], side=exit_side, type='TAKE_PROFIT_MARKET', stopPrice=o['target'], closePosition='true', workingType='MARK_PRICE'), signed=True)
+        if o['stop']:
+            try: out['stop'] = self._conditional(o['symbol'], exit_side, 'STOP_MARKET', o['stop'])
+            except BinanceError as e:                                           # never leave an entry without its stop
+                out['stop_error'] = str(e); out['unwind'] = self._unwind(o['symbol'], cid)
+                msg = 'the stop could not be placed, so the entry was undone' if not out['unwind']['unprotected'] else 'THE STOP COULD NOT BE PLACED AND THE POSITION COULD NOT BE CLOSED: close it in the Binance app now'
+                raise BinanceProtectError(f'{o["symbol"]}: {msg} ({e})', out)
+        if o['target']:
+            try: out['target'] = self._conditional(o['symbol'], exit_side, 'TAKE_PROFIT_MARKET', o['target'])
+            except BinanceError as e: out['target_error'] = str(e)              # the stop protects the position; the target is optional
         return out
     def close(self, symbol):
         pos = [p for p in self.positions() if p['symbol'] == symbol]
