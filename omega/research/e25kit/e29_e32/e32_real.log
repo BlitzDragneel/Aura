@@ -1,0 +1,11 @@
+33 inputs: ['age', 'beta30', 'clv', 'dvsurge1', 'dvsurge7', 'fund1', 'fund7', 'intraday', 'ma30', 'ma7', 'max30', 'min30', 'pos30', 'range1', 'range_rel', 'res1', 'res3', 'res30', 'res7', 'ret1', 'ret14', 'ret2', 'ret3', 'ret30', 'ret5', 'ret60', 'ret7', 'size', 'skew30', 'vol30', 'vol7', 'volratio', 'zret1']
+real (16,) 0.0001 2024 t +0.82 net +5.4 bp/day 7 s
+real (16,) 0.01 2024 t -0.77 net -6.5 bp/day 48 s
+real (32, 16) 0.0001 2024 t +0.90 net +7.3 bp/day 23 s
+real (32, 16) 0.01 2024 t +0.41 net +2.6 bp/day 44 s
+real (64, 32) 0.0001 2024 t +1.02 net +8.4 bp/day 25 s
+real (64, 32) 0.01 2024 t +0.42 net +3.5 bp/day 67 s
+ridge (reported): 2024 t -0.21 net -1.5
+SELECTED (64, 32) alpha 0.0001 (2024 t +1.02) → FINAL, once:
+{"final": {"mean_bp": -9.557906324206272, "gross_bp": 12.375596046447754, "cost_bp": 5.252351175444814, "fund_bp": -16.68115234375, "pen_bp": 0.0, "t": -0.9824219948620752, "sharpe": -0.7763060270145377, "maxdd": -0.6823649405020206, "long_bp": -3.284435749053955, "short_bp": 15.660033226013184, "active": 1.0, "top5_share": null, "years": {"2025": -5.407154303940323, "2026": -15.107446571081994}}, "maxdd": -0.6823649405020206, "longonly": {"mean_bp": -20.317889645080413, "gross_bp": -7.3373870849609375, "cost_bp": 12.905956305166399, "fund_bp": -0.07454720884561539, "pen_bp": 0.0, "t": -1.2560508379127135, "sharpe": -0.8499085434969785, "maxdd": -0.8956696909313903, "long_bp": -7.3373870849609375, "short_bp": 0.0, "active": 1.0, "top5_share": null, "years": {"2025": -29.297716992926375, "2026": -8.311893374150824}}, "passed": false}
+VERDICT FAIL

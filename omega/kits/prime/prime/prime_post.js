@@ -1,0 +1,178 @@
+<script>/* ═══ PRIME CLIMAX WATCH — round 16's frozen rule on the 40 most-traded Binance USDT perpetuals ═══
+   At an hour's close a coin fell at least 3 of its own hourly standard deviations (σ of the 168 hours before, at least 120),
+   on at least 3× its median volume of those hours, and closed in the top 40% of the hour's range; listed at least 30 days.
+   Buy the next hour's open, close 12 hours later; 0.10% a side. The same rule as the original build's climax watch (which
+   scans every coin and counts funding); here the 40 most-traded coins, without funding, so it is light on a phone.
+   Grade A: the only direction rule that passed a fair test (final test on 324 untouched coins, 19 Oct 2026). Paper only. */
+(function(){
+  'use strict';
+  var H = 3600e3, FAPI = 'https://fapi.binance.com', KEY = 'prime_climax_v1', XKEY = 'prime_xinfo_v1', N = 40;
+  var RULE = { k:3, vk:3, lk:0.6, hold:12, cost:0.001, sigN:168, sigMin:120, vN:168, vMin:120, ageH:720 };
+  var STABLE = { USDCUSDT:1, FDUSDUSDT:1, TUSDUSDT:1, BUSDUSDT:1, USDPUSDT:1, DAIUSDT:1, EURUSDT:1 };
+  var S = load(); S.busy = false;
+  function load(){ try{ var v = JSON.parse(window.PRIME_LS.getItem(KEY) || 'null'); if(v && v.trades) return v; }catch(e){} return { trades:[], lastH:null, scans:0, msg:'' }; }
+  function save(){ var c = Object.assign({}, S); delete c.busy; try{ window.PRIME_LS.setItem(KEY, JSON.stringify(c)); }catch(e){} }
+  async function getJSON(u){ var r = await fetch(u); if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }
+  function sleep(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  // ── the rule (pure) ──
+  function rowsOf(kl){ return (kl || []).map(function(k){ return { h:Math.floor(+k[0]/H), o:+k[1], hi:+k[2], lo:+k[3], c:+k[4], v:+k[5] }; }).filter(function(r){ return r.c > 0 && r.hi >= r.lo; }); }
+  function check(rows, i, onboardMs){ if(i < 1) return null; var r = rows[i], p = rows[i-1]; if(!(r.c > 0 && p.c > 0)) return null;
+    if(onboardMs && r.h*H - onboardMs < RULE.ageH*H) return null;
+    var xs = [], vs = []; for(var j = Math.max(1, i - RULE.sigN); j < i; j++){ if(rows[j].c > 0 && rows[j-1].c > 0) xs.push(Math.log(rows[j].c/rows[j-1].c)); }
+    for(j = Math.max(0, i - RULE.vN); j < i; j++) vs.push(rows[j].v);
+    if(xs.length < RULE.sigMin || vs.length < RULE.vMin) return null;
+    var m = xs.reduce(function(a, b){ return a + b; }, 0)/xs.length, sd = Math.sqrt(xs.reduce(function(a, b){ return a + (b - m)*(b - m); }, 0)/(xs.length - 1));
+    vs.sort(function(a, b){ return a - b; }); var med = vs.length % 2 ? vs[(vs.length - 1)/2] : (vs[vs.length/2 - 1] + vs[vs.length/2])/2;
+    var z = sd > 0 ? Math.log(r.c/p.c)/sd : 0, vr = med > 0 ? r.v/med : 0, loc = r.hi > r.lo ? (r.c - r.lo)/(r.hi - r.lo) : 0;
+    return { z:z, vr:vr, loc:loc, fires:z <= -RULE.k && vr >= RULE.vk && loc >= RULE.lk }; }
+  function settle(tr, rows){ var by = {}; rows.forEach(function(r){ by[r.h] = r; }); var eb = by[tr.e], xb = by[tr.e + RULE.hold - 1];
+    if(eb && tr.entry == null) tr.entry = eb.o;
+    if(eb && xb){ tr.exit = xb.c; tr.net = Math.round((tr.exit/tr.entry - 1 - 2*RULE.cost)*1e5)/1e5; tr.status = 'closed'; } return tr; }
+  // ── the scan ──
+  async function universe(){ var t = await getJSON(FAPI + '/fapi/v1/ticker/24hr'); return (t || []).filter(function(x){ return /USDT$/.test(x.symbol) && !STABLE[x.symbol] && +x.quoteVolume > 0; }).sort(function(a, b){ return +b.quoteVolume - +a.quoteVolume; }).slice(0, N).map(function(x){ return x.symbol; }); }
+  async function onboard(){ var X = null; try{ X = JSON.parse(window.PRIME_LS.getItem(XKEY) || 'null'); }catch(e){} if(X && Date.now() - X.at < 24*H) return X.o;
+    try{ var info = await getJSON(FAPI + '/fapi/v1/exchangeInfo'), o = {}; (info.symbols || []).forEach(function(s){ if(s.onboardDate) o[s.symbol] = +s.onboardDate; }); window.PRIME_LS.setItem(XKEY, JSON.stringify({ at:Date.now(), o:o })); return o; }catch(e){ return (X && X.o) || {}; } }
+  async function scan(){ if(S.busy) return 'busy'; var nowH = Math.floor(Date.now()/H), lastClosed = nowH - 1;
+    if(S.lastH != null && S.lastH >= lastClosed && !S.trades.some(function(t){ return t.status === 'open' && nowH >= t.e + RULE.hold; })) return 'Up to date.';
+    if(Date.now() % H < 150e3) return { skip:true, text:'waiting for the hour’s candles to settle', retryIn:H - (Date.now() % H) > 0 ? 160e3 - (Date.now() % H) + 5e3 : 60e3 };
+    S.busy = true; S.msg = 'Scanning…'; render();
+    try{ var syms = await universe(), ob = await onboard(), fired = 0, from = S.lastH == null ? lastClosed : Math.max(S.lastH + 1, lastClosed - 23);
+      var need = {}; syms.forEach(function(s){ need[s] = 1; }); S.trades.forEach(function(t){ if(t.status === 'open') need[t.sym] = 1; });
+      var list = Object.keys(need);
+      for(var i = 0; i < list.length; i++){ var sym = list[i], kl;
+        try{ kl = await getJSON(FAPI + '/fapi/v1/klines?symbol=' + sym + '&interval=1h&limit=200'); }catch(e){ continue; }
+        var rows = rowsOf(kl).filter(function(r){ return r.h < nowH; });
+        if(syms.indexOf(sym) >= 0){ for(var k = 0; k < rows.length; k++){ var h = rows[k].h; if(h < from || h > lastClosed) continue;
+            if(S.trades.some(function(t){ return t.sym === sym && t.t === h; })) continue; var c = check(rows, k, ob[sym]);
+            if(c && c.fires){ S.trades.push({ sym:sym, t:h, e:h + 1, z:Math.round(c.z*100)/100, vr:Math.round(c.vr*10)/10, loc:Math.round(c.loc*100)/100, status:'open' }); fired++; notify(sym, c); } } }
+        S.trades.forEach(function(t){ if(t.sym === sym && t.status === 'open') settle(t, rows); });
+        await sleep(120); }
+      S.trades = S.trades.slice(-500); S.lastH = lastClosed; S.scans++; S.msg = 'Scanned ' + syms.length + ' coins to ' + new Date((lastClosed + 1)*H).toISOString().slice(11, 16) + ' UTC: ' + fired + ' new signal' + (fired === 1 ? '' : 's') + '.'; }
+    catch(e){ S.msg = 'Could not scan (' + (e.message || e) + ').'; S.busy = false; save(); render(); return { error:S.msg }; }
+    S.busy = false; save(); render(); return S.msg; }
+  function notify(sym, c){ try{ if(typeof Notification !== 'undefined' && Notification.permission === 'granted') new Notification('OMEGA Prime · Grade A climax: ' + sym.replace('USDT', ''), { body:'Fell ' + Math.abs(c.z).toFixed(1) + 'σ on ' + c.vr.toFixed(1) + '× volume and closed strong. Rule: buy this hour’s open, close in 12 hours. Paper first; size it at 0.5% risk.' }); }catch(e){} }
+  function stats(){ var c = S.trades.filter(function(t){ return t.status === 'closed'; }), n = c.length, w = c.filter(function(t){ return t.net > 0; }).length, sum = c.reduce(function(a, t){ return a + t.net; }, 0); return { n:n, wins:w, avg:n ? sum/n : null }; }
+  function html(){ var st = stats(), open = S.trades.filter(function(t){ return t.status === 'open'; }), h = '<div class="dp-card"><h3 class="dp-h">Climax watch <span class="dp-grade" style="color:var(--bull)">Grade A · passed a fair test</span></h3>';
+    h += '<p class="dp-p">A coin that falls 3 of its own hourly standard deviations on 3× normal volume and closes in the top 40% of the hour: forced sellers met by buyers. Buy the next open, close 12 hours later. Rare: a few times a month across the market.</p>';
+    h += open.length ? '<table class="mr-tab"><tr><th>Now</th><th>Signal (UTC)</th><th>Entry</th><th>Closes</th></tr>' + open.map(function(t){ return '<tr><td><b>' + t.sym.replace('USDT', '') + '</b> <span class="hint">' + t.z + 'σ, ' + t.vr + '× vol</span></td><td>' + new Date((t.t + 1)*H).toISOString().slice(5, 16).replace('T', ' ') + '</td><td>' + (t.entry != null ? t.entry : 'next open') + '</td><td>' + new Date((t.e + RULE.hold)*H).toISOString().slice(11, 16) + ' UTC</td></tr>'; }).join('') + '</table>' : '<p class="hint">No open climax trade.</p>';
+    h += '<p class="dp-rec"><b>Forward record (this app):</b> ' + (st.n ? st.n + ' closed, ' + Math.round(100*st.wins/st.n) + '% winners, average ' + (st.avg >= 0 ? '+' : '') + (st.avg*100).toFixed(2) + '% after costs.' : 'no closed trades yet.') + '</p><p class="hint">' + S.msg + ' The original build runs the same rule on every coin with funding counted; this one watches the 40 most-traded coins.</p></div>';
+    return h; }
+  function render(){ var b = document.getElementById('climaxBody'); if(b) b.innerHTML = html(); }
+  var JOB = { id:'climax', lane:'live', prio:3, label:'Climax watch (grade A): the 40 most-traded coins, every hour', what:'Checks each closed hour for a forced-selling flush that closes strong, and follows every signal 12 hours to its result.', every:15*60e3, run:scan };
+  window.OMEGA_OPERATOR.jobs().push(JOB);
+  window.OMEGA_CLIMAX = { state:function(){ return S; }, scan:scan, render:render, RULE:RULE, _:{ check:check, settle:settle, rowsOf:rowsOf, stats:stats } };
+})();
+</script>
+<script>/* ═══ PRIME UI — Today, Evidence, Settings, navigation ═══ */
+(function(){
+  'use strict';
+  var H = 3600e3, PAGES = [['today', 'Today', 'M3 12h4l3-8 4 16 3-8h4'], ['chart', 'Chart', 'M4 19V5M4 19h16M8 15l3-4 3 2 5-7'], ['signals', 'Signals', 'M12 3v18M5 9l7-6 7 6'], ['risk', 'Risk', 'M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z'], ['evidence', 'Evidence', 'M6 3h9l3 3v15H6zM9 11h6M9 15h6']];
+  var cur = 'today', wake = null;
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function lsj(k){ try{ return JSON.parse(window.PRIME_LS.getItem(k) || 'null'); }catch(e){ return null; } }
+  function fmtP(x){ if(x == null || !isFinite(x)) return '—'; var a = Math.abs(x); return a >= 1000 ? x.toLocaleString('en-US', { maximumFractionDigits:0 }) : a >= 10 ? x.toFixed(2) : a >= 1 ? x.toFixed(3) : x.toPrecision(4); }
+  function pct(x, d){ return x == null || !isFinite(x) ? '—' : (x > 0 ? '+' : '') + (x*100).toFixed(d == null ? 1 : d) + '%'; }
+  function cfg(){ return lsj('prime_cfg_v1') || { wake:false }; } function setCfg(c){ window.PRIME_LS.setItem('prime_cfg_v1', JSON.stringify(c)); }
+  // ── the verdict: what to do now (pure, given the state) ──
+  function verdict(ctx){ var ER = ctx.eventRisk, A = ctx.climaxOpen, B = ctx.panicLive || [], plans = ctx.plans, L = ctx.limits;
+    if(L && L.blocked) return { cls:'wait', k:'Today', v:'No new trades', w:'The risk rules say stop: ' + L.blocked + '. Protecting the account is the job today.' };
+    if(ER && ER.active) return { cls:'wait', k:'Hold off', v:'Wait for the release', w:ER.ev.kind + (ER.mins >= 0 ? ' in ' + ER.mins + ' min' : ' ' + (-ER.mins) + ' min ago') + '. No new trades from 2 hours before to 1 hour after: spreads widen and stops get run.' };
+    if(A && A.length){ var t = A[0]; return { cls:'a', k:'Grade A signal', v:'Climax buy: ' + t.sym.replace('USDT', ''), w:'Fell ' + Math.abs(t.z) + 'σ on ' + t.vr + '× volume and closed strong. The rule buys this hour’s open and closes 12 hours later. Size it at 0.5% risk.' }; }
+    if(B.length){ var q = B.slice().sort(function(a, b){ return (a.status === 'pending' ? 0 : 1) - (b.status === 'pending' ? 0 : 1) || a.r24 - b.r24; })[0], nm = q.sym.replace('USDT', ''), more = B.length > 1 ? ' ' + (B.length - 1) + ' more on the Signals page.' : '';
+      var tail = ' Grade B: passed a fair test, not yet confirmed. Paper only, a small seat at most: run as a 100 USDT account it fell 56–59% from its peak (E26).' + more;
+      if(q.status === 'pending') return { cls:'b', k:'Grade B signal · ' + q.rule, v:'Panic bounce: ' + nm, w:'Down ' + (Math.abs(q.r24)*100).toFixed(1) + '% in 24 hours, in its own worst 10%. Rule H1: a buy limit at ' + fmtP(q.limit) + ' until ' + new Date((q.t + 4)*3600e3).toISOString().slice(11, 16) + ' UTC; if it fills, sell 24 hours later.' + tail };
+      return { cls:'b', k:'Grade B trade · ' + q.rule, v:'Holding ' + nm + ' to ' + new Date((q.due + 1)*3600e3).toISOString().slice(11, 16) + ' UTC', w:'In at ' + fmtP(q.entry) + (q.rule === 'H3' ? ' in a market-wide panic' : ' after its panic') + '. The rule sells 24 hours after entry, whatever happens; nothing to do until then.' + tail }; }
+    var live = (plans || []).filter(function(p){ return p.side === 'long' || p.side === 'short'; });
+    if(live.length){ var p = live.sort(function(a, b){ return b.rr - a.rr; })[0]; return { cls:p.side, k:'Grade C plan · unproven · paper first', v:p.sym.replace('USDT', '') + ' ' + p.side.toUpperCase() + ' at ' + fmtP(p.entry), w:'Stop ' + fmtP(p.stop) + ', target ' + fmtP(p.target) + ' (' + p.rr.toFixed(1) + ':1). ' + p.why + '. Wait for price to come to the entry; never chase.' + (live.length > 1 ? ' ' + (live.length - 1) + ' more on the Signals page.' : '') }; }
+    return { cls:'wait', k:'Today', v:'Stand aside', w:'No setup meets the rules right now. Expect this on most days: no daily rule has passed a fair test (E28 tried 12,480), and the tested edges come in rare panics. Standing aside is a position: it keeps the account ready for a real one.' }; }
+  function dial(S){ var order = ['DEPRESSED', 'CORRECTING', 'NORMAL', 'CONSOLIDATING', 'BOOMING'], lab = ['Depressed', 'Correcting', 'Normal', 'Quiet', 'Booming'], col = ['#b3372f', '#c27b2b', '#8a8577', '#6f7f8f', '#1d7a4b'], i = S ? Math.max(0, order.indexOf(S.state)) : 2, s = '';
+    for(var k = 0; k < 5; k++){ var a0 = Math.PI*(1 - k/5), a1 = Math.PI*(1 - (k + 1)/5), r = 120, cx = 170, cy = 158, x0 = cx + r*Math.cos(a0), y0 = cy - r*Math.sin(a0), x1 = cx + r*Math.cos(a1), y1 = cy - r*Math.sin(a1), am = (a0 + a1)/2;
+      s += '<path d="M' + x0.toFixed(1) + ' ' + y0.toFixed(1) + ' A' + r + ' ' + r + ' 0 0 1 ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + '" stroke="' + col[k] + '" stroke-width="' + (k === i ? 18 : 10) + '" fill="none" opacity="' + (k === i ? 1 : 0.35) + '"/>' +
+        '<text x="' + (cx + (r + 22)*Math.cos(am)).toFixed(1) + '" y="' + (cy - (r + 22)*Math.sin(am) + 4).toFixed(1) + '" text-anchor="middle" style="font:600 11px system-ui;fill:' + (k === i ? col[k] : '#8a8577') + '">' + lab[k] + '</text>'; }
+    var an = Math.PI*(1 - (i + 0.5)/5); s += '<line x1="170" y1="158" x2="' + (170 + 92*Math.cos(an)).toFixed(1) + '" y2="' + (158 - 92*Math.sin(an)).toFixed(1) + '" stroke="#1c2230" stroke-width="3" stroke-linecap="round"/><circle cx="170" cy="158" r="7" fill="#1c2230"/>';
+    return '<svg class="dial" viewBox="0 0 340 176" role="img" aria-label="Market state">' + s + '</svg>'; }
+  function today(){ var DP = window.OMEGA_DPLAN, S = DP ? DP.state().S : null, reads = DP ? DP.state().reads : {}, rec = lsj('omega_dplan_v1') || { plans:{} }, now = Date.now();
+    var plans = Object.keys(rec.plans || {}).map(function(s){ return Object.assign({ sym:s }, rec.plans[s]); });
+    var C = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX.state().trades.filter(function(t){ return t.status === 'open'; }) : [];
+    var ER = window.OMEGA_REVIEW ? window.OMEGA_REVIEW.eventRisk(now) : null, RG = window.OMEGA_RGUARD, M = lsj('omega_rguard_mine_v1'), L = RG && M ? RG._.limits(M, now) : (RG ? RG._.limits(RG._.newAcct(100), now) : null);
+    var PB = window.OMEGA_PANIC ? window.OMEGA_PANIC.live() : [];
+    var V = verdict({ eventRisk:ER, climaxOpen:C, panicLive:PB, plans:plans, limits:L }), T = window.OMEGA_TRUTH ? window.OMEGA_TRUTH.state().last : null, h = '';
+    h += '<div class="verdict ' + V.cls + '"><div class="k">' + esc(V.k) + '</div><div class="v">' + esc(V.v) + '</div><div class="w">' + esc(V.w) + '</div><div class="chips"><span>Risk ' + (L ? (L.risk*100).toFixed(1) : '0.5') + '% a trade</span><span>' + (L ? L.open : 0) + ' of 2 open</span><span>' + (L && L.dayLoss > 0 ? 'today −' + (L.dayLoss*100).toFixed(1) + '%' : 'no loss today') + '</span>' + (T ? '<span>' + (T.bad.length + T.badR.length ? (T.bad.length + T.badR.length) + ' data problem(s)' : 'data live') + '</span>' : '') + '</div></div>';
+    h += '<div class="grid2"><div class="card"><h3 class="dp-h">The market</h3>' + dial(S) + '<p class="dp-p" style="text-align:center;margin-top:0">' + (S && S.state !== 'UNKNOWN' ? (S.uptrend ? 'Uptrend' : 'Downtrend') + (S.falling ? ' · <b class="dn">falling this week</b>' : '') + ' · top-5 index ' + pct(S.r7) + ' in 7 days, ' + pct(S.r30) + ' in 30' : 'Reading the market…') + '</p></div>';
+    h += '<div class="card"><h3 class="dp-h">The five biggest coins</h3><div class="coins">' + ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT'].map(function(s){ var A = reads[s], P = (rec.plans || {})[s] || {};
+        return '<div class="coin"><b>' + s.replace('USDT', '') + '</b><div class="p">' + (A && !A.err ? fmtP(A.price) : '—') + '</div><div class="p ' + (A && A.chg24 >= 0 ? 'up' : 'dn') + '">' + (A && !A.err ? pct(A.chg24) : '') + '</div><div class="s ' + (P.side === 'long' ? 'up' : P.side === 'short' ? 'dn' : '') + '">' + (P.side === 'long' ? 'LONG' : P.side === 'short' ? 'SHORT' : 'aside') + '</div></div>'; }).join('') + '</div><p class="hint" style="margin-top:8px">Side from the market state and each coin’s trend. Open <b>Chart</b> to see a coin’s levels and plan.</p></div></div>';
+    return h; }
+  // ── evidence ──
+  var LEDGER = [['pass', 'Climax reversal (round 16)', 'Passed design, validation and a final test on 324 untouched coins (z 2.35). Rare; about +1.6% a trade before costs.'],
+    ['pass', 'Panic bounce H1 (E22, E25) · Grade B', 'A buy limit 2σ under a bottom-10% 24-hour fall, held a day: +0.36% a trade after costs, t 4.34 on 324 perpetuals (E22); with the 143 delisted coins included, +0.32%, t 4.54 on 883 (E25). 2025 was barely positive (+0.03%). It lives on the big rebounds: without the best 5% of trades it loses 0.7% a trade, and single trades have lost 90%. Not yet confirmed by a forward record.'],
+    ['pass', 'Market-wide panic H3 (E22, E25) · Grade B', 'The deepest 5% of falls while 20%+ of coins panic together: +0.22% a trade, t 3.63 (E22); with delisted coins, +0.30%, t 4.08 (E25). Same tail caveats.'],
+    ['pass', 'Funding harvest', 'Passed, but its income has faded since 2025. Not used here.'],
+    ['fail', 'Breakouts, momentum, reversals, pullbacks (rounds 1–18, 600 known strategies)', 'Failed on data they had not seen.'],
+    ['fail', 'Your 5-unit method, pyramiding, scaling out (E1, management search)', 'Management changed how trades felt, not whether they earned.'],
+    ['fail', 'Gold and six markets, both directions (E2, E3, E5, E7)', 'No rule passed; timing patterns found but not confirmed.'],
+    ['fail', 'Market states and capitulation bounces (E8, E9, E10)', 'No state predicted the next week; the bounce failed on other coins (LUNA, May 2022).'],
+    ['fail', 'Absorption on BTC and ETH (E11)', 'Right direction, smaller than fees.'],
+    ['fail', 'The top 5 coins one by one, eleven rules each (E14)', 'None passed. US hours carry the most trading and half the big drops.'],
+    ['fail', 'Setup odds from the path simulator (E18, E19)', 'Trustworthy for ranges and crash rates, not for which setup wins.'],
+    ['fail', 'BTC father-coin warning, inverse scan, Two Seats (E20, E21, E23, E24)', 'No pass: t 0.99; about equal to costs; a ranked two-seat account went 100 → 16; v2 beat 96% of random accounts, 97.5% was needed.'],
+    ['pass', 'Survivorship test of H1 and H3 (E25)', 'Both passed with every delisted perpetual included (Binance’s own archive, 2024 → Oct 2026). Data checked against the app’s files on 40 coins (exact match); the full check runs when the final4 files arrive.'],
+    ['fail', 'Many small seats (E26)', 'H1 on 100 USDT with 5 or 10 USDT seats and a −10% stop, 2021 → Oct 2026 (every delisted coin included): 100 → 943 and 1,189, far ahead of random coins at the same hours, but drawdowns of 56% and 59% and gains in only 4 of 6 years. 2021 alone made 100 → 641; since 2022 the trades average +0.1–0.4%, and 2026 is negative. Without the stop (described, not a test: the data was already used), 20 seats of 5 USDT went 100 → 1,588 but still fell 55% and lost in 2022 and 2025: the stop cut the rebounds. Not a safe way to run a 100 USDT account.'],
+    ['fail', 'The daily-trading search (E28): 12,480 rules', 'Every daily rule was built on 2021–2023, checked on 2024 and against luck (the same search on shuffled signals). None survived. Details in the next five rows.'],
+    ['fail', 'Small coins over big, and funding carry (E28 rounds 1–3)', 'The two survivors of 8,660 tries: +0.15% a day on 2021–2023 as a daily portfolio, worst drop −17%. In 2024 all five versions went to about zero or below (drops of 27–45%): both were 2021–22 effects, already fading in 2023.'],
+    ['fail', 'Next-day direction, 31 measures (E28)', 'Up to 15 settings per measure made money before costs and lost after: daily direction is close to random, and costs win.'],
+    ['fail', 'Daily dip-buying limit orders (E28 round 4)', 'Deep dips (2σ) held two days: positive every year, but they come on only 28% of days. Forced daily (shallower dips) it turns into market risk, and random coins with the same orders did as well.'],
+    ['fail', 'Timing BTC and ETH from market-wide gauges (E28 round 5)', 'Funding, breadth, dispersion, momentum and volatility (15 gauges, 3,240 rules): the same gauges shifted in time (luck) did as well. No daily timing edge.'],
+    ['fail', 'Hour-of-day timing (E28)', 'The biggest average hourly moves are 0.03–0.09%; a round trip costs 0.12–0.20%. No timing rule can pay its costs.'],
+    ['run', 'Stop-outs (E12)', 'Mostly noise; stops at obvious levels are swept slightly more (about 1 in 100).'],
+    ['run', 'Session timing forward record (E6)', 'Judged once after 26 weeks (April 2027), in the original build.'],
+    ['fail', 'CREED, measured and improved (E29, E31)', 'After a CREED setup price behaves like a fair coin (+1R before the stop 49%, a coin flip 50%; target 17.5% vs 17%). As taught: −0.118R, −0.100R and −0.118R a trade on three separate coin sets (about 11,000 setups). Longs only after BTC fell, longs only in market panics, and a volatility-scaled stop buffer all failed on coins CREED had never seen.'],
+    ['fail', 'Real liquidity: order book, deleveraging, positioning (E30)', 'Order-book depth (2023–2026) predicts neither direction nor, usefully, size. Forced deleveraging (price −5% in an hour with open interest −1%, long 4 h) made +0.75% a trade before 2024 and +0.83% in 2024, but only 72 events on 10 coins: the same direction as the panic bounce, too rare to prove. Fading crowded positioning failed.'],
+    ['fail', 'New-listing fade (E35)', 'Short new perpetuals 3 days after launch for 30 days, +50% stop, costs scaled to liquidity (823 listings). Median trade +13.5%, but squeezes take it back: +2.5% a trade in 2025–26 (t 1.02), 2026 negative, worst −76%.'],
+    ['fail', 'Pairs mean reversion (E36)', 'The 20 most correlated pairs among the 30 most-traded coins, trading the gap back: best before 2025 +1.8% a year (t 0.50, below luck’s 0.78); 2025–26 −2.1% a year.'],
+    ['fail', 'Funding harvest, delta-neutral (E34)', 'Spot long + perpetual short, collecting funding with no bet on direction. Best of 36 on 2021–24: +8.8% a year on capital. 2025–26: −17% a year: little paid most months, then one coin’s funding flipped in a crash (−20.8% in a day, −64.6% in a month). The “small amount every day” bot with a rare blow-up.'],
+    ['fail', 'Forced deleveraging on 60 coins (E33)', 'An hour down 5%+ with open interest down 1%+, bought and held 4 hours, on 60 coins it had never seen (2,063 events, Oct 2023 → Sep 2026): −0.03% a trade (t −0.10); +0.39% in 2024, −0.74% in 2025, −0.47% in 2026. Forced selling beat ordinary 5% falls by 0.26%, but neither makes money; single events lost 28–36% in 4 hours.'],
+    ['fail', 'Neural network on 33 measures (E32)', 'Six networks trained on 2021–23, the best chosen on 2024 (t 1.02): 2025–26 −0.10% a day with a 68% drawdown. It had learned to short coins whose funding shorts must pay.'],
+    ['fail', 'Forex majors hour by hour (E15)', 'EUR/USD, GBP/USD, USD/JPY, AUD/USD and USD/CAD, 2020 → Oct 2026, eleven rules each at 0.015% a side: no rule was even promising before 2024 (best t 1.39), and every pick was flat or negative from 2024.'],
+    ['run', 'Market Watch: liquidation flushes, absorption, Coinbase leading (E13)', 'Not yet measurable: the 19–26 Oct recording held no minute data because the live streams delivered nothing on that device. The original app now has a backup and explains every export; E13 needs 5 days with the live streams working.'],
+    ['run', 'Daily Plan forward record (E16)', 'Judged once after 50 paper trades.'],
+    ['run', 'Growth Bot from 100 USDT (E17)', 'Judged once after 50 trades or 26 weeks.']];
+  function evidence(){ var dp = lsj('omega_dplan_v1') || { trades:[] }, bot = lsj('omega_rguard_bot_v1') || { closed:[] }, cs = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX._.stats() : { n:0 }, ph = window.OMEGA_PANIC ? window.OMEGA_PANIC._.stats('H1') : { n:0 }, p3 = window.OMEGA_PANIC ? window.OMEGA_PANIC._.stats('H3') : { n:0 };
+    return '<div class="card"><h3 class="dp-h">What is known</h3><ul class="ledger" style="list-style:none;padding:0">' + LEDGER.map(function(r){ return '<li><span class="tag ' + r[0] + '">' + (r[0] === 'pass' ? 'PASSED' : r[0] === 'fail' ? 'FAILED' : 'MEASURING') + '</span><b>' + esc(r[1]) + '</b><br><span class="hint">' + esc(r[2]) + '</span></li>'; }).join('') + '</ul>' +
+      '<p class="dp-p"><b>Being measured in this app:</b> climax trades ' + cs.n + ' closed · panic bounce H1 ' + ph.n + ' and H3 ' + p3.n + ' of 50 · Daily Plan ' + (dp.trades || []).length + ' of 50 · Growth Bot ' + (bot.closed || []).length + ' of 50.</p><p class="hint">Every test was written down before its data, run once, and counted. Nothing here is promoted on a lucky streak.</p></div>'; }
+  // ── settings and the Autopilot table ──
+  function settings(){ var O = window.OMEGA_OPERATOR, st = O.state().jobs || {}, c = cfg(), h = '<div class="card"><h3 class="dp-h">Autopilot</h3><p class="hint">Runs while the app is open. Each job can be switched off.</p><table class="mr-tab"><tr><th>Job</th><th>Last run</th><th>On</th></tr>';
+    O.list().forEach(function(j){ var s = st[j.id] || {}, ago = s.last ? Math.round((Date.now() - s.last)/60e3) : null; h += '<tr><td><b>' + esc(j.label) + '</b><br><span class="hint">' + esc((s.result || 'not run yet').slice(0, 140)) + '</span></td><td>' + (ago == null ? '—' : ago < 60 ? ago + ' min ago' : Math.round(ago/60) + ' h ago') + '</td><td><input type="checkbox" data-job="' + j.id + '"' + (s.enabled === false ? '' : ' checked') + '></td></tr>'; });
+    h += '</table><p><button class="btn-outline" type="button" data-set="runall">Run everything due now</button></p></div>';
+    h += '<div class="card"><h3 class="dp-h">This device</h3><label class="sw"><input type="checkbox" data-set="wake"' + (c.wake ? ' checked' : '') + '> Keep the screen on while the app is open (best on a charger)</label>' +
+      '<p><button class="btn-outline" type="button" data-set="notif">' + (typeof Notification !== 'undefined' && Notification.permission === 'granted' ? 'Notifications are on' : 'Turn on notifications') + '</button></p>' +
+      '<p><button class="btn-outline" type="button" data-set="backup">Save a backup</button> <label class="btn-outline" style="display:inline-block">Restore<input type="file" accept="application/json" data-set="restore" style="display:none"></label></p><p class="hint">The backup holds only Prime’s own records (prefix “prime:”); there are no keys or passwords in this app. The original OMEGA build keeps its data separately.</p></div>';
+    return h; }
+  function renderSettings(){ var b = el('settingsBody'); if(!b) return; b.innerHTML = settings();
+    Array.prototype.forEach.call(b.querySelectorAll('[data-job]'), function(x){ x.onchange = function(){ window.OMEGA_OPERATOR.setEnabled(x.getAttribute('data-job'), x.checked); }; });
+    Array.prototype.forEach.call(b.querySelectorAll('[data-set]'), function(x){ var k = x.getAttribute('data-set');
+      if(k === 'runall') x.onclick = function(){ window.OMEGA_OPERATOR.run(); };
+      if(k === 'wake') x.onchange = function(){ var c = cfg(); c.wake = x.checked; setCfg(c); applyWake(); };
+      if(k === 'notif') x.onclick = function(){ try{ Notification.requestPermission().then(renderSettings); }catch(e){} };
+      if(k === 'backup') x.onclick = function(){ var o = {}; window.PRIME_LS.keys().forEach(function(key){ o[key] = window.PRIME_LS.getItem(key); }); var blob = new Blob([JSON.stringify({ format:'omega-prime-backup', v:1, at:new Date().toISOString(), data:o })], { type:'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'omega-prime-backup-' + new Date().toISOString().slice(0, 10) + '.json'; document.body.appendChild(a); a.click(); setTimeout(function(){ a.remove(); }, 2000); };
+      if(k === 'restore') x.onchange = function(){ var f = x.files && x.files[0]; if(!f) return; f.text().then(function(t){ var j = JSON.parse(t); if(!j || j.format !== 'omega-prime-backup') throw new Error('not a Prime backup'); Object.keys(j.data || {}).forEach(function(key){ window.PRIME_LS.setItem(key, j.data[key]); }); location.reload(); }).catch(function(e){ alert('Not restored: ' + (e.message || e)); }); }; }); }
+  async function applyWake(){ try{ if(cfg().wake && 'wakeLock' in navigator && document.visibilityState === 'visible'){ if(!wake) wake = await navigator.wakeLock.request('screen'); } else if(wake){ await wake.release(); wake = null; } }catch(e){ wake = null; } }
+  document.addEventListener('visibilitychange', function(){ wake = null; applyWake(); });
+  // ── navigation ──
+  function show(p){ cur = p; PAGES.forEach(function(x){ var s = el('page-' + x[0]); if(s) s.classList.toggle('on', x[0] === p); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function(b){ b.classList.toggle('on', b.getAttribute('data-go') === p); });
+    try{ if(p === 'today'){ el('todayBody').innerHTML = today(); if(window.OMEGA_DPLAN && !window.OMEGA_DPLAN.state().S && !window.OMEGA_DPLAN.state().busy) window.OMEGA_DPLAN.run().then(function(){ if(cur === 'today') el('todayBody').innerHTML = today(); }); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }
+      if(p === 'chart'){ if(window.OMEGA_COCKPIT) window.OMEGA_COCKPIT.onShow(); if(window.OMEGA_MREAD) window.OMEGA_MREAD.onShow(); }
+      if(p === 'signals'){ if(window.OMEGA_CLIMAX) window.OMEGA_CLIMAX.render(); if(window.OMEGA_PANIC) window.OMEGA_PANIC.render(); if(window.OMEGA_DPLAN) window.OMEGA_DPLAN.onShow(); }
+      if(p === 'risk'){ if(window.OMEGA_RGUARD) window.OMEGA_RGUARD.onShow(); if(window.OMEGA_TRUTH) window.OMEGA_TRUTH.run(); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }
+      if(p === 'evidence'){ el('evidenceBody').innerHTML = evidence(); if(window.OMEGA_TRUTH) window.OMEGA_TRUTH.run(); renderSettings(); } }catch(e){ if(window.console) console.warn('Prime page', p, e); }
+    window.scrollTo(0, 0); }
+  window.navigate = show;
+  function nav(){ var t = el('tabs'), b = el('bar'); var mk = function(x, mob){ return '<button type="button" data-go="' + x[0] + '">' + (mob ? '<svg viewBox="0 0 24 24"><path d="' + x[2] + '"/></svg>' : '') + x[1] + '</button>'; };
+    if(t) t.innerHTML = PAGES.map(function(x){ return mk(x, false); }).join(''); if(b) b.innerHTML = PAGES.map(function(x){ return mk(x, true); }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function(x){ x.onclick = function(){ show(x.getAttribute('data-go')); }; }); }
+  function clock(){ var d = new Date(), h = d.getUTCHours(), s = h < 8 ? 'Asia' : h < 13 ? 'London' : h < 21 ? 'US hours' : 'Late'; var c = el('clock'); if(c) c.innerHTML = d.toISOString().slice(11, 16) + ' UTC · ' + String((h + 20) % 24).padStart(2, '0') + d.toISOString().slice(13, 16) + ' Tobago<br>' + s; }
+  window.PRIME_UI = { show:show, verdict:verdict, today:today, evidence:evidence, autopilotChanged:function(){ if(cur === 'evidence') renderSettings(); if(cur === 'today') el('todayBody').innerHTML = today(); } };
+  nav(); clock(); setInterval(clock, 30e3); applyWake(); show('today');
+})();
+</script>

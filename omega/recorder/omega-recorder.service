@@ -1,0 +1,14 @@
+# /etc/systemd/system/omega-recorder.service  (Linux server). Put OMEGA_TOKEN in /etc/omega-recorder.env, not in this file.
+[Unit]
+Description=OMEGA Recorder (paper only, public Binance data)
+After=network-online.target
+[Service]
+User=omega
+WorkingDirectory=/opt/omega-recorder
+EnvironmentFile=/etc/omega-recorder.env
+Environment=OMEGA_DB=/opt/omega-recorder/data/omega_recorder.sqlite
+ExecStart=/opt/omega-recorder/venv/bin/python -m omega_recorder serve
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target

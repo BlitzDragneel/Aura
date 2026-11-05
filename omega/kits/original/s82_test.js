@@ -1,0 +1,12 @@
+// v6.5.82 checks: the audit's trims and corrections.
+const fs = require('fs'), path = require('path');
+const html = fs.readFileSync(process.argv[2] || path.join(__dirname, 'omega-v6_5-82.html'), 'utf8');
+let pass = 0, fail = 0; function ok(c, msg){ if(c){ pass++; console.log('ok   ' + msg); } else { fail++; console.log('FAIL ' + msg); } }
+ok(!/window\.OMEGA_(CAPWATCH|FUTEXPORT|FINAL4EXPORT|CREED15EXPORT|BYBITEXPORT|FINAL3EXPORT|FXEXPORT) =/.test(html) && !/capwatchBody'\)/.test(html.replace(/el\('capwatchBody'\) \|\| /g, '')), 'removed: the failed capitulation watch and the seven finished research downloads');
+ok(/window\.OMEGA_FRESHEXPORT = /.test(html) && /window\.OMEGA_FRESH2EXPORT = /.test(html) && /window\.OMEGA_LONGEXPORT = /.test(html) && /v6\.5\.82: the download button is retired/.test(html), 'kept: the older downloads’ coin lists (read by the stores), without their buttons');
+ok(/v6\.5\.82: card retired/.test(html) && /v6\.5\.82: no Autopilot job for a retired rule/.test(html) && !/<div id="carryxsCard"><\/div>/.test(html) && /window\.OMEGA_CARRYXS = /.test(html), 'the failed carry card and its job are gone; its data helpers stay');
+ok(/Research record, rounds 1\\u2013(?:1[89]|[23][0-9]) \\u2014 what passed: the funding harvest/.test(html) && /It then failed both untouched tests \(rounds 5 and 7\): not an edge\./.test(html) && /passed untouched tests in rounds 7, 8 and 10/.test(html) && !/the one idea that passed untouched tests, three times/.test(html) && !/Now a frozen paper strategy \(the card at the top of this page\)/.test(html), 'out-of-date statements corrected (record heading, carry row, harvest title, Brain note)');
+ok(/climax reversal, buying a flush as buyers step in, was the second/.test(html) && /The phone\\u2019s own Research Lab has not produced a rule that holds on unseen data/.test(html) && !/There is no OMEGA strategy yet, and that is the honest answer/.test(html), 'Positioning Desk and OMEGA Strategy no longer say the harvest is the only thing that passed');
+ok(/<div id="climaxSigBody"><\/div>/.test(html) && /\['climaxBody', 'climaxWatchBody', 'climaxSigBody'\]/.test(html), 'OMEGA Signals shows the climax reversal’s signals first');
+ok(/"r":"2","name":"Fading a sweep of yesterday’s high or low"/.test(html) && /"r":"4","name":"Funding carry, weekly/.test(html) && /"r":"6","name":"Low-turnover trend/.test(html), 'knowledge: early round labels match the research record');
+console.log('\n' + pass + ' passed, ' + fail + ' failed'); process.exit(fail ? 1 : 0);

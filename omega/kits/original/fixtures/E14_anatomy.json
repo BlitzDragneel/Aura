@@ -1,0 +1,852 @@
+{
+ "BTCUSDT": {
+  "up_hours_pct": 50.7,
+  "up_days_pct": 50.9,
+  "avg_up_hour_bps": 38.8,
+  "avg_down_hour_bps": -39.1,
+  "worst1pct_hour_pct": -1.9,
+  "best1pct_hour_pct": 1.85,
+  "worst_hour": [
+   -20.1,
+   "2020-03-12 10"
+  ],
+  "best_hour": [
+   16.0,
+   "2020-03-13 02"
+  ],
+  "worst_24h": [
+   -46.4,
+   "2020-03-13"
+  ],
+  "best_24h": [
+   32.7,
+   "2020-03-14"
+  ],
+  "skew_hourly": -0.93,
+  "down_legs": {
+   "n": 82,
+   "median_pct": -16.3,
+   "median_hours": 192.0,
+   "biggest_pct": -60.5,
+   "longest_days": 60.0
+  },
+  "up_legs": {
+   "n": 82,
+   "median_pct": 20.2,
+   "median_hours": 200.0,
+   "biggest_pct": 95.2,
+   "longest_days": 122.0
+  },
+  "swing_threshold_pct": 10.0,
+  "vol_after_big_down_x": 1.37,
+  "vol_after_big_up_x": 1.22,
+  "big_down_by_session_pct": {
+   "Asia": 25.0,
+   "London": 14.0,
+   "US": 50.0,
+   "Late": 11.0
+  },
+  "big_up_by_session_pct": {
+   "Asia": 23.0,
+   "London": 15.0,
+   "US": 51.0,
+   "Late": 12.0
+  },
+  "e5_direction_split": {
+   "R3 follow 24h breakout": {
+    "long": {
+     "a": 5.9,
+     "b": 14.1,
+     "tb": 1.04
+    },
+    "short": {
+     "a": -38.9,
+     "b": -24.5,
+     "tb": -1.52
+    }
+   },
+   "R4 fade 24h breakout": {
+    "long": {
+     "a": 16.3,
+     "b": -1.8,
+     "tb": -0.11
+    },
+    "short": {
+     "a": -33.0,
+     "b": -40.9,
+     "tb": -2.98
+    }
+   },
+   "R5 follow big hour": {
+    "long": {
+     "a": -0.3,
+     "b": -5.6,
+     "tb": -0.64
+    },
+    "short": {
+     "a": -17.0,
+     "b": -13.2,
+     "tb": -1.57
+    }
+   },
+   "R6 fade big hour": {
+    "long": {
+     "a": -8.8,
+     "b": -15.6,
+     "tb": -1.83
+    },
+    "short": {
+     "a": -26.0,
+     "b": -20.0,
+     "tb": -2.25
+    }
+   },
+   "R7 200h average": {
+    "long": {
+     "a": 17.0,
+     "b": -20.4,
+     "tb": -0.94
+    },
+    "short": {
+     "a": -27.4,
+     "b": -44.2,
+     "tb": -2.39
+    }
+   }
+  },
+  "shorts": {
+   "rules": {
+    "S1 blow-off short, 12h": {
+     "t_a": 0.0,
+     "t_b": 0.0,
+     "a_yr": 0.0,
+     "b_yr": 0.0,
+     "b_years": {
+      "2024": 0.0,
+      "2025": 0.0,
+      "2026": 0.0
+     },
+     "trades": 0
+    },
+    "S2 failed breakout short, 24h": {
+     "t_a": -2.48,
+     "t_b": -1.53,
+     "a_yr": -54.3,
+     "b_yr": -25.7,
+     "b_years": {
+      "2024": -53.3,
+      "2025": -6.8,
+      "2026": -11.8
+     },
+     "trades": 1039
+    },
+    "S3 downtrend US-hours short": {
+     "t_a": -2.56,
+     "t_b": -0.79,
+     "a_yr": -35.2,
+     "b_yr": -10.9,
+     "b_years": {
+      "2024": -8.2,
+      "2025": -19.3,
+      "2026": -2.9
+     },
+     "trades": 1159
+    },
+    "S4 breakdown in downtrend, 24h": {
+     "t_a": -0.1,
+     "t_b": -0.0,
+     "a_yr": -1.6,
+     "b_yr": -0.0,
+     "b_years": {
+      "2024": -5.2,
+      "2025": -9.2,
+      "2026": 14.3
+     },
+     "trades": 380
+    }
+   },
+   "pick": "S1 blow-off short, 12h",
+   "passed": false
+  }
+ },
+ "ETHUSDT": {
+  "up_hours_pct": 50.6,
+  "up_days_pct": 51.9,
+  "avg_up_hour_bps": 51.6,
+  "avg_down_hour_bps": -52.1,
+  "worst1pct_hour_pct": -2.47,
+  "best1pct_hour_pct": 2.41,
+  "worst_hour": [
+   -23.4,
+   "2020-03-12 10"
+  ],
+  "best_hour": [
+   14.0,
+   "2020-03-13 02"
+  ],
+  "worst_24h": [
+   -47.8,
+   "2020-03-13"
+  ],
+  "best_24h": [
+   38.1,
+   "2021-01-04"
+  ],
+  "skew_hourly": -0.89,
+  "down_legs": {
+   "n": 142,
+   "median_pct": -16.6,
+   "median_hours": 125.0,
+   "biggest_pct": -60.9,
+   "longest_days": 60.0
+  },
+  "up_legs": {
+   "n": 143,
+   "median_pct": 21.0,
+   "median_hours": 140.0,
+   "biggest_pct": 103.2,
+   "longest_days": 88.0
+  },
+  "swing_threshold_pct": 10.0,
+  "vol_after_big_down_x": 1.37,
+  "vol_after_big_up_x": 1.14,
+  "big_down_by_session_pct": {
+   "Asia": 25.0,
+   "London": 15.0,
+   "US": 49.0,
+   "Late": 11.0
+  },
+  "big_up_by_session_pct": {
+   "Asia": 26.0,
+   "London": 16.0,
+   "US": 47.0,
+   "Late": 11.0
+  },
+  "e5_direction_split": {
+   "R3 follow 24h breakout": {
+    "long": {
+     "a": 28.5,
+     "b": -22.7,
+     "tb": -1.03
+    },
+    "short": {
+     "a": -39.2,
+     "b": -16.9,
+     "tb": -0.86
+    }
+   },
+   "R4 fade 24h breakout": {
+    "long": {
+     "a": 15.5,
+     "b": -6.6,
+     "tb": -0.33
+    },
+    "short": {
+     "a": -57.2,
+     "b": -5.9,
+     "tb": -0.27
+    }
+   },
+   "R5 follow big hour": {
+    "long": {
+     "a": -3.6,
+     "b": 14.3,
+     "tb": 1.34
+    },
+    "short": {
+     "a": -26.4,
+     "b": 9.0,
+     "tb": 0.72
+    }
+   },
+   "R6 fade big hour": {
+    "long": {
+     "a": -1.9,
+     "b": -38.1,
+     "tb": -3.02
+    },
+    "short": {
+     "a": -21.4,
+     "b": -38.7,
+     "tb": -3.5
+    }
+   },
+   "R7 200h average": {
+    "long": {
+     "a": 33.8,
+     "b": -31.3,
+     "tb": -1.05
+    },
+    "short": {
+     "a": -38.1,
+     "b": -33.3,
+     "tb": -1.18
+    }
+   }
+  },
+  "shorts": {
+   "rules": {
+    "S1 blow-off short, 12h": {
+     "t_a": 0.0,
+     "t_b": 0.0,
+     "a_yr": 0.0,
+     "b_yr": 0.0,
+     "b_years": {
+      "2024": 0.0,
+      "2025": 0.0,
+      "2026": 0.0
+     },
+     "trades": 0
+    },
+    "S2 failed breakout short, 24h": {
+     "t_a": -0.93,
+     "t_b": -1.84,
+     "a_yr": -24.1,
+     "b_yr": -42.1,
+     "b_years": {
+      "2024": -42.1,
+      "2025": -28.8,
+      "2026": -46.8
+     },
+     "trades": 1036
+    },
+    "S3 downtrend US-hours short": {
+     "t_a": -2.65,
+     "t_b": 0.43,
+     "a_yr": -42.1,
+     "b_yr": 9.0,
+     "b_years": {
+      "2024": 19.3,
+      "2025": -5.8,
+      "2026": 11.7
+     },
+     "trades": 1165
+    },
+    "S4 breakdown in downtrend, 24h": {
+     "t_a": -2.34,
+     "t_b": 0.19,
+     "a_yr": -37.6,
+     "b_yr": 3.0,
+     "b_years": {
+      "2024": 24.7,
+      "2025": -8.5,
+      "2026": -7.8
+     },
+     "trades": 388
+    }
+   },
+   "pick": "S1 blow-off short, 12h",
+   "passed": false
+  }
+ },
+ "SOLUSDT": {
+  "up_hours_pct": 49.8,
+  "up_days_pct": 49.7,
+  "avg_up_hour_bps": 81.0,
+  "avg_down_hour_bps": -80.6,
+  "worst1pct_hour_pct": -3.53,
+  "best1pct_hour_pct": 3.67,
+  "worst_hour": [
+   -21.4,
+   "2021-05-19 12"
+  ],
+  "best_hour": [
+   26.7,
+   "2020-09-09 14"
+  ],
+  "worst_24h": [
+   -47.6,
+   "2022-11-09"
+  ],
+  "best_24h": [
+   60.4,
+   "2021-02-23"
+  ],
+  "skew_hourly": 0.29,
+  "down_legs": {
+   "n": 253,
+   "median_pct": -17.1,
+   "median_hours": 54.0,
+   "biggest_pct": -55.1,
+   "longest_days": 34.0
+  },
+  "up_legs": {
+   "n": 254,
+   "median_pct": 22.4,
+   "median_hours": 58.0,
+   "biggest_pct": 125.2,
+   "longest_days": 39.0
+  },
+  "swing_threshold_pct": 10.0,
+  "vol_after_big_down_x": 1.35,
+  "vol_after_big_up_x": 1.33,
+  "big_down_by_session_pct": {
+   "Asia": 26.0,
+   "London": 15.0,
+   "US": 48.0,
+   "Late": 11.0
+  },
+  "big_up_by_session_pct": {
+   "Asia": 27.0,
+   "London": 17.0,
+   "US": 46.0,
+   "Late": 10.0
+  },
+  "e5_direction_split": {
+   "R3 follow 24h breakout": {
+    "long": {
+     "a": -21.8,
+     "b": -3.9,
+     "tb": -0.15
+    },
+    "short": {
+     "a": -69.2,
+     "b": -15.5,
+     "tb": -0.58
+    }
+   },
+   "R4 fade 24h breakout": {
+    "long": {
+     "a": 43.2,
+     "b": -11.9,
+     "tb": -0.45
+    },
+    "short": {
+     "a": -6.1,
+     "b": -23.4,
+     "tb": -0.88
+    }
+   },
+   "R5 follow big hour": {
+    "long": {
+     "a": -9.8,
+     "b": -8.0,
+     "tb": -0.75
+    },
+    "short": {
+     "a": -35.4,
+     "b": -37.2,
+     "tb": -2.65
+    }
+   },
+   "R6 fade big hour": {
+    "long": {
+     "a": 13.3,
+     "b": 9.9,
+     "tb": 0.72
+    },
+    "short": {
+     "a": -16.7,
+     "b": -15.0,
+     "tb": -1.4
+    }
+   },
+   "R7 200h average": {
+    "long": {
+     "a": 55.6,
+     "b": -43.9,
+     "tb": -1.23
+    },
+    "short": {
+     "a": -49.0,
+     "b": -44.7,
+     "tb": -1.36
+    }
+   }
+  },
+  "shorts": {
+   "rules": {
+    "S1 blow-off short, 12h": {
+     "t_a": 1.02,
+     "t_b": 0.0,
+     "a_yr": 8.8,
+     "b_yr": 0.0,
+     "b_years": {
+      "2024": 0.0,
+      "2025": 0.0,
+      "2026": 0.0
+     },
+     "trades": 2
+    },
+    "S2 failed breakout short, 24h": {
+     "t_a": -1.49,
+     "t_b": 0.44,
+     "a_yr": -66.9,
+     "b_yr": 12.7,
+     "b_years": {
+      "2024": 18.7,
+      "2025": 28.0,
+      "2026": -11.1
+     },
+     "trades": 929
+    },
+    "S3 downtrend US-hours short": {
+     "t_a": -1.83,
+     "t_b": -0.09,
+     "a_yr": -55.0,
+     "b_yr": -2.5,
+     "b_years": {
+      "2024": -5.5,
+      "2025": -10.8,
+      "2026": 9.4
+     },
+     "trades": 1143
+    },
+    "S4 breakdown in downtrend, 24h": {
+     "t_a": -1.85,
+     "t_b": -1.47,
+     "a_yr": -54.5,
+     "b_yr": -31.9,
+     "b_years": {
+      "2024": -59.1,
+      "2025": -24.9,
+      "2026": -5.2
+     },
+     "trades": 416
+    }
+   },
+   "pick": "S1 blow-off short, 12h",
+   "passed": false
+  }
+ },
+ "BNBUSDT": {
+  "up_hours_pct": 50.7,
+  "up_days_pct": 52.7,
+  "avg_up_hour_bps": 50.0,
+  "avg_down_hour_bps": -51.9,
+  "worst1pct_hour_pct": -2.46,
+  "best1pct_hour_pct": 2.37,
+  "worst_hour": [
+   -22.6,
+   "2020-03-12 10"
+  ],
+  "best_hour": [
+   13.8,
+   "2022-11-08 16"
+  ],
+  "worst_24h": [
+   -51.3,
+   "2020-03-13"
+  ],
+  "best_24h": [
+   71.0,
+   "2021-02-19"
+  ],
+  "skew_hourly": -1.14,
+  "down_legs": {
+   "n": 137,
+   "median_pct": -15.6,
+   "median_hours": 98.0,
+   "biggest_pct": -64.6,
+   "longest_days": 56.0
+  },
+  "up_legs": {
+   "n": 138,
+   "median_pct": 22.2,
+   "median_hours": 167.0,
+   "biggest_pct": 181.3,
+   "longest_days": 88.0
+  },
+  "swing_threshold_pct": 10.0,
+  "vol_after_big_down_x": 1.4,
+  "vol_after_big_up_x": 1.35,
+  "big_down_by_session_pct": {
+   "Asia": 30.0,
+   "London": 18.0,
+   "US": 43.0,
+   "Late": 9.0
+  },
+  "big_up_by_session_pct": {
+   "Asia": 33.0,
+   "London": 20.0,
+   "US": 37.0,
+   "Late": 10.0
+  },
+  "e5_direction_split": {
+   "R3 follow 24h breakout": {
+    "long": {
+     "a": 20.0,
+     "b": 14.7,
+     "tb": 0.84
+    },
+    "short": {
+     "a": -41.5,
+     "b": -7.6,
+     "tb": -0.45
+    }
+   },
+   "R4 fade 24h breakout": {
+    "long": {
+     "a": 18.8,
+     "b": -17.4,
+     "tb": -1.02
+    },
+    "short": {
+     "a": -49.4,
+     "b": -44.6,
+     "tb": -2.54
+    }
+   },
+   "R5 follow big hour": {
+    "long": {
+     "a": -11.5,
+     "b": -5.4,
+     "tb": -0.68
+    },
+    "short": {
+     "a": -24.6,
+     "b": -19.1,
+     "tb": -1.89
+    }
+   },
+   "R6 fade big hour": {
+    "long": {
+     "a": -1.1,
+     "b": -8.8,
+     "tb": -0.86
+    },
+    "short": {
+     "a": -9.9,
+     "b": -17.8,
+     "tb": -2.15
+    }
+   },
+   "R7 200h average": {
+    "long": {
+     "a": 26.2,
+     "b": -44.5,
+     "tb": -1.74
+    },
+    "short": {
+     "a": -52.0,
+     "b": -74.6,
+     "tb": -3.33
+    }
+   }
+  },
+  "shorts": {
+   "rules": {
+    "S1 blow-off short, 12h": {
+     "t_a": -1.42,
+     "t_b": 1.0,
+     "a_yr": -0.3,
+     "b_yr": 0.1,
+     "b_years": {
+      "2024": 0.0,
+      "2025": 0.0,
+      "2026": 0.2
+     },
+     "trades": 2
+    },
+    "S2 failed breakout short, 24h": {
+     "t_a": -1.12,
+     "t_b": -3.32,
+     "a_yr": -36.4,
+     "b_yr": -58.8,
+     "b_years": {
+      "2024": -74.3,
+      "2025": -47.9,
+      "2026": -42.3
+     },
+     "trades": 1045
+    },
+    "S3 downtrend US-hours short": {
+     "t_a": -0.9,
+     "t_b": -1.23,
+     "a_yr": -14.5,
+     "b_yr": -17.5,
+     "b_years": {
+      "2024": -16.3,
+      "2025": -18.3,
+      "2026": -14.4
+     },
+     "trades": 1132
+    },
+    "S4 breakdown in downtrend, 24h": {
+     "t_a": -0.98,
+     "t_b": -0.5,
+     "a_yr": -24.1,
+     "b_yr": -6.9,
+     "b_years": {
+      "2024": -9.0,
+      "2025": -18.2,
+      "2026": 7.8
+     },
+     "trades": 368
+    }
+   },
+   "pick": "S3 downtrend US-hours short",
+   "passed": false
+  }
+ },
+ "XRPUSDT": {
+  "up_hours_pct": 50.2,
+  "up_days_pct": 49.9,
+  "avg_up_hour_bps": 61.5,
+  "avg_down_hour_bps": -62.6,
+  "worst1pct_hour_pct": -2.99,
+  "best1pct_hour_pct": 3.05,
+  "worst_hour": [
+   -22.5,
+   "2021-02-23 08"
+  ],
+  "best_hour": [
+   24.5,
+   "2020-12-29 17"
+  ],
+  "worst_24h": [
+   -47.1,
+   "2021-02-02"
+  ],
+  "best_24h": [
+   75.4,
+   "2023-07-13"
+  ],
+  "skew_hourly": -0.04,
+  "down_legs": {
+   "n": 187,
+   "median_pct": -17.1,
+   "median_hours": 97.0,
+   "biggest_pct": -60.7,
+   "longest_days": 44.0
+  },
+  "up_legs": {
+   "n": 188,
+   "median_pct": 20.1,
+   "median_hours": 86.0,
+   "biggest_pct": 219.1,
+   "longest_days": 39.0
+  },
+  "swing_threshold_pct": 10.0,
+  "vol_after_big_down_x": 1.44,
+  "vol_after_big_up_x": 1.53,
+  "big_down_by_session_pct": {
+   "Asia": 29.0,
+   "London": 17.0,
+   "US": 43.0,
+   "Late": 11.0
+  },
+  "big_up_by_session_pct": {
+   "Asia": 30.0,
+   "London": 18.0,
+   "US": 43.0,
+   "Late": 9.0
+  },
+  "e5_direction_split": {
+   "R3 follow 24h breakout": {
+    "long": {
+     "a": -19.2,
+     "b": 57.2,
+     "tb": 1.69
+    },
+    "short": {
+     "a": -51.3,
+     "b": -27.1,
+     "tb": -1.17
+    }
+   },
+   "R4 fade 24h breakout": {
+    "long": {
+     "a": 28.4,
+     "b": -1.2,
+     "tb": -0.05
+    },
+    "short": {
+     "a": -6.9,
+     "b": -81.8,
+     "tb": -2.4
+    }
+   },
+   "R5 follow big hour": {
+    "long": {
+     "a": -48.1,
+     "b": 11.5,
+     "tb": 0.84
+    },
+    "short": {
+     "a": -33.9,
+     "b": -3.8,
+     "tb": -0.3
+    }
+   },
+   "R6 fade big hour": {
+    "long": {
+     "a": 8.0,
+     "b": -21.1,
+     "tb": -1.66
+    },
+    "short": {
+     "a": 25.1,
+     "b": -36.6,
+     "tb": -2.6
+    }
+   },
+   "R7 200h average": {
+    "long": {
+     "a": -4.8,
+     "b": -20.8,
+     "tb": -0.47
+    },
+    "short": {
+     "a": -33.9,
+     "b": -47.7,
+     "tb": -1.85
+    }
+   }
+  },
+  "shorts": {
+   "rules": {
+    "S1 blow-off short, 12h": {
+     "t_a": 1.0,
+     "t_b": 0.0,
+     "a_yr": 0.9,
+     "b_yr": 0.0,
+     "b_years": {
+      "2024": 0.0,
+      "2025": 0.0,
+      "2026": 0.0
+     },
+     "trades": 1
+    },
+    "S2 failed breakout short, 24h": {
+     "t_a": -1.02,
+     "t_b": -1.38,
+     "a_yr": -36.4,
+     "b_yr": -41.7,
+     "b_years": {
+      "2024": -115.0,
+      "2025": 17.4,
+      "2026": -18.9
+     },
+     "trades": 931
+    },
+    "S3 downtrend US-hours short": {
+     "t_a": -2.6,
+     "t_b": -1.49,
+     "a_yr": -65.1,
+     "b_yr": -36.2,
+     "b_years": {
+      "2024": -48.4,
+      "2025": -35.0,
+      "2026": -17.8
+     },
+     "trades": 1336
+    },
+    "S4 breakdown in downtrend, 24h": {
+     "t_a": -0.71,
+     "t_b": -1.54,
+     "a_yr": -17.0,
+     "b_yr": -26.2,
+     "b_years": {
+      "2024": -26.4,
+      "2025": -30.0,
+      "2026": -16.9
+     },
+     "trades": 399
+    }
+   },
+   "pick": "S1 blow-off short, 12h",
+   "passed": false
+  }
+ }
+}

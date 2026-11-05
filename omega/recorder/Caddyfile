@@ -1,0 +1,4 @@
+# HTTPS in front of the recorder, so OMEGA on the phone (served over HTTPS) can call it. Replace the name with yours.
+your-name.duckdns.org {
+    reverse_proxy 127.0.0.1:8000
+}
