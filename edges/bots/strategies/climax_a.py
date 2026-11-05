@@ -56,8 +56,10 @@ class ClimaxA(Strategy):
         for sym, df in bars.items():
             if sym in STABLES or df is None or len(df) < NMIN + 2 or df.index[-1] != now:
                 continue
-            df = dense(df.iloc[-(N + 2):], self.tf)
-            F = features(df, self._fv(sym, df))
+            df = dense(df, self.tf)
+            fv = self._fv(sym, df)
+            df = df.iloc[-(N + 2):]
+            F = features(df, fv)
             if F["fire"][-1]:
                 out.append(self._sig(sym, F, len(df) - 1))
         return out
