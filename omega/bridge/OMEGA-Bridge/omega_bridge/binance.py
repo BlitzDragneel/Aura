@@ -3,28 +3,35 @@ import hmac, hashlib, time, math, datetime as dt, urllib.parse
 import httpx
 from . import secrets
 class BinanceError(Exception): pass
+class BinanceTransportError(BinanceError): pass                            # network failure: the request's outcome is unknown
 def _dec(step):
     s = ('%.12f' % float(step)).rstrip('0'); return len(s.split('.')[1]) if '.' in s else 0
 def _floor(x, step): return math.floor(x/step + 1e-9)*step
 class Binance:
     def __init__(self, cfg, client=None, key=None, secret=None):
         self.cfg = cfg; self.live = bool(cfg.get('live')); self.base = (cfg['live_url'] if self.live else cfg['testnet_url']).rstrip('/')
-        self.c = client or httpx.Client(timeout=15); self._key, self._secret = key, secret; self._info = None
+        self.c = client or httpx.Client(timeout=15); self._key, self._secret = key, secret; self._info = None; self._offset = 0; self._restrictions = None
     def _creds(self):
         k = self._key or secrets.get('binance_key'); s = self._secret or secrets.get('binance_secret')
         if not (k and s): raise BinanceError('no Binance key in the Windows vault: run  python -m omega_bridge setkey binance')
         return k, s
-    def _req(self, method, path, params=None, signed=False):
+    def _req(self, method, path, params=None, signed=False, _retry=True):
         p = dict(params or {}); headers = {}
         if signed:
-            k, s = self._creds(); p['timestamp'] = int(time.time()*1000); p['recvWindow'] = 5000
+            k, s = self._creds(); p['timestamp'] = int(time.time()*1000) + self._offset; p['recvWindow'] = int(self.cfg.get('recv_window', 5000))
             q = urllib.parse.urlencode(p); p['signature'] = hmac.new(s.encode(), q.encode(), hashlib.sha256).hexdigest(); headers['X-MBX-APIKEY'] = k
-        r = self.c.request(method, self.base + path, params=p, headers=headers)
+        try: r = self.c.request(method, self.base + path, params=p, headers=headers)
+        except httpx.HTTPError as e:                                           # never let the URL (signed query) reach a message or log
+            raise BinanceTransportError(f'Binance unreachable on {path}: {type(e).__name__}') from None
         if r.status_code >= 400:
-            try: j = r.json(); msg = f"{j.get('code')}: {j.get('msg')}"
-            except Exception: msg = r.text[:200]
-            raise BinanceError(f'Binance {r.status_code} on {path}: {msg}')
+            try: j = r.json(); code, msg = j.get('code'), j.get('msg')
+            except Exception: code, msg = None, r.text[:200]
+            if signed and _retry and code == -1021:                            # clock drift: resync with the server once and retry (the request was rejected, so a retry cannot double it)
+                self.sync_time(); return self._req(method, path, params, signed, _retry=False)
+            raise BinanceError(f'Binance {r.status_code} on {path}: {code}: {msg}')
         return r.json()
+    def sync_time(self):
+        t = self._req('GET', '/fapi/v1/time')['serverTime']; self._offset = int(t) - int(time.time()*1000); return self._offset
     # ── public ──
     def info(self, symbol):
         if self._info is None: self._info = {s['symbol']: s for s in self._req('GET', '/fapi/v1/exchangeInfo')['symbols']}
