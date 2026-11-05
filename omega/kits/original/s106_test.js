@@ -23,6 +23,8 @@ ok(html.split('E34 CORRECTION NOTE').length === 2 && html.split('id="harvestE34"
   await pg.reload(); await pg.waitForTimeout(4500);
   const obs2 = await pg.evaluate(() => (window.OMEGA_BRAIN.observationsFor('omega', '1w') || []).filter(o => /^Correction \(E34/.test(o.text)).length);
   ok(obs === 1 && obs2 === 1, 'Brain: one pinned E34 correction, not repeated on reload', { obs, obs2 });
+  const css = await pg.evaluate(() => ({ pb:document.querySelectorAll('#pbCss').length, rare:document.querySelectorAll('#rareCss').length, g:Array.from(document.styleSheets).some(x => { try{ return Array.from(x.cssRules).some(r => /\.pgauge/.test(r.selectorText || '')); }catch(e){ return false; } }) }));
+  ok(css.pb === 1 && css.rare === 1 && css.g, 'styles: the panic card and the research card each keep their own <style>; the gauge rules are present', css);
   await pg.evaluate(() => navigate('futures')); await pg.waitForTimeout(1500);
   const fz = await pg.evaluate(() => { const e = document.getElementById('futLevTruth'); return e ? { t:e.innerText, page:e.closest('#page-futures') ? 1 : 0, n:document.querySelectorAll('#futLevTruth').length } : null; });
   ok(fz && fz.page && fz.n === 1 && /76% of 100,000/.test(fz.t) && /56–59%/.test(fz.t) && /1× isolated/.test(fz.t), 'Futures: one leverage evidence card on the Futures page', fz);

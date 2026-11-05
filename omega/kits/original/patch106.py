@@ -9,6 +9,8 @@ CREED's engine and every rule's logic are unchanged.
     (E28 round 5; E25/E26 on 883-903 perpetuals). Now: the ideas the handover lists as untested (on-chain flows, options).
  3. "Move the stop to breakeven: the rest is risk-free" (signal card, Simulation plan) -> a breakeven stop limits the loss
     but gaps, slippage, fees and funding can still cost money (the app's own stop note says a stop is not a guaranteed exit).
+ 5. Bug: the research card and the panic card both created <style id="pbCss">; the first one won, so the panic gauge could
+    lose its .pgauge rules (race between two 1-second timers). The research card's style is now id="rareCss".
  4. The Brain gets one pinned correction note about E34 (once, flag omega_e34_note_v1), so its older pinned harvest notes
     are not the last word.
 """
@@ -62,6 +64,11 @@ rep("Immediately move your stop to breakeven — the rest of the trade is now ri
     "Immediately move your stop to breakeven — that limits the rest of the trade’s loss, but gaps, slippage, fees and funding can still cost money (a stop is not a guaranteed exit).")
 rep("move the stop to breakeven — the standard way to make the remainder risk-free while letting it run.",
     "move the stop to breakeven — the standard way to cut the remainder’s risk while letting it run (not risk-free: gaps, slippage and fees still apply).")
+
+# 5. style id clash: the research card and the panic card both made <style id="pbCss">; whichever ran first won, so the panic
+#    gauge could lose its .pgauge rules. The research card's style gets its own id.
+rep("var HOSTS = [['rareSigBody', 'panicSigBody'], ['rareBody', 'panicBody']];\n  function css(){ if(document.getElementById('pbCss')) return; var st = document.createElement('style'); st.id = 'pbCss';",
+    "var HOSTS = [['rareSigBody', 'panicSigBody'], ['rareBody', 'panicBody']];\n  function css(){ if(document.getElementById('rareCss')) return; var st = document.createElement('style'); st.id = 'rareCss';")
 
 # 4. one pinned Brain correction
 NOTE = """<script>/* ═══ E34 CORRECTION NOTE (v6.5.106) — one pinned Brain note so older pinned harvest notes are not the last word ═══ */
