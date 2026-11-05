@@ -13,6 +13,14 @@ close and cancel orders on **Binance USDT-M futures** and **MT5** (Exness or any
   in the Bridge folder. `kill_switch_off.bat` lifts it.
 - **Preview first:** every order can be previewed (exact rounded order + every check) without sending; sending needs
   `confirm=true`. Every sent, refused or failed order is written to `orders.jsonl`.
+- **Since the Nov 2026 security review:** `place_order` needs the `preview_id` of a preview of exactly that order (valid
+  120 s, single use). A **LIVE** order also needs **you to click Yes in a dialog on the PC** (Claude cannot click it; no
+  answer within 60 s = no). A live Binance key is refused if it can **withdraw** or is **not IP-restricted**
+  (`guard.require_ip_restriction`). One position or resting entry order per symbol (no adding past the size cap);
+  resting entry orders count toward the 3. MT5 orders are capped at `max_mt5_lots` (0.1). If the stop cannot be placed after
+  the entry, the Bridge undoes the entry; if it cannot, it turns the kill switch on and says so. The kill switch with
+  flatten also cancels resting entry orders. **Claude can turn the kill switch on but never off** (`kill_switch_off.bat`).
+  In Claude Desktop, never choose "always allow" for `place_order`, `close_position` or `kill_switch`.
 - **Secrets never in files:** your Binance key/secret and MT5 password go into the **Windows Credential Manager**. The config
   file refuses to load if it contains a key, secret or password. Logs redact anything secret-like.
 
@@ -43,7 +51,7 @@ found the delta-neutral funding harvest FAILED in 2025–26 (−17% a year), bec
   say what the tested rules suggest; the Bridge is how such an order reaches the exchange.
 - It does not run when your PC is off or asleep.
 
-## Tests: `python -m pytest -q tests` (12, with a simulated Binance and a fake MetaTrader5 module)
+## Tests: `python -m pytest -q tests` (37 incl. tests/test_security.py, with a simulated Binance and a fake MetaTrader5 module)
 Signing (HMAC-SHA256; the secret never travels), rounding to the exchange's rules and minimums, stops on the wrong side,
 preview never sends, confirm required, every guard refusal with reasons, bracket orders (stop-market and take-profit-market,
 close-position), Exness symbol suffixes (XAUUSD → XAUUSDm), sizing by risk with MT5's profit calculator, minimum-lot refusals,

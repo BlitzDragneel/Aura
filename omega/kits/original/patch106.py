@@ -3,6 +3,8 @@ CREED's engine and every rule's logic are unchanged.
  1. Funding harvest: E34 (Nov 2026, delta-neutral harvest on 2025-26: -17% a year, worst 30 days -33%) is now shown on the
     harvest card, the Round 12 winners card (half of it is the harvest), the research-record heading, the "being paid for
     supplying leverage" lesson and the two Autopilot job labels, which still called it "the rule that passed".
+ 1b. Futures page: a red "Leverage — what the tests say" card (CREED's negative expectancy and the 76% Monte Carlo,
+    E26's 56-59% falls at 1x, the 5% x 10x default = half the account per position, Prime 1x / Bridge 10 USDT cap).
  2. "Why signals are rare": its footer listed BTC/ETH timing and H1/H3 on every perpetual as "not yet run"; both were run
     (E28 round 5; E25/E26 on 883-903 perpetuals). Now: the ideas the handover lists as untested (on-chain flows, options).
  3. "Move the stop to breakeven: the rest is risk-free" (signal card, Simulation plan) -> a breakeven stop limits the loss
@@ -39,6 +41,17 @@ rep("and the climax reversal (round 16). Everything else failed</h2>",
     "and the climax reversal (round 16); the harvest then FAILED on 2025\\u201326 (E34, \\u221217% a year). Everything else failed</h2>")
 rep("What a coin\\u2019s crowd does is not a law; being paid for supplying leverage is.",
     "What a coin\\u2019s crowd does is not a law; being paid for supplying leverage held up longer, until E34 (Nov 2026) found it lost 17% a year in 2025\\u201326.")
+
+rep("(both run on paper at the top of OMEGA Strategy):</p>",
+    "(both run on paper at the top of OMEGA Strategy; their harvest half later FAILED E34 on 2025\\u201326, \\u221217% a year):</p>")
+
+# 1b. leverage: the Futures page had no word on what the tests say
+F = '      <div class="card" style="margin-bottom:14px;">\n        <h2 style="color:var(--gold);">Backtest on futures</h2>'
+rep(F, '''      <div class="card" id="futLevTruth" style="margin-bottom:14px;border-color:var(--bear);">
+        <h2 style="color:var(--bear);">Leverage — what the tests say</h2>
+        <p class="hint" style="margin-top:0;color:var(--text);">Leverage multiplies losses exactly as much as gains, and no tested rule has an edge large enough to lever. CREED: −0.10R to −0.12R a trade after costs (E29, E31); at 1% risk it loses half the account within a year in 76% of 100,000 simulated accounts. The panic bounce H1 run as a 100 USDT account of 5–10 USDT seats <b>without</b> leverage still fell 56–59% from its peak (E26). The default here (5% margin × 10×) puts half the account into every position; at 10× a 9% move against you liquidates it before most stops. OMEGA Prime’s tickets use 1× isolated and the Bridge caps a Binance order at 10 USDT. Use these pages to see the damage on paper, not to pick a higher setting.</p>
+      </div>
+''' + F)
 
 # 2. stale "next ideas"
 rep("Next ideas not yet run: BTC/ETH timing from market-wide funding and breadth; H1/H3 on every perpetual, not only the 40 most-traded (more coins, more panics).",

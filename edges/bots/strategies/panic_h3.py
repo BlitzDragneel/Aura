@@ -7,7 +7,7 @@ Breadth is cross-sectional: the runner must pass every coin it can (the research
 """
 import numpy as np
 import pandas as pd
-from edges.bots.core import Signal, Strategy, dense
+from edges.bots.core import Signal, Strategy, dense, is_current
 from edges.bots.strategies import _panic as P
 
 Q, B, HOLD = 5, 0.20, 24
@@ -42,14 +42,14 @@ class PanicH3(Strategy):
                       strategy=self.id, ref_close=float(F["c"][i]))
 
     def signals(self, bars, now):
-        live = {s: d for s, d in bars.items() if d is not None and len(d) and d.index[-1] == now}
+        live = {s: d for s, d in bars.items() if is_current(d, now, self.tf)}
         FS = self._feats(live, last_only=True)
         br = P.breadth(FS.values())
         out = []
         for sym, (idx, F) in FS.items():
             i = len(idx) - 1
             if self._mask(idx, F, br)[i]:
-                out.append(self._sig(sym, F, i, float(br.get(now, 0))))
+                out.append(self._sig(sym, F, i, float(br.get(idx[i], 0))))
         return out
 
     def scan(self, data, start=None, end=None):

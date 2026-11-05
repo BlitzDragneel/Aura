@@ -161,3 +161,22 @@ def dense(df: pd.DataFrame, tf: str = "1h") -> pd.DataFrame:
             df = df.copy()
             df.loc[bad, [c for c in ("o", "h", "l", "c", "v", "qv") if c in df]] = np.nan
     return df
+
+
+def bar_time(now, tf="1h") -> pd.Timestamp:
+    """The open time of the bar that just closed at `now`. Accepts either a bar-open time (the runners pass the last
+    closed bar's open time) or a wall-clock time (e.g. omega/live_api passes Timestamp.now())."""
+    now = pd.Timestamp(now)
+    if now.tzinfo is None:
+        now = now.tz_localize("UTC")
+    step = tf_delta(tf)
+    fl = now.floor(step)
+    return fl if fl == now else fl - step
+
+
+def is_current(df, now, tf="1h") -> bool:
+    """True when df's last row is the bar that closed at `now` (see bar_time)."""
+    if df is None or len(df) == 0:
+        return False
+    last = df.index[-1]
+    return last == pd.Timestamp(now) or last == bar_time(now, tf)

@@ -8,7 +8,7 @@ script omega/research/archive-2026-10-20/climax.py. Stablecoins excluded. About 
 """
 import numpy as np
 import pandas as pd
-from edges.bots.core import STABLES, Signal, Strategy, dense
+from edges.bots.core import STABLES, Signal, Strategy, dense, is_current
 
 ZK, VK, LK, HOLD, N, NMIN, AGE = 3.0, 3.0, 0.6, 12, 168, 120, 720
 H = pd.Timedelta(hours=1)
@@ -54,7 +54,7 @@ class ClimaxA(Strategy):
     def signals(self, bars, now):
         out = []
         for sym, df in bars.items():
-            if sym in STABLES or df is None or len(df) < NMIN + 2 or df.index[-1] != now:
+            if sym in STABLES or df is None or len(df) < NMIN + 2 or not is_current(df, now, self.tf):
                 continue
             df = dense(df, self.tf)
             fv = self._fv(sym, df)

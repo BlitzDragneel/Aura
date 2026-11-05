@@ -1,4 +1,40 @@
 # HTTPS in front of the recorder, so OMEGA on the phone (served over HTTPS) can call it. Replace the name with yours.
+# Caddy gets and renews the TLS certificate itself (Let's Encrypt) and redirects http -> https.
+# On a public server also set OMEGA_READ_TOKEN (in /etc/omega-recorder.env) so only your apps can read and export.
 your-name.duckdns.org {
-    reverse_proxy 127.0.0.1:8000
+    encode gzip
+    request_body {
+        max_size 64KB                      # the API only takes small JSON events
+    }
+    header {
+        Strict-Transport-Security "max-age=31536000"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "no-referrer"
+        Content-Security-Policy "default-src 'none'; frame-ancestors 'none'"
+        -Server
+    }
+    # the interactive API docs are not needed on the public address
+    @docs path /docs /docs/* /redoc /openapi.json
+    respond @docs 404
+    reverse_proxy 127.0.0.1:8000 {
+        transport http {
+            response_header_timeout 120s
+        }
+    }
+    log {
+        output file /var/log/caddy/omega-recorder.log {
+            roll_size 10MiB
+            roll_keep 5
+        }
+        format filter {
+            wrap json
+            fields {
+                request>uri query {
+                    replace token REDACTED
+                }
+                request>headers>X-Token delete
+            }
+        }
+    }
 }

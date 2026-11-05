@@ -17,5 +17,6 @@ class Settings:
     depth_n: int = field(default_factory=lambda: int(_env("OMEGA_DEPTH_N", "10")))      # order-book summaries
     forward_start: str = field(default_factory=lambda: _env("OMEGA_FORWARD_START", "2026-11-01"))  # paper record start (UTC date)
     token: str = field(default_factory=lambda: _env("OMEGA_TOKEN", ""))                 # needed for write endpoints; never stored in files
+    read_token: str = field(default_factory=lambda: _env("OMEGA_READ_TOKEN", ""))       # optional: when set, reads need it too (public servers)
     cors: str = field(default_factory=lambda: _env("OMEGA_CORS", "*"))
     jobs_enabled: bool = field(default_factory=lambda: _env("OMEGA_JOBS", "1") == "1")

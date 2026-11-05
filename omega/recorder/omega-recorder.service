@@ -1,14 +1,45 @@
-# /etc/systemd/system/omega-recorder.service  (Linux server). Put OMEGA_TOKEN in /etc/omega-recorder.env, not in this file.
+# /etc/systemd/system/omega-recorder.service  (Linux server). Put OMEGA_TOKEN (and OMEGA_READ_TOKEN on a public server) in
+# /etc/omega-recorder.env (chmod 600, owner root), not in this file. Check the hardening score: systemd-analyze security omega-recorder
 [Unit]
 Description=OMEGA Recorder (paper only, public Binance data)
 After=network-online.target
+Wants=network-online.target
 [Service]
 User=omega
+Group=omega
 WorkingDirectory=/opt/omega-recorder
 EnvironmentFile=/etc/omega-recorder.env
 Environment=OMEGA_DB=/opt/omega-recorder/data/omega_recorder.sqlite
+Environment=OMEGA_HOST=127.0.0.1
 ExecStart=/opt/omega-recorder/venv/bin/python -m omega_recorder serve
 Restart=always
 RestartSec=10
+# hardening: the service can write only its data folder, and cannot gain privileges
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/opt/omega-recorder/data
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources
+CapabilityBoundingSet=
+AmbientCapabilities=
+UMask=0077
+MemoryMax=1G
+TasksMax=256
 [Install]
 WantedBy=multi-user.target

@@ -7,7 +7,7 @@ from omega_bridge.core import Bridge
 from omega_bridge import guard, log
 KEY, SECRET = 'test-key-123', 'test-secret-abc'
 BASE = 'https://testnet.binancefuture.com'
-def mock_binance(positions=(), income=(), orders=None):
+def mock_binance(positions=(), income=(), orders=None, open_orders=()):
     respx.get(f'{BASE}/fapi/v1/exchangeInfo').mock(return_value=httpx.Response(200, json={'symbols': [{'symbol': 'BTCUSDT', 'status': 'TRADING', 'filters': [
         {'filterType': 'PRICE_FILTER', 'tickSize': '0.10'}, {'filterType': 'LOT_SIZE', 'stepSize': '0.001', 'minQty': '0.001'}, {'filterType': 'MARKET_LOT_SIZE', 'stepSize': '0.001', 'minQty': '0.001'}, {'filterType': 'MIN_NOTIONAL', 'notional': '5'}]}]}))
     respx.get(f'{BASE}/fapi/v1/ticker/price').mock(return_value=httpx.Response(200, json={'symbol': 'BTCUSDT', 'price': '100.00'}))
@@ -16,16 +16,20 @@ def mock_binance(positions=(), income=(), orders=None):
     respx.get(f'{BASE}/fapi/v1/income').mock(return_value=httpx.Response(200, json=list(income)))
     respx.post(f'{BASE}/fapi/v1/marginType').mock(return_value=httpx.Response(400, json={'code': -4046, 'msg': 'No need to change margin type.'}))
     respx.post(f'{BASE}/fapi/v1/leverage').mock(return_value=httpx.Response(200, json={'leverage': 1}))
+    respx.get(f'{BASE}/fapi/v1/openOrders').mock(return_value=httpx.Response(200, json=list(open_orders)))
     sent = orders if orders is not None else []
     def order(req): sent.append(req); return httpx.Response(200, json={'orderId': len(sent), 'status': 'NEW'})
     respx.post(f'{BASE}/fapi/v1/order').mock(side_effect=order); respx.delete(f'{BASE}/fapi/v1/allOpenOrders').mock(return_value=httpx.Response(200, json={}))
     return sent
+def go(B, venue, sym, side, **kw):
+    p = B.preview(venue, sym, side, **kw); assert p['allowed'], p['blocked_because']
+    return B.place(venue, sym, side, confirm=True, preview_id=p['preview_id'], **kw)
 def bridge(mt5=None, **guard_over):
     cfg = load(); cfg['guard'].update(guard_over); return Bridge(cfg, binance=Binance(cfg['binance'], key=KEY, secret=SECRET), mt5=MT5(cfg['mt5'], mod=mt5 or FakeMT5()))
 @respx.mock
 def test_binance_requests_are_signed_and_the_secret_never_travels():
     sent = mock_binance(); B = bridge()
-    r = B.place('binance', 'BTCUSDT', 'BUY', confirm=True, size_usd=10, stop=95, target=110)
+    r = go(B, 'binance', 'BTCUSDT', 'BUY', size_usd=10, stop=95, target=110)
     assert r['sent'] and len(sent) == 3                                       # entry, stop, target
     for req in sent:
         q = req.url.query.decode(); params = dict(urllib.parse.parse_qsl(q)); sig = params.pop('signature')
@@ -62,7 +66,7 @@ def test_mt5_finds_exness_suffix_sizes_by_risk_and_attaches_stop_and_target():
     f = FakeMT5(); B = bridge(mt5=f, max_risk_usd=3)
     p = B.preview('mt5', 'XAUUSD', 'BUY', risk_usd=3, stop=1998.3, target=2010)
     o = p['order']; assert o['symbol'] == 'XAUUSDm' and o['volume'] == 0.01 and abs(o['risk_usd'] - 2.0) < 1e-6 and p['allowed']
-    r = B.place('mt5', 'XAUUSD', 'BUY', confirm=True, risk_usd=3, stop=1998.3, target=2010)
+    r = go(B, 'mt5', 'XAUUSD', 'BUY', risk_usd=3, stop=1998.3, target=2010)
     q = f.sent[-1]; assert r['sent'] and q['sl'] == 1998.3 and q['tp'] == 2010.0 and q['type'] == f.ORDER_TYPE_BUY and q['type_filling'] == f.ORDER_FILLING_FOK and q['magic'] == 77777
 def test_mt5_refuses_below_minimum_lot_and_explains_the_real_risk():
     B = bridge()

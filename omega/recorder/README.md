@@ -37,13 +37,16 @@ records. **Paper only:** it uses public endpoints, holds no API keys and places 
 5. HTTPS: point a free DuckDNS name at the server and use the `Caddyfile` (Caddy fetches the certificate itself).
 6. Backfill (hours; resumable, already-fetched files are skipped):
    `curl -X POST -H "X-Token: <token>" https://<name>/admin/backfill`
-7. Restrict who may call it from a browser: `OMEGA_CORS=https://<where the app is served from>`.
+7. Restrict who may call it from a browser: `OMEGA_CORS=https://<where the app is served from>`. On a public address also set
+   `OMEGA_READ_TOKEN=<another long random token>`: then every endpoint except `/health` needs it (`X-Token` header or `?token=`),
+   so strangers cannot run heavy exports against your server. The Caddyfile adds security headers, a 64 KB body limit, hides
+   `/docs`, and redacts tokens from its log; the systemd unit is sandboxed (`systemd-analyze security omega-recorder`).
 
 Windows instead: double-click `run_windows.bat`. It records only while the window is open and the PC is awake; candles and
 funding can be backfilled later, but open interest, ratios, liquidations and order books missed are lost.
 
 ## Settings (environment variables)
-`OMEGA_DB`, `OMEGA_HOST` (127.0.0.1), `OMEGA_PORT` (8000), `OMEGA_TOKEN`, `OMEGA_CORS` (*), `OMEGA_WATCH_N` (40),
+`OMEGA_DB`, `OMEGA_HOST` (127.0.0.1), `OMEGA_PORT` (8000), `OMEGA_TOKEN`, `OMEGA_READ_TOKEN` (off), `OMEGA_CORS` (*), `OMEGA_WATCH_N` (40),
 `OMEGA_DEPTH_N` (10), `OMEGA_BACKFILL_FROM` (2020-01), `OMEGA_FORWARD_START` (2026-11-01), `OMEGA_JOBS` (1).
 
 ## Tests: `python -m pytest -q tests` (14 tests)

@@ -10,7 +10,7 @@ class FakeMT5(types.SimpleNamespace):
     ORDER_TIME_GTC, ORDER_FILLING_FOK, ORDER_FILLING_IOC, ORDER_FILLING_RETURN = 0, 0, 1, 2
     TRADE_RETCODE_DONE, ACCOUNT_TRADE_MODE_DEMO = 10009, 0
     def __init__(self, trade_mode=0):
-        super().__init__(); self.mode = trade_mode; self.sent = []; self.pos = []; self.deals = []
+        super().__init__(); self.mode = trade_mode; self.sent = []; self.pos = []; self.deals = []; self.pending = []
         self.syms = {'XAUUSDm': types.SimpleNamespace(name='XAUUSDm', visible=False, volume_min=0.01, volume_step=0.01, volume_max=200, trade_contract_size=100, digits=3, point=0.001, filling_mode=1)}
     def initialize(self, **kw): self.init_kw = kw; return True
     def last_error(self): return (0, 'ok')
@@ -23,3 +23,4 @@ class FakeMT5(types.SimpleNamespace):
     def order_send(self, req): self.sent.append(req); return types.SimpleNamespace(retcode=10009, order=555, deal=777, price=req.get('price'), comment='done')
     def positions_get(self, symbol=None): return [p for p in self.pos if symbol is None or p.symbol == symbol]
     def history_deals_get(self, a, b): return self.deals
+    def orders_get(self, symbol=None): return [o for o in self.pending if symbol is None or o.symbol == symbol]

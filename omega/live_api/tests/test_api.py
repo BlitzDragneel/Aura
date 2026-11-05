@@ -130,3 +130,20 @@ def test_signals_without_rules(client, monkeypatch, tmp_path):
     monkeypatch.setattr(signals, "APPROVED", tmp_path / "none.json")
     c, _ = client
     assert c.get("/signals").json()["rules"] == []
+
+
+def test_dns_rebinding_host_refused_without_token(client):
+    c, _ = client
+    assert c.get("/health", headers={"Host": "evil.example"}).status_code == 400
+    assert c.get("/health").status_code == 200
+
+
+def test_provider_errors_never_echo_the_twelvedata_key(monkeypatch):
+    monkeypatch.setenv("TWELVEDATA_API_KEY", "TDKEY1234567890")
+    def h(req):
+        if req.url.host == "api.twelvedata.com":
+            return httpx.Response(200, json={"status": "error", "message": "bad key TDKEY1234567890"})
+        return httpx.Response(503)
+    c = TestClient(appmod.create_app(Http(httpx.Client(transport=httpx.MockTransport(h))), start_background=False))
+    r = c.get("/fx/klines?symbol=EURUSD&tf=1h")
+    assert r.status_code == 502 and "TDKEY1234567890" not in r.text

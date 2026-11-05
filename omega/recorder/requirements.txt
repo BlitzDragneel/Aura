@@ -1,9 +1,11 @@
-fastapi>=0.110
-uvicorn[standard]>=0.29
-httpx>=0.27
-websockets>=12
-numpy>=1.26
-pandas>=2.1
+# Upper bounds added in the Nov 2026 security review (tested with fastapi 0.162, uvicorn 0.54, httpx 0.28.1, websockets 17.4,
+# numpy 2.5, pandas 3.0). For a hash-locked install: pip-compile --generate-hashes requirements.txt -o requirements.lock
+fastapi>=0.110,<1
+uvicorn[standard]>=0.29,<1
+httpx>=0.27,<1
+websockets>=12,<18
+numpy>=1.26,<3
+pandas>=2.1,<4
 # tests only
-pytest>=8
-respx>=0.21
+pytest>=8,<10
+respx>=0.21,<1

@@ -1,7 +1,9 @@
-MetaTrader5        # Windows only: the official MT5 package (needs the MT5 terminal installed)
-httpx
-keyring            # stores secrets in the Windows Credential Manager
-mcp                # Claude Desktop connector
+# Pinned (security review, Nov 2026): the versions the tests ran with. Upgrade on purpose, rerun the tests, then update the pins.
+# For a hash-locked install: pip install pip-tools && pip-compile --generate-hashes requirements.txt -o requirements.lock
+MetaTrader5>=5.0.45,<6   # Windows only: the official MT5 package (needs the MT5 terminal installed); not installable on Linux, so not pinned exactly here
+httpx==0.28.1
+keyring==25.7.0          # stores secrets in the Windows Credential Manager
+mcp==2.3.0               # Claude Desktop connector (mcp 1.x also works: mcp_server.py falls back to FastMCP)
 # tests only
-pytest
-respx
+pytest==9.2.0
+respx==0.23.1

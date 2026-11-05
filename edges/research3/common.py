@@ -78,7 +78,10 @@ def period(tr, p, start=None):
         a = max(pd.Timestamp(a, tz="UTC"), pd.Timestamp(start, tz="UTC"))
     if len(tr) == 0:
         return tr
-    return tr[(tr.time >= pd.Timestamp(a, tz="UTC")) & (tr.time < pd.Timestamp(b, tz="UTC"))]
+    a, b = pd.Timestamp(a), pd.Timestamp(b)
+    a = a if a.tzinfo else a.tz_localize("UTC")
+    b = b if b.tzinfo else b.tz_localize("UTC")
+    return tr[(tr.time >= a) & (tr.time < b)]
 
 
 def tstat(tr):

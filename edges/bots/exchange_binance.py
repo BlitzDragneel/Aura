@@ -1,0 +1,264 @@
+"""Binance USDT-M futures: public market data (with OKX/Gate fallback through omega/live_api) and a signed trading
+adapter (HMAC-SHA256). Testnet base URL by default (https://demo-fapi.binance.com, configurable).
+
+Order flow for one rule signal (one-way mode, isolated margin):
+  1. marginType ISOLATED, leverage L for the symbol.
+  2. entry: LIMIT BUY (GTD = the rule's window, so it dies on the exchange even if the bot is off) or MARKET BUY.
+  3. protective stop placed at once: STOP_MARKET SELL closePosition=true workingType=MARK_PRICE through the Algo Service
+     (POST /fapi/v1/algoOrder, algoType=CONDITIONAL — Binance moved conditional orders there on 2025-12-09; the old
+     /fapi/v1/order path answers -4120). A closePosition stop does nothing while there is no position, so it can rest
+     beside a resting limit (price must cross the limit before it reaches the stop).
+  4. exit at the rule's time: MARKET SELL reduceOnly, then cancel the symbol's open orders and algo orders.
+Nothing here can withdraw: the adapter has no transfer/withdraw call, and live mode refuses a key that can withdraw.
+"""
+from __future__ import annotations
+
+import hashlib
+import hmac
+import os
+import sys
+import time
+import urllib.parse
+
+import httpx
+import pandas as pd
+
+from edges.bots.sizing import round_price
+
+UA = {"User-Agent": "omega-bots/1.0"}
+
+
+class BinanceError(Exception):
+    def __init__(self, msg, status=None, code=None):
+        super().__init__(msg)
+        self.status, self.code = status, code
+
+
+# ---------------------------------------------------------------- public market data
+class MarketData:
+    """Closed candles for the signal side. Binance futures first; if unreachable, omega/live_api's providers
+    (OKX, Gate) when that package is importable. Every frame is indexed by UTC bar-open time; the bar still forming is
+    dropped."""
+
+    def __init__(self, base="https://fapi.binance.com", client=None, spacing=0.12, fallback=True):
+        self.base = base.rstrip("/")
+        self.c = client or httpx.Client(timeout=15, headers=UA)
+        self.spacing = spacing
+        self.fallback = fallback
+        self._alt = None
+        self.source = "binance"
+
+    def _get(self, path, **params):
+        r = self.c.get(self.base + path, params=params)
+        if r.status_code != 200:
+            raise BinanceError(f"Binance {r.status_code} on {path}", status=r.status_code)
+        return r.json()
+
+    def exchange_info(self):
+        return self._get("/fapi/v1/exchangeInfo")
+
+    def universe(self, info=None, top=None):
+        info = info or self.exchange_info()
+        syms = {s["symbol"]: dict(onboard=s.get("onboardDate")) for s in info["symbols"]
+                if s.get("quoteAsset") == "USDT" and s.get("contractType") == "PERPETUAL" and s.get("status") == "TRADING"}
+        if top:
+            t = self._get("/fapi/v1/ticker/24hr")
+            vol = {x["symbol"]: float(x.get("quoteVolume", 0)) for x in t}
+            keep = sorted(syms, key=lambda s: -vol.get(s, 0))[:top]
+            syms = {s: syms[s] for s in keep}
+        return syms
+
+    def _alt_crypto(self):
+        if self._alt is None:
+            root = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "omega", "live_api")
+            if root not in sys.path:
+                sys.path.insert(0, root)
+            from omega_live.providers import Crypto, Http   # noqa: import-optional
+            self._alt = Crypto(Http())
+        return self._alt
+
+    def klines(self, sym, tf="1h", limit=1000, now_ms=None):
+        now_ms = now_ms or int(time.time() * 1000)
+        try:
+            d = self._get("/fapi/v1/klines", symbol=sym, interval=tf, limit=min(int(limit), 1500))
+            rows = [(int(k[0]), float(k[1]), float(k[2]), float(k[3]), float(k[4]), float(k[5]), float(k[7]))
+                    for k in d if int(k[6]) < now_ms]
+            self.source = "binance"
+        except (BinanceError, httpx.HTTPError):
+            if not self.fallback:
+                raise
+            alt = self._alt_crypto().klines(sym, tf, min(int(limit), 1000))
+            rows = [(c["t"], c["o"], c["h"], c["l"], c["c"], c["v"], c["qv"]) for c in alt["candles"] if c.get("closed")]
+            self.source = alt.get("source", "fallback")
+        if self.spacing:
+            time.sleep(self.spacing)
+        df = pd.DataFrame(rows, columns=["ts", "o", "h", "l", "c", "v", "qv"])
+        df.index = pd.to_datetime(df.pop("ts"), unit="ms", utc=True)
+        return df
+
+
+# ---------------------------------------------------------------- signed trading
+class BinanceFutures:
+    def __init__(self, base, key, secret, cfg=None, client=None):
+        if not (key and secret):
+            raise BinanceError("no API key/secret (keys come from the OS vault or environment variables only)")
+        self.base = base.rstrip("/")
+        self._k, self._s = key, secret
+        self.cfg = cfg or {}
+        self.c = client or httpx.Client(timeout=15, headers=UA)
+        self._info = None
+        self._prepared = set()
+
+    def __repr__(self):            # never print the key
+        return f"BinanceFutures({self.base})"
+
+    def _req(self, method, path, params=None, signed=True, base=None):
+        p = {k: v for k, v in (params or {}).items() if v is not None}
+        headers = {}
+        if signed:
+            p["timestamp"] = int(time.time() * 1000)
+            p["recvWindow"] = int(self.cfg.get("recv_window", 5000))
+            q = urllib.parse.urlencode(p)
+            p["signature"] = hmac.new(self._s.encode(), q.encode(), hashlib.sha256).hexdigest()
+            headers["X-MBX-APIKEY"] = self._k
+        r = self.c.request(method, (base or self.base) + path, params=p, headers=headers)
+        if r.status_code >= 400:
+            try:
+                j = r.json()
+                code, msg = j.get("code"), j.get("msg")
+            except Exception:
+                code, msg = None, r.text[:200]
+            raise BinanceError(f"Binance {r.status_code} on {path}: {code}: {msg}", status=r.status_code, code=code)
+        return r.json()
+
+    # -- public
+    def info(self, sym):
+        if self._info is None:
+            self._info = {s["symbol"]: s for s in self._req("GET", "/fapi/v1/exchangeInfo", signed=False)["symbols"]}
+        s = self._info.get(sym)
+        if not s:
+            raise BinanceError(f"{sym} is not listed on this venue ({self.base})")
+        f = {x["filterType"]: x for x in s["filters"]}
+        return dict(step=float(f["LOT_SIZE"]["stepSize"]), minQty=float(f["LOT_SIZE"]["minQty"]),
+                    mstep=float(f.get("MARKET_LOT_SIZE", f["LOT_SIZE"])["stepSize"]),
+                    tick=float(f["PRICE_FILTER"]["tickSize"]),
+                    minNotional=float(f.get("MIN_NOTIONAL", {}).get("notional", 5)), status=s.get("status"))
+
+    def price(self, sym):
+        return float(self._req("GET", "/fapi/v1/ticker/price", {"symbol": sym}, signed=False)["price"])
+
+    # -- account
+    def dual_side(self):
+        return bool(self._req("GET", "/fapi/v1/positionSide/dual").get("dualSidePosition"))
+
+    def withdrawals_enabled(self, spot_url="https://api.binance.com"):
+        """True/False from the key's own restrictions (live keys only). None if it cannot be checked."""
+        try:
+            r = self._req("GET", "/sapi/v1/account/apiRestrictions", base=spot_url.rstrip("/"))
+            return bool(r.get("enableWithdrawals")) or bool(r.get("enableInternalTransfer"))
+        except (BinanceError, httpx.HTTPError):
+            return None
+
+    def positions(self):
+        try:
+            rows = self._req("GET", "/fapi/v3/positionRisk")
+        except BinanceError as e:
+            if e.status != 404:
+                raise
+            rows = self._req("GET", "/fapi/v2/positionRisk")
+        return {p["symbol"]: dict(qty=float(p["positionAmt"]), entry=float(p["entryPrice"]),
+                                  pnl=float(p.get("unRealizedProfit", 0))) for p in rows if float(p["positionAmt"]) != 0}
+
+    def balance(self):
+        b = [x for x in self._req("GET", "/fapi/v2/balance") if x["asset"] == "USDT"]
+        return float(b[0]["balance"]) if b else 0.0
+
+    def day_pnl(self):
+        t0 = int(pd.Timestamp.now(tz="UTC").floor("D").timestamp() * 1000)
+        inc = self._req("GET", "/fapi/v1/income", {"startTime": t0, "limit": 1000})
+        realized = sum(float(x["income"]) for x in inc if x["incomeType"] in ("REALIZED_PNL", "COMMISSION", "FUNDING_FEE"))
+        return realized + sum(p["pnl"] for p in self.positions().values())
+
+    # -- orders
+    def prepare(self, sym, leverage):
+        if (sym, leverage) in self._prepared:
+            return
+        try:
+            self._req("POST", "/fapi/v1/marginType", {"symbol": sym, "marginType": self.cfg.get("margin_type", "ISOLATED")})
+        except BinanceError as e:
+            if e.code != -4046:                       # -4046: no need to change margin type
+                raise
+        self._req("POST", "/fapi/v1/leverage", {"symbol": sym, "leverage": int(leverage)})
+        self._prepared.add((sym, leverage))
+
+    def place_limit(self, sym, side, qty, price, expires_ms=None, client_id=None, now_ms=None):
+        p = dict(symbol=sym, side="BUY" if side == "long" else "SELL", type="LIMIT", quantity=qty, price=price,
+                 timeInForce="GTC", newClientOrderId=client_id, newOrderRespType="RESULT")
+        now_ms = now_ms or time.time() * 1000
+        if expires_ms and self.cfg.get("use_gtd", True) and expires_ms - now_ms > 660_000:   # Binance: GTD > 600 s ahead
+            p.update(timeInForce="GTD", goodTillDate=int(expires_ms))
+        return self._req("POST", "/fapi/v1/order", p)
+
+    def place_market(self, sym, side, qty, client_id=None, reduce_only=False):
+        p = dict(symbol=sym, side="BUY" if side == "long" else "SELL", type="MARKET", quantity=qty,
+                 newClientOrderId=client_id, newOrderRespType="RESULT", reduceOnly="true" if reduce_only else None)
+        return self._req("POST", "/fapi/v1/order", p)
+
+    def place_stop(self, sym, side, stop_price, client_id=None):
+        """Close-position protective stop for a `side` position (a SELL stop for a long)."""
+        xs = "SELL" if side == "long" else "BUY"
+        if self.cfg.get("stop_via_algo", True):
+            try:
+                return dict(algo=True, **self._req("POST", "/fapi/v1/algoOrder", dict(
+                    algoType="CONDITIONAL", symbol=sym, side=xs, type="STOP_MARKET", triggerPrice=stop_price,
+                    closePosition="true", workingType="MARK_PRICE", priceProtect="true", clientAlgoId=client_id)))
+            except BinanceError as e:
+                if e.status not in (404, 405):        # venue without the Algo Service: fall back to the old path
+                    raise
+        return dict(algo=False, **self._req("POST", "/fapi/v1/order", dict(
+            symbol=sym, side=xs, type="STOP_MARKET", stopPrice=stop_price, closePosition="true",
+            workingType="MARK_PRICE", priceProtect="true", newClientOrderId=client_id)))
+
+    def order(self, sym, order_id):
+        return self._req("GET", "/fapi/v1/order", {"symbol": sym, "orderId": order_id})
+
+    def cancel(self, sym, order_id):
+        try:
+            return self._req("DELETE", "/fapi/v1/order", {"symbol": sym, "orderId": order_id})
+        except BinanceError as e:
+            if e.code in (-2011, -2013):              # unknown order / already gone
+                return dict(note=str(e))
+            raise
+
+    def cancel_all(self, sym):
+        out = {}
+        for path in ("/fapi/v1/allOpenOrders", "/fapi/v1/algoOpenOrders"):
+            try:
+                out[path] = self._req("DELETE", path, {"symbol": sym})
+            except BinanceError as e:
+                out[path] = str(e)
+        return out
+
+    def close(self, sym):
+        """Market-close the whole position in sym (reduce-only), then cancel its orders. Returns (qty, avg price)."""
+        pos = self.positions().get(sym)
+        res = None
+        if pos:
+            side = "long" if pos["qty"] > 0 else "short"
+            res = self.place_market(sym, "short" if side == "long" else "long", abs(pos["qty"]), reduce_only=True)
+        self.cancel_all(sym)
+        if not res:
+            return 0.0, None
+        return float(res.get("executedQty", 0) or 0), float(res.get("avgPrice", 0) or 0) or None
+
+    def last_fill_price(self, sym):
+        try:
+            t = self._req("GET", "/fapi/v1/userTrades", {"symbol": sym, "limit": 5})
+            return float(t[-1]["price"]) if t else None
+        except BinanceError:
+            return None
+
+
+def round_for(info, side, entry=None, stop=None):
+    return (None if entry is None else round_price(entry, info["tick"], side, "entry"),
+            None if stop is None else round_price(stop, info["tick"], side, "stop"))

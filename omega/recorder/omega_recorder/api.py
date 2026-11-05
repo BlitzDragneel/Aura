@@ -1,9 +1,9 @@
-import gzip, json, time
+import gzip, hmac, json, time
 from contextlib import asynccontextmanager
 import numpy as np
-from fastapi import FastAPI, HTTPException, Header, Query, Response
+from fastapi import Depends, FastAPI, HTTPException, Header, Query, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from . import __version__
 from .config import Settings
 from .db import DB
@@ -15,7 +15,11 @@ HOUR = 3_600_000
 JOBS = {"exchange_info": 6 * 3600, "watchlist": 3600, "klines_1h": 3600, "klines_1m": 300, "premium": 300, "funding": 8 * 3600,
         "oi_ratios": 3600, "depth": 60}
 
-def ms(d): return int(np.datetime64(d, "ms").astype(np.int64))
+def ms(d):
+    try: return int(np.datetime64(d, "ms").astype(np.int64))
+    except (ValueError, TypeError, OverflowError): raise HTTPException(400, f"not a date: {str(d)[:40]!r} (use 2026-11-01 or 2026-11-01T13:30)")
+
+MAX_EXPORT_DAYS = 400          # one request cannot ask the server to load years of 1-minute rows into memory
 
 def create_app(settings=None, db=None, start_jobs=None):
     s = settings or Settings(); db = db or DB(s.db_path)
@@ -28,14 +32,22 @@ def create_app(settings=None, db=None, start_jobs=None):
         yield
         if st["rec"]: await st["rec"].stop()
 
-    app = FastAPI(title="OMEGA Recorder", version=__version__, lifespan=life,
+    def need_read(request: Request):
+        """Optional: with OMEGA_READ_TOKEN set, every endpoint except /health needs it (X-Token or ?token=)."""
+        rt = getattr(s, "read_token", "") or ""
+        if not rt or request.url.path == "/health": return
+        got = request.headers.get("x-token") or request.query_params.get("token") or ""
+        ok = hmac.compare_digest(got.encode(), rt.encode()) or (s.token and hmac.compare_digest(got.encode(), s.token.encode()))
+        if not ok: raise HTTPException(401, "read access needs the X-Token header (OMEGA_READ_TOKEN)")
+
+    app = FastAPI(title="OMEGA Recorder", version=__version__, lifespan=life, dependencies=[Depends(need_read)],
                   description="Records public Binance USDT-M market data for OMEGA research. Paper only: no keys, no orders.")
     app.add_middleware(CORSMiddleware, allow_origins=[x.strip() for x in s.cors.split(",")], allow_methods=["GET", "POST", "DELETE"],
                        allow_headers=["*"])
     app.state.db = db; app.state.settings = s
 
     def need_token(tok):
-        if not s.token or tok != s.token: raise HTTPException(401, "write access needs the X-Token header (OMEGA_TOKEN)")
+        if not s.token or not hmac.compare_digest((tok or "").encode(), s.token.encode()): raise HTTPException(401, "write access needs the X-Token header (OMEGA_TOKEN)")
 
     def rng(start, end, default_days):
         e = ms(end) if end else int(time.time() * 1000); b = ms(start) if start else e - default_days * 86400_000
@@ -127,7 +139,8 @@ def create_app(settings=None, db=None, start_jobs=None):
                     trades=[t for t in trades if t["signal_h"] >= last // HOUR - days * 24])
 
     class Event(BaseModel):
-        kind: str; t: str; note: str = ""; source: str = ""
+        kind: str = Field(max_length=40, pattern=r"^[A-Za-z0-9_\-]+$"); t: str = Field(max_length=40)
+        note: str = Field("", max_length=2000); source: str = Field("", max_length=200)
 
     @app.get("/events")
     def events(kind: str | None = None):
@@ -144,7 +157,8 @@ def create_app(settings=None, db=None, start_jobs=None):
     def export_history(start: str = "2024-01-01", end: str | None = None, syms: str | None = None, include_delisted: bool = True):
         """Hourly candles in the gzipped format OMEGA's research loader reads (omega_history_*_json.gz)."""
         b, e = rng(start, end, 0)
-        names = [x.strip().upper() for x in syms.split(",")] if syms else [r["sym"] for r in db.q(
+        if e - b > 3 * 366 * 86400_000: raise HTTPException(400, "ask for at most 3 years per export")
+        names = [x.strip().upper() for x in syms.split(",")][:500] if syms else [r["sym"] for r in db.q(
             "SELECT sym FROM symbols" + ("" if include_delisted else " WHERE status='TRADING'") + " ORDER BY sym")]
         markets = []
         for sy in names:
@@ -163,6 +177,7 @@ def create_app(settings=None, db=None, start_jobs=None):
             raise HTTPException(404, "unknown table")
         col = "ts" if table == "listing_events" else "t"
         b, e = rng(start, end, 3650 if table in ("listing_events", "events", "funding") else 30)
+        if table not in ("listing_events", "events", "funding") and e - b > MAX_EXPORT_DAYS * 86400_000: raise HTTPException(400, f"ask for at most {MAX_EXPORT_DAYS} days of {table} per export")
         rows = db.q(f"SELECT * FROM {table} WHERE {col} BETWEEN ? AND ? ORDER BY {col}", (b, e))
         blob = gzip.compress("\n".join(json.dumps(r) for r in rows).encode())
         return Response(blob, media_type="application/gzip",
@@ -171,6 +186,7 @@ def create_app(settings=None, db=None, start_jobs=None):
     @app.post("/admin/backfill")
     async def admin_backfill(x_token: str = Header(""), syms: str | None = None):
         need_token(x_token)
+        if st.get("backfill"): raise HTTPException(409, "a backfill is already running")
         import asyncio, httpx
         from .archive import backfill
         async def job():
@@ -181,11 +197,13 @@ def create_app(settings=None, db=None, start_jobs=None):
                 db.job("archive_backfill", t0, True, n)
             except Exception as ex:
                 db.job("archive_backfill", t0, False, 0, f"{type(ex).__name__}: {ex}"[:500])
-        asyncio.create_task(job())
+            finally:
+                st["backfill"] = None
+        st["backfill"] = asyncio.create_task(job())
         return dict(started=True, note="watch /health → rows, or GET /jobs?job=archive_backfill")
 
     @app.get("/jobs")
-    def jobs(job: str | None = None, limit: int = 50):
+    def jobs(job: str | None = None, limit: int = Query(50, ge=1, le=1000)):
         if job: return db.q("SELECT * FROM job_runs WHERE job=? ORDER BY started DESC LIMIT ?", (job, limit))
         return db.q("SELECT * FROM job_runs ORDER BY started DESC LIMIT ?", (limit,))
 

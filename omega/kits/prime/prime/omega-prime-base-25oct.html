@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f3efe3">
+<title>OMEGA Prime</title>
+<style>
+:root{
+  --bg:#f3efe3; --paper:#fbf8f0; --panel:#fffdf7; --panel2:#efe8d6; --border:#d9cfb6; --grid:rgba(120,104,70,.10);
+  --text:#1c2230; --text-dim:#6a675c; --gold:#a8701a; --amber:#a8641a; --bull:#1d7a4b; --bear:#b3372f; --ink:#1c2230;
+  --shadow:0 1px 0 rgba(60,50,30,.06), 0 6px 18px rgba(60,50,30,.07);
+  --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif; --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*:before,*:after{box-sizing:inherit}
+html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;-webkit-text-size-adjust:100%;}
+body{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:22px 22px;min-height:100vh;}
+.top{position:sticky;top:0;z-index:20;background:rgba(243,239,227,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);}
+.top-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:10px 16px;}
+.mark{font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:.02em;white-space:nowrap;}
+.mark span{color:var(--gold);}
+.clock{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--text-dim);text-align:right;line-height:1.3;}
+.tabs{display:none;gap:4px;}
+.tabs button,.bar button{border:0;background:none;color:var(--text-dim);font:inherit;cursor:pointer;}
+.tabs button{padding:7px 12px;border-radius:999px;font-size:14px;}
+.tabs button.on{background:var(--ink);color:var(--paper);}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--paper);border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(5,1fr);padding-bottom:env(safe-area-inset-bottom,0px);}
+.bar button{padding:8px 2px 9px;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.bar button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;}
+.bar button.on{color:var(--ink);font-weight:700;}
+main{max-width:1120px;margin:0 auto;padding:14px 14px 96px;}
+.page{display:none;} .page.on{display:block;}
+h1,h2,h3{font-family:var(--serif);margin:0;}
+h2.pg{font-size:26px;margin:4px 0 2px;} .pg-sub{color:var(--text-dim);margin:0 0 14px;font-size:14px;}
+.card,.dp-card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px;margin:0 0 14px;box-shadow:var(--shadow);}
+.dp-h{font-size:17px;margin:0 0 8px;color:var(--ink);font-family:var(--serif);}
+.dp-grade{font:600 11px system-ui;color:var(--amber);margin-left:6px;}
+.dp-p{font-size:14px;margin:8px 0;line-height:1.55;} .dp-rec{font-size:14px;margin:8px 0 0;}
+.dp-state{display:inline-block;padding:4px 11px;border-radius:999px;font-size:13px;background:var(--panel2);}
+.dp-state.go{background:rgba(29,122,75,.12);color:var(--bull);} .dp-state.short{background:rgba(179,55,47,.12);color:var(--bear);}
+.hint{color:var(--text-dim);font-size:12.5px;line-height:1.5;}
+.up{color:var(--bull);} .dn{color:var(--bear);}
+.btn,.btn-outline{font:600 13.5px system-ui;border-radius:10px;padding:9px 14px;cursor:pointer;border:1px solid var(--ink);background:var(--panel);color:var(--ink);}
+.btn{background:var(--ink);color:var(--paper);}
+.btn-outline:disabled,.btn:disabled{opacity:.5;cursor:default;}
+.mr-tab{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;margin:6px 0;}
+.mr-tab th{text-align:left;color:var(--text-dim);font-weight:600;border-bottom:1px solid var(--border);padding:5px 4px;font-size:12px;}
+.mr-tab td{padding:6px 4px;border-bottom:1px solid var(--border);white-space:normal;overflow-wrap:anywhere;vertical-align:top;}
+.mr-start{border:1px dashed var(--gold);border-radius:12px;padding:12px 14px;margin:0 0 12px;background:rgba(168,112,26,.05);}
+.mr-start h3{margin:0 0 6px;color:var(--gold);font-size:16px;} .mr-start p{font-size:13.5px;line-height:1.5;margin:4px 0;}
+.verdict{border-radius:18px;padding:18px;margin:0 0 14px;background:var(--ink);color:var(--paper);box-shadow:var(--shadow);}
+.verdict .k{font:600 11px system-ui;letter-spacing:.12em;text-transform:uppercase;opacity:.75;}
+.verdict .v{font-family:var(--serif);font-size:30px;line-height:1.15;margin:6px 0 6px;}
+.verdict .w{font-size:14px;opacity:.9;line-height:1.5;}
+.verdict.long .v{color:#8fe0b4;} .verdict.short .v{color:#ffaaa2;} .verdict.wait .v{color:#f1d9a6;} .verdict.a .v{color:#ffe08a;}
+.verdict .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;}
+.verdict .chips span{font:600 12px system-ui;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:3px 9px;}
+.grid2{display:grid;gap:14px;} @media(min-width:900px){.grid2{grid-template-columns:1fr 1fr;} .tabs{display:flex;} .bar{display:none;} main{padding-bottom:40px;}}
+.coins{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;}
+.coin{background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:8px 6px;text-align:center;min-width:0;}
+.coin b{display:block;font-family:var(--serif);font-size:15px;} .coin .p{font:12px var(--mono);overflow-wrap:anywhere;} .coin .s{font:700 11px system-ui;margin-top:3px;}
+.dial{width:100%;max-width:340px;display:block;margin:0 auto;}
+.ledger li{margin:6px 0;} .ledger{padding-left:18px;margin:6px 0;font-size:14px;}
+.tag{display:inline-block;font:700 11px system-ui;border-radius:6px;padding:1px 6px;margin-right:6px;}
+.tag.pass{background:rgba(29,122,75,.14);color:var(--bull);} .tag.fail{background:rgba(179,55,47,.12);color:var(--bear);} .tag.run{background:rgba(168,112,26,.14);color:var(--gold);}
+.sw{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:14px;} .sw input{width:20px;height:20px;}
+.ev-warn{background:rgba(179,55,47,.10);color:var(--bear);border-radius:8px;padding:8px 10px;font-size:13px;font-weight:600;margin:0 0 8px;}
+input,select{font:inherit;}
+</style>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <div class="mark">Ω OMEGA <span>Prime</span></div>
+  <nav class="tabs" id="tabs"></nav>
+  <div class="clock" id="clock">—</div>
+</div></header>
+<main>
+  <section class="page" id="page-today"><div id="todayBody"></div><div id="evBody"></div></section>
+  <section class="page" id="page-chart"><h2 class="pg">Chart</h2><p class="pg-sub">One coin at a time: candles, who is buying, where the liquidity sits, the book, and today’s plan drawn as zones.</p><div id="cockpitBody"></div><div id="mreadBody"></div></section>
+  <section class="page" id="page-signals"><h2 class="pg">Signals</h2><p class="pg-sub">Grade A: the one rule that passed a fair test. Grade C: the Daily Plan, unproven and followed on paper.</p><div id="climaxBody"></div><div id="dplanBody"></div></section>
+  <section class="page" id="page-risk"><h2 class="pg">Risk</h2><p class="pg-sub">Risk makes money; managing it decides whether it does.</p><div id="rguardBody"></div><div id="truthRgBody"></div><div id="reviewBody"></div></section>
+  <section class="page" id="page-evidence"><h2 class="pg">Evidence</h2><p class="pg-sub">Everything tested, what passed, what failed, and what is still being measured.</p><div id="evidenceBody"></div><div id="truthBody"></div><div id="settingsBody"></div></section>
+</main>
+<nav class="bar" id="bar"></nav>
+<script>/* ═══ OMEGA PRIME — core (before the reused modules) ═══
+   1. PRIME_LS: all of Prime's data lives under the prefix "prime:" so it can never mix with the original OMEGA build, even
+      when both files are opened in the same browser (file pages share one storage).
+   2. The Autopilot: one scheduler. Modules register jobs (id, label, what, every, run); it runs each when due, one at a time,
+      records last run and result, can switch any job off, and keeps running while the app is open. Jobs that belong to the
+      original build's research machinery are not accepted here. OMEGA Prime places no orders. */
+(function(){
+  'use strict';
+  var P = 'prime:';
+  window.PRIME_LS = {
+    getItem:function(k){ try{ return window.localStorage.getItem(P + k); }catch(e){ return null; } },
+    setItem:function(k, v){ try{ window.localStorage.setItem(P + k, v); }catch(e){} },
+    removeItem:function(k){ try{ window.localStorage.removeItem(P + k); }catch(e){} },
+    keys:function(){ var out = []; try{ for(var i = 0; i < window.localStorage.length; i++){ var k = window.localStorage.key(i); if(k && k.indexOf(P) === 0) out.push(k.slice(P.length)); } }catch(e){} return out; } };
+})();
+</script>
+<script>/* ═══ PRIME AUTOPILOT ═══ */
+(function(){
+  'use strict';
+  var KEY = 'prime_op_v1', BLOCK = { mwdays:1, autoexp:1 }, JOBS = [], st = { jobs:{} }, busy = false, cur = null;
+  try{ var v = JSON.parse(window.PRIME_LS.getItem(KEY) || 'null'); if(v && v.jobs) st = v; }catch(e){}
+  function save(){ try{ window.PRIME_LS.setItem(KEY, JSON.stringify(st)); }catch(e){} }
+  function js(id){ return st.jobs[id] || (st.jobs[id] = { enabled:true, last:0, result:'' }); }
+  // modules push into jobs(); a filtered view keeps blocked research jobs out
+  var view = { push:function(j){ if(!j || !j.id || BLOCK[j.id]) return JOBS.length; if(!JOBS.some(function(x){ return x.id === j.id; })) JOBS.push(j); return JOBS.length; },
+    some:function(f){ return JOBS.some(f); }, filter:function(f){ return JOBS.filter(f); }, map:function(f){ return JOBS.map(f); }, forEach:function(f){ JOBS.forEach(f); }, find:function(f){ return JOBS.find(f); } };
+  Object.defineProperty(view, 'length', { get:function(){ return JOBS.length; } });
+  function everyOf(j){ return typeof j.every === 'function' ? 3600e3 : (+j.every || 3600e3); }
+  function due(j, now){ var s = js(j.id); if(!s.enabled) return false; if(s.retryAt && now < s.retryAt) return false; return now - (s.last || 0) >= everyOf(j); }
+  async function runJob(j){ var s = js(j.id), t0 = Date.now(); cur = j.id;
+    try{ var r = await j.run(); r = (r && typeof r === 'object') ? r : { text:String(r == null ? '' : r) };
+      if(r.skip){ s.result = 'Waiting: ' + (r.text || ''); s.retryAt = t0 + (r.retryIn || 10*60e3); }
+      else if(r.error){ s.fails = (s.fails || 0) + 1; s.result = 'Problem: ' + r.error; s.last = t0; s.retryAt = t0 + Math.min(6*3600e3, 5*60e3*Math.pow(2, s.fails - 1)); }
+      else { s.fails = 0; s.retryAt = 0; s.last = t0; s.result = String(r.text || 'Done.'); } }
+    catch(e){ s.fails = (s.fails || 0) + 1; s.last = t0; s.result = 'Problem: ' + (e && e.message || e); s.retryAt = t0 + Math.min(6*3600e3, 5*60e3*Math.pow(2, s.fails - 1)); }
+    s.ms = Date.now() - t0; cur = null; save(); if(window.PRIME_UI) window.PRIME_UI.autopilotChanged(); }
+  async function loop(){ if(busy) return; busy = true; try{ var now = Date.now(); for(var i = 0; i < JOBS.length; i++){ if(due(JOBS[i], now)) await runJob(JOBS[i]); } } finally{ busy = false; } }
+  async function tick(id){ var j = JOBS.find(function(x){ return x.id === id; }); if(j) await runJob(j); }
+  function setEnabled(id, on){ js(id).enabled = !!on; save(); }
+  setTimeout(function(){ loop(); setInterval(loop, 60e3); }, 4000);
+  window.OMEGA_OPERATOR = { jobs:function(){ return view; }, list:function(){ return JOBS.slice(); }, state:function(){ return st; }, tick:tick, run:loop, setEnabled:setEnabled, current:function(){ return cur; } };
+})();
+</script>
+
+<script>/* ═══ PRIME EVENT CALENDAR — official dates carried over from the original build's Market Clock (v6.5.79): US CPI from the BLS
+   release schedule (08:30 ET), FOMC statements from the Federal Reserve calendar (14:00 ET; 2027 tentative). ═══ */
+window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z","2027-01-13T13:30Z","2027-02-11T13:30Z","2027-03-10T13:30Z","2027-04-13T12:30Z","2027-05-12T12:30Z","2027-06-10T12:30Z","2027-07-14T12:30Z","2027-08-11T12:30Z","2027-09-14T12:30Z","2027-10-14T12:30Z","2027-11-10T13:30Z","2027-12-10T13:30Z"], fomc:["2026-10-28T18:00Z","2026-12-09T19:00Z","2027-01-27T19:00Z","2027-03-17T18:00Z","2027-04-28T18:00Z","2027-06-09T18:00Z","2027-07-28T18:00Z","2027-09-15T18:00Z","2027-10-27T18:00Z","2027-12-08T19:00Z"] } };
+</script>
+<script>/* ═══ MARKET READ (v6.5.89) — the app's own read of a market, and where its liquidity lies ═══
+   For BTC, ETH, SOL, BNB, XRP, gold, DOGE, LINK, LTC, ADA, AVAX (Binance USD-M perpetuals, keyless public data):
+   1. Liquidity where stops gather: yesterday's and last week's highs and lows, today's so far, the 24- and 72-hour range,
+      equal highs/lows (two or more hourly swing points within a small band) and round numbers. Above price: buy stops of
+      shorts and breakout orders; below: sell stops of longs.
+   2. Liquidity that rests in the order book: depth within 0.5%, 1% and 2% each side, and the biggest walls within 2%.
+   3. Who is crowded: funding, open-interest change over 24 hours, the accounts' long/short ratio.
+   4. A plain read that ends with what the research supports (plan E12: stops just beyond obvious highs/lows are swept and
+      reversed only slightly more than elsewhere, about 1 stop-out in 100; trading breakouts and fakeouts lost after costs;
+      the one rule that passed is the climax reversal). It describes; it does not predict.
+   5. Level memory: every hour (Autopilot) the nearest pools of BTC and ETH (and any market read) are remembered and, after
+      24 hours, checked: did price reach them? The page shows how often each kind of level was reached — the app's own,
+      forward measurement. Also: Market Watch's finished days are checked, and a full recorded day prompts an export.
+   OMEGA places no orders. */
+(function(){
+  'use strict';
+  var H = 3600e3, FAPI = 'https://fapi.binance.com', CFG = 'omega_mread_cfg_v1', MEM = 'omega_mread_mem_v1', DAYS = 'omega_mwdays_v1';
+  var MARKETS = ['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','XAUUSDT','DOGEUSDT','LINKUSDT','LTCUSDT','ADAUSDT','AVAXUSDT'];
+  var NAME = { BTCUSDT:'Bitcoin', ETHUSDT:'Ether', SOLUSDT:'Solana', BNBUSDT:'BNB', XRPUSDT:'XRP', XAUUSDT:'Gold', DOGEUSDT:'Dogecoin', LINKUSDT:'Chainlink', LTCUSDT:'Litecoin', ADAUSDT:'Cardano', AVAXUSDT:'Avalanche' };
+  var WEIGHT = { PWH:3, PWL:3, PDH:2, PDL:2, EQH:1.5, EQL:1.5, H72:1.5, L72:1.5, H24:1, L24:1, TDH:1, TDL:1, RND:1 };
+  var LABEL = { PWH:'last week’s high', PWL:'last week’s low', PDH:'yesterday’s high', PDL:'yesterday’s low', TDH:'today’s high', TDL:'today’s low', H72:'72-hour high', L72:'72-hour low', H24:'24-hour high', L24:'24-hour low', EQH:'equal highs', EQL:'equal lows', RND:'round number' };
+  var state = { reads:{}, busy:false, msg:'', at:0 };
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function load(k, dflt){ try{ var v = JSON.parse(PRIME_LS.getItem(k) || 'null'); return v == null ? dflt : v; }catch(e){ return dflt; } }
+  function save(k, v){ try{ PRIME_LS.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function cfg(){ var c = load(CFG, null); return c && MARKETS.indexOf(c.sel) >= 0 ? c : { sel:'BTCUSDT' }; }
+  function fmtP(x){ if(x == null || !isFinite(x)) return '—'; var a = Math.abs(x); return a >= 1000 ? x.toLocaleString('en-US', { maximumFractionDigits:0 }) : a >= 10 ? x.toFixed(2) : a >= 1 ? x.toFixed(3) : x.toPrecision(4); }
+  function pct(x, d){ return x == null || !isFinite(x) ? '—' : (x > 0 ? '+' : '') + (x*100).toFixed(d == null ? 2 : d) + '%'; }
+  function money(x){ if(!(x >= 0)) return '—'; return x >= 1e9 ? '$' + (x/1e9).toFixed(2) + 'B' : x >= 1e6 ? '$' + (x/1e6).toFixed(1) + 'M' : x >= 1e3 ? '$' + Math.round(x/1e3) + 'k' : '$' + Math.round(x); }
+  async function getJSON(url){ var r = await fetch(url); if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }
+  async function fetchAll(sym){ var out = { sym:sym, at:Date.now() };
+    out.kl = await getJSON(FAPI + '/fapi/v1/klines?symbol=' + sym + '&interval=1h&limit=500');
+    try{ out.depth = await getJSON(FAPI + '/fapi/v1/depth?symbol=' + sym + '&limit=500'); }catch(e){ out.depth = null; }
+    try{ out.prem = await getJSON(FAPI + '/fapi/v1/premiumIndex?symbol=' + sym); }catch(e){ out.prem = null; }
+    try{ out.oi = await getJSON(FAPI + '/futures/data/openInterestHist?symbol=' + sym + '&period=1h&limit=25'); }catch(e){ out.oi = null; }
+    try{ out.ls = await getJSON(FAPI + '/futures/data/globalLongShortAccountRatio?symbol=' + sym + '&period=1h&limit=25'); }catch(e){ out.ls = null; }
+    return out; }
+  // ── the analysis (pure) ──
+  function rowsOf(kl, nowH){ return (kl || []).map(function(k){ return { h:Math.floor(+k[0]/H), o:+k[1], hi:+k[2], lo:+k[3], c:+k[4], v:+k[5] }; }).filter(function(r){ return r.h < nowH && r.c > 0 && r.hi >= r.lo; }); }
+  function roundStep(p){ var k = Math.pow(10, Math.floor(Math.log10(p)) - 1); return p/k >= 50 ? 5*k : k; }
+  function analyze(sym, D, nowMs){ var nowH = Math.floor((nowMs || Date.now())/H), R = rowsOf(D.kl, nowH); if(R.length < 200) return { sym:sym, err:'not enough hourly bars' };
+    var n = R.length, last = R[n-1], price = D.prem && +D.prem.markPrice > 0 ? +D.prem.markPrice : last.c, atr = null, ema = R[0].c, a2 = 2/201;
+    for(var i=1; i<n; i++){ var pc = R[i-1].c, tr = Math.max(R[i].hi - R[i].lo, Math.abs(R[i].hi - pc), Math.abs(R[i].lo - pc)); atr = atr == null ? tr : atr + (tr - atr)/14; ema = ema + a2*(R[i].c - ema); }
+    var A = { sym:sym, name:NAME[sym] || sym, price:price, atr:atr, atrPct:atr/price, ema200:ema, at:nowMs || Date.now(), lastH:last.h, pools:[], book:null, pos:null };
+    var c24 = R[Math.max(0, n - 25)].c; A.chg24 = price/c24 - 1;
+    function hl(from, to){ var hi = -Infinity, lo = Infinity, any = false; R.forEach(function(r){ if(r.h >= from && r.h < to){ any = true; if(r.hi > hi) hi = r.hi; if(r.lo < lo) lo = r.lo; } }); return any ? [hi, lo] : null; }
+    var r24 = hl(nowH - 24, nowH), r72 = hl(nowH - 72, nowH); A.range24 = r24 ? (r24[0]/r24[1] - 1) : null;
+    var dr = []; for(var dd = 1; dd <= 20; dd++){ var x = hl(Math.floor(nowH/24)*24 - dd*24, Math.floor(nowH/24)*24 - (dd - 1)*24); if(x) dr.push(x[0]/x[1] - 1); } dr.sort(function(a, b){ return a - b; }); A.typDay = dr.length ? dr[Math.floor(dr.length/2)] : null;
+    var d0 = Math.floor(nowH/24)*24, wd = ((Math.floor(nowH/24) + 3) % 7), w0 = d0 - wd*24;
+    var pd = hl(d0 - 24, d0), td = hl(d0, nowH), pw = hl(w0 - 168, w0);
+    function add(kind, p){ if(!(p > 0)) return; var side = p >= price ? 'above' : 'below'; A.pools.push({ kind:kind, label:LABEL[kind], side:side, price:p, dist:p/price - 1, atrs:Math.abs(p - price)/atr, w:WEIGHT[kind] || 1 }); }
+    if(pw){ add('PWH', pw[0]); add('PWL', pw[1]); } if(pd){ add('PDH', pd[0]); add('PDL', pd[1]); } if(td){ add('TDH', td[0]); add('TDL', td[1]); }
+    if(r24){ add('H24', r24[0]); add('L24', r24[1]); } if(r72){ add('H72', r72[0]); add('L72', r72[1]); }
+    // equal highs / lows: hourly swing points (3 bars each side) of the last 168 hours, two or more within a small band
+    var tol = Math.max(0.0015*price, 0.25*atr), sh = [], sl = [];
+    for(i = Math.max(3, n - 168); i < n - 3; i++){ var isH = true, isL = true; for(var k = i - 3; k <= i + 3; k++){ if(k === i) continue; if(R[k].hi >= R[i].hi) isH = false; if(R[k].lo <= R[i].lo) isL = false; } if(isH) sh.push(R[i].hi); if(isL) sl.push(R[i].lo); }
+    function clusters(pts){ pts = pts.slice().sort(function(a, b){ return a - b; }); var out = [], cur = []; pts.forEach(function(p){ if(cur.length && p - cur[cur.length-1] > tol){ if(cur.length >= 2) out.push(cur); cur = []; } cur.push(p); }); if(cur.length >= 2) out.push(cur); return out.map(function(c){ return { p:c.reduce(function(a, b){ return a + b; }, 0)/c.length, n:c.length }; }); }
+    clusters(sh).forEach(function(c){ if(c.p > price){ add('EQH', c.p); A.pools[A.pools.length-1].touches = c.n; A.pools[A.pools.length-1].w += 0.5*(c.n - 2); } });
+    clusters(sl).forEach(function(c){ if(c.p < price){ add('EQL', c.p); A.pools[A.pools.length-1].touches = c.n; A.pools[A.pools.length-1].w += 0.5*(c.n - 2); } });
+    var st = roundStep(price), up = Math.ceil(price/st)*st, dn = Math.floor(price/st)*st; if(up === price) up += st; if(dn === price) dn -= st; add('RND', up); add('RND', dn);
+    A.pools = A.pools.filter(function(p){ return p.atrs <= 12 && Math.abs(p.dist) > 1e-6; });
+    // merge pools closer than a quarter ATR (the stronger label wins; weights add up)
+    A.pools.sort(function(a, b){ return a.price - b.price; }); var merged = [];
+    A.pools.forEach(function(p){ var m = merged[merged.length-1]; if(m && m.side === p.side && Math.abs(p.price - m.price) < 0.25*atr){ if(p.w > m.w){ m.kind = p.kind; m.label = p.label; m.touches = p.touches; } m.w += p.w; m.also = (m.also || []).concat([p.label]); } else merged.push(Object.assign({}, p)); });
+    A.pools = merged;
+    A.above = A.pools.filter(function(p){ return p.side === 'above'; }).sort(function(a, b){ return a.price - b.price; });
+    A.below = A.pools.filter(function(p){ return p.side === 'below'; }).sort(function(a, b){ return b.price - a.price; });
+    // the order book
+    if(D.depth && D.depth.bids && D.depth.asks){ var bids = D.depth.bids.map(function(x){ return [+x[0], +x[0]*+x[1]]; }), asks = D.depth.asks.map(function(x){ return [+x[0], +x[0]*+x[1]]; }), B = {};
+      [0.005, 0.01, 0.02].forEach(function(w){ var b = 0, a = 0; bids.forEach(function(x){ if(x[0] >= price*(1 - w)) b += x[1]; }); asks.forEach(function(x){ if(x[0] <= price*(1 + w)) a += x[1]; }); B['b' + w] = b; B['a' + w] = a; });
+      B.imb1 = (B['b0.01'] + B['a0.01']) > 0 ? (B['b0.01'] - B['a0.01'])/(B['b0.01'] + B['a0.01']) : null;
+      function walls(list, dir){ var bw = Math.max(0.0005*price, 1e-12), buckets = {}; list.forEach(function(x){ if(Math.abs(x[0]/price - 1) > 0.02) return; var k = Math.floor(x[0]/bw); buckets[k] = (buckets[k] || 0) + x[1]; });
+        var arr = Object.keys(buckets).map(function(k){ return { price:(+k + 0.5)*bw, usd:buckets[k] }; }), med = arr.map(function(x){ return x.usd; }).sort(function(a, b){ return a - b; })[Math.floor(arr.length/2)] || 0;
+        return arr.filter(function(x){ return x.usd >= 3*med && x.usd > 0; }).sort(function(a, b){ return b.usd - a.usd; }).slice(0, 3).map(function(x){ x.dist = x.price/price - 1; x.x = med > 0 ? x.usd/med : null; return x; }); }
+      B.bidWalls = walls(bids); B.askWalls = walls(asks); A.book = B; }
+    // positioning
+    var P = {}; if(D.prem){ P.funding = +D.prem.lastFundingRate; P.premium = +D.prem.indexPrice > 0 ? +D.prem.markPrice/+D.prem.indexPrice - 1 : null; }
+    if(Array.isArray(D.oi) && D.oi.length >= 2){ var o0 = +D.oi[0].sumOpenInterest, o1 = +D.oi[D.oi.length-1].sumOpenInterest; P.oiChg = o0 > 0 ? o1/o0 - 1 : null; P.oiUsd = +D.oi[D.oi.length-1].sumOpenInterestValue; }
+    if(Array.isArray(D.ls) && D.ls.length){ P.ls = +D.ls[D.ls.length-1].longShortRatio; P.ls0 = +D.ls[0].longShortRatio; }
+    A.pos = P;
+    var crowdL = (P.funding >= 0.0002) || (P.ls >= 2 && P.oiChg >= 0.03), crowdS = (P.funding != null && P.funding <= -0.0001) || (P.ls != null && P.ls <= 0.8);
+    A.crowd = crowdL ? 'longs' : crowdS ? 'shorts' : 'balanced';
+    // the read
+    var na = A.above[0], nb = A.below[0], L = [];
+    L.push(A.name + ' is at ' + fmtP(price) + ', ' + (price > ema ? 'above' : 'below') + ' its 200-hour average (' + pct(price/ema - 1, 1) + '). Last 24 hours ' + pct(A.chg24) + '; its range ' + pct(A.range24, 1).replace('+', '') + ' against a typical day of ' + pct(A.typDay, 1).replace('+', '') + (A.range24 != null && A.typDay ? (A.range24 < 0.6*A.typDay ? ' — unusually quiet, the kind of day that often ends in a move.' : A.range24 > 1.6*A.typDay ? ' — an unusually wide day.' : '.') : '.'));
+    if(na) L.push('Nearest liquidity above: ' + na.label + (na.touches ? ' (' + na.touches + ' touches)' : '') + ' at ' + fmtP(na.price) + ' (' + pct(na.dist) + ', ' + na.atrs.toFixed(1) + ' hourly ranges). Short sellers’ stops and breakout buy orders tend to rest just beyond it.');
+    if(nb) L.push('Nearest liquidity below: ' + nb.label + (nb.touches ? ' (' + nb.touches + ' touches)' : '') + ' at ' + fmtP(nb.price) + ' (' + pct(nb.dist) + ', ' + nb.atrs.toFixed(1) + ' hourly ranges). Long holders’ stops tend to rest just below it.');
+    if(na && nb) L.push('The ' + (na.atrs < nb.atrs ? 'upside' : 'downside') + ' pool is closer' + (Math.abs(na.atrs - nb.atrs) < 0.5 ? ' (only just)' : '') + '. The weightiest pools within reach: above ' + strongest(A.above) + '; below ' + strongest(A.below) + '.');
+    if(A.book){ var B2 = A.book; L.push('Order book within 1%: bids ' + money(B2['b0.01']) + ' against asks ' + money(B2['a0.01']) + (B2.imb1 != null ? ' (' + (B2.imb1 > 0.15 ? 'buyers resting heavier' : B2.imb1 < -0.15 ? 'sellers resting heavier' : 'balanced') + ')' : '') + '. ' + (B2.bidWalls[0] ? 'Biggest bid wall ' + money(B2.bidWalls[0].usd) + ' at ' + fmtP(B2.bidWalls[0].price) + ' (' + pct(B2.bidWalls[0].dist) + '). ' : '') + (B2.askWalls[0] ? 'Biggest ask wall ' + money(B2.askWalls[0].usd) + ' at ' + fmtP(B2.askWalls[0].price) + ' (' + pct(B2.askWalls[0].dist) + '). ' : '') + 'Walls can be pulled before price reaches them.'); }
+    if(P.funding != null || P.oiChg != null || P.ls != null) L.push('Positioning: funding ' + (P.funding != null ? (P.funding*100).toFixed(4) + '% per period' : '—') + (P.oiChg != null ? ', open interest ' + pct(P.oiChg, 1) + ' in 24 hours' : '') + (P.ls != null ? ', accounts long/short ' + P.ls.toFixed(2) : '') + '. ' + (A.crowd === 'longs' ? 'Longs look crowded: if price falls into the pool below, forced selling of leveraged longs could add to the move.' : A.crowd === 'shorts' ? 'Shorts look crowded: if price rises into the pool above, forced buying could add to the move.' : 'Neither side looks crowded.'));
+    L.push('What the research supports: stops just beyond obvious highs and lows are swept and then reversed only slightly more than elsewhere (about 1 stop-out in 100, plan E12); trading breakouts and fakeouts lost money after costs; the one rule that passed a fair test is buying a forced-selling flush that closes strong (the climax watch). This read describes where liquidity sits; it does not say which way price will go.');
+    A.read = L; return A; }
+  function strongest(list){ var x = list.filter(function(p){ return p.atrs <= 6; }).sort(function(a, b){ return b.w - a.w; })[0]; return x ? x.label + ' at ' + fmtP(x.price) + ' (' + pct(x.dist) + ')' : 'none within 6 ranges'; }
+  // ── level memory: did price reach the pools within 24 hours? ──
+  function remember(A){ if(!A || A.err) return; var M = load(MEM, { recs:[], stats:{} }), h = A.lastH;
+    if(M.recs.some(function(r){ return r.s === A.sym && r.h === h; })) return;
+    var keep = [A.above[0], A.above[1], A.below[0], A.below[1]].filter(Boolean).map(function(p){ return { k:p.kind, s:p.side, p:p.price, a:Math.round(p.atrs*10)/10 }; });
+    M.recs.push({ s:A.sym, h:h, pools:keep }); M.recs = M.recs.filter(function(r){ return r.h >= h - 24*45; }).slice(-3000); save(MEM, M); }
+  function resolve(sym, kl, nowMs){ var M = load(MEM, { recs:[], stats:{} }), nowH = Math.floor((nowMs || Date.now())/H), R = rowsOf(kl, nowH), by = {}; R.forEach(function(r){ by[r.h] = r; }); var changed = false;
+    M.recs.forEach(function(rec){ if(rec.s !== sym || rec.done || rec.h + 25 > nowH) return; var hi = -Infinity, lo = Infinity, seen = 0;
+      for(var h = rec.h + 1; h <= rec.h + 24; h++){ var r = by[h]; if(!r) continue; seen++; if(r.hi > hi) hi = r.hi; if(r.lo < lo) lo = r.lo; }
+      if(seen < 20) return; rec.done = true; changed = true;
+      rec.pools.forEach(function(p){ var hit = p.s === 'above' ? hi >= p.p : lo <= p.p, band = p.a <= 1 ? 'near' : p.a <= 3 ? 'mid' : 'far', key = p.k + '|' + band, S = M.stats[key] || (M.stats[key] = [0, 0]); S[0]++; if(hit) S[1]++; }); });
+    if(changed) save(MEM, M); return M; }
+  // ── Market Watch: each finished UTC day's recording ──
+  function checkDays(nowMs){ var W = window.OMEGA_WATCH, out = load(DAYS, { days:{}, told:{} }); if(!W || !W._ || !W._.get) return out; var nowM = Math.floor((nowMs || Date.now())/60e3), d1 = Math.floor(nowM/1440);
+    for(var d = d1 - 2; d < d1; d++){ if(out.days[d] != null) continue; var n = 0; try{ for(var m = d*1440; m < (d + 1)*1440; m++){ var v = W._.get('BTCUSDT', m, 'sC'); if(!(v > 0)) v = W._.get('BTCUSDT', m, 'pC'); if(v > 0) n++; } }catch(e){ return out; } out.days[d] = Math.round(n/1440*1000)/1000; }
+    var good = Object.keys(out.days).filter(function(d){ return out.days[d] >= 0.8; }).map(Number).sort(); save(DAYS, out); out.good = good; return out; }
+  async function read(sym, quiet){ var D = await fetchAll(sym), A = analyze(sym, D); state.reads[sym] = A; if(!A.err){ remember(A); resolve(sym, D.kl); } if(!quiet) render(); return A; }
+  async function refresh(){ if(state.busy) return; state.busy = true; state.msg = 'Reading the market…'; render(); var c = cfg();
+    try{ await read(c.sel, true); state.msg = 'Read at ' + new Date().toISOString().slice(11, 16) + ' UTC from Binance’s public data.'; }catch(e){ state.msg = 'Could not read live data (' + (e.message || e) + '). Offline?'; }
+    state.busy = false; state.at = Date.now(); render(); }
+  // ── the page ──
+  function ladder(A){ var W = 360, Hh = 300, top = 12, bot = 12, lv = A.above.slice(0, 5).concat(A.below.slice(0, 5)), walls = A.book ? A.book.bidWalls.concat(A.book.askWalls) : [];
+    var ps = lv.map(function(p){ return p.price; }).concat(walls.map(function(w){ return w.price; })).concat([A.price]), hi = Math.max.apply(null, ps), lo = Math.min.apply(null, ps), pad = (hi - lo)*0.08 || A.price*0.002; hi += pad; lo -= pad;
+    var Y = function(v){ return top + (hi - v)/(hi - lo)*(Hh - top - bot); }, s = '', maxW = Math.max.apply(null, walls.map(function(w){ return w.usd; }).concat([1]));
+    s += '<rect x="0" y="' + top + '" width="' + W + '" height="' + (Y(A.price) - top).toFixed(1) + '" fill="var(--bear)" fill-opacity="0.05"/><rect x="0" y="' + Y(A.price).toFixed(1) + '" width="' + W + '" height="' + (Hh - bot - Y(A.price)).toFixed(1) + '" fill="var(--bull)" fill-opacity="0.05"/>';
+    walls.forEach(function(w){ var y = Y(w.price), len = 90*w.usd/maxW, isBid = w.price < A.price; s += '<rect data-wall="1" x="' + (W - 4 - len).toFixed(1) + '" y="' + (y - 3).toFixed(1) + '" width="' + len.toFixed(1) + '" height="6" rx="2" fill="' + (isBid ? 'var(--bull)' : 'var(--bear)') + '" fill-opacity="0.55"><title>' + (isBid ? 'Bid' : 'Ask') + ' wall ' + money(w.usd) + ' at ' + fmtP(w.price) + '</title></rect>'; });
+    var used = [];
+    lv.forEach(function(p){ var y = Y(p.price), col = p.side === 'above' ? 'var(--bear)' : 'var(--bull)', sw = 0.8 + Math.min(p.w, 5)*0.5; s += '<line data-pool="' + p.kind + '" x1="8" x2="' + (W - 100) + '" y1="' + y.toFixed(1) + '" y2="' + y.toFixed(1) + '" stroke="' + col + '" stroke-width="' + sw.toFixed(1) + '" stroke-dasharray="' + (p.kind === 'RND' ? '2 3' : '6 3') + '"/>';
+      var ty = y - 3; used.forEach(function(u){ if(Math.abs(u - ty) < 10) ty = u + (p.side === 'above' ? -10 : 10); }); used.push(ty);
+      s += '<text x="10" y="' + ty.toFixed(1) + '" class="mr-lv" fill="' + col + '">' + esc(p.label) + (p.touches ? ' ×' + p.touches : '') + ' ' + esc(fmtP(p.price)) + ' (' + esc(pct(p.dist, 1)) + ')</text>'; });
+    var yp = Y(A.price); s += '<line x1="0" x2="' + W + '" y1="' + yp.toFixed(1) + '" y2="' + yp.toFixed(1) + '" stroke="var(--gold)" stroke-width="2"/><text x="' + (W - 104) + '" y="' + (yp - 4).toFixed(1) + '" class="mr-now">now ' + esc(fmtP(A.price)) + '</text>';
+    return '<svg class="mr-ladder" viewBox="0 0 ' + W + ' ' + Hh + '" role="img" aria-label="Where liquidity lies around the price">' + s + '<text x="' + (W - 4) + '" y="10" text-anchor="end" class="mr-ax">book walls →</text></svg>'; }
+  function memTable(){ var M = load(MEM, { recs:[], stats:{} }), keys = Object.keys(M.stats); if(!keys.length) return '<p class="hint">Nothing measured yet: the first checks come 24 hours after the first reads. The Autopilot reads BTC and ETH every hour while the app is open.</p>';
+    var kinds = {}; keys.forEach(function(k){ var p = k.split('|'), S = M.stats[k], r = kinds[p[0]] || (kinds[p[0]] = { near:[0, 0], mid:[0, 0], far:[0, 0] }); r[p[1]][0] += S[0]; r[p[1]][1] += S[1]; });
+    var cell = function(x){ return x[0] ? Math.round(100*x[1]/x[0]) + '% <span class="hint">(' + x[0] + ')</span>' : '—'; };
+    return '<table class="mr-tab"><tr><th>Kind of level</th><th>Within 1 range</th><th>1–3 ranges</th><th>Over 3</th></tr>' + Object.keys(kinds).sort().map(function(k){ var r = kinds[k]; return '<tr><td>' + esc(LABEL[k] || k) + '</td><td>' + cell(r.near) + '</td><td>' + cell(r.mid) + '</td><td>' + cell(r.far) + '</td></tr>'; }).join('') + '</table><p class="hint">Share of remembered levels that price reached within 24 hours (count in brackets), measured by the app since it started reading.</p>'; }
+  function css(){ if(el('mreadCss')) return; var st = document.createElement('style'); st.id = 'mreadCss';
+    st.textContent = '.mr-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px;}.mr-tabs button{border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:999px;padding:6px 11px;font-size:13px;cursor:pointer;}.mr-tabs button.on{border-color:var(--gold);color:var(--gold);background:rgba(201,162,75,.12);}' +
+      '.mr-card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;}.mr-read{margin:0;padding-left:18px;font-size:13px;line-height:1.55;}.mr-read li{margin:5px 0;}.mr-sec{border-top:1px solid var(--border);padding:10px 0 4px;margin-top:8px;}.mr-sec h4{margin:0 0 6px;font-size:14px;color:var(--gold);}' +
+      '.mr-ladder{width:100%;height:auto;display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;}.mr-lv{font-size:8.5px;font-weight:600;paint-order:stroke;stroke:var(--bg);stroke-width:2.5px;}.mr-now{font-size:9px;font-weight:700;fill:var(--gold);}.mr-ax{font-size:8px;fill:var(--text-dim);}' +
+      '.mr-tab{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed;margin:6px 0;}.mr-tab th{text-align:left;color:var(--text-dim);font-weight:600;border-bottom:1px solid var(--border);padding:4px;}.mr-tab td{padding:4px;border-bottom:1px solid var(--border);white-space:normal;overflow-wrap:anywhere;}' +
+      '.mr-start{border:1px solid var(--gold);border-radius:12px;padding:12px 14px;margin:0 0 12px;background:linear-gradient(135deg,rgba(201,162,75,.10),rgba(155,140,255,.05));}.mr-start h3{margin:0 0 6px;color:var(--gold);font-size:15px;}.mr-start p{font-size:13px;line-height:1.5;margin:4px 0;}';
+    document.head.appendChild(st); }
+  function html(){ var c = cfg(), A = state.reads[c.sel], h = '';
+    h += '<div class="mr-start"><h3>Start here</h3><p>Pick a market. OMEGA reads it from Binance’s public data and shows <b>where liquidity lies</b>: the obvious levels where stops gather, the orders resting in the book, and which side is crowded. Then it says what the research does and does not support.</p><p>It also learns: every hour it remembers the nearest levels and, a day later, checks whether price reached them.</p></div>';
+    h += '<div class="mr-tabs">' + MARKETS.map(function(s){ return '<button type="button" data-mrsel="' + s + '" class="' + (s === c.sel ? 'on' : '') + '">' + esc((NAME[s] || s).replace('Bitcoin', 'BTC').replace('Ether', 'ETH')) + '</button>'; }).join('') + '</div>';
+    h += '<div class="mr-card">';
+    if(!A) h += '<p class="hint">Not read yet. <button class="btn-outline" type="button" data-mr="refresh">Read ' + esc(NAME[c.sel]) + ' now</button></p>';
+    else if(A.err) h += '<p class="hint">Could not read ' + esc(NAME[c.sel]) + ': ' + esc(A.err) + '.</p>';
+    else { h += '<h3 style="margin:0 0 8px;">' + esc(A.name) + ' — the read</h3><ul class="mr-read">' + A.read.map(function(x){ return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>';
+      h += '<div class="mr-sec"><h4>Where liquidity lies</h4>' + ladder(A) + '<p class="hint">Red above: buy stops and breakout orders (fuel for squeezes). Green below: sell stops of longs (fuel for flushes). Thicker lines carry more weight (last week’s and yesterday’s extremes, repeated touches). Bars on the right: the biggest resting orders in the book.</p>';
+      h += '<table class="mr-tab"><tr><th>Above</th><th>Price</th><th>Away</th></tr>' + A.above.slice(0, 5).map(function(p){ return '<tr><td>' + esc(p.label) + (p.touches ? ' ×' + p.touches : '') + (p.also ? ' <span class="hint">(+' + esc(p.also.join(', ')) + ')</span>' : '') + '</td><td>' + esc(fmtP(p.price)) + '</td><td>' + esc(pct(p.dist)) + ' · ' + p.atrs.toFixed(1) + ' r</td></tr>'; }).join('') + '</table>';
+      h += '<table class="mr-tab"><tr><th>Below</th><th>Price</th><th>Away</th></tr>' + A.below.slice(0, 5).map(function(p){ return '<tr><td>' + esc(p.label) + (p.touches ? ' ×' + p.touches : '') + (p.also ? ' <span class="hint">(+' + esc(p.also.join(', ')) + ')</span>' : '') + '</td><td>' + esc(fmtP(p.price)) + '</td><td>' + esc(pct(p.dist)) + ' · ' + p.atrs.toFixed(1) + ' r</td></tr>'; }).join('') + '</table><p class="hint">r = hourly ranges (ATR) away.</p></div>';
+      if(A.book){ var B = A.book; h += '<div class="mr-sec"><h4>Resting orders (order book)</h4><table class="mr-tab"><tr><th>Within</th><th>Bids</th><th>Asks</th></tr>' + [0.005, 0.01, 0.02].map(function(w){ return '<tr><td>' + (w*100) + '%</td><td>' + money(B['b' + w]) + '</td><td>' + money(B['a' + w]) + '</td></tr>'; }).join('') + '</table></div>'; } }
+    h += '<div class="mr-sec"><h4>What the app has learned (level memory)</h4>' + memTable() + '</div>';
+    h += '</div>';
+    h += '<p class="hint" style="margin:8px 0 0;">' + esc(state.msg || '') + ' <button class="btn-outline" type="button" data-mr="refresh"' + (state.busy ? ' disabled' : '') + '>' + (state.busy ? 'Reading…' : 'Read again') + '</button></p>';
+    return h; }
+  function render(){ var host = el('mreadBody'); if(!host) return; css(); host.innerHTML = html();
+    Array.prototype.forEach.call(host.querySelectorAll('[data-mrsel]'), function(b){ b.onclick = function(){ save(CFG, { sel:b.getAttribute('data-mrsel') }); render(); if(!state.reads[b.getAttribute('data-mrsel')]) refresh(); }; });
+    Array.prototype.forEach.call(host.querySelectorAll('[data-mr="refresh"]'), function(b){ b.onclick = function(){ refresh(); }; }); }
+  function onShow(){ render(); var c = cfg(); if(!state.reads[c.sel] || Date.now() - state.at > 15*60e3) refresh(); }
+  // ── Autopilot jobs ──
+  var JOBS = [
+    { id:'mread', lane:'live', prio:2, label:'Market Read: BTC and ETH liquidity, and level memory', what:'Every hour: reads BTC and ETH (levels, order book, positioning), remembers the nearest liquidity and checks, a day later, whether price reached it.', every:60*60e3,
+      run: async function(){ var out = []; for(var i=0; i<2; i++){ var s = ['BTCUSDT', 'ETHUSDT'][i]; try{ var A = await read(s, true); out.push(s.replace('USDT', '') + (A.err ? ' failed' : ' read')); }catch(e){ out.push(s.replace('USDT', '') + ' offline'); } } render(); return out.join(', ') + '.'; } },
+    { id:'mwdays', lane:'live', prio:1, label:'Market Watch: full recorded days (plan E13)', what:'Checks each finished day of Market Watch recording; after a full day (80%+ of minutes) it reminds you to export 3 days and send them.', every:30*60e3,
+      run: async function(){ var D = checkDays(), good = D.good || [], told = D.told || {}, fresh = good.filter(function(d){ return !told[d]; });
+        if(fresh.length){ fresh.forEach(function(d){ told[d] = 1; }); D.told = told; save(DAYS, D);
+          try{ if(typeof Notification !== 'undefined' && Notification.permission === 'granted') new Notification('OMEGA: a full day of Market Watch recorded', { body:'Export 3 days from Market Watch and send it for plan E13 (' + good.length + ' of 5 full days so far).' }); }catch(e){} }
+        return good.length + ' full day' + (good.length === 1 ? '' : 's') + ' recorded' + (fresh.length ? ' (new: ' + fresh.map(function(d){ return new Date(d*864e5).toISOString().slice(5, 10); }).join(', ') + ' — export 3 days)' : '') + '.'; } }];
+  function register(){ var O = window.OMEGA_OPERATOR; if(!O || !O.jobs) return false; var J = O.jobs(); JOBS.forEach(function(j){ if(!J.some(function(x){ return x.id === j.id; })) J.push(j); }); return true; }
+  if(!register()){ var tries = 0, iv = setInterval(function(){ if(register() || ++tries > 20) clearInterval(iv); }, 3000); }
+  window.OMEGA_MREAD = { render:render, onShow:onShow, refresh:refresh, read:read, state:function(){ return state; }, MARKETS:MARKETS, JOBS:JOBS, _:{ analyze:analyze, rowsOf:rowsOf, remember:remember, resolve:resolve, checkDays:checkDays, roundStep:roundStep, html:html } };
+})();
+</script>
+<script>/* ═══ DAILY PLAN (v6.5.91) — the market now, which side to trade, and a plan per coin, followed to its result ═══
+   For BTC, ETH, SOL, BNB, XRP. The market state uses plan E8's definitions on the five coins' own daily index (Binance
+   USD-M daily closes): DEPRESSED (below the 200-day average and −15% in 30 days), BOOMING (above it and +25%), CORRECTING
+   (above it and −8% in 7 days), CONSOLIDATING (quiet: 30-day volatility below its yearly median and |30-day| < 10%),
+   NORMAL otherwise; plus uptrend/downtrend (above/below the 200-day average) and "falling this week" (7-day ≤ −5%).
+   Side: BOOMING → longs; DEPRESSED → shorts; CORRECTING → longs at the liquidity below (a dip in an uptrend); otherwise
+   follow the trend when the coin agrees (above its 200-hour average for longs, below for shorts), else stand aside.
+   Plan: entry at the nearest liquidity pool on the with-trend side (Market Read's levels, within 3 hourly ranges), stop
+   half a range beyond it, target the nearest pool on the other side; shown only at reward-to-risk ≥ 1.5.
+   GRADE C, UNPROVEN: the trend and sweep rules this resembles failed fair tests. Plan E16 (md5 884bd4e2…) follows every plan
+   to its result on paper (touch of the entry → stop, target or 48 hours; 0.12% costs; R) and judges it once after 50
+   trades or 26 weeks. Grade A signals come only from the climax watch (the one rule that passed). OMEGA places no orders. */
+(function(){
+  'use strict';
+  var H = 3600e3, FAPI = 'https://fapi.binance.com', KEY = 'omega_dplan_v1', COINS = ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT'], COST = 0.0012;
+  var state = { busy:false, msg:'', S:null, reads:{}, at:0 };
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function load(){ try{ var v = JSON.parse(PRIME_LS.getItem(KEY) || 'null'); if(v && v.trades) return v; }catch(e){} return { plans:{}, open:[], trades:[] }; }
+  function save(v){ try{ PRIME_LS.setItem(KEY, JSON.stringify(v)); }catch(e){} }
+  function fmtP(x){ if(x == null || !isFinite(x)) return '—'; var a = Math.abs(x); return a >= 1000 ? x.toLocaleString('en-US', { maximumFractionDigits:0 }) : a >= 10 ? x.toFixed(2) : a >= 1 ? x.toFixed(3) : x.toPrecision(4); }
+  function pct(x, d){ return x == null || !isFinite(x) ? '—' : (x > 0 ? '+' : '') + (x*100).toFixed(d == null ? 1 : d) + '%'; }
+  async function getJSON(url){ var r = await fetch(url); if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }
+  // ── market state (pure): daily closes per coin → E8 state ──
+  function marketState(daily, nowMs){ var nowD = Math.floor((nowMs || Date.now())/864e5), byDay = {};
+    Object.keys(daily).forEach(function(s){ var prev = null; (daily[s] || []).forEach(function(k){ var d = Math.floor(+k[0]/864e5), c = +k[4]; if(d >= nowD || !(c > 0)) return; if(prev != null){ var r = Math.log(c/prev); (byDay[d] = byDay[d] || []).push(Math.max(-0.5, Math.min(0.5, r))); } prev = c; }); });
+    var days = Object.keys(byDay).map(Number).sort(function(a, b){ return a - b; }); if(days.length < 260) return { state:'UNKNOWN', why:'not enough daily history' };
+    var L = [], lv = 0, r = []; days.forEach(function(d){ var x = byDay[d].reduce(function(a, b){ return a + b; }, 0)/byDay[d].length; lv += x; L.push(Math.exp(lv)); r.push(x); });
+    var n = L.length, last = L[n-1], ma200 = L.slice(n - 200).reduce(function(a, b){ return a + b; }, 0)/200, r30 = last/L[n-31] - 1, r7 = last/L[n-8] - 1, r3 = last/L[n-4] - 1;
+    function sd(a){ var m = a.reduce(function(x, y){ return x + y; }, 0)/a.length; return Math.sqrt(a.reduce(function(x, y){ return x + (y - m)*(y - m); }, 0)/(a.length - 1)); }
+    var vol30 = sd(r.slice(n - 30)), vols = []; for(var i = Math.max(30, n - 366); i < n - 1; i++) vols.push(sd(r.slice(i - 29, i + 1))); vols.sort(function(a, b){ return a - b; }); var volmed = vols[Math.floor(vols.length/2)];
+    var up = last > ma200, st = 'NORMAL';
+    if(vol30 < volmed && Math.abs(r30) < 0.10) st = 'CONSOLIDATING'; if(up && r7 <= -0.08) st = 'CORRECTING'; if(up && r30 >= 0.25) st = 'BOOMING'; if(!up && r30 <= -0.15) st = 'DEPRESSED';
+    return { state:st, uptrend:up, falling:r7 <= -0.05, r7:r7, r30:r30, r3:r3, vsMa200:last/ma200 - 1, vol30:vol30, volmed:volmed, day:days[n-1] }; }
+  // ── the plan for one coin (pure) ──
+  function planFor(A, S){ if(!A || A.err || !S || S.state === 'UNKNOWN') return { side:'none', why:'no data' };
+    var above200h = A.price > A.ema200, side = 'none', why = '';
+    if(S.state === 'BOOMING'){ side = above200h ? 'long' : 'none'; why = 'Booming market' + (above200h ? ', coin above its 200-hour average' : ', but the coin is below its 200-hour average'); }
+    else if(S.state === 'DEPRESSED'){ side = !above200h ? 'short' : 'none'; why = 'Depressed market' + (!above200h ? ', coin below its 200-hour average' : ', but the coin is holding above its 200-hour average'); }
+    else if(S.state === 'CORRECTING'){ side = 'long'; why = 'A correction inside an uptrend: buy only at the liquidity below'; }
+    else { if(S.uptrend && above200h){ side = 'long'; why = (S.state === 'CONSOLIDATING' ? 'Quiet market' : 'Market') + ' in an uptrend, coin above its 200-hour average'; }
+           else if(!S.uptrend && !above200h){ side = 'short'; why = (S.state === 'CONSOLIDATING' ? 'Quiet market' : 'Market') + ' in a downtrend, coin below its 200-hour average'; }
+           else { why = 'The market trend and the coin disagree: stand aside'; } }
+    if(side === 'none') return { side:'none', why:why };
+    var near = side === 'long' ? A.below.filter(function(p){ return p.atrs <= 3; })[0] : A.above.filter(function(p){ return p.atrs <= 3; })[0], far = side === 'long' ? A.above[0] : A.below[0];
+    if(!near || !far) return { side:'none', why:why + '; no liquidity level close enough to plan from' };
+    var entry = near.price, stop = side === 'long' ? entry - 0.5*A.atr : entry + 0.5*A.atr, target = far.price, risk = Math.abs(entry - stop), rr = Math.abs(target - entry)/risk;
+    if(!(rr >= 1.5)) return { side:'none', why:why + '; the nearest target gives only ' + (rr ? rr.toFixed(1) : '0') + ':1, under 1.5:1' };
+    return { side:side, entry:entry, stop:stop, target:target, rr:rr, why:why, near:near.label, far:far.label, grade:'C' }; }
+  // ── forward record (plan E16) ──
+  function follow(rec, sym, rows, nowH){ var by = {}; rows.forEach(function(r){ by[r.h] = r; });
+    var P = rec.plans[sym];
+    if(P && !P.trig){ for(var h = P.h + 1; h < nowH; h++){ var b = by[h]; if(!b) continue; var hit = P.side === 'long' ? b.lo <= P.entry : b.hi >= P.entry; if(hit){ rec.open.push({ sym:sym, side:P.side, entry:P.entry, stop:P.stop, target:P.target, h:h, rr:P.rr }); P.trig = h; notify(sym, P); break; } if(h - P.h >= 24) break; } }
+    rec.open = rec.open.filter(function(t){ if(t.sym !== sym) return true; var d = t.side === 'long' ? 1 : -1, risk = Math.abs(t.entry - t.stop), exit = null, why = '';
+      for(var h = t.h; h < nowH; h++){ var b = by[h]; if(!b) continue; var sHit = d > 0 ? b.lo <= t.stop : b.hi >= t.stop, tHit = d > 0 ? b.hi >= t.target : b.lo <= t.target;
+        if(sHit){ exit = t.stop; why = 'stop'; break; } if(tHit && h > t.h){ exit = t.target; why = 'target'; break; } if(h - t.h >= 48){ exit = b.c; why = '48 hours'; break; } }
+      if(exit == null) return true; var R = d*(exit - t.entry)/risk - COST*t.entry/risk; rec.trades.push({ sym:sym, side:t.side, h:t.h, out:why, R:Math.round(R*1000)/1000 }); rec.trades = rec.trades.slice(-1000); return false; });
+    return rec; }
+  function stats(rec){ var T = rec.trades, n = T.length, sum = T.reduce(function(a, t){ return a + t.R; }, 0), wins = T.filter(function(t){ return t.R > 0; }).length, wk = {};
+    T.forEach(function(t){ var w = Math.floor(t.h/168); wk[w] = (wk[w] || 0) + t.R; }); var x = Object.keys(wk).map(function(k){ return wk[k]; }), m = x.length ? x.reduce(function(a, b){ return a + b; }, 0)/x.length : 0, sd = x.length > 1 ? Math.sqrt(x.reduce(function(a, b){ return a + (b - m)*(b - m); }, 0)/(x.length - 1)) : 0;
+    return { n:n, wins:wins, avgR:n ? sum/n : null, totalR:sum, t:sd > 0 ? m/(sd/Math.sqrt(x.length)) : null, weeks:x.length }; }
+  function notify(sym, P){ try{ if(typeof Notification !== 'undefined' && Notification.permission === 'granted') new Notification('OMEGA Daily Plan (grade C, paper): ' + sym.replace('USDT', '') + ' ' + P.side.toUpperCase(), { body:'Entry ' + fmtP(P.entry) + ' touched. Stop ' + fmtP(P.stop) + ', target ' + fmtP(P.target) + '. Unproven: paper first, 1% risk at most.' }); }catch(e){} }
+  // ── run: market state + a plan per coin + follow ──
+  async function run(){ if(state.busy) return 'busy'; state.busy = true; state.msg = 'Reading the market…'; render();
+    try{ var MR = window.OMEGA_MREAD; if(!MR || !MR._) throw new Error('Market Read is not loaded'); var nowH = Math.floor(Date.now()/H), daily = {}, rec = load(), made = 0;
+      for(var i=0; i<COINS.length; i++){ var s = COINS[i]; daily[s] = await getJSON(FAPI + '/fapi/v1/klines?symbol=' + s + '&interval=1d&limit=600'); }
+      state.S = marketState(daily);
+      for(i = 0; i < COINS.length; i++){ s = COINS[i];
+        var D = { kl:await getJSON(FAPI + '/fapi/v1/klines?symbol=' + s + '&interval=1h&limit=500') };
+        try{ D.depth = await getJSON(FAPI + '/fapi/v1/depth?symbol=' + s + '&limit=500'); }catch(e){} try{ D.prem = await getJSON(FAPI + '/fapi/v1/premiumIndex?symbol=' + s); }catch(e){}
+        try{ D.oi = await getJSON(FAPI + '/futures/data/openInterestHist?symbol=' + s + '&period=1h&limit=25'); }catch(e){} try{ D.ls = await getJSON(FAPI + '/futures/data/globalLongShortAccountRatio?symbol=' + s + '&period=1h&limit=25'); }catch(e){}
+        var A = MR._.analyze(s, D); state.reads[s] = A; if(MR._.remember) MR._.remember(A);
+        rec = follow(rec, s, MR._.rowsOf(D.kl, nowH), nowH);
+        var P = planFor(A, state.S), old = rec.plans[s];
+        var hasOpen = rec.open.some(function(t){ return t.sym === s; }); if(!hasOpen){ P.h = nowH - 1; rec.plans[s] = P; } else if(old){ P = old; } if(P.side !== 'none') made++; }
+      save(rec); state.at = Date.now(); state.msg = 'Read at ' + new Date().toISOString().slice(11, 16) + ' UTC: ' + made + ' plan' + (made === 1 ? '' : 's') + ' today.'; return state.msg; }
+    catch(e){ state.msg = 'Could not read the market (' + (e.message || e) + ').'; return state.msg; }
+    finally{ state.busy = false; render(); } }
+  // ── the cards ──
+  var STATE_TXT = { BOOMING:['Booming', 'go', 'Strong rise: longs only, and only on dips into liquidity.'], DEPRESSED:['Depressed', 'short', 'Falling hard: shorts only, on rallies into liquidity; capitulation bounces can be violent.'], CORRECTING:['Correcting', 'wait', 'A pullback inside an uptrend: longs only at the liquidity below.'], CONSOLIDATING:['Consolidating', 'wait', 'Quiet range: small size; follow the trend only where the coin agrees.'], NORMAL:['Normal', 'wait', 'No extreme: follow the trend only where the coin agrees.'], UNKNOWN:['Unknown', 'wait', 'Not enough data.'] };
+  function session(h){ return h < 8 ? 'Asia' : h < 13 ? 'London' : h < 21 ? 'US' : 'Late'; }
+  function html(){ var S = state.S, rec = load(), st = stats(rec), nowH = new Date().getUTCHours(), h = '';
+    h += '<div class="dp-card"><h3 class="dp-h">Market now</h3>';
+    if(!S) h += '<p class="hint">Not read yet. <button class="btn-outline" type="button" data-dp="run">Read the market</button></p>';
+    else { var T = STATE_TXT[S.state] || STATE_TXT.NORMAL, B = state.reads.BTCUSDT;
+      h += '<div class="dp-state ' + T[1] + '"><b>' + T[0] + '</b> · ' + (S.uptrend ? 'uptrend' : 'downtrend') + (S.falling ? ' · <b>falling this week</b>' : '') + '</div><p class="dp-p">' + esc(T[2]) + '</p>' +
+        '<table class="mr-tab"><tr><td>Top-5 index, 7 days / 30 days</td><td>' + pct(S.r7) + ' / ' + pct(S.r30) + '</td></tr><tr><td>Against its 200-day average</td><td>' + pct(S.vsMa200) + '</td></tr>' +
+        '<tr><td>Session now</td><td>' + session(nowH) + ' (' + nowH + ':00 UTC, ' + ((nowH + 20) % 24) + ':00 Tobago)' + (nowH >= 13 && nowH < 21 ? ' — busiest, most volatile hours' : '') + '</td></tr>' +
+        (B && !B.err ? '<tr><td>BTC today</td><td>' + pct(B.chg24) + ', range ' + pct(B.range24).replace('+', '') + ' (typical ' + pct(B.typDay).replace('+', '') + ')</td></tr><tr><td>BTC positioning</td><td>' + (B.crowd === 'balanced' ? 'balanced' : B.crowd + ' crowded') + '</td></tr>' : '') + '</table>'; }
+    h += '</div><div class="dp-card"><h3 class="dp-h">Today’s plan <span class="dp-grade">Grade C · unproven · paper first</span></h3>';
+    if(S){ h += '<table class="mr-tab"><tr><th>Coin</th><th>Side</th><th>Entry → stop → target</th><th>R:R</th></tr>' + COINS.map(function(s){ var P = rec.plans[s] || { side:'none', why:'not read yet' }, open = rec.open.filter(function(t){ return t.sym === s; })[0];
+        return '<tr><td><b>' + s.replace('USDT', '') + '</b></td><td class="' + (P.side === 'long' ? 'up' : P.side === 'short' ? 'dn' : '') + '">' + (P.side === 'none' ? 'stand aside' : P.side.toUpperCase()) + (open ? ' · in a paper trade' : P.trig ? ' · triggered' : '') + '</td><td>' + (P.side === 'none' ? '<span class="hint">' + esc(P.why) + '</span>' : fmtP(P.entry) + ' → ' + fmtP(P.stop) + ' → ' + fmtP(P.target) + '<br><span class="hint">' + esc(P.why) + '. Entry at ' + esc(P.near) + ', target ' + esc(P.far) + '.</span>') + '</td><td>' + (P.rr ? P.rr.toFixed(1) + ':1' : '—') + '</td></tr>'; }).join('') + '</table>'; }
+    h += '<p class="hint">How to use it: wait for price to reach the entry; risk 1% at most; the stop and target are levels, not guesses. <b>Unproven:</b> the trend and sweep rules this resembles failed fair tests, so every plan is followed on paper (plan E16) and judged once after 50 trades. Grade A signals come only from the climax watch (Edge Lab), the one rule that passed.</p>';
+    h += '<p class="dp-rec"><b>Forward record:</b> ' + (st.n ? st.n + ' paper trades, ' + Math.round(100*st.wins/st.n) + '% winners, average ' + (st.avgR >= 0 ? '+' : '') + st.avgR.toFixed(2) + 'R, total ' + (st.totalR >= 0 ? '+' : '') + st.totalR.toFixed(1) + 'R' + (st.t != null ? ', t ' + st.t.toFixed(2) : '') + '. Judged at 50 trades.' : 'no closed paper trades yet.') + '</p>';
+    h += '<p class="hint" style="margin:6px 0 0;">' + esc(state.msg || '') + ' <button class="btn-outline" type="button" data-dp="run"' + (state.busy ? ' disabled' : '') + '>' + (state.busy ? 'Reading…' : 'Read again') + '</button></p></div>';
+    return h; }
+  function css(){ if(el('dplanCss')) return; var st = document.createElement('style'); st.id = 'dplanCss';
+    st.textContent = '.dp-card{background:var(--panel);border:1px solid var(--gold);border-radius:12px;padding:12px;margin:0 0 12px;}.dp-h{margin:0 0 8px;font-size:16px;color:var(--gold);}.dp-grade{font-size:11px;font-weight:600;color:var(--amber);margin-left:6px;}' +
+      '.dp-state{display:inline-block;padding:4px 10px;border-radius:999px;font-size:13px;background:var(--panel2);}.dp-state.go{background:rgba(37,211,139,.16);color:var(--bull);}.dp-state.short{background:rgba(255,77,94,.16);color:var(--bear);}.dp-p{font-size:13px;margin:8px 0;line-height:1.5;}.dp-rec{font-size:13px;margin:8px 0 0;}' +
+      '.mr-tab{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed;margin:6px 0;}.mr-tab th{text-align:left;color:var(--text-dim);font-weight:600;border-bottom:1px solid var(--border);padding:4px;}.mr-tab td{padding:4px;border-bottom:1px solid var(--border);white-space:normal;overflow-wrap:anywhere;}.up{color:var(--bull);}.dn{color:var(--bear);}';
+    document.head.appendChild(st); }
+  function render(){ ['dplanBody', 'dplanAnaBody'].forEach(function(id){ var host = el(id); if(!host) return; css(); host.innerHTML = html();
+    Array.prototype.forEach.call(host.querySelectorAll('[data-dp="run"]'), function(b){ b.onclick = function(){ run(); }; }); }); }
+  function onShow(){ render(); if(!state.S || Date.now() - state.at > 30*60e3) run(); }
+  var JOB = { id:'dplan', lane:'live', prio:3, label:'Daily Plan: market state, side and a plan per coin (grade C, followed on paper)', what:'Every hour: reads the market state from BTC, ETH, SOL, BNB and XRP, picks long, short or stand aside for each, plans entries at liquidity, and follows every plan to its result (plan E16).', every:60*60e3,
+    run: async function(){ var r = await run(); return String(r || 'Read.'); } };
+  function register(){ var O = window.OMEGA_OPERATOR; if(!O || !O.jobs) return false; var J = O.jobs(); if(!J.some(function(x){ return x.id === JOB.id; })) J.push(JOB); return true; }
+  if(!register()){ var tries = 0, iv = setInterval(function(){ if(register() || ++tries > 20) clearInterval(iv); }, 3000); }
+  var t2 = 0, iv2 = setInterval(function(){ if(el('dplanBody') || el('dplanAnaBody')){ clearInterval(iv2); render(); } else if(++t2 > 60) clearInterval(iv2); }, 1000);
+  window.OMEGA_DPLAN = { run:run, render:render, onShow:onShow, state:function(){ return state; }, COINS:COINS, JOB:JOB, _:{ marketState:marketState, planFor:planFor, follow:follow, stats:stats, html:html } };
+})();
+</script>
+<script>/* ═══ RISK GUARD AND GROWTH BOT (v6.5.92) — rules that protect the account, a 100 USDT bot that follows them, automatic exports ═══
+   Risk is what makes money; how it is sized, managed and learned from decides whether it does (in the spirit of Sharran
+   Srivatsaa's teaching on risk). The rules: 0.5% of equity risked per trade (1% after 30 trades without a rule break), at
+   most 2 open, no new trades after −2% in a UTC day or −5% in a week, a pause for review at 20% below the peak.
+   1. Growth Bot (plan E17, md5 27f13c9a…): a paper account of 100 USDT, forward only, that takes every NEW climax-watch trade
+      (grade A) and every NEW Daily Plan paper trade (grade C) under those rules — not frightened: every valid signal within
+      the limits is taken. It only READS the signals' own records (net of their costs); it never changes a signal.
+      Climax trades have no stop, so their risk counts against a 10% adverse move; Daily Plan trades risk the distance to
+      their stop. Binance's 5 USDT minimum order is respected (a smaller trade is skipped and the reason recorded).
+   2. My trades: a pre-trade check for real trades (the size that keeps risk inside the rule, the limits now) and a journal
+      that counts rule breaks, kept separate from the strategy's results.
+   3. Automatic exports: when Market Watch has 3 new full days, or the metals/forex download is complete, the Autopilot
+      saves the research file (browsers may ask for a tap; the page keeps a one-tap button and a notification is sent).
+   OMEGA places no orders. */
+(function(){
+  'use strict';
+  var H = 3600e3, KB = 'omega_rguard_bot_v1', KM = 'omega_rguard_mine_v1', KX = 'omega_rguard_exports_v1';
+  var RULES = { risk0:0.005, risk1:0.01, upgradeAfter:30, maxOpen:2, dayStop:0.02, weekStop:0.05, reviewDD:0.20, climaxMove:0.10, minNotional:5, fee:0.0008 };
+  var ui = { msg:'', check:null, form:{ sym:'BTC', side:'long', entry:'', stop:'', size:'' } };
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function load(k, d){ try{ var v = JSON.parse(PRIME_LS.getItem(k) || 'null'); return v && typeof v === 'object' ? v : d; }catch(e){ return d; } }
+  function save(k, v){ try{ PRIME_LS.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function day(ms){ return Math.floor(ms/864e5); } function week(ms){ return Math.floor((ms/864e5 + 3)/7); }
+  function usd(x){ return (x < 0 ? '−' : '') + '$' + Math.abs(x).toFixed(2); }
+  function newAcct(eq){ return { eq:eq, peak:eq, start0:eq, startAt:Date.now(), open:[], closed:[], seen:{}, skips:[], curve:[[Date.now(), eq]], nClean:0, breaks:0, paused:false, primed:false }; }
+  // ── the rules engine (pure) ──
+  function limits(A, nowMs){ var d = day(nowMs), w = week(nowMs), dP = 0, wP = 0;
+    A.closed.forEach(function(c){ if(day(c.at) === d) dP += c.pnl; if(week(c.at) === w) wP += c.pnl; });
+    var dayLoss = dP < 0 ? -dP/(A.eq - dP) : 0, weekLoss = wP < 0 ? -wP/(A.eq - wP) : 0, dd = A.peak > 0 ? 1 - A.eq/A.peak : 0, risk = A.nClean >= RULES.upgradeAfter ? RULES.risk1 : RULES.risk0, why = null;
+    var E = 1e-9; if(A.paused || dd >= RULES.reviewDD - E) why = 'paused for review: 20% below the peak'; else if(weekLoss >= RULES.weekStop - E) why = 'weekly stop: −5% this week'; else if(dayLoss >= RULES.dayStop - E) why = 'daily stop: −2% today'; else if(A.open.length >= RULES.maxOpen) why = 'two trades already open';
+    return { risk:risk, dayLoss:dayLoss, weekLoss:weekLoss, dd:dd, open:A.open.length, blocked:why }; }
+  // ── the Growth Bot ──
+  function sources(){ var out = [], C = window.OMEGA_CLIMAX && window.OMEGA_CLIMAX.state ? (window.OMEGA_CLIMAX.state().trades || []) : [], D = load('omega_dplan_v1', { open:[], trades:[] });
+    C.forEach(function(t){ if(t && t.sym != null && t.t != null) out.push({ key:'c|' + t.sym + '|' + t.t + '|' + t.e, src:'climax', sym:t.sym, side:'long', closed:t.status === 'closed', net:t.net }); });
+    (D.open || []).forEach(function(t){ out.push({ key:'d|' + t.sym + '|' + t.h, src:'plan', sym:t.sym, side:t.side, closed:false, stopPct:Math.abs(t.entry - t.stop)/t.entry }); });
+    (D.trades || []).forEach(function(t){ out.push({ key:'d|' + t.sym + '|' + t.h, src:'plan', sym:t.sym, side:t.side, closed:true, R:t.R }); });
+    return out; }
+  function step(A, list, nowMs){ nowMs = nowMs || Date.now(); var by = {}; list.forEach(function(s){ by[s.key] = s; });
+    if(!A.primed){ list.forEach(function(s){ A.seen[s.key] = 1; }); A.primed = true; return A; }          // forward only: signals before the bot started are not taken
+    list.forEach(function(s){ if(A.seen[s.key]) return; A.seen[s.key] = 1; var L = limits(A, nowMs);
+      if(L.blocked){ A.skips.push({ key:s.key, sym:s.sym, why:L.blocked, at:nowMs }); A.skips = A.skips.slice(-200); return; }
+      var risk$ = A.eq*L.risk, notional = s.src === 'climax' ? risk$/RULES.climaxMove : (s.stopPct > 0 ? risk$/s.stopPct : risk$/0.01);
+      if(notional < RULES.minNotional){ A.skips.push({ key:s.key, sym:s.sym, why:'below Binance’s 5 USDT minimum order', at:nowMs }); return; }
+      A.open.push({ key:s.key, src:s.src, sym:s.sym, side:s.side, risk:risk$, notional:notional, at:nowMs }); });
+    A.open = A.open.filter(function(o){ var s = by[o.key], pnl = null;
+      if(s && s.closed){ pnl = o.src === 'climax' ? o.notional*(+s.net || 0) : o.risk*(+s.R || 0); }
+      else if(!s && nowMs - o.at > 7*24*H){ pnl = 0; }
+      if(pnl == null) return true; A.eq += pnl; A.peak = Math.max(A.peak, A.eq); A.nClean++;
+      A.closed.push({ key:o.key, src:o.src, sym:o.sym, side:o.side, pnl:Math.round(pnl*1e4)/1e4, R:Math.round(pnl/o.risk*1000)/1000, nt:Math.round(o.notional*100)/100, at:nowMs });   // v6.5.96: size kept for the fill stress test A.closed = A.closed.slice(-2000);
+      A.curve.push([nowMs, Math.round(A.eq*1e4)/1e4]); A.curve = A.curve.slice(-2000); return false; });
+    if(1 - A.eq/A.peak >= RULES.reviewDD - 1e-9) A.paused = true; return A; }
+  function stats(A){ var c = A.closed, n = c.length, w = c.filter(function(x){ return x.pnl > 0; }).length, wk = {};
+    c.forEach(function(x){ var k = week(x.at); wk[k] = (wk[k] || 0) + x.pnl; }); var xs = Object.keys(wk).map(function(k){ return wk[k]; }), m = xs.length ? xs.reduce(function(a, b){ return a + b; }, 0)/xs.length : 0, sd = xs.length > 1 ? Math.sqrt(xs.reduce(function(a, b){ return a + (b - m)*(b - m); }, 0)/(xs.length - 1)) : 0;
+    return { n:n, wins:w, ret:A.eq/A.start0 - 1, t:sd > 0 ? m/(sd/Math.sqrt(xs.length)) : null, dd:1 - A.eq/A.peak, weeks:xs.length,
+      byA:c.filter(function(x){ return x.src === 'climax'; }).reduce(function(a, x){ return a + x.pnl; }, 0), byC:c.filter(function(x){ return x.src === 'plan'; }).reduce(function(a, x){ return a + x.pnl; }, 0) }; }
+  function runBot(){ var A = load(KB, null) || newAcct(100); A = step(A, sources()); save(KB, A); return A; }
+  // ── my trades: the pre-trade check and the journal ──
+  function preCheck(M, entry, stop, size, nowMs){ var L = limits(M, nowMs || Date.now()), dist = Math.abs(entry - stop)/entry, risk$ = size*dist, allowed$ = M.eq*L.risk, maxSize = dist > 0 ? allowed$/dist : 0, msgs = [], ok = true;
+    if(!(entry > 0 && stop > 0 && size > 0) || dist <= 0) return { ok:false, msgs:['Enter an entry, a stop and a size.'] };
+    if(L.blocked){ ok = false; msgs.push('Blocked: ' + L.blocked + '.'); }
+    if(risk$ > allowed$*1.05){ ok = false; msgs.push('Too big: this risks ' + usd(risk$) + ' (' + (risk$/M.eq*100).toFixed(2) + '% of the account); the rule allows ' + usd(allowed$) + '. Use a size of ' + usd(maxSize) + ' or less.'); }
+    if(size < RULES.minNotional) msgs.push('Under Binance’s 5 USDT minimum order: the exchange will refuse it.');
+    var ER = window.OMEGA_REVIEW && window.OMEGA_REVIEW.eventRisk ? window.OMEGA_REVIEW.eventRisk(nowMs || Date.now()) : null; if(ER && ER.active) msgs.push(window.OMEGA_REVIEW.riskText(ER));   // v6.5.94: advice for real trades; the bot's rules are unchanged
+    if(ok) msgs.push('Inside the rules: risk ' + usd(risk$) + ' (' + (risk$/M.eq*100).toFixed(2) + '%), stop ' + (dist*100).toFixed(2) + '% away. Largest allowed size ' + usd(maxSize) + '.');
+    return { ok:ok, msgs:msgs, risk:risk$, maxSize:maxSize, dist:dist }; }
+  function logTrade(M, t){ var c = preCheck(M, t.entry, t.stop, t.size); if(!c.ok) M.breaks = (M.breaks || 0) + 1;
+    M.open.push({ id:Date.now() + '' + Math.floor(Math.random()*1e3), sym:t.sym, side:t.side, entry:t.entry, stop:t.stop, size:t.size, risk:c.risk || 0, breach:!c.ok, at:Date.now() }); return M; }
+  function closeTrade(M, id, exit){ M.open = M.open.filter(function(o){ if(o.id !== id) return true; var d = o.side === 'short' ? -1 : 1, pnl = d*(exit - o.entry)/o.entry*o.size - RULES.fee*o.size;
+      M.eq += pnl; M.peak = Math.max(M.peak, M.eq); if(!o.breach) M.nClean++; M.closed.push({ key:o.id, sym:o.sym, side:o.side, pnl:Math.round(pnl*1e4)/1e4, R:o.risk > 0 ? Math.round(pnl/o.risk*1000)/1000 : null, breach:o.breach, at:Date.now() }); M.curve.push([Date.now(), M.eq]); return false; }); return M; }
+  // ── automatic research exports ──
+  async function autoExport(){ var X = load(KX, { mw:{ done:[] }, fx:{ saved:false } }), out = [], MR = window.OMEGA_MREAD, W = window.OMEGA_WATCH, G = window.OMEGA_GOLDH;
+    try{ var D = MR && MR._ && MR._.checkDays ? MR._.checkDays() : { good:[] }, good = D.good || [], fresh = good.filter(function(d){ return X.mw.done.indexOf(d) < 0; });
+      if(W && W.exportData && fresh.length >= 3){ await W.exportData(7); X.mw.done = X.mw.done.concat(fresh); X.mw.at = Date.now(); out.push('Market Watch: saved 7 days (' + fresh.length + ' new full days)'); notify('Market Watch export saved', 'Send the omega-watch file in the research chat (plan E13). If no file appeared, tap Save on the Risk Guard page.'); }
+      else out.push('Market Watch: ' + good.length + ' full day' + (good.length === 1 ? '' : 's') + ' recorded, ' + fresh.length + ' new (exports at 3 new)'); }catch(e){ out.push('Market Watch export: ' + (e.message || e)); }
+    try{ if(G && G.state && G.SYMS){ var recs = G.state().recs || {}, all = G.SYMS.every(function(k){ return recs[k] && recs[k].done; });
+      if(all && !X.fx.saved && G.save){ await G.save(); X.fx.saved = true; X.fx.at = Date.now(); out.push('metals and forex file saved'); notify('Metals and forex download complete', 'Send the omega-history-metals-fx1h file in the research chat (plans E4, E15).'); }
+      else out.push(all ? (X.fx.saved ? 'metals and forex file already saved' : 'metals and forex: complete') : 'metals and forex: still downloading'); } }catch(e){ out.push('metals and forex export: ' + (e.message || e)); }
+    save(KX, X); return out.join('; ') + '.'; }
+  function notify(title, body){ try{ if(typeof Notification !== 'undefined' && Notification.permission === 'granted') new Notification('OMEGA: ' + title, { body:body }); }catch(e){} }
+  // ── the page ──
+  function curveSvg(A){ var c = A.curve.length > 1 ? A.curve : [[A.startAt, A.start0], [Date.now(), A.eq]], ys = c.map(function(p){ return p[1]; }).concat([A.start0]), lo = Math.min.apply(null, ys), hi = Math.max.apply(null, ys), pad = (hi - lo)*0.15 || 1; lo -= pad; hi += pad;
+    var W = 360, Hh = 120, X = function(i){ return 6 + i/(c.length - 1)*(W - 12); }, Y = function(v){ return 6 + (hi - v)/(hi - lo)*(Hh - 12); };
+    var pts = c.map(function(p, i){ return X(i).toFixed(1) + ',' + Y(p[1]).toFixed(1); }).join(' '), up = A.eq >= A.start0;
+    return '<svg class="rg-curve" viewBox="0 0 ' + W + ' ' + Hh + '" role="img" aria-label="Growth Bot equity"><line x1="0" x2="' + W + '" y1="' + Y(A.start0).toFixed(1) + '" y2="' + Y(A.start0).toFixed(1) + '" stroke="var(--text-dim)" stroke-dasharray="4 4"/><polyline points="' + pts + '" fill="none" stroke="' + (up ? 'var(--bull)' : 'var(--bear)') + '" stroke-width="2"/><text x="6" y="' + (Y(A.start0) - 4).toFixed(1) + '" class="rg-ax">start ' + A.start0 + '</text></svg>'; }
+  function limitRow(L){ return '<table class="mr-tab"><tr><td>Risk per trade now</td><td>' + (L.risk*100).toFixed(1) + '%</td></tr><tr><td>Open trades</td><td>' + L.open + ' of ' + RULES.maxOpen + '</td></tr><tr><td>Today / this week</td><td>' + (L.dayLoss > 0 ? '−' + (L.dayLoss*100).toFixed(1) + '%' : 'no loss') + ' / ' + (L.weekLoss > 0 ? '−' + (L.weekLoss*100).toFixed(1) + '%' : 'no loss') + '</td></tr><tr><td>Below the peak</td><td>' + (L.dd*100).toFixed(1) + '%</td></tr><tr><td>New trades</td><td><b class="' + (L.blocked ? 'dn' : 'up') + '">' + (L.blocked ? 'not allowed: ' + esc(L.blocked) : 'allowed') + '</b></td></tr></table>'; }
+  function html(){ var A = load(KB, null) || newAcct(100), M = load(KM, null) || newAcct(100), S = stats(A), LA = limits(A, Date.now()), LM = limits(M, Date.now()), X = load(KX, { mw:{ done:[] }, fx:{ saved:false } }), h = '';
+    h += '<div class="mr-start"><h3>Start here</h3><p>Risk is what makes money; managing it decides whether it does. These rules are the same for the bot and for you: <b>0.5% risk per trade</b> (1% after 30 clean trades), <b>at most 2 open</b>, <b>stop for the day at −2%</b>, <b>for the week at −5%</b>, and a <b>pause for review at 20% below the peak</b>.</p><p>The Growth Bot follows the app’s signals on paper from 100 USDT, to show whether they can grow an account. Your own trades go through the pre-trade check below.</p></div>';
+    h += '<div class="dp-card"><h3 class="dp-h">Growth Bot · paper · from 100 USDT</h3><div class="rg-big ' + (A.eq >= A.start0 ? 'up' : 'dn') + '">' + A.eq.toFixed(2) + ' USDT <span>(' + (S.ret >= 0 ? '+' : '') + (S.ret*100).toFixed(2) + '%)</span></div>' + curveSvg(A) +
+      '<p class="dp-p">' + (S.n ? S.n + ' trades, ' + Math.round(100*S.wins/S.n) + '% winners · climax (grade A) ' + usd(S.byA) + ' · Daily Plan (grade C) ' + usd(S.byC) + (S.t != null ? ' · weekly t ' + S.t.toFixed(2) : '') : 'No trades yet: it takes signals that appear from now on.') + '</p>' + limitRow(LA) +
+      (A.open.length ? '<p class="hint">Open: ' + A.open.map(function(o){ return esc(o.sym.replace('USDT', '')) + ' ' + o.side + ' (' + (o.src === 'climax' ? 'A' : 'C') + ', risk ' + usd(o.risk) + ')'; }).join(', ') + '</p>' : '') +
+      (A.skips.length ? '<p class="hint">Skipped by the rules: ' + A.skips.length + ' (latest: ' + esc(A.skips[A.skips.length-1].why) + ').</p>' : '') + (A.paused ? '<p><button class="btn-outline" type="button" data-rg="resume">Reviewed: resume the bot</button></p>' : '') +
+      '<p class="hint">Judged once (plan E17) after 26 weeks or 50 trades: it grows if it ends above 100 with weekly t ≥ 1.65.</p></div>';
+    h += '<div class="dp-card"><h3 class="dp-h">Before a real trade</h3><div class="rg-form"><input id="rgSym" placeholder="Coin (BTC)" value="' + esc(ui.form.sym) + '"><select id="rgSide"><option value="long"' + (ui.form.side === 'long' ? ' selected' : '') + '>Long</option><option value="short"' + (ui.form.side === 'short' ? ' selected' : '') + '>Short</option></select><input id="rgEntry" inputmode="decimal" placeholder="Entry" value="' + esc(ui.form.entry) + '"><input id="rgStop" inputmode="decimal" placeholder="Stop" value="' + esc(ui.form.stop) + '"><input id="rgSize" inputmode="decimal" placeholder="Size in USDT" value="' + esc(ui.form.size) + '"></div>' +
+      '<p><button class="btn-outline" type="button" data-rg="check">Check it</button> <button class="btn-outline" type="button" data-rg="log">Log the trade</button></p>' + (ui.check ? '<p class="dp-p ' + (ui.check.ok ? 'up' : 'dn') + '">' + ui.check.msgs.map(esc).join(' ') + '</p>' : '') + limitRow(LM) +
+      '<p class="hint">Account ' + M.eq.toFixed(2) + ' USDT · rule breaks ' + (M.breaks || 0) + ' · clean trades ' + M.nClean + '. <button class="btn-outline" type="button" data-rg="bal">Set balance</button></p>' +
+      (M.open.length ? '<table class="mr-tab"><tr><th>Open</th><th>Entry / stop</th><th></th></tr>' + M.open.map(function(o){ return '<tr><td>' + esc(o.sym) + ' ' + o.side + (o.breach ? ' <span class="dn">(rule break)</span>' : '') + '</td><td>' + o.entry + ' / ' + o.stop + '</td><td><button class="btn-outline" type="button" data-rgclose="' + o.id + '">Close</button></td></tr>'; }).join('') + '</table>' : '') +
+      (M.closed.length ? '<p class="hint">Closed: ' + M.closed.length + ', total ' + usd(M.closed.reduce(function(a, c){ return a + c.pnl; }, 0)) + ', of which rule breaks ' + usd(M.closed.filter(function(c){ return c.breach; }).reduce(function(a, c){ return a + c.pnl; }, 0)) + '.</p>' : '') + '</div>';
+    return h; }
+  function num(id){ var v = el(id); return v ? parseFloat(String(v.value).replace(',', '.')) : NaN; }
+  function css(){ if(el('rgCss')) return; var st = document.createElement('style'); st.id = 'rgCss';
+    st.textContent = '.rg-big{font-size:24px;font-weight:700;margin:2px 0 6px;}.rg-big span{font-size:14px;font-weight:600;}.rg-curve{width:100%;height:auto;display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;margin:4px 0 8px;}.rg-ax{font-size:9px;fill:var(--text-dim);}' +
+      '.rg-form{display:grid;grid-template-columns:1fr 1fr;gap:6px;}.rg-form input,.rg-form select{min-width:0;padding:8px;border-radius:8px;border:1px solid var(--border);background:var(--bg);color:var(--text);font-size:14px;}';
+    document.head.appendChild(st); }
+  function render(){ var host = el('rguardBody'); if(!host) return; css(); host.innerHTML = html();
+    Array.prototype.forEach.call(host.querySelectorAll('[data-rg]'), function(b){ var k = b.getAttribute('data-rg'); b.onclick = async function(){ var M = load(KM, null) || newAcct(100); if(el('rgEntry')) ui.form = { sym:el('rgSym').value, side:el('rgSide').value, entry:el('rgEntry').value, stop:el('rgStop').value, size:el('rgSize').value };
+      if(k === 'check'){ ui.check = preCheck(M, num('rgEntry'), num('rgStop'), num('rgSize')); render(); }
+      else if(k === 'log'){ var t = { sym:(el('rgSym').value || '').toUpperCase().trim() || '?', side:el('rgSide').value, entry:num('rgEntry'), stop:num('rgStop'), size:num('rgSize') }; ui.check = preCheck(M, t.entry, t.stop, t.size); if(t.entry > 0 && t.stop > 0 && t.size > 0){ save(KM, logTrade(M, t)); } render(); }
+      else if(k === 'bal'){ var v = parseFloat(prompt('Account balance in USDT', M.eq.toFixed(2)) || ''); if(v > 0){ M.eq = v; M.peak = Math.max(v, M.peak); M.start0 = M.start0 || v; save(KM, M); render(); } }
+      else if(k === 'resume'){ var A = load(KB, null); if(A){ A.paused = false; A.peak = A.eq; save(KB, A); } render(); }
+      else if(k === 'mw'){ try{ await window.OMEGA_WATCH.exportData(7); ui.msg = 'Market Watch file saved.'; }catch(e){ ui.msg = 'Not saved: ' + (e.message || e); } render(); }
+      else if(k === 'fx'){ try{ await window.OMEGA_GOLDH.save(); ui.msg = 'Metals and forex file saved.'; }catch(e){ ui.msg = 'Not saved: ' + (e.message || e); } render(); } }; });
+    Array.prototype.forEach.call(host.querySelectorAll('[data-rgclose]'), function(b){ b.onclick = function(){ var v = parseFloat(prompt('Exit price', '') || ''); if(v > 0){ save(KM, closeTrade(load(KM, null) || newAcct(100), b.getAttribute('data-rgclose'), v)); render(); } }; }); }
+  var JOBS = [
+    { id:'rguard', lane:'live', prio:3, label:'Growth Bot: takes the app’s signals under the risk rules (paper, from 100 USDT)', what:'Every 15 minutes: takes new climax (A) and Daily Plan (C) trades within the rules — 0.5% risk, 2 open at most, daily −2% and weekly −5% stops — and books them as their records close (plan E17).', every:15*60e3,
+      run: async function(){ var A = runBot(), S = stats(A), L = limits(A, Date.now()); render(); return 'Equity ' + A.eq.toFixed(2) + ' USDT (' + (S.ret >= 0 ? '+' : '') + (S.ret*100).toFixed(2) + '%), ' + A.open.length + ' open, ' + S.n + ' closed' + (L.blocked ? '; new trades blocked: ' + L.blocked : '') + '.'; } },
+    { id:'autoexp', lane:'heavy', prio:1, label:'Automatic research exports (Market Watch, metals and forex)', what:'Every 2 hours: after 3 new full days of Market Watch, or when the metals/forex download completes, saves the research file and sends a notification.', every:2*3600e3,
+      run: async function(){ var r = await autoExport(); render(); return r; } }];
+  function register(){ var O = window.OMEGA_OPERATOR; if(!O || !O.jobs) return false; var J = O.jobs(); JOBS.forEach(function(j){ if(!J.some(function(x){ return x.id === j.id; })) J.push(j); }); return true; }
+  if(!register()){ var tries = 0, iv = setInterval(function(){ if(register() || ++tries > 20) clearInterval(iv); }, 3000); }
+  window.OMEGA_RGUARD = { render:render, onShow:function(){ runBot(); render(); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }, RULES:RULES, JOBS:JOBS, _:{ limits:limits, step:step, stats:stats, preCheck:preCheck, logTrade:logTrade, closeTrade:closeTrade, newAcct:newAcct, sources:sources, autoExport:autoExport, html:html } };
+})();
+</script>
+<script>/* ═══ MARKET COCKPIT (v6.5.93) — one clean chart per coin: candles, volume by who is aggressive, liquidity, the book, the plan ═══
+   On the Analysis page, under Market now and Today's plan. For the eleven Market Read markets, 1-hour (3 days) or 15-minute
+   (18 hours) candles from Binance's public USD-M data:
+   - candles with US hours shaded (the busiest, most volatile session);
+   - volume underneath, split into aggressive buying (green) and selling (red) from the taker-buy share of each candle;
+   - Market Read's liquidity levels on the price axis (red above: buy stops; green below: sell stops), labels kept apart;
+   - the order book's resting depth in its own column at the right (bids green, asks red), so it never covers the candles;
+   - the Daily Plan's setup drawn ahead of the last candle as zones: entry line, stop zone (red), target zone (green);
+   - a strip: price, 24-hour change, range against a typical day, funding, open-interest change, long/short, crowding and
+     the share of aggressive buying over 24 hours; and one clean setup card.
+   The Autopilot refreshes the selected coin hourly. It reads; it never changes a signal or a plan. */
+(function(){
+  'use strict';
+  var H = 3600e3, FAPI = 'https://fapi.binance.com', CFG = 'omega_cockpit_cfg_v1', NBAR = 72;
+  var state = { busy:false, msg:'', D:null, A:null, at:0 };
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function cfg(){ try{ var c = JSON.parse(PRIME_LS.getItem(CFG) || 'null'); if(c && c.sym) return c; }catch(e){} return { sym:'BTCUSDT', tf:'1h' }; }
+  function setCfg(c){ try{ PRIME_LS.setItem(CFG, JSON.stringify(c)); }catch(e){} }
+  function markets(){ return (window.OMEGA_MREAD && window.OMEGA_MREAD.MARKETS) || ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT']; }
+  function fmtP(x){ if(x == null || !isFinite(x)) return '—'; var a = Math.abs(x); return a >= 1000 ? x.toLocaleString('en-US', { maximumFractionDigits:0 }) : a >= 10 ? x.toFixed(2) : a >= 1 ? x.toFixed(3) : x.toPrecision(4); }
+  function pct(x, d){ return x == null || !isFinite(x) ? '—' : (x > 0 ? '+' : '') + (x*100).toFixed(d == null ? 2 : d) + '%'; }
+  async function getJSON(url){ var r = await fetch(url); if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }
+  // ── pure helpers ──
+  function bars(kl){ return (kl || []).map(function(k){ var v = +k[5], tb = +k[9]; return { t:+k[0], o:+k[1], h:+k[2], l:+k[3], c:+k[4], v:v, buy:v > 0 && tb >= 0 ? Math.min(1, tb/v) : 0.5, qv:+k[7] || 0, qb:+k[10] || 0 }; }).filter(function(b){ return b.c > 0 && b.h >= b.l; }); }
+  function spread(items, top, bottom, gap){ items.sort(function(a, b){ return a.y - b.y; }); var i;
+    for(i = 0; i < items.length; i++){ items[i].ly = Math.max(items[i].y, i ? items[i-1].ly + gap : top); }
+    for(i = items.length - 1; i >= 0; i--){ var lim = i < items.length - 1 ? items[i+1].ly - gap : bottom; if(items[i].ly > lim) items[i].ly = lim; }
+    return items; }
+  function depthBuckets(depth, lo, hi, n){ var bw = (hi - lo)/n, b = [], a = []; for(var i=0; i<n; i++){ b.push(0); a.push(0); }
+    if(depth && depth.bids) depth.bids.forEach(function(x){ var p = +x[0], k = Math.floor((p - lo)/bw); if(k >= 0 && k < n) b[k] += p*(+x[1]); });
+    if(depth && depth.asks) depth.asks.forEach(function(x){ var p = +x[0], k = Math.floor((p - lo)/bw); if(k >= 0 && k < n) a[k] += p*(+x[1]); });
+    return { bids:b, asks:a, bw:bw, max:Math.max.apply(null, b.concat(a).concat([1])) }; }
+  // ── the chart ──
+  function chart(D, A, P){ var B = bars(D.kl).slice(-NBAR); if(B.length < 10) return '<p class="hint">Not enough candles.</p>';
+    var W = 380, PT = 8, PB = 262, VT = 272, VB = 330, XL = 4, XR = 282, DL = 286, DR = 322, LX = 326;
+    var lo = Math.min.apply(null, B.map(function(b){ return b.l; })), hi = Math.max.apply(null, B.map(function(b){ return b.h; }));
+    var lv = (A && !A.err) ? A.above.slice(0, 4).concat(A.below.slice(0, 4)) : [], plan = P && P.side !== 'none' ? P : null, span = hi - lo;
+    lv = lv.filter(function(p){ return p.price >= lo - 0.6*span && p.price <= hi + 0.6*span; });
+    var ext = lv.map(function(p){ return p.price; }); if(plan) ext = ext.concat([plan.entry, plan.stop, plan.target]); ext.forEach(function(v){ if(v < lo) lo = v; if(v > hi) hi = v; });
+    var pad = (hi - lo)*0.04; lo -= pad; hi += pad;
+    var Y = function(v){ return PT + (hi - v)/(hi - lo)*(PB - PT); }, cw = (XR - XL)/B.length, X = function(i){ return XL + (i + 0.5)*cw; }, s = '';
+    // US-hours shading and the time axis
+    B.forEach(function(b, i){ var hU = new Date(b.t).getUTCHours(); if(hU >= 13 && hU < 21) s += '<rect x="' + (XL + i*cw).toFixed(1) + '" y="' + PT + '" width="' + cw.toFixed(2) + '" height="' + (VB - PT) + '" fill="var(--gold)" fill-opacity="0.045"/>'; });
+    var step = D.tf === '15m' ? 16 : 24; B.forEach(function(b, i){ var d = new Date(b.t); if((D.tf === '15m' ? d.getUTCMinutes() === 0 && d.getUTCHours() % 4 === 0 : d.getUTCHours() === 0)) s += '<line x1="' + X(i).toFixed(1) + '" x2="' + X(i).toFixed(1) + '" y1="' + PT + '" y2="' + VB + '" stroke="var(--border)" stroke-width="0.6"/><text x="' + X(i).toFixed(1) + '" y="' + (VB + 11) + '" class="ck-ax" text-anchor="middle">' + (D.tf === '15m' ? d.toISOString().slice(11, 16) : d.toISOString().slice(5, 10)) + '</text>'; });
+    // the plan zones, ahead of the last candle
+    if(plan){ var x0 = XL + Math.max(0, B.length - 14)*cw, x1 = XR, ye = Y(plan.entry), ys = Y(plan.stop), yt = Y(plan.target);
+      s += '<rect data-zone="stop" x="' + x0.toFixed(1) + '" y="' + Math.min(ye, ys).toFixed(1) + '" width="' + (x1 - x0).toFixed(1) + '" height="' + Math.abs(ys - ye).toFixed(1) + '" fill="var(--bear)" fill-opacity="0.16"/>' +
+        '<rect data-zone="target" x="' + x0.toFixed(1) + '" y="' + Math.min(ye, yt).toFixed(1) + '" width="' + (x1 - x0).toFixed(1) + '" height="' + Math.abs(yt - ye).toFixed(1) + '" fill="var(--bull)" fill-opacity="0.13"/>' +
+        '<line data-zone="entry" x1="' + XL + '" x2="' + x1 + '" y1="' + ye.toFixed(1) + '" y2="' + ye.toFixed(1) + '" stroke="var(--gold)" stroke-width="1.4" stroke-dasharray="5 3"/>'; }
+    // liquidity levels
+    lv.forEach(function(p){ var y = Y(p.price); s += '<line data-lv="' + p.kind + '" x1="' + XL + '" x2="' + XR + '" y1="' + y.toFixed(1) + '" y2="' + y.toFixed(1) + '" stroke="' + (p.side === 'above' ? 'var(--bear)' : 'var(--bull)') + '" stroke-opacity="0.55" stroke-width="0.9" stroke-dasharray="' + (p.kind === 'RND' ? '1 3' : '4 3') + '"/>'; });
+    // candles
+    B.forEach(function(b, i){ var up = b.c >= b.o, col = up ? 'var(--bull)' : 'var(--bear)', x = X(i), yo = Y(b.o), yc = Y(b.c);
+      s += '<line x1="' + x.toFixed(1) + '" x2="' + x.toFixed(1) + '" y1="' + Y(b.h).toFixed(1) + '" y2="' + Y(b.l).toFixed(1) + '" stroke="' + col + '" stroke-width="0.9"/><rect data-c="1" x="' + (x - cw*0.36).toFixed(1) + '" y="' + Math.min(yo, yc).toFixed(1) + '" width="' + Math.max(1, cw*0.72).toFixed(1) + '" height="' + Math.max(0.8, Math.abs(yc - yo)).toFixed(1) + '" fill="' + col + '"/>'; });
+    // volume: aggressive buying (green, bottom) and selling (red, top)
+    var vmax = Math.max.apply(null, B.map(function(b){ return b.v; }).concat([1e-12]));
+    B.forEach(function(b, i){ var hTot = (VB - VT)*b.v/vmax, hb = hTot*b.buy, x = XL + i*cw + cw*0.12, w = Math.max(0.8, cw*0.76);
+      s += '<rect data-v="1" x="' + x.toFixed(1) + '" y="' + (VB - hb).toFixed(1) + '" width="' + w.toFixed(1) + '" height="' + hb.toFixed(1) + '" fill="var(--bull)" fill-opacity="0.7"/><rect x="' + x.toFixed(1) + '" y="' + (VB - hTot).toFixed(1) + '" width="' + w.toFixed(1) + '" height="' + (hTot - hb).toFixed(1) + '" fill="var(--bear)" fill-opacity="0.7"/>'; });
+    s += '<text x="' + XL + '" y="' + (VT - 2) + '" class="ck-ax">volume · green aggressive buying · red aggressive selling</text>';
+    // the order book's depth in its own column
+    if(D.depth){ var Q = depthBuckets(D.depth, lo, hi, 48), bh = (PB - PT)/48;
+      for(var k = 0; k < 48; k++){ var yk = PB - (k + 1)*bh, lb = (DR - DL)*Q.bids[k]/Q.max, la = (DR - DL)*Q.asks[k]/Q.max;
+        if(lb > 0.3) s += '<rect data-d="b" x="' + DL + '" y="' + yk.toFixed(1) + '" width="' + lb.toFixed(1) + '" height="' + Math.max(0.6, bh - 0.4).toFixed(1) + '" fill="var(--bull)" fill-opacity="0.55"/>';
+        if(la > 0.3) s += '<rect data-d="a" x="' + DL + '" y="' + yk.toFixed(1) + '" width="' + la.toFixed(1) + '" height="' + Math.max(0.6, bh - 0.4).toFixed(1) + '" fill="var(--bear)" fill-opacity="0.55"/>'; }
+      s += '<text x="' + ((DL + DR)/2) + '" y="' + (PT + 7) + '" class="ck-ax" text-anchor="middle">book</text>'; }
+    // the price axis: the price, the levels and the plan, labels kept apart
+    var last = B[B.length - 1].c, labs = [{ y:Y(last), t:fmtP(last), cls:'ck-now' }];
+    lv.forEach(function(p){ labs.push({ y:Y(p.price), t:(p.kind === 'RND' ? '' : p.kind + ' ') + fmtP(p.price), cls:p.side === 'above' ? 'ck-up' : 'ck-dn' }); });
+    if(plan){ labs.push({ y:Y(plan.entry), t:'entry ' + fmtP(plan.entry), cls:'ck-now' }); labs.push({ y:Y(plan.stop), t:'stop', cls:'ck-dn2' }); labs.push({ y:Y(plan.target), t:'target', cls:'ck-up2' }); }
+    spread(labs, PT + 4, PB, 9.5).forEach(function(l){ s += '<text data-lab="1" x="' + LX + '" y="' + (l.ly + 3).toFixed(1) + '" class="ck-lab ' + l.cls + '">' + esc(l.t) + '</text>' + (Math.abs(l.ly - l.y) > 1 ? '<line x1="' + (LX - 3) + '" x2="' + XR + '" y1="' + l.ly.toFixed(1) + '" y2="' + l.y.toFixed(1) + '" stroke="var(--text-dim)" stroke-width="0.4"/>' : ''); });
+    s += '<line x1="' + XL + '" x2="' + DR + '" y1="' + Y(last).toFixed(1) + '" y2="' + Y(last).toFixed(1) + '" stroke="var(--gold)" stroke-width="0.8"/>';
+    return '<svg class="ck-svg" viewBox="0 0 ' + W + ' ' + (VB + 16) + '" role="img" aria-label="' + esc(D.sym) + ' chart with liquidity, depth, volume and plan">' + s + '</svg>'; }
+  // ── the strip and the setup card ──
+  function strip(D, A){ var B = bars(D.kl), last24 = B.slice(D.tf === '15m' ? -96 : -24), qv = last24.reduce(function(a, b){ return a + b.qv; }, 0), qb = last24.reduce(function(a, b){ return a + b.qb; }, 0), P = A && A.pos ? A.pos : {};
+    var cells = [['Price', fmtP(A ? A.price : B[B.length-1].c)], ['24 h', pct(A && A.chg24)], ['Range / typical', A && A.range24 != null ? pct(A.range24, 1).replace('+', '') + ' / ' + pct(A.typDay, 1).replace('+', '') : '—'], ['Hourly range', A ? pct(A.atrPct).replace('+', '') : '—'],
+      ['Funding', P.funding != null ? (P.funding*100).toFixed(4) + '%' : '—'], ['Open interest 24 h', pct(P.oiChg, 1)], ['Long/short', P.ls != null ? P.ls.toFixed(2) : '—'], ['Crowded', A ? A.crowd : '—'], ['Aggressive buying 24 h', qv > 0 ? (100*qb/qv).toFixed(1) + '%' : '—'],
+      ['Book within 1%', A && A.book ? (A.book.imb1 > 0.15 ? 'bids heavier' : A.book.imb1 < -0.15 ? 'asks heavier' : 'balanced') : '—']];
+    return '<div class="ck-strip">' + cells.map(function(c){ return '<div><span>' + esc(c[0]) + '</span><b>' + esc(c[1]) + '</b></div>'; }).join('') + '</div>'; }
+  function setup(P, sym){ if(!P || P.side === 'none') return '<div class="ck-setup none"><b>No setup for ' + esc(sym.replace('USDT', '')) + '</b><p>' + esc((P && P.why) || 'The Daily Plan has not read this coin yet (it plans BTC, ETH, SOL, BNB and XRP).') + '</p></div>';
+    return '<div class="ck-setup ' + P.side + '"><b>' + P.side.toUpperCase() + ' · ' + P.rr.toFixed(1) + ':1 · grade C (unproven, paper first)</b><table class="mr-tab"><tr><td>Entry</td><td>' + fmtP(P.entry) + ' <span class="hint">(' + esc(P.near) + ')</span></td></tr><tr><td>Stop</td><td>' + fmtP(P.stop) + '</td></tr><tr><td>Target</td><td>' + fmtP(P.target) + ' <span class="hint">(' + esc(P.far) + ')</span></td></tr></table><p>' + esc(P.why) + '. Size it on the Risk Guard page: 0.5% risk.</p></div>'; }
+  // ── load, render ──
+  async function load(){ var c = cfg(); if(state.busy) return; state.busy = true; state.msg = 'Reading ' + c.sym.replace('USDT', '') + '…'; render();
+    try{ var D = { sym:c.sym, tf:c.tf }; var h1 = await getJSON(FAPI + '/fapi/v1/klines?symbol=' + c.sym + '&interval=1h&limit=500');
+      D.kl = c.tf === '15m' ? await getJSON(FAPI + '/fapi/v1/klines?symbol=' + c.sym + '&interval=15m&limit=192') : h1;
+      try{ D.depth = await getJSON(FAPI + '/fapi/v1/depth?symbol=' + c.sym + '&limit=500'); }catch(e){} try{ D.prem = await getJSON(FAPI + '/fapi/v1/premiumIndex?symbol=' + c.sym); }catch(e){}
+      try{ D.oi = await getJSON(FAPI + '/futures/data/openInterestHist?symbol=' + c.sym + '&period=1h&limit=25'); }catch(e){} try{ D.ls = await getJSON(FAPI + '/futures/data/globalLongShortAccountRatio?symbol=' + c.sym + '&period=1h&limit=25'); }catch(e){}
+      var MR = window.OMEGA_MREAD; state.A = MR && MR._ ? MR._.analyze(c.sym, { kl:h1, depth:D.depth, prem:D.prem, oi:D.oi, ls:D.ls }) : null; state.D = D; state.at = Date.now();
+      state.msg = 'Read at ' + new Date().toISOString().slice(11, 16) + ' UTC.'; }
+    catch(e){ state.msg = 'Could not read live data (' + (e.message || e) + ').'; }
+    state.busy = false; render(); return state.msg; }
+  function planOf(sym){ try{ var r = JSON.parse(PRIME_LS.getItem('omega_dplan_v1') || 'null'); return r && r.plans ? r.plans[sym] : null; }catch(e){ return null; } }
+  function html(){ var c = cfg(), h = '<div class="dp-card"><h3 class="dp-h">Market cockpit</h3><div class="mr-tabs">' + markets().map(function(s){ return '<button type="button" data-cks="' + s + '" class="' + (s === c.sym ? 'on' : '') + '">' + esc(s.replace('USDT', '')) + '</button>'; }).join('') + '</div>' +
+      '<div class="mr-tabs">' + ['1h', '15m'].map(function(tf){ return '<button type="button" data-cktf="' + tf + '" class="' + (tf === c.tf ? 'on' : '') + '">' + (tf === '1h' ? '1 hour · 3 days' : '15 minutes · 18 hours') + '</button>'; }).join('') + '</div>';
+    if(state.D && state.D.sym === c.sym && state.D.tf === c.tf){ var P = planOf(c.sym); h += strip(state.D, state.A) + chart(state.D, state.A, P) + '<p class="hint">Gold band: US hours. Dashed red: liquidity above (buy stops); dashed green: below (sell stops); labels on the right. Book column: resting bids and asks. Gold dashed: today’s planned entry, with its stop zone (red) and target zone (green).</p>' + setup(P, c.sym); }
+    else h += '<p class="hint">' + (state.busy ? 'Reading…' : 'Not read yet.') + '</p>';
+    h += '<p class="hint" style="margin:6px 0 0;">' + esc(state.msg) + ' <button class="btn-outline" type="button" data-ck="load"' + (state.busy ? ' disabled' : '') + '>Read again</button></p></div>'; return h; }
+  function css(){ if(el('ckCss')) return; var st = document.createElement('style'); st.id = 'ckCss';
+    st.textContent = '.ck-svg{width:100%;height:auto;display:block;background:var(--bg);border:1px solid var(--border);border-radius:10px;margin:6px 0;}.ck-ax{font-size:7px;fill:var(--text-dim);}.ck-lab{font-size:7.5px;font-weight:600;fill:var(--text-dim);}.ck-up{fill:var(--bear);}.ck-dn{fill:var(--bull);}.ck-now{fill:var(--gold);}.ck-up2{fill:var(--bull);}.ck-dn2{fill:var(--bear);}' +
+      '.ck-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;margin:6px 0;}.ck-strip div{background:var(--panel2);border-radius:8px;padding:5px 7px;min-width:0;}.ck-strip span{display:block;font-size:10px;color:var(--text-dim);}.ck-strip b{font-size:13px;overflow-wrap:anywhere;}@media(min-width:700px){.ck-strip{grid-template-columns:repeat(5,1fr);}}' +
+      '.ck-setup{border-radius:10px;padding:10px;margin:6px 0;border:1px solid var(--border);}.ck-setup.long{border-color:var(--bull);}.ck-setup.short{border-color:var(--bear);}.ck-setup p{font-size:12.5px;margin:6px 0 0;}' +
+      '.mr-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 8px;}.mr-tabs button{border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:999px;padding:5px 10px;font-size:12.5px;cursor:pointer;}.mr-tabs button.on{border-color:var(--gold);color:var(--gold);}';
+    document.head.appendChild(st); }
+  function render(){ var host = el('cockpitBody'); if(!host) return; css(); host.innerHTML = html();
+    Array.prototype.forEach.call(host.querySelectorAll('[data-cks]'), function(b){ b.onclick = function(){ var c = cfg(); c.sym = b.getAttribute('data-cks'); setCfg(c); load(); }; });
+    Array.prototype.forEach.call(host.querySelectorAll('[data-cktf]'), function(b){ b.onclick = function(){ var c = cfg(); c.tf = b.getAttribute('data-cktf'); setCfg(c); load(); }; });
+    Array.prototype.forEach.call(host.querySelectorAll('[data-ck="load"]'), function(b){ b.onclick = function(){ load(); }; }); }
+  function onShow(){ render(); var c = cfg(); if(!state.D || state.D.sym !== c.sym || state.D.tf !== c.tf || Date.now() - state.at > 15*60e3) load(); }
+  var JOB = { id:'cockpit', lane:'live', prio:2, label:'Market cockpit: keeps the selected coin’s chart, levels and book fresh', what:'Every hour: re-reads the coin chosen in the cockpit (candles, volume, liquidity, order book, positioning) so the Analysis page is ready when opened.', every:60*60e3,
+    run: async function(){ return String(await load() || 'Read.'); } };
+  function register(){ var O = window.OMEGA_OPERATOR; if(!O || !O.jobs) return false; var J = O.jobs(); if(!J.some(function(x){ return x.id === JOB.id; })) J.push(JOB); return true; }
+  if(!register()){ var tries = 0, iv = setInterval(function(){ if(register() || ++tries > 20) clearInterval(iv); }, 3000); }
+  // the Analysis page is a core page, so it is watched directly: when it is on screen, the cockpit (and an unread Daily Plan) load
+  var seen = false, lastDP = null; setInterval(function(){ var host = el('cockpitBody'), vis = !!(host && host.offsetParent !== null), DP = window.OMEGA_DPLAN;
+    if(vis && !seen){ onShow(); if(DP && DP.state && !DP.state().S && !DP.state().busy) DP.onShow(); }
+    if(vis && DP && DP.state && DP.state().at !== lastDP){ lastDP = DP.state().at; if(state.D) render(); }   // a new Daily Plan → redraw its zones and setup card
+    seen = vis; }, 1500);
+  window.OMEGA_COCKPIT = { render:render, onShow:onShow, load:load, state:function(){ return state; }, JOB:JOB, _:{ bars:bars, spread:spread, depthBuckets:depthBuckets, chart:chart, strip:strip, setup:setup } };
+})();
+</script>
+<script>/* ═══ DATA CHECK AND BASELINES (v6.5.96) — is every feed live, do prices make sense, does the bot beat holding BTC, does it survive worse fills ═══
+   From the competitor audit, only what helps find an edge or keeps data honest:
+   1. Data check (Analysis page, top): every Autopilot job — fresh, overdue (more than twice its schedule plus 10 minutes),
+      failing, never run, or switched off — and, for every market Market Read has read, whether its newest finished candle
+      is current (older than 2 hours = the data stopped) and whether the futures mark price is within 0.5% of the spot index
+      (Binance's index is built from several spot exchanges). Problems are listed plainly and notified once every 6 hours.
+   2. Baseline (Risk Guard page): the Growth Bot's change against simply holding BTC over the same period (from the first
+      time this check saw the bot), and against cash. Signals that cannot beat holding add nothing.
+   3. Fill stress (Risk Guard page): the bot's result again with worse fills — +0.05% and +0.15% extra cost a side on every
+      trade. A result that only survives perfect fills is fragile. It reads records; it changes nothing. */
+(function(){
+  'use strict';
+  var H = 3600e3, KT = 'omega_truth_v1', state = { last:null };
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function load(k){ try{ return JSON.parse(PRIME_LS.getItem(k) || 'null'); }catch(e){ return null; } }
+  function save(k, v){ try{ PRIME_LS.setItem(k, JSON.stringify(v)); }catch(e){} }
+  function ago(ms){ if(ms == null) return 'never'; var m = Math.round(ms/60e3); return m < 60 ? m + ' min ago' : m < 2880 ? Math.round(m/60) + ' h ago' : Math.round(m/1440) + ' days ago'; }
+  // ── 1. data check (pure, given the Operator and the reads) ──
+  function jobsCheck(jobs, st, now){ return (jobs || []).map(function(j){ var s = (st || {})[j.id] || {}, every = typeof j.every === 'function' ? H : (+j.every || H), age = s.last ? now - s.last : null, on = s.enabled !== false;
+      var status = !on ? 'off' : !s.last ? 'never run' : /^Problem/.test(s.result || '') ? 'failing' : age > 2*every + 10*60e3 ? 'overdue' : 'fresh';
+      return { id:j.id, label:j.label || j.id, age:age, status:status, result:s.result || '' }; }); }
+  function readsCheck(reads, now){ var out = []; Object.keys(reads || {}).forEach(function(sym){ var A = reads[sym]; if(!A) return; if(A.err){ out.push({ sym:sym, ok:false, issues:['could not be read (' + A.err + ')'], prem:null, candleAge:null }); return; }
+      var candleAge = A.lastH != null ? now - (A.lastH + 1)*H : null, prem = A.pos && A.pos.premium != null ? A.pos.premium : null, issues = [];
+      if(candleAge != null && candleAge > 2*H) issues.push('newest finished candle is ' + ago(candleAge).replace(' ago', '') + ' old');
+      if(prem != null && Math.abs(prem) > 0.005) issues.push('futures price ' + (prem*100).toFixed(2) + '% from the spot index');
+      if(A.at && now - A.at > 3*H) issues.push('read ' + ago(now - A.at));
+      out.push({ sym:sym, ok:!issues.length, issues:issues, prem:prem, candleAge:candleAge }); }); return out; }
+  // ── 2 and 3. baseline and fill stress (pure, given the bot and BTC prices) ──
+  function baseline(bot, T, btcNow){ if(!bot || !T || !(T.btc0 > 0) || !(btcNow > 0)) return null; var botChg = bot.eq/T.eq0 - 1, btcChg = btcNow/T.btc0 - 1; return { since:T.t0, bot:botChg, btc:btcChg, beats:botChg > btcChg }; }
+  function stress(bot){ if(!bot || !bot.closed) return null; var c = bot.closed.filter(function(x){ return x.nt > 0; }), skipped = bot.closed.length - c.length, base = 0, cons = 0, hard = 0;
+    c.forEach(function(x){ base += x.pnl; cons += x.pnl - x.nt*0.0005*2; hard += x.pnl - x.nt*0.0015*2; });
+    var s0 = bot.start0 || 100, word = !c.length ? 'no trades yet' : base <= 0 ? 'losing even with base fills' : hard > 0 ? 'robust: still positive with much worse fills' : cons > 0 ? 'sensitive: survives slightly worse fills, not much worse' : 'fragile: only positive with perfect fills';
+    return { n:c.length, skipped:skipped, base:s0 + base, cons:s0 + cons, hard:s0 + hard, word:word }; }
+  function btcPrice(){ try{ var a = window.OMEGA_MREAD.state().reads.BTCUSDT; if(a && a.price && Date.now() - a.at < 6*H) return a.price; }catch(e){} try{ var d = window.OMEGA_DPLAN.state().reads.BTCUSDT; if(d && d.price && Date.now() - d.at < 6*H) return d.price; }catch(e){} return null; }
+  // ── run ──
+  function run(){ var now = Date.now(), O = window.OMEGA_OPERATOR, reads = {};
+    try{ var r1 = window.OMEGA_MREAD.state().reads || {}; Object.keys(r1).forEach(function(k){ reads[k] = r1[k]; }); }catch(e){}
+    try{ var r2 = window.OMEGA_DPLAN.state().reads || {}; Object.keys(r2).forEach(function(k){ if(!reads[k] || (r2[k] && r2[k].at > reads[k].at)) reads[k] = r2[k]; }); }catch(e){}
+    var J = O && O.jobs ? jobsCheck(O.jobs(), (O.state() || {}).jobs, now) : [], R = readsCheck(reads, now), bot = load('omega_rguard_bot_v1'), T = load(KT) || {}, btc = btcPrice();
+    if(bot && btc && !(T.btc0 > 0)){ T = { t0:now, btc0:btc, eq0:bot.eq }; save(KT, T); }
+    var bad = J.filter(function(j){ return j.status === 'overdue' || j.status === 'failing'; }), badR = R.filter(function(r){ return !r.ok; });
+    state.last = { at:now, jobs:J, reads:R, bad:bad, badR:badR, base:baseline(bot, T, btc), stress:stress(bot) };
+    var key = bad.map(function(j){ return j.id; }).concat(badR.map(function(r){ return r.sym; })).join(',');
+    if(key && (T.told !== key || now - (T.toldAt || 0) > 6*H)){ T.told = key; T.toldAt = now; save(KT, T); try{ if(typeof Notification !== 'undefined' && Notification.permission === 'granted') new Notification('OMEGA data check: ' + (bad.length + badR.length) + ' problem' + (bad.length + badR.length === 1 ? '' : 's'), { body:'Open the Analysis page to see which feed is late or wrong.' }); }catch(e){} }
+    render(); return state.last; }
+  // ── views ──
+  function checkHtml(){ var L = state.last; if(!L) return ''; var ok = !L.bad.length && !L.badR.length, h = '<div class="dp-card"><h3 class="dp-h">Data check</h3>';
+    h += '<p class="dp-p ' + (ok ? 'up' : 'dn') + '"><b>' + (ok ? 'Everything checked is live and consistent.' : (L.bad.length + L.badR.length) + ' problem' + (L.bad.length + L.badR.length === 1 ? '' : 's') + ' found.') + '</b> ' + L.jobs.filter(function(j){ return j.status === 'fresh'; }).length + ' of ' + L.jobs.length + ' Autopilot jobs fresh; ' + L.reads.filter(function(r){ return r.ok; }).length + ' of ' + L.reads.length + ' markets read with current candles and sane prices.</p>';
+    if(L.bad.length) h += '<table class="mr-tab"><tr><th>Late or failing</th><th>Last run</th></tr>' + L.bad.map(function(j){ return '<tr><td>' + esc(j.label) + '<br><span class="hint">' + esc(j.result.slice(0, 120)) + '</span></td><td class="dn">' + esc(j.status) + ', ' + ago(j.age) + '</td></tr>'; }).join('') + '</table>';
+    if(L.badR.length) h += '<table class="mr-tab"><tr><th>Market</th><th>Problem</th></tr>' + L.badR.map(function(r){ return '<tr><td>' + esc(r.sym.replace('USDT', '')) + '</td><td class="dn">' + esc(r.issues.join('; ')) + '</td></tr>'; }).join('') + '</table>';
+    var never = L.jobs.filter(function(j){ return j.status === 'never run'; }).length, off = L.jobs.filter(function(j){ return j.status === 'off'; }).length;
+    if(never || off) h += '<p class="hint">' + (never ? never + ' job' + (never === 1 ? ' has' : 's have') + ' not run yet (normal right after opening). ' : '') + (off ? off + ' switched off on the Autopilot page.' : '') + '</p>';
+    h += '<p class="hint">Checked ' + ago(Date.now() - L.at) + '. A candle older than 2 hours means a feed stopped; a futures price more than 0.5% from the spot index means something is off.</p></div>'; return h; }
+  function baseHtml(){ var L = state.last; if(!L) return ''; var B = L.base, S = L.stress, pc = function(x){ return (x >= 0 ? '+' : '') + (x*100).toFixed(2) + '%'; }, h = '<div class="dp-card"><h3 class="dp-h">Is the bot worth it?</h3>';
+    h += B ? '<table class="mr-tab"><tr><td>Growth Bot since ' + new Date(B.since).toISOString().slice(0, 10) + '</td><td><b class="' + (B.bot >= 0 ? 'up' : 'dn') + '">' + pc(B.bot) + '</b></td></tr><tr><td>Holding BTC over the same time</td><td>' + pc(B.btc) + '</td></tr><tr><td>Cash</td><td>0.00%</td></tr></table><p class="dp-p">' + (B.beats ? 'So far the signals beat simply holding BTC.' : 'So far simply holding BTC did better: the signals have not yet added anything.') + ' Early weeks prove nothing either way.</p>' : '<p class="hint">The baseline starts the first time BTC has been read while the bot exists.</p>';
+    h += S && S.n ? '<table class="mr-tab"><tr><th>Fills</th><th>Bot ends at</th></tr><tr><td>As recorded</td><td>' + S.base.toFixed(2) + '</td></tr><tr><td>+0.05% a side worse</td><td>' + S.cons.toFixed(2) + '</td></tr><tr><td>+0.15% a side worse</td><td>' + S.hard.toFixed(2) + '</td></tr></table><p class="dp-p"><b>' + esc(S.word) + '.</b></p>' : '<p class="hint">Fill stress: no closed bot trades to test yet.</p>';
+    return h + '</div>'; }
+  function render(){ var a = el('truthBody'), b = el('truthRgBody'); if(a) a.innerHTML = checkHtml(); if(b) b.innerHTML = baseHtml(); }
+  var JOB = { id:'truth', lane:'live', prio:1, label:'Data check: every feed live, prices sane; the bot against holding BTC and worse fills', what:'Every 30 minutes: finds late or failing Autopilot jobs, stale candles and futures prices far from the spot index (notifies once every 6 hours), and compares the Growth Bot with holding BTC and with worse fills.', every:30*60e3,
+    run: async function(){ var L = run(); return (L.bad.length + L.badR.length ? (L.bad.length + L.badR.length) + ' problem(s): ' + L.bad.map(function(j){ return j.id + ' ' + j.status; }).concat(L.badR.map(function(r){ return r.sym + ' ' + r.issues[0]; })).join('; ') : 'All checked feeds live and consistent') + '.'; } };
+  function register(){ var O = window.OMEGA_OPERATOR; if(!O || !O.jobs) return false; var J = O.jobs(); if(!J.some(function(x){ return x.id === JOB.id; })) J.push(JOB); return true; }
+  if(!register()){ var tries = 0, iv = setInterval(function(){ if(register() || ++tries > 20) clearInterval(iv); }, 3000); }
+  var seen = {}; setInterval(function(){ ['truthBody', 'truthRgBody'].forEach(function(id){ var h = el(id), vis = !!(h && h.offsetParent !== null); if(vis && !seen[id]) run(); seen[id] = vis; }); }, 1500);
+  window.OMEGA_TRUTH = { run:run, render:render, JOB:JOB, state:function(){ return state; }, _:{ jobsCheck:jobsCheck, readsCheck:readsCheck, baseline:baseline, stress:stress } };
+})();
+</script>
+<script>/* ═══ EVENTS AND MONTHLY REVIEW (v6.5.94) — the releases ahead where you decide trades, and a month-by-month review ═══
+   1. Events ahead: reads the Market Clock's official calendar (US CPI from the BLS schedule, Fed decisions from the Federal
+      Reserve calendar) and shows the next ones under Market now (Analysis and Market Read). From 2 hours before to 1 hour
+      after a release it warns not to open new trades; the pre-trade check on the Risk Guard says the same. Advice only: the
+      Growth Bot's rules stay as plan E17 fixed them.
+   2. Monthly review (Risk Guard page): per calendar month, the Growth Bot (trades, result, end equity), the Daily Plan's
+      forward record (trades, average and total R), your own logged trades (result, rule breaks and what they cost).
+      What earned, what failed and what to keep — from the records, never edited by hand. OMEGA places no orders. */
+(function(){
+  'use strict';
+  var H = 3600e3, BEFORE = 2*H, AFTER = H;
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function load(k, d){ try{ var v = JSON.parse(PRIME_LS.getItem(k) || 'null'); return v && typeof v === 'object' ? v : d; }catch(e){ return d; } }
+  function usd(x){ return (x < 0 ? '−' : '') + '$' + Math.abs(x).toFixed(2); }
+  // ── events (pure, given the calendar) ──
+  function events(D){ D = D || (window.OMEGA_MARKETCLOCK && window.OMEGA_MARKETCLOCK.DATA) || {}; var out = [];
+    (D.cpi || []).forEach(function(x){ var t = Date.parse(x); if(t) out.push({ kind:'US inflation (CPI)', at:t }); });
+    (D.fomc || []).forEach(function(x){ var t = Date.parse(x); if(t) out.push({ kind:'Fed decision (FOMC)', at:t }); });
+    return out.sort(function(a, b){ return a.at - b.at; }); }
+  function nextEvents(nowMs, D, n){ nowMs = nowMs || Date.now(); return events(D).filter(function(e){ return e.at + AFTER > nowMs; }).slice(0, n || 3); }
+  function eventRisk(nowMs, D){ nowMs = nowMs || Date.now(); var e = events(D).filter(function(x){ return nowMs >= x.at - BEFORE && nowMs <= x.at + AFTER; })[0];
+    return e ? { active:true, ev:e, mins:Math.round((e.at - nowMs)/60e3) } : { active:false }; }
+  function when(ms, nowMs){ var d = ms - (nowMs || Date.now()), a = Math.abs(d), s = a < H ? Math.round(a/60e3) + ' min' : a < 48*H ? Math.round(a/H) + ' h' : Math.round(a/864e5) + ' days';
+    return d >= 0 ? 'in ' + s : s + ' ago'; }
+  function riskText(R){ return R.active ? 'Event risk: ' + R.ev.kind + ' ' + (R.mins >= 0 ? 'in ' + R.mins + ' min' : (-R.mins) + ' min ago') + '. Do not open new trades from 2 hours before to 1 hour after a release: spreads widen and stops get run.' : ''; }
+  function eventsHtml(nowMs){ nowMs = nowMs || Date.now(); var N = nextEvents(nowMs), R = eventRisk(nowMs);
+    if(!N.length) return '';
+    return '<div class="dp-card ev-card"><h3 class="dp-h">Events ahead</h3>' + (R.active ? '<p class="ev-warn">' + esc(riskText(R)) + '</p>' : '') +
+      '<table class="mr-tab">' + N.map(function(e){ var d = new Date(e.at), tob = new Date(e.at - 4*H); return '<tr><td>' + esc(e.kind) + '</td><td>' + d.toISOString().slice(5, 10) + ' ' + d.toISOString().slice(11, 16) + ' UTC · ' + tob.toISOString().slice(11, 16) + ' Tobago</td><td>' + when(e.at, nowMs) + '</td></tr>'; }).join('') + '</table>' +
+      '<p class="hint">From the Market Clock’s official calendar (BLS for CPI, the Federal Reserve for FOMC). These releases move every market at once; the safest trades are opened outside the window from 2 hours before to 1 hour after.</p></div>'; }
+  // ── the monthly review (pure, given the records) ──
+  function month(ms){ return new Date(ms).toISOString().slice(0, 7); }
+  function review(bot, plan, mine){ var M = {};
+    function row(m){ return M[m] || (M[m] = { bot:{ n:0, pnl:0, eq:null }, plan:{ n:0, R:0 }, mine:{ n:0, pnl:0, breaks:0, breakPnl:0 } }); }
+    ((bot && bot.closed) || []).slice().sort(function(a, b){ return a.at - b.at; }).forEach(function(c){ var r = row(month(c.at)); r.bot.n++; r.bot.pnl += c.pnl; });
+    if(bot && bot.closed){ var eq = bot.start0 || 100; bot.closed.slice().sort(function(a, b){ return a.at - b.at; }).forEach(function(c){ eq += c.pnl; row(month(c.at)).bot.eq = eq; }); }
+    ((plan && plan.trades) || []).forEach(function(t){ var r = row(month(t.h*H)); r.plan.n++; r.plan.R += t.R; });
+    ((mine && mine.closed) || []).forEach(function(c){ var r = row(month(c.at)); r.mine.n++; r.mine.pnl += c.pnl; if(c.breach){ r.mine.breaks++; r.mine.breakPnl += c.pnl; } });
+    return Object.keys(M).sort().reverse().map(function(m){ return Object.assign({ month:m }, M[m]); }); }
+  function verdictLine(r){ var parts = [];
+    if(r.bot.n) parts.push('the bot ' + (r.bot.pnl >= 0 ? 'earned ' : 'lost ') + usd(Math.abs(r.bot.pnl)));
+    if(r.plan.n) parts.push('the Daily Plan averaged ' + (r.plan.R/r.plan.n >= 0 ? '+' : '') + (r.plan.R/r.plan.n).toFixed(2) + 'R');
+    if(r.mine.breaks) parts.push('your rule breaks ' + (r.mine.breakPnl < 0 ? 'cost ' + usd(-r.mine.breakPnl) : 'made ' + usd(r.mine.breakPnl) + ' (luck, not a reason to repeat them)'));
+    else if(r.mine.n) parts.push('you kept every rule');
+    return parts.length ? parts.join('; ') + '.' : 'No closed trades.'; }
+  function reviewHtml(){ var rows = review(load('omega_rguard_bot_v1', null), load('omega_dplan_v1', null), load('omega_rguard_mine_v1', null)), h = '<div class="dp-card"><h3 class="dp-h">Monthly review</h3>';
+    if(!rows.length) return h + '<p class="hint">Nothing to review yet: the first month appears once trades close. Each month shows what earned, what failed and whether the rules were kept — straight from the records.</p></div>';
+    h += '<table class="mr-tab"><tr><th>Month</th><th>Growth Bot</th><th>Daily Plan</th><th>Your trades</th></tr>' + rows.map(function(r){
+      return '<tr><td><b>' + r.month + '</b></td><td>' + (r.bot.n ? r.bot.n + ' · ' + usd(r.bot.pnl) + (r.bot.eq != null ? '<br><span class="hint">ends ' + r.bot.eq.toFixed(2) + '</span>' : '') : '—') + '</td><td>' + (r.plan.n ? r.plan.n + ' · ' + (r.plan.R >= 0 ? '+' : '') + r.plan.R.toFixed(1) + 'R' : '—') + '</td><td>' + (r.mine.n ? r.mine.n + ' · ' + usd(r.mine.pnl) + (r.mine.breaks ? '<br><span class="dn">' + r.mine.breaks + ' rule break' + (r.mine.breaks === 1 ? '' : 's') + '</span>' : '') : '—') + '</td></tr><tr><td colspan="4" class="hint">' + esc(verdictLine(r)) + '</td></tr>'; }).join('') + '</table>';
+    return h + '<p class="hint">Keep what earns over months, not days; retire what fails its fixed test; never fix a rule break by changing the rule.</p></div>'; }
+  function css(){ if(el('evCss')) return; var st = document.createElement('style'); st.id = 'evCss'; st.textContent = '.ev-warn{background:rgba(255,77,94,.14);color:var(--bear);border-radius:8px;padding:8px 10px;font-size:13px;font-weight:600;margin:0 0 8px;}'; document.head.appendChild(st); }
+  function render(){ css(); ['evAnaBody', 'evBody'].forEach(function(id){ var h = el(id); if(h) h.innerHTML = eventsHtml(); }); var r = el('reviewBody'); if(r) r.innerHTML = reviewHtml(); }
+  var t = 0, iv = setInterval(function(){ if(el('evAnaBody') || el('evBody') || el('reviewBody')){ clearInterval(iv); render(); setInterval(render, 60e3); } else if(++t > 60) clearInterval(iv); }, 1000);
+  window.OMEGA_REVIEW = { render:render, eventRisk:eventRisk, riskText:riskText, nextEvents:nextEvents, _:{ events:events, review:review, verdictLine:verdictLine, eventsHtml:eventsHtml, reviewHtml:reviewHtml } };
+})();
+</script>
+<script>/* ═══ PRIME CLIMAX WATCH — round 16's frozen rule on the 40 most-traded Binance USDT perpetuals ═══
+   At an hour's close a coin fell at least 3 of its own hourly standard deviations (σ of the 168 hours before, at least 120),
+   on at least 3× its median volume of those hours, and closed in the top 40% of the hour's range; listed at least 30 days.
+   Buy the next hour's open, close 12 hours later; 0.10% a side. The same rule as the original build's climax watch (which
+   scans every coin and counts funding); here the 40 most-traded coins, without funding, so it is light on a phone.
+   Grade A: the only direction rule that passed a fair test (final test on 324 untouched coins, 19 Oct 2026). Paper only. */
+(function(){
+  'use strict';
+  var H = 3600e3, FAPI = 'https://fapi.binance.com', KEY = 'prime_climax_v1', XKEY = 'prime_xinfo_v1', N = 40;
+  var RULE = { k:3, vk:3, lk:0.6, hold:12, cost:0.001, sigN:168, sigMin:120, vN:168, vMin:120, ageH:720 };
+  var STABLE = { USDCUSDT:1, FDUSDUSDT:1, TUSDUSDT:1, BUSDUSDT:1, USDPUSDT:1, DAIUSDT:1, EURUSDT:1 };
+  var S = load(); S.busy = false;
+  function load(){ try{ var v = JSON.parse(window.PRIME_LS.getItem(KEY) || 'null'); if(v && v.trades) return v; }catch(e){} return { trades:[], lastH:null, scans:0, msg:'' }; }
+  function save(){ var c = Object.assign({}, S); delete c.busy; try{ window.PRIME_LS.setItem(KEY, JSON.stringify(c)); }catch(e){} }
+  async function getJSON(u){ var r = await fetch(u); if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }
+  function sleep(ms){ return new Promise(function(r){ setTimeout(r, ms); }); }
+  // ── the rule (pure) ──
+  function rowsOf(kl){ return (kl || []).map(function(k){ return { h:Math.floor(+k[0]/H), o:+k[1], hi:+k[2], lo:+k[3], c:+k[4], v:+k[5] }; }).filter(function(r){ return r.c > 0 && r.hi >= r.lo; }); }
+  function check(rows, i, onboardMs){ if(i < 1) return null; var r = rows[i], p = rows[i-1]; if(!(r.c > 0 && p.c > 0)) return null;
+    if(onboardMs && r.h*H - onboardMs < RULE.ageH*H) return null;
+    var xs = [], vs = []; for(var j = Math.max(1, i - RULE.sigN); j < i; j++){ if(rows[j].c > 0 && rows[j-1].c > 0) xs.push(Math.log(rows[j].c/rows[j-1].c)); }
+    for(j = Math.max(0, i - RULE.vN); j < i; j++) vs.push(rows[j].v);
+    if(xs.length < RULE.sigMin || vs.length < RULE.vMin) return null;
+    var m = xs.reduce(function(a, b){ return a + b; }, 0)/xs.length, sd = Math.sqrt(xs.reduce(function(a, b){ return a + (b - m)*(b - m); }, 0)/(xs.length - 1));
+    vs.sort(function(a, b){ return a - b; }); var med = vs.length % 2 ? vs[(vs.length - 1)/2] : (vs[vs.length/2 - 1] + vs[vs.length/2])/2;
+    var z = sd > 0 ? Math.log(r.c/p.c)/sd : 0, vr = med > 0 ? r.v/med : 0, loc = r.hi > r.lo ? (r.c - r.lo)/(r.hi - r.lo) : 0;
+    return { z:z, vr:vr, loc:loc, fires:z <= -RULE.k && vr >= RULE.vk && loc >= RULE.lk }; }
+  function settle(tr, rows){ var by = {}; rows.forEach(function(r){ by[r.h] = r; }); var eb = by[tr.e], xb = by[tr.e + RULE.hold - 1];
+    if(eb && tr.entry == null) tr.entry = eb.o;
+    if(eb && xb){ tr.exit = xb.c; tr.net = Math.round((tr.exit/tr.entry - 1 - 2*RULE.cost)*1e5)/1e5; tr.status = 'closed'; } return tr; }
+  // ── the scan ──
+  async function universe(){ var t = await getJSON(FAPI + '/fapi/v1/ticker/24hr'); return (t || []).filter(function(x){ return /USDT$/.test(x.symbol) && !STABLE[x.symbol] && +x.quoteVolume > 0; }).sort(function(a, b){ return +b.quoteVolume - +a.quoteVolume; }).slice(0, N).map(function(x){ return x.symbol; }); }
+  async function onboard(){ var X = null; try{ X = JSON.parse(window.PRIME_LS.getItem(XKEY) || 'null'); }catch(e){} if(X && Date.now() - X.at < 24*H) return X.o;
+    try{ var info = await getJSON(FAPI + '/fapi/v1/exchangeInfo'), o = {}; (info.symbols || []).forEach(function(s){ if(s.onboardDate) o[s.symbol] = +s.onboardDate; }); window.PRIME_LS.setItem(XKEY, JSON.stringify({ at:Date.now(), o:o })); return o; }catch(e){ return (X && X.o) || {}; } }
+  async function scan(){ if(S.busy) return 'busy'; var nowH = Math.floor(Date.now()/H), lastClosed = nowH - 1;
+    if(S.lastH != null && S.lastH >= lastClosed && !S.trades.some(function(t){ return t.status === 'open' && nowH >= t.e + RULE.hold; })) return 'Up to date.';
+    if(Date.now() % H < 150e3) return { skip:true, text:'waiting for the hour’s candles to settle', retryIn:H - (Date.now() % H) > 0 ? 160e3 - (Date.now() % H) + 5e3 : 60e3 };
+    S.busy = true; S.msg = 'Scanning…'; render();
+    try{ var syms = await universe(), ob = await onboard(), fired = 0, from = S.lastH == null ? lastClosed : Math.max(S.lastH + 1, lastClosed - 23);
+      var need = {}; syms.forEach(function(s){ need[s] = 1; }); S.trades.forEach(function(t){ if(t.status === 'open') need[t.sym] = 1; });
+      var list = Object.keys(need);
+      for(var i = 0; i < list.length; i++){ var sym = list[i], kl;
+        try{ kl = await getJSON(FAPI + '/fapi/v1/klines?symbol=' + sym + '&interval=1h&limit=200'); }catch(e){ continue; }
+        var rows = rowsOf(kl).filter(function(r){ return r.h < nowH; });
+        if(syms.indexOf(sym) >= 0){ for(var k = 0; k < rows.length; k++){ var h = rows[k].h; if(h < from || h > lastClosed) continue;
+            if(S.trades.some(function(t){ return t.sym === sym && t.t === h; })) continue; var c = check(rows, k, ob[sym]);
+            if(c && c.fires){ S.trades.push({ sym:sym, t:h, e:h + 1, z:Math.round(c.z*100)/100, vr:Math.round(c.vr*10)/10, loc:Math.round(c.loc*100)/100, status:'open' }); fired++; notify(sym, c); } } }
+        S.trades.forEach(function(t){ if(t.sym === sym && t.status === 'open') settle(t, rows); });
+        await sleep(120); }
+      S.trades = S.trades.slice(-500); S.lastH = lastClosed; S.scans++; S.msg = 'Scanned ' + syms.length + ' coins to ' + new Date((lastClosed + 1)*H).toISOString().slice(11, 16) + ' UTC: ' + fired + ' new signal' + (fired === 1 ? '' : 's') + '.'; }
+    catch(e){ S.msg = 'Could not scan (' + (e.message || e) + ').'; S.busy = false; save(); render(); return { error:S.msg }; }
+    S.busy = false; save(); render(); return S.msg; }
+  function notify(sym, c){ try{ if(typeof Notification !== 'undefined' && Notification.permission === 'granted') new Notification('OMEGA Prime · Grade A climax: ' + sym.replace('USDT', ''), { body:'Fell ' + Math.abs(c.z).toFixed(1) + 'σ on ' + c.vr.toFixed(1) + '× volume and closed strong. Rule: buy this hour’s open, close in 12 hours. Paper first; size it at 0.5% risk.' }); }catch(e){} }
+  function stats(){ var c = S.trades.filter(function(t){ return t.status === 'closed'; }), n = c.length, w = c.filter(function(t){ return t.net > 0; }).length, sum = c.reduce(function(a, t){ return a + t.net; }, 0); return { n:n, wins:w, avg:n ? sum/n : null }; }
+  function html(){ var st = stats(), open = S.trades.filter(function(t){ return t.status === 'open'; }), h = '<div class="dp-card"><h3 class="dp-h">Climax watch <span class="dp-grade" style="color:var(--bull)">Grade A · passed a fair test</span></h3>';
+    h += '<p class="dp-p">A coin that falls 3 of its own hourly standard deviations on 3× normal volume and closes in the top 40% of the hour: forced sellers met by buyers. Buy the next open, close 12 hours later. Rare: a few times a month across the market.</p>';
+    h += open.length ? '<table class="mr-tab"><tr><th>Now</th><th>Signal (UTC)</th><th>Entry</th><th>Closes</th></tr>' + open.map(function(t){ return '<tr><td><b>' + t.sym.replace('USDT', '') + '</b> <span class="hint">' + t.z + 'σ, ' + t.vr + '× vol</span></td><td>' + new Date((t.t + 1)*H).toISOString().slice(5, 16).replace('T', ' ') + '</td><td>' + (t.entry != null ? t.entry : 'next open') + '</td><td>' + new Date((t.e + RULE.hold)*H).toISOString().slice(11, 16) + ' UTC</td></tr>'; }).join('') + '</table>' : '<p class="hint">No open climax trade.</p>';
+    h += '<p class="dp-rec"><b>Forward record (this app):</b> ' + (st.n ? st.n + ' closed, ' + Math.round(100*st.wins/st.n) + '% winners, average ' + (st.avg >= 0 ? '+' : '') + (st.avg*100).toFixed(2) + '% after costs.' : 'no closed trades yet.') + '</p><p class="hint">' + S.msg + ' The original build runs the same rule on every coin with funding counted; this one watches the 40 most-traded coins.</p></div>';
+    return h; }
+  function render(){ var b = document.getElementById('climaxBody'); if(b) b.innerHTML = html(); }
+  var JOB = { id:'climax', lane:'live', prio:3, label:'Climax watch (grade A): the 40 most-traded coins, every hour', what:'Checks each closed hour for a forced-selling flush that closes strong, and follows every signal 12 hours to its result.', every:15*60e3, run:scan };
+  window.OMEGA_OPERATOR.jobs().push(JOB);
+  window.OMEGA_CLIMAX = { state:function(){ return S; }, scan:scan, render:render, RULE:RULE, _:{ check:check, settle:settle, rowsOf:rowsOf, stats:stats } };
+})();
+</script>
+<script>/* ═══ PRIME UI — Today, Evidence, Settings, navigation ═══ */
+(function(){
+  'use strict';
+  var H = 3600e3, PAGES = [['today', 'Today', 'M3 12h4l3-8 4 16 3-8h4'], ['chart', 'Chart', 'M4 19V5M4 19h16M8 15l3-4 3 2 5-7'], ['signals', 'Signals', 'M12 3v18M5 9l7-6 7 6'], ['risk', 'Risk', 'M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z'], ['evidence', 'Evidence', 'M6 3h9l3 3v15H6zM9 11h6M9 15h6']];
+  var cur = 'today', wake = null;
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function lsj(k){ try{ return JSON.parse(window.PRIME_LS.getItem(k) || 'null'); }catch(e){ return null; } }
+  function fmtP(x){ if(x == null || !isFinite(x)) return '—'; var a = Math.abs(x); return a >= 1000 ? x.toLocaleString('en-US', { maximumFractionDigits:0 }) : a >= 10 ? x.toFixed(2) : a >= 1 ? x.toFixed(3) : x.toPrecision(4); }
+  function pct(x, d){ return x == null || !isFinite(x) ? '—' : (x > 0 ? '+' : '') + (x*100).toFixed(d == null ? 1 : d) + '%'; }
+  function cfg(){ return lsj('prime_cfg_v1') || { wake:false }; } function setCfg(c){ window.PRIME_LS.setItem('prime_cfg_v1', JSON.stringify(c)); }
+  // ── the verdict: what to do now (pure, given the state) ──
+  function verdict(ctx){ var ER = ctx.eventRisk, A = ctx.climaxOpen, plans = ctx.plans, L = ctx.limits;
+    if(L && L.blocked) return { cls:'wait', k:'Today', v:'No new trades', w:'The risk rules say stop: ' + L.blocked + '. Protecting the account is the job today.' };
+    if(ER && ER.active) return { cls:'wait', k:'Hold off', v:'Wait for the release', w:ER.ev.kind + (ER.mins >= 0 ? ' in ' + ER.mins + ' min' : ' ' + (-ER.mins) + ' min ago') + '. No new trades from 2 hours before to 1 hour after: spreads widen and stops get run.' };
+    if(A && A.length){ var t = A[0]; return { cls:'a', k:'Grade A signal', v:'Climax buy: ' + t.sym.replace('USDT', ''), w:'Fell ' + Math.abs(t.z) + 'σ on ' + t.vr + '× volume and closed strong. The rule buys this hour’s open and closes 12 hours later. Size it at 0.5% risk.' }; }
+    var live = (plans || []).filter(function(p){ return p.side === 'long' || p.side === 'short'; });
+    if(live.length){ var p = live.sort(function(a, b){ return b.rr - a.rr; })[0]; return { cls:p.side, k:'Grade C plan · unproven · paper first', v:p.sym.replace('USDT', '') + ' ' + p.side.toUpperCase() + ' at ' + fmtP(p.entry), w:'Stop ' + fmtP(p.stop) + ', target ' + fmtP(p.target) + ' (' + p.rr.toFixed(1) + ':1). ' + p.why + '. Wait for price to come to the entry; never chase.' + (live.length > 1 ? ' ' + (live.length - 1) + ' more on the Signals page.' : '') }; }
+    return { cls:'wait', k:'Today', v:'Stand aside', w:'No setup meets the rules right now. Standing aside is a position: it keeps the account ready for a real one.' }; }
+  function dial(S){ var order = ['DEPRESSED', 'CORRECTING', 'NORMAL', 'CONSOLIDATING', 'BOOMING'], lab = ['Depressed', 'Correcting', 'Normal', 'Quiet', 'Booming'], col = ['#b3372f', '#c27b2b', '#8a8577', '#6f7f8f', '#1d7a4b'], i = S ? Math.max(0, order.indexOf(S.state)) : 2, s = '';
+    for(var k = 0; k < 5; k++){ var a0 = Math.PI*(1 - k/5), a1 = Math.PI*(1 - (k + 1)/5), r = 120, cx = 170, cy = 158, x0 = cx + r*Math.cos(a0), y0 = cy - r*Math.sin(a0), x1 = cx + r*Math.cos(a1), y1 = cy - r*Math.sin(a1), am = (a0 + a1)/2;
+      s += '<path d="M' + x0.toFixed(1) + ' ' + y0.toFixed(1) + ' A' + r + ' ' + r + ' 0 0 1 ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + '" stroke="' + col[k] + '" stroke-width="' + (k === i ? 18 : 10) + '" fill="none" opacity="' + (k === i ? 1 : 0.35) + '"/>' +
+        '<text x="' + (cx + (r + 22)*Math.cos(am)).toFixed(1) + '" y="' + (cy - (r + 22)*Math.sin(am) + 4).toFixed(1) + '" text-anchor="middle" style="font:600 11px system-ui;fill:' + (k === i ? col[k] : '#8a8577') + '">' + lab[k] + '</text>'; }
+    var an = Math.PI*(1 - (i + 0.5)/5); s += '<line x1="170" y1="158" x2="' + (170 + 92*Math.cos(an)).toFixed(1) + '" y2="' + (158 - 92*Math.sin(an)).toFixed(1) + '" stroke="#1c2230" stroke-width="3" stroke-linecap="round"/><circle cx="170" cy="158" r="7" fill="#1c2230"/>';
+    return '<svg class="dial" viewBox="0 0 340 176" role="img" aria-label="Market state">' + s + '</svg>'; }
+  function today(){ var DP = window.OMEGA_DPLAN, S = DP ? DP.state().S : null, reads = DP ? DP.state().reads : {}, rec = lsj('omega_dplan_v1') || { plans:{} }, now = Date.now();
+    var plans = Object.keys(rec.plans || {}).map(function(s){ return Object.assign({ sym:s }, rec.plans[s]); });
+    var C = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX.state().trades.filter(function(t){ return t.status === 'open'; }) : [];
+    var ER = window.OMEGA_REVIEW ? window.OMEGA_REVIEW.eventRisk(now) : null, RG = window.OMEGA_RGUARD, M = lsj('omega_rguard_mine_v1'), L = RG && M ? RG._.limits(M, now) : (RG ? RG._.limits(RG._.newAcct(100), now) : null);
+    var V = verdict({ eventRisk:ER, climaxOpen:C, plans:plans, limits:L }), T = window.OMEGA_TRUTH ? window.OMEGA_TRUTH.state().last : null, h = '';
+    h += '<div class="verdict ' + V.cls + '"><div class="k">' + esc(V.k) + '</div><div class="v">' + esc(V.v) + '</div><div class="w">' + esc(V.w) + '</div><div class="chips"><span>Risk ' + (L ? (L.risk*100).toFixed(1) : '0.5') + '% a trade</span><span>' + (L ? L.open : 0) + ' of 2 open</span><span>' + (L && L.dayLoss > 0 ? 'today −' + (L.dayLoss*100).toFixed(1) + '%' : 'no loss today') + '</span>' + (T ? '<span>' + (T.bad.length + T.badR.length ? (T.bad.length + T.badR.length) + ' data problem(s)' : 'data live') + '</span>' : '') + '</div></div>';
+    h += '<div class="grid2"><div class="card"><h3 class="dp-h">The market</h3>' + dial(S) + '<p class="dp-p" style="text-align:center;margin-top:0">' + (S && S.state !== 'UNKNOWN' ? (S.uptrend ? 'Uptrend' : 'Downtrend') + (S.falling ? ' · <b class="dn">falling this week</b>' : '') + ' · top-5 index ' + pct(S.r7) + ' in 7 days, ' + pct(S.r30) + ' in 30' : 'Reading the market…') + '</p></div>';
+    h += '<div class="card"><h3 class="dp-h">The five biggest coins</h3><div class="coins">' + ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT'].map(function(s){ var A = reads[s], P = (rec.plans || {})[s] || {};
+        return '<div class="coin"><b>' + s.replace('USDT', '') + '</b><div class="p">' + (A && !A.err ? fmtP(A.price) : '—') + '</div><div class="p ' + (A && A.chg24 >= 0 ? 'up' : 'dn') + '">' + (A && !A.err ? pct(A.chg24) : '') + '</div><div class="s ' + (P.side === 'long' ? 'up' : P.side === 'short' ? 'dn' : '') + '">' + (P.side === 'long' ? 'LONG' : P.side === 'short' ? 'SHORT' : 'aside') + '</div></div>'; }).join('') + '</div><p class="hint" style="margin-top:8px">Side from the market state and each coin’s trend. Open <b>Chart</b> to see a coin’s levels and plan.</p></div></div>';
+    return h; }
+  // ── evidence ──
+  var LEDGER = [['pass', 'Climax reversal (round 16)', 'Passed design, validation and a final test on 324 untouched coins (z 2.35). Rare; about +1.6% a trade before costs.'],
+    ['pass', 'Funding harvest', 'Passed, but its income has faded since 2025. Not used here.'],
+    ['fail', 'Breakouts, momentum, reversals, pullbacks (rounds 1–18, 600 known strategies)', 'Failed on data they had not seen.'],
+    ['fail', 'Your 5-unit method, pyramiding, scaling out (E1, management search)', 'Management changed how trades felt, not whether they earned.'],
+    ['fail', 'Gold and six markets, both directions (E2, E3, E5, E7)', 'No rule passed; timing patterns found but not confirmed.'],
+    ['fail', 'Market states and capitulation bounces (E8, E9, E10)', 'No state predicted the next week; the bounce failed on other coins (LUNA, May 2022).'],
+    ['fail', 'Absorption on BTC and ETH (E11)', 'Right direction, smaller than fees.'],
+    ['fail', 'The top 5 coins one by one, eleven rules each (E14)', 'None passed. US hours carry the most trading and half the big drops.'],
+    ['run', 'Stop-outs (E12)', 'Mostly noise; stops at obvious levels are swept slightly more (about 1 in 100).'],
+    ['run', 'Session timing forward record (E6)', 'Judged once after 26 weeks (April 2027), in the original build.'],
+    ['run', 'Market Watch liquidations, forex majors (E13, E15)', 'Waiting for data, in the original build.'],
+    ['run', 'Daily Plan forward record (E16)', 'Judged once after 50 paper trades.'],
+    ['run', 'Growth Bot from 100 USDT (E17)', 'Judged once after 50 trades or 26 weeks.']];
+  function evidence(){ var dp = lsj('omega_dplan_v1') || { trades:[] }, bot = lsj('omega_rguard_bot_v1') || { closed:[] }, cs = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX._.stats() : { n:0 };
+    return '<div class="card"><h3 class="dp-h">What is known</h3><ul class="ledger" style="list-style:none;padding:0">' + LEDGER.map(function(r){ return '<li><span class="tag ' + r[0] + '">' + (r[0] === 'pass' ? 'PASSED' : r[0] === 'fail' ? 'FAILED' : 'MEASURING') + '</span><b>' + esc(r[1]) + '</b><br><span class="hint">' + esc(r[2]) + '</span></li>'; }).join('') + '</ul>' +
+      '<p class="dp-p"><b>Being measured in this app:</b> climax trades ' + cs.n + ' closed · Daily Plan ' + (dp.trades || []).length + ' of 50 · Growth Bot ' + (bot.closed || []).length + ' of 50.</p><p class="hint">Every test was written down before its data, run once, and counted. Nothing here is promoted on a lucky streak.</p></div>'; }
+  // ── settings and the Autopilot table ──
+  function settings(){ var O = window.OMEGA_OPERATOR, st = O.state().jobs || {}, c = cfg(), h = '<div class="card"><h3 class="dp-h">Autopilot</h3><p class="hint">Runs while the app is open. Each job can be switched off.</p><table class="mr-tab"><tr><th>Job</th><th>Last run</th><th>On</th></tr>';
+    O.list().forEach(function(j){ var s = st[j.id] || {}, ago = s.last ? Math.round((Date.now() - s.last)/60e3) : null; h += '<tr><td><b>' + esc(j.label) + '</b><br><span class="hint">' + esc((s.result || 'not run yet').slice(0, 140)) + '</span></td><td>' + (ago == null ? '—' : ago < 60 ? ago + ' min ago' : Math.round(ago/60) + ' h ago') + '</td><td><input type="checkbox" data-job="' + j.id + '"' + (s.enabled === false ? '' : ' checked') + '></td></tr>'; });
+    h += '</table><p><button class="btn-outline" type="button" data-set="runall">Run everything due now</button></p></div>';
+    h += '<div class="card"><h3 class="dp-h">This device</h3><label class="sw"><input type="checkbox" data-set="wake"' + (c.wake ? ' checked' : '') + '> Keep the screen on while the app is open (best on a charger)</label>' +
+      '<p><button class="btn-outline" type="button" data-set="notif">' + (typeof Notification !== 'undefined' && Notification.permission === 'granted' ? 'Notifications are on' : 'Turn on notifications') + '</button></p>' +
+      '<p><button class="btn-outline" type="button" data-set="backup">Save a backup</button> <label class="btn-outline" style="display:inline-block">Restore<input type="file" accept="application/json" data-set="restore" style="display:none"></label></p><p class="hint">The backup holds only Prime’s own records (prefix “prime:”); there are no keys or passwords in this app. The original OMEGA build keeps its data separately.</p></div>';
+    return h; }
+  function renderSettings(){ var b = el('settingsBody'); if(!b) return; b.innerHTML = settings();
+    Array.prototype.forEach.call(b.querySelectorAll('[data-job]'), function(x){ x.onchange = function(){ window.OMEGA_OPERATOR.setEnabled(x.getAttribute('data-job'), x.checked); }; });
+    Array.prototype.forEach.call(b.querySelectorAll('[data-set]'), function(x){ var k = x.getAttribute('data-set');
+      if(k === 'runall') x.onclick = function(){ window.OMEGA_OPERATOR.run(); };
+      if(k === 'wake') x.onchange = function(){ var c = cfg(); c.wake = x.checked; setCfg(c); applyWake(); };
+      if(k === 'notif') x.onclick = function(){ try{ Notification.requestPermission().then(renderSettings); }catch(e){} };
+      if(k === 'backup') x.onclick = function(){ var o = {}; window.PRIME_LS.keys().forEach(function(key){ o[key] = window.PRIME_LS.getItem(key); }); var blob = new Blob([JSON.stringify({ format:'omega-prime-backup', v:1, at:new Date().toISOString(), data:o })], { type:'application/json' }), a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'omega-prime-backup-' + new Date().toISOString().slice(0, 10) + '.json'; document.body.appendChild(a); a.click(); setTimeout(function(){ a.remove(); }, 2000); };
+      if(k === 'restore') x.onchange = function(){ var f = x.files && x.files[0]; if(!f) return; f.text().then(function(t){ var j = JSON.parse(t); if(!j || j.format !== 'omega-prime-backup') throw new Error('not a Prime backup'); Object.keys(j.data || {}).forEach(function(key){ window.PRIME_LS.setItem(key, j.data[key]); }); location.reload(); }).catch(function(e){ alert('Not restored: ' + (e.message || e)); }); }; }); }
+  async function applyWake(){ try{ if(cfg().wake && 'wakeLock' in navigator && document.visibilityState === 'visible'){ if(!wake) wake = await navigator.wakeLock.request('screen'); } else if(wake){ await wake.release(); wake = null; } }catch(e){ wake = null; } }
+  document.addEventListener('visibilitychange', function(){ wake = null; applyWake(); });
+  // ── navigation ──
+  function show(p){ cur = p; PAGES.forEach(function(x){ var s = el('page-' + x[0]); if(s) s.classList.toggle('on', x[0] === p); });
+    Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function(b){ b.classList.toggle('on', b.getAttribute('data-go') === p); });
+    try{ if(p === 'today'){ el('todayBody').innerHTML = today(); if(window.OMEGA_DPLAN && !window.OMEGA_DPLAN.state().S && !window.OMEGA_DPLAN.state().busy) window.OMEGA_DPLAN.run().then(function(){ if(cur === 'today') el('todayBody').innerHTML = today(); }); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }
+      if(p === 'chart'){ if(window.OMEGA_COCKPIT) window.OMEGA_COCKPIT.onShow(); if(window.OMEGA_MREAD) window.OMEGA_MREAD.onShow(); }
+      if(p === 'signals'){ if(window.OMEGA_CLIMAX) window.OMEGA_CLIMAX.render(); if(window.OMEGA_DPLAN) window.OMEGA_DPLAN.onShow(); }
+      if(p === 'risk'){ if(window.OMEGA_RGUARD) window.OMEGA_RGUARD.onShow(); if(window.OMEGA_TRUTH) window.OMEGA_TRUTH.run(); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }
+      if(p === 'evidence'){ el('evidenceBody').innerHTML = evidence(); if(window.OMEGA_TRUTH) window.OMEGA_TRUTH.run(); renderSettings(); } }catch(e){ if(window.console) console.warn('Prime page', p, e); }
+    window.scrollTo(0, 0); }
+  window.navigate = show;
+  function nav(){ var t = el('tabs'), b = el('bar'); var mk = function(x, mob){ return '<button type="button" data-go="' + x[0] + '">' + (mob ? '<svg viewBox="0 0 24 24"><path d="' + x[2] + '"/></svg>' : '') + x[1] + '</button>'; };
+    if(t) t.innerHTML = PAGES.map(function(x){ return mk(x, false); }).join(''); if(b) b.innerHTML = PAGES.map(function(x){ return mk(x, true); }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function(x){ x.onclick = function(){ show(x.getAttribute('data-go')); }; }); }
+  function clock(){ var d = new Date(), h = d.getUTCHours(), s = h < 8 ? 'Asia' : h < 13 ? 'London' : h < 21 ? 'US hours' : 'Late'; var c = el('clock'); if(c) c.innerHTML = d.toISOString().slice(11, 16) + ' UTC · ' + String((h + 20) % 24).padStart(2, '0') + d.toISOString().slice(13, 16) + ' Tobago<br>' + s; }
+  window.PRIME_UI = { show:show, verdict:verdict, today:today, evidence:evidence, autopilotChanged:function(){ if(cur === 'evidence') renderSettings(); if(cur === 'today') el('todayBody').innerHTML = today(); } };
+  nav(); clock(); setInterval(clock, 30e3); applyWake(); show('today');
+})();
+</script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@ Research: +0.36%/trade (t 4.34, E22), +0.32% (t 4.54, E25 incl. 143 delisted coi
 as a 100 USDT account drawdowns were 56-59% (E26). Paper/testnet first.
 """
 import numpy as np
-from edges.bots.core import Signal, Strategy, dense
+from edges.bots.core import Signal, Strategy, dense, is_current
 from edges.bots.strategies import _panic as P
 
 K, W, Q, HOLD = 2.0, 3, 10, 24
@@ -34,7 +34,7 @@ class PanicH1(Strategy):
     def signals(self, bars, now):
         out = []
         for sym, df in bars.items():
-            if df is None or len(df) < 30 or df.index[-1] != now:
+            if df is None or len(df) < 30 or not is_current(df, now, self.tf):
                 continue
             df = dense(df, self.tf)
             a, fv = P._anchor(self, sym, df)

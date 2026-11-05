@@ -20,6 +20,7 @@ from collections import defaultdict, deque
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import StreamingResponse
 
 from . import __version__
@@ -120,6 +121,11 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
                   description="Live crypto, forex/metals and options data for OMEGA. Read-only, places no orders.")
     origins = ["null", "http://localhost", "http://127.0.0.1", "http://localhost:8787", "http://127.0.0.1:8787"]
     origins += [o.strip() for o in os.environ.get("OMEGA_API_ORIGINS", "").split(",") if o.strip()]
+    if not TOKEN:
+        # No token = loopback only. Refuse any other Host header, so a web page cannot reach this service through
+        # DNS rebinding (a hostile name that resolves to 127.0.0.1). OMEGA_API_HOSTS adds names if ever needed.
+        hosts = ["127.0.0.1", "localhost", "[::1]", "::1"] + [h.strip() for h in os.environ.get("OMEGA_API_HOSTS", "").split(",") if h.strip()]
+        app.add_middleware(TrustedHostMiddleware, allowed_hosts=hosts)
     app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["GET"],
                        allow_headers=["Authorization"], allow_credentials=False)
 
@@ -130,13 +136,16 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
         if not hmac.compare_digest(got, f"Bearer {TOKEN}"):
             raise HTTPException(401, "missing or wrong token")
 
+    def scrub(msg):                       # a provider's message must never carry the Twelve Data key back to a caller
+        return msg.replace(fx.key, "***") if fx.key else msg
+
     def guard(fn):
         try:
             return fn()
         except ValueError as e:
-            raise HTTPException(400, str(e))
+            raise HTTPException(400, scrub(str(e)))
         except ProviderError as e:
-            raise HTTPException(502, f"all providers failed: {e}")
+            raise HTTPException(502, scrub(f"all providers failed: {e}"))
 
     def tf_ok(tf):
         if tf not in TF:
@@ -209,6 +218,7 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
 
     @app.get("/options/dvol", dependencies=d)
     def options_dvol(currency: str = "BTC", hours: int = Query(48, ge=1, le=24 * 30)):
+        check_symbol(currency)
         return guard(lambda: cache.get(("dv", currency.upper(), hours), 60, lambda: opt.dvol(currency, hours)))
 
     @app.get("/signals", dependencies=d)
@@ -228,13 +238,13 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
                     payload["crypto"] = await asyncio.to_thread(
                         lambda: cache.get(("t", tuple(cs)), 2, lambda: crypto.tickers(cs)))
                 except ProviderError as e:
-                    payload["errors"].append(str(e))
+                    payload["errors"].append(scrub(str(e)))
                 for s in fs:
                     try:
                         payload["fx"].append(await asyncio.to_thread(
                             lambda s=s: cache.get(("q", s.upper()), 2, lambda: fx.quote(s))))
                     except (ProviderError, ValueError) as e:
-                        payload["errors"].append(str(e))
+                        payload["errors"].append(scrub(str(e)))
                 yield f"data: {json.dumps(payload)}\n\n"
                 await asyncio.sleep(every)
         return StreamingResponse(gen(), media_type="text/event-stream", headers={"Cache-Control": "no-cache"})
