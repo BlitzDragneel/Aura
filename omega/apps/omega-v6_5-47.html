@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://unpkg.com https://s3.tradingview.com; frame-src https://*.tradingview.com https://*.tradingview-widget.com; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>OMEGA v6.5 — Adaptive Strategy Intelligence</title>
 <link rel="manifest" href="manifest.json">
@@ -11,7 +12,7 @@
   <meta name="theme-color" content="#0A0D12">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lightweight-charts@5.0.2/dist/lightweight-charts.standalone.production.js"></script>
+<script src="https://unpkg.com/lightweight-charts@5.0.2/dist/lightweight-charts.standalone.production.js" integrity="sha384-NWTHVp/2n1SsvFhrMDcsRGYu71Cla1UgKADA6+ErV2oklVI3DLjsnXK92nl4Cm+J" crossorigin="anonymous"></script>
 <style>
 :root{
   --bg:#0A0D12; --panel:#11151B; --panel2:#161B23; --border:#212834;
@@ -2018,7 +2019,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   <!-- Mobile header (logo + hamburger) -->
   <header class="mobile-header">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.105 · build 2026-11-02 21:50 UTC</small></div>
+    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.107 · build 2026-11-07 19:08 UTC</small></div>
   </header>
 
   <!-- Sidebar -->
@@ -2539,6 +2540,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
           <h2 class="creed-banner-title">Futures <span>— perpetual futures with your margin and leverage, on every trade and every backtest</span></h2>
           <div class="creed-banner-flow"><i>Your sizing</i><b>→</b><i>Exchange rules</i><b>→</b><i>Liquidation, fees, funding</i><b>→</b><i>Every setting compared</i></div>
         </div>
+      </div>
+      <div class="card" id="futLevTruth" style="margin-bottom:14px;border-color:var(--bear);">
+        <h2 style="color:var(--bear);">Leverage — what the tests say</h2>
+        <p class="hint" style="margin-top:0;color:var(--text);">Leverage multiplies losses exactly as much as gains, and no tested rule has an edge large enough to lever. CREED: −0.10R to −0.12R a trade after costs (E29, E31); at 1% risk it loses half the account within a year in 76% of 100,000 simulated accounts. The panic bounce H1 run as a 100 USDT account of 5–10 USDT seats <b>without</b> leverage still fell 56–59% from its peak (E26). The default here (5% margin × 10×) puts half the account into every position; at 10× a 9% move against you liquidates it before most stops. OMEGA Prime’s tickets use 1× isolated and the Bridge caps a Binance order at 10 USDT. Use these pages to see the damage on paper, not to pick a higher setting.</p>
       </div>
       <div class="card" style="margin-bottom:14px;">
         <h2 style="color:var(--gold);">Backtest on futures</h2>
@@ -6670,7 +6675,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     el('sigSteps').innerHTML =
       '<li>Place a '+dirWord+' entry '+entryWord+' <b>'+fmtN(sig.entry,d)+'</b>. Size the position so the distance to your stop equals the % of account you\'re willing to risk (1–2% is typical).</li>'+
       '<li>Set your stop-loss at <b>'+fmtN(sig.stop,d)+'</b>. This is your invalidation — if price reaches it, the setup failed; do not move it further away.</li>'+
-      '<li>Take 40% off at <b>TP1 '+fmtN(sig.tp1,d)+'</b> ('+fmtN(sig.tp1rr,1)+'R). Immediately move your stop to breakeven — the rest of the trade is now risk-free.</li>'+
+      '<li>Take 40% off at <b>TP1 '+fmtN(sig.tp1,d)+'</b> ('+fmtN(sig.tp1rr,1)+'R). Immediately move your stop to breakeven — that limits the rest of the trade’s loss, but gaps, slippage, fees and funding can still cost money (a stop is not a guaranteed exit).</li>'+
       '<li>Take another 35% at <b>TP2 '+fmtN(sig.tp2,d)+'</b> ('+fmtN(sig.tp2rr,1)+'R).</li>'+
       '<li>Let the final 25% run to <b>TP3 '+fmtN(sig.tp3,d)+'</b> ('+fmtN(sig.tp3rr,1)+'R), or trail your stop behind structure to capture more if it keeps going.</li>'+
       '<li>When the trade closes, log it as a Win or Loss below so OMEGA learns your real edge.</li>';
@@ -9291,7 +9296,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       '<li>Enter '+dirWord+' as price trades '+entryWord+' <b>'+fmtNum(pos.slipEntry,dec)+'</b>, sized so the distance to stop risks your set % of equity ('+fmtNum(pos.size,4)+' units).</li>' +
       '<li>Place the protective stop at <b>'+fmtNum(pos.stop,dec)+'</b>. If price '+(dir?'falls to':'rises to')+' this level first, the trade closes for a loss — no discretionary widening.</li>' +
       '<li>Scale out in thirds: take profit at <b>TP1 '+fmtNum(tp1,dec)+'</b>, then <b>TP2 '+fmtNum(tp2,dec)+'</b>, then <b>TP3 '+fmtNum(tp3,dec)+'</b> for the runner.</li>' +
-      '<li>Once TP1 fills, move the stop to breakeven — the standard way to make the remainder risk-free while letting it run.</li>' +
+      '<li>Once TP1 fills, move the stop to breakeven — the standard way to cut the remainder’s risk while letting it run (not risk-free: gaps, slippage and fees still apply).</li>' +
       '<li>The simulator currently exits in full at TP2 (single-exit model); the three levels above are your manual scale-out plan. On close, the trade is logged with real duration, R:R, regime and result.</li>';
   }
   window.renderLivePosition = renderLivePosition;
@@ -9710,6 +9715,9 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   var SECRET_KEYS = { omega_claude_key:1, omega_td_key:1, omega_cp_key:1, omega_cryptopanic_token:1 };
   var NO_RESTORE = { omega_journal_v2_sum:1, omega_journal_archive_meta:1, omega_ls_quota_v1:1 };
   function isSecretKey(k){ return !!SECRET_KEYS[k] || /(^|_)(key|token|secret|apikey|password|pass)$/i.test(k); }
+  // v6.5.107: personal stores that never go into a backup file and are never taken from one
+  var PERSONAL_KEYS = { omega_alert_url:1 }, HOOK_RE = /https?:\/\/(?:[a-z0-9-]+\.)?(?:discord(?:app)?\.com\/api\/webhooks|hooks\.slack\.com\/services)\/[^\s"'\\<>]+/gi;
+  function noNumber(v){ try{ var o = JSON.parse(v); if(o && typeof o === 'object' && o.number){ delete o.number; return JSON.stringify(o); } }catch(e){} return v; }
   function buildBackup(){
     var bundle = { _omega:'full-backup', version:'3.8', exportedAt:new Date().toISOString(), data:{}, excluded:[], archive:[] };
     var keys = {};
@@ -9722,7 +9730,9 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     try{ var cr = JSON.parse(localStorage.getItem('creed_rule_v1')||'{}'); if(cr && typeof cr.key === 'string' && cr.key.length >= 12) secrets.push(cr.key); }catch(e){}
     ['apikey','creedKey'].forEach(function(id){ var e = el(id); if(e && e.value && e.value.trim().length >= 12) secrets.push(e.value.trim()); });
     secrets = secrets.filter(function(x, i){ return x && secrets.indexOf(x) === i; });
-    Object.keys(keys).forEach(function(k){ var v=localStorage.getItem(k); if(v==null) return; if(isSecretKey(k)){ bundle.excluded.push(k); return; }
+    Object.keys(keys).forEach(function(k){ var v=localStorage.getItem(k); if(v==null) return; if(isSecretKey(k) || PERSONAL_KEYS[k]){ bundle.excluded.push(k); return; }
+      if(k === 'creed_alert_v1'){ var v2 = noNumber(v); if(v2 !== v){ v = v2; bundle.excluded.push('creed_alert_v1 (WhatsApp number)'); } }
+      v = v.replace(HOOK_RE, '');
       secrets.forEach(function(x){ if(v.indexOf(x) > -1) v = v.split(x).join(''); }); bundle.data[k]=v; });
     var J = window.OMEGA_JOURNAL;
     var p = (J && J.archive && J.archive.rows) ? J.archive.rows() : Promise.resolve([]);
@@ -9739,7 +9749,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       document.body.appendChild(a); a.click(); document.body.removeChild(a); setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
       try{ var jl = (function(x){ return Array.isArray(x) ? x : []; })(JSON.parse(localStorage.getItem('omega_journal_v2')||'[]')); localStorage.setItem('omega_last_backup_n', String(jl.length)); }catch(e){}
       if(s) s.textContent='✓ Backed up '+Object.keys(bundle.data).length+' data stores'+(bundle.archive.length?' and '+bundle.archive.length+' archived journal rows':'')+'. '+
-        (bundle.excluded.length ? 'API keys were NOT included ('+bundle.excluded.join(', ')+') — re-enter them after restoring on another device. ' : '')+
+        (bundle.excluded.length ? 'Keys, the alert webhook and your WhatsApp number were NOT included ('+bundle.excluded.join(', ')+') — re-enter them after restoring on another device. ' : '')+
         (bundle.archiveError ? '⚠ '+bundle.archiveError+' — the archived rows are not in this file. ' : '')+'Keep this file safe.';
       return bundle;
     });
@@ -9777,10 +9787,13 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     var bad = validateBackup(bundle);
     if(bad){ say('✗ '+bad); return Promise.resolve({ ok:false, error:bad }); }
     if(!opts.noConfirm && !confirm('Restore this backup? It will OVERWRITE your current journal, bot state, signals and settings in this browser. Consider backing up first.')) return Promise.resolve({ ok:false, error:'cancelled' });
-    var J = window.OMEGA_JOURNAL, data = {}, keys = Object.keys(bundle.data).filter(function(k){ return !NO_RESTORE[k]; });
+    var J = window.OMEGA_JOURNAL, data = {}, skipped = Object.keys(bundle.data).filter(function(k){ return isSecretKey(k) || PERSONAL_KEYS[k]; }),
+        keys = Object.keys(bundle.data).filter(function(k){ return !NO_RESTORE[k] && !isSecretKey(k) && !PERSONAL_KEYS[k]; });   // v6.5.107: never take keys or a webhook from a file
     keys.forEach(function(k){ data[k] = bundle.data[k]; });
     // backups carry CREED's rules without the key: keep the key this browser already has
     if(data.creed_rule_v1){ try{ var inc = JSON.parse(data.creed_rule_v1), cur = JSON.parse(localStorage.getItem('creed_rule_v1')||'{}'); if(inc && cur && cur.key && !inc.key){ inc.key = cur.key; data.creed_rule_v1 = JSON.stringify(inc); } }catch(e){} }
+    if(data.creed_alert_v1 != null){ try{ var ia = JSON.parse(data.creed_alert_v1), ca = JSON.parse(localStorage.getItem('creed_alert_v1') || '{}'); if(ia && typeof ia === 'object'){ delete ia.number; if(ca && ca.number) ia.number = ca.number; data.creed_alert_v1 = JSON.stringify(ia); } }catch(e){} }
+    var feedsChanged = data.omega_custom_feeds != null && data.omega_custom_feeds !== localStorage.getItem('omega_custom_feeds');
     var cold = (bundle.archive || []).slice();
     // a journal too large for this browser's fast store: its oldest simulated rows go to the archive
     if(data.omega_journal_v2!=null && J && J.budget && J.pack){
@@ -9814,9 +9827,9 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       try{ localStorage.removeItem('omega_jpack_v1'); }catch(_){}   // repack the restored journal on reload
       if(J && J.archive && J.archive.refresh) J.archive.refresh();
       say('✓ Restored '+keys.length+' stores'+(archived>0 ? ' and '+archived+' archived journal rows' : '')+'.'+(archived===-1 ? ' ⚠ This browser has no IndexedDB, so the backup’s archived rows were not restored (they remain in the file).' : '')+
-          (bundle.excluded && bundle.excluded.length ? ' API keys are not in backups — re-enter them in Settings.' : '')+(opts.noReload ? '' : ' Reloading…'));
+          (bundle.excluded && bundle.excluded.length ? ' API keys are not in backups — re-enter them in Settings.' : '')+(skipped.length ? ' Not taken from the file: '+skipped.join(', ')+'.' : '')+(feedsChanged ? ' ⚠ The custom news feeds came from the file — check them in Settings.' : '')+(opts.noReload ? '' : ' Reloading…'));
       if(!opts.noReload) setTimeout(function(){ location.reload(); }, 900);
-      return { ok:true, stores:keys.length, archived:archived };
+      return { ok:true, stores:keys.length, archived:archived, skipped:skipped, feedsChanged:feedsChanged };
     }, function(err){
       var msg = '✗ Restore stopped before anything was changed: the archive could not be written ('+(err && err.message || err)+').';
       say(msg); return { ok:false, error:msg };
@@ -12908,7 +12921,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   // surviving a reload, repeats folded into one line), with what to do, and shown with the
   // self-test and storage state under Settings → Diagnostics. Anything that looks like a key or
   // token is blanked before it is stored.
-  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.105 \u00b7 build 2026-11-02 21:50 UTC';   // rewritten by the build stamp on every release
+  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.107 \u00b7 build 2026-11-07 19:08 UTC';   // rewritten by the build stamp on every release
   function redact(s){ return String(s==null?'':s).replace(/((?:api_?key|apikey|key|token|secret|auth|password)=)[^&\s"']+/gi,'$1…').replace(/sk-ant-[A-Za-z0-9_\-]+/g,'sk-ant-…').replace(/Bearer\s+[A-Za-z0-9._\-]+/g,'Bearer …').slice(0,300); }
   function fixFor(msg){ var m = String(msg);
     if(/quota|QuotaExceeded/i.test(m)) return 'Storage full: old simulated journal rows move to the archive automatically; export a backup if this repeats.';
@@ -16922,7 +16935,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     }
     try{
       var dump = {};
-      for(var i=0;i<localStorage.length;i++){ var k=localStorage.key(i); if(/(^|_)(key|token|secret|apikey|password|pass)$/i.test(k)) continue; dump[k]=localStorage.getItem(k); }
+      for(var i=0;i<localStorage.length;i++){ var k=localStorage.key(i); if(/(^|_)(key|token|secret|apikey|password|pass)$/i.test(k) || k === 'omega_alert_url' || k === 'creed_alert_v1') continue; dump[k]=localStorage.getItem(k); }
       var blob = new Blob([JSON.stringify({ savedAt:new Date().toISOString(), data:dump })], { type:'application/json' });
       var url = URL.createObjectURL(blob);
       var a2 = document.createElement('a');
@@ -25073,7 +25086,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   var LAST_KEY = 'omega_research_pkg_last_v1';
   function L(){ return window.OMEGA_LAB; }
-  var BUILD = 'v6.5.105 \u00b7 build 2026-11-02 21:50 UTC';   // rewritten by the build stamp on every release
+  var BUILD = 'v6.5.107 \u00b7 build 2026-11-07 19:08 UTC';   // rewritten by the build stamp on every release
   function buildStamp(){ return BUILD; }
   function status(row){
     if(!row) return 'NOT TESTED';
@@ -31043,7 +31056,7 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
   function fmt(v){ return v == null ? '\u2014' : (v >= 0 ? '+' : '') + v.toFixed(1) + '% a year'; }
   function render(){ var pg = el('page-ostrat'); if(!pg) return; var host = el('outsideResearchCard');
     if(!host){ host = document.createElement('div'); host.id = 'outsideResearchCard'; var w = el('workshopCard'); if(w && w.parentNode === pg) pg.insertBefore(host, w.nextSibling); else pg.insertBefore(host, pg.firstChild); }
-    host.innerHTML = '<div class="card" style="margin-bottom:14px;"><h2 style="color:var(--gold);">Research record, rounds 1\u201333 \u2014 what passed: the funding harvest (rounds 7, 8 and 10; with dip-buying in round 12) and the climax reversal (round 16). Everything else failed</h2><p class="hint" style="margin-top:0;"><b>Round 1</b> (below): no edge survived.</p>' +
+    host.innerHTML = '<div class="card" style="margin-bottom:14px;"><h2 style="color:var(--gold);">Research record, rounds 1\u201333 \u2014 what passed: the funding harvest (rounds 7, 8 and 10; with dip-buying in round 12) and the climax reversal (round 16); the harvest then FAILED on 2025\u201326 (E34, \u221217% a year). Everything else failed</h2><p class="hint" style="margin-top:0;"><b>Round 1</b> (below): no edge survived.</p>' +
       '<p class="hint" style="margin-top:0;">' + esc(REC.study) + '. ' + esc(REC.plan) + '</p>' +
       '<div style="overflow-x:auto;"><table class="creed-events"><thead><tr><th>Family</th><th>Variants</th><th>Positive before costs</th><th>Positive after costs</th></tr></thead><tbody>' +
       REC.families.map(function(f){ return '<tr><td>' + esc(f.family) + '</td><td class="mono">' + f.variants + '</td><td class="mono">' + f.positiveBeforeCosts + '</td><td class="mono">' + f.positiveAfterCosts + '</td></tr>'; }).join('') + '</tbody></table></div>' +
@@ -31496,7 +31509,7 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
       '<li><b>Momentum faded.</b> Last week’s strongest third beat the weakest third the next week by this much per week, and it turned negative in 2026:</li></ol>' +
       '<div style="overflow-x:auto;"><table class="creed-events"><thead><tr><th></th>' + yearsHead(my) + '</tr></thead><tbody><tr><td>Strong − weak</td>' + yearsRow(my, function(v){ return pct(v, 1); }) + '</tr></tbody></table></div>' +
       '<ol start="6" class="hint" style="margin:0;padding-left:18px;line-height:1.6;"><li><b>High volatility tends to stay high, but that did not protect carry.</b> Shrinking carry when volatility was high did worse than simply holding a smaller fixed size (' + S.volManaged + '), because the crashes began in quiet or ordinary markets (Nov 2023 among the calmest 5% of weeks since 2020; Oct 2020 about average), so there was nothing to shrink on before the damage.</li></ol>' +
-      '<ol start="7" class="hint" style="margin:0;padding-left:18px;line-height:1.6;"><li><b>Until round 16 only one thing had passed an untouched test: being paid for supplying leverage. (Round 16\u2019s climax reversal, buying a flush as buyers step in, was the second.)</b> On 51 coins nothing had seen, the funding harvest (hold the coin, short its perpetual, collect what leveraged buyers pay) made +12% a year (z 4.14, worst fall \u22122.3%). Carry and trend made money on average but failed, with falls of \u221265% to \u221283%: they pay for taking crash risk, they are not edges.</li><li><b>And again on 90 more coins:</b> of ten new strategies, only the 10-coin harvest passed (+8.8% a year, z 3.38). The crowding rules that worked on the big coins <b>reversed</b> on the newer ones (\u221220% to \u221236% a year, falls near \u221290%), and trend made about nothing. What a coin\u2019s crowd does is not a law; being paid for supplying leverage is.</li><li><b>A different strategy per coin did not hold up.</b> Picking each coin\u2019s best strategy from its past, every quarter, across 166 coins: a coin\u2019s best strategy of one year did <i>worse</i> than its typical strategy the next year 60% of the time. The picker\u2019s profit came from choosing the harvest on most coins, not from coin-specific skill.</li></ol>' +
+      '<ol start="7" class="hint" style="margin:0;padding-left:18px;line-height:1.6;"><li><b>Until round 16 only one thing had passed an untouched test: being paid for supplying leverage. (Round 16\u2019s climax reversal, buying a flush as buyers step in, was the second.)</b> On 51 coins nothing had seen, the funding harvest (hold the coin, short its perpetual, collect what leveraged buyers pay) made +12% a year (z 4.14, worst fall \u22122.3%). Carry and trend made money on average but failed, with falls of \u221265% to \u221283%: they pay for taking crash risk, they are not edges.</li><li><b>And again on 90 more coins:</b> of ten new strategies, only the 10-coin harvest passed (+8.8% a year, z 3.38). The crowding rules that worked on the big coins <b>reversed</b> on the newer ones (\u221220% to \u221236% a year, falls near \u221290%), and trend made about nothing. What a coin\u2019s crowd does is not a law; being paid for supplying leverage held up longer, until E34 (Nov 2026) found it lost 17% a year in 2025\u201326.</li><li><b>A different strategy per coin did not hold up.</b> Picking each coin\u2019s best strategy from its past, every quarter, across 166 coins: a coin\u2019s best strategy of one year did <i>worse</i> than its typical strategy the next year 60% of the time. The picker\u2019s profit came from choosing the harvest on most coins, not from coin-specific skill.</li></ol>' +
       '<p class="hint"><b>So the approach changes:</b> read positioning (who is crowded, who pays whom), not chart patterns. Earn from what the market structurally pays, not from guessing direction. Choose the size for the falls, not for the average. Test every new rule once on data nothing has seen, either other coins or future weeks, before believing it.</p>');
     // 1b. BTC and ETH first
     var be = BTCETH, bl = live && !err ? ['BTCUSDT', 'ETHUSDT'].map(function(s){ var r0 = live.rows[s]; return r0 ? '<b>' + s.slice(0, 3) + '</b>: buyers are paying ' + pct(r0.f7, 1) + ' a year over 7 days, ' + pct(r0.f30, 1) + ' over 30 days; holding it and shorting its perpetual would collect about that, before costs' : ''; }).filter(Boolean).join('. ') : '';
@@ -31569,7 +31582,7 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
     var R12 = ROUND12;
     h += card('Round 12: 600 known strategies, 100 combinations', '<p class="hint" style="margin-top:0;">' + esc(R12.plan) + '.</p>' +
       R12.stages.map(function(x, i){ return '<div style="border-top:1px solid var(--border);padding:6px 0;"><b>' + (i + 1) + '. ' + esc(x[0]) + '</b><div class="hint" style="margin:2px 0 0;">' + esc(x[1]) + '</div></div>'; }).join('') +
-      '<p class="hint" style="color:var(--bull);margin-top:8px;"><b>The two that passed</b> (both run on paper at the top of OMEGA Strategy):</p>' + R12.winners.map(function(x){ return '<div style="padding:4px 0;"><b style="color:var(--bull);">' + esc(x[0]) + '</b><div class="hint" style="margin:2px 0 0;">' + esc(x[1]) + '</div></div>'; }).join('') +
+      '<p class="hint" style="color:var(--bull);margin-top:8px;"><b>The two that passed</b> (both run on paper at the top of OMEGA Strategy; their harvest half later FAILED E34 on 2025\u201326, \u221217% a year):</p>' + R12.winners.map(function(x){ return '<div style="padding:4px 0;"><b style="color:var(--bull);">' + esc(x[0]) + '</b><div class="hint" style="margin:2px 0 0;">' + esc(x[1]) + '</div></div>'; }).join('') +
       '<p class="hint" style="margin-top:8px;"><b>What failed where it mattered</b></p>' + R12.failed.map(function(x){ return '<div style="padding:4px 0;"><b>' + esc(x[0]) + '</b> \u2014 <b style="color:var(--bear);">fail</b><div class="hint" style="margin:2px 0 0;">' + esc(x[1]) + '</div></div>'; }).join('') +
       '<p class="hint"><b>What it means.</b> Even 600 known strategies, tested properly, give one thing that survives: being paid for supplying leverage (the harvest), made steadier by buying sharp dips. The edge is about 4% a year over the market, not a fortune. Every rule that tries to predict direction looked good somewhere and failed somewhere else.</p>');
     host.innerHTML = h;
@@ -31739,9 +31752,10 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
   // ── the card (top of OMEGA Strategy) ──
   function render(){ var host = el('harvestCard'); if(!host){ var pg = el('page-ostrat'); if(!pg) return; host = document.createElement('div'); host.id = 'harvestCard'; pg.insertBefore(host, pg.firstChild); }
     var r = st.res, V = st.verdict || verdict(null, st.retired), eq = safe(function(){ return window.OMEGA_AUTOPILOT.cfg().startEquity; }) || 100, Z = RESEARCH;
-    var lab = { WAIT:['Paper · passed its untouched test · forward record starts at Sunday 18 Oct’s close','bull'], COLLECT:['Paper · collecting forward weeks','warn'], HOLDING:['Paper · positive, not yet proven forward','warn'], CONFIRMED:['Paper · confirmed forward','bull'], UNPROVEN:['Paper · unproven forward','warn'], RETIRED:['Retired','bear'] }[V.code] || ['Paper','warn'];
-    var h = '<div class="card" style="margin-bottom:14px;border-color:var(--bull);"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start;"><div><h2 style="color:var(--gold);margin-bottom:4px;">Funding harvest \u2014 passed untouched tests in rounds 7, 8 and 10</h2><span class="bt-lab ' + lab[1] + '">' + esc(lab[0]) + '</span></div>' +
+    var lab = { WAIT:['Paper · failed its 2025\u201326 test (E34) · kept as a record','warn'], COLLECT:['Paper · collecting forward weeks','warn'], HOLDING:['Paper · positive, not yet proven forward','warn'], CONFIRMED:['Paper · confirmed forward','bull'], UNPROVEN:['Paper · unproven forward','warn'], RETIRED:['Retired','bear'] }[V.code] || ['Paper','warn'];
+    var h = '<div class="card" style="margin-bottom:14px;border-color:var(--bull);"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start;"><div><h2 style="color:var(--gold);margin-bottom:4px;">Funding harvest \u2014 passed untouched tests in rounds 7, 8 and 10; FAILED on 2025\u201326 (E34)</h2><span class="bt-lab ' + lab[1] + '">' + esc(lab[0]) + '</span></div>' +
       '<button class="btn-outline" type="button" id="harvestRun"' + (run.busy ? ' disabled' : '') + '>' + (run.busy ? esc(run.msg || 'Working') : 'Update now') + '</button></div>' +
+      '<p class="hint" id="harvestE34" style="margin-top:8px;color:var(--bear);"><b>Read this first. E34 (Nov 2026): run again as a delta-neutral harvest on 2025\u201326, it FAILED: \u221217% a year, worst 30 days \u221233% (one coin\u2019s funding flipped: \u221264.6% in a month).</b> Most months nothing paid enough; when something did it earned 1\u20133% a month, and one flip erased it. The rounds below were measured on 2020\u20132026 data dominated by 2021; the recent years were thin or negative. Keep it as a record on paper; do not trade it.</p>' +
       '<p class="hint" style="margin-top:8px;">Not a bet on direction. Each Sunday close it <b>holds a coin and shorts the same coin’s perpetual</b>, so price moves cancel. The short then collects the funding that leveraged buyers pay. It picks the 5 coins (of the 25) whose buyers paid the most over 30 days, if above 0.1% a week, 1/5 of the account per pair. When funding is low it holds nothing. Frozen ' + esc(Z.frozenAt) + '. <b>Paper only.</b></p>' +
       '<p class="hint" style="color:var(--bull);"><b>Untouched test:</b> on ' + esc(Z.fresh.data) + ': ' + pct(Z.fresh.annPct/100) + ' a year, z ' + Z.fresh.t.toFixed(2) + ' against a bar of ' + Z.fresh.bar.toFixed(2) + ', ' + pct(Z.fresh.costs2xPct/100) + ' with costs doubled, worst fall ' + pct(Z.fresh.worstFallPct/100) + '. ' + esc(Z.others) + '</p>' +
       '<div style="overflow-x:auto;"><table class="creed-events"><thead><tr><th></th>' + Z.fresh.years.map(function(y){ return '<th>' + esc(y[0]) + '</th>'; }).join('') + '</tr></thead><tbody><tr><td>Fresh coins</td>' + Z.fresh.years.map(function(y){ return '<td class="mono">' + pct(y[1]/100) + '</td>'; }).join('') + '</tr></tbody></table></div>' +
@@ -31782,7 +31796,7 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
   function lastSunday(){ var today = Math.floor(Date.now()/DAY), dow = new Date(today*DAY).getUTCDay(); return dow === 0 ? today - 7 : today - dow; }
   function every(){ var r = st.res; if(r && !r.error && r.current && r.current.a < lastSunday()) return 30*60e3; if(r && !r.error && !r.current) return 2*3600e3; return 12*3600e3; }
   function register(){ var O = window.OMEGA_OPERATOR; if(!O || !O.jobs) return false; var J = O.jobs(); if(J.some(function(j){ return j.id === 'harvest'; })) return true;
-    J.push({ id:'harvest', lane:'heavy', prio:2, label:'Funding harvest (the rule that passed its untouched test)', what:'Twice a day and soon after each Sunday close: which coins the frozen funding-harvest rule holds, and its forward record, from the stored daily closes and funding. Paper only.', every:every, run:runNow }); return true; }
+    J.push({ id:'harvest', lane:'heavy', prio:2, label:'Funding harvest (record only: passed rounds 7, 8, 10; failed E34 on 2025\u201326)', what:'Twice a day and soon after each Sunday close: which coins the frozen funding-harvest rule holds, and its forward record, from the stored daily closes and funding. Paper only.', every:every, run:runNow }); return true; }
   if(!register()){ var tries = 0, iv = setInterval(function(){ if(register() || ++tries > 20) clearInterval(iv); }, 3000); }
   var nav0 = window.navigate; if(typeof nav0 === 'function') window.navigate = function(p){ var rr = nav0.apply(this, arguments); if(p === 'ostrat') setTimeout(render, 60); return rr; };
   setTimeout(function(){ try{ render(); }catch(e){} }, 1600);
@@ -31981,10 +31995,11 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
     return h; }
   function render(){ var host = el('r12Card'); if(!host){ var pg = el('page-ostrat'); if(!pg) return; host = document.createElement('div'); host.id = 'r12Card'; var hv = el('harvestCard'); if(hv && hv.parentNode === pg) pg.insertBefore(host, hv.nextSibling); else pg.insertBefore(host, pg.firstChild); }
     var r = st.res, eq = safe(function(){ return window.OMEGA_AUTOPILOT.cfg().startEquity; }) || 100, Z = RESEARCH;
-    var h = '<div class="card" style="margin-bottom:14px;border-color:var(--bull);"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start;"><div><h2 style="color:var(--gold);margin-bottom:4px;">Round 12 winners — harvest + dip-buying</h2><span class="bt-lab bull">Paper · passed on 125 untouched coins · forward record starts at Sunday 18 Oct’s close</span></div>' +
+    var h = '<div class="card" style="margin-bottom:14px;border-color:var(--bull);"><div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:flex-start;"><div><h2 style="color:var(--gold);margin-bottom:4px;">Round 12 winners — harvest + dip-buying</h2><span class="bt-lab bull">Paper · passed on 125 untouched coins (to Oct 2026) · its harvest half failed E34</span></div>' +
       '<button class="btn-outline" type="button" id="r12Run"' + (run.busy ? ' disabled' : '') + '>' + (run.busy ? esc(run.msg || 'Working') : 'Update now') + '</button></div>' +
       '<p class="hint" style="margin-top:8px;">' + esc(Z.plan) + '. ' + Z.stages.map(function(s, i){ return '<b>' + (i + 1) + '.</b> ' + esc(s[0]) + ': ' + esc(s[1]); }).join(' ') + '</p>' +
-      '<p class="hint">' + esc(Z.failedFinal) + '</p><p class="hint" style="color:var(--amber);"><b>Read it the right way:</b> ' + esc(Z.caution) + '</p>';
+      '<p class="hint">' + esc(Z.failedFinal) + '</p><p class="hint" style="color:var(--amber);"><b>Read it the right way:</b> ' + esc(Z.caution) + '</p>' +
+      '<p class="hint" id="r12E34" style="color:var(--bear);"><b>Half of each winner is the funding harvest.</b> E34 (Nov 2026): run again as a delta-neutral harvest on 2025\u201326, it FAILED: \u221217% a year, worst 30 days \u221233% (one coin\u2019s funding flipped: \u221264.6% in a month). Keep it on paper.</p>';
     Object.keys(BLENDS).forEach(function(id){ var B = BLENDS[id], R = r && !r.error ? r.blends[id] : null, V = (st.verdict && st.verdict[id]) || verdict(forward(id), st.retired[id]), F = forward(id);
       h += '<h3 style="font-size:14px;margin:14px 0 4px;border-top:1px solid var(--border);padding-top:10px;">' + esc(B.title) + ' <span class="dim">(' + id + ')</span></h3>' +
         '<p class="hint" style="margin-top:0;">' + B.parts.map(function(pw){ return Math.round(pw[1]*1000)/10 + '% ' + esc(PARTS[pw[0]].name); }).join(' · ') + '.</p>' +
@@ -32003,7 +32018,7 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
   function report(){ return { rules:BLENDS, parts:PARTS, research:RESEARCH, judgement:{ minWeeks:FWD_MIN, fullWeeks:FWD_FULL, bar:FWD_BAR, stopFall:FWD_STOP, frozen:'2026-10-18' }, verdicts:st.verdict || null, retired:st.retired, forwardWeeks:st.rec, result:st.res || null }; }
   function every(){ return 12*3600e3; }
   function register(){ var O = window.OMEGA_OPERATOR; if(!O || !O.jobs) return false; var J = O.jobs(); if(J.some(function(j){ return j.id === 'r12'; })) return true;
-    J.push({ id:'r12', lane:'heavy', prio:2, label:'Round 12 winners (harvest + dip-buying)', what:'Twice a day: the positions of the two frozen round-12 winners and their forward records, from the stored daily bars and funding. Paper only.', every:every, run:runNow }); return true; }
+    J.push({ id:'r12', lane:'heavy', prio:2, label:'Round 12 winners (harvest + dip-buying; the harvest half failed E34)', what:'Twice a day: the positions of the two frozen round-12 winners and their forward records, from the stored daily bars and funding. Paper only.', every:every, run:runNow }); return true; }
   if(!register()){ var tries = 0, iv = setInterval(function(){ if(register() || ++tries > 20) clearInterval(iv); }, 3000); }
   var nav0 = window.navigate; if(typeof nav0 === 'function') window.navigate = function(p){ var rr = nav0.apply(this, arguments); if(p === 'ostrat') setTimeout(render, 80); return rr; };
   setTimeout(function(){ try{ render(); }catch(e){} }, 1800);
@@ -33017,6 +33032,16 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
   window.OMEGA_PANIC = { state:function(){ return S; }, scan:scan, render:render, live:live, H1:H1, H3:H3, _:{ rowsOf:rowsOf, dense:dense, dayTh:dayTh, sigma:sigma, settle:settle, runCoin:runCoin, breadthAt:breadthAt, r24:r24, pctl:pctl, stats:stats } };
 })();
 </script>
+<script>/* ═══ E34 CORRECTION NOTE (v6.5.106) — one pinned Brain note so older pinned harvest notes are not the last word ═══ */
+(function(){
+  'use strict';
+  var FLAG = 'omega_e34_note_v1', n = 0;
+  function go(){ try{ if(localStorage.getItem(FLAG)) return true; var B = window.OMEGA_BRAIN; if(!B || !B.feedObservation) return false;
+      B.feedObservation({ pinned:true, strat:'omega', tf:'1w', symbol:'*', text:'Correction (E34, Nov 2026): the funding harvest (spot long + perpetual short) that passed rounds 7, 8, 10 and 12 FAILED when run on 2025\u201326: \u221217% a year, worst 30 days \u221233%; one coin\u2019s funding flipped (\u221264.6% in a month). Small steady income with a rare blow-up. Record only, not a strategy to trade.' });
+      localStorage.setItem(FLAG, '1'); return true; }catch(e){ return true; } }
+  if(!go()){ var iv = setInterval(function(){ if(go() || ++n > 30) clearInterval(iv); }, 2000); }
+})();
+</script>
 <script>/* ═══ WHY SIGNALS ARE RARE — the research record E22–E28 (v6.5.100) ═══
    A card on the Signals and Edge Lab pages that says plainly what has been tested on Binance's own archive (every USDT
    perpetual, delisted coins included, real costs and funding), what survived and why the rest failed. Static text: it changes
@@ -33049,10 +33074,10 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
         return '<div style="padding:8px 0;border-top:1px solid var(--border);' + (sub ? 'margin-left:14px;' : '') + '">' +
           (r[0] ? '<span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:4px;margin-right:8px;color:' + r[1] + ';border:1px solid ' + r[1] + ';white-space:nowrap;">' + r[0] + '</span>' : '') +
           '<b>' + r[2].replace(/^· /, '') + '</b><div class="hint" style="margin-top:4px;color:var(--text);">' + r[3] + '</div></div>'; }).join('') +
-      '<p class="hint" style="margin:8px 0 0;">Data: Binance’s archive, 903 USDT perpetuals incl. 163 delisted, real funding, costs 0.10% a side. Paper only. Next ideas not yet run: BTC/ETH timing from market-wide funding and breadth; H1/H3 on every perpetual, not only the 40 most-traded (more coins, more panics).</p></div>';
+      '<p class="hint" style="margin:8px 0 0;">Data: Binance’s archive, 903 USDT perpetuals incl. 163 delisted, real funding, costs 0.10% a side. Paper only. Both of the earlier “next ideas” have been run: BTC/ETH timing from market-wide gauges (E28 round 5, failed) and H1/H3 on every perpetual (E25, E26). Not yet tested: on-chain flows and options data (new data, not more passes over the same candles).</p></div>';
     return h; }
   var HOSTS = [['rareSigBody', 'panicSigBody'], ['rareBody', 'panicBody']];
-  function css(){ if(document.getElementById('pbCss')) return; var st = document.createElement('style'); st.id = 'pbCss'; st.textContent = '.pb-tab{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0;}.pb-tab th{text-align:left;color:var(--text-dim);font-weight:600;border-bottom:1px solid var(--border);padding:4px;}.pb-tab td{padding:4px;border-bottom:1px solid var(--border);vertical-align:top;white-space:normal;overflow-wrap:anywhere;}'; document.head.appendChild(st); }
+  function css(){ if(document.getElementById('rareCss')) return; var st = document.createElement('style'); st.id = 'rareCss'; st.textContent = '.pb-tab{width:100%;border-collapse:collapse;font-size:13px;margin:6px 0;}.pb-tab th{text-align:left;color:var(--text-dim);font-weight:600;border-bottom:1px solid var(--border);padding:4px;}.pb-tab td{padding:4px;border-bottom:1px solid var(--border);vertical-align:top;white-space:normal;overflow-wrap:anywhere;}'; document.head.appendChild(st); }
   function wire(){ HOSTS.forEach(function(p){ var after = document.getElementById(p[1]); if(after && !document.getElementById(p[0])){ var d = document.createElement('div'); d.id = p[0]; d.innerHTML = html(); after.parentNode.insertBefore(d, after.nextSibling); } }); return HOSTS.every(function(p){ return document.getElementById(p[0]); }); }
   var n = 0, iv = setInterval(function(){ css(); if(wire() || ++n > 120) clearInterval(iv); }, 1000);
   window.OMEGA_RARE = { html:html, rows:ROWS };
