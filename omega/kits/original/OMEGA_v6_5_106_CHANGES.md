@@ -1,5 +1,5 @@
 # OMEGA v6.5.106 — corrections from the bugs / misinformation audit (5 Nov 2026)
-Build: `python3 patch106.py <v6.5.105>.html <new>.html`; delivered as `apps/omega-v6_5-47.html`. Test: `s106_test.js` (12 checks;
+Build: `python3 patch106.py <v6.5.105>.html <new>.html`; delivered as `apps/omega-v6_5-47.html`. Test: `s106_test.js` (14 checks;
 `PREV=<v6.5.105>` adds the CREED byte-identity check). Full audit: `audits/bugs/BUG_REPORT.md`.
 
 Text and one Brain note only. **CREED's engine is byte-identical** (s102 and s106 with `PREV`); no rule's logic, sizing or
@@ -20,3 +20,6 @@ storage key changed.
 4. **"Risk-free" after a breakeven stop** (signal plan, Simulation plan) → the stop limits the loss, but gaps, slippage, fees
    and funding still apply (the app's own stop note already says a stop is not a guaranteed exit).
 5. **Brain:** one pinned correction note about E34, written once (flag `omega_e34_note_v1`).
+6. **Bug: two cards shared one `<style id="pbCss">`.** The research card and the panic card each create it only if it is
+   missing, so whichever 1-second timer ran first won and the panic gauge could lose its `.pgauge` rules. The research card's
+   style is now `id="rareCss"` (s106 checks both exist and the gauge rules are present).

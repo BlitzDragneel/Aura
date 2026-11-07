@@ -30,7 +30,7 @@
     return [{ grade:'A', name:'Climax reversal', plan:'round 16', where:'climaxBody', live:C, tickets:true, spec:spec(['climax', 'climax_a', 'climax_reversal']) },
       { grade:'B', name:'Panic bounce H1', plan:'E22, E25', where:'panicBody', live:h1, tickets:true, spec:spec(['panic_h1', 'h1']) },
       { grade:'B', name:'Market-wide panic H3', plan:'E22, E25', where:'panicBody', live:h3, tickets:true, spec:spec(['panic_h3', 'h3']) },
-      { grade:'C', name:'Daily Plan', plan:'E16', where:'dplanBody', live:null, tickets:false, note:D ? 'a plan per coin, followed on paper' : 'not read yet' }]; }
+      { grade:'C', name:'Daily Plan', plan:'E16', where:'dplanBody', live:null, tickets:false, note:D ? 'paper' : 'not read yet' }]; }
   function extras(){ return EDGES.filter(function(e){ return e && e.id && !BUILTIN[String(e.id).toLowerCase()] && /^[ABC]$/.test(e.grade); }); }
   function state(r){ if(r.live == null) return '<span class="rb-st">' + esc(r.note || '') + '</span>';
     if(noData()) return '<span class="rb-st off">no data</span>';
@@ -39,7 +39,7 @@
     ['A', 'B', 'C'].forEach(function(g){ var R = rows.filter(function(r){ return r.grade === g; }), E = ex.filter(function(e){ return e.grade === g; }); if(!R.length && !E.length) return;
       h += '<div class="rb-g"><div class="rb-gh g' + g + '">' + GRADE[g] + '</div>';
       R.forEach(function(r){ h += '<a class="rb-row" href="#signals" data-rb="' + r.where + '"><b>' + esc(r.name) + '</b><span class="hint">' + esc(r.plan) + (r.tickets ? ' · tickets' : ' · no tickets') + (r.spec && r.spec.status ? ' · bots: ' + esc(r.spec.status) : '') + '</span>' + state(r) + '</a>'; });
-      if(E.length) h += '<details class="rb-more"><summary>' + E.length + ' more tested rule' + (E.length === 1 ? '' : 's') + ' from the research (not watched in Prime yet)</summary>' + E.map(function(e){
+      if(E.length) h += '<details class="rb-more"><summary>' + E.length + ' more from the research list (Prime does not watch ' + (E.length === 1 ? 'it' : 'them') + ' yet)</summary>' + E.map(function(e){
           return '<div class="rb-row x"><b>' + esc(e.name || e.id) + '</b><span class="hint">' + esc([e.plan, e.tf, e.status, e.max_leverage ? 'max ' + e.max_leverage + '×' : ''].filter(Boolean).join(' · ')) + '</span><span class="rb-st">signals: Live API / bots</span></div>'; }).join('') + '</details>';
       h += '</div>'; });
     return h + (EDGES.length ? '<p class="hint" style="margin:6px 0 0">Research list embedded ' + esc(window.PRIME_EDGES_AT || '') + ' from edges/approved.json.</p>' : '') + '</div>'; }
@@ -54,7 +54,7 @@
   css.textContent = '.rb-g{margin:8px 0 2px}.rb-gh{font:700 12px system-ui;letter-spacing:.04em;margin:0 0 2px}.rb-gh.gA{color:var(--bull)}.rb-gh.gB{color:var(--amber)}.rb-gh.gC{color:var(--text-dim)}' +
     '.rb-row{display:grid;grid-template-columns:1fr auto;gap:0 10px;align-items:center;min-height:44px;padding:6px 2px;border-bottom:1px solid var(--border);color:inherit;text-decoration:none}.rb-row .hint{grid-column:1}.rb-row b{grid-column:1;font-size:14.5px}.rb-row .rb-st{grid-column:2;grid-row:1/span 2}' +
     '.rb-st{font:600 12px system-ui;color:var(--text-dim);border:1px solid var(--border);border-radius:999px;padding:3px 9px;white-space:nowrap}.rb-st.on{color:#fff;background:var(--bull);border-color:var(--bull)}.rb-st.off{color:var(--bear);border-color:var(--bear)}' +
-    '.rb-more summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:13.5px;color:var(--ink)}';
+    '.rb-more summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:13.5px;color:var(--ink);list-style:none}.rb-more summary::before{content:\'\\25B8\';margin-right:8px}.rb-more[open] summary::before{content:\'\\25BE\'}';
   document.head.appendChild(css);
   window.PRIME_UX = { noData:noData, ordersNote:ordersNote, unchecked:unchecked, checked:checked, rulebook:rulebook, renderRulebook:renderRulebook, evidenceExtras:evidenceExtras, extras:extras };
   if(window.PRIME_UI) window.PRIME_UI.show('today', true);

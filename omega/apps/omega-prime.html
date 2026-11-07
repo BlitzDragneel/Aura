@@ -8,7 +8,7 @@
 <style>
 :root{
   --bg:#f3efe3; --paper:#fbf8f0; --panel:#fffdf7; --panel2:#efe8d6; --border:#d9cfb6; --grid:rgba(120,104,70,.10);
-  --text:#1c2230; --text-dim:#6a675c; --gold:#a8701a; --amber:#a8641a; --bull:#1d7a4b; --bear:#b3372f; --ink:#1c2230;
+  --text:#1c2230; --text-dim:#6a675c; --gold:#8f5e12; --amber:#a8641a; --bull:#1d7a4b; --bear:#b3372f; --ink:#1c2230;
   --shadow:0 1px 0 rgba(60,50,30,.06), 0 6px 18px rgba(60,50,30,.07);
   --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif; --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
@@ -68,6 +68,15 @@ h2.pg{font-size:26px;margin:4px 0 2px;} .pg-sub{color:var(--text-dim);margin:0 0
 .sw{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:14px;} .sw input{width:20px;height:20px;}
 .ev-warn{background:rgba(179,55,47,.10);color:var(--bear);border-radius:8px;padding:8px 10px;font-size:13px;font-weight:600;margin:0 0 8px;}
 input,select{font:inherit;}
+/* UX 5 Nov 2026: tap targets >= 44 px, readable small print, grade C as paper, no-data verdict, grouped ledger */
+main .btn,main .btn-outline,#ticketsBody .tk-btn{min-height:44px;} #ticketsBody .tk-btn{padding:10px 16px;font-size:14px;margin:2px 6px 2px 0;}
+main .mr-tabs button{min-height:44px;min-width:44px;} #ticketsBody input{min-height:44px;} main .sw{min-height:44px;} main .sw input{width:24px;height:24px;}
+main .hint{font-size:13px;} .bar button{font-size:12px;min-height:56px;} .tag{font-size:12px;}
+.verdict.gc{background:var(--panel);color:var(--ink);border:2px dashed var(--ink);box-shadow:none;} .verdict.gc .v{font-size:25px;color:var(--ink);} .verdict.gc.short .v{color:var(--bear);} .verdict.gc.long .v{color:var(--bull);} .verdict.gc .chips span{border-color:var(--border);}
+.gc-note{margin-top:8px;font:600 13.5px system-ui;color:var(--bear);}
+.verdict.nodata{background:repeating-linear-gradient(135deg,#283043 0 14px,#1c2230 14px 28px);} .verdict.nodata .v{color:#e4dfd2;}
+.lg-sum{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 6px;} .lg-sum button{min-height:44px;border:1px solid var(--border);background:var(--paper);border-radius:999px;padding:6px 14px;font:600 13px system-ui;color:var(--ink);cursor:pointer;}
+.lg-h{font:700 12.5px system-ui;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 2px;color:var(--text-dim);}
 </style>
 </head>
 <body>
@@ -77,9 +86,9 @@ input,select{font:inherit;}
   <div class="clock" id="clock">—</div>
 </div></header>
 <main>
-  <section class="page" id="page-today"><div id="todayBody"></div><div id="ticketsBody"></div><div id="evBody"></div></section>
+  <section class="page" id="page-today"><div id="todayBody"></div><div id="ordersNote"></div><div id="ticketsBody"></div><div id="todayMore"></div><div id="evBody"></div></section>
   <section class="page" id="page-chart"><h2 class="pg">Chart</h2><p class="pg-sub">One coin at a time: candles, who is buying, where the liquidity sits, the book, and today’s plan drawn as zones.</p><div id="cockpitBody"></div><div id="mreadBody"></div></section>
-  <section class="page" id="page-signals"><h2 class="pg">Signals</h2><p class="pg-sub">Grade A: passed a fair test (climax). Grade B: passed a fair test, not yet confirmed (panic bounce). Grade C: the Daily Plan, unproven and followed on paper.</p><div id="climaxBody"></div><div id="panicBody"></div><div id="dplanBody"></div></section>
+  <section class="page" id="page-signals"><h2 class="pg">Signals</h2><p class="pg-sub">Grade A: passed a fair test (climax). Grade B: passed a fair test, not yet confirmed (panic bounce). Grade C: the Daily Plan, unproven and followed on paper.</p><div id="rulebookBody"></div><div id="climaxBody"></div><div id="panicBody"></div><div id="dplanBody"></div></section>
   <section class="page" id="page-risk"><h2 class="pg">Risk</h2><p class="pg-sub">Risk makes money; managing it decides whether it does.</p><div id="rguardBody"></div><div id="truthRgBody"></div><div id="reviewBody"></div></section>
   <section class="page" id="page-evidence"><h2 class="pg">Evidence</h2><p class="pg-sub">Everything tested, what passed, what failed, and what is still being measured.</p><div id="evidenceBody"></div><div id="truthBody"></div><div id="settingsBody"></div></section>
 </main>
@@ -866,12 +875,14 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
       if(q.status === 'pending') return { cls:'b', k:'Grade B signal · ' + q.rule, v:'Panic bounce: ' + nm, w:'Down ' + (Math.abs(q.r24)*100).toFixed(1) + '% in 24 hours, in its own worst 10%. Rule H1: a buy limit at ' + fmtP(q.limit) + ' until ' + new Date((q.t + 4)*3600e3).toISOString().slice(11, 16) + ' UTC; if it fills, sell 24 hours later.' + tail };
       return { cls:'b', k:'Grade B trade · ' + q.rule, v:'Holding ' + nm + ' to ' + new Date((q.due + 1)*3600e3).toISOString().slice(11, 16) + ' UTC', w:'In at ' + fmtP(q.entry) + (q.rule === 'H3' ? ' in a market-wide panic' : ' after its panic') + '. The rule sells 24 hours after entry, whatever happens; nothing to do until then.' + tail }; }
     var live = (plans || []).filter(function(p){ return p.side === 'long' || p.side === 'short'; });
-    if(live.length){ var p = live.sort(function(a, b){ return b.rr - a.rr; })[0]; return { cls:p.side, k:'Grade C plan · unproven · paper first', v:p.sym.replace('USDT', '') + ' ' + p.side.toUpperCase() + ' at ' + fmtP(p.entry), w:'Stop ' + fmtP(p.stop) + ', target ' + fmtP(p.target) + ' (' + p.rr.toFixed(1) + ':1). ' + p.why + '. Wait for price to come to the entry; never chase.' + (live.length > 1 ? ' ' + (live.length - 1) + ' more on the Signals page.' : '') }; }
+    if(live.length){ var p = live.sort(function(a, b){ return b.rr - a.rr; })[0]; return { cls:p.side + ' gc', k:'Grade C plan · unproven · paper first', v:p.sym.replace('USDT', '') + ' ' + p.side.toUpperCase() + ' at ' + fmtP(p.entry), w:'Stop ' + fmtP(p.stop) + ', target ' + fmtP(p.target) + ' (' + p.rr.toFixed(1) + ':1). ' + p.why + '. Wait for price to come to the entry; never chase.' + (live.length > 1 ? ' ' + (live.length - 1) + ' more on the Signals page.' : '') }; }
+    if(ctx.noData) return { cls:'wait nodata', k:'No market data', v:'Cannot check today', w:'Prime could not reach Binance on its last scans, so it does not know whether a tested rule fired. This is not a stand-aside: it is unknown. Check the connection (Binance refuses some networks), then reopen. Do not trade from this screen until the data returns.' };
+    if(ctx.unchecked) return { cls:'wait', k:'Today', v:'Checking the market…', w:'The first scan of the 40 most-traded coins starts a few seconds after opening; the verdict follows it.' };
     return { cls:'wait', k:'Today', v:'Stand aside', w:'No setup meets the rules right now. Expect this on most days: no daily rule has passed a fair test (E28 tried 12,480), and the tested edges come in rare panics. Standing aside is a position: it keeps the account ready for a real one.' }; }
   function dial(S){ var order = ['DEPRESSED', 'CORRECTING', 'NORMAL', 'CONSOLIDATING', 'BOOMING'], lab = ['Depressed', 'Correcting', 'Normal', 'Quiet', 'Booming'], col = ['#b3372f', '#c27b2b', '#8a8577', '#6f7f8f', '#1d7a4b'], i = S ? Math.max(0, order.indexOf(S.state)) : 2, s = '';
     for(var k = 0; k < 5; k++){ var a0 = Math.PI*(1 - k/5), a1 = Math.PI*(1 - (k + 1)/5), r = 120, cx = 170, cy = 158, x0 = cx + r*Math.cos(a0), y0 = cy - r*Math.sin(a0), x1 = cx + r*Math.cos(a1), y1 = cy - r*Math.sin(a1), am = (a0 + a1)/2;
       s += '<path d="M' + x0.toFixed(1) + ' ' + y0.toFixed(1) + ' A' + r + ' ' + r + ' 0 0 1 ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + '" stroke="' + col[k] + '" stroke-width="' + (k === i ? 18 : 10) + '" fill="none" opacity="' + (k === i ? 1 : 0.35) + '"/>' +
-        '<text x="' + (cx + (r + 22)*Math.cos(am)).toFixed(1) + '" y="' + (cy - (r + 22)*Math.sin(am) + 4).toFixed(1) + '" text-anchor="middle" style="font:600 11px system-ui;fill:' + (k === i ? col[k] : '#8a8577') + '">' + lab[k] + '</text>'; }
+        '<text x="' + (cx + (r + 22)*Math.cos(am)).toFixed(1) + '" y="' + (cy - (r + 22)*Math.sin(am) + 4).toFixed(1) + '" text-anchor="middle" style="font:600 11px system-ui;fill:' + (k === i ? col[k] : '#6a675c') + '">' + lab[k] + '</text>'; }
     var an = Math.PI*(1 - (i + 0.5)/5); s += '<line x1="170" y1="158" x2="' + (170 + 92*Math.cos(an)).toFixed(1) + '" y2="' + (158 - 92*Math.sin(an)).toFixed(1) + '" stroke="#1c2230" stroke-width="3" stroke-linecap="round"/><circle cx="170" cy="158" r="7" fill="#1c2230"/>';
     return '<svg class="dial" viewBox="0 0 340 176" role="img" aria-label="Market state">' + s + '</svg>'; }
   function today(){ var DP = window.OMEGA_DPLAN, S = DP ? DP.state().S : null, reads = DP ? DP.state().reads : {}, rec = lsj('omega_dplan_v1') || { plans:{} }, now = Date.now();
@@ -879,9 +890,9 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
     var C = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX.state().trades.filter(function(t){ return t.status === 'open'; }) : [];
     var ER = window.OMEGA_REVIEW ? window.OMEGA_REVIEW.eventRisk(now) : null, RG = window.OMEGA_RGUARD, M = lsj('omega_rguard_mine_v1'), L = RG && M ? RG._.limits(M, now) : (RG ? RG._.limits(RG._.newAcct(100), now) : null);
     var PB = window.OMEGA_PANIC ? window.OMEGA_PANIC.live() : [];
-    var V = verdict({ eventRisk:ER, climaxOpen:C, panicLive:PB, plans:plans, limits:L }), T = window.OMEGA_TRUTH ? window.OMEGA_TRUTH.state().last : null, h = '';
-    h += '<div class="verdict ' + V.cls + '"><div class="k">' + esc(V.k) + '</div><div class="v">' + esc(V.v) + '</div><div class="w">' + esc(V.w) + '</div><div class="chips"><span>Risk ' + (L ? (L.risk*100).toFixed(1) : '0.5') + '% a trade</span><span>' + (L ? L.open : 0) + ' of 2 open</span><span>' + (L && L.dayLoss > 0 ? 'today −' + (L.dayLoss*100).toFixed(1) + '%' : 'no loss today') + '</span>' + (T ? '<span>' + (T.bad.length + T.badR.length ? (T.bad.length + T.badR.length) + ' data problem(s)' : 'data live') + '</span>' : '') + '</div></div>';
-    h += '<div class="grid2"><div class="card"><h3 class="dp-h">The market</h3>' + dial(S) + '<p class="dp-p" style="text-align:center;margin-top:0">' + (S && S.state !== 'UNKNOWN' ? (S.uptrend ? 'Uptrend' : 'Downtrend') + (S.falling ? ' · <b class="dn">falling this week</b>' : '') + ' · top-5 index ' + pct(S.r7) + ' in 7 days, ' + pct(S.r30) + ' in 30' : 'Reading the market…') + '</p></div>';
+    var V = verdict({ eventRisk:ER, climaxOpen:C, panicLive:PB, plans:plans, limits:L, noData:window.PRIME_UX ? window.PRIME_UX.noData() : false, unchecked:window.PRIME_UX ? window.PRIME_UX.unchecked() : false }), T = window.OMEGA_TRUTH ? window.OMEGA_TRUTH.state().last : null, h = '';
+    h += '<div class="verdict ' + V.cls + '"><div class="k">' + esc(V.k) + '</div><div class="v">' + esc(V.v) + '</div><div class="w">' + esc(V.w) + '</div>' + (/ gc/.test(V.cls) ? '<div class="gc-note">Not an order. Prime writes tickets only for rules that passed a fair test; this plan is followed on paper.</div>' : '') + '<div class="chips"><span>Risk ' + (L ? (L.risk*100).toFixed(1) : '0.5') + '% a trade</span><span>' + (L ? L.open : 0) + ' of 2 open</span><span>' + (L && L.dayLoss > 0 ? 'today −' + (L.dayLoss*100).toFixed(1) + '%' : 'no loss today') + '</span>' + (T ? '<span>' + (T.bad.length + T.badR.length ? (T.bad.length + T.badR.length) + ' data problem(s)' : (T.reads && T.reads.length ? 'data live' : 'data not read')) + '</span>' : '') + (window.PRIME_UX ? '<span>' + window.PRIME_UX.checked() + '</span>' : '') + '</div></div>';
+    h += '<!--more--><div class="grid2"><div class="card"><h3 class="dp-h">The market</h3>' + dial(S) + '<p class="dp-p" style="text-align:center;margin-top:0">' + (S && S.state !== 'UNKNOWN' ? (S.uptrend ? 'Uptrend' : 'Downtrend') + (S.falling ? ' · <b class="dn">falling this week</b>' : '') + ' · top-5 index ' + pct(S.r7) + ' in 7 days, ' + pct(S.r30) + ' in 30' : 'Reading the market…') + '</p></div>';
     h += '<div class="card"><h3 class="dp-h">The five biggest coins</h3><div class="coins">' + ['BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'XRPUSDT'].map(function(s){ var A = reads[s], P = (rec.plans || {})[s] || {};
         return '<div class="coin"><b>' + s.replace('USDT', '') + '</b><div class="p">' + (A && !A.err ? fmtP(A.price) : '—') + '</div><div class="p ' + (A && A.chg24 >= 0 ? 'up' : 'dn') + '">' + (A && !A.err ? pct(A.chg24) : '') + '</div><div class="s ' + (P.side === 'long' ? 'up' : P.side === 'short' ? 'dn' : '') + '">' + (P.side === 'long' ? 'LONG' : P.side === 'short' ? 'SHORT' : 'aside') + '</div></div>'; }).join('') + '</div><p class="hint" style="margin-top:8px">Side from the market state and each coin’s trend. Open <b>Chart</b> to see a coin’s levels and plan.</p></div></div>';
     return h; }
@@ -920,7 +931,7 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
     ['run', 'Daily Plan forward record (E16)', 'Judged once after 50 paper trades.'],
     ['run', 'Growth Bot from 100 USDT (E17)', 'Judged once after 50 trades or 26 weeks.']];
   function evidence(){ var dp = lsj('omega_dplan_v1') || { trades:[] }, bot = lsj('omega_rguard_bot_v1') || { closed:[] }, cs = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX._.stats() : { n:0 }, ph = window.OMEGA_PANIC ? window.OMEGA_PANIC._.stats('H1') : { n:0 }, p3 = window.OMEGA_PANIC ? window.OMEGA_PANIC._.stats('H3') : { n:0 };
-    return '<div class="card"><h3 class="dp-h">What is known</h3><ul class="ledger" style="list-style:none;padding:0">' + LEDGER.map(function(r){ return '<li><span class="tag ' + r[0] + '">' + (r[0] === 'pass' ? 'PASSED' : r[0] === 'fail' ? 'FAILED' : 'MEASURING') + '</span><b>' + esc(r[1]) + '</b><br><span class="hint">' + esc(r[2]) + '</span></li>'; }).join('') + '</ul>' +
+    return '<div class="card"><h3 class="dp-h">What is known</h3>' + '<div class="lg-sum">' + ['pass', 'run', 'fail'].map(function(g){ return '<button type="button" onclick="document.getElementById(\'lg-' + g + '\').scrollIntoView({behavior:\'smooth\'})">' + LEDGER.filter(function(r){ return r[0] === g; }).length + ' ' + { pass:'passed', run:'being measured', fail:'failed' }[g] + '</button>'; }).join('') + '</div>' + ['pass', 'run', 'fail'].map(function(g){ return '<h4 class="lg-h" id="lg-' + g + '">' + { pass:'Passed a fair test', run:'Being measured', fail:'Failed (kept on record)' }[g] + '</h4><ul class="ledger" style="list-style:none;padding:0">' + LEDGER.filter(function(r){ return r[0] === g; }).map(function(r){ return '<li><span class="tag ' + r[0] + '">' + (r[0] === 'pass' ? 'PASSED' : r[0] === 'fail' ? 'FAILED' : 'MEASURING') + '</span><b>' + esc(r[1]) + '</b><br><span class="hint">' + esc(r[2]) + '</span></li>'; }).join('') + '</ul>'; }).join('') +
       '<p class="dp-p"><b>Being measured in this app:</b> climax trades ' + cs.n + ' closed · panic bounce H1 ' + ph.n + ' and H3 ' + p3.n + ' of 50 · Daily Plan ' + (dp.trades || []).length + ' of 50 · Growth Bot ' + (bot.closed || []).length + ' of 50.</p><p class="hint">Every test was written down before its data, run once, and counted. Nothing here is promoted on a lucky streak.</p></div>'; }
   // ── settings and the Autopilot table ──
   function settings(){ var O = window.OMEGA_OPERATOR, st = O.state().jobs || {}, c = cfg(), h = '<div class="card"><h3 class="dp-h">Autopilot</h3><p class="hint">Runs while the app is open. Each job can be switched off.</p><table class="mr-tab"><tr><th>Job</th><th>Last run</th><th>On</th></tr>';
@@ -941,20 +952,22 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
   async function applyWake(){ try{ if(cfg().wake && 'wakeLock' in navigator && document.visibilityState === 'visible'){ if(!wake) wake = await navigator.wakeLock.request('screen'); } else if(wake){ await wake.release(); wake = null; } }catch(e){ wake = null; } }
   document.addEventListener('visibilitychange', function(){ wake = null; applyWake(); });
   // ── navigation ──
-  function show(p){ cur = p; PAGES.forEach(function(x){ var s = el('page-' + x[0]); if(s) s.classList.toggle('on', x[0] === p); });
+  function paintToday(){ var s = today().split('<!--more-->'), m = el('todayMore'); el('todayBody').innerHTML = s[0]; if(el('ordersNote')) el('ordersNote').innerHTML = window.PRIME_UX ? window.PRIME_UX.ordersNote() : ''; if(m) m.innerHTML = s[1] || ''; else el('todayBody').innerHTML += (s[1] || ''); }
+  function pushPage(p){ try{ if(location.hash === '#' + p) return; if(!history.state) history.replaceState({ p:p }, '', '#' + p); else history.pushState({ p:p }, '', '#' + p); }catch(e){} }
+  function show(p, noPush){ cur = p; PAGES.forEach(function(x){ var s = el('page-' + x[0]); if(s) s.classList.toggle('on', x[0] === p); });
     Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function(b){ b.classList.toggle('on', b.getAttribute('data-go') === p); });
-    try{ if(p === 'today'){ el('todayBody').innerHTML = today(); if(window.OMEGA_DPLAN && !window.OMEGA_DPLAN.state().S && !window.OMEGA_DPLAN.state().busy) window.OMEGA_DPLAN.run().then(function(){ if(cur === 'today') el('todayBody').innerHTML = today(); }); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }
+    try{ if(p === 'today'){ paintToday(); if(window.OMEGA_DPLAN && !window.OMEGA_DPLAN.state().S && !window.OMEGA_DPLAN.state().busy) window.OMEGA_DPLAN.run().then(function(){ if(cur === 'today') paintToday(); }); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }
       if(p === 'chart'){ if(window.OMEGA_COCKPIT) window.OMEGA_COCKPIT.onShow(); if(window.OMEGA_MREAD) window.OMEGA_MREAD.onShow(); }
-      if(p === 'signals'){ if(window.OMEGA_CLIMAX) window.OMEGA_CLIMAX.render(); if(window.OMEGA_PANIC) window.OMEGA_PANIC.render(); if(window.OMEGA_DPLAN) window.OMEGA_DPLAN.onShow(); }
+      if(p === 'signals'){ if(window.OMEGA_CLIMAX) window.OMEGA_CLIMAX.render(); if(window.OMEGA_PANIC) window.OMEGA_PANIC.render(); if(window.OMEGA_DPLAN) window.OMEGA_DPLAN.onShow(); if(window.PRIME_UX) window.PRIME_UX.renderRulebook(); }
       if(p === 'risk'){ if(window.OMEGA_RGUARD) window.OMEGA_RGUARD.onShow(); if(window.OMEGA_TRUTH) window.OMEGA_TRUTH.run(); if(window.OMEGA_REVIEW) window.OMEGA_REVIEW.render(); }
-      if(p === 'evidence'){ el('evidenceBody').innerHTML = evidence(); if(window.OMEGA_TRUTH) window.OMEGA_TRUTH.run(); renderSettings(); } }catch(e){ if(window.console) console.warn('Prime page', p, e); }
-    window.scrollTo(0, 0); }
+      if(p === 'evidence'){ el('evidenceBody').innerHTML = evidence() + (window.PRIME_UX ? window.PRIME_UX.evidenceExtras() : ''); if(window.OMEGA_TRUTH) window.OMEGA_TRUTH.run(); renderSettings(); } }catch(e){ if(window.console) console.warn('Prime page', p, e); }
+    window.scrollTo(0, 0); if(!noPush) pushPage(p); }
   window.navigate = show;
   function nav(){ var t = el('tabs'), b = el('bar'); var mk = function(x, mob){ return '<button type="button" data-go="' + x[0] + '">' + (mob ? '<svg viewBox="0 0 24 24"><path d="' + x[2] + '"/></svg>' : '') + x[1] + '</button>'; };
     if(t) t.innerHTML = PAGES.map(function(x){ return mk(x, false); }).join(''); if(b) b.innerHTML = PAGES.map(function(x){ return mk(x, true); }).join('');
     Array.prototype.forEach.call(document.querySelectorAll('[data-go]'), function(x){ x.onclick = function(){ show(x.getAttribute('data-go')); }; }); }
   function clock(){ var d = new Date(), h = d.getUTCHours(), s = h < 8 ? 'Asia' : h < 13 ? 'London' : h < 21 ? 'US hours' : 'Late'; var c = el('clock'); if(c) c.innerHTML = d.toISOString().slice(11, 16) + ' UTC · ' + String((h + 20) % 24).padStart(2, '0') + d.toISOString().slice(13, 16) + ' Tobago<br>' + s; }
-  window.PRIME_UI = { show:show, verdict:verdict, today:today, evidence:evidence, autopilotChanged:function(){ if(cur === 'evidence') renderSettings(); if(cur === 'today') el('todayBody').innerHTML = today(); } };
+  window.PRIME_UI = { show:show, verdict:verdict, today:today, evidence:evidence, autopilotChanged:function(){ if(cur === 'evidence') renderSettings(); if(cur === 'today') paintToday(); if(cur === 'signals' && window.PRIME_UX) window.PRIME_UX.renderRulebook(); } };
   nav(); clock(); setInterval(clock, 30e3); applyWake(); show('today');
 })();
 </script>
@@ -1125,6 +1138,71 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
   setInterval(function(){ remind(); var pg = document.getElementById('page-today'); if(pg && pg.offsetParent !== null) render(); }, 20e3);
   setTimeout(function(){ render(); remind(); }, 1500);
   window.OMEGA_TICKETS = { render:render, tickets:tickets, state:function(){ return S; } };
+})();
+</script>
+<script>/* ═══ PRIME EDGES — rules that passed the research protocol (edges/approved.json), embedded at build time ═══ */
+window.PRIME_EDGES = [{"id": "climax_a", "grade": "A", "plan": "round 16 (final test on 324 untouched coins)", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "omega/OMEGA_HANDOVER_2026-11-02.md section 3; omega/research/archive-2026-10-20/climax.py"}, {"id": "panic_h1", "grade": "B", "plan": "E22, E25", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "edges/results/E25_result.json; omega/research/e25kit/reference_e22.py"}, {"id": "panic_h3", "grade": "B", "plan": "E22, E25", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "edges/results/E25_result.json; omega/research/e25kit/reference_e22.py"}]; window.PRIME_EDGES_AT = "2026-11-05";
+</script>
+<script>/* ═══ PRIME UX — data health, the rule book by grade, back button (5 Nov 2026) ═══
+   Display only: reads the watches' state, never changes a rule, a threshold, a ticket or a trade.
+   1. Data health: if the hourly scans could not reach the market, Today says so instead of "Stand aside" (which would claim
+      that the rules were checked), and the "data live" chip appears only when the data check really read a feed.
+   2. The rule book: every rule Prime knows, grouped by grade (A, B, C), one line each with its live state. Rules that the
+      research adds to edges/approved.json are embedded at build time (window.PRIME_EDGES, by patch_prime_ux.py) and appear
+      here and in Evidence under their grade, without new pages or cards. Prime watches only the rules it has code for; the
+      others say where their signals come from.
+   3. Back button: each page gets its own address (#today, #signals…), so Android's back returns to the previous page. */
+(function(){
+  'use strict';
+  var H = 3600e3, EDGES = Array.isArray(window.PRIME_EDGES) ? window.PRIME_EDGES : [];
+  var BUILTIN = { climax:1, climax_a:1, climax_reversal:1, panic_h1:1, panic_h3:1, h1:1, h3:1, dplan:1, daily_plan:1 };
+  function spec(ids){ for(var i = 0; i < EDGES.length; i++){ if(EDGES[i] && ids.indexOf(String(EDGES[i].id).toLowerCase()) >= 0) return EDGES[i]; } return null; }
+  function esc(t){ return String(t == null ? '' : t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
+  function job(id){ var O = window.OMEGA_OPERATOR, s = O && O.state().jobs; return (s && s[id]) || {}; }
+  function hhmm(ms){ return new Date(ms).toISOString().slice(11, 16) + ' UTC'; }
+  // ── 1. data health ──
+  function failed(id){ var s = job(id); return !!(s.last && /^Problem/.test(s.result || '')); }
+  function noData(){ return (typeof navigator !== 'undefined' && navigator.onLine === false) || (failed('climax') && failed('panic')); }
+  function unchecked(){ return !job('climax').last && !job('panic').last; }
+  function checked(){ var a = job('climax'), b = job('panic'), t = Math.max(a.last || 0, b.last || 0);
+    if(!t) return 'signals not checked yet'; if(noData()) return 'no market data since ' + hhmm(t); return 'signals checked ' + hhmm(t); }
+  function ordersNote(){ return noData() ? '<p class="ev-warn" style="margin:0 0 10px">No market data: “No order to place” below means only that no signal was found before the connection failed. Orders already placed still follow their sell times.</p>' : ''; }
+  // ── 2. the rule book ──
+  var GRADE = { A:'Grade A · passed a fair test', B:'Grade B · passed, not yet confirmed', C:'Grade C · unproven, paper only' };
+  function builtins(){ var C = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX.state().trades.filter(function(t){ return t.status === 'open'; }).length : 0;
+    var P = window.OMEGA_PANIC ? window.OMEGA_PANIC.live() : [], h1 = P.filter(function(t){ return t.rule === 'H1'; }).length, h3 = P.length - h1;
+    var D = window.OMEGA_DPLAN && window.OMEGA_DPLAN.state().S;
+    return [{ grade:'A', name:'Climax reversal', plan:'round 16', where:'climaxBody', live:C, tickets:true, spec:spec(['climax', 'climax_a', 'climax_reversal']) },
+      { grade:'B', name:'Panic bounce H1', plan:'E22, E25', where:'panicBody', live:h1, tickets:true, spec:spec(['panic_h1', 'h1']) },
+      { grade:'B', name:'Market-wide panic H3', plan:'E22, E25', where:'panicBody', live:h3, tickets:true, spec:spec(['panic_h3', 'h3']) },
+      { grade:'C', name:'Daily Plan', plan:'E16', where:'dplanBody', live:null, tickets:false, note:D ? 'paper' : 'not read yet' }]; }
+  function extras(){ return EDGES.filter(function(e){ return e && e.id && !BUILTIN[String(e.id).toLowerCase()] && /^[ABC]$/.test(e.grade); }); }
+  function state(r){ if(r.live == null) return '<span class="rb-st">' + esc(r.note || '') + '</span>';
+    if(noData()) return '<span class="rb-st off">no data</span>';
+    return r.live ? '<span class="rb-st on">' + r.live + ' live</span>' : '<span class="rb-st">quiet</span>'; }
+  function rulebook(){ var rows = builtins(), ex = extras(), h = '<div class="card rb"><h3 class="dp-h">The rule book</h3><p class="hint" style="margin:0 0 6px">Every rule Prime knows, by grade. Tickets come only from grades A and B.</p>';
+    ['A', 'B', 'C'].forEach(function(g){ var R = rows.filter(function(r){ return r.grade === g; }), E = ex.filter(function(e){ return e.grade === g; }); if(!R.length && !E.length) return;
+      h += '<div class="rb-g"><div class="rb-gh g' + g + '">' + GRADE[g] + '</div>';
+      R.forEach(function(r){ h += '<a class="rb-row" href="#signals" data-rb="' + r.where + '"><b>' + esc(r.name) + '</b><span class="hint">' + esc(r.plan) + (r.tickets ? ' · tickets' : ' · no tickets') + (r.spec && r.spec.status ? ' · bots: ' + esc(r.spec.status) : '') + '</span>' + state(r) + '</a>'; });
+      if(E.length) h += '<details class="rb-more"><summary>' + E.length + ' more from the research list (Prime does not watch ' + (E.length === 1 ? 'it' : 'them') + ' yet)</summary>' + E.map(function(e){
+          return '<div class="rb-row x"><b>' + esc(e.name || e.id) + '</b><span class="hint">' + esc([e.plan, e.tf, e.status, e.max_leverage ? 'max ' + e.max_leverage + '×' : ''].filter(Boolean).join(' · ')) + '</span><span class="rb-st">signals: Live API / bots</span></div>'; }).join('') + '</details>';
+      h += '</div>'; });
+    return h + (EDGES.length ? '<p class="hint" style="margin:6px 0 0">Research list embedded ' + esc(window.PRIME_EDGES_AT || '') + ' from edges/approved.json.</p>' : '') + '</div>'; }
+  function renderRulebook(){ var b = document.getElementById('rulebookBody'); if(!b) return; b.innerHTML = rulebook();
+    Array.prototype.forEach.call(b.querySelectorAll('[data-rb]'), function(a){ a.onclick = function(ev){ ev.preventDefault(); var t = document.getElementById(a.getAttribute('data-rb')); if(t) t.scrollIntoView({ behavior:'smooth', block:'start' }); }; }); }
+  function evidenceExtras(){ var ex = extras(); if(!ex.length) return '';
+    return '<div class="card"><h3 class="dp-h">Added by the research (edges/approved.json)</h3><ul class="ledger" style="list-style:none;padding:0">' + ex.map(function(e){
+      return '<li><span class="tag pass">PASSED · ' + esc(e.grade) + '</span><b>' + esc(e.name || e.id) + '</b><br><span class="hint">' + esc([e.plan, e.tf, 'status ' + (e.status || 'paper'), e.max_leverage ? 'highest safe leverage ' + e.max_leverage + '×' : '', e.evidence].filter(Boolean).join(' · ')) + '</span></li>'; }).join('') + '</ul></div>'; }
+  // ── 3. pages with their own address, for the back button ──
+  window.addEventListener('popstate', function(){ var p = (location.hash || '#today').slice(1); if(document.getElementById('page-' + p) && window.PRIME_UI) window.PRIME_UI.show(p, true); });
+  var css = document.createElement('style'); css.id = 'uxCss';
+  css.textContent = '.rb-g{margin:8px 0 2px}.rb-gh{font:700 12px system-ui;letter-spacing:.04em;margin:0 0 2px}.rb-gh.gA{color:var(--bull)}.rb-gh.gB{color:var(--amber)}.rb-gh.gC{color:var(--text-dim)}' +
+    '.rb-row{display:grid;grid-template-columns:1fr auto;gap:0 10px;align-items:center;min-height:44px;padding:6px 2px;border-bottom:1px solid var(--border);color:inherit;text-decoration:none}.rb-row .hint{grid-column:1}.rb-row b{grid-column:1;font-size:14.5px}.rb-row .rb-st{grid-column:2;grid-row:1/span 2}' +
+    '.rb-st{font:600 12px system-ui;color:var(--text-dim);border:1px solid var(--border);border-radius:999px;padding:3px 9px;white-space:nowrap}.rb-st.on{color:#fff;background:var(--bull);border-color:var(--bull)}.rb-st.off{color:var(--bear);border-color:var(--bear)}' +
+    '.rb-more summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-size:13.5px;color:var(--ink);list-style:none}.rb-more summary::before{content:\'\\25B8\';margin-right:8px}.rb-more[open] summary::before{content:\'\\25BE\'}';
+  document.head.appendChild(css);
+  window.PRIME_UX = { noData:noData, ordersNote:ordersNote, unchecked:unchecked, checked:checked, rulebook:rulebook, renderRulebook:renderRulebook, evidenceExtras:evidenceExtras, extras:extras };
+  if(window.PRIME_UI) window.PRIME_UI.show('today', true);
 })();
 </script>
 

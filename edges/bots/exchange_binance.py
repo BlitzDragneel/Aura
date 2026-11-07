@@ -34,6 +34,10 @@ class BinanceError(Exception):
         self.status, self.code = status, code
 
 
+class TransportError(BinanceError):
+    """Network failure / timeout: the request MAY have reached the exchange (an order may exist)."""
+
+
 # ---------------------------------------------------------------- public market data
 class MarketData:
     """Closed candles for the signal side. Binance futures first; if unreachable, omega/live_api's providers
@@ -112,24 +116,40 @@ class BinanceFutures:
     def __repr__(self):            # never print the key
         return f"BinanceFutures({self.base})"
 
-    def _req(self, method, path, params=None, signed=True, base=None):
+    def _req(self, method, path, params=None, signed=True, base=None, _retry=True):
         p = {k: v for k, v in (params or {}).items() if v is not None}
         headers = {}
         if signed:
-            p["timestamp"] = int(time.time() * 1000)
+            p["timestamp"] = int(time.time() * 1000 + self._offset_ms)
             p["recvWindow"] = int(self.cfg.get("recv_window", 5000))
             q = urllib.parse.urlencode(p)
             p["signature"] = hmac.new(self._s.encode(), q.encode(), hashlib.sha256).hexdigest()
             headers["X-MBX-APIKEY"] = self._k
-        r = self.c.request(method, (base or self.base) + path, params=p, headers=headers)
+        try:
+            r = self.c.request(method, (base or self.base) + path, params=p, headers=headers)
+        except httpx.HTTPError as e:
+            raise TransportError(f"network error on {path}: {type(e).__name__}") from None
         if r.status_code >= 400:
             try:
                 j = r.json()
                 code, msg = j.get("code"), j.get("msg")
             except Exception:
                 code, msg = None, r.text[:200]
+            if code == -1021 and signed and _retry:          # PC clock drifted: resync once with the server and retry
+                self.resync()
+                p = {k: v for k, v in p.items() if k not in ("timestamp", "signature", "recvWindow")}
+                return self._req(method, path, p, signed, base, _retry=False)
             raise BinanceError(f"Binance {r.status_code} on {path}: {code}: {msg}", status=r.status_code, code=code)
         return r.json()
+
+    _offset_ms = 0
+
+    def resync(self):
+        try:
+            st = self._req("GET", "/fapi/v1/time", signed=False)["serverTime"]
+            self._offset_ms = int(st) - int(time.time() * 1000)
+        except (BinanceError, KeyError, TypeError):
+            pass
 
     # -- public
     def info(self, sym):
@@ -151,12 +171,41 @@ class BinanceFutures:
     def dual_side(self):
         return bool(self._req("GET", "/fapi/v1/positionSide/dual").get("dualSidePosition"))
 
-    def withdrawals_enabled(self, spot_url="https://api.binance.com"):
-        """True/False from the key's own restrictions (live keys only). None if it cannot be checked."""
+    def key_restrictions(self, spot_url="https://api.binance.com"):
+        """The key's own permissions (Binance spot API), or None if they cannot be read (live is then refused)."""
         try:
-            r = self._req("GET", "/sapi/v1/account/apiRestrictions", base=spot_url.rstrip("/"))
-            return bool(r.get("enableWithdrawals")) or bool(r.get("enableInternalTransfer"))
-        except (BinanceError, httpx.HTTPError):
+            return self._req("GET", "/sapi/v1/account/apiRestrictions", base=spot_url.rstrip("/"))
+        except BinanceError:
+            return None
+
+    def withdrawals_enabled(self, spot_url="https://api.binance.com"):
+        r = self.key_restrictions(spot_url)
+        return None if r is None else bool(r.get("enableWithdrawals")) or bool(r.get("enableInternalTransfer"))
+
+    def open_orders(self, sym=None):
+        return self._req("GET", "/fapi/v1/openOrders", {"symbol": sym} if sym else {})
+
+    def open_algo_orders(self):
+        try:
+            r = self._req("GET", "/fapi/v1/openAlgoOrders")
+            return r.get("orders", r) if isinstance(r, dict) else r
+        except BinanceError as e:
+            if e.status in (404, 405):
+                return []
+            raise
+
+    def pending_entries(self):
+        """Symbols with a resting ENTRY order (not reduce-only, not close-position): it can fill later, so it counts."""
+        return sorted({x["symbol"] for x in self.open_orders() if str(x.get("reduceOnly")).lower() != "true"
+                       and str(x.get("closePosition")).lower() != "true"})
+
+    def find_order(self, sym, client_id):
+        """After a network error: did the order reach the exchange? Returns the order or None (never placed)."""
+        try:
+            return self._req("GET", "/fapi/v1/order", {"symbol": sym, "origClientOrderId": client_id})
+        except TransportError:
+            raise
+        except BinanceError:
             return None
 
     def positions(self):
@@ -195,8 +244,8 @@ class BinanceFutures:
         p = dict(symbol=sym, side="BUY" if side == "long" else "SELL", type="LIMIT", quantity=qty, price=price,
                  timeInForce="GTC", newClientOrderId=client_id, newOrderRespType="RESULT")
         now_ms = now_ms or time.time() * 1000
-        if expires_ms and self.cfg.get("use_gtd", True) and expires_ms - now_ms > 660_000:   # Binance: GTD > 600 s ahead
-            p.update(timeInForce="GTD", goodTillDate=int(expires_ms))
+        if expires_ms and self.cfg.get("use_gtd", True):     # Binance: GTD must be > 600 s ahead; never a forgotten GTC
+            p.update(timeInForce="GTD", goodTillDate=int(max(expires_ms, now_ms + 660_000)))
         return self._req("POST", "/fapi/v1/order", p)
 
     def place_market(self, sym, side, qty, client_id=None, reduce_only=False):
@@ -207,17 +256,25 @@ class BinanceFutures:
     def place_stop(self, sym, side, stop_price, client_id=None):
         """Close-position protective stop for a `side` position (a SELL stop for a long)."""
         xs = "SELL" if side == "long" else "BUY"
-        if self.cfg.get("stop_via_algo", True):
-            try:
-                return dict(algo=True, **self._req("POST", "/fapi/v1/algoOrder", dict(
-                    algoType="CONDITIONAL", symbol=sym, side=xs, type="STOP_MARKET", triggerPrice=stop_price,
-                    closePosition="true", workingType="MARK_PRICE", priceProtect="true", clientAlgoId=client_id)))
-            except BinanceError as e:
-                if e.status not in (404, 405):        # venue without the Algo Service: fall back to the old path
-                    raise
-        return dict(algo=False, **self._req("POST", "/fapi/v1/order", dict(
+        algo = lambda: dict(algo=True, **self._req("POST", "/fapi/v1/algoOrder", dict(
+            algoType="CONDITIONAL", symbol=sym, side=xs, type="STOP_MARKET", triggerPrice=stop_price,
+            closePosition="true", workingType="MARK_PRICE", priceProtect="true", clientAlgoId=client_id)))
+        legacy = lambda: dict(algo=False, **self._req("POST", "/fapi/v1/order", dict(
             symbol=sym, side=xs, type="STOP_MARKET", stopPrice=stop_price, closePosition="true",
             workingType="MARK_PRICE", priceProtect="true", newClientOrderId=client_id)))
+        if self.cfg.get("stop_via_algo", True):
+            try:
+                return algo()
+            except BinanceError as e:
+                if e.status not in (404, 405) or isinstance(e, TransportError):   # venue without the Algo Service
+                    raise
+            return legacy()
+        try:
+            return legacy()
+        except BinanceError as e:
+            if e.code != -4120:                       # -4120: conditional orders moved to the Algo Order API
+                raise
+            return algo()
 
     def order(self, sym, order_id):
         return self._req("GET", "/fapi/v1/order", {"symbol": sym, "orderId": order_id})
