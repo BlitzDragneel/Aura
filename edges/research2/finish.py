@@ -86,6 +86,14 @@ def main():
     o = f(name)
     res = {p: lib2.stats(lib2.period(o, p), f"{name}_{p}") for p in ("discovery", "validation", "final")}
     res["all"] = lib2.stats(o[o.index >= "2020-01-01"], f"{name}_all")
+    D = lib2.trim(lib2.daily()); Cb = D["c"][["BTCUSDT"]].astype(float)
+    btc = lib2.run_book(pd.DataFrame(1.0, index=Cb.index, columns=["BTCUSDT"]), Cb, D["qv"][["BTCUSDT"]].astype(float),
+                        lib2.fund_daily()[["BTCUSDT"]])
+    res["btc_hold"] = {p: lib2.stats(lib2.period(btc, p), f"btc_hold_{p}") for p in ("discovery", "validation", "final")}
+    def path(x):
+        x = x[x.index >= "2025-01-01"]; e = 100 * (1 + x.net).cumprod()
+        return {str(k.date()): round(float(v), 1) for k, v in e.resample("QE").last().items()}
+    res["account_path_100usdt_final"] = dict(rule=path(o), btc_hold=path(btc))
     b = bench(name)
     res["bench"] = {p: lib2.stats(lib2.period(b, p), f"bench_{p}") for p in ("discovery", "validation", "final")}
     if chosen:
@@ -105,6 +113,9 @@ def main():
     r = out["final"] or out["info_only"]
     for p in ("discovery", "validation", "final", "all"):
         s = r[p]; print(r["variant"], p, s["mean_bp"], s["t_week"], s["cagr"], s["max_dd"], s["years"], s["ex_top5pct_bp"], s["orders_per_day"])
+    for p, s in r["btc_hold"].items():
+        print("btc_hold", p, s["mean_bp"], s["t_week"], s["cagr"], s["max_dd"])
+    print(r["account_path_100usdt_final"])
     for p, s in r["bench"].items():
         print("bench", p, s["mean_bp"], s["t_week"], s["cagr"], s["max_dd"])
 

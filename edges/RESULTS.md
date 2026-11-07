@@ -27,3 +27,32 @@ spikes, funding windows and the US open did not pay costs. Turn of month was a 2
 Leverage (information only, E37/E38/E40 final trades, 5% margin per trade): 1× no liquidations (drawdown 10–15%); 2× already
 liquidates; at **20× 29–31% of trades hit the liquidation distance and the account goes to about 1 USDT; 40× liquidates about
 60% of trades**. Worst intrabar move −83% (Oct 2025 wick). Nothing from E37–E46 goes into approved.json.
+
+## Research bot 3 — E63–E70: new data sources (all FAIL; E66 and E68-F6 go on the watch list, grade C)
+Sources reachable without keys: `edges/research3/SOURCES.md` (Binance Vision premium/spot/metrics, Coinbase, OKX, Deribit DVOL,
+DefiLlama, alternative.me, CoinMetrics community, blockchain.com, mempool; **blocked:** fapi.binance.com 451, api.bybit.com 403,
+CryptoCompare needs a key). Fetcher `edges/research3/fetch_sources.py` → `/home/user/data/{premium_1h,spot_1h,coinbase_1h,
+deribit_dvol,fear_greed,stablecoins,coinmetrics}`. Common rules `plans/E63_common_bot3.md` (e24aabc9): entry at the first open
+after the data is public, `bt` costs and funding, week-clustered t, luck check = the external series **circularly shifted**
+against prices and the whole grid rerun (best-t null). Mean = bp per trade after costs.
+
+| Plan | md5 | Var. | Discovery best (mean, t, n) | Luck: real vs null 95th | Validation 2024 | Final 2025→ | Verdict |
+|---|---|---|---|---|---|---|---|
+| E63 Fear & Greed, BTC+ETH daily | 87cd0ef5 | 27 | L fng≤10 H7d +794, t 2.11, n 28 | 1.53 (n≥30) vs 3.46 | — | — | FAIL (luck) |
+| E64 Deribit DVOL spike / IV−RV (disc. from 2021-03-24) | 032aef2a | 17 | B z≥3 H24 +76, t 1.12, n 81 | 1.12 vs 2.33 | — | — | FAIL (luck) |
+| E65 Coinbase premium BTC/ETH 1h | d5d72c7e | 24 | follow W720 k2 H12 +27.0, t 2.42, n 1,199, all 4 yrs + | 2.42 vs 1.54 ✔ | W720 k2 H24 +62.2, t 2.49, n 202 | +6.7, t 0.34, n 358 (0.5/d), ex-top-5% −37 | FAIL (final) |
+| E66 perp premium index, 60 coins 1h | b2f5c77b | 24 | Raw prem ≤ −0.6% long H12 +340, t 6.21, n 772 | 6.21 vs 2.63 ✔ | prem ≤ −0.3% H12 +140, t 2.49, n 209 | +49.2, t 1.47, n 1,111 (1.7/d), ex-top-5% −65; 2025 +102, 2026 +20 | FAIL (final) — grade C watch |
+| E67 taker buy/sell imbalance, top-100 1h | 01cabcb1 | 18 | X z≤−3 & move≤−2σ H24 +43.6, t 0.61; momentum all t −6…−20 | null stopped (cannot change verdict) | — | — | FAIL |
+| E68 filters on H1 / climax | e7e10cb0 | 16 | H1 + DVOL ≥ 1-yr p70: +501 vs base +110, t 3.30 (improvement 391 vs null p95 81) | ✔ (also H1+stable>0, CLX+FNG≤25) | H1+F6 +170 vs base +35, t 2.06, n 5,417 | +106 vs base +18, t 1.32, n 4,919, ex-top-5% −16; 2025 +323, 2026 +15 | FAIL (final) — grade C watch |
+| E69 CoinMetrics exchange flows/activity | 17d4d7e0 | 22 | Out z≤−2 H14d +337, t 1.46, n 24 | 1.22 (n≥30) vs 3.19 | — | — | FAIL (luck) |
+| E70 hold BTC vs cash by regime (owner request) | 47e31da4 | 12 | R1 stablecoin 30-d growth > 0, weekly: Sharpe 0.84 vs B&H 0.78, CAGR 37.6% vs 34.0%, max DD −60% vs −79%; ON-minus-OFF t 0.81 | 0.84 vs 1.39 | — | — | FAIL (luck) |
+
+Notes. (1) **Side finding, E68 base rules over all ~880 perps with my implementation of the protocol text:** panic bounce H1
+discovery +127 bp t 3.38 → 2024 +35 bp t 0.56 → 2025-26 +18 bp t 0.59 (50 fills/day); climax 2020-23 +126 t 1.65 → 2024 +120
+t 1.41 → 2025-26 +109 t 0.78. Both still have a positive mean but neither is significant out of sample — the forward-ticket record
+is needed before trusting them with money. (2) E66 (buy coins whose perp trades ≥0.3% under the index, hold 12 h) and E68-F6
+(take H1 only when BTC DVOL is in the top 30% of its year) both look like the same thing seen through new data: crash rebounds;
+they lived in 2025 and faded in 2026. Watch list only, no approved.json entry. (3) No plan passed, so no leverage table is
+justified; at the drawdowns seen (single trades −60…−85%, mae up to −85%) 20× and 40× would liquidate on the first bad trade.
+(4) E66's 24 discovery rows are logged twice in attempts.jsonl (rerun after a crash fix, identical code/numbers); E67's shift null
+was stopped once it could not change the verdict. Code `edges/research3/`, results `edges/results/E63…E70_result.json`.

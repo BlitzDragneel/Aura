@@ -1,0 +1,194 @@
+{
+ "plan": "E70",
+ "md5": "47e31da430f891e9475e54389a201aef",
+ "bh": {
+  "discovery": {
+   "cagr": 0.3396,
+   "max_dd": -0.7886,
+   "sharpe": 0.776,
+   "calmar": 0.431,
+   "days": 1461
+  },
+  "validation": {
+   "cagr": 0.963,
+   "max_dd": -0.2975,
+   "sharpe": 1.549,
+   "calmar": 3.237,
+   "days": 366
+  },
+  "final": {
+   "cagr": -0.1401,
+   "max_dd": -0.5325,
+   "sharpe": -0.149,
+   "calmar": -0.263,
+   "days": 669
+  }
+ },
+ "discovery": [
+  {
+   "cagr": 0.3711,
+   "max_dd": -0.5954,
+   "sharpe": 0.838,
+   "calmar": 0.623,
+   "days": 1461,
+   "in_market": 0.641,
+   "switches_per_year": 9.0,
+   "label": "R1 stable30>0 daily",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": 11.75,
+   "edge_t": 0.82
+  },
+  {
+   "cagr": 0.3759,
+   "max_dd": -0.5958,
+   "sharpe": 0.844,
+   "calmar": 0.631,
+   "days": 1461,
+   "in_market": 0.647,
+   "switches_per_year": 3.8,
+   "label": "R1 stable30>0 weekly",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": 11.64,
+   "edge_t": 0.81
+  },
+  {
+   "cagr": 0.2769,
+   "max_dd": -0.5057,
+   "sharpe": 0.806,
+   "calmar": 0.548,
+   "days": 1461,
+   "in_market": 0.396,
+   "switches_per_year": 10.8,
+   "label": "R2 stable30>med365 daily",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": 4.24,
+   "edge_t": 0.31
+  },
+  {
+   "cagr": 0.1835,
+   "max_dd": -0.6281,
+   "sharpe": 0.615,
+   "calmar": 0.292,
+   "days": 1461,
+   "in_market": 0.398,
+   "switches_per_year": 6.2,
+   "label": "R2 stable30>med365 weekly",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": -1.23,
+   "edge_t": -0.09
+  },
+  {
+   "cagr": 0.0144,
+   "max_dd": -0.7202,
+   "sharpe": 0.296,
+   "calmar": 0.02,
+   "days": 1461,
+   "in_market": 0.565,
+   "switches_per_year": 7.8,
+   "label": "R3 fng7<=50 daily",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": -15.17,
+   "edge_t": -1.11
+  },
+  {
+   "cagr": 0.0154,
+   "max_dd": -0.7127,
+   "sharpe": 0.295,
+   "calmar": 0.022,
+   "days": 1461,
+   "in_market": 0.565,
+   "switches_per_year": 7.0,
+   "label": "R3 fng7<=50 weekly",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": -15.42,
+   "edge_t": -1.07
+  },
+  {
+   "cagr": -0.1657,
+   "max_dd": -0.7389,
+   "sharpe": -0.182,
+   "calmar": -0.224,
+   "days": 1013,
+   "in_market": 0.683,
+   "switches_per_year": 14.4,
+   "label": "R4 dvol<=med365 daily",
+   "bh_sharpe": -0.001,
+   "edge_bp_day": 5.72,
+   "edge_t": 0.27
+  },
+  {
+   "cagr": -0.1019,
+   "max_dd": -0.7101,
+   "sharpe": -0.005,
+   "calmar": -0.143,
+   "days": 1013,
+   "in_market": 0.691,
+   "switches_per_year": 4.3,
+   "label": "R4 dvol<=med365 weekly",
+   "bh_sharpe": -0.001,
+   "edge_bp_day": 12.83,
+   "edge_t": 0.62
+  },
+  {
+   "cagr": -0.0556,
+   "max_dd": -0.5241,
+   "sharpe": 0.095,
+   "calmar": -0.106,
+   "days": 1461,
+   "in_market": 0.489,
+   "switches_per_year": 23.5,
+   "label": "R5 netflow30<0 daily",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": -19.3,
+   "edge_t": -1.32
+  },
+  {
+   "cagr": 0.1084,
+   "max_dd": -0.4697,
+   "sharpe": 0.463,
+   "calmar": 0.231,
+   "days": 1461,
+   "in_market": 0.47,
+   "switches_per_year": 8.0,
+   "label": "R5 netflow30<0 weekly",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": -7.55,
+   "edge_t": -0.51
+  },
+  {
+   "cagr": -0.0645,
+   "max_dd": -0.4901,
+   "sharpe": 0.026,
+   "calmar": -0.132,
+   "days": 1461,
+   "in_market": 0.311,
+   "switches_per_year": 19.0,
+   "label": "R6 R1&R5 daily",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": -14.32,
+   "edge_t": -1.08
+  },
+  {
+   "cagr": 0.0379,
+   "max_dd": -0.3623,
+   "sharpe": 0.295,
+   "calmar": 0.105,
+   "days": 1461,
+   "in_market": 0.311,
+   "switches_per_year": 7.0,
+   "label": "R6 R1&R5 weekly",
+   "bh_sharpe": 0.776,
+   "edge_bp_day": -8.22,
+   "edge_t": -0.64
+  }
+ ],
+ "validation": {},
+ "final": null,
+ "luck": {
+  "real_best_sharpe": 0.844,
+  "null_p95": 1.3917999999999997,
+  "pct": 0.28
+ },
+ "promoted": [],
+ "verdict": "FAIL: nothing beat the luck check / B&H in discovery"
+}
