@@ -87,11 +87,17 @@ def main():
     b = bench(S)
     for p in ("discovery", "validation", "final"):
         res["bench"][p] = lib2.stats(lib2.period(b, p), f"ew_top100_{p}")
-    rng = np.random.default_rng(52)
     NNULL = int(os.environ.get("NNULL", 200))
-    null_best = np.full(NNULL, -np.inf)
-    for g in GRID:
+    ck = f"{OUT}/ckpt.pkl"
+    if os.path.exists(ck):
+        res, null_best, done = pd.read_pickle(ck)
+    else:
+        null_best = np.full(NNULL, -np.inf); done = set()
+    for gi, g in enumerate(GRID):
         name = "L{}_s{}_{}_k{}_{}_{}".format(*g)
+        if name in done:
+            continue
+        rng = np.random.default_rng(52000 + gi)
         o = run_variant(S, *g)
         dsc = lib2.period(o, "discovery")
         st = lib2.stats(dsc, name); st["weakest_year_bp"] = round(lib2.weakest_year(dsc) * 1e4, 2)
@@ -101,6 +107,8 @@ def main():
         for j in range(NNULL):
             on = run_variant(S, *g, score_override=rng.random(S["Cc"].shape))
             null_best[j] = max(null_best[j], lib2.weakest_year(lib2.period(on, "discovery")))
+        done.add(name)
+        pd.to_pickle((res, null_best, done), ck)
     res["null_best_weakest_bp"] = [round(x * 1e4, 3) for x in null_best]
     json.dump(res, open(f"{OUT}/disc.json", "w"), indent=1, default=str)
     print("LUCK p95", np.percentile(null_best, 95) * 1e4)

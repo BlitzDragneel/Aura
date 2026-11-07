@@ -61,7 +61,7 @@ h2.pg{font-size:26px;margin:4px 0 2px;} .pg-sub{color:var(--text-dim);margin:0 0
 .coins{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;}
 .coin{background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:8px 6px;text-align:center;min-width:0;}
 .coin b{display:block;font-family:var(--serif);font-size:15px;} .coin .p{font:12px var(--mono);overflow-wrap:anywhere;} .coin .s{font:700 11px system-ui;margin-top:3px;}
-.dial{width:100%;max-width:340px;display:block;margin:0 auto;}
+.dial{width:100%;max-width:420px;display:block;margin:0 auto;}
 .ledger li{margin:6px 0;} .ledger{padding-left:18px;margin:6px 0;font-size:14px;}
 .tag{display:inline-block;font:700 11px system-ui;border-radius:6px;padding:1px 6px;margin-right:6px;}
 .tag.pass{background:rgba(29,122,75,.14);color:var(--bull);} .tag.fail{background:rgba(179,55,47,.12);color:var(--bear);} .tag.run{background:rgba(168,112,26,.14);color:var(--gold);}
@@ -882,9 +882,9 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
   function dial(S){ var order = ['DEPRESSED', 'CORRECTING', 'NORMAL', 'CONSOLIDATING', 'BOOMING'], lab = ['Depressed', 'Correcting', 'Normal', 'Quiet', 'Booming'], col = ['#b3372f', '#c27b2b', '#8a8577', '#6f7f8f', '#1d7a4b'], i = S ? Math.max(0, order.indexOf(S.state)) : 2, s = '';
     for(var k = 0; k < 5; k++){ var a0 = Math.PI*(1 - k/5), a1 = Math.PI*(1 - (k + 1)/5), r = 120, cx = 170, cy = 158, x0 = cx + r*Math.cos(a0), y0 = cy - r*Math.sin(a0), x1 = cx + r*Math.cos(a1), y1 = cy - r*Math.sin(a1), am = (a0 + a1)/2;
       s += '<path d="M' + x0.toFixed(1) + ' ' + y0.toFixed(1) + ' A' + r + ' ' + r + ' 0 0 1 ' + x1.toFixed(1) + ' ' + y1.toFixed(1) + '" stroke="' + col[k] + '" stroke-width="' + (k === i ? 18 : 10) + '" fill="none" opacity="' + (k === i ? 1 : 0.35) + '"/>' +
-        '<text x="' + (cx + (r + 22)*Math.cos(am)).toFixed(1) + '" y="' + (cy - (r + 22)*Math.sin(am) + 4).toFixed(1) + '" text-anchor="middle" style="font:600 11px system-ui;fill:' + (k === i ? col[k] : '#6a675c') + '">' + lab[k] + '</text>'; }
+        '<text x="' + (cx + (r + 16)*Math.cos(am)).toFixed(1) + '" y="' + (cy - (r + 16)*Math.sin(am) + 4).toFixed(1) + '" text-anchor="' + (Math.cos(am) < -0.3 ? 'end' : Math.cos(am) > 0.3 ? 'start' : 'middle') + '" style="font:600 12px system-ui;fill:' + (k === i ? col[k] : '#6a675c') + '">' + lab[k] + '</text>'; }
     var an = Math.PI*(1 - (i + 0.5)/5); s += '<line x1="170" y1="158" x2="' + (170 + 92*Math.cos(an)).toFixed(1) + '" y2="' + (158 - 92*Math.sin(an)).toFixed(1) + '" stroke="#1c2230" stroke-width="3" stroke-linecap="round"/><circle cx="170" cy="158" r="7" fill="#1c2230"/>';
-    return '<svg class="dial" viewBox="0 0 340 176" role="img" aria-label="Market state">' + s + '</svg>'; }
+    return '<svg class="dial" viewBox="-44 0 428 176" role="img" aria-label="Market state">' + s + '</svg>'; }
   function today(){ var DP = window.OMEGA_DPLAN, S = DP ? DP.state().S : null, reads = DP ? DP.state().reads : {}, rec = lsj('omega_dplan_v1') || { plans:{} }, now = Date.now();
     var plans = Object.keys(rec.plans || {}).map(function(s){ return Object.assign({ sym:s }, rec.plans[s]); });
     var C = window.OMEGA_CLIMAX ? window.OMEGA_CLIMAX.state().trades.filter(function(t){ return t.status === 'open'; }) : [];
@@ -1141,7 +1141,7 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
 })();
 </script>
 <script>/* ═══ PRIME EDGES — rules that passed the research protocol (edges/approved.json), embedded at build time ═══ */
-window.PRIME_EDGES = [{"id": "climax_a", "grade": "A", "plan": "round 16 (final test on 324 untouched coins)", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "omega/OMEGA_HANDOVER_2026-11-02.md section 3; omega/research/archive-2026-10-20/climax.py"}, {"id": "panic_h1", "grade": "B", "plan": "E22, E25", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "edges/results/E25_result.json; omega/research/e25kit/reference_e22.py"}, {"id": "panic_h3", "grade": "B", "plan": "E22, E25", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "edges/results/E25_result.json; omega/research/e25kit/reference_e22.py"}]; window.PRIME_EDGES_AT = "2026-11-05";
+window.PRIME_EDGES = [{"id": "climax_a", "grade": "A", "plan": "round 16 (final test on 324 untouched coins)", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "omega/OMEGA_HANDOVER_2026-11-02.md section 3; omega/research/archive-2026-10-20/climax.py"}, {"id": "panic_h1", "grade": "B", "plan": "E22, E25", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "edges/results/E25_result.json; omega/research/e25kit/reference_e22.py"}, {"id": "panic_h3", "grade": "B", "plan": "E22, E25", "tf": "1h", "status": "paper", "max_leverage": 1, "margin_usdt": 5, "evidence": "edges/results/E25_result.json; omega/research/e25kit/reference_e22.py"}]; window.PRIME_EDGES_AT = "2026-11-07";
 </script>
 <script>/* ═══ PRIME UX — data health, the rule book by grade, back button (5 Nov 2026) ═══
    Display only: reads the watches' state, never changes a rule, a threshold, a ticket or a trade.

@@ -63,6 +63,10 @@ def setup(tf):
         vol = np.sqrt(rv).shift(1).reindex(C.index, method="ffill")
     rule = "1D" if tf == "1d" else "4h"
     F = lib2.fund_bars(members, rule).reindex(C.index)
+    if tf == "4h":   # fill missing funding per settlement (0.01% per 00/08/16 settlement) - fixed 2026-11-07
+        settle = np.isin(C.index.hour, (0, 8, 16))
+        fill = np.repeat(np.where(settle, 0.0001, 0.0)[:, None], F.shape[1], axis=1)
+        F = pd.DataFrame(np.where(F.notna().values, F.values, fill), index=C.index, columns=F.columns)
     return dict(C=C, QV=QV, M=M, vol=vol, F=F, bpd=bpd, members=members)
 
 

@@ -759,5 +759,69 @@
   "years": true,
   "enough_trades": true
  },
- "verdict": "FAIL"
+ "verdict": "FAIL",
+ "leverage_information_only_FAIL": {
+  "variant": "L288 k4 W3 H288",
+  "share_mae_beyond_20x": 0.2921,
+  "share_mae_beyond_40x": 0.5934,
+  "mae_worst": -0.826,
+  "leverage_final_info_only": [
+   {
+    "leverage": 1,
+    "margin_frac": 0.05,
+    "final": 109.13,
+    "max_dd": -0.099,
+    "liquidations": 0,
+    "trades": 1183
+   },
+   {
+    "leverage": 2,
+    "margin_frac": 0.05,
+    "final": 113.55,
+    "max_dd": -0.217,
+    "liquidations": 1,
+    "trades": 1183
+   },
+   {
+    "leverage": 3,
+    "margin_frac": 0.05,
+    "final": 120.99,
+    "max_dd": -0.295,
+    "liquidations": 1,
+    "trades": 1183
+   },
+   {
+    "leverage": 5,
+    "margin_frac": 0.05,
+    "final": 107.43,
+    "max_dd": -0.444,
+    "liquidations": 8,
+    "trades": 1183
+   },
+   {
+    "leverage": 10,
+    "margin_frac": 0.05,
+    "final": 53.26,
+    "max_dd": -0.779,
+    "liquidations": 77,
+    "trades": 1183
+   },
+   {
+    "leverage": 20,
+    "margin_frac": 0.05,
+    "final": 0.98,
+    "max_dd": -0.989,
+    "liquidations": 323,
+    "trades": 1158
+   },
+   {
+    "leverage": 40,
+    "margin_frac": 0.05,
+    "final": 0.99,
+    "max_dd": -0.99,
+    "liquidations": 321,
+    "trades": 530
+   }
+  ]
+ }
 }

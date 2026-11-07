@@ -11,7 +11,7 @@ from edges.lib import bt
 def frame(n=80, p=100.0):
     idx = pd.date_range("2024-03-01", periods=n, freq="h", tz="UTC")
     c = np.full(n, p)
-    return pd.DataFrame(dict(o=c, h=c * 1.01, l=c * 0.99, c=c, v=1.0, qv=1e9 / 24), index=idx)
+    return pd.DataFrame(dict(o=c, h=c * 1.01, l=c * 0.99, c=c, v=1.0, qv=1e9), index=idx)
 
 
 def run(df, sig, at=10, **kw):

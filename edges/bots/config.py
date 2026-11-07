@@ -31,6 +31,9 @@ DEFAULTS = {
         "daily_loss_limit_usdt": 5.0,      # realized + open, UTC day; then no new orders
         "protective_stop_pct": 0.5,        # rules without a stop get this one (capped inside the liquidation distance)
         "liq_buffer": 0.005,               # stop distance must be < 1/leverage - liq_buffer
+        "live_liq_buffer": 0.02,           # wider buffer for real money (mark price can jump past both)
+        "max_risk_usdt": 3.0,              # notional x stop distance per trade (5 USDT at 1x with the 50% stop = 2.5)
+        "require_ip_restriction": True,    # live key must be bound to your IP
         "require_stop": True,
         "one_position_per_symbol": True,   # Binance one-way mode nets positions: never two rules in one coin
     },

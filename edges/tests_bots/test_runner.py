@@ -242,6 +242,7 @@ def test_hedge_mode_refused(monkeypatch, bots_home):
 
 def test_leverage_never_above_rule_or_cap(monkeypatch, bots_home):
     fb, fr, at, clock, r = _testnet(monkeypatch, bots_home, MARKET, max_lev=20)
+    r.cfg["guard"]["max_risk_usdt"] = 10.0                       # (the default 3 USDT risk cap refuses 15 USDT x 32%)
     r.cycle()
     assert fb.sent("/fapi/v1/leverage")[0]["leverage"] == "3"          # rule says 20, hard cap 3
     (stop,) = fb.sent("/fapi/v1/algoOrder")

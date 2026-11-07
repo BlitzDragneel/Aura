@@ -21,7 +21,7 @@ def load(syms):
 
 
 def key(sig):
-    return [(t, g.sym, g.entry, round(g.price or 0, 10), g.hold_bars, g.valid_for_bars) for t, g in sig]
+    return [(t, g.sym, g.entry, float(f"{(g.price or 0):.9g}"), g.hold_bars, g.valid_for_bars) for t, g in sig]
 
 
 def compare(sid, syms, span=1200):

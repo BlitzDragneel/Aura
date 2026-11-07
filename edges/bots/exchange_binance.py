@@ -62,6 +62,16 @@ class MarketData:
         return self._get("/fapi/v1/exchangeInfo")
 
     def universe(self, info=None, top=None):
+        try:
+            return self._universe(info, top)
+        except (BinanceError, httpx.HTTPError):
+            if not self.fallback:
+                raise
+            syms = self._alt_crypto().top_by_volume(min(int(top or 200), 200))   # OKX/Gate via omega/live_api
+            self.source = "fallback"
+            return {s: {} for s in syms}
+
+    def _universe(self, info=None, top=None):
         info = info or self.exchange_info()
         syms = {s["symbol"]: dict(onboard=s.get("onboardDate")) for s in info["symbols"]
                 if s.get("quoteAsset") == "USDT" and s.get("contractType") == "PERPETUAL" and s.get("status") == "TRADING"}

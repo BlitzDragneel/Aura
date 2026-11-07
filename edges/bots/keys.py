@@ -44,3 +44,7 @@ def ask_and_store(venue):
             raise SystemExit("nothing entered")
         kr.set_password(SERVICE, f"binance_{venue}_{part}", v)
     print(f"saved to the OS vault (service {SERVICE}): binance_{venue}_key / _secret")
+
+
+def from_env(venue):
+    return bool(os.environ.get(f"OMEGA_BINANCE_{venue.upper()}_KEY"))

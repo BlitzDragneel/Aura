@@ -59,6 +59,11 @@ R = [
   '.verdict.nodata{background:repeating-linear-gradient(135deg,#283043 0 14px,#1c2230 14px 28px);} .verdict.nodata .v{color:#e4dfd2;}\n'
   '.lg-sum{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 6px;} .lg-sum button{min-height:44px;border:1px solid var(--border);background:var(--paper);border-radius:999px;padding:6px 14px;font:600 13px system-ui;color:var(--ink);cursor:pointer;}\n'
   '.lg-h{font:700 12.5px system-ui;letter-spacing:.08em;text-transform:uppercase;margin:16px 0 2px;color:var(--text-dim);}'),
+ # the dial's labels: anchored away from the arc (the selected segment's thick stroke hid "Depressed"/"Booming"), in a wider frame
+ ("'<text x=\"' + (cx + (r + 22)*Math.cos(am)).toFixed(1) + '\" y=\"' + (cy - (r + 22)*Math.sin(am) + 4).toFixed(1) + '\" text-anchor=\"middle\" style=\"font:600 11px system-ui;fill:'",
+  "'<text x=\"' + (cx + (r + 16)*Math.cos(am)).toFixed(1) + '\" y=\"' + (cy - (r + 16)*Math.sin(am) + 4).toFixed(1) + '\" text-anchor=\"' + (Math.cos(am) < -0.3 ? 'end' : Math.cos(am) > 0.3 ? 'start' : 'middle') + '\" style=\"font:600 12px system-ui;fill:'"),
+ ('.dial{width:100%;max-width:340px;', '.dial{width:100%;max-width:420px;'),
+ ('<svg class="dial" viewBox="0 0 340 176"', '<svg class="dial" viewBox="-44 0 428 176"'),
  # the dial's labels: #8a8577 (3.6:1) -> #6a675c (5.6:1)
  (": '#8a8577') + '\">' + lab[k]", ": '#6a675c') + '\">' + lab[k]"),
  # verdict: honest when there is no data; the scan not yet run

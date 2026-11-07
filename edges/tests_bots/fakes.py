@@ -28,12 +28,30 @@ class FakeBinance:
         if hmac.new(SECRET.encode(), raw.encode(), hashlib.sha256).hexdigest() != sig or req.headers.get("X-MBX-APIKEY") != KEY:
             self.bad_sig += 1
 
+    close_fail = False
+    timeout_once = False
+    drift_once = False
+
     def handle(self, req):
         q = dict(urllib.parse.parse_qsl(req.url.query.decode()))
         self._check_sig(req, dict(q))
         self.calls.append((req.method, req.url.path, q))
         p, m = req.url.path, req.method
         J = lambda x, s=200: httpx.Response(s, json=x)
+        if p == "/fapi/v1/time":
+            return J(dict(serverTime=int(q.get("x", 0)) or 1))
+        if self.drift_once and "signature" in q:
+            self.drift_once = False
+            return J(dict(code=-1021, msg="Timestamp for this request is outside of the recvWindow."), 400)
+        if self.close_fail and p == "/fapi/v1/order" and m == "POST" and q.get("reduceOnly") == "true":
+            return J(dict(code=-1001, msg="Internal error; unable to process your request."), 500)
+        if p == "/fapi/v1/openOrders":
+            return J([o for o in self.orders.values() if o["status"] == "NEW"])
+        if p == "/fapi/v1/openAlgoOrders":
+            return J([a for a in self.algos.values() if a["algoStatus"] == "NEW"])
+        if p == "/fapi/v1/order" and m == "GET" and "origClientOrderId" in q:
+            hit = [o for o in self.orders.values() if o.get("clientOrderId") == q["origClientOrderId"]]
+            return J(hit[0]) if hit else J(dict(code=-2013, msg="Order does not exist."), 400)
         if p == "/fapi/v1/exchangeInfo":
             return J(dict(symbols=[dict(symbol="ETHUSDT", status="TRADING", quoteAsset="USDT", contractType="PERPETUAL",
                                         filters=[dict(filterType="LOT_SIZE", stepSize="0.001", minQty="0.001"),
@@ -47,14 +65,15 @@ class FakeBinance:
         if p == "/fapi/v1/positionSide/dual":
             return J(dict(dualSidePosition=self.dual))
         if p == "/sapi/v1/account/apiRestrictions":
-            return J(dict(enableWithdrawals=self.withdrawals, enableFutures=True, enableInternalTransfer=False))
+            return J(self.restrictions(getattr(self, "ip", True)))
         if p == "/fapi/v1/order" and m == "POST":
             if q["type"] in ("STOP_MARKET", "TAKE_PROFIT_MARKET"):
                 return J(dict(code=-4120, msg="Order type not supported for this endpoint. Please use the Algo Order API."), 400)
             oid = self.next_id = self.next_id + 1
             o = dict(orderId=oid, symbol=q["symbol"], side=q["side"], type=q["type"], origQty=q["quantity"],
                      price=q.get("price"), status="NEW", executedQty="0", avgPrice="0", updateTime=0,
-                     timeInForce=q.get("timeInForce"), goodTillDate=q.get("goodTillDate"), reduceOnly=q.get("reduceOnly"))
+                     timeInForce=q.get("timeInForce"), goodTillDate=q.get("goodTillDate"), reduceOnly=q.get("reduceOnly"),
+                     clientOrderId=q.get("newClientOrderId"))
             if q["type"] == "MARKET":
                 o.update(status="FILLED", executedQty=q["quantity"], avgPrice=str(self.price))
                 sgn = 1 if q["side"] == "BUY" else -1
@@ -64,6 +83,9 @@ class FakeBinance:
                     return J(dict(code=-2022, msg="ReduceOnly Order is rejected."), 400)
                 self.pos[q["symbol"]] = round(new, 8)
             self.orders[oid] = o
+            if self.timeout_once and q.get("reduceOnly") != "true":
+                self.timeout_once = False
+                raise httpx.ReadTimeout("simulated timeout after the order reached the exchange")
             return J(o)
         if p == "/fapi/v1/algoOrder" and m == "POST":
             if not self.algo:
@@ -100,6 +122,9 @@ class FakeBinance:
         if p == "/fapi/v2/balance":
             return J([dict(asset="USDT", balance="100")])
         return J(dict(code=-1, msg=f"unknown path {p}"), 404)
+
+    def restrictions(self, ip=True):
+        return dict(enableWithdrawals=self.withdrawals, enableFutures=True, enableInternalTransfer=False, ipRestrict=ip)
 
     # test helpers
     def fill(self, oid, t_ms):

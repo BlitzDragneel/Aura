@@ -89,3 +89,24 @@ modules in the original build. Test: `node s_prime_test.js`.
   ticket (paper) and of the ones placed. Stored under prime:prime_tickets_v1. Prime places no orders itself.
 - `patch_prime_panic.py` now also adds the tickets. Checks: `s_prime_tickets_test.js` (14) on phone and computer;
   `s_prime_panic_test.js` 17/17 and `s_prime_test.js` 10/10 still pass. Not run on a real phone.
+
+## Update 5 Nov 2026: UX layer (prime_ux.js, patch_prime_ux.py) — display only
+- **Build chain (reproducible):** `omega-prime-base-25oct.html` (the 25 Oct Prime, md5 85d94f81…, recovered byte for byte from the
+  tickets build) → `python3 patch_prime_panic.py omega-prime-base-25oct.html tk.html` (md5 2d6f2dae…, the tickets build, checked) →
+  `python3 patch_prime_ux.py tk.html omega-prime.html [edges/approved.json]`. The UX patch asserts that the climax, panic-bounce,
+  ticket and Autopilot script blocks stay byte-identical: no rule, threshold, ticket or number changed.
+- **Today:** "Your orders" sits directly under the verdict (the dial and the five coins moved below). When the hourly scans could not
+  reach the market the verdict says **"No market data — Cannot check today"** instead of "Stand aside" (offline it used to claim the
+  rules were checked, with a "data live" chip, although the data check had read nothing); "Checking the market…" before the first scan;
+  "data live" only when a feed was really read; a chip with when the signals were last checked; a note over the orders when there is no data.
+  A Grade C plan is drawn as a paper card with dashed border and "Not an order" (tickets come only from tested rules); tested signals keep the dark ink block.
+- **Signals:** "The rule book" at the top: every rule by grade (A, B, C), one line each with its live state, tap to jump to its card.
+  Rules the research adds to `edges/approved.json` are embedded at build time (`window.PRIME_EDGES`) and appear under their grade in a
+  collapsed "N more from the research list" line, and in Evidence; no new pages. To refresh only the list:
+  `python3 patch_prime_ux.py omega-prime.html omega-prime.html ../../../../edges/approved.json`.
+- **Evidence:** the ledger grouped as passed / being measured / failed, with counts and jump buttons.
+- **Back button:** each page has its own address (#today, #signals…), so Android's back returns to the previous page instead of leaving the app.
+- **Readability:** gold text #a8701a → #8f5e12 (4.1 → 5.5:1, WCAG AA), dial labels 3.6 → 5.6:1 and no longer hidden by the thick arc,
+  buttons, chart pills, ticket buttons and inputs ≥ 44 px tall, small print 12.5 → 13 px.
+- Checks: `s_prime_test.js` 10/10, `s_prime_panic_test.js` 17/17, `s_prime_tickets_test.js` 14/14 before and after (tests unchanged).
+  Screenshots and the audit: `audits/ux/`. Not run on a real phone.

@@ -23,7 +23,7 @@ from edges.bots import guard as G
 from edges.bots import keys, sizing
 from edges.bots import strategies as S
 from edges.bots.core import Order, Position, bar_time, dense, tf_delta
-from edges.bots.exchange_binance import BinanceError, BinanceFutures, MarketData, round_for
+from edges.bots.exchange_binance import BinanceError, BinanceFutures, MarketData, TransportError, round_for
 
 FEES = {"limit": 0.0002, "market": 0.0005}     # paper fee per side (maker for a filled limit), exits are taker
 DEFAULT_INFO = dict(step=1e-6, mstep=1e-6, minQty=0.0, minNotional=5.0, tick=1e-8, status="TRADING")
@@ -99,7 +99,10 @@ class PaperBroker:
         return self.price(p["sym"])
 
     def kill_all(self, state):
-        return []
+        return [dict(sym=s, ok=True) for s in state.open_symbols()]
+
+    def exposure(self):
+        return 0, set()
 
     def day_pnl(self, state):
         return state.day_pnl(pd.Timestamp.now(tz="UTC").strftime("%Y-%m-%d"))
@@ -118,34 +121,59 @@ class ExchangeBroker:
     def price(self, sym):
         return self.api.price(sym)
 
+    def _send_entry(self, o, cid):
+        """Place the entry. On a network error, ask the exchange whether it arrived (by client order id)."""
+        a = self.api
+        try:
+            if o["kind"] == "limit":
+                return a.place_limit(o["sym"], o["side"], o["qty"], o["price"], client_id=cid,
+                                     expires_ms=int(ts(o["expires_at"]).timestamp() * 1000),
+                                     now_ms=int(ts(o["placed_at"]).timestamp() * 1000))
+            return a.place_market(o["sym"], o["side"], o["qty"], client_id=cid)
+        except TransportError:
+            found = a.find_order(o["sym"], cid)
+            if not found:
+                raise
+            return found
+
     def entry(self, o):
+        """Entry + protective stop. A failed stop undoes the entry; if the undo fails too, the kill switch goes on and
+        the result says `unprotected` so the runner keeps the position in state (marked UNPROTECTED) and retries."""
         a = self.api
         a.prepare(o["sym"], o["leverage"])
         cid = "omg-" + o["id"][:20]
-        if o["kind"] == "limit":
-            r = a.place_limit(o["sym"], o["side"], o["qty"], o["price"], expires_ms=int(ts(o["expires_at"]).timestamp() * 1000),
-                              client_id=cid, now_ms=int(ts(o["placed_at"]).timestamp() * 1000))
-            ids = dict(entry=r.get("orderId"))
-            if o.get("stop_price"):
-                try:
-                    s = a.place_stop(o["sym"], o["side"], o["stop_price"], client_id=cid + "-s")
-                    ids.update(stop=s.get("algoId") or s.get("orderId"), stop_algo=s.get("algo"))
-                except BinanceError:
-                    a.cancel(o["sym"], ids["entry"])      # never leave an entry without its stop
-                    raise
-            return dict(filled=False, ids=ids)
-        r = a.place_market(o["sym"], o["side"], o["qty"], client_id=cid)
-        ids = dict(entry=r.get("orderId"))
-        px = float(r.get("avgPrice") or 0) or a.price(o["sym"])
-        qty = float(r.get("executedQty") or o["qty"])
+        r = self._send_entry(o, cid)
+        ids = dict(entry=r.get("orderId"), client=cid)
+        filled = o["kind"] == "market" or r.get("status") == "FILLED"
+        px = float(r.get("avgPrice") or 0) or (o.get("price") if o["kind"] == "limit" else None) or a.price(o["sym"])
+        qty = float(r.get("executedQty") or 0) or o["qty"]
         if o.get("stop_price"):
             try:
-                s = a.place_stop(o["sym"], o["side"], o["stop_price"], client_id=cid + "-s")
-                ids.update(stop=s.get("algoId") or s.get("orderId"), stop_algo=s.get("algo"))
-            except BinanceError:
-                a.close(o["sym"])                         # no stop -> no position
-                raise
-        return dict(filled=True, price=px, qty=qty, fill_bar=o["signal_bar"], ids=ids)
+                st = a.place_stop(o["sym"], o["side"], o["stop_price"], client_id=cid + "-s")
+                ids.update(stop=st.get("algoId") or st.get("orderId"), stop_algo=st.get("algo"))
+            except Exception as e:
+                undo = {}
+                try:
+                    if o["kind"] == "limit":
+                        undo["cancel"] = a.cancel(o["sym"], ids["entry"])
+                    q, _ = a.close(o["sym"])        # anything that filled meanwhile is closed
+                    undo["closed_qty"] = q
+                    if a.positions().get(o["sym"]):
+                        raise BinanceError("position still open after the undo")
+                except Exception as e2:
+                    G.set_kill(True, f"UNPROTECTED {o['sym']}: stop failed ({e}) and the undo failed ({e2})")
+                    return dict(filled=filled, unprotected=True, price=px, qty=qty, fill_bar=o["signal_bar"], ids=ids,
+                                error=f"stop failed: {e}; undo failed: {e2}")
+                return dict(filled=False, rolled_back=True, ids=ids, error=f"stop failed, entry undone: {e}", undo=undo)
+        if filled:
+            return dict(filled=True, price=px, qty=qty, fill_bar=o["signal_bar"], ids=ids)
+        return dict(filled=False, ids=ids)
+
+    def exposure(self):
+        """Exchange truth for the limits: open positions and resting entry orders on the whole account."""
+        pos = set(self.api.positions())
+        pend = set(self.api.pending_entries())
+        return len(pos | pend), pos | pend
 
     def entry_status(self, o, now):
         r = self.api.order(o["sym"], o["exchange_ids"]["entry"])
@@ -179,18 +207,22 @@ class ExchangeBroker:
         return px or self.api.last_fill_price(p["sym"])
 
     def kill_all(self, state):
-        out = []
-        syms = set(state.open_symbols())
-        try:
-            syms |= set(self.api.positions())
-        except BinanceError as e:
-            out.append(dict(error=str(e)))
+        """Close every position and cancel every order on the account (all symbols). Per-symbol errors never stop the
+        loop. Returns [{sym, ok, ...}]; `ok` only when the exchange shows no position left."""
+        out, syms = [], set(state.open_symbols())
+        for fetch in (lambda: set(self.api.positions()), lambda: {x["symbol"] for x in self.api.open_orders()},
+                      lambda: {x.get("symbol") for x in self.api.open_algo_orders() if x.get("symbol")}):
+            try:
+                syms |= fetch()
+            except Exception as e:
+                out.append(dict(error=f"listing failed: {type(e).__name__}: {e}"))
         for s in sorted(syms):
             try:
                 q, px = self.api.close(s)
-                out.append(dict(sym=s, closed_qty=q, price=px))
-            except BinanceError as e:
-                out.append(dict(sym=s, error=str(e)))
+                left = self.api.positions().get(s)
+                out.append(dict(sym=s, ok=not left, closed_qty=q, price=px))
+            except Exception as e:
+                out.append(dict(sym=s, ok=False, error=f"{type(e).__name__}: {e}"))
         return out
 
     def day_pnl(self, state):
@@ -223,8 +255,12 @@ class Runner:
         url = self.cfg["binance"]["live_url"] if self.mode == "live" else self.cfg["binance"]["testnet_url"]
         api = BinanceFutures(url, k, s, cfg=self.cfg["binance"])
         if self.mode == "live":
-            wd = api.withdrawals_enabled(self.cfg["binance"]["spot_url"])
-            why = G.mode_refusals(self.cfg, "live", have_keys=True, withdrawals_enabled=wd)
+            rs = api.key_restrictions(self.cfg["binance"]["spot_url"])
+            wd = None if rs is None else bool(rs.get("enableWithdrawals")) or bool(rs.get("enableInternalTransfer"))
+            why = G.mode_refusals(self.cfg, "live", have_keys=True, withdrawals_enabled=wd,
+                                  ip_restricted=bool(rs and rs.get("ipRestrict")))
+            if keys.from_env("live"):
+                C.log("warning", note="the live key comes from environment variables; the OS vault is safer (setkey live)")
             if why:
                 raise SystemExit("refused to start LIVE: " + "; ".join(why))
         if api.dual_side():
@@ -404,7 +440,7 @@ class Runner:
             return None
         L = int(min(rule.get("max_leverage", 1), cfg["guard"]["hard_max_leverage"]))
         margin = float(rule.get("margin_usdt", 5))
-        stop_pct = G.protective_stop(cfg, sg.stop_pct, L)
+        stop_pct = G.protective_stop(cfg, sg.stop_pct, L, self.mode)
         try:
             info = self.broker.info(sg.sym)
             ref = sg.ref_close or self.broker.price(sg.sym)
@@ -428,9 +464,15 @@ class Runner:
         except Exception as e:
             C.log("refused", mode=self.mode, rule=rule["id"], sym=sg.sym, reasons=[f"cannot read today's P&L: {e}"])
             return None
+        try:
+            ex_n, ex_syms = self.broker.exposure()
+        except Exception as e:
+            C.log("refused", mode=self.mode, rule=rule["id"], sym=sg.sym, reasons=[f"cannot read exchange positions/orders: {e}"])
+            return None
+        syms = st.open_symbols() | set(ex_syms)
         why = G.order_refusals(cfg, self.mode, rule,
                                dict(sym=sg.sym, leverage=L, margin_usdt=margin, notional=qty * (px_r or ref), stop_pct=stop_pct),
-                               dict(open_count=st.open_count(), open_symbols=st.open_symbols(), day_pnl_usdt=day))
+                               dict(open_count=max(st.open_count(), ex_n, len(syms)), open_symbols=syms, day_pnl_usdt=day))
         if why:
             C.log("refused", mode=self.mode, rule=rule["id"], sym=sg.sym, reasons=why)
             return None
@@ -447,6 +489,16 @@ class Runner:
             C.log("order_error", mode=self.mode, rule=rule["id"], sym=sg.sym, error=f"{type(e).__name__}: {e}")
             return None
         rec["exchange_ids"] = r.get("ids", {})
+        if r.get("rolled_back"):
+            C.log("order_error", mode=self.mode, rule=rule["id"], sym=sg.sym, error=r.get("error"), undo=r.get("undo"))
+            return None
+        if r.get("unprotected"):
+            C.log("UNPROTECTED", mode=self.mode, rule=rule["id"], sym=sg.sym, error=r.get("error"),
+                  note="kill switch set; the position is kept in state and closed by the kill cycle")
+            self._open_position(rec, dict(r, state="filled"))
+            self.state.positions[rec["id"]]["status"] = "UNPROTECTED"
+            self.state.save()
+            return rec
         C.log("order", mode=self.mode, rule=rule["id"], sym=sg.sym, kind=sg.entry, qty=qty, price=rec["price"], ref=ref,
               stop=stop_px, leverage=L, margin_usdt=margin, expires=rec["expires_at"], why=sg.note)
         if r.get("filled"):
@@ -457,24 +509,33 @@ class Runner:
 
     # -- kill switch
     def kill(self, reason="kill command"):
+        """Cancel and close everything. On the exchange first; state drops only what the exchange confirmed closed
+        (the rest stays, marked, and the next cycle tries again while the KILL file is there)."""
         G.set_kill(True)
-        out = dict(reason=reason, cancelled=[], closed=[])
         now = self.now_fn()
+        out = dict(reason=reason, cancelled=[], closed=[], still_open=[])
         for oid, o in list(self.state.orders.items()):
             try:
                 self.broker.cancel_entry(o)
+                out["cancelled"].append(o["sym"])
+                del self.state.orders[oid]
             except Exception as e:
                 C.log("cancel_error", order=oid, error=str(e))
-            out["cancelled"].append(o["sym"])
-            del self.state.orders[oid]
+        res = self.broker.kill_all(self.state)
+        out["exchange"] = res
+        done = {r["sym"]: r for r in res if r.get("sym")}
         for pid, p in list(self.state.positions.items()):
-            try:
-                px = self.broker.exit(p, now) if self.mode == "paper" else None
-            except Exception:
-                px = None
-            self._close(pid, px, "kill", now)
-            out["closed"].append(p["sym"])
-        out["exchange"] = self.broker.kill_all(self.state)
+            r = done.get(p["sym"])
+            if self.mode == "paper" or (r and r.get("ok")):
+                try:
+                    px = self.broker.exit(p, now) if self.mode == "paper" else r.get("price")
+                except Exception:
+                    px = None
+                self._close(pid, px, "kill", now)
+                out["closed"].append(p["sym"])
+            else:
+                p["status"] = "KILL_PENDING"
+                out["still_open"].append(p["sym"])
         self.state.save()
         C.log("kill", **out)
         return out

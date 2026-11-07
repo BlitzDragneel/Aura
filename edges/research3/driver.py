@@ -4,18 +4,32 @@ import pandas as pd
 from edges.research3.common import bt, period, tstat, luck_pct, write_result, MD5
 
 
-def run_grid(coins, feats_fn, variants, shift=0):
+def run_grid(coins, feats_fn, variants, shift=0, until=None):
     """feats_fn(coin, shift) -> (perp_df, features dict). variants: list of (name, fn(F)->(mask, side), H).
     Returns {name: trades DataFrame (all periods)}."""
     res = {name: [] for name, _, _ in variants}
     for c in coins:
         df, F = feats_fn(c, shift)
+        if until is not None:
+            k = int(np.searchsorted(df.index.values, np.datetime64(pd.Timestamp(until).tz_localize(None))))
+            df = df.iloc[:k]
+            F = {kk: (vv[:k] if hasattr(vv, "__len__") and len(vv) >= k else vv) for kk, vv in F.items()}
         from edges.research3.common import simulate
         for name, fn, H in variants:
             m, s = fn(F)
             m = np.nan_to_num(np.asarray(m, dtype=float), nan=0).astype(bool)
             res[name].append(simulate(df, c, m, s, H))
-    return {k: pd.concat(v, ignore_index=True).sort_values("time") if v else pd.DataFrame() for k, v in res.items()}
+    out = {}
+    for k, v in res.items():
+        v = [x for x in v if len(x)]
+        if v:
+            d = pd.concat(v, ignore_index=True)
+            d["time"] = pd.to_datetime(d.time, utc=True)
+            d["exit_time"] = pd.to_datetime(d.exit_time, utc=True)
+            out[k] = d.sort_values("time")
+        else:
+            out[k] = pd.DataFrame(columns=["time", "exit_time", "sym", "net", "gross", "mae", "side"])
+    return out
 
 
 def disc_table(R, disc_start=None):
@@ -46,7 +60,7 @@ def run_plan(plan, md5key, coins, feats_fn, variants, n_null=200, disc_start=Non
     null = []
     for j in range(n_null):
         k = int(rng.integers(lo, hi))
-        null.append(best_t(disc_table(run_grid(coins, feats_fn, variants, k), disc_start)))
+        null.append(best_t(disc_table(run_grid(coins, feats_fn, variants, k, until=bt.PERIODS["discovery"][1]), disc_start)))
     null = np.array(null, dtype=float)
     p95 = float(np.nanpercentile(null, 95))
     pct = luck_pct(real_best, null)

@@ -9,6 +9,7 @@ import pytest
 def bots_home(tmp_path, monkeypatch):
     """Every test gets its own config/state/log folder and no real-money switch."""
     monkeypatch.setenv("OMEGA_BOTS_HOME", str(tmp_path))
+    monkeypatch.setenv("OMEGA_BRIDGE_HOME", str(tmp_path / "bridge"))
     monkeypatch.delenv("OMEGA_LIVE", raising=False)
     for k in list(os.environ):
         if k.startswith("OMEGA_BINANCE_"):

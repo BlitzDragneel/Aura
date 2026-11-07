@@ -31,6 +31,7 @@ def perp(sym):
         first, last = df.index[-1], df.index[0]
     hrs = df.index.hour
     miss = ((df.index < first) | (df.index > last)) & np.isin(hrs, [0, 8, 16])
+    df["rtc"] = bt.round_trip_cost(df.qv24.fillna(0).clip(lower=0).values)
     df["fund"] = F.values
     df["fund_missing"] = miss
     return df
@@ -41,6 +42,7 @@ def simulate(df, sym, entry_mask, side, H, entry="taker", exit="taker"):
     One position at a time. Returns DataFrame time, exit_time, sym, net, gross, mae, side."""
     o, h, l = df.o.values, df.h.values, df.l.values
     qv24, F, Fm = df.qv24.values, df.fund.values, df.fund_missing.values
+    rtc = df.rtc.values
     idx = df.index
     n = len(o)
     side_arr = np.broadcast_to(np.asarray(side), (n,)) if np.ndim(side) == 0 else np.asarray(side)
@@ -61,7 +63,7 @@ def simulate(df, sym, entry_mask, side, H, entry="taker", exit="taker"):
         else:
             mae = -(np.nanmax(hh) / e - 1)
         gross = s * (x / e - 1)
-        cost = float(bt.round_trip_cost(max(qv24[i], 0), entry, exit))
+        cost = rtc[i] if (entry == "taker" and exit == "taker") else float(bt.round_trip_cost(max(qv24[i], 0), entry, exit))
         fund = 0.0
         if H > 8:
             fund = s * F[i:i + H].sum()

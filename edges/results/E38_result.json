@@ -759,5 +759,69 @@
   "years": true,
   "enough_trades": true
  },
- "verdict": "FAIL"
+ "verdict": "FAIL",
+ "leverage_information_only_FAIL": {
+  "variant": "L96 k2 W12 H96",
+  "share_mae_beyond_20x": 0.3065,
+  "share_mae_beyond_40x": 0.6173,
+  "mae_worst": -0.828,
+  "leverage_final_info_only": [
+   {
+    "leverage": 1,
+    "margin_frac": 0.05,
+    "final": 101.16,
+    "max_dd": -0.14,
+    "liquidations": 0,
+    "trades": 1315
+   },
+   {
+    "leverage": 2,
+    "margin_frac": 0.05,
+    "final": 95.62,
+    "max_dd": -0.301,
+    "liquidations": 2,
+    "trades": 1315
+   },
+   {
+    "leverage": 3,
+    "margin_frac": 0.05,
+    "final": 88.05,
+    "max_dd": -0.395,
+    "liquidations": 4,
+    "trades": 1315
+   },
+   {
+    "leverage": 5,
+    "margin_frac": 0.05,
+    "final": 70.31,
+    "max_dd": -0.552,
+    "liquidations": 12,
+    "trades": 1315
+   },
+   {
+    "leverage": 10,
+    "margin_frac": 0.05,
+    "final": 15.58,
+    "max_dd": -0.903,
+    "liquidations": 92,
+    "trades": 1315
+   },
+   {
+    "leverage": 20,
+    "margin_frac": 0.05,
+    "final": 0.99,
+    "max_dd": -0.988,
+    "liquidations": 241,
+    "trades": 730
+   },
+   {
+    "leverage": 40,
+    "margin_frac": 0.05,
+    "final": 0.98,
+    "max_dd": -0.99,
+    "liquidations": 199,
+    "trades": 314
+   }
+  ]
+ }
 }
