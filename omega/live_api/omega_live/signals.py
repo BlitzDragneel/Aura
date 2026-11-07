@@ -55,31 +55,31 @@ def to_frame(candles: list[dict]) -> pd.DataFrame:
 
 
 class LiveSignals:
-    def __init__(self, crypto: Crypto, universe_size: int = 60, workers: int = 8):
+    def __init__(self, crypto: Crypto, universe_size: int = 60, workers: int = 3):
         self.crypto = crypto
         self.n = universe_size
         self.workers = workers
         self._bars_cache: dict[tuple, tuple[int, dict]] = {}
 
     def bars(self, syms: list[str], tf: str, lookback: int) -> dict[str, pd.DataFrame]:
+        """Closed candles per symbol. One fetch per symbol per bar is shared by every rule on that timeframe."""
         bar_id = int(time.time() * 1000) // TF_MS[tf]
-        key = (tf, tuple(syms), lookback)
-        hit = self._bars_cache.get(key)
-        if hit and hit[0] == bar_id:
-            return hit[1]
-        out = {}
+        store = self._bars_cache.setdefault(tf, (bar_id, {}))
+        if store[0] != bar_id:
+            store = self._bars_cache[tf] = (bar_id, {})
+        have = store[1]
+        need = [s for s in syms if s not in have or len(have[s]) < min(lookback, 999)]
 
         def one(s):
             try:
-                return s, to_frame(self.crypto.klines(s, tf, min(lookback + 1, 1000))["candles"])
+                return s, to_frame(self.crypto.klines(s, tf, min(max(lookback, 720) + 1, 1000))["candles"])
             except (ProviderError, ValueError):
                 return s, None
         with cf.ThreadPoolExecutor(self.workers) as ex:
-            for s, df in ex.map(one, syms):
+            for s, df in ex.map(one, need):
                 if df is not None and len(df):
-                    out[s] = df
-        self._bars_cache = {key: (bar_id, out)}
-        return out
+                    have[s] = df
+        return {s: have[s].iloc[-lookback:] for s in syms if s in have}
 
     def run(self) -> dict:
         rules = approved_rules()

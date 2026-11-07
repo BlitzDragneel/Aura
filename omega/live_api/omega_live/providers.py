@@ -34,23 +34,39 @@ class Http:
         self.cooldown = cooldown
         self.down: dict[str, float] = {}
         self.last_error: dict[str, str] = {}
+        self.min_gap = {"binance": 0.05, "okx": 0.12, "gate": 0.12}  # seconds between calls per provider
+        self._last_call: dict[str, float] = {}
+        import threading
+        self._lock = threading.Lock()
 
     def get(self, name: str, url: str, **params):
         if self.down.get(name, 0) > time.time():
             raise ProviderError(f"{name} cooling down after error: {self.last_error.get(name, '')}")
+        gap = self.min_gap.get(name, 0)
+        if gap:  # pace requests so a 60-coin scan does not trip exchange rate limits
+            with self._lock:
+                wait = self._last_call.get(name, 0) + gap - time.time()
+                self._last_call[name] = time.time() + max(0, wait)
+            if wait > 0:
+                time.sleep(wait)
         try:
             r = self.c.get(url, params=params or None)
         except httpx.HTTPError as e:
             self._fail(name, f"network: {type(e).__name__}")
             raise ProviderError(f"{name}: {type(e).__name__}") from None
         if r.status_code != 200:
-            self._fail(name, f"HTTP {r.status_code}")
+            # 400/404: bad or unlisted symbol - not the provider's fault, no cooldown.
+            # 429: rate limited - short pause. 418/451/403/5xx: blocked or down - long pause.
+            if r.status_code == 429:
+                self._fail(name, "HTTP 429", 3.0)
+            elif r.status_code not in (400, 404):
+                self._fail(name, f"HTTP {r.status_code}")
             raise ProviderError(f"{name}: HTTP {r.status_code}")
         self.down.pop(name, None)
         return r.json()
 
-    def _fail(self, name, msg):
-        self.down[name] = time.time() + self.cooldown
+    def _fail(self, name, msg, seconds=None):
+        self.down[name] = time.time() + (self.cooldown if seconds is None else seconds)
         self.last_error[name] = msg
 
     def status(self):
@@ -273,8 +289,11 @@ class FX:
                             best = cand
             if not best:
                 raise ProviderError("swissquote: no prices")
+            age_s = max(0, time.time() - best["ts"] / 1000)
             return dict(symbol=a + b, bid=best["bid"], ask=best["ask"], price=(best["bid"] + best["ask"]) / 2,
-                        spread=round(best["ask"] - best["bid"], 6), ts=best["ts"], source="swissquote")
+                        spread=round(best["ask"] - best["bid"], 6), ts=best["ts"], age_s=round(age_s),
+                        stale=age_s > 600, note="market closed or feed paused" if age_s > 600 else None,
+                        source="swissquote")
 
         def twelve():
             if not self.key:
