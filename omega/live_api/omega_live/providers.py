@@ -34,7 +34,7 @@ class Http:
         self.cooldown = cooldown
         self.down: dict[str, float] = {}
         self.last_error: dict[str, str] = {}
-        self.min_gap = {"binance": 0.05, "okx": 0.12, "gate": 0.12}  # seconds between calls per provider
+        self.min_gap = {"binance": 0.05, "okx": 0.25, "gate": 0.15}  # seconds between calls per provider
         self._last_call: dict[str, float] = {}
         import threading
         self._lock = threading.Lock()
