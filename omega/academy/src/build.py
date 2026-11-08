@@ -49,3 +49,23 @@ json.load(open(OUT))
 for r in report: print(*r, sep=" | ")
 print("modules", len(mods), "lessons", nl, "minutes", total_min, "words", sum(r[2] for r in report))
 for e in errs: print("WARN", e)
+
+# ---- OUTLINE.md ----
+OUTLINE = os.path.join(os.path.dirname(OUT), "OUTLINE.md")
+L_all = [l for m in course["modules"] for l in m["lessons"]]
+tot = sum(l["minutes"] for l in L_all); free = [l for l in L_all if l["free"]]; fm = sum(l["minutes"] for l in free)
+o = [f"# {course['title']} — course outline", "",
+     f"Version {course['version']}, updated {course['updated']}. {len(course['modules'])} modules, {len(L_all)} lessons, about {tot} minutes of reading "
+     f"(≈{tot/60:.1f} hours) plus exercises in the OMEGA app. Every lesson has key points and a 4-question quiz with explanations.", "",
+     f"**Free:** Modules 1–2 in full, plus the first lesson of every other module ({len(free)} lessons, about {fm} minutes). "
+     f"**Premium:** the other {len(L_all)-len(free)} lessons (about {tot-fm} minutes).", "",
+     "Minutes are estimated from lesson length (about 140 words a minute, plus time for the worked examples). "
+     "Research results quoted in the course are listed, test by test, on the progress board: https://omega-board.onrender.com", ""]
+for m in course["modules"]:
+    mt = sum(l["minutes"] for l in m["lessons"])
+    o += [f"## Module {int(m['id'][1:])}. {m['title']} — {mt} min, {'FREE' if m['free'] else 'premium (first lesson free)'}", "", m["summary"], "",
+          "| # | Lesson | Minutes | Access |", "|---|---|---|---|"]
+    o += [f"| {l['id']} | {l['title']} | {l['minutes']} | {'Free' if l['free'] else 'Premium'} |" for l in m["lessons"]]
+    o.append("")
+open(OUTLINE, "w", encoding="utf-8").write("\n".join(o))
+print("wrote", OUT, "and", OUTLINE)

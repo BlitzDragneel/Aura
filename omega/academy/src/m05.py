@@ -189,7 +189,7 @@ Market | Entry | Stop | Stop dist | Size = risk / dist | Rounded down | Margin a
 
 ## Exercise
 
-1. Use the **Futures** page (paper) to size three trades at 0.5% of a 100 USDT account: BTC with a 1.5% stop, a mid-cap coin with a 4% stop, and a small coin with an 8% stop. Record notional for each (answers: 33.3, 12.5, 6.25 USDT).
+1. Use the **Futures calculator** (paper) to size three trades at 0.5% of a 100 USDT account: BTC with a 1.5% stop, a mid-cap coin with a 4% stop, and a small coin with an 8% stop. Record notional for each (answers: 33.3, 12.5, 6.25 USDT).
 2. Size one gold trade and one forex trade for your account. If the minimum lot breaks your rule, write "skip".
 3. Log one of these as a paper trade in the **Journal** with the planned risk amount.
 """,
@@ -260,7 +260,7 @@ Break-even win rate = 1 / (1 + R:R)
 | 2:1 | 33.3% |
 | 3:1 | 25% |
 
-Costs push these up a little. The OMEGA Research Lab's test rule (stop 1 ATR, target 1.5 ATR) needs a bit more than 40% winners after costs.
+Costs push these up a little. OMEGA's fixed condition-test rule (stop 1 ATR, target 1.5 ATR) needs a bit more than 40% winners after costs.
 
 ## CREED in R
 
@@ -407,7 +407,7 @@ Stops triggered by **mark price** ignore brief spikes on one exchange; stops by 
 
 1. On a 1h chart in **Analysis**, plan a long: mark the swing low, add a buffer, and also compute 1.5 × ATR. Which stop is wider? Use the wider one.
 2. Size the trade at 0.5% risk with that stop.
-3. On the **Futures** page, check that your stop is inside the liquidation distance at 1×, 5× and 20×. At which leverage would it fail?
+3. On the **Futures calculator**, check that your stop is inside the liquidation distance at 1×, 5× and 20×. At which leverage would it fail?
 """,
 "key_points": [
  "Put the stop where the idea is clearly wrong, plus a buffer; then size the position.",
@@ -611,7 +611,7 @@ Exness and other brokers may offer very high leverage on forex and gold. The sam
 
 ## Exercise
 
-1. Open the **Futures** page and read *"Leverage — what the tests say"*. Compare its statements with the tables above.
+1. Open the **Futures calculator** and read *"Leverage — what the tests say"*. Compare its statements with the tables above.
 2. Using the worked example, compute what happens at 10× (liquidation distance 9.5%): does the trade survive the −7% dip? (Yes — but a −10% dip would liquidate.)
 3. Write a personal leverage rule in your notes. Recommended: "1× on perps; margin is never more than what I'd lose anyway."
 """,

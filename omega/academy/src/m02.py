@@ -68,13 +68,13 @@ The market did the same thing in every row. Only the product and the leverage ch
 
 ## Which should a beginner use?
 
-- Learn on **paper** first (the OMEGA Futures page is paper only).
+- Learn on **paper** first (the OMEGA Futures calculator is paper only).
 - Then **spot**, or a perp at **1×** with a tiny size, so liquidation is not a realistic risk.
 - For forex and gold, start with the **smallest lot size** your account allows and calculate the dollar value of every move before entering (Lesson 6).
 
 ## Exercise
 
-1. Open the **Futures** page in OMEGA (paper only). Find where it shows liquidation, fees and funding. Read its section *"Leverage — what the tests say"*.
+1. Open the **Futures calculator** in OMEGA (paper only). Find where it shows liquidation, fees and funding. Read its section *"Leverage — what the tests say"*.
 2. On paper, repeat the worked example for a 3% *rise* at 1×, 5× and 10× with 100 USDT margin. (Answers: +3, +15, +30 USDT before fees.)
 3. If you have an Exness account, open the contract specification for XAUUSD and write down: contract size, minimum lot, and whether swaps apply to your account.
 """,
@@ -176,7 +176,7 @@ Small? Over 200 trades it is 5 USDT — 5% of a 100 USDT account. But remember t
 
 ## Exercise
 
-1. In the **Futures** page (paper) or on Binance's demo, place a limit buy well below price and a stop-market sell below that. Mark the stop as reduce-only.
+1. In the **Futures calculator** (paper) or on Binance's demo, place a limit buy well below price and a stop-market sell below that. Mark the stop as reduce-only.
 2. Write down: if price gaps 3% below your stop, roughly where would your stop-market fill? (Answer: near the first available price after the gap — about 3% below the stop, not at the stop.)
 3. Look at an order book on any coin and calculate the spread as a percentage: (ask − bid) / bid × 100.
 """,
@@ -333,7 +333,7 @@ Funding looks like it should contain information about crowded traders. OMEGA te
 - **E43 funding-settlement windows** (trading around the funding times): no variant had a positive mean.
 - **E28**: funding-carry effects were a 2021–22 phenomenon.
 
-The OMEGA app's Simulation page shows a funding-rate carry monitor for information, and says plainly that OMEGA does not execute it and that carry *"can flip negative in selloffs"*.
+Funding carry is a gross number: real carry pays entry and exit fees on both legs, can flip negative in selloffs, and carries exchange counterparty risk. OMEGA does not execute it.
 
 **Lesson:** treat funding as a **cost to manage**, not a free income.
 
@@ -358,7 +358,7 @@ Swap example (illustrative): swap long −5.0 USD per lot per night
 
 ## Exercise
 
-1. Open the **Positioning Desk** in OMEGA. Find the funding section and the "carry at your size" panel. Note the current funding rate on BTC.
+1. Open the **Position desk** in OMEGA. Find the funding section and the "carry at your size" panel. Note the current funding rate on BTC.
 2. Calculate: with 200 USDT notional at that rate, what would you pay or receive in one day (3 payments)?
 3. Convert the three funding times to your local time and write them in your trading plan notes.
 """,
@@ -463,7 +463,7 @@ Brokers track **margin level = equity ÷ used margin × 100%**. If it drops to t
 
 ## Exercise
 
-1. On the **Futures** page (paper), set a 100 USDT account and open a position at 5×, then at 20×. Note the liquidation price the page shows for each.
+1. On the **Futures calculator** (paper), set a 100 USDT account and open a position at 5×, then at 20×. Note the liquidation price the page shows for each.
 2. For each, place a stop at 3% from entry. Which one has the stop *outside* the liquidation distance? (At 20× the liquidation distance is about 4.5%, so a 3% stop is inside; at 40× (2.0%) it would not be.)
 3. Calculate the loss at stop for: 15 USDT margin, 4×, 2.5% stop. (Answer: 60 × 2.5% = 1.5 USDT plus fees.)
 """,
@@ -565,13 +565,13 @@ OMEGA's research is mostly crypto, but some forex and gold work was done:
 
 - **E15**: forex majors tested hour by hour — **all five failed**.
 - Gold hourly methods, session splits per market and a gold weekend-gap fade are on the protocol's **failed** list.
-- The app's **Breakout Desk** says both of its setups *failed a clean test* and are kept as a record only.
+- Two breakout setups OMEGA tried also failed a clean test; the progress board (https://omega-board.onrender.com) keeps them as a record only.
 
 That doesn't mean you can't trade gold or forex. It means you should **treat any gold or forex method as untested until you test it** (Module 7), and size it small.
 
 ## Exercise
 
-1. Open **Market Profiles** in OMEGA and read the gold profile, especially *"How to size it"*.
+1. Open **Analysis** on XAUUSD and note the typical size of an hourly candle today (its range). Then open the **Futures calculator** or your broker's contract specification and work out what one such hourly move costs at 0.01 lot.
 2. Calculate the lot size for: account 300 USD, risk 0.5%, gold stop 4.50 USD. (Answer: risk 1.50 USD → 1.50 / 4.50 × 0.01 = 0.0033 → below minimum: the trade is too big at this risk.)
 3. Calculate for: account 2,000 USD, risk 1%, EURUSD stop 15 pips. (Answer: 20 USD / 15 = 1.33 USD per pip → 0.13 lot.)
 """,

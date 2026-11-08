@@ -61,9 +61,9 @@ Because they are useful for things other than predicting direction:
 
 In short: use indicators as **measuring tools**, not as **oracles**.
 
-## A note on the OMEGA Research Lab
+## A note on OMEGA's own condition tests
 
-The **Research Lab** page tests OMEGA's own conditions — trend, structure, RSI, volatility squeezes, range extremes, momentum, each also with the 4H trend required to agree — on your stored history. Its fixed trade rules are: entry at the hourly close, stop 1 ATR away, target 1.5 ATR, closed after 24 hours if neither is hit. A condition only reaches OMEGA Signals if it **held on a held-out test**. Most don't. You will use the Lab in Module 7.
+OMEGA tested its own conditions — trend, structure, RSI, volatility squeezes, range extremes, momentum, each also with the 4H trend required to agree — with fixed trade rules: entry at the hourly close, stop 1 ATR away, target 1.5 ATR, closed after 24 hours if neither is hit. A condition only reaches **OMEGA Signals** if it **held on a held-out test**. Most don't. The verdicts are on the progress board (https://omega-board.onrender.com), and you will design your own test in Module 7.
 
 ## Exercise
 
@@ -117,7 +117,7 @@ The EMA reacts faster to the latest price, so it lags less — and is noisier.
 1. **Trend description:** price above a rising 50-period average = uptrend context; below a falling one = downtrend context.
 2. **Crossovers:** a fast average crossing above a slow one ("golden cross") as a buy signal; the opposite ("death cross") as a sell.
 3. **Dynamic support/resistance:** buying pullbacks to an average in an uptrend.
-4. **Filters:** "only take longs when the 4H trend agrees" — a filter the Research Lab also tests.
+4. **Filters:** "only take longs when the 4H trend agrees" — a filter OMEGA's condition tests also checked.
 
 ## Worked example: the cost of whipsaws
 
@@ -243,9 +243,48 @@ So the honest summary: **mild "oversold" is not an edge; extreme, forced selling
 3. If you want to test a mean-reversion idea, define the extreme precisely (how many standard deviations? which timeframe? which volume?), write it down, and test it on unseen data with costs (Module 7).
 4. Never average down into a falling market without a predefined maximum loss.
 
+
+## Worked example: "oversold" versus "panic"
+
+Compare two drops on the same coin (hourly σ = 1.2%, average hourly volume 2 million USDT).
+
+**Drop 1 — ordinary oversold**
+
+```
+RSI(14) = 27   Last hour: −1.5% (−1.25σ)   Volume 2.6M (1.3×)
+Close location 0.40   Lower Bollinger Band touched
+```
+
+Every "oversold" box is ticked. But in OMEGA's terms this is an ordinary move: 1.25σ, normal volume, close in the lower half. Short-timeframe and mild-reversal rules built on moves like this did not pass the final test, and at 4h the panic trigger was no better than random limit dips (E39).
+
+**Drop 2 — panic / climax**
+
+```
+RSI(14) = 18   Last hour: −4.1% (−3.4σ)   Volume 8.4M (4.2×)
+Close location 0.66
+```
+
+This one meets the **climax** conditions: ≥ 3σ drop, ≥ 3× volume, close in the top 40%. It's the kind of extreme, forced event the only passed setups are built on.
+
+### The sizing difference
+
+Even for Drop 2, the research says size small and unleveraged:
+
+```
+Account 100 USDT. Fixed seat 5 USDT at 1× (the bots' template).
+If this trade becomes one of the −80% outliers: −4 USDT (−4%).
+If it rebounds 6% in 12 hours: +0.30 USDT minus ~0.01 costs.
+```
+
+And remember the fading: the climax averaged about +1.1% a trade in 2025–26, but with a t below 1 — not significant.
+
+### The takeaway
+
+RSI and bands tell you a market is stretched. They don't tell you *how* stretched relative to that coin's normal behaviour, or whether the selling was forced. The σ-and-volume definition does, which is why it's the version with evidence — and even that is fading.
+
 ## Exercise
 
-1. Open the **Research Lab** in OMEGA and look at the conditions it tests (RSI, volatility squeezes, range extremes). Note which, if any, it rates as having held on the held-out test for your markets.
+1. Visit the progress board (https://omega-board.onrender.com) and look for tests of RSI, volatility squeezes or range extremes. Note which, if any, held on the held-out test. Then open **OMEGA Signals** and read its Evidence note for any open signal.
 2. On a 1h chart, find the last three times price closed below the lower Bollinger Band (or RSI under 30). Record the result 24 hours later, including the losing cases.
 3. Compute RSI by hand for: average gain 0.4%, average loss 0.8%. (Answer: RS 0.5 → RSI = 100 − 100/1.5 = 33.3.)
 """,
@@ -311,7 +350,7 @@ Stop distance = k × ATR   (k often 1 to 2 on the entry timeframe)
 Gold 1h ATR 5.0, k = 1.5 → stop 7.5 dollars from entry
 ```
 
-The OMEGA Research Lab uses **stop 1 ATR, target 1.5 ATR** as its fixed test rule.
+OMEGA's condition tests used **stop 1 ATR, target 1.5 ATR** as their fixed rule.
 
 ### 2. Volatility-adjusted position size
 
@@ -351,7 +390,7 @@ High volatility is not automatically bad. The two setups that passed OMEGA's tes
 
 1. In **Analysis**, find the ATR (or estimate it from the last 14 hourly ranges) for one crypto and one forex/gold market.
 2. For each, compute a 1.5-ATR stop and the position size that risks 0.5% of your account. Round down. Is the size above the minimum order?
-3. Open the **Futures** page and check that your stop is inside the liquidation distance at the leverage you'd use.
+3. Open the **Futures calculator** and check that your stop is inside the liquidation distance at the leverage you'd use.
 """,
 "key_points": [
  "True range includes gaps; ATR averages it and shows how far a market typically moves.",
@@ -427,7 +466,7 @@ Some strategies look smooth until a single event: a short leg on a coin that ros
 
 ## Exercise
 
-1. Open the **Scoreboard** page. Read how CREED and OMEGA compare against a no-skill system at the same reward:risk on their own records.
+1. Visit the progress board (https://omega-board.onrender.com). Count how many tests are marked PASS and how many FAIL, and open one forward record linked from it.
 2. Pick one indicator rule you believed in before this course. Write it down exactly (entry, exit, timeframe, market). In Module 7 you will write a test plan for it.
 3. From the table above, choose the result that surprised you most and write two sentences on why.
 """,

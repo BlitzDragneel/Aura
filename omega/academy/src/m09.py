@@ -54,7 +54,7 @@ And the separate trading-bot system for Binance only allows rules listed in `app
 
 ## Exercise
 
-1. Open the **Trading Bots** page in OMEGA and the **Bot control room**. Confirm that everything is paper and note where results are recorded.
+1. Open the **Bots** page (Growth Bot / Bots) in OMEGA. Confirm that everything is paper and note where results are recorded.
 2. Find one bot advert or social-media claim. Write the five questions from the table you would ask before believing it.
 3. Open **Autopilot** and read what it does: researches, tests and paper-trades while the app is open, *never real orders*.
 """,
@@ -157,7 +157,7 @@ The grid "won" every small wiggle for months, then one crash took the account.
 
 ## Exercise
 
-1. Open the **Simulation** page and read the funding-rate carry monitor and its warning text.
+1. Open the **Position desk** and look at the current funding rates. Use the **Futures calculator** to work out what a funding flip from +0.01% to −0.10% per 8 hours would do to a 1,000 USDT short-perp position over a week.
 2. Take any bot strategy you've heard of and answer the six questions above.
 3. Write a rule in your plan: "I will not run strategies that add to losing positions or that have a stop more than __× the target."
 """,
@@ -247,6 +247,47 @@ For rare setups (the climax fires only occasionally), this takes months. That's 
 ## Honest limits
 
 OMEGA's bot README is candid: exchange calls were tested against a **simulated Binance** only, because the research environment couldn't reach the real exchange or testnet; the bots had *"never run on Windows, against the real testnet, or with MetaTrader 5"* at that time. That is exactly why the ladder exists — each rung finds problems the previous one couldn't.
+
+
+## Worked example: what each rung actually caught
+
+Here is an illustrative (made-up) example of one rule climbing the ladder; the numbers are invented to show the process, not results from OMEGA — the kind of problems each rung is designed to find.
+
+**Backtest.** The rule shows about +0.2% a trade after costs on 2024–26 data, many trades, 1×. Fine as a starting point.
+
+**Paper (3 weeks, 41 signals).**
+
+```
+Signals matched a backtest of the same 3 weeks: 39 of 41.
+Two mismatches: the bot restarted during an hourly close and skipped one bar;
+a coin's data had a missing (volume-0) candle that the backtest treated as missing too,
+but the live feed filled it.
+Fixes: on restart, re-evaluate the last closed bar; treat volume-0 bars the same way live.
+```
+
+Without paper, those two mismatches would have shown up as unexplained live results.
+
+**Testnet (7 weeks, 52 trades).**
+
+```
+Orders placed: 52 entries, 52 stops, 31 limit cancellations at window end.
+Problems found:
+  - 3 stops rejected (price precision wrong for small-price coins) → entry undone by the guard ✔
+  - 1 position briefly without a stop after a network timeout → guard hit the kill cycle ✔
+Average result: noisy and not comparable (testnet prices differ from real).
+```
+
+The guard did its job: no unprotected position stayed open. The precision bug was fixed and re-tested for another 20 trades.
+
+**Live (tiny).** 5 USDT seats, 1×, a no-withdrawal, IP-restricted key.
+
+```
+First 60 live trades: average fill on limit entries matched the assumed price
+(fills only when price traded through); market exits slipped about 0.03% on average.
+Average result: −0.05% a trade, t ≈ −0.1 → no conclusion yet; continue to 100+.
+```
+
+Every rung caught something the previous one couldn't. None of them proved the edge — only a long live record can — but together they made sure that when the live record is judged, it's judging the **strategy**, not bugs.
 
 ## Exercise
 
@@ -384,9 +425,9 @@ Backtests can be wrong in many ways (Module 7). A forward record can't be overfi
 1. **Timestamped before the outcome.** Signals are published or logged when made.
 2. **Complete.** Every signal, including losers and ones not traded. OMEGA Signals: *"Every signal is followed to its outcome and recorded in the Journal."*
 3. **Unedited.** No deleting, no "that one doesn't count".
-4. **Same rules as tested.** OMEGA Signals' *"stop, target and 24-hour limit are exactly the terms the Lab tested"*; the bots' live code is the backtest code.
+4. **Same rules as tested.** OMEGA Signals' *"stop, target and 24-hour limit are exactly the terms that were tested"*; the bots' live code is the backtest code.
 5. **After real costs.**
-6. **Compared with a baseline.** The Scoreboard judges each product against *"a system with no skill at the same reward:risk"*.
+6. **Compared with a baseline.** OMEGA's tests judge each rule against random entries with the same exits — a system with no skill.
 
 ## Five questions to ask
 
@@ -446,14 +487,14 @@ Everything in this course points here. Whether manual or automated:
 ## Exercise
 
 1. Open **OMEGA Signals** → *Live results against the research*. Note the number of closed signals and how they compare with the research.
-2. Open the **Scoreboard** and read *"Same period, side by side"*. Is either product clearly above the no-skill line? With how many trades?
+2. Open the public forward records linked from the progress board (https://omega-board.onrender.com). Is any rule clearly above zero after costs? With how many trades?
 3. Take any public trading record you can find and score it against the six "trustworthy" criteria and the red-flag list.
 """,
 "key_points": [
  "A forward record is timestamped before outcomes, complete, unedited, uses the tested rules and includes costs.",
  "Judge it by number of trades, comparison with the backtest, dependence on best trades, worst outcomes and a no-skill baseline.",
  "Small records mean little; fat-tailed setups need hundreds of trades.",
- "OMEGA Signals use exactly the Lab's tested terms and are followed to outcome; the Scoreboard compares against no-skill.",
+ "OMEGA Signals use exactly the tested terms and are followed to outcome; OMEGA's tests compare against a no-skill baseline.",
  "Red flags: screenshots only, cherry-picked start dates, unknown leverage, edits, no costs."
 ],
 "quiz": [

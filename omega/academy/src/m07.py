@@ -40,7 +40,7 @@ There are three levels:
 | Level | How | Good for |
 |---|---|---|
 | 1. Manual chart test | Scroll back, record every occurrence of your rule in a spreadsheet | Simple rules, a first look |
-| 2. OMEGA Research Lab / Edge Lab | The app tests conditions on your stored history with fixed rules, then on held-out data / forward weeks | Checking conditions the Lab supports |
+| 2. Spreadsheet test | Export or copy candles, apply the rule in columns, split the periods | Rules with a few conditions |
 | 3. Code (Python) | A backtest with costs, multiple periods and a luck check | Serious testing |
 
 All three follow the same principles, which the rest of this module teaches:
@@ -59,24 +59,52 @@ The goal of a test is not to prove your idea right. It is to **try hard to prove
 
 A good scientist is happy when a test fails cleanly: they learned something for the price of an afternoon instead of a year of losses.
 
+
+## Worked example: how a "great idea" dies in three steps
+
+Take a simple idea many traders believe: *"Buy BTC when the hourly RSI drops below 25, sell 12 hours later."*
+
+**Step 1 — The chart impression.** Scrolling back, you remember four textbook bounces from RSI 25. The idea looks obvious.
+
+**Step 2 — Counting every case.** You list *every* occurrence over six months, not just the memorable ones:
+
+```
+Occurrences: 31
+Average 12-hour result before costs: +0.42%
+Costs (taker in and out + slippage): about 0.16%
+Average after costs: +0.26%
+Standard deviation: 2.4%   →   t = 0.26 / (2.4 / √31) = 0.26 / 0.43 ≈ 0.60
+```
+
+Already much less impressive: a t of 0.6 is well inside luck.
+
+**Step 3 — The luck check.** You take 31 random hours in the same six months and measure the 12-hour result. If BTC rose over the period, random longs average, say, +0.30% after costs. Your rule (+0.26%) is **no better than random**. The "edge" was just being long in a rising market.
+
+(These numbers are illustrative of a typical manual test, not an OMEGA result. The real lesson from OMEGA is that its larger, stricter tests of RSI and oversold rules came to the same conclusion: mild oversold signals didn't pay.)
+
+**What the test cost you:** one afternoon.
+**What trusting the impression would have cost:** months of trades at an average no better than random, minus your mistakes.
+
+That trade-off — an afternoon versus months — is why every idea goes through the process in this module before it gets a single real dollar.
+
 ## Exercise
 
 1. Write down the indicator rule you chose in Module 4 (or a new idea) as one sentence.
-2. Open the **Research Lab** page. Read its pipeline: *1-min history → Hypothesis → In-sample → Held-out test → Knowledge*. Note which of the seven principles above it already applies.
-3. Open the **Edge Lab** and read its pipeline: *Built-in knowledge → Untested candidates → Half A, then half B → Forward weeks → EDGE*. Write how "half A then half B" relates to discovery and validation.
+2. Visit the progress board (https://omega-board.onrender.com). Pick one test and find its plan, its periods and its verdict. Note which of the seven principles above you can see applied.
+3. A common shortcut is "half A, then half B": find a rule on one half of the data and check it on the other. Write how that relates to discovery and validation.
 """,
 "key_points": [
  "The question is whether an idea makes money after costs on data it has never seen.",
  "Many reasonable ideas (turn of month, Fear & Greed, Coinbase premium, breakouts) failed fair tests.",
  "Testing protects you from ideas that never worked, that stopped working, or that you over-size.",
- "You can test manually, with OMEGA's Research Lab and Edge Lab, or in code — the principles are the same.",
+ "You can test manually, in a spreadsheet, or in code — the principles are the same.",
  "Aim to prove your idea wrong; if it survives, forward test it small."
 ],
 "quiz": [
  {"q": "What is the real question about any trading idea?", "options": ["Does it sound logical?", "Does it make money after costs on data it has never seen?", "Did it work last week?", "Do influencers use it?"], "answer": 1, "why": "Only out-of-sample results after costs separate real edges from noise."},
  {"q": "What happened to the Fear & Greed extremes idea (E63)?", "options": ["Passed with grade A", "Looked big on 28 trades but failed the luck check", "Was never tested", "Became H3"], "answer": 1, "why": "A large average on few trades was not better than what random shifts produced."},
  {"q": "What should a test try to do?", "options": ["Prove the idea right", "Try hard to prove the idea wrong", "Find the best parameters", "Avoid costs"], "answer": 1, "why": "Surviving a serious attempt to kill it is what gives an idea credibility."},
- {"q": "What does the Edge Lab's 'half A, then half B' resemble?", "options": ["Discovery then validation on separate data", "Doubling position size", "Trading two markets", "Using two exchanges"], "answer": 0, "why": "Find on one half, confirm on the other — the same logic as discovery and validation."}
+ {"q": "What does testing 'half A, then half B' resemble?", "options": ["Discovery then validation on separate data", "Doubling position size", "Trading two markets", "Using two exchanges"], "answer": 0, "why": "Find on one half, confirm on the other — the same logic as discovery and validation."}
 ]
 },
 {
@@ -223,8 +251,8 @@ Look at E65: it passed **both** discovery and validation and still faded to almo
 ## Other ways to hold data out
 
 - **Untouched coins:** E22 passed the climax on **324 untouched coins** — coins never used in designing it. This is a "cross-sectional" hold-out, and a powerful one.
-- **Half A / half B:** the Edge Lab finds on one half and checks on the other.
-- **Forward testing:** the ultimate out-of-sample — data that didn't exist when you made the rule. The Edge Lab's *forward weeks* and the paper bots do this.
+- **Half A / half B:** find on one half of the data and check on the other.
+- **Forward testing:** the ultimate out-of-sample — data that didn't exist when you made the rule. OMEGA's public forward records (linked from the progress board) and the paper bots do this.
 
 ## Walk-forward (an advanced option)
 
@@ -237,14 +265,14 @@ Some tests repeatedly train on a window and test on the next. The E81 scouts did
 3. **Picking the start date** that makes results look best.
 4. **Re-running the final** with a "small bug fix" that happens to improve results. (OMEGA logged reruns and fixes explicitly, e.g. a funding over-charge bug in E50 runs.)
 
-## Doing it in the OMEGA Research Lab
+## How OMEGA Signals use this
 
-The Research Lab tests a condition **in-sample**, then on a **held-out test**, and only adds it to *Knowledge* (and OMEGA Signals) if it held. Its trade rules are fixed — entry at the hourly close, stop 1 ATR, target 1.5 ATR, closed after 24 hours — so you can't tune them to the data. That fixed design is itself a protection against overfitting.
+OMEGA's own conditions were tested **in-sample**, then on a **held-out test**, and only reach **OMEGA Signals** if they held. Their trade rules are fixed — entry at the hourly close, stop 1 ATR, target 1.5 ATR, closed after 24 hours — so they can't be tuned to the data. That fixed design is itself a protection against overfitting. A signal's **Evidence** note tells you how much tested history backs it.
 
 ## Exercise
 
 1. For your plan from Lesson 2, write the exact discovery, validation and final dates. Check that each period should have enough occurrences of your setup.
-2. In the **Research Lab**, run (or review) a condition's in-sample and held-out results for one market. Did the held-out result shrink?
+2. On the progress board (https://omega-board.onrender.com), pick two tests and compare their discovery and final results. Did the out-of-sample result shrink?
 3. Make a rule for yourself: "I will look at my final period once, and record the result whatever it is."
 """,
 "key_points": [
@@ -381,7 +409,7 @@ Most bad backtests aren't fraud. They're honest mistakes that make results look 
 **Defences:**
 - Few parameters, round values, decided in advance.
 - Check **neighbouring** settings: if RSI 23 works but 20 and 26 don't, it's noise.
-- Fixed exit rules (the Research Lab's 1 ATR stop / 1.5 ATR target / 24 h).
+- Fixed exit rules (OMEGA's condition tests used a 1 ATR stop / 1.5 ATR target / 24 h).
 - Count variants and run a luck check.
 
 E80 is a good example of resisting overfitting: 480 exit variants were tried, the discovery winner for the climax (a +2% take-profit) **lost** out of sample, and the original simple exit was kept.
@@ -544,13 +572,13 @@ Verdict: PASS / FAIL / not enough trades
 
 With small samples you'll probably get "not enough trades" — which is an honest and useful answer. It tells you a rule like this needs many coins or many years to judge.
 
-## Or use the Research Lab
+## Or study a test on the progress board
 
-Run one of the Lab's conditions on a market and record: the in-sample result, the held-out result, and whether it was added to Knowledge. Compare the two numbers. That's the same discovery → out-of-sample drop you saw in E45.
+Open the progress board (https://omega-board.onrender.com), pick one test, and record its discovery result, its validation result, its final result and its verdict. Compare the numbers. That's the same discovery → out-of-sample drop you saw in E45.
 
 ## Exercise
 
-1. Complete the small manual test (or a Research Lab run) and fill in the report template.
+1. Complete the small manual test and fill in the report template.
 2. Log the attempt in your attempts log with the number of variants.
 3. Write a two-sentence verdict, including at least one caveat — even if it "passed".
 """,
@@ -559,7 +587,7 @@ Run one of the Lab's conditions on a market and record: the in-sample result, th
  "A result can pass every discovery check and still be an effect of one period.",
  "E25 attacked the panic bounce's likeliest weakness (survivorship) with 143 delisted coins — and it held.",
  "Report caveats even for passes: outlier dependence, worst trades, fading.",
- "A small manual test or Research Lab run teaches the full process; 'not enough trades' is a valid verdict."
+ "A small manual test teaches the full process; 'not enough trades' is a valid verdict."
 ],
 "quiz": [
  {"q": "What did E45 do in discovery?", "options": ["−292 bp", "+358 bp, t 4.84, and beat the luck check", "Failed the luck check", "Had no trades"], "answer": 1, "why": "It looked excellent in discovery, then failed later."},

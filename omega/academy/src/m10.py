@@ -256,8 +256,8 @@ Knowledge becomes skill through repetition. This schedule turns the course into 
 | Day | Task | OMEGA page |
 |---|---|---|
 | 1 | Write version 1 of your plan (sections 1–3, 5) | Risk Guard |
-| 2 | Fee, funding and liquidation calculations for 3 positions at 100 USDT | Futures, Positioning Desk |
-| 3 | Lot and pip sizing for gold and one forex pair at your account size | Market Profiles |
+| 2 | Fee, funding and liquidation calculations for 3 positions at 100 USDT | Futures calculator, Position desk |
+| 3 | Lot and pip sizing for gold and one forex pair at your account size | Analysis, Futures calculator |
 | 4 | Full mark-up for 2 markets using the checklist | Analysis, Market Read |
 | 5 | Mark-up again; compare yesterday's scenarios with what happened | Analysis, Journal |
 | 6 | Sessions and calendar: convert this week's events to T&T time | — |
@@ -282,11 +282,11 @@ Rules for week 2: maximum 2 trades a day, 0.5% risk, Risk Guard limits apply eve
 | Day | Task | OMEGA page |
 |---|---|---|
 | 15 | Write a full test plan for one idea (Module 7 template); fingerprint it | — |
-| 16 | Discovery: record every occurrence in the discovery period | Analysis / Research Lab |
+| 16 | Discovery: record every occurrence in the discovery period | Analysis |
 | 17 | Luck check: same number of random entries | — |
 | 18 | Validation: run once, record | — |
 | 19 | Final: run once, record; write verdict with caveats | — |
-| 20 | Research Lab: run or review one condition's in-sample vs held-out result | Research Lab |
+| 20 | Compare two tests' discovery vs final results on the progress board | omega-board.onrender.com |
 | 21 | **Weekly review #3** + continue daily paper trades (max 1 a day this week) | Journal |
 
 ## Week 4 — Routine, automation and the plan (days 22–30)
@@ -295,11 +295,11 @@ Rules for week 2: maximum 2 trades a day, 0.5% risk, Risk Guard limits apply eve
 |---|---|---|
 | 22 | Full routine: checklist → window → journal → 10-minute review | Command |
 | 23 | Same, plus news rule practice around a scheduled event | — |
-| 24 | Start (or review) a paper bot on a tested rule; find the kill switch | Trading Bots, Autopilot |
+| 24 | Start (or review) a paper bot on a tested rule; find the kill switch | Bots, Autopilot |
 | 25 | Routine + paper trades | — |
 | 26 | Write your tilt plan and stop-trading list | — |
 | 27 | Routine + paper trades | — |
-| 28 | Monthly check: expectancy (with how many trades), drawdown, process score | Growth, Scoreboard |
+| 28 | Monthly check: expectancy (with how many trades), drawdown, process score | Growth, Journal |
 | 29 | Rewrite your plan as version 2 using everything you learned | — |
 | 30 | **Capstone** (next lesson) | — |
 
@@ -362,7 +362,7 @@ Then complete the six parts below and write a short report (1–2 pages).
 Use the Module 7 template: hypothesis with a reason, exact entry and exit, costs, variants (and their number), periods, pass mark, luck check. Date it and save it before you look at results.
 
 ### Part 2 — The test
-Run discovery, the luck check, validation (once) and final (once). Use a manual chart test or the Research Lab. Log every variant. Report results after costs, in R or %, with trade counts. Include results **without the best 5%** if you have enough trades, and the **worst single trade**.
+Run discovery, the luck check, validation (once) and final (once). Use a manual chart test or a spreadsheet. Log every variant. Report results after costs, in R or %, with trade counts. Include results **without the best 5%** if you have enough trades, and the **worst single trade**.
 
 ### Part 3 — The verdict
 PASS, FAIL or NOT ENOUGH TRADES — with at least two caveats. Label the setup (tested-pass, watch, untested, failed).

@@ -21,7 +21,7 @@ Every part of a good trading day fits one of those steps.
 
 ```
 07:00  OBSERVE   Coffee. Economic calendar. Any big news overnight?
-07:15  UNDERSTAND Market Read + Market Profiles for my 2–3 markets.
+07:15  UNDERSTAND Market Read + Intel + Radar for my 2–3 markets.
                  Mark-up: structure, zones, stops above/below.
 07:40  VALIDATE  OMEGA Signals: any tested signal open? CREED desk: steps met?
                  Risk Guard: today's limits; yesterday's result.
@@ -71,6 +71,39 @@ The research shows edges are rare. On most days, for most markets, **there is no
 - If you work 9-to-5, don't try to day-trade the London open from your desk. Choose markets and timeframes that fit: 1h/4h crypto, evening reviews, alerts, or the passed setups (which suit automation).
 - If you can only trade 3 days a week, plan 3 days.
 - Sleep matters. Many crypto losses happen at 2 a.m.
+
+
+## Worked example: two days compared
+
+The same trader, two very different days. Account 1,000 USD, 0.5% risk = 5 USD.
+
+**Day A — a good day that lost money**
+
+```
+07:00  Intel: US CPI at 08:30. Rule: no new trades 08:00–09:00.
+07:15  Market Read on XAUUSD: range 2,630–2,680; stops below 2,628.
+07:40  OMEGA Signals: nothing open. CREED: 1H pullback zone reached on gold.
+07:50  Scenario: sweep below 2,630 and reclaim → long, stop 2,621, target 2,650 (R:R 2.1).
+09:20  Sweep and reclaim happen. Entered at plan size. Stop placed with the entry.
+10:05  Stopped out: −5.20 USD (−1.04R including spread).
+10:10  Journal. No further setups. Done at 11:30.
+Result: −1.04R.   Process: 100%.
+```
+
+**Day B — a bad day that made money**
+
+```
+No preparation. Saw gold jump on CPI at 08:31, bought at market "before it runs".
+No stop for 20 minutes. Price dropped 6, then rallied 14. Closed +9 USD.
+Then bought again on a 5-minute chart, double size, out of boredom: +3 USD.
+Result: +12 USD (+2.4R).   Process: broke 4 rules.
+```
+
+Day B "won", but it trained the habits that blow up accounts: trading news without a plan, no stop, doubling size, boredom trades. Repeat Day B fifty times and one of those news spikes goes the other way with no stop in place.
+
+Day A lost, but it is exactly the day you want to repeat a thousand times: if the method has an edge, Day A is how it gets paid; if it doesn't, Day A is how you find out cheaply.
+
+**Score days by process. Score strategies by results over many trades.**
 
 ## Exercise
 
@@ -144,7 +177,7 @@ Limit yourself to **2–3 markets**. You will know them better, recognise their 
 - 2–3 key zones,
 - how much of its normal daily range (ATR) it has already used.
 
-**Market Profiles** in OMEGA help here: when each market moves, how it behaves, how to size it, and what was tested.
+Build a short character note for each market from **Analysis** and **Market Read**: when it moves, how it behaves, how to size it, and (from the progress board) what was tested. **Radar** shows which of your markets are active today.
 
 ## 7. Liquidity map
 
@@ -189,7 +222,7 @@ Window: 08:45–11:30
  "Preparation is the part of the edge you fully control; use a written checklist.",
  "Check your state first: 'If I have to ask whether I'm fit to trade, I'm not.'",
  "Know your account numbers and Risk Guard limits before the first trade.",
- "Limit yourself to 2–3 markets; use Market Profiles, Market Read, Signals and CREED for context.",
+ "Limit yourself to 2–3 markets; use Market Read, Intel, Radar, Signals and CREED for context.",
  "Write scenarios with sizes, set alerts, and trade only inside your window."
 ],
 "quiz": [
@@ -365,6 +398,41 @@ It's tempting to count paper trades as proof. Don't. Paper trading has no slippa
 3. **Never edit past entries**; add a correction note instead.
 4. **Use R**, so results are comparable as your account changes.
 
+
+## Worked example: one trade, logged properly
+
+Here is a complete journal entry for a single paper trade on gold, followed by what the trader learns from ten such entries.
+
+```
+Date/time:      2026-11-18 08:52 → 10:40 T&T
+Market / TF:    XAUUSD, 1h context, 15m entry
+Setup:          Support sweep and reclaim (CREED-style checklist) — label: discipline only
+Direction:      Long
+Planned:        entry 2,641.0  stop 2,633.5  target 2,656.0  → R:R 2.0
+Size / 1R:      0.01 lot → 7.50 USD risk (account 1,500 → 0.5%)
+Costs:          spread ≈ 0.25 → 0.25 USD
+Actual:         entry 2,641.3  exit 2,633.4 (stopped)
+Result:         −7.90 USD = −1.05R
+Followed plan:  Y (entry slightly late)
+Emotion:        calm
+Note at entry:  "Sweep below 2,636 at 08:45, closed back above; Market Read shows stops cleared."
+Lesson:         Good loss. Entry 0.3 late — use a limit next time.
+```
+
+### Ten entries later
+
+```
+R results: −1.05, +2.0, −1.0, −1.0, +1.9, −1.2, −1.0, 0, −1.0, +2.1
+Sum = −0.25R   Average = −0.025R
+Followed plan: 8/10   Emotions: calm 7, rushed 2, revenge 1
+Rushed + revenge trades: −1.2, −1.0, −1.0 = −3.2R
+Calm trades: +2.95R
+```
+
+Ten trades prove nothing about the method, but the journal has already shown the trader something real: **every losing trade marked "rushed" or "revenge" broke a rule**, and calm, planned trades were roughly flat to positive. The fix — a 30-minute break after any loss, and entries only from written scenarios — is concrete and free.
+
+Without the "emotion" and "followed plan" fields, all the trader would know is "−0.25R, maybe the strategy doesn't work".
+
 ## Exercise
 
 1. Open the **Journal** and explore the filters: *Real only*, *Simulated only*, *Trades + setups not taken*, CREED sources.
@@ -468,7 +536,44 @@ Once a month, add:
 
 - **Journal** filters: *Real only*, then *Losses only*; then *Trades + setups not taken*.
 - **Growth** page: expectancy and the growth projection — check it uses enough trades.
-- **Scoreboard**: your products' records against a no-skill baseline at the same reward:risk.
+- **Progress board** (https://omega-board.onrender.com): the forward records of OMEGA's rules, to compare with your own.
+
+
+## Worked example: a full weekly review
+
+A trader reviews week 3 of paper trading (account 1,000 USD, 0.5% risk = 5 USD = 1R).
+
+```
+Trades: 7   Wins: 2   Losses: 4   Breakeven: 1
+Results in R: +2.1, −1.0, −1.0, 0, −1.3, +1.8, −1.0
+Net: −0.4R (−2 USD)   Expectancy this week: −0.4 / 7 = −0.06R
+Running: 31 trades, +0.04R (SE ≈ 1.2 / √31 ≈ 0.22R → no conclusion possible)
+Max drawdown from peak: 1.9%
+```
+
+**Process first.** 5 of 7 trades followed the plan. The two that didn't:
+
+- The −1.3R trade: the stop was moved 30% wider "to give it room" → **execution error**.
+- One −1.0R trade: taken 10 minutes before US CPI, against the news rule → **rule break**.
+
+**Loss classification.** Two losses were good losses; one execution error; one rule break; no evidence of a bad plan (31 trades is far too few to say).
+
+**What the numbers say without the rule breaks.**
+
+```
+Plan-following trades: +2.1, −1.0, 0, +1.8, −1.0 → +1.9R over 5 = +0.38R
+Rule-breaking trades:  −1.3, −1.0               → −2.3R over 2 = −1.15R
+```
+
+Five trades is noise, but the direction is a familiar pattern: the losses that hurt were the ones outside the plan.
+
+**Setups not taken.** Three CREED-style setups were skipped. Recorded outcomes: −1R, −1R, +1R. Taking them would have added −1R. Skipping them was fine this week — but one week says nothing.
+
+**One change for next week.** "Stop orders are placed at entry and never widened; if I want more room, I must reduce size before entry." The news rule already exists; the fix there is an Intel calendar check in the pre-market checklist.
+
+**Calendar.** From **Intel**: US jobs report Friday 08:30 T&T (summer). No new trades 08:00–09:00.
+
+Notice what the review did **not** do: it did not change the strategy, raise size after a good trade, or declare the method "working" or "broken". It found two process fixes. That is a successful review.
 
 ## Exercise
 

@@ -181,7 +181,7 @@ Example (crypto trader with a day job):
 
 ## Exercise
 
-1. Open **Market Profiles** and read *"When it moves"* for gold and one coin. Write down the hours it says are most active.
+1. Open **Analysis** for gold and one coin. Scroll back over the last five days of hourly candles and note which hours (T&T time) had the biggest ranges. Then open **Intel** and note which scheduled events fell in those hours.
 2. Convert the London open, the New York cash open and the daily rollover into T&T time for today's date.
 3. Write your personal trading window (start, end, and "no new trades" times) into your notes. You will reuse it in Module 8 and in your trading plan.
 """,
@@ -254,7 +254,7 @@ The pattern: volume helps **describe** a market and **filter** for extreme event
 
 ## Volume in OMEGA
 
-- The **Market Watch** panel (Edge Lab area) records aggressive orders, large orders, the order book and liquidations — it is labelled *recording only*.
+- **Radar** shows which markets are unusually active right now — a quick way to spot high relative volume across your list.
 - **Market Read** shows where stops and resting orders may sit, and who is crowded.
 
 Use them to understand what is happening, not as a buy button.
@@ -266,6 +266,43 @@ Use them to understand what is happening, not as a buy button.
 - Where did the candle close in its range?
 - Is this at a level that matters (prior low, range edge)?
 - Is it a weekend or quiet hour where one large order looks huge?
+
+
+## Worked example: volume at a level
+
+BTC has tested support at 59,800–60,000 three times this week. Today it hits the zone again. Two possible versions of the next hour:
+
+**Version A — absorption**
+
+```
+Hour range: 60,250 → 59,850 → close 60,180
+Volume 2.9× normal   Close location (60,180 − 59,850) / (60,250 − 59,850) = 0.83
+```
+
+Heavy volume, but price barely broke the zone and closed near the high: sellers hit the bids hard and buyers absorbed it. Descriptive reading: "support held on heavy activity."
+
+**Version B — break**
+
+```
+Hour range: 60,100 → 59,300 → close 59,350
+Volume 3.4× normal   Close location (59,350 − 59,300) / (60,100 − 59,300) = 0.06
+```
+
+Heavy volume and a close at the low, well below the zone. "Support failed with force; stops below 59,800 were triggered."
+
+### What volume lets you do here
+
+- **Describe** the event honestly (absorption versus break).
+- **Size** for it: both hours had a range of 400–800 USD on BTC, so a stop inside that range is noise. If you trade either version, size for a stop beyond the hour's extreme:
+
+```
+Version A long: stop 59,700 (below the low + buffer), entry 60,180 → distance 0.8%
+Risk 0.50 USDT on a 100 USDT account → notional 0.50 / 0.008 = 62.5 USDT at 1×
+```
+
+### What volume doesn't let you do
+
+It doesn't tell you Version A will bounce or Version B will keep falling. Absorption sometimes gives way on the next hour; breaks often reverse (Module 3, sweeps). The research's tests of order-flow and volume imbalance (E30, E67) found no tradeable direction after costs. Use **Radar** to spot unusual activity across markets — then apply your plan, not a hunch.
 
 ## Exercise
 
@@ -362,6 +399,40 @@ Expectancy = 0.25 × 2.6 − 0.75 × 1 = 0.65 − 0.75 = −0.10R
 
 Interestingly, −0.10R a trade is about what CREED measured after costs.
 
+
+## Worked example: testing your own levels for a week
+
+Say you marked three zones on gold's daily chart on Monday morning, before trading:
+
+```
+R1: 2,676–2,680     S1: 2,640–2,644     S2: 2,618–2,622
+```
+
+Over the week you record every time price reaches a zone, using a fixed definition: "reached" = an hourly candle trades into the zone; "held" = price moves at least 1 hourly ATR away from the zone in the original direction before closing beyond it; "broke" = an hourly close beyond the far edge.
+
+```
+Touch 1  R1  Tue 09:00  held (turned down 9.50)
+Touch 2  S1  Tue 15:00  held (bounced 7.20)
+Touch 3  R1  Wed 08:40  broke (closed 2,684 after US data)
+Touch 4  R1→S Thu 10:00 held as support (flip), bounced 6.00
+Touch 5  S1  Fri 09:30  broke (closed 2,637)
+Touch 6  S2  Fri 11:00  held (bounced 5.40)
+Result: 4 held, 2 broke
+```
+
+Is "4 out of 6" good? On its own, you can't tell. Two checks:
+
+1. **Baseline:** mark three *random* price zones of the same width and count how often they "held" by the same definition. Ranges bounce around a lot; random zones often "hold" a third or more of the time.
+2. **Payoff:** a level that holds 4 in 6 times is only useful if the trade around it pays after costs:
+
+```
+Long at S1 with stop 2,636 (below the zone + buffer), target 2,660:
+risk ≈ 6, reward ≈ 18 → wins need only ~25% + costs to break even
+...but slippage, missed entries and news breaks all count.
+```
+
+Six touches is far too few to conclude anything. But doing this every week builds the habit that matters: **marking levels before, defining "held" exactly, and counting the failures too.**
+
 ## Exercise
 
 1. Open **Market Read** for a market you follow. Note where it shows stops above and below price.
@@ -447,13 +518,50 @@ This is an area where beliefs are strong and evidence is weak. OMEGA's November 
 - **Cross-sectional momentum and reversal:** none eligible; in April 2026 one short leg held a coin that rose about 50× in a week, and the book lost more than 100% in a day.
 - **BTC → alt lead-lag:** the catch-up is gone by the next bar's open.
 
-So: describing trend is useful context; **"buy because it is trending" was not an edge after costs** in these tests. The OMEGA Research Lab also tests trend and structure conditions on your own history — you can check them yourself (Module 7).
+So: describing trend is useful context; **"buy because it is trending" was not an edge after costs** in these tests. The progress board (https://omega-board.onrender.com) lists every trend and structure test and its verdict — and you can test your own version (Module 7).
 
 ## Using structure honestly
 
 - Use it to **define where you are wrong** (the swing that must hold).
 - Use it to **avoid** fighting a strong move with a large position.
 - Don't treat a label ("uptrend") as a reason to trade on its own.
+
+
+## Worked example: a structure break that failed
+
+Structure is description, and descriptions change. Here's a realistic sequence on a 1h ETH chart.
+
+```
+Swing lows:  3,020 → 3,055 → 3,082   (higher lows)
+Swing highs: 3,110 → 3,148          (higher highs)
+Description: uptrend. Last higher low = 3,082.
+```
+
+**Hour 1.** Price closes at 3,075 — below 3,082. **Break of structure.** Many traders flip short.
+
+**Hours 2–4.** Price wicks to 3,060 (sweeping stops below the recent lows), then closes back at 3,095, then 3,120.
+
+The break failed. Anyone who shorted the break with a stop above 3,100 was stopped out; anyone who sold their long on the break missed the continuation.
+
+### What a structure-based plan should do instead
+
+```
+Long already open from 3,090, stop 3,068 (below the 3,082 higher low + buffer).
+Rule: exit only if the stop is hit — not on the first close below 3,082.
+Hour 1 close 3,075: still above the stop → hold.
+Hour 2 wick 3,060: stop at 3,068 is hit → exit −1R.
+```
+
+Yes, in this example the stop got hit by the sweep. That's why many traders place stops **beyond** the most obvious level plus a buffer sized to the ATR. With an hourly ATR of 22, a 1-ATR buffer below 3,082 puts the stop near 3,060 — right at the wick. A 1.5-ATR buffer (about 3,049) survives, but needs a smaller position:
+
+```
+Risk 0.5% of 1,000 USD = 5 USD
+Stop distance 3,090 − 3,049 = 41 → size = 5 / 41 = 0.12 ETH (≈ 370 USD notional, 1×)
+```
+
+### The lesson
+
+Structure tells you where your idea is wrong; volatility tells you how much room to give it; size makes the room affordable. None of the three tells you which way price goes next.
 
 ## Exercise
 
@@ -507,9 +615,9 @@ Open **Market Read** for the same market. It shows:
 
 Compare with your own zones. Where they agree, you have a clearer map. Where they differ, write down both.
 
-## Step 4 — Market Profile
+## Step 4 — Know the market's character
 
-Open **Market Profiles** if the market is one of those profiled (gold and five coins). Read *When it moves*, *How it behaves*, *How to size it* and *What was tested*.
+From **Analysis** and **Market Read**, write four short notes on the market: *when it moves* (which hours had the biggest candles this week), *how it behaves* (trending or ranging lately, how often levels hold), *how to size it* (its hourly range and what that means for your stop and size), and *what was tested* (check the progress board at https://omega-board.onrender.com for tests on that market). Open **Intel** for scheduled events.
 
 ## Step 5 — Write the scenario, not a prediction
 
@@ -531,7 +639,7 @@ Notice the last line. The mark-up ends with a **size check**, and in this case t
 
 ## Step 6 — Compare with tested signals
 
-Open **OMEGA Signals**. Is there an open signal on this market? Signals appear *only when a condition the Research Lab rated held out-of-sample fires on the last closed hourly bar*, and each shows a **Signal score** (how strong now) and **Evidence** (how much tested history backs it). Most of the time there won't be one. That is normal: tested edges are rare.
+Open **OMEGA Signals**. Is there an open signal on this market? Signals appear *only when a condition that held out-of-sample fires on the last closed hourly bar*, and each shows a **Signal score** (how strong now) and **Evidence** (how much tested history backs it). Most of the time there won't be one. That is normal: tested edges are rare.
 
 ## Step 7 — Record it
 
@@ -561,14 +669,14 @@ Do a full mark-up for **two markets** (one crypto, one forex or gold) using the 
 """,
 "key_points": [
  "The Analysis score is a filter for attention, not a tested edge.",
- "Combine higher-timeframe structure, your zones, Market Read and Market Profiles into one map.",
+ "Combine higher-timeframe structure, your zones, Market Read, Intel and the market's character notes into one map.",
  "Write scenarios with prices and a size check, not predictions; 'too big for my account' is a valid result.",
  "Check OMEGA Signals for tested conditions — most of the time there won't be one.",
  "Record mark-ups before price moves; only pre-written notes count."
 ],
 "quiz": [
  {"q": "What does a high Analysis score with 2:1 reward-to-risk mean?", "options": ["A tested edge with proven profit", "It meets the classic engine's bar for attention; it is not a tested OMEGA idea", "A guaranteed winner", "You must take the trade"], "answer": 1, "why": "The page explicitly says the engine is not a tested OMEGA idea."},
- {"q": "When does an OMEGA Signal appear?", "options": ["Every hour on every market", "When a condition rated as holding out-of-sample fires on the last closed hourly bar", "When the Analysis score hits 60", "When funding is positive"], "answer": 1, "why": "Signals only fire for conditions that held out-of-sample in the Research Lab."},
+ {"q": "When does an OMEGA Signal appear?", "options": ["Every hour on every market", "When a condition rated as holding out-of-sample fires on the last closed hourly bar", "When the Analysis score hits 60", "When funding is positive"], "answer": 1, "why": "Signals only fire for conditions that held out-of-sample in testing."},
  {"q": "Your mark-up shows the minimum lot would risk more than your rule allows. What is the right outcome?", "options": ["Take it with a bigger account later", "Skip the trade or find a sensible tighter setup", "Remove the stop", "Double the size to make it worthwhile"], "answer": 1, "why": "If the size check fails, the trade doesn't fit your account."},
  {"q": "Why must mark-ups be recorded before price moves?", "options": ["The app requires it", "To avoid hindsight bias; only pre-written scenarios can be judged honestly", "To save battery", "So the exchange can see them"], "answer": 1, "why": "Lines drawn afterwards always seem to fit. It's the 'plan before data' principle."}
 ]

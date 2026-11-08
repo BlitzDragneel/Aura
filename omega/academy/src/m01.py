@@ -356,7 +356,7 @@ Those two survivors share a theme: **panic selling gets overdone**. It was the o
 
 Knowing what failed saves you money and years. When someone shows you a moving-average cross that "works", you will know that trend and breakout rules were tested on hundreds of coins and did no better than random entries with the same stop. When a bot promises 1% a day, you will know what "small wins every day" strategies did in the research.
 
-You will also learn the method. By Module 7 you will be able to write a plan, split your data, run a luck check and judge your own idea honestly — in the OMEGA app's Research Lab or on paper.
+You will also learn the method. By Module 7 you will be able to write a plan, split your data, run a luck check and judge your own idea honestly — on paper, in a spreadsheet, or in code, and compare it with the tests listed on the progress board (https://omega-board.onrender.com).
 
 ## The one-sentence philosophy
 
@@ -367,7 +367,7 @@ That line, from OMEGA's own research summary, is the backbone of the course.
 ## Exercise
 
 1. Open **OMEGA Signals** in the app. Read the header: *"only what has been tested — held out-of-sample → fires on a closed hour → signal → outcome → journal."* Notice it says signals are research signals and no order is placed.
-2. Open the **Scoreboard** page. It compares CREED and OMEGA against "a system with no skill at the same reward:risk". Write down why comparing against a no-skill baseline is fairer than just looking at profit.
+2. Visit the progress board (https://omega-board.onrender.com). It lists every test OMEGA has run and its verdict, with links to the public forward records. Find one test that failed and one that passed. Write down why judging a strategy against a no-skill baseline (random entries with the same reward:risk) is fairer than just looking at profit.
 """,
 "key_points": [
  "OMEGA's rules: never fabricate data, plan before data, count every try, report after costs, paper first.",
@@ -397,25 +397,28 @@ This course uses the OMEGA app for exercises. You do not need to use every page,
 | **Command** | Everything that needs you, in one place: *Observe → Understand → Validate → Decide → Execute → Record → Learn* | Every module |
 | **Analysis** | Charts and structure on 5-minute, 15-minute and 1-hour candles, a setup score and reward-to-risk per market, plus an in-depth view with a trade plan | Modules 3, 4 |
 | **Market Read** | What is going on now: stops above and below, resting orders, who is crowded, and what the research supports | Modules 3, 8 |
-| **Market Profiles** | Gold and five coins studied one by one: when they move, how they behave, how to size them, what was tested | Modules 3, 8 |
+| **Intel** | News and the economic calendar: what is scheduled today and what just happened | Modules 3, 8 |
+| **Radar** | A scanner across your markets: which are moving, which are quiet, where setups may be forming | Modules 3, 8 |
+| **Position desk** | Funding, crowding and positioning: who pays whom, and carry at your size | Module 2 |
 | **CREED desk** | One method run exactly as taught: 4H battlefield → 1H pullback zone → 15M sweep → acceptance | Module 6 |
 | **OMEGA Signals** | Only conditions that held out-of-sample; each signal is followed to its outcome and journaled. Research signals — no order is placed | Module 6 |
 | **Risk Guard** | 0.5% a trade, 2 open at most, −2% a day stops, −5% a week stops, review at −20% | Module 5 |
 | **Futures** | Paper futures with your margin and leverage; shows liquidation, fees and funding, and what the tests say about leverage | Modules 2, 5 |
 | **Growth** | Your real expectancy from your own logged trades, and a sustainable growth projection | Modules 5, 8 |
 | **Journal** | Every closed trade from every section, real and simulated kept separate, with review notes | Modules 8, 10 |
-| **Research Lab** | OMEGA tests its own conditions on your stored history: hypothesis → in-sample → held-out test | Module 7 |
-| **Edge Lab** | Paper only: untested candidates, half A then half B, forward weeks | Module 7 |
-| **Scoreboard** | CREED vs OMEGA vs a no-skill baseline, on their own records | Modules 6, 9 |
-| **Trading Bots** | Paper-trading bots; no real orders, no broker connection | Module 9 |
+| **Growth Bot / Bots** | Paper-trading bots; no real orders, no broker connection | Module 9 |
+| **Autopilot** | Scans and paper-trades on its own while the app is open; never real orders | Module 9 |
+| **Academy** | This course: lessons, quizzes and your progress | All |
+
+Research and evidence live outside the app, on the progress board (https://omega-board.onrender.com): every test, its plan, its verdict, and links to the public forward records. The course quotes those results throughout.
 
 ## Important honesty labels in the app
 
 The app labels things plainly, and you should read those labels:
 
 - The **Analysis** page says its score is *"the classic analysis engine, not a tested OMEGA idea"*. A score of 60 or more with at least 2:1 reward-to-risk "meets the bar" — but meeting the bar is not evidence of profit.
-- The **Breakout Desk** says *"both setups FAILED a clean test (record only)"*.
-- The **Futures** page states that *"no tested rule has an edge large enough to lever"*.
+- The progress board marks every failed test as FAILED, with its reason, rather than hiding it.
+- The **Futures calculator** states that *"no tested rule has an edge large enough to lever"*.
 - **OMEGA Signals** says signals are *"hypothetical, not financial advice, and no order is ever placed"*.
 
 An app that tells you when its own tools failed is unusual. Use that honesty: whenever a page gives you a number, ask *"has this been tested out of sample, after costs?"*
@@ -451,18 +454,18 @@ You can go faster, but do not skip the practice. Understanding comes from doing.
 
 ## Safety settings to check now
 
-- Make sure any bot or autopilot you start is in **paper** mode. The Trading Bots page states that no bot there places real orders.
+- Make sure any bot or autopilot you start is in **paper** mode. The Bots page states that no bot there places real orders.
 - If you use API keys for an exchange anywhere, they should never have **withdrawal** permission, and ideally should be restricted to your IP address. You will learn more in Module 9.
 
 ## Exercise
 
 1. Open **Command** and read the seven steps across the top. Write one sentence for each step about what you think it means for your own trading.
 2. Open **Analysis**, press *Scan now*, and pick one market. Note its score, its reward-to-risk and the label that says it is not a tested OMEGA idea.
-3. Open **Market Profiles** and read one profile (gold or a coin). Note when that market tends to move.
+3. Open **Market Read** for gold or one coin and note what it says is going on now; then open **Intel** and note the next scheduled high-impact event.
 4. Open the **Journal** and set the filter to *Real only*. This is where your real record will live.
 """,
 "key_points": [
- "Know the main pages: Command, Analysis, Market Read, CREED, OMEGA Signals, Risk Guard, Futures, Growth, Journal, Research Lab.",
+ "Know the main pages: Command, Analysis, Market Read, CREED, OMEGA Signals, Risk Guard, Futures calculator, Growth, Journal — and the progress board for evidence.",
  "The app labels what is tested and what is not — e.g. the Analysis score is not a tested OMEGA idea.",
  "Real and simulated trades are always kept separate; paper results are practice, not proof.",
  "Each lesson has reading, an app exercise, key points and a quiz.",

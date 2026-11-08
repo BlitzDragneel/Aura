@@ -54,10 +54,51 @@ A **forward record** means: the rule's signals are published and recorded *as th
 - Treat them as **case studies in what an edge looks like** — rare, violent, fat-tailed and fragile.
 - If you ever trade them, do it **at 1×, with tiny fixed positions, after paper and testnet**, and expect long losing stretches.
 
+
+## Worked example: reading a test result like a researcher
+
+Here is how to read a result line from OMEGA's research, using the panic bounce H1 numbers quoted throughout this module.
+
+```
+Discovery 2020–23:  +127 bp a trade, t 3.38
+Validation 2024:    +33 bp, t 0.53
+Final 2025–26:      +19 bp, t 0.63
+Without best 5%:    loses money
+Leverage:           liquidated 37× at 2×, 107× at 3×; 1× is the highest safe level
+```
+
+Ask five questions:
+
+1. **Is the final average above zero after costs?** Yes, +19 bp (0.19%) a trade.
+2. **Is it significant?** No. A t of 0.63 means the result is well within what luck alone produces. It could easily be zero or slightly negative.
+3. **Did it shrink?** From about 1.27% to 0.19% a trade. That's an 85% fall.
+4. **Does it depend on a few trades?** Yes. Without the best 5% it loses.
+5. **Can it be levered?** No. Only 1×.
+
+Now compare a hypothetical result that would deserve more trust:
+
+```
+Discovery: +60 bp, t 3.0    Validation: +55 bp, t 2.4    Final: +50 bp, t 2.6
+Without best 5%: +20 bp      Every year positive
+```
+
+The second line is smaller in discovery but **stable**. Stability across periods matters more than a big first number.
+
+### What this means in money
+
+At +19 bp a trade on a 5 USDT position:
+
+```
+5 × 0.0019 = 0.0095 USDT a trade ≈ 1 cent
+100 trades ≈ 0.95 USDT expected — with single trades able to lose 4+ USDT
+```
+
+That's why the course keeps saying "tiny, unleveraged, forward record first". A pass is a reason to keep watching, not a reason to bet.
+
 ## Exercise
 
 1. Open **OMEGA Signals** and read the explanation of *Signal score* versus *Evidence*. Write down why they are two separate numbers.
-2. Open the **Scoreboard** and find the no-skill baseline. Write in one sentence why a strategy must beat that baseline, not just make money.
+2. On the progress board (https://omega-board.onrender.com), find a test that was judged against random entries (a no-skill baseline). Write in one sentence why a strategy must beat that baseline, not just make money.
 3. List three things a "grade A" result does *not* promise.
 """,
 "key_points": [
@@ -304,7 +345,7 @@ That is indistinguishable from zero. It doesn't prove the edge is dead — but i
 
 1. Write a "retirement rule" for any strategy you use or plan to use: how many forward trades, what minimum average, and what you will do if it fails.
 2. Compute t for: 200 trades, average +0.30%, standard deviation 5%. (SE = 5 / 14.1 = 0.35; t ≈ 0.85.)
-3. Open the **Scoreboard** and note how many forward records each product has. Is it enough to judge?
+3. Open the public forward records linked from the progress board (https://omega-board.onrender.com) and note how many forward trades each rule has. Is it enough to judge?
 """,
 "key_points": [
  "Panic bounce H1 fell from about +1.1–1.3% a trade (2020–23) to about +0.2% (2025–26); H3 to +6 bp.",
@@ -392,7 +433,7 @@ After 100+ trades, ask: is my average close to the research, below it, or negati
 
 ## Exercise
 
-1. Open the **Trading Bots** page and confirm everything there is paper. Start (or simulate starting) a paper bot that follows a tested rule and note where its trades are recorded.
+1. Open the **Bots** page (Growth Bot / Bots) and confirm everything there is paper. Start (or simulate starting) a paper bot that follows a tested rule and note where its trades are recorded.
 2. Fill in the comparison table above with the research column. Plan when you'll update the right-hand column (e.g. every 25 trades).
 3. Write your decision for this course: observe only, paper, or testnet. All three are valid; live is not required to complete the course.
 """,
@@ -439,7 +480,7 @@ E29 and E31 tested CREED on about **11,000 setups** across three coin sets:
 - Variants — **longs only, BTC context, panic-gated, volatility buffer** — **all failed** on untouched coins.
 - The Monte Carlo: at 1% risk, CREED **lost half the account in 76% of simulated accounts within a year**.
 
-The app is open about this. The Futures page states: *"CREED: −0.10R to −0.12R a trade after costs (E29, E31)"*, and the Scoreboard compares CREED's own records against a no-skill baseline.
+The app is open about this. The Futures calculator states: *"CREED: −0.10R to −0.12R a trade after costs (E29, E31)"*, and the progress board lists CREED's tests with their verdicts.
 
 ## So why is CREED in this course?
 

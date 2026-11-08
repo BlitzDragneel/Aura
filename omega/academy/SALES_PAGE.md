@@ -12,9 +12,10 @@ That is the most useful thing a new trader can learn, and this course is built a
 
 ## What you get
 
-- **10 modules and 57 lessons**, about 6.7 hours of reading plus hands-on exercises.
+- **10 modules and 57 lessons**, about 7 hours of reading plus hands-on exercises.
 - **Worked examples with real numbers**, done at a 100 USDT account size: fees, funding, margin, liquidation, and lot and pip sizing for gold and forex.
-- **Exercises in the OMEGA app** for every lesson: Analysis, Market Read, Market Profiles, the CREED desk, OMEGA Signals, Risk Guard, Futures (paper), Growth, the Journal, and the Research and Edge Labs.
+- **Exercises in the OMEGA app** for every lesson: Home, Analysis, Market Read, Intel, Radar, the CREED desk, OMEGA Signals, the Position desk, the Futures calculator, Risk Guard, Growth Bot and Bots (paper), Autopilot and the Journal.
+- **The evidence, in the open:** every test quoted in the course is listed with its verdict on the progress board (https://omega-board.onrender.com), along with links to the public forward records.
 - **A quiz for every lesson**, with an explanation for each answer.
 - **Templates:** a pre-market checklist, a test plan, a weekly review, and a full trading plan with a worked example.
 - **A 30-day practice schedule and a capstone project.** You take one idea through planning, testing, risk design, paper practice and review.
@@ -33,7 +34,7 @@ That is the most useful thing a new trader can learn, and this course is built a
 9. **Bots and automation:** what bots can and can't do, why "small win every day" bots blow up, the paper → testnet → live ladder, guards, kill switches, API-key safety, and how to read a forward record.
 10. **Building your trading plan:** a template with a worked example, a 30-day schedule, and the capstone.
 
-**Try before you buy:** Modules 1 and 2 are free in full, as is the first lesson of every other module. That is 19 lessons, about 2 hours.
+**Try before you buy:** Modules 1 and 2 are free in full, as is the first lesson of every other module. That is 19 lessons, about 2.5 hours.
 
 ---
 
@@ -63,7 +64,7 @@ That is the most useful thing a new trader can learn, and this course is built a
 | Win rate as the headline number | Expectancy in R, drawdowns and losing streaks |
 | A system to follow | A method for testing any system yourself |
 
-We are open about our own tools too. The app labels its Analysis score as "not a tested OMEGA idea". Its Breakout Desk is marked "failed a clean test". The CREED method on its own desk is shown with its measured result: about a coin flip, then −0.10R to −0.12R a trade after costs.
+We are open about our own tools too. The app labels its Analysis score as "not a tested OMEGA idea". The progress board marks every failed test as FAILED, with the reason. The CREED method on its own desk is shown with its measured result: about a coin flip, then −0.10R to −0.12R a trade after costs.
 
 ---
 
