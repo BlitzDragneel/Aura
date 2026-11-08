@@ -2144,7 +2144,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   <!-- Mobile header (logo + hamburger) -->
   <header class="mobile-header">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.114 · build 2026-11-08 20:46 UTC</small></div>
+    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.115 · build 2026-11-08 21:17 UTC</small></div>
   </header>
 
   <!-- Sidebar -->
@@ -2290,28 +2290,28 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       </div>
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:14px;"><div class="card tb-card"><h2 style="color:var(--gold);">Trades OMEGA sees now</h2><p class="hint" style="margin:0 0 8px;">Every live setup the app is watching, strongest evidence first. Each shows where it came from and how well it has been tested.</p><div id="radarBoard"></div></div></section>
       <div class="rd-status" id="radarStatus"></div>
-      <p class="hint"><b>This is part of CREED.</b> It runs CREED&rsquo;s own engine over a watchlist so you see where your method has a setup. OMEGA Intelligence is a separate product with its own engine, under Market Intelligence. A market is <b>TRIGGERED</b> only when CREED&rsquo;s own engine confirms a setup &mdash; every gate passed. <b>DEVELOPING</b> means a sweep happened and CREED is waiting for acceptance. <b>WATCH</b> means price is near a 4H liquidity objective. The higher timeframes add context and say whether a setup runs <i>with</i> or <i>against</i> the macro trend; they never change CREED&rsquo;s verdict. Nothing here places a trade.</p>
+      
       <div id="radarGrid"></div>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Alerts this session</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card">
           <h2 style="color:var(--gold);">Alerts this session</h2>
           <div id="radarToasts"></div>
         </div>
-      </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">What the radar is learning</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card">
           <h2 style="color:var(--gold);">What the radar is learning</h2>
           <div id="radarObs"></div>
         </div>
-      </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">What OMEGA says it is missing</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card">
           <h2 style="color:var(--gold);">What OMEGA says it is missing</h2>
           <p class="hint" style="margin-top:0;">Worked out from what the app has actually measured. These are proposals only &mdash; nothing here changes a rule or a setting by itself.</p>
           <div id="radarDiag"></div>
         </div>
-      </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Markets to watch</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card">
           <h2 style="color:var(--gold);">Markets to watch</h2>
           <div class="sim-controls">
@@ -2324,7 +2324,11 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
           </div>
           <p class="hint">Crypto is free and refreshed every 5 minutes. Each forex market costs Twelve Data calls, so the refresh interval stretches as you add markets to stay inside the free plan&rsquo;s 800 calls a day. The brain package bundles the radar&rsquo;s observations, CREED&rsquo;s records and gate evidence, and the Brain&rsquo;s notes into one file another AI can read.</p>
         </div>
-      </section>
+      </section></details>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p class="hint"><b>This is part of CREED.</b> It runs CREED&rsquo;s own engine over a watchlist so you see where your method has a setup. OMEGA Intelligence is a separate product with its own engine, under Market Intelligence. A market is <b>TRIGGERED</b> only when CREED&rsquo;s own engine confirms a setup &mdash; every gate passed. <b>DEVELOPING</b> means a sweep happened and CREED is waiting for acceptance. <b>WATCH</b> means price is near a 4H liquidity objective. The higher timeframes add context and say whether a setup runs <i>with</i> or <i>against</i> the macro trend; they never change CREED&rsquo;s verdict. Nothing here places a trade.</p>
+      </div></details>
     </div>
     <div id="page-flow" class="page">
       <div class="creed-banner intel-banner">
@@ -2350,8 +2354,12 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card"><h2 style="color:var(--gold);">Across exchanges</h2><div id="venuePanel"></div></div></section>
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card"><h2 style="color:var(--gold);">Options</h2><div id="optPanel"></div></div></section>
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card"><h2 style="color:var(--gold);">Crowd</h2><div id="crowdPanel"></div></div></section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card"><h2 style="color:var(--gold);">Does any of it predict anything? — the live-data test</h2><div id="liveStudy"></div></div></section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card"><h2 style="color:var(--gold);">Data sources</h2><div id="liveSources"></div></div></section>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Does any of it predict anything? The live-data test</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card"><h2 style="color:var(--gold);">Does any of it predict anything? — the live-data test</h2><div id="liveStudy"></div></div></section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Data sources</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card"><h2 style="color:var(--gold);">Data sources</h2><div id="liveSources"></div></div></section></details>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Beyond candles liquidity, positioning, other venues, options. Each reading is stored and later checked against what price did next; the live-data test below says whether any of it has predicted anything yet.</p>
+      </div></details>
     </div>
     <div id="page-intel" class="page">
       <div class="creed-banner intel-banner">
@@ -2371,29 +2379,29 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       </div>
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:14px;"><div class="card tb-card"><h2 style="color:var(--gold);">Trades OMEGA sees now</h2><p class="hint" style="margin:0 0 8px;">Every live setup the app is watching, strongest evidence first. Each shows where it came from and how well it has been tested.</p><div id="intelBoard"></div></div></section>
       <div class="rd-status" id="intelStatus"></div>
-      <p class="hint"><b>OMEGA Intelligence is a separate product from CREED.</b> It uses no CREED rules and no SMC rules: trend, structure, momentum, volatility, range position, volume, novelty and cross-market relationships are all computed by its own engine. It shares the Journal and the Brain with CREED, but each writes under its own name and neither reads the other&rsquo;s signals. Right now it <b>describes</b> markets; it does not issue trade signals. It will only do that once its Research Lab has shown a condition holds on data it was not drawn from &mdash; nothing is promoted on a hunch. It places no orders and is connected to no broker.</p>
+      
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:6px;">
         <div class="card"><h2 style="color:var(--gold);">Needs your attention</h2><div id="intelAttention"></div>
           <p class="hint" style="margin-top:8px;">Ranked by how unusual each market is, regime changes, volatility and alignment. Attention is not a trade instruction.</p></div>
       </section>
       <div id="intelGrid"></div>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">How markets are moving together</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card"><h2 style="color:var(--gold);">How markets are moving together</h2><div id="intelCross"></div></div>
-      </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card">
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Positioning: funding, open interest, liquidations</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card">
         <h2 style="color:var(--gold);">Positioning — funding, open interest, liquidations</h2>
         <div class="journal-actions" style="margin:0 0 10px;"><button class="btn-outline" id="derivCollect" type="button">Collect now</button><button class="btn-outline" id="derivLive" type="button">Start live liquidation sample</button></div>
         <div id="derivPanel"></div>
-      </div></section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card">
+      </div></section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Patterns: what is happening, and what followed before</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;"><div class="card">
         <h2 style="color:var(--gold);">Patterns — what is happening, and what followed before</h2>
         <div class="journal-actions" style="margin:0 0 10px;"><button class="btn-outline" id="patBuild" type="button">Learn from history</button><span class="hint" id="patMsg" style="margin:0;"></span></div>
         <div id="patPanel"></div>
-      </div></section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      </div></section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Activity</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card"><h2 style="color:var(--gold);">Activity</h2><div id="intelActivity"></div></div>
-      </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Markets to watch</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card"><h2 style="color:var(--gold);">Markets to watch</h2>
           <div class="sim-controls">
             <div class="sim-field" style="flex:1 1 260px;"><label>Crypto</label><input type="hidden" id="intelUniCrypto"><div id="mkPick-intelUniCrypto" class="mk-host"></div></div>
@@ -2402,7 +2410,12 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
           <div class="journal-actions" style="margin-top:10px;"><button class="btn-outline" id="intelSaveUni" type="button">Save markets</button></div>
           <p class="hint">10 crypto and 10 forex by default. Crypto is free. Forex uses at most 35% of Twelve Data&rsquo;s 800 calls a day, so its refresh interval stretches to fit; the CREED Scanner has 40%, and 25% stays free for the CREED Desk, Analysis and history downloads.</p>
         </div>
-      </section>
+      </section></details>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Market intelligence its own engine, its own conclusions.</p>
+<p class="hint"><b>OMEGA Intelligence is a separate product from CREED.</b> It uses no CREED rules and no SMC rules: trend, structure, momentum, volatility, range position, volume, novelty and cross-market relationships are all computed by its own engine. It shares the Journal and the Brain with CREED, but each writes under its own name and neither reads the other&rsquo;s signals. Right now it <b>describes</b> markets; it does not issue trade signals. It will only do that once its Research Lab has shown a condition holds on data it was not drawn from &mdash; nothing is promoted on a hunch. It places no orders and is connected to no broker.</p>
+      </div></details>
     </div>
     <div id="page-rguard" class="page">
       <div class="creed-banner intel-banner">
@@ -2416,6 +2429,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <div id="rguardBody"><p class="hint">Loading…</p></div>
       <div id="truthRgBody"></div>
       <div id="reviewBody"></div>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Risk guard risk is what makes money; managing it decides whether it does. The rules: 0.5% of the account a trade, at most 2 open, stop after &minus;2% in a day or &minus;5% in a week. The Growth Bot follows them on paper from 100 USDT; &ldquo;Before a real trade&rdquo; checks a trade against them; the monthly review shows how they held.</p>
+      </div></details>
     </div>
     <div id="page-mread" class="page">
       <div class="creed-banner intel-banner">
@@ -2429,6 +2446,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <div id="dplanBody"></div>
       <div id="evBody"></div>
       <div id="mreadBody"><p class="hint">Loading…</p></div>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Market read what is going on now, which side to trade, today’s plan, and where liquidity lies. Today&rsquo;s plan is grade C: a written plan followed on paper, not a tested edge. Liquidity marks show where stops and resting orders sit; place a stop beyond the obvious level, not on it.</p>
+      </div></details>
     </div>
     <div id="page-osig" class="page">
       <div class="creed-banner intel-banner">
@@ -2463,6 +2484,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         </div>
       </div>
       <div id="posdeskBody"><p class="hint">Loading…</p></div>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Positioning desk who is crowded, who pays whom, and how hard it can fall. Funding, open interest, long/short ratios and liquidations, with what seven years of data say about them. Measured: crowd positioning did not predict direction (E30); it describes risk, not a signal.</p>
+      </div></details>
     </div>
 
 
@@ -2481,6 +2506,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <p class="hint" style="margin-top:0;color:var(--text);">Leverage multiplies losses exactly as much as gains, and no tested rule has an edge large enough to lever. CREED: −0.10R to −0.12R a trade after costs (E29, E31); at 1% risk it loses half the account within a year in 76% of 100,000 simulated accounts. The panic bounce H1 run as a 100 USDT account of 5–10 USDT seats <b>without</b> leverage still fell 56–59% from its peak (E26). The default here (5% margin × 10×) puts half the account into every position; at 10× a 9% move against you liquidates it before most stops. OMEGA Prime’s tickets use 1× isolated and the Bridge caps a Binance order at 10 USDT. Use these pages to see the damage on paper, not to pick a higher setting.</p>
       </div>
       <div class="card"><h2 style="color:var(--gold);">Futures paper account (perpetuals)</h2><div id="perpAccount"><p class="hint">Loading…</p></div></div>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Futures perpetual futures with your margin and leverage, on every trade and every backtest. The paper account replays OMEGA&rsquo;s own trades at your margin and leverage, with fees and funding. The leverage warning above stays: in the tests 2&times; already liquidated and 40&times; liquidated about 60% of trades.</p>
+      </div></details>
     </div>
 
     <div id="page-auto" class="page">
@@ -2504,7 +2533,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
           <div class="bd-card"><h3>CREED history — replayed on stored data</h3><div id="opCreed"></div></div>
         </div>
       </details>
-      <p class="hint"><b>Part of OMEGA Intelligence, independent of CREED.</b> With brain automation on, OMEGA keeps its 1-minute history topped up, re-runs its research when there is new data or a day has passed, watches every Market Intelligence market, and &mdash; if paper trading is on &mdash; takes its own tested signals on a paper account behind a risk governor. If a condition&rsquo;s live results turn negative, it suspends that condition by itself. <b>Two limits, stated plainly:</b> it runs only while this app is open (a web page cannot work once closed &mdash; leave it open on a spare phone or laptop), and it cannot place real orders, because nothing in this app is connected to a broker.</p>
+      
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:6px;">
         <div class="card">
           <h2 style="color:var(--gold);">Switches</h2>
@@ -2518,18 +2547,23 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="card"><h2 style="color:var(--gold);">Paper account</h2><div id="autoAccount"></div></div>
         <div class="card"><h2 style="color:var(--gold);">Futures</h2><p class="hint" style="margin:0;">The futures paper account and every backtest on futures are on their own page. <button class="btn-outline" type="button" onclick="navigate('futures')">Open Futures →</button></p></div>
       </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Revalidation: conditions suspended by live results</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card"><h2 style="color:var(--gold);">Revalidation &mdash; conditions suspended by live results</h2><div id="autoSuspended"></div></div>
-      </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">What OMEGA was taught, and whether it held up</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card"><h2 style="color:var(--gold);">What OMEGA was taught &mdash; and whether it held up</h2>
           <p class="hint" style="margin-top:0;">OMEGA started with a handful of basic market ideas. It treats each one as something to test, not something to believe, and reports what its own data says.</p>
           <div id="autoPrimer"></div></div>
-      </section>
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Autopilot log</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:18px;">
         <div class="card"><h2 style="color:var(--gold);">Autopilot log</h2><div id="autoLog"></div></div>
-      </section>
-      <section class="bd-card rg-card" style="margin-top:18px;"><div id="rgPanel"></div></section>
+      </section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Market regimes now</summary><section class="bd-card rg-card" style="margin-top:18px;"><div id="rgPanel"></div></section></details>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Autopilot researches, tests and paper-trades on its own while the app is open.</p>
+<p class="hint"><b>Part of OMEGA Intelligence, independent of CREED.</b> With brain automation on, OMEGA keeps its 1-minute history topped up, re-runs its research when there is new data or a day has passed, watches every Market Intelligence market, and &mdash; if paper trading is on &mdash; takes its own tested signals on a paper account behind a risk governor. If a condition&rsquo;s live results turn negative, it suspends that condition by itself. <b>Two limits, stated plainly:</b> it runs only while this app is open (a web page cannot work once closed &mdash; leave it open on a spare phone or laptop), and it cannot place real orders, because nothing in this app is connected to a broker.</p>
+      </div></details>
     </div>
     
     
@@ -2542,7 +2576,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
           <div class="creed-banner-flow"><i>Observe</i><b>→</b><i>Test</i><b>→</b><i>Hold on unseen data</i><b>→</b><i>Check its own confidence</i></div>
         </div>
       </div>
-      <p class="hint">One view of the memory CREED and OMEGA share. Nothing here is decoration: every figure comes from a stored record, and where there is not yet enough data it says so.</p>
+      
       <div class="jv-2">
         <section class="bd-card rz-card"><h3>Reason about a market</h3>
           <div class="journal-actions" style="margin:0 0 10px;"><select id="rzSym"></select><button class="btn-primary" id="rzGo" type="button">Think it through</button></div>
@@ -2553,13 +2587,13 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
           <div id="rzReflect"></div>
         </section>
       </div>
-      <section class="bd-card"><h3>You × OMEGA — does your judgement add value?</h3><div id="humanPanel"></div></section>
-      <section class="bd-card"><h3>Claude council — analyst, adversary, audited by code</h3>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">You × OMEGA: does your judgement add value?</summary><section class="bd-card"><h3>You × OMEGA — does your judgement add value?</h3><div id="humanPanel"></div></section></details>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Claude council: analyst, adversary, audited by code</summary><section class="bd-card"><h3>Claude council — analyst, adversary, audited by code</h3>
         <div class="journal-actions" style="margin:0 0 10px;"><button class="btn-outline" id="councilGo" type="button">Ask the council about this market</button></div>
         <div id="councilBox"></div>
-      </section>
+      </section></details>
       <p class="hint" style="margin:0 0 12px;">Research ideas, tests and their verdicts now live on the <a href="https://omega-board.onrender.com" target="_blank" rel="noopener">progress board</a>.</p>
-      <section class="bd-card"><h3>Evidence ledger — every conclusion, auditable</h3><div id="rzLedger"></div></section>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Evidence ledger: every conclusion, auditable</summary><section class="bd-card"><h3>Evidence ledger — every conclusion, auditable</h3><div id="rzLedger"></div></section></details>
       <div class="jv-2">
         <section class="bd-card"><h3>Prediction scorecard — written down before the outcome</h3>
           <div class="journal-actions" style="margin:0 0 10px;"><button class="btn-outline" id="pdBuild" type="button">Build forecast basis</button><span class="hint" id="pdMsg" style="margin:0;"></span></div>
@@ -2575,6 +2609,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         </section>
       </div>
       <div id="brainDash"></div>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p class="hint">One view of the memory CREED and OMEGA share. Nothing here is decoration: every figure comes from a stored record, and where there is not yet enough data it says so.</p>
+      </div></details>
     </div>
     <div id="page-analysis" class="page">
       <nav class="om-subnav" aria-label="Charts"><button type="button" class="on" aria-current="page">Charts</button><button type="button" onclick="navigate('forex')">Forex board</button></nav>
@@ -2774,7 +2812,6 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <div class="page-header">
         <div>
           <h2 class="page-title">📖 Journal</h2>
-          <p class="page-sub">Every section of OMEGA records its closed trades here automatically — with per-trade review notes on why each may have worked or failed.</p>
         </div>
       </div>
         
@@ -2908,6 +2945,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     </div>
   </section>
 
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Every section of OMEGA records its closed trades here automatically — with per-trade review notes on why each may have worked or failed.</p>
+      </div></details>
     </div>
 
     <!-- SIGNALS PAGE -->
@@ -2920,7 +2961,6 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <div class="page-header">
         <div>
           <h2 class="page-title">🌱 Growth &amp; Discipline</h2>
-          <p class="page-sub">Your real edge in dollars, how fast it compounds at a sustainable pace, and the discipline habits that keep you in the game long enough to grow.</p>
         </div>
       </div>
 
@@ -2969,7 +3009,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         </div>
       </div>
     
-      <section class="lower-grid" style="grid-template-columns:1fr; margin-top:22px;"><div class="card" id="routineMerged"><h2 style="color:var(--gold);">Daily routine</h2><p class="hint" style="margin-top:0;">Moved here from its own page: the routine and your growth record belong together.</p>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Daily routine: a simple order for a disciplined session</summary><section class="lower-grid" style="grid-template-columns:1fr; margin-top:22px;"><div class="card" id="routineMerged"><h2 style="color:var(--gold);">Daily routine</h2><p class="hint" style="margin-top:0;">Moved here from its own page: the routine and your growth record belong together.</p>
 
       <div class="page-header">
         <div>
@@ -3099,7 +3139,11 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         </div>
       </div>
     
-      </div></section>
+      </div></section></details>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Your real edge in dollars, how fast it compounds at a sustainable pace, and the discipline habits that keep you in the game long enough to grow.</p><p>Your edge, growth projection, risk of ruin and discipline score unlock after 5 logged trades.</p>
+      </div></details>
     </div>
 
     <!-- MONTE CARLO PAGE -->
@@ -3763,43 +3807,10 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <div id="acadBody"><p class="hint">Loading the course…</p></div>
     </div>
     <div id="page-settings" class="page">
-      <div class="card" style="margin-bottom:16px;">
-        <h2 style="color:var(--text-dim);">📡 Signal Webhooks &amp; Alerts</h2>
-        <p class="hint" style="margin:4px 0 10px;">OMEGA can push every entry and exit as an industry-standard webhook — the same TradingView-alert JSON that execution platforms (TradersPost, WunderTrading, PineConnector-style bridges), Discord channels, or your own server understand. OMEGA stays the signal layer: it never holds exchange keys and never executes real orders from the browser.</p>
-        <div class="settings-grid">
-          <div class="field" style="grid-column:1/-1;">
-            <label>Webhook URL</label>
-            <input type="text" id="alertWebhookUrl" placeholder="https://discord.com/api/webhooks/…  or your receiver endpoint">
-          </div>
-          <div class="field">
-            <label>Payload format</label>
-            <select id="alertFormat">
-              <option value="tv" selected>TradingView-style JSON</option>
-              <option value="discord">Discord message</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Send on</label>
-            <div style="display:flex; gap:14px; padding-top:6px;">
-              <label class="checkbox-row"><input type="checkbox" id="alertOnEntry" checked> Entries</label>
-              <label class="checkbox-row"><input type="checkbox" id="alertOnExit" checked> Exits</label>
-            </div>
-          </div>
-          <div class="field">
-            <label>Browser notifications</label>
-            <label class="checkbox-row" style="padding-top:6px;"><input type="checkbox" id="alertNotify"> Notify on entries/exits</label>
-          </div>
-          <div class="field">
-            <label>&nbsp;</label>
-            <button class="btn-ghost" onclick="window.OMEGA_ALERTS && window.OMEGA_ALERTS.test()">Send test alert</button>
-          </div>
-        </div>
-        <div id="alertStatus" class="hint" style="margin-top:6px;"></div>
-      </div>
+      
       <div class="page-header">
         <div>
           <h2 class="page-title">⚙️ Settings</h2>
-          <p class="page-sub">Configure trading thresholds, AI behaviour, display and data sources.</p>
           <p style="margin:10px 0 0;"><button class="btn-ghost" type="button" id="setAboutBtn" onclick="navigate('about')">About OMEGA — how everything works</button></p>
         </div>
       </div>
@@ -4114,6 +4125,43 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     </div>
   
       </div>
+      <details class="hv-fold hv-box hv-sec"><summary class="hv-sum">Signal webhooks and alerts</summary><div class="card" style="margin-bottom:16px;">
+        <h2 style="color:var(--text-dim);">📡 Signal Webhooks &amp; Alerts</h2>
+        <p class="hint" style="margin:4px 0 10px;">OMEGA can push every entry and exit as an industry-standard webhook — the same TradingView-alert JSON that execution platforms (TradersPost, WunderTrading, PineConnector-style bridges), Discord channels, or your own server understand. OMEGA stays the signal layer: it never holds exchange keys and never executes real orders from the browser.</p>
+        <div class="settings-grid">
+          <div class="field" style="grid-column:1/-1;">
+            <label>Webhook URL</label>
+            <input type="text" id="alertWebhookUrl" placeholder="https://discord.com/api/webhooks/…  or your receiver endpoint">
+          </div>
+          <div class="field">
+            <label>Payload format</label>
+            <select id="alertFormat">
+              <option value="tv" selected>TradingView-style JSON</option>
+              <option value="discord">Discord message</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Send on</label>
+            <div style="display:flex; gap:14px; padding-top:6px;">
+              <label class="checkbox-row"><input type="checkbox" id="alertOnEntry" checked> Entries</label>
+              <label class="checkbox-row"><input type="checkbox" id="alertOnExit" checked> Exits</label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Browser notifications</label>
+            <label class="checkbox-row" style="padding-top:6px;"><input type="checkbox" id="alertNotify"> Notify on entries/exits</label>
+          </div>
+          <div class="field">
+            <label>&nbsp;</label>
+            <button class="btn-ghost" onclick="window.OMEGA_ALERTS && window.OMEGA_ALERTS.test()">Send test alert</button>
+          </div>
+        </div>
+        <div id="alertStatus" class="hint" style="margin-top:6px;"></div>
+      </div></details>
+    
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+<p>Configure trading thresholds, AI behaviour, display and data sources. Keys and the Live API token stay on this device and never go into a backup.</p>
+      </div></details>
     </div>
 
       <footer class="disclaimer">
@@ -11979,7 +12027,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   // surviving a reload, repeats folded into one line), with what to do, and shown with the
   // self-test and storage state under Settings → Diagnostics. Anything that looks like a key or
   // token is blanked before it is stored.
-  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.114 \u00b7 build 2026-11-08 20:46 UTC';   // rewritten by the build stamp on every release
+  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.115 \u00b7 build 2026-11-08 21:17 UTC';   // rewritten by the build stamp on every release
   function redact(s){ return String(s==null?'':s).replace(/((?:api_?key|apikey|key|token|secret|auth|password)=)[^&\s"']+/gi,'$1…').replace(/sk-ant-[A-Za-z0-9_\-]+/g,'sk-ant-…').replace(/Bearer\s+[A-Za-z0-9._\-]+/g,'Bearer …').slice(0,300); }
   function fixFor(msg){ var m = String(msg);
     if(/quota|QuotaExceeded/i.test(m)) return 'Storage full: old simulated journal rows move to the archive automatically; export a backup if this repeats.';
@@ -23861,7 +23909,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   var LAST_KEY = 'omega_research_pkg_last_v1';
   function L(){ return window.OMEGA_LAB; }
-  var BUILD = 'v6.5.114 \u00b7 build 2026-11-08 20:46 UTC';   // rewritten by the build stamp on every release
+  var BUILD = 'v6.5.115 \u00b7 build 2026-11-08 21:17 UTC';   // rewritten by the build stamp on every release
   function buildStamp(){ return BUILD; }
   function status(row){
     if(!row) return 'NOT TESTED';
@@ -29976,5 +30024,16 @@ html[data-theme="heaven"] .cmd-card.hv-fold:not([open]){padding-top:12px;padding
   window.OMEGA_TIDY = { clamp:clamp, IDS:IDS };
 })();
 </script>
+<style id="tidy115Css">/* v6.5.115: folded sections everywhere; badges that keep their shape on phones */
+.hv-sec{margin:0 0 14px}.hv-sec .lower-grid,.hv-sec>.bd-card,.hv-sec>.card{margin:10px 0 0!important}
+.hv-sec .lower-grid>.card,.hv-sec>.bd-card,.hv-sec>.card{border:0!important;box-shadow:none!important;padding:0!important;background:none!important}
+.hv-sec .lower-grid>.card>h2:first-child,.hv-sec>.bd-card>h3:first-child,.hv-sec>.card>h2:first-child{display:none}
+.hv-sec .rg-card #rgPanel{margin-top:0}.hv-sec .page-header{display:none}
+.ost-td{white-space:nowrap;flex:none}.ost-need,.omega-clock .ck-sess,.rd-pill,.tb-grade,.tb-warn,.om-tag,.ac-chip,.pt-badge{white-space:nowrap}
+.es-chip{display:inline-block;max-width:100%;box-sizing:border-box;line-height:1.45;border-radius:12px;white-space:normal;vertical-align:middle}
+html[data-theme="heaven"] .es-chip{font-family:'Inter',system-ui,sans-serif;font-size:12px;font-weight:600;letter-spacing:.01em;padding:4px 10px}
+html[data-theme="heaven"] .ost-td{font-size:11px}
+@media (max-width:520px){.omega-clock{row-gap:4px}.ost-main{font-size:12px}}
+</style>
 </body>
 </html>

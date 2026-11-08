@@ -58,7 +58,7 @@ def main():
         f' · {html.escape(a["status"])} · max {a["max_leverage"]}×</span><p>{html.escape(a.get("note", ""))}</p></div>'
         for a in approved)
     doc = f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>OMEGA — progress board</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" href="icons/omega-192.png"><title>OMEGA — progress board</title>
 <style>
 :root{{--bg:#05060d;--panel:#0b0e1c;--cyan:#22f3ff;--pink:#ff2bd6;--lime:#9dff3a;--amber:#ffb627;--red:#ff4d6d;--ink:#e8ecff;--mut:#8a93b8}}
 *{{box-sizing:border-box}}body{{margin:0;background:radial-gradient(1200px 600px at 10% -10%,#1a0a3a 0,transparent 60%),
@@ -98,6 +98,14 @@ comes from the result files; nothing on this page is a forecast.</div>
 <a class="app o" href="https://github.com/BlitzDragneel/Aura/blob/bot-state/scouts/SCOUTS.md"><b>UpScout / DownScout →</b><span>Hourly up/down and trend-turn calls on 30 coins, each scored 24 h later</span></a>
 <a class="app o" href="https://github.com/BlitzDragneel/Aura/blob/bot-state/fast_scouts/SCOUTS.md"><b>Fast scouts (15 min) →</b><span>Same calls on 15-minute candles every 15 minutes, scored 4 h later</span></a>
 <a class="app l" href="https://omega-live-api.onrender.com/health"><b>Live API health →</b><span>OKX/Binance crypto, Swissquote forex & gold, Deribit DVOL (wakes in ~1 min)</span></a>
+</div>
+<h2>Install OMEGA on your phone or computer</h2>
+<div class="note" style="border-color:var(--cyan);box-shadow:0 0 16px #22f3ff33">
+<b>Android (Chrome):</b> open <a href="omega-v6_5-47.html" style="color:var(--cyan)">OMEGA</a> → menu ⋮ → <b>Install app</b>.<br>
+<b>iPhone / iPad (Safari):</b> open OMEGA → Share → <b>Add to Home Screen</b>.<br>
+<b>Windows / Mac (Chrome or Edge):</b> open OMEGA → the install icon at the right of the address bar (or menu → Install OMEGA).<br>
+Installed, it opens like an app, in its own window, and starts even offline; updates arrive by themselves the next time you open it online.
+<br><b>Or keep a copy:</b> <a href="omega-v6_5-47.html" download style="color:var(--cyan)">download the app file</a> and open it in Chrome or Edge on your computer (your data stays in that browser).
 </div>
 <div class="stats">
 <div class="stat c1"><i>{len(R)}</i><small>new plans judged (E37+)</small></div>
