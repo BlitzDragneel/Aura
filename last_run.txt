@@ -1,0 +1,85 @@
+{"t": "2026-11-08T00:29:23Z", "event": "order", "mode": "paper", "rule": "panic_h1", "sym": "ARXUSDT", "kind": "limit", "qty": 23.997871, "price": 0.20835182, "ref": 0.2151, "stop": 0.10417591, "leverage": 1, "margin_usdt": 5.0, "expires": "2026-11-08T03:00:00+00:00", "why": "r24 -14.8% <= own q10 -5.9%; sigma 1.59%"}
+{"t": "2026-11-08T00:29:23Z", "event": "order", "mode": "paper", "rule": "panic_h1", "sym": "BCHUSDT", "kind": "limit", "qty": 0.020339, "price": 245.84182849, "ref": 249.5, "stop": 122.92091425, "leverage": 1, "margin_usdt": 5.0, "expires": "2026-11-08T03:00:00+00:00", "why": "r24 -5.5% <= own q10 -4.9%; sigma 0.74%"}
+{"t": "2026-11-08T00:29:23Z", "event": "order", "mode": "paper", "rule": "panic_h1", "sym": "FOGOUSDT", "kind": "limit", "qty": 2421.506855, "price": 0.00206483, "ref": 0.002133, "stop": 0.00103242, "leverage": 1, "margin_usdt": 5.0, "expires": "2026-11-08T03:00:00+00:00", "why": "r24 -9.4% <= own q10 -8.6%; sigma 1.62%"}
+{"t": "2026-11-08T00:29:23Z", "event": "refused", "mode": "paper", "rule": "panic_h1", "sym": "SIGNUSDT", "reasons": ["3 positions/orders already open (max 3)"]}
+{"t": "2026-11-08T00:29:23Z", "event": "refused", "mode": "paper", "rule": "panic_h1", "sym": "WOOUSDT", "reasons": ["3 positions/orders already open (max 3)"]}
+{"t": "2026-11-08T00:29:23Z", "event": "refused", "mode": "paper", "rule": "panic_h1", "sym": "YBUSDT", "reasons": ["3 positions/orders already open (max 3)"]}
+{
+ "bar": "2026-11-07T23:00:00+00:00",
+ "placed": [
+  {
+   "id": "eb79e0b087d744dd",
+   "strategy": "panic_h1",
+   "sym": "ARXUSDT",
+   "side": "long",
+   "kind": "limit",
+   "qty": 23.997871,
+   "price": 0.20835182,
+   "placed_at": "2026-11-08T00:25:46.928697+00:00",
+   "expires_at": "2026-11-08T03:00:00+00:00",
+   "hold_bars": 24,
+   "stop_price": 0.10417591,
+   "target_price": null,
+   "leverage": 1,
+   "margin_usdt": 5.0,
+   "signal_bar": "2026-11-07T23:00:00+00:00",
+   "exchange_ids": {
+    "paper": true
+   },
+   "status": "pending",
+   "note": "r24 -14.8% <= own q10 -5.9%; sigma 1.59%",
+   "valid_for_bars": 3,
+   "ref_price": 0.2151
+  },
+  {
+   "id": "b1eb2e1c60b64778",
+   "strategy": "panic_h1",
+   "sym": "BCHUSDT",
+   "side": "long",
+   "kind": "limit",
+   "qty": 0.020339,
+   "price": 245.84182849,
+   "placed_at": "2026-11-08T00:25:46.928697+00:00",
+   "expires_at": "2026-11-08T03:00:00+00:00",
+   "hold_bars": 24,
+   "stop_price": 122.92091425,
+   "target_price": null,
+   "leverage": 1,
+   "margin_usdt": 5.0,
+   "signal_bar": "2026-11-07T23:00:00+00:00",
+   "exchange_ids": {
+    "paper": true
+   },
+   "status": "pending",
+   "note": "r24 -5.5% <= own q10 -4.9%; sigma 0.74%",
+   "valid_for_bars": 3,
+   "ref_price": 249.5
+  },
+  {
+   "id": "06ba06f2605d4cdb",
+   "strategy": "panic_h1",
+   "sym": "FOGOUSDT",
+   "side": "long",
+   "kind": "limit",
+   "qty": 2421.506855,
+   "price": 0.00206483,
+   "placed_at": "2026-11-08T00:25:46.928697+00:00",
+   "expires_at": "2026-11-08T03:00:00+00:00",
+   "hold_bars": 24,
+   "stop_price": 0.00103242,
+   "target_price": null,
+   "leverage": 1,
+   "margin_usdt": 5.0,
+   "signal_bar": "2026-11-07T23:00:00+00:00",
+   "exchange_ids": {
+    "paper": true
+   },
+   "status": "pending",
+   "note": "r24 -9.4% <= own q10 -8.6%; sigma 1.62%",
+   "valid_for_bars": 3,
+   "ref_price": 0.002133
+  }
+ ],
+ "open": 0,
+ "resting": 3
+}

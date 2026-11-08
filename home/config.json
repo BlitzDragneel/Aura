@@ -1,0 +1,40 @@
+{
+  "mode": "paper",
+  "live": false,
+  "approved_file": "/home/runner/work/Aura/Aura/code/edges/approved.json",
+  "strategies": [],
+  "universe": "all",
+  "history_bars": 1000,
+  "poll_delay_s": 20,
+  "check_every_s": 60,
+  "binance": {
+    "testnet_url": "https://demo-fapi.binance.com",
+    "live_url": "https://fapi.binance.com",
+    "data_url": "https://fapi.binance.com",
+    "spot_url": "https://api.binance.com",
+    "margin_type": "ISOLATED",
+    "recv_window": 5000,
+    "use_gtd": true,
+    "stop_via_algo": true,
+    "rebase_testnet_prices": true,
+    "request_spacing_s": 0.12
+  },
+  "guard": {
+    "hard_max_leverage": 3,
+    "max_open_positions": 3,
+    "max_margin_usdt": 10.0,
+    "daily_loss_limit_usdt": 5.0,
+    "protective_stop_pct": 0.5,
+    "liq_buffer": 0.005,
+    "live_liq_buffer": 0.02,
+    "max_risk_usdt": 3.0,
+    "require_ip_restriction": true,
+    "require_stop": true,
+    "one_position_per_symbol": true
+  },
+  "mt5": {
+    "enabled": false,
+    "bridge_path": "/home/runner/work/Aura/Aura/code/omega/bridge/OMEGA-Bridge",
+    "live": false
+  }
+}
