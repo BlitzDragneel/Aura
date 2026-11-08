@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://unpkg.com https://s3.tradingview.com; frame-src https://*.tradingview.com https://*.tradingview-widget.com; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>/* v6.5.113: theme before first paint */try{var _o=JSON.parse(localStorage.getItem('omega_settings_v3')||'{}'),_t=_o&&_o.setTheme;if(!_t||(!localStorage.getItem('omega_heaven113')&&(_t==='neonglow'||_t==='dark')))_t='heaven';if(_t!=='dark')document.documentElement.setAttribute('data-theme',_t);}catch(e){}</script>
 <title>OMEGA v6.5 — Adaptive Strategy Intelligence</title>
 <link rel="manifest" href="manifest.json">
 <meta name="description" content="OMEGA — a local-first trading intelligence lab: journal-driven strategy audits, Edge Check validation, and ¼-Kelly meta-sized simulation. Your data never leaves the browser.">
@@ -77,6 +78,102 @@ html[data-theme="neonglow"] input:focus, html[data-theme="neonglow"] select:focu
 html[data-theme="neonglow"] .bull, html[data-theme="neonglow"] .up{ text-shadow:0 0 8px rgba(61,255,176,.45); }
 html[data-theme="neonglow"] .bear, html[data-theme="neonglow"] .down{ text-shadow:0 0 8px rgba(255,77,122,.45); }
 @media (prefers-reduced-motion: reduce){ html[data-theme="neonglow"] .mh-glyph{ animation:none; } }
+
+/* ═══ v6.5.113 — HEAVEN theme (default; look only) ═══ */
+html[data-theme="heaven"]{ color-scheme:light; --bg:#F6F8FC; --panel:#FFFFFF; --panel2:#F3F5FA; --border:#E3E7EF;
+  --text:#1A2332; --text-dim:#586274; --bull:#0B7D55; --bear:#B42F45; --gold:#8A6A1E !important; --amber:#A15C0B; --violet:#5149B8;
+  --halo:#D9C089; --sky:#E8F0FB; --lav:#F1EEFA; --hv-shadow:0 1px 2px rgba(26,35,50,.04), 0 6px 22px rgba(26,35,50,.055); --hv-radius:16px; }
+html[data-theme="heaven"], html[data-theme="heaven"] body{ font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,system-ui,sans-serif; }
+html[data-theme="heaven"] body{ background:
+  radial-gradient(900px 420px at 10% -6%, rgba(205,220,246,.55), transparent 62%),
+  radial-gradient(800px 420px at 100% 0%, rgba(232,224,248,.50), transparent 60%),
+  linear-gradient(180deg, #F7F9FD 0%, #FAFAFC 55%, #FBFAF6 100%) fixed; color:var(--text); }
+html[data-theme="heaven"] *{ text-shadow:none !important; }
+html[data-theme="heaven"] ::selection{ background:#EADFBF; }
+html[data-theme="heaven"] h1, html[data-theme="heaven"] h2, html[data-theme="heaven"] h3, html[data-theme="heaven"] h4{ color:var(--text); letter-spacing:-.01em; }
+/* header, menu, bottom bar */
+html[data-theme="heaven"] .mobile-header{ background:rgba(255,255,255,.86); -webkit-backdrop-filter:saturate(1.4) blur(14px); backdrop-filter:saturate(1.4) blur(14px); border-bottom:1px solid rgba(227,231,239,.9); }
+html[data-theme="heaven"] .mh-brand{ font-family:'Inter',system-ui,sans-serif; letter-spacing:.14em; font-weight:700; color:var(--text); font-size:14px; }
+html[data-theme="heaven"] .mh-brand small{ letter-spacing:0; font-weight:500; color:#8A93A3; font-size:10.5px; }
+html[data-theme="heaven"] .mh-glyph, html[data-theme="heaven"] .sidebar-brand .glyph{ color:var(--gold); animation:none; }
+html[data-theme="heaven"] .hamburger{ background:#fff; border-color:var(--border); color:var(--text); box-shadow:0 1px 2px rgba(26,35,50,.05); border-radius:12px; }
+html[data-theme="heaven"] .sidebar{ background:rgba(255,255,255,.97); border-right:1px solid var(--border); box-shadow:8px 0 30px rgba(26,35,50,.06); }
+html[data-theme="heaven"] .sidebar-scrim{ background:rgba(26,35,50,.22); -webkit-backdrop-filter:blur(2px); backdrop-filter:blur(2px); }
+html[data-theme="heaven"] .sidebar-brand .sb-titles h1{ font-family:'Inter',system-ui,sans-serif; letter-spacing:.16em; }
+html[data-theme="heaven"] .sb-banner{ background:linear-gradient(135deg,#FBF7EC,#F6F8FC); border-color:#EEE3C8; }
+html[data-theme="heaven"] .sidebar-menu li{ color:#465063; }
+html[data-theme="heaven"] .sidebar-menu li:hover{ background:var(--panel2); transform:none; }
+html[data-theme="heaven"] .sidebar-menu li.active{ background:#F6F1E4; color:var(--text); border-color:transparent; font-weight:600; }
+html[data-theme="heaven"] .sidebar-menu li.sb-tier{ color:#8A93A3; letter-spacing:.12em; }
+html[data-theme="heaven"] .omega-bottomnav{ background:rgba(255,255,255,.92); -webkit-backdrop-filter:saturate(1.4) blur(16px); backdrop-filter:saturate(1.4) blur(16px); border-top:1px solid var(--border); box-shadow:0 -4px 20px rgba(26,35,50,.04); }
+html[data-theme="heaven"] .omega-bottomnav button{ color:#7B8495; }
+html[data-theme="heaven"] .omega-bottomnav button.active{ color:var(--gold); }
+html[data-theme="heaven"] .omega-bottomnav button.active i{ transform:translateY(-1px); }
+html[data-theme="heaven"] .ost-line, html[data-theme="heaven"] .ost-sheet{ background:rgba(255,255,255,.96); }
+html[data-theme="heaven"] .ost-sheet{ box-shadow:0 -10px 30px rgba(26,35,50,.10); border-top-color:var(--border); }
+/* surfaces */
+html[data-theme="heaven"] .card, html[data-theme="heaven"] .ad-card, html[data-theme="heaven"] .dp-card, html[data-theme="heaven"] .om-card,
+html[data-theme="heaven"] .chart-panel, html[data-theme="heaven"] .analysis-controls-bar, html[data-theme="heaven"] .wl-room, html[data-theme="heaven"] .fl-room,
+html[data-theme="heaven"] .creed-watch, html[data-theme="heaven"] .creed-verdict, html[data-theme="heaven"] .creed-stage, html[data-theme="heaven"] .brief-q,
+html[data-theme="heaven"] .cmd-product, html[data-theme="heaven"] .an-deep, html[data-theme="heaven"] .om-about, html[data-theme="heaven"] .ab-sec{
+  background:var(--panel); border:1px solid var(--border); border-radius:var(--hv-radius); box-shadow:var(--hv-shadow); }
+html[data-theme="heaven"] .creed-verdict, html[data-theme="heaven"] .creed-stage{ border-left-width:3px; }
+html[data-theme="heaven"] .fl-room{ background:var(--panel); }
+html[data-theme="heaven"] .card:hover{ box-shadow:var(--hv-shadow); }
+html[data-theme="heaven"] .card h2, html[data-theme="heaven"] .chart-panel h2{ font-family:'Inter',system-ui,sans-serif; font-size:15px; font-weight:650; letter-spacing:-.005em; text-transform:none; color:var(--text); }
+html[data-theme="heaven"] .card h2[style*="gold"]{ color:var(--text) !important; }
+html[data-theme="heaven"] .dp-h, html[data-theme="heaven"] .cmd-card-head h3{ color:var(--text); text-transform:none; letter-spacing:-.005em; font-size:15px; font-weight:650; }
+html[data-theme="heaven"] .page-title{ font-family:'Inter',system-ui,sans-serif; letter-spacing:-.015em; font-weight:700; }
+html[data-theme="heaven"] .hint, html[data-theme="heaven"] .page-sub{ color:var(--text-dim); }
+html[data-theme="heaven"] .ck-time, html[data-theme="heaven"] .bn-stat b, html[data-theme="heaven"] .watch-tab .wt-sym, html[data-theme="heaven"] .creed-ohlc b,
+html[data-theme="heaven"] .cmd-product b, html[data-theme="heaven"] .fl-room-head h2, html[data-theme="heaven"] .fl-top b, html[data-theme="heaven"] .wl-room h2,
+html[data-theme="heaven"] .rz-head b, html[data-theme="heaven"] .op-room h2, html[data-theme="heaven"] .brief-q h3, html[data-theme="heaven"] .creed-banner-title,
+html[data-theme="heaven"] .creed-ptab.active{ color:var(--text); }
+html[data-theme="heaven"] .brief-list li.bad{ color:var(--amber); }
+html[data-theme="heaven"] .creed-ptab.active{ background:#F6F1E4; border-color:#E8DCBC; }
+/* hero banners: calm, no glow, no decorative pills */
+html[data-theme="heaven"] .creed-banner{ background:linear-gradient(135deg,#FFFFFF 0%,#F7F9FD 55%,#FAF6EC 100%); border:1px solid #ECE6D6; box-shadow:var(--hv-shadow); border-radius:20px; padding:20px 20px 18px; animation:none; }
+html[data-theme="heaven"] .creed-banner-glow, html[data-theme="heaven"] .creed-banner-flow{ display:none; }
+html[data-theme="heaven"] .creed-banner-kicker{ font-family:'Inter',system-ui,sans-serif; font-size:10.5px; font-weight:600; letter-spacing:.18em; color:var(--gold); }
+html[data-theme="heaven"] .creed-banner-title{ font-family:'Inter',system-ui,sans-serif; font-size:24px; font-weight:700; letter-spacing:-.02em; margin:6px 0 2px; line-height:1.25; }
+html[data-theme="heaven"] .creed-banner-title span{ display:block; margin-top:4px; font-size:13.5px; font-weight:400; letter-spacing:0; color:var(--text-dim); line-height:1.5; }
+html[data-theme="heaven"] .omega-clock .ck-time{ font-weight:600; }
+/* controls */
+html[data-theme="heaven"] .btn, html[data-theme="heaven"] .btn-primary, html[data-theme="heaven"] .ad-btn.primary, html[data-theme="heaven"] .btn.primary{
+  background:#1E2A3B; color:#fff; border:1px solid #1E2A3B; box-shadow:0 1px 2px rgba(26,35,50,.12); border-radius:10px; font-weight:600; filter:none; }
+html[data-theme="heaven"] .btn:hover, html[data-theme="heaven"] .btn-primary:hover, html[data-theme="heaven"] .ad-btn.primary:hover{ background:#2A3850; box-shadow:0 2px 10px rgba(26,35,50,.16); filter:none; }
+html[data-theme="heaven"] #page-creed .btn-primary, html[data-theme="heaven"] #page-bot .btn-primary{ background:#1E2A3B; color:#fff; border-color:#1E2A3B; box-shadow:0 1px 2px rgba(26,35,50,.12); }
+html[data-theme="heaven"] .btn-outline, html[data-theme="heaven"] .ad-btn{ background:#fff; border:1px solid #D8DEE8; color:var(--text); border-radius:10px; }
+html[data-theme="heaven"] .btn-outline:hover, html[data-theme="heaven"] .ad-btn:hover, html[data-theme="heaven"] .an-seg button:hover{ border-color:var(--halo); box-shadow:0 0 0 3px rgba(217,192,137,.18); }
+html[data-theme="heaven"] .btn-ghost{ background:transparent; border:1px solid #E6DCC0; color:var(--gold); border-radius:10px; }
+html[data-theme="heaven"] .btn-ghost:hover{ background:#FBF7EC; }
+html[data-theme="heaven"] .set-tab{ background:#fff; border-radius:999px; }
+html[data-theme="heaven"] .set-tab.active{ background:#1E2A3B; border-color:#1E2A3B; color:#fff; }
+html[data-theme="heaven"] input, html[data-theme="heaven"] select, html[data-theme="heaven"] textarea{ background:#fff; color:var(--text); border:1px solid #D8DEE8; border-radius:10px; }
+html[data-theme="heaven"] input:focus, html[data-theme="heaven"] select:focus, html[data-theme="heaven"] textarea:focus{ outline:none; border-color:#C9AE6E; box-shadow:0 0 0 3px rgba(217,192,137,.25); }
+html[data-theme="heaven"] th{ color:#6B7486; background:#F7F8FB; font-weight:600; }
+html[data-theme="heaven"] td, html[data-theme="heaven"] th{ border-color:#EDF0F5; }
+/* notices */
+html[data-theme="heaven"] .notice-banner, html[data-theme="heaven"] .bot-notice, html[data-theme="heaven"] .orch-conflicts{ background:#FFF8EC; border-color:#F0D9A8; color:#7A4F0A; }
+html[data-theme="heaven"] .paper-banner{ background:linear-gradient(160deg,#FFFBF2,#FFFFFF); border:1px solid #EEDFBD; }
+html[data-theme="heaven"] .paper-banner-badge{ font-family:'Inter',system-ui,sans-serif; font-size:12px; letter-spacing:.14em; border-color:#E6D3A6; }
+html[data-theme="heaven"] .cmdk-box{ border-color:var(--border); box-shadow:0 24px 60px rgba(26,35,50,.18); }
+html[data-theme="heaven"] .dot, html[data-theme="heaven"] .fl-state i{ background:#C5CCD8; }
+html[data-theme="heaven"] .fl-card{ border-left-color:#C5CCD8; background:var(--panel2); }
+/* charts */
+html[data-theme="heaven"] #creedChartTV, html[data-theme="heaven"] #creedChartSVG{ background:#fff; box-shadow:var(--hv-shadow); }
+html[data-theme="heaven"] #creedTvContainer{ box-shadow:var(--hv-shadow); }
+html[data-theme="heaven"] .omega-cux button{ background:rgba(255,255,255,.92) !important; color:var(--gold) !important; border-color:#E3D6B4 !important; }
+html[data-theme="heaven"] [data-omega-fs="1"]{ background:#fff !important; }
+/* first-load mark */
+html[data-theme="heaven"] #omegaIntro{ background:radial-gradient(circle at 50% 42%, rgba(217,192,137,.20) 0%, transparent 55%), radial-gradient(ellipse at 50% 45%, #FFFFFF 0%, #EEF2F9 78%); }
+html[data-theme="heaven"] #omegaIntro::before{ background-image:linear-gradient(rgba(138,106,30,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(138,106,30,.06) 1px, transparent 1px); }
+html[data-theme="heaven"] #omegaIntro::after{ background:radial-gradient(ellipse at 50% 45%, transparent 35%, #F2F5FA 82%); }
+html[data-theme="heaven"] .oi-name .oi-l{ color:var(--text); }
+html[data-theme="heaven"] .oi-glyph{ text-shadow:none; }
+html[data-theme="heaven"] .oi-rings span{ border-color:rgba(138,106,30,.28); }
+html[data-theme="heaven"] ::-webkit-scrollbar{ width:10px; height:10px; } html[data-theme="heaven"] ::-webkit-scrollbar-thumb{ background:#D5DBE5; border-radius:10px; border:2px solid transparent; background-clip:padding-box; }
+@media (max-width:719px){ html[data-theme="heaven"] .creed-banner-title{ font-size:21px; } }
 html[data-theme="ocean"]{ --bg:#06101C; --panel:#0B1826; --panel2:#102133; --border:#1B324A; --text:#DCEBF8; --text-dim:#6E8FAD; --bull:#38C6A0; --bear:#F26D7E; --gold:#4A9CE8; --amber:#57ADF5; --violet:#7FB4EF; }
 html[data-theme="sunset"]{ --bg:#160C0A; --panel:#211310; --panel2:#2C1A15; --border:#43281F; --text:#F6E6DE; --text-dim:#B08A79; --bull:#3ECF8E; --bear:#F45B69; --gold:#F47560; --amber:#F59E5B; --violet:#E88AA0; }
 html[data-theme="lavender"]{ --bg:#0F0C16; --panel:#171223; --panel2:#1F1930; --border:#312747; --text:#EAE4F5; --text-dim:#948AB0; --bull:#5FD3A5; --bear:#F0708C; --gold:#B39DDB; --amber:#C0A8E8; --violet:#B39DDB; }
@@ -2047,7 +2144,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   <!-- Mobile header (logo + hamburger) -->
   <header class="mobile-header">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.111 · build 2026-11-08 15:43 UTC</small></div>
+    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.114 · build 2026-11-08 20:46 UTC</small></div>
   </header>
 
   <!-- Sidebar -->
@@ -2068,6 +2165,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <li class="active" data-page="command" onclick="navigate('command')"><span class="sb-icon">⌂</span> Home</li>
       <li class="sb-tier">Charts &amp; markets</li>
       <li data-page="analysis" onclick="navigate('analysis')"><span class="sb-icon">📊</span> Charts (Analysis)</li>
+      <li data-page="forex" onclick="navigate('forex')"><span class="sb-icon">¤</span> Forex board</li>
       <li data-page="mread" onclick="navigate('mread')"><span class="sb-icon">≋</span> Market Read (mark-up) <span class="sb-badge" id="sbBadge-mread"></span></li>
       <li data-page="intel" onclick="navigate('intel')"><span class="sb-icon">◈</span> Market Intelligence <span class="sb-badge" id="sbBadge-intel"></span></li>
       <li data-page="flow" onclick="navigate('flow')"><span class="sb-icon">≋</span> Live Market Data</li>
@@ -2089,6 +2187,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <li data-page="academy" onclick="navigate('academy')"><span class="sb-icon">★</span> Academy</li>
       <li class="sb-tier">System</li>
       <li data-page="settings" onclick="navigate('settings')"><span class="sb-icon">⚙️</span> Settings</li>
+      <li data-page="about" onclick="navigate('about')"><span class="sb-icon">ⓘ</span> About OMEGA</li>
     </ul>
     <div class="sb-status" id="omegaSysStatus"></div>
     <div class="sidebar-footer">
@@ -2109,12 +2208,11 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     
 
     <div id="page-command" class="page active">
-      <div id="pulseCard"></div>
       <div class="creed-banner cmd-hero">
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω OMEGA · COMMAND CENTER</div>
-          <h2 class="creed-banner-title">Command <span>— everything that needs you, in one place</span></h2>
+          <h2 class="creed-banner-title">Command <span><i class="hv-dash">— </i>everything that needs you, in one place</span></h2>
           <div class="creed-banner-flow"><i>Observe</i><b>→</b><i>Understand</i><b>→</b><i>Validate</i><b>→</b><i>Decide</i><b>→</b><i>Execute</i><b>→</b><i>Record</i><b>→</b><i>Learn</i></div>
         </div>
         <div class="creed-banner-side">
@@ -2123,58 +2221,63 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         </div>
       </div>
       <div id="cmdFive" class="cmd-five"></div>
+      <div id="pulseCard"></div>
+      <div id="homeBotsFeed" class="om-feed om-feed-sm"></div>
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:14px;"><div class="card tb-card"><h2 style="color:var(--gold);">Trades OMEGA sees now</h2><p class="hint" style="margin:0 0 8px;">Every live setup the app is watching, strongest evidence first. Each shows where it came from and how well it has been tested.</p><div id="tradeBoard"></div></div></section>
+      <div id="opPill" class="op-pill" onclick="navigate('auto')"></div>
+      <div class="cmd-grid">
+        <details class="card cmd-card cmd-wide hv-fold" open>
+          <summary class="cmd-card-head"><h3>CREED — three markets</h3>
+            <div class="cmd-actions"><button class="btn-outline" id="cmdCreedRefresh" type="button">↻ Refresh all 3</button><button class="btn-outline" type="button" onclick="navigate('creed')">Open CREED</button></div></summary>
+          <div id="cmdCreed"></div>
+          <p class="hint cmd-legend"><b>Bias</b> is the 4H trend. <b>Permission</b> is whether every gate passed. <b>Ready</b> means acceptance confirmed and the trade can be taken. A strong bias with no permission is a reason to wait, not to trade.</p>
+        </details>
+        <details class="card cmd-card cmd-wide hv-fold">
+          <summary class="cmd-card-head"><h3>CREED Scanner — where your method has a setup</h3>
+            <div class="cmd-actions"><button class="btn-outline" type="button" onclick="navigate('radar')">Open CREED Scanner</button></div></summary>
+          <div id="cmdRadar"></div>
+        </details>
+        <details class="card cmd-card cmd-wide hv-fold">
+          <summary class="cmd-card-head"><h3>OMEGA Intelligence — what the markets are doing</h3>
+            <div class="cmd-actions"><button class="btn-outline" type="button" onclick="navigate('intel')">Open Market Intelligence</button></div></summary>
+          <div id="cmdIntel"></div>
+        </details>
+        <details class="card cmd-card hv-fold">
+          <summary class="cmd-card-head"><h3>Classic Analysis (SMC)</h3><div class="cmd-actions"><button class="btn-outline" type="button" id="cmdRunAnalysis">Run analysis</button></div></summary>
+          <div id="cmdAnalysis"></div>
+        </details>
+        <details class="card cmd-card hv-fold" open>
+          <summary class="cmd-card-head"><h3>Open positions</h3></summary>
+          <div id="cmdPositions"></div>
+        </details>
+        <details class="card cmd-card hv-fold">
+          <summary class="cmd-card-head"><h3>Today</h3></summary>
+          <div id="cmdToday"></div>
+        </details>
+        <details class="card cmd-card hv-fold">
+          <summary class="cmd-card-head"><h3>Signals — lifecycle</h3></summary>
+          <div id="cmdLifecycle"></div>
+        </details>
+        <details class="card cmd-card cmd-wide hv-fold">
+          <summary class="cmd-card-head"><h3>What OMEGA has learned — and how sure it is</h3></summary>
+          <div id="cmdLedger"></div>
+        </details>
+      </div>
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+      <p>Home answers five questions from what the app actually holds. The cards below each open with a tap; nothing is hidden for good.</p>
       <div class="cmd-products">
         <div class="cmd-product creed-p"><span>CREED</span><b>Your method</b><em>The course&rsquo;s fixed gates, your three markets, the CREED Scanner and the CREED bots. It decides only by its own rules.</em></div>
         <div class="cmd-product intel-p"><span>OMEGA Intelligence</span><b>Its own engine</b><em>Reads 20 markets with its own measurements &mdash; no CREED, no SMC &mdash; and will only signal what it has proven on unseen data.</em></div>
         <div class="cmd-product shared-p"><span>Shared</span><b>Journal &amp; Brain</b><em>Both record here under their own names. Neither reads the other&rsquo;s signals, so you can compare them honestly.</em></div>
       </div>
-      <div id="opPill" class="op-pill" onclick="navigate('auto')"></div>
-      <div class="cmd-grid">
-        <section class="card cmd-card cmd-wide">
-          <div class="cmd-card-head"><h3>CREED — three markets</h3>
-            <div class="cmd-actions"><button class="btn-outline" id="cmdCreedRefresh" type="button">↻ Refresh all 3</button><button class="btn-outline" type="button" onclick="navigate('creed')">Open CREED</button></div></div>
-          <div id="cmdCreed"></div>
-          <p class="hint cmd-legend"><b>Bias</b> is the 4H trend. <b>Permission</b> is whether every gate passed. <b>Ready</b> means acceptance confirmed and the trade can be taken. A strong bias with no permission is a reason to wait, not to trade.</p>
-        </section>
-        <section class="card cmd-card cmd-wide">
-          <div class="cmd-card-head"><h3>CREED Scanner — where your method has a setup</h3>
-            <div class="cmd-actions"><button class="btn-outline" type="button" onclick="navigate('radar')">Open CREED Scanner</button></div></div>
-          <div id="cmdRadar"></div>
-        </section>
-        <section class="card cmd-card cmd-wide">
-          <div class="cmd-card-head"><h3>OMEGA Intelligence — what the markets are doing</h3>
-            <div class="cmd-actions"><button class="btn-outline" type="button" onclick="navigate('intel')">Open Market Intelligence</button></div></div>
-          <div id="cmdIntel"></div>
-        </section>
-        <section class="card cmd-card">
-          <div class="cmd-card-head"><h3>Classic Analysis (SMC)</h3><div class="cmd-actions"><button class="btn-outline" type="button" id="cmdRunAnalysis">Run analysis</button></div></div>
-          <div id="cmdAnalysis"></div>
-        </section>
-        <section class="card cmd-card">
-          <div class="cmd-card-head"><h3>Open positions</h3></div>
-          <div id="cmdPositions"></div>
-        </section>
-        <section class="card cmd-card">
-          <div class="cmd-card-head"><h3>Today</h3></div>
-          <div id="cmdToday"></div>
-        </section>
-        <section class="card cmd-card">
-          <div class="cmd-card-head"><h3>Signals — lifecycle</h3></div>
-          <div id="cmdLifecycle"></div>
-        </section>
-        <section class="card cmd-card cmd-wide">
-          <div class="cmd-card-head"><h3>What OMEGA has learned — and how sure it is</h3></div>
-          <div id="cmdLedger"></div>
-        </section>
-      </div>
+      </div></details>
     </div>
     <div id="page-radar" class="page">
       <div class="creed-banner">
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">CREED · SCANNER</div>
-          <h2 class="creed-banner-title">CREED Scanner <span>— your method, across many markets</span></h2>
+          <h2 class="creed-banner-title">CREED Scanner <span><i class="hv-dash">— </i>your method, across many markets</span></h2>
           <div class="creed-banner-flow"><i>1Y · 1M · 1W macro</i><b>→</b><i>1D structure</i><b>→</b><i>4H · 1H swing</i><b>→</b><i>CREED on 15M</i></div>
         </div>
         <div class="creed-banner-side">
@@ -2228,7 +2331,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω OMEGA · LIVE MARKET DATA</div>
-          <h2 class="creed-banner-title">Beyond candles <span>— liquidity, positioning, other venues, options</span></h2>
+          <h2 class="creed-banner-title">Beyond candles <span><i class="hv-dash">— </i>liquidity, positioning, other venues, options</span></h2>
           <div class="creed-banner-flow"><i>Read</i><b>→</b><i>Say what it cannot show</i><b>→</b><i>Log</i><b>→</b><i>Test against what price did</i></div>
         </div>
         <div class="creed-banner-side">
@@ -2255,7 +2358,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω OMEGA · INTELLIGENCE</div>
-          <h2 class="creed-banner-title">Market Intelligence <span>— its own engine, its own conclusions</span></h2>
+          <h2 class="creed-banner-title">Market Intelligence <span><i class="hv-dash">— </i>its own engine, its own conclusions</span></h2>
           <div class="creed-banner-flow"><i>Observe</i><b>→</b><i>Describe</i><b>→</b><i>Rank attention</i><b>→</b><i>Research</i><b>→</b><i>Signal only when proven</i></div>
         </div>
         <div class="creed-banner-side">
@@ -2306,7 +2409,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω OMEGA · RISK GUARD</div>
-          <h2 class="creed-banner-title">Risk Guard <span>— risk is what makes money; managing it decides whether it does</span></h2>
+          <h2 class="creed-banner-title">Risk Guard <span><i class="hv-dash">— </i>risk is what makes money; managing it decides whether it does</span></h2>
           <div class="creed-banner-flow"><i>0.5% a trade</i><b>→</b><i>2 open at most</i><b>→</b><i>−2% a day stops</i><b>→</b><i>−5% a week stops</i><b>→</b><i>review at −20%</i></div>
         </div>
       </div>
@@ -2319,7 +2422,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω OMEGA · MARKET READ</div>
-          <h2 class="creed-banner-title">Market Read <span>— what is going on now, which side to trade, today’s plan, and where liquidity lies</span></h2>
+          <h2 class="creed-banner-title">Market Read <span><i class="hv-dash">— </i>what is going on now, which side to trade, today’s plan, and where liquidity lies</span></h2>
           <div class="creed-banner-flow"><i>Stops above</i><b>→</b><i>Stops below</i><b>→</b><i>Resting orders</i><b>→</b><i>Who is crowded</i><b>→</b><i>What the research supports</i></div>
         </div>
       </div>
@@ -2332,7 +2435,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω OMEGA · SIGNALS</div>
-          <h2 class="creed-banner-title">OMEGA Signals <span>— only what has been tested</span></h2>
+          <h2 class="creed-banner-title">OMEGA Signals <span><i class="hv-dash">— </i>only what has been tested</span></h2>
           <div class="creed-banner-flow"><i>Held out-of-sample</i><b>→</b><i>Fires on a closed hour</i><b>→</b><i>Signal</i><b>→</b><i>Outcome</i><b>→</b><i>Journal</i></div>
         </div>
       </div>
@@ -2345,13 +2448,17 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <b>Failed:</b> CREED measured at about a coin flip after costs (−0.10R to −0.12R a trade), the Breakout Desk setups, the funding harvest on 2025–26 (E34), and almost every other rule tested (12,480 rules in E28).
         The Daily Plan is grade C. Research, backtests and forward records now run outside the app — see the progress board:
         <a href="https://omega-board.onrender.com" target="_blank" rel="noopener">omega-board.onrender.com</a>.</p></div>
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+        <p>Signals shows only rules that were tested fairly. <b>Grade A</b>: the climax reversal, passed on 324 untouched coins. <b>Grade B</b>: the panic bounce, passed with delisted coins included but lives on a few big rebounds. <b>Grade C</b>: the Daily Plan, a plan followed on paper, not a tested edge.</p>
+        <p>Each card opens on its rule and current state; tap &ldquo;Show the full evidence&rdquo; for the research behind it. Everything here is paper: OMEGA places no orders. The full story is in About OMEGA.</p>
+      </div></details>
     </div>
     <div id="page-posdesk" class="page">
       <div class="creed-banner intel-banner">
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω POSITIONING DESK · PAPER ONLY</div>
-          <h2 class="creed-banner-title">Positioning Desk <span>— who is crowded, who pays whom, and how hard it can fall</span></h2>
+          <h2 class="creed-banner-title">Positioning Desk <span><i class="hv-dash">— </i>who is crowded, who pays whom, and how hard it can fall</span></h2>
           <div class="creed-banner-flow"><i>Funding</i><b>→</b><i>Crowding map</i><b>→</b><i>Carry at your size</i><b>→</b><i>Judged on unseen data</i></div>
         </div>
       </div>
@@ -2365,7 +2472,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">⚡ FUTURES · PAPER ONLY</div>
-          <h2 class="creed-banner-title">Futures <span>— perpetual futures with your margin and leverage, on every trade and every backtest</span></h2>
+          <h2 class="creed-banner-title">Futures <span><i class="hv-dash">— </i>perpetual futures with your margin and leverage, on every trade and every backtest</span></h2>
           <div class="creed-banner-flow"><i>Your sizing</i><b>→</b><i>Exchange rules</i><b>→</b><i>Liquidation, fees, funding</i><b>→</b><i>Every setting compared</i></div>
         </div>
       </div>
@@ -2431,7 +2538,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω SHARED · BRAIN</div>
-          <h2 class="creed-banner-title">Brain <span>— what it knows, how sure it should be, what it learned</span></h2>
+          <h2 class="creed-banner-title">Brain <span><i class="hv-dash">— </i>what it knows, how sure it should be, what it learned</span></h2>
           <div class="creed-banner-flow"><i>Observe</i><b>→</b><i>Test</i><b>→</b><i>Hold on unseen data</i><b>→</b><i>Check its own confidence</i></div>
         </div>
       </div>
@@ -2470,11 +2577,11 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <div id="brainDash"></div>
     </div>
     <div id="page-analysis" class="page">
-      <div id="truthBody"></div>
+      <nav class="om-subnav" aria-label="Charts"><button type="button" class="on" aria-current="page">Charts</button><button type="button" onclick="navigate('forex')">Forex board</button></nav>
       <div id="dplanAnaBody"></div>
-      <div id="evAnaBody"></div>
       <div id="cockpitBody"></div>
-      <section class="wl-room">
+      <div id="evAnaBody"></div>
+      <details class="wl-room hv-fold"><summary class="hv-sum">Every market, one engine <span>scan, setups and scores</span></summary>
         <div class="an-head"><div><h2>Every market, one engine</h2><p class="an-sub">Structure on 5-minute, 15-minute and 1-hour candles, a setup score and reward to risk for each market. Crypto is read on every scan; forex and gold take turns within the Twelve Data allowance, and each card says how old its reading is.</p></div>
           <div class="an-ctl"><button class="ad-btn primary" id="wlScan" type="button">Scan now</button><label class="checkbox-row" style="margin:0;"><input type="checkbox" id="wlAuto"> Also every 10 min while this page is open</label></div></div>
         <div class="an-bar"><div class="an-seg" role="group" aria-label="Which markets"><button type="button" data-wl-mode="all">All markets</button><button type="button" data-wl-mode="list">My list (up to 10)</button></div>
@@ -2485,7 +2592,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <p class="hint" id="wlStatus" style="margin:6px 0 8px;"></p>
         <div class="wl-grid" id="wlGrid"></div>
         <p class="hint" style="margin:10px 0 0;">The Autopilot re-scans every 15 minutes while it is on. A score of 60 or more with at least 2:1 reward to risk meets the bar. This is the classic analysis engine, not a tested OMEGA idea: OMEGA\u2019s own signals are on the OMEGA Signals page.</p>
-      </section>
+      </details>
       <div class="an-deep" id="anDeep"><div><h2>One market in depth</h2><p class="an-sub">Pick a market here, or press <b>In depth</b> on any card above: chart, structure, liquidity, a trade plan and the reasoning behind it.</p></div><div id="analysisClock" class="omega-clock"></div></div>
       <div class="analysis-controls-bar">
         <div class="controls">
@@ -2651,6 +2758,13 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     </div>
   </section>
 
+      <div id="truthBody"></div>
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+        <p><b>Today&rsquo;s plan</b> (grade C) is a written plan per coin, followed on paper: not a tested edge. The <b>cockpit</b> shows the market with its levels, volume and order book. <b>Events ahead</b> warns before CPI, the Fed and other scheduled news.</p>
+        <p><b>Every market, one engine</b> scores structure on 5-minute, 15-minute and 1-hour candles for every market; a score of 60 or more with at least 2:1 reward to risk meets the bar. It is the classic analysis engine, not a tested OMEGA idea.</p>
+        <p><b>One market in depth</b> charts the market you pick (or tap on the Forex board) with structure, liquidity and a trade plan. Forex and metals candles come from Twelve Data with your key, otherwise from the OMEGA Live API; the source is shown with the result.</p>
+        <p><b>Data check</b> (at the end) confirms the feeds are live and prices are sane.</p>
+      </div></details>
     </div>
 
     <!-- SIMULATION PAGE -->
@@ -2995,15 +3109,12 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
 
     <!-- BOT PAGE -->
     <div id="page-bot" class="page">
+      <div id="botsFeed" class="om-feed"></div>
       <div id="botsHub"></div>
+      <details class="hv-fold hv-box"><summary class="hv-sum">OMEGA bot and Portfolio bot <span>controls, equity and trades</span></summary>
       <div id="omegaBotCard"></div>
       <div id="portfolioBot"></div>
-      <div class="page-header">
-        <div>
-          <h2 class="page-title">🤖 Trading Bots <span class="hint" style="font-weight:400; font-size:12px;">— paper trading</span></h2>
-          <p class="page-sub">Autonomous paper-trading agents. Pick a bot type below — each uses the same signal engine but a different trading style.</p>
-        </div>
-      </div>
+      </details>
       <div class="paper-banner" role="status">
         <div class="paper-banner-badge">PAPER TRADING</div>
         <div class="paper-banner-text"><b>No real orders are placed by any bot on this page.</b> None of them is connected to a broker. Every bot trades simulated positions against real prices and records the results as simulated. Starting a bot asks you to confirm first.</div>
@@ -3138,6 +3249,11 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       </div>
 <!-- /botsub-livetest -->
     </div>
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+        <p><b>The 24/7 bots</b> (top) run in the cloud and on the laptop Station: a paper bot trading only the approved rules, and the scouts&rsquo; forecasts, read from the OMEGA Live API every 2 minutes while this page is open.</p>
+        <p><b>Your in-app bots</b> are autonomous paper-trading agents: each uses the same signal engine with a different trading style, and runs only while the app is open. Starting one asks you to confirm.</p>
+        <p>Grades: A climax reversal, B panic bounce, C watch list (failed its final test; paper only). Nothing on this page places a real order.</p>
+      </div></details>
     </div><!-- /page-bot -->
 
     <!-- CREED / ACCEPTANCE PAGE (v6.5) -->
@@ -3146,7 +3262,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">Ω OMEGA · STRATEGY DESK</div>
-          <h2 class="creed-banner-title">CREED <span>— Acceptance</span></h2>
+          <h2 class="creed-banner-title">CREED <span><i class="hv-dash">— </i>Acceptance</span></h2>
           <div class="creed-banner-flow"><i>4H battlefield</i><b>→</b><i>1H pullback</i><b>→</b><i>15M sweep</i><b>→</b><i>acceptance</i></div>
         </div>
         <div class="creed-banner-side">
@@ -3162,12 +3278,15 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div id="creedWatchTabs" class="creed-watch-tabs"></div>
         <p class="hint" id="creedWatchMsg" style="margin:8px 2px 0;">Three independent markets. Tap a tab to switch the Desk below; each keeps its own chart, verdict and symbol. Auto-monitor and Refresh all 3 check every slot, so a setup on a tab you are not looking at is still caught.</p>
       </div>
-      <div class="page-header">
+      <div class="page-header" style="display:none;">
         <div>
           <h2 class="page-title" style="display:none;">⚔️ CREED — Acceptance</h2>
-          <p class="page-sub">One strategy, run as taught: 4H battlefield → 1H pullback zone → 15M sweep → acceptance. Market, symbol and key below are CREED&rsquo;s own — separate from the Analysis page.</p>
         </div>
       </div>
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+        <p>One strategy, run as taught: 4H battlefield &rarr; 1H pullback zone &rarr; 15M sweep &rarr; acceptance. Market, symbol and key below are CREED&rsquo;s own, separate from the Charts page. Without a Twelve Data key, forex comes from the OMEGA Live API and gold from its PAXG proxy.</p>
+        <p>Read the reality check first: measured on about 11,000 setups, CREED behaves like a coin flip after costs. Use its verdict as structure, not as a promise.</p>
+      </div></details>
 
       <div class="analysis-controls-bar" style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; background:var(--panel); border:1px solid var(--border); border-radius:10px; padding:14px 16px; margin-bottom:18px;">
         <div><span class="field-label">Market</span>
@@ -3539,12 +3658,105 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     </div><!-- /page-creed -->
 
     <!-- SETTINGS PAGE -->
+    <div id="page-forex" class="page">
+      <nav class="om-subnav" aria-label="Charts"><button type="button" onclick="navigate('analysis')">Charts</button><button type="button" class="on" aria-current="page">Forex board</button></nav>
+      <header class="om-head"><h2>Forex</h2><p>Every major, minor and exotic pair, and the metals: live price, spread and whether the market is open. Tap a pair to chart it.</p></header>
+      <div id="fxBoard"></div>
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+        <p><b>Prices</b> are Swissquote&rsquo;s live bid and ask, read by your OMEGA Live API every few seconds. <b>Spread</b> is ask minus bid, in pips (0.0001; 0.01 for yen and forint pairs); for metals it is in dollars. When a quote is more than ten minutes old the market is closed (weekends, holidays) or the feed paused, and the row says so.</p>
+        <p><b>Candles</b> for the chart come from Twelve Data when this browser has a key; without one they come from the Live API (Twelve Data on the server if it has a key, otherwise Yahoo: 1 hour back 2 years, 15 minutes back 60 days, 5 minutes back 5 days). Metal candles from Yahoo are <b>futures</b> (gold GC, silver SI, platinum PL, palladium PA): a close proxy, not spot. The chart says which source it used.</p>
+        <p>The board needs the Live API token (Settings &rsaquo; Data &amp; Keys). Information only: OMEGA places no orders, and forex majors failed every hour-by-hour test OMEGA ran (E15).</p>
+      </div></details>
+    </div>
+    <div id="page-about" class="page">
+      <header class="om-head ab-hero"><p class="ab-kicker">About</p><h2>OMEGA, explained</h2>
+        <p>Everything OMEGA does, where its data comes from, and what the evidence says. Open any section.</p></header>
+      <div class="ab-list">
+        <details class="ab-sec"><summary>What OMEGA is</summary><div class="ab-body">
+          <p>OMEGA is a trading companion that runs in your browser. It reads crypto, forex and metals markets, shows them clearly, tests ideas with fair rules before trusting them, and runs <b>paper</b> bots so a rule can prove itself on live prices first.</p>
+          <p><b>It places no real orders.</b> Nothing in this app is connected to a broker. Your data stays on this device unless you download a backup.</p>
+          <p>Its standing rules: never invent data; plan a test before looking at the data and count every try; paper first; no secrets in files or backups.</p>
+        </div></details>
+        <details class="ab-sec"><summary>Every page and what it is for</summary><div class="ab-body">
+<dl class="ab-dl">
+          <dt>Home</dt><dd>The start of every session: what is happening, what is actionable, what needs you, the bots at a glance, and the trades OMEGA sees now. A strong bias with no permission is a reason to wait.</dd>
+          <dt>Charts (Analysis)</dt><dd>One market in depth: candles, structure, liquidity, a trade plan and its reasoning (the classic SMC engine, not a tested OMEGA idea), the Daily Plan, events ahead, the market cockpit and a scan of every market.</dd>
+          <dt>Forex board</dt><dd>Every major, minor and exotic pair and the metals, live from Swissquote through the Live API: price, spread and whether the market is open. Tap a pair to chart it.</dd>
+          <dt>Market Read (mark-up)</dt><dd>What is going on now, which side to trade, today&rsquo;s plan, and where liquidity sits (stops above and below, resting orders, who is crowded).</dd>
+          <dt>Market Intelligence</dt><dd>OMEGA&rsquo;s own engine reading many markets on several timeframes, with its own conclusions; also the market clock (sessions, CPI/FOMC calendar).</dd>
+          <dt>Live Market Data</dt><dd>Beyond candles: order books, other venues, options volatility and crowd positioning, checked later against what price did.</dd>
+          <dt>Signals</dt><dd>Only what has been tested: the climax reversal (A), the panic bounce (B), the Daily Plan (C) and the evidence note.</dd>
+          <dt>CREED Desk</dt><dd>The CREED method run exactly as taught (4H battlefield, 1H pullback, 15M sweep, acceptance) on three markets, with its reality check first.</dd>
+          <dt>CREED Scanner</dt><dd>The CREED method across many markets, with a timeframe ladder for context. CREED alone decides whether a setup exists.</dd>
+          <dt>Bots</dt><dd>Every in-app paper bot at a glance, plus the 24/7 cloud bots and scouts from the Live API.</dd>
+          <dt>Risk Guard &amp; Growth Bot</dt><dd>The risk rules every trade must pass, the Growth Bot that follows them on paper, and the review of how the rules held.</dd>
+          <dt>Autopilot</dt><dd>The jobs that read markets, keep signals current and run the paper bots while the app is open.</dd>
+          <dt>Positioning Desk</dt><dd>Who is crowded, who pays whom (funding), and how hard it can fall.</dd>
+          <dt>Futures</dt><dd>Perpetual futures maths with your margin and leverage: fees, funding, liquidation distance, and a paper account.</dd>
+          <dt>Journal</dt><dd>Every closed trade from every part of OMEGA, with review notes on why each may have worked or failed.</dd>
+          <dt>Growth &amp; Routine</dt><dd>Your real edge in dollars, how fast it can compound at a sustainable pace, and a daily routine.</dd>
+          <dt>Brain</dt><dd>What OMEGA knows, how sure it should be, its prediction scorecard and evidence ledger.</dd>
+          <dt>Academy</dt><dd>The course: markets, chart reading, risk first, and how to test an idea before trusting it; with quizzes and progress.</dd>
+          <dt>Settings</dt><dd>Trading thresholds, display and theme, data sources and keys, the Live API token, backups.</dd>
+          </dl>
+        </div></details>
+        <details class="ab-sec"><summary>Signals, grades and the evidence behind them</summary><div class="ab-body">
+          <p>Every test was planned and fingerprinted before its data and run once; results are after trading costs.</p>
+          <h4><span class="om-tag ga">Grade A</span> Climax reversal</h4>
+          <p>A 3&sigma; hourly drop on 3&times; normal volume that closes in the top 40% of its range: buy the next open, hold 12 hours. It passed on 324 untouched coins. Over all perpetuals in 2025&ndash;26 it still averaged +109 bp a trade, but not significantly (t 0.78), so its forward record decides.</p>
+          <h4><span class="om-tag gb">Grade B</span> Panic bounce (H1 and H3)</h4>
+          <p>Buying coins that fell far below their own normal range. Plan E22: H1 +0.36% a trade (t 4.34), H3 +0.22% (t 3.63). E25, with 143 delisted coins included (883 coins): H1 +0.32% (t 4.54), H3 +0.30% (t 4.08).</p>
+          <p class="ab-warn">It lives on the big rebounds: without the best 5% of trades each version loses about 0.7% a trade, and single trades lost 77&ndash;93%. Run as a 100 USDT account (E26) it had drawdowns of 56% and 59%. In 2025&ndash;26 its edge was +18 bp a trade (t 0.59): positive, not significant.</p>
+          <h4><span class="om-tag gc">Grade C</span> Watch list and the Daily Plan</h4>
+          <p>Ideas that failed their final test but stay on paper to be watched: the panic bounce on 5- and 15-minute bars (E37 +31.8 bp, t 1.05; E38 +2.8 bp, t 0.10), the market-wide 15-minute panic (E40 +24.7 bp, t 0.74) and the UpScout top-2% longs (E81). Without their best 5% of trades E37 and E40 lose (&minus;32.7 and &minus;44.1 bp). They are never real trades. The <b>Daily Plan</b> is grade C too: a written plan per coin, followed on paper, not a tested edge.</p>
+          <h4>CREED: measured as a coin flip</h4>
+          <p>After a CREED setup, price behaves like a fair coin: it reached +1R before the stop 49% of the time against 50% for chance. Per trade after costs: &minus;0.118R, &minus;0.100R and &minus;0.118R on three coin sets (about 11,000 setups). Longs-only, BTC-context, panic-gated and volatility-buffer versions all failed on untouched coins (E29, E31). In 100,000 simulated accounts, CREED at 1% risk lost half the account within a year in 76% of them. Treat a CREED &ldquo;Ready&rdquo; as structure, not a promise.</p>
+          <h4>What failed</h4>
+          <p>Daily-trading rules (12,480 tried, E28), order-book depth and crowd positioning (E30), a neural network (E32), funding harvest (E34: +8.8% a year in 2021&ndash;24, &minus;17% a year in 2025&ndash;26), forex majors hour by hour (E15), trend, momentum and funding rules (E50&ndash;E55), new data sources (E63&ndash;E70) and exit tweaks (E80: the original exits were best). The lesson: size is predictable, direction is not; panic selling gets overdone.</p>
+        </div></details>
+        <details class="ab-sec"><summary>The bots</summary><div class="ab-body">
+          <p><b>In-app bots</b> (Bots page): the OMEGA bot, CREED bots 1 and 2, the Confluence bot and the Portfolio bot, and the Growth Bot on the Risk Guard page. All trade on paper against real prices and run only while the app is open.</p>
+          <p><b>24/7 cloud bots</b>: a paper bot runs every hour on GitHub and trades only the approved rules (A, B, and the C watch list on paper). Its positions, resting orders and recent actions are published on the bot-state branch. The <b>laptop Station</b> runs the same bot and scouts when the laptop is on; the Live API reads the Station when it runs next to it, otherwise the cloud record.</p>
+          <p><b>Scouts</b>: UpScout and DownScout forecast a big move in the next 24 hours from hourly candles (E81), the fast scouts the next 4 hours from 15-minute candles (E82). They see big moves coming but failed as trading rules, so they are scored forward against the base rate and feed no bot.</p>
+          <p>Everything the bots show is <b>paper or forecast information</b>, never an order.</p>
+        </div></details>
+        <details class="ab-sec"><summary>Data sources</summary><div class="ab-body">
+          <dl class="ab-dl">
+          <dt>Binance and OKX</dt><dd>Crypto candles, prices, order books, funding and open interest (Bybit and Kraken as fallbacks). Gold and silver also trade as Binance perpetuals (XAUUSDT, XAGUSDT), so they work without a key.</dd>
+          <dt>Swissquote</dt><dd>Live forex and metals bid/ask, through the OMEGA Live API.</dd>
+          <dt>Yahoo</dt><dd>Forex candles through the Live API when no Twelve Data key is set (1 hour back 2 years, 15 minutes back 60 days, 5 minutes back 5 days). Metal candles are futures (GC, SI, PL, PA): a proxy, not spot.</dd>
+          <dt>Deribit</dt><dd>BTC and ETH implied volatility (DVOL).</dd>
+          <dt>Twelve Data</dt><dd>Forex and metals candles with your own free key (8 requests a minute, 800 a day). With a key in this browser it is always used first.</dd>
+          </dl>
+        </div></details>
+        <details class="ab-sec"><summary>The Live API and your token</summary><div class="ab-body">
+          <p>The OMEGA Live API is a small read-only server (default <code>https://omega-live-api.onrender.com</code>) that gathers forex quotes and candles, crypto data and the bots feed. It never places orders and holds no exchange keys.</p>
+          <p>Its address and your <b>token</b> live in Settings &rsaquo; Data &amp; Keys. The token is kept on this device only, like an API key: it is never written into a backup and a backup file can never set it. Health, the pair list and the Academy are public; prices, candles and the bots feed need the token. A server that has slept takes about a minute to wake.</p>
+        </div></details>
+        <details class="ab-sec"><summary>The Academy</summary><div class="ab-body">
+          <p>A course on markets, chart reading, risk first and testing an idea before trusting it, with quizzes and progress kept on this device. Modules 1 and 2 and the first lesson of every module are free and also built into the app for offline reading; the rest unlocks with a license key. The tutorial can be reopened from the Academy or Settings.</p>
+        </div></details>
+        <details class="ab-sec"><summary>Risk and leverage</summary><div class="ab-body">
+          <p>The Risk Guard rules: 0.5% of the account a trade, at most 2 open, stop trading after &minus;2% in a day or &minus;5% in a week.</p>
+          <p class="ab-warn"><b>Measured leverage</b> on the short-timeframe panic trades (E37, E38, E40; 5% margin a trade): at 1&times; no liquidations (drawdown 10&ndash;15%); <b>2&times; already liquidates</b>; at 20&times; 29&ndash;31% of trades hit the liquidation distance and the account goes to about 1 USDT; <b>40&times; liquidates about 60% of trades</b>. The worst move inside one bar was &minus;83% (October 2025).</p>
+          <p>No strategy tested turned 100 into 1,000,000 in 5 simulated years. Trading carries a high risk of losing money; leverage can lose the whole deposit quickly.</p>
+        </div></details>
+        <details class="ab-sec"><summary>Privacy and backups</summary><div class="ab-body">
+          <p>Everything (journal, settings, progress) is stored in this browser. Nothing leaves it except the requests for market data, the Live API and the Academy, and what you set up yourself (alerts, the Claude council with your own key).</p>
+          <p>A backup file leaves out every API key and token, the alert webhook and your WhatsApp number; restoring a file can never set them. Re-enter keys after restoring on a new device. The app only runs scripts from itself and its chart library (Content-Security-Policy).</p>
+        </div></details>
+        <details class="ab-sec"><summary>The progress board</summary><div class="ab-body">
+          <p>Research ideas, tests, verdicts and the live bots&rsquo; records are published on the progress board: <a href="https://omega-board.onrender.com" target="_blank" rel="noopener">omega-board.onrender.com</a>.</p>
+        </div></details>
+      </div>
+      <p class="om-meta ab-ver" id="aboutVersion"></p>
+    </div>
     <div id="page-academy" class="page">
       <div class="creed-banner intel-banner">
         <div class="creed-banner-glow"></div>
         <div class="creed-banner-main">
           <div class="creed-banner-kicker">★ OMEGA · ACADEMY</div>
-          <h2 class="creed-banner-title">Academy <span>— trade with evidence: risk first, then test before you trust</span></h2>
+          <h2 class="creed-banner-title">Academy <span><i class="hv-dash">— </i>trade with evidence: risk first, then test before you trust</span></h2>
           <div class="creed-banner-flow"><i>Learn</i><b>→</b><i>Check yourself</i><b>→</b><i>Practise on paper</i><b>→</b><i>Test before trusting</i></div>
         </div>
       </div>
@@ -3588,6 +3800,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div>
           <h2 class="page-title">⚙️ Settings</h2>
           <p class="page-sub">Configure trading thresholds, AI behaviour, display and data sources.</p>
+          <p style="margin:10px 0 0;"><button class="btn-ghost" type="button" id="setAboutBtn" onclick="navigate('about')">About OMEGA — how everything works</button></p>
         </div>
       </div>
       <div class="settings-page-body">
@@ -3773,7 +3986,8 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="field">
           <label>Theme</label>
           <select id="setTheme" onchange="applyTheme()">
-            <option value="neonglow" selected>Neon Glow (default)</option>
+            <option value="heaven" selected>Heaven (default)</option>
+            <option value="neonglow">Neon Glow</option>
             <option value="dark">Dark (classic)</option>
             <option value="midnight">Midnight Blue</option>
             <option value="carbon">Carbon (purple)</option>
@@ -3855,12 +4069,17 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     <!-- Data & keys -->
     <div class="set-pane" id="setData">
       <div class="card" id="setAcademyCard" style="margin-bottom:12px;">
-        <h2 style="color:var(--gold);">Academy server and tutorial</h2>
+        <h2 style="color:var(--gold);">OMEGA Live API, Academy and tutorial</h2>
         <div class="settings-grid"><div class="field"><label>Academy server (OMEGA Live API)</label>
           <input type="url" id="acadServerInput" placeholder="https://omega-live-api.onrender.com" /></div></div>
         <div class="journal-actions" style="margin-top:8px;"><button class="btn-ghost" type="button" id="acadServerSave">Save server</button>
           <button class="btn-ghost" type="button" id="acadTourOpen">Open the tutorial</button></div>
         <p class="hint" id="acadServerMsg" style="margin-bottom:0;">Lessons, unlocking and premium lessons come from this address. Free lessons are also built into the app for offline reading.</p>
+        <div class="settings-grid" style="margin-top:12px;"><div class="field"><label>Live API token (forex prices and candles, the bots feed)</label>
+          <input type="password" id="liveTokenInput" autocomplete="off" spellcheck="false" placeholder="Paste the token for this server" /></div></div>
+        <div class="journal-actions" style="margin-top:8px;"><button class="btn-ghost" type="button" id="liveTokenSave">Save token</button>
+          <button class="btn-ghost" type="button" id="liveTokenTest">Test connection</button><button class="btn-ghost" type="button" id="liveTokenClear">Remove token</button></div>
+        <p class="hint" id="liveTokenMsg" style="margin-bottom:0;">Kept on this device only, like an API key: never written into a backup and never taken from one.</p>
       </div>
       <div class="settings-grid">
         <div class="field">
@@ -4061,8 +4280,9 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     if(cached && (Date.now() - cached.t) < 30000) return cached.candles;
 
     // one queue for every module using this key: 7 a minute, counted against the day (the Autopilot reads the count)
-    if(window.OMEGA_TD && typeof window.OMEGA_TD.acquire === 'function') await window.OMEGA_TD.acquire('analysis');
-    await tdThrottle();
+    const viaLive = !!(window.OMEGA_LAPI && apikey === window.OMEGA_LAPI.KEY);   // v6.5.112: the server has its own limits
+    if(!viaLive && window.OMEGA_TD && typeof window.OMEGA_TD.acquire === 'function') await window.OMEGA_TD.acquire('analysis');
+    if(!viaLive) await tdThrottle();
     const tdInterval = TF_MAP_TWELVE[interval];
     const url = 'https://api.twelvedata.com/time_series?symbol=' + encodeURIComponent(symbol) + '&interval=' + tdInterval + '&outputsize=' + outputsize + '&apikey=' + encodeURIComponent(apikey);
     let res, data;
@@ -4133,9 +4353,11 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     // Gold without a key: tokenised gold on Binance (PAXGUSDT) — real structure, prices carry a small premium to spot.
     if(!apikey && symbol === 'XAU/USD'){ const rp = await fetchCryptoWithFailover('PAXGUSDT', interval, 300); return { candles: rp.candles, source: (rp.source || 'Binance') + ' \u00b7 PAXGUSDT gold proxy (no Twelve Data key)' }; }
     // forex + metals both use Twelve Data
-    if(!apikey) throw new Error('Enter a Twelve Data API key to analyze ' + (assetClass==='metals'?'gold/silver':'forex') + ' pairs. Get a free key at twelvedata.com.');
+    const LK = window.OMEGA_LAPI ? window.OMEGA_LAPI.KEY : null;
+    if(!apikey && window.OMEGA_LAPI && window.OMEGA_LAPI.on()) apikey = LK;   // v6.5.112: no Twelve Data key -> OMEGA Live API
+    if(!apikey) throw new Error('Enter a Twelve Data API key, or the OMEGA Live API token (Settings > Data & Keys), to analyze ' + (assetClass==='metals'?'gold/silver':'forex') + ' pairs.');
     const candles = await fetchTwelveData(symbol, interval, apikey, 300);
-    return { candles: candles, source: 'Twelve Data' };
+    return { candles: candles, source: apikey === LK ? 'OMEGA Live API \u00b7 ' + window.OMEGA_LAPI.sourceOf(symbol) : 'Twelve Data' };
   }
 
   // ============================================================
@@ -5538,7 +5760,8 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     if(ac==='crypto'){ hint.textContent=''; return; }
     const key = el('apikey') ? el('apikey').value.trim() : '';
     if(!key && ac==='metals' && (el('symbol')||{}).value === 'XAU/USD'){ hint.textContent = 'Gold works without a key (read through PAXGUSDT on Binance, close to spot). Silver and forex need a free Twelve Data key.'; hint.style.color='var(--text-dim)'; return; }
-    if(!key){ hint.innerHTML = '⚠ No Twelve Data key — forex &amp; silver need one. <a href="https://twelvedata.com/pricing" target="_blank" rel="noopener" style="color:var(--gold);">Get a free key</a> (free tier: 8 requests/min, 800/day).'; hint.style.color='var(--amber)'; }
+    if(!key && window.OMEGA_LAPI && window.OMEGA_LAPI.on()){ hint.textContent = '✓ No Twelve Data key: forex and metals candles come from your OMEGA Live API (gold keeps its PAXG proxy).'; hint.style.color='var(--text-dim)'; return; }
+    if(!key){ hint.innerHTML = '⚠ No Twelve Data key — forex &amp; silver need one (or the OMEGA Live API token in Settings). <a href="https://twelvedata.com/pricing" target="_blank" rel="noopener" style="color:var(--gold);">Get a free key</a> (free tier: 8 requests/min, 800/day).'; hint.style.color='var(--amber)'; }
     else { hint.textContent = '✓ Key set — free tier is rate-limited to 8 req/min; OMEGA caches and throttles to stay within it.'; hint.style.color='var(--text-dim)'; }
   }
   window.updateKeyStatusHint = updateKeyStatusHint;
@@ -9263,6 +9486,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     var t = (el('setTheme')||{}).value || 'dark';
     if(t === 'dark'){ document.documentElement.removeAttribute('data-theme'); }
     else { document.documentElement.setAttribute('data-theme', t); }
+    try{ var mt = document.querySelector('meta[name="theme-color"]'); if(mt) mt.setAttribute('content', t === 'heaven' ? '#F6F8FC' : '#0A0D12'); if(window.OMEGA_HEAVEN) window.OMEGA_HEAVEN.charts(); }catch(e){}   // v6.5.113
     // re-apply accent on top of theme (accent overrides --gold)
     applyAccent();
   };
@@ -9502,6 +9726,9 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     try{ if(!localStorage.getItem('omega_neon108')){ var th=document.getElementById('setTheme');   // v6.5.108: one-time move to Neon Glow
       if(th && th.value==='dark'){ th.value='neonglow'; saveSettings(); }
       localStorage.setItem('omega_neon108','1'); applyTheme(); } }catch(e){}
+    try{ if(!localStorage.getItem('omega_heaven113')){ var th2=document.getElementById('setTheme');   // v6.5.113: one-time move to Heaven
+      if(th2 && (th2.value==='neonglow' || th2.value==='dark')){ th2.value='heaven'; saveSettings(); }
+      localStorage.setItem('omega_heaven113','1'); applyTheme(); } }catch(e){}
     loadIndicatorToggles();
     SETTING_IDS.forEach(function(id){ var e=el(id); if(e) e.addEventListener('change', function(){ saveSettings(); if(id==='setAccent') applyAccent(); if(id==='setAnims') applyAnims(); }); });
     var imp = el('importSettingsInput');
@@ -11752,7 +11979,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   // surviving a reload, repeats folded into one line), with what to do, and shown with the
   // self-test and storage state under Settings → Diagnostics. Anything that looks like a key or
   // token is blanked before it is stored.
-  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.111 \u00b7 build 2026-11-08 15:43 UTC';   // rewritten by the build stamp on every release
+  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.114 \u00b7 build 2026-11-08 20:46 UTC';   // rewritten by the build stamp on every release
   function redact(s){ return String(s==null?'':s).replace(/((?:api_?key|apikey|key|token|secret|auth|password)=)[^&\s"']+/gi,'$1…').replace(/sk-ant-[A-Za-z0-9_\-]+/g,'sk-ant-…').replace(/Bearer\s+[A-Za-z0-9._\-]+/g,'Bearer …').slice(0,300); }
   function fixFor(msg){ var m = String(msg);
     if(/quota|QuotaExceeded/i.test(m)) return 'Storage full: old simulated journal rows move to the archive automatically; export a backup if this repeats.';
@@ -13181,6 +13408,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     var c = cache[ck];
     if(c && (Date.now()-c.t) < 30000) return c.rows;
     var key = keyNow();
+    if(!key && window.OMEGA_LAPI && window.OMEGA_LAPI.on()) key = window.OMEGA_LAPI.KEY;   // v6.5.112: data source only
     if(!key) throw new Error('No Twelve Data key. Paste one into the TD key field above — gold and forex cannot be fetched without it. Crypto needs no key.');
     await throttle();
     var url = 'https://api.twelvedata.com/time_series?symbol='+encodeURIComponent(symbol)+
@@ -17762,7 +17990,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     var lis = document.querySelectorAll('.sidebar-menu li');
     for(var i=0;i<lis.length;i++) lis[i].classList.toggle('active', lis[i].getAttribute('data-page')===page);
   }
-  var EXTRA = ['command','brain','radar','intel','flow','osig','mread','rguard','auto','futures','posdesk','academy'];   // v6.5.109: research pages removed     // pages the original navigator's fixed list does not include
+  var EXTRA = ['command','brain','radar','intel','flow','osig','mread','rguard','auto','futures','posdesk','academy','forex','about'];   // v6.5.109: research pages removed     // pages the original navigator's fixed list does not include
   // One panel that cannot be drawn must not blank the page or stop navigation: the failure is recorded in
   // Diagnostics and a single line on the page says so.
   function drawSafe(p, fn){
@@ -18101,7 +18329,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   // ── command palette ──
   function commands(){
     var c = C(), list = [];
-    var pages = [['command','Home'],['analysis','Charts (Analysis)'],['mread','Market Read (mark-up)'],['intel','Market Intelligence'],['flow','Live Market Data'],['osig','Signals'],['creed','CREED Desk'],['radar','CREED Scanner'],['journal','Journal'],['bot','Bots'],['rguard','Risk Guard & Growth Bot'],['auto','Autopilot'],['posdesk','Positioning Desk'],['futures','Futures'],['growth','Growth & Routine'],['brain','Brain'],['academy','Academy'],['settings','Settings']];
+    var pages = [['command','Home'],['analysis','Charts (Analysis)'],['forex','Forex board'],['about','About OMEGA'],['mread','Market Read (mark-up)'],['intel','Market Intelligence'],['flow','Live Market Data'],['osig','Signals'],['creed','CREED Desk'],['radar','CREED Scanner'],['journal','Journal'],['bot','Bots'],['rguard','Risk Guard & Growth Bot'],['auto','Autopilot'],['posdesk','Positioning Desk'],['futures','Futures'],['growth','Growth & Routine'],['brain','Brain'],['academy','Academy'],['settings','Settings']];
     pages = pages.filter(function(p){ return document.getElementById('page-'+p[0]); });   // never offer a page that no longer exists
     pages.forEach(function(p){ if(el('page-'+p[0])) list.push({ label:'Go to '+p[1], hint:'page', run:function(){ navigate(p[0]); } }); });
     if(window.OMEGA_RADAR){
@@ -18338,15 +18566,18 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
             .filter(function(x){ return isFinite(x.o)&&isFinite(x.h)&&isFinite(x.l)&&isFinite(x.c); });
   }
   async function fetchTD(sym, L){
+    var LV = !tdKey() && window.OMEGA_LAPI && window.OMEGA_LAPI.on();   // v6.5.112: OMEGA Live API, no Twelve Data budget
+    if(!LV){
     var b = budget();
     var cap = Math.floor((cfg.tdDailyLimit||800) * RADAR_SHARE);
     if(b.used >= cap) throw new Error('Radar has used its share of today\u2019s Twelve Data allowance ('+b.used+'/'+cap+'); resumes after 00:00 UTC');
     var wait = Math.max(0, TD_GAP - (Date.now()-tdLast)); if(wait) await sleep(wait);
     await acquire('radar');
     tdLast = Date.now(); spend(1);
-    var url = 'https://api.twelvedata.com/time_series?symbol='+encodeURIComponent(sym)+'&interval='+L.td+'&outputsize='+L.limit+'&apikey='+encodeURIComponent(tdKey());
+    }
+    var url = 'https://api.twelvedata.com/time_series?symbol='+encodeURIComponent(sym)+'&interval='+L.td+'&outputsize='+L.limit+'&apikey='+encodeURIComponent(tdKey() || (LV ? window.OMEGA_LAPI.KEY : ''));
     var r = await fetch(url); var d = await r.json();
-    if(!d || !Array.isArray(d.values)){ var bb=budget(); bb.errors++; lsSet(BUD_KEY, bb); throw new Error((d && d.message) || 'Twelve Data returned no candles'); }
+    if(!d || !Array.isArray(d.values)){ if(!LV){ var bb=budget(); bb.errors++; lsSet(BUD_KEY, bb); } throw new Error((d && d.message) || 'Twelve Data returned no candles'); }
     return d.values.slice().reverse().map(function(v){ return { time:Math.floor(Date.parse(v.datetime.replace(' ','T')+'Z')/1000), o:+v.open, h:+v.high, l:+v.low, c:+v.close }; })
             .filter(function(x){ return isFinite(x.time)&&isFinite(x.o)&&isFinite(x.c); });
   }
@@ -18358,8 +18589,8 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     var proxy = proxyFor(sym);
     if(!isForex(sym)){ src='Binance'; rows = await fetchBinance(sym, L); }
     else if(proxy){ src='Binance '+proxy+' proxy'; rows = await fetchBinance(proxy, L); }
-    else if(!tdKey()) throw new Error('NO_KEY');
-    else { src='Twelve Data'; rows = await fetchTD(sym, L); }
+    else if(!tdKey() && !(window.OMEGA_LAPI && window.OMEGA_LAPI.on())) throw new Error('NO_KEY');
+    else { src = tdKey() ? 'Twelve Data' : 'OMEGA Live API'; rows = await fetchTD(sym, L); }
     cache[key] = { t:Date.now(), rows:rows, src:src };
     return cache[key];
   }
@@ -18889,11 +19120,12 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
       if(!Array.isArray(d)) throw new Error((d&&d.msg)||'Binance returned no candles');
       rows = d.map(function(k){ return { time:Math.floor(k[0]/1000), o:+k[1], h:+k[2], l:+k[3], c:+k[4], v:+k[5], tb:+k[9] }; });
     } else {
-      if(!tdKey()) throw new Error('NO_KEY');
-      var b=budget(); if(b.used >= cap()) throw new Error('BUDGET');
+      var LV = !tdKey() && window.OMEGA_LAPI && window.OMEGA_LAPI.on();   // v6.5.112: OMEGA Live API, no Twelve Data budget
+      if(!tdKey() && !LV) throw new Error('NO_KEY');
+      if(!LV){ var b=budget(); if(b.used >= cap()) throw new Error('BUDGET');
       if(window.OMEGA_TD) await window.OMEGA_TD.acquire('intel');
-      b=budget(); b.used++; lsSet(BUD_KEY,b);
-      var j = await (await fetch('https://api.twelvedata.com/time_series?symbol='+encodeURIComponent(sym)+'&interval='+T.td+'&outputsize='+T.n+'&timezone=UTC&apikey='+encodeURIComponent(tdKey()))).json();
+      b=budget(); b.used++; lsSet(BUD_KEY,b); }
+      var j = await (await fetch('https://api.twelvedata.com/time_series?symbol='+encodeURIComponent(sym)+'&interval='+T.td+'&outputsize='+T.n+'&timezone=UTC&apikey='+encodeURIComponent(tdKey() || (LV ? window.OMEGA_LAPI.KEY : '')))).json();
       if(!j || !Array.isArray(j.values)) throw new Error((j&&j.message)||'Twelve Data returned no candles');
       rows = j.values.slice().reverse().map(function(v){ return { time:Math.floor(Date.parse(v.datetime.replace(' ','T')+'Z')/1000), o:+v.open, h:+v.high, l:+v.low, c:+v.close, v:NaN }; });
     }
@@ -21341,6 +21573,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     if(months && Math.max(months/12, deepY) < 1) dont.push('How my ideas behave in conditions my '+months+' month(s) of history did not include. One stretch of market is not every kind of market.');
     if(!cal || cal.n < 20) dont.push('Whether my research holds up live \u2014 I have '+(cal?cal.n:0)+' closed live signal(s) and need at least 20.');
     var hasKey = !!((el('creedKey') && el('creedKey').value) || (function(){ try{ return localStorage.getItem('omega_td_key'); }catch(e){ return null; } })());
+    if(!hasKey && window.OMEGA_LAPI && window.OMEGA_LAPI.on()) hasKey = true;   // v6.5.112: the Live API reads forex
     if(I && !hasKey) dont.push('Anything about forex beyond gold \u2014 without a Twelve Data key I cannot read those markets.');
     dont.push('How real fills compare with my paper prices \u2014 I have never placed a real order.');
 
@@ -23628,7 +23861,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   var LAST_KEY = 'omega_research_pkg_last_v1';
   function L(){ return window.OMEGA_LAB; }
-  var BUILD = 'v6.5.111 \u00b7 build 2026-11-08 15:43 UTC';   // rewritten by the build stamp on every release
+  var BUILD = 'v6.5.114 \u00b7 build 2026-11-08 20:46 UTC';   // rewritten by the build stamp on every release
   function buildStamp(){ return BUILD; }
   function status(row){
     if(!row) return 'NOT TESTED';
@@ -26643,7 +26876,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     var out = [], AP = A(), OP = O(), T = window.OMEGA_TAB;
     if(AP && AP.cfg && !AP.cfg().brain) out.push({ t:'The Autopilot is off — nothing runs by itself.', btn:'Turn it on', act:'on' });
     if(T && !T.leader()) out.push({ t:'Another open tab or window is running the automation.', btn:'Run it here', act:'lead' });
-    var key = safe(function(){ return localStorage.getItem('omega_td_key'); }); if(!key) out.push({ t:'No Twelve Data key: forex, silver (and gold beyond the keyless proxy) cannot be read.', btn:'Settings', act:'settings' });
+    var key = safe(function(){ return localStorage.getItem('omega_td_key') || (window.OMEGA_LAPI && window.OMEGA_LAPI.on() ? 'live' : ''); }); if(!key) out.push({ t:'No Twelve Data key: forex, silver (and gold beyond the keyless proxy) cannot be read.', btn:'Settings', act:'settings' });
     if(OP){ var st = safe(function(){ return OP.state(); }) || {}, J = OP.jobs ? OP.jobs() : [];
       J.forEach(function(j){ var s = (st.jobs||{})[j.id] || {}; if(s.enabled !== false && (s.fails||0) >= 3) out.push({ t:'"'+j.label+'" keeps failing ('+(s.fails)+' times): '+String(s.result||s.error||'').slice(0, 120), btn:'Open Autopilot', act:'auto' }); }); }
     var su = safe(function(){ return OP.storageUse(); }); if(su && su.pct >= 70) out.push({ t:'Fast storage is '+su.pct+'% full.', btn:'Storage', act:'settings' });
@@ -29422,6 +29655,325 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
     if(!lsGet(TKEY, null)) setTimeout(function(){ if(!lsGet(TKEY, null)) TOUR.open(true); }, 2500); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else setTimeout(boot, 0);
   window.OMEGA_ACADEMY = { render:render, onShow:onShow, md:md, esc:esc, load:loadCatalog, open:openLesson, unlock:unlock, server:server, state:function(){ return st; }, progress:prog, tour:TOUR, KEY:KEY };
+})();
+</script>
+<style id="omLiveCss">/* v6.5.112: Forex board, bots feed, Live API (theme variables only) */
+.om-subnav{display:inline-flex;gap:2px;padding:3px;margin:0 0 14px;border:1px solid var(--border);border-radius:999px;background:var(--panel2)}
+.om-subnav button{border:0;background:none;color:var(--text-dim);font:inherit;font-size:13px;font-weight:600;padding:7px 16px;border-radius:999px;cursor:pointer;min-height:36px}
+.om-subnav button.on{background:var(--panel);color:var(--text);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.om-head{margin:2px 0 14px}.om-head h2{margin:0 0 4px;font-size:22px;letter-spacing:-.01em;color:var(--text);text-transform:none}.om-head p{margin:0;color:var(--text-dim);font-size:13.5px;line-height:1.5;max-width:640px}
+.om-card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px;margin:0 0 14px}
+.om-card h3{margin:0;font-size:15px;color:var(--text);text-transform:none;letter-spacing:0}
+.om-ch{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.om-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px}.om-tabs button{border:1px solid var(--border);background:var(--panel);color:var(--text-dim);font:inherit;font-size:13px;font-weight:600;padding:7px 14px;border-radius:999px;cursor:pointer;min-height:36px}
+.om-tabs button.on{border-color:var(--gold);color:var(--text);background:var(--panel2)}.om-tabs button em{font-style:normal;opacity:.6;margin-left:4px;font-weight:500}
+.om-tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;border:1px solid var(--border);color:var(--text-dim);white-space:nowrap}
+.om-tag.paper{color:var(--amber);border-color:var(--amber)}.om-tag.ga{color:var(--bull);border-color:var(--bull)}.om-tag.gb{color:var(--gold);border-color:var(--gold)}.om-tag.gc{color:var(--text-dim)}
+.om-tag.live{color:var(--bull);border-color:transparent;background:color-mix(in srgb,var(--bull) 12%,transparent)}.om-tag.closed{color:var(--text-dim);background:var(--panel2);border-color:transparent}
+.om-meta{font-size:12px;color:var(--text-dim)}.om-empty{padding:18px;text-align:center;color:var(--text-dim);font-size:13.5px;line-height:1.5}.om-empty .btn-outline{margin-top:10px}
+.fx-list{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:14px;overflow:hidden;background:var(--panel)}
+.fx-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--border);padding:12px 14px;color:var(--text);font:inherit;cursor:pointer;min-height:56px}
+.fx-row:first-child{border-top:0}.fx-row:hover{background:var(--panel2)}.fx-row b{font-size:15px;font-weight:650;letter-spacing:.01em}.fx-row small{display:block;color:var(--text-dim);font-size:11.5px;margin-top:2px}
+.fx-px{text-align:right;font-variant-numeric:tabular-nums}.fx-px b{font-family:'IBM Plex Mono',ui-monospace,monospace;font-weight:600}
+.fx-nm{display:flex;gap:10px;align-items:center;min-width:0}.fx-dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--border)}.fx-dot.on{background:var(--bull);box-shadow:0 0 0 3px color-mix(in srgb,var(--bull) 18%,transparent)}.fx-dot.off{background:var(--text-dim);opacity:.5}
+.fx-closed{color:var(--amber);font-weight:600}
+.fx-row.stale .fx-px b{color:var(--text-dim)}
+.om-feed:empty{display:none}.om-grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.bf-rule{border:1px solid var(--border);border-radius:12px;padding:10px 12px;background:var(--panel2)}.bf-rule h4{margin:0 0 6px;font-size:13.5px;display:flex;gap:6px;align-items:center;flex-wrap:wrap;color:var(--text)}
+.bf-li{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;padding:5px 0;border-top:1px dashed var(--border)}.bf-li:first-of-type{border-top:0}.bf-li span{color:var(--text-dim)}
+.bf-act{font-size:12.5px;padding:6px 0;border-top:1px solid var(--border);display:flex;gap:8px}.bf-act time{color:var(--text-dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+.bf-call{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-top:1px dashed var(--border)}.bf-call:first-of-type{border-top:0}
+.bf-score{font-size:12px;color:var(--text-dim);margin-top:8px;line-height:1.5}
+.om-feed-sm .om-card{padding:14px}.bf-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:8px 0}.bf-mini div{background:var(--panel2);border-radius:10px;padding:8px 10px}.bf-mini b{display:block;font-size:18px;color:var(--text)}.bf-mini span{font-size:11px;color:var(--text-dim)}
+.om-about{margin:14px 0;border:1px solid var(--border);border-radius:14px;background:var(--panel)}.om-about>summary{cursor:pointer;list-style:none;padding:13px 16px;font-weight:600;font-size:13.5px;color:var(--text);display:flex;justify-content:space-between;align-items:center}
+.om-about>summary::-webkit-details-marker{display:none}.om-about>summary::after{content:'';width:7px;height:7px;border-right:1.6px solid var(--text-dim);border-bottom:1.6px solid var(--text-dim);transform:rotate(45deg);transition:transform .2s;margin-left:12px;flex:none}
+.om-about[open]>summary::after{transform:rotate(-135deg)}.om-about-body{padding:0 16px 14px;color:var(--text-dim);font-size:13px;line-height:1.6}.om-about-body p{margin:0 0 10px}.om-about-body b{color:var(--text)}
+</style>
+<script>/* ═══ OMEGA LIVE API CLIENT, FOREX BOARD, BOTS FEED (v6.5.112) ═══
+   Server: Settings > Data & Keys (shared with the Academy). Token: localStorage omega_live_token (a *_token store: never in a
+   backup, never restored from one). Twelve Data fallback: with NO Twelve Data key in this browser and a token set, a
+   time_series request is answered from {server}/fx/klines in Twelve Data's own shape, so every page that reads forex works
+   unchanged. Read-only: nothing here places an order. */
+(function(){
+  'use strict';
+  var SKEY = 'omega_academy_server', TOK = 'omega_live_token', DEF = 'https://omega-live-api.onrender.com', KEY = 'omega-live-api';
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]; }); }
+  function okServer(u){ return /^https:\/\/[a-z0-9.-]+(:\d+)?(\/[^\s"'<>]*)?$/i.test(u) || /^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?(\/[^\s"'<>]*)?$/i.test(u); }
+  function server(){ var u = ''; try{ u = localStorage.getItem(SKEY) || ''; }catch(e){} u = String(u).trim().replace(/\/+$/, ''); return okServer(u) ? u : DEF; }
+  function token(){ try{ return String(localStorage.getItem(TOK) || '').trim(); }catch(e){ return ''; } }
+  function on(){ return !!token(); }
+  var f0 = window.fetch;   // the fetch underneath this module (data guard and metals rewrite included)
+  function fetchT(url, opt, ms){ var c = typeof AbortController !== 'undefined' ? new AbortController() : null; opt = opt || {}; if(c) opt.signal = c.signal;
+    var t = setTimeout(function(){ try{ c && c.abort(); }catch(e){} }, ms || 30000);
+    return f0.call(window, url, opt).finally(function(){ clearTimeout(t); }); }
+  function clean(m){ return String(m || '').replace(/symbol/gi, 'pair').replace(/api key/gi, 'token').replace(/not found/gi, 'missing').replace(/limit/gi, 'cap').slice(0, 160); }
+  async function get(path, ms){
+    var h = { 'Accept':'application/json' }, t = token(); if(t) h.Authorization = 'Bearer ' + t;
+    var r; try{ r = await fetchT(server() + path, { headers:h }, ms || 30000); }
+    catch(e){ throw new Error(e && e.name === 'AbortError' ? 'the server did not answer in time (a sleeping server takes about a minute to wake)' : 'the server could not be reached'); }
+    var j = null; try{ j = await r.json(); }catch(e){}
+    if(r.status === 401) throw new Error('the Live API token is missing or wrong (Settings > Data & Keys)');
+    if(!r.ok) throw new Error((j && (j.detail || j.message)) ? clean(typeof j.detail === 'string' ? j.detail : JSON.stringify(j.detail)) : 'HTTP ' + r.status);
+    return j; }
+
+  // ── Twelve Data shape from the server's candles ──
+  var lastSrc = {}, kc = {};
+  function plain(sym){ return String(sym || '').toUpperCase().replace(/[^A-Z0-9]/g, ''); }
+  function tdPlan(iv){ iv = String(iv || '').toLowerCase(); var m;
+    if((m = /^(\d+)min$/.exec(iv))){ var n = +m[1]; if(n === 1 || n === 5 || n === 15) return { tf:n + 'm', k:1 }; if(n % 15 === 0) return { tf:'15m', k:n/15 }; if(n % 5 === 0) return { tf:'5m', k:n/5 }; return { tf:'1m', k:n }; }
+    if((m = /^(\d+)h$/.exec(iv))){ var h = +m[1]; if(h === 1) return { tf:'1h', k:1 }; if(h % 4 === 0) return { tf:'4h', k:h/4 }; return { tf:'1h', k:h }; }
+    if((m = /^(\d+)day$/.exec(iv))) return { tf:'1d', k:+m[1] };
+    if(/week$/.test(iv)) return { tf:'1d', k:'W' }; if(/month$/.test(iv)) return { tf:'1d', k:'M' };
+    return null; }
+  var STEP = { '1m':6e4, '5m':3e5, '15m':9e5, '1h':36e5, '4h':144e5, '1d':864e5 };
+  function bucket(t, p){ if(p.k === 'W'){ var d = new Date(t), day = (d.getUTCDay() + 6) % 7; return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - day); }
+    if(p.k === 'M'){ var e = new Date(t); return Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), 1); }
+    var w = STEP[p.tf] * p.k; return Math.floor(t / w) * w; }
+  function agg(rows, p){ if(p.k === 1) return rows; var out = [], cur = null;
+    rows.forEach(function(r){ var b = bucket(r.t, p); if(!cur || cur.t !== b){ cur = { t:b, o:r.o, h:r.h, l:r.l, c:r.c, v:r.v || 0 }; out.push(cur); } else { cur.h = Math.max(cur.h, r.h); cur.l = Math.min(cur.l, r.l); cur.c = r.c; cur.v += r.v || 0; } });
+    return out; }
+  function dt(t){ return new Date(t).toISOString().slice(0, 19).replace('T', ' '); }
+  async function tdSeries(sym, iv, size, from, to){
+    var p = tdPlan(iv), S = plain(sym); if(!p) return { status:'error', code:400, message:'Live API: interval ' + clean(iv) + ' is not offered' };
+    var mult = p.k === 'W' ? 7 : p.k === 'M' ? 31 : p.k, lim = Math.max(1, Math.min(5000, Math.ceil((+size || 300) * mult) + mult));
+    var ck = S + '|' + p.tf + '|' + lim, hit = kc[ck], j;
+    try{ if(hit && Date.now() - hit.t < 30000) j = hit.j; else { j = await get('/fx/klines?symbol=' + encodeURIComponent(S) + '&tf=' + p.tf + '&limit=' + lim, 45000); kc[ck] = { t:Date.now(), j:j }; } }
+    catch(e){ return { status:'error', code:0, message:'Live API: ' + clean(e && e.message || e) }; }
+    var rows = (j && Array.isArray(j.candles) ? j.candles : []).filter(function(c){ return c && c.o > 0 && c.h > 0 && c.l > 0 && c.c > 0 && isFinite(c.t); })
+      .map(function(c){ return { t:+c.t, o:+c.o, h:+c.h, l:+c.l, c:+c.c, v:+c.v || 0 }; }).sort(function(a, b){ return a.t - b.t; });
+    rows = agg(rows, p);
+    if(from) rows = rows.filter(function(r){ return r.t >= from; }); if(to) rows = rows.filter(function(r){ return r.t <= to; });
+    rows = rows.slice(-(+size || 300));
+    lastSrc[S] = String((j && j.source) || 'server');
+    if(!rows.length) return { status:'error', code:0, message:'Live API: no candles for ' + clean(sym) + ' at ' + clean(iv) + ' (the free source keeps 5 days of 1-5 minute bars, 60 days of 15-minute bars)' };
+    return { meta:{ symbol:sym, interval:iv, type:'Physical Currency', source:'OMEGA Live API: ' + lastSrc[S] }, status:'ok',
+      values:rows.slice().reverse().map(function(r){ return { datetime:dt(r.t), open:String(r.o), high:String(r.h), low:String(r.l), close:String(r.c), volume:String(r.v || 0) }; }) }; }
+  function sourceOf(sym){ var s = (lastSrc[plain(sym)] || 'server').replace(/^yahoo/i, 'Yahoo').replace(/^twelvedata/i, 'Twelve Data'); return /futures proxy/i.test(s) ? s.replace(/\(futures proxy ([^)]+)\)/i, '\u2014 futures $1 as a proxy, not spot') : s; }
+
+  // ── the fallback, at fetch level: only when this browser has no Twelve Data key of its own ──
+  if(f0 && !f0.__omegaLive){
+    var fl = function(input, init){ var u = typeof input === 'string' ? input : (input && input.url) || '';
+      if(/^https:\/\/api\.twelvedata\.com\/time_series\?/.test(u)){
+        try{ var url = new URL(u), k = url.searchParams.get('apikey') || '';
+          if((k === KEY || !k) && on()){
+            var sd = url.searchParams.get('start_date'), ed = url.searchParams.get('end_date');
+            return tdSeries(url.searchParams.get('symbol'), url.searchParams.get('interval'), +url.searchParams.get('outputsize') || 30,
+                sd ? Date.parse(sd.replace(' ', 'T') + 'Z') : 0, ed ? Date.parse(ed.replace(' ', 'T') + 'Z') : 0)
+              .then(function(js){ return new Response(JSON.stringify(js), { status:200, headers:{ 'content-type':'application/json' } }); }); }
+        }catch(e){}
+      }
+      return f0.apply(this, arguments); };
+    fl.__omegaLive = true; fl.__guard = !!f0.__guard; fl.__metals = !!f0.__metals; window.fetch = fl;
+  }
+
+  // ── the pair list (the server's /fx/list; this copy is used until it answers) ──
+  var LIST = { majors:['EURUSD','GBPUSD','USDJPY','USDCHF','AUDUSD','USDCAD','NZDUSD'],
+    minors:['EURGBP','EURJPY','EURCHF','EURAUD','EURCAD','EURNZD','GBPJPY','GBPCHF','GBPAUD','GBPCAD','GBPNZD','AUDJPY','AUDCHF','AUDCAD','AUDNZD','CADJPY','CADCHF','CHFJPY','NZDJPY','NZDCHF','NZDCAD'],
+    exotics:['USDMXN','USDZAR','USDTRY','USDSGD','USDHKD','USDNOK','USDSEK','USDDKK','USDPLN','USDHUF','USDCZK','USDCNH','USDTHB','EURTRY','EURNOK','EURSEK','EURPLN','USDTTD'],
+    metals:['XAUUSD','XAGUSD','XPTUSD','XPDUSD'] };
+  var GROUPS = [['majors','Majors'],['minors','Minors'],['exotics','Exotics'],['metals','Metals']];
+  var CUR = { EUR:'Euro', USD:'US dollar', GBP:'Pound', JPY:'Yen', CHF:'Swiss franc', AUD:'Australian dollar', CAD:'Canadian dollar', NZD:'NZ dollar', MXN:'Mexican peso', ZAR:'Rand', TRY:'Lira',
+    SGD:'Singapore dollar', HKD:'HK dollar', NOK:'Norwegian krone', SEK:'Swedish krona', DKK:'Danish krone', PLN:'Zloty', HUF:'Forint', CZK:'Koruna', CNH:'Yuan (offshore)', THB:'Baht', TTD:'TT dollar',
+    XAU:'Gold', XAG:'Silver', XPT:'Platinum', XPD:'Palladium' };
+  function nice(s){ return s.slice(0, 3) + '/' + s.slice(3); }
+  function names(s){ var a = s.slice(0, 3), b = s.slice(3); return /^X(AU|AG|PT|PD)$/.test(a) ? CUR[a] + ' in US dollars' : (CUR[a] || a) + ' / ' + (CUR[b] || b); }
+  function pip(s){ return /JPY$|HUF$/.test(s) ? 0.01 : 0.0001; }
+  function dec(s, p){ if(/^X(AU|PT|PD)/.test(s)) return 2; if(/^XAG/.test(s)) return 3; return p >= 100 ? 3 : p >= 10 ? 4 : 5; }
+  var FX = { group:'majors', data:{}, at:{}, err:'', busy:false, timer:null, listAt:0 };
+  try{ var g0 = localStorage.getItem('omega_fx_group'); if(LIST[g0]) FX.group = g0; }catch(e){}
+  async function loadList(){ if(Date.now() - FX.listAt < 6 * 36e5) return; FX.listAt = Date.now();
+    try{ var j = await get('/fx/list', 20000); ['majors','minors','exotics','metals'].forEach(function(k){ if(j && Array.isArray(j[k]) && j[k].length) LIST[k] = j[k].map(plain).filter(Boolean); }); }catch(e){} }
+  async function loadBoard(force){ if(FX.busy || !on()) { renderFx(); return; } var g = FX.group;
+    if(!force && FX.at[g] && Date.now() - FX.at[g] < 15000){ renderFx(); return; }
+    FX.busy = true; renderFx();
+    try{ loadList(); var j = await get('/fx/board?group=' + g, 40000); var m = {}; (j && j.quotes || []).forEach(function(q){ if(q && q.symbol) m[plain(q.symbol)] = q; });
+      FX.data[g] = m; FX.at[g] = Date.now(); FX.err = ''; }
+    catch(e){ FX.err = String(e && e.message || e); }
+    FX.busy = false; renderFx(); }
+  function hhmm(t){ if(!t) return '\u2014'; var d = new Date(t); return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ':' + ('0' + d.getSeconds()).slice(-2); }
+  function renderFx(){ var host = el('fxBoard'); if(!host) return; var g = FX.group, rows = LIST[g] || [], d = FX.data[g] || {};
+    var tabs = '<div class="om-tabs" role="tablist">' + GROUPS.map(function(x){ return '<button type="button" role="tab" data-fxg="' + x[0] + '" class="' + (x[0] === g ? 'on' : '') + '" aria-selected="' + (x[0] === g) + '">' + x[1] + '<em>' + (LIST[x[0]] || []).length + '</em></button>'; }).join('') + '</div>';
+    var status;
+    if(!on()) status = '<div class="om-card om-empty"><b style="color:var(--text)">Connect the OMEGA Live API to see live prices.</b><br>Add the token in Settings &rsaquo; Data &amp; Keys. The pairs below still open on Charts.<br><button class="btn-outline" type="button" data-fxset="1">Open Settings</button></div>';
+    else status = '<p class="om-meta" id="fxStatus" style="margin:0 0 8px;">' + (FX.busy ? 'Updating\u2026 ' : '') + (FX.at[g] ? 'Swissquote live quotes \u00b7 updated ' + hhmm(FX.at[g]) : (FX.busy ? '' : 'Not loaded yet.')) + (FX.err ? ' <span style="color:var(--bear)">\u00b7 ' + esc(FX.err) + '</span>' : '') + '</p>';
+    var list = '<div class="fx-list">' + rows.map(function(s){ var q = d[s], p = q && +q.price, st = q && q.stale, sp = q && q.bid != null && q.ask != null ? (+q.ask - +q.bid) : null, metal = /^X(AU|AG|PT|PD)/.test(s);
+        var spT = sp == null ? '' : metal ? 'spread $' + sp.toFixed(s === 'XAGUSD' ? 3 : 2) : 'spread ' + (sp / pip(s)).toFixed(1) + ' pips';
+        var dot = '<i class="fx-dot' + (!q ? '' : st ? ' off' : ' on') + '" title="' + (!q ? 'no quote' : st ? 'market closed' : 'live') + '"></i>';
+        return '<button type="button" class="fx-row' + (st ? ' stale' : '') + '" data-fx="' + s + '"><div class="fx-nm">' + dot + '<div><b>' + nice(s) + '</b><small>' + esc(names(s)) + '</small></div></div>' +
+          '<div class="fx-px"><b>' + (p > 0 ? p.toFixed(dec(s, p)) : '\u2014') + '</b><small>' + (st ? '<span class="fx-closed">Market closed</span>' : q && q.bid != null ? esc(spT) : (on() ? '' : 'tap to chart')) + '</small></div></button>'; }).join('') + '</div>';
+    host.innerHTML = tabs + status + list;
+    Array.prototype.forEach.call(host.querySelectorAll('[data-fxg]'), function(b){ b.onclick = function(){ FX.group = b.getAttribute('data-fxg'); try{ localStorage.setItem('omega_fx_group', FX.group); }catch(e){} renderFx(); loadBoard(false); }; });
+    Array.prototype.forEach.call(host.querySelectorAll('[data-fx]'), function(b){ b.onclick = function(){ openOnCharts(b.getAttribute('data-fx')); }; });
+    var st = host.querySelector('[data-fxset]'); if(st) st.onclick = openSettings; }
+  function openSettings(){ window.navigate('settings'); try{ window.switchSettings && window.switchSettings('data'); }catch(e){} setTimeout(function(){ var i = el('liveTokenInput'); if(i){ i.scrollIntoView({ block:'center' }); try{ i.focus(); }catch(e){} } }, 120); }
+  function openOnCharts(s){ var sym = nice(plain(s)), metal = /^X(AU|AG|PT|PD)/.test(sym); window.navigate('analysis');
+    var sel = el('symbol'); if(!sel) return;
+    if(!Array.prototype.some.call(sel.options, function(o){ return o.value === sym; })){ var grp = Array.prototype.filter.call(sel.querySelectorAll('optgroup'), function(o){ return metal ? /gold|silver/i.test(o.label) : /forex/i.test(o.label); })[0] || sel;
+      var o = document.createElement('option'); o.value = sym; o.textContent = sym; grp.appendChild(o); }
+    sel.value = sym; try{ sel.dispatchEvent(new Event('change')); }catch(e){}
+    var ac = el('assetClass'); if(ac){ var want = metal ? 'metals' : 'forex'; if(ac.value !== want){ ac.value = want; try{ ac.dispatchEvent(new Event('change')); }catch(e){} sel.value = sym; try{ sel.dispatchEvent(new Event('change')); }catch(e){} } }
+    setTimeout(function(){ var d = el('anDeep') || sel; try{ d.scrollIntoView({ block:'start' }); }catch(e){} }, 60);
+    var hasKey = false; try{ hasKey = !!localStorage.getItem('omega_td_key') || !!((el('apikey') || {}).value); }catch(e){}
+    if((hasKey || on() || sym === 'XAU/USD') && typeof window.runAnalysis === 'function') setTimeout(function(){ try{ window.runAnalysis(); }catch(e){} }, 150); }
+
+  // ── bots feed ──
+  var RULES = { climax_a:['Climax reversal','A'], panic_h1:['Panic bounce H1','B'], panic_h3:['Panic bounce H3, market-wide','B'], panic5m_watch:['Panic bounce 5m','C'],
+    panic15m_watch:['Panic bounce 15m','C'], breadth15m_watch:['Market-wide panic 15m','C'], upscout_watch:['UpScout top-2% longs','C'] };
+  function rule(id){ var r = RULES[id]; if(r) return { name:r[0], g:r[1] }; return { name:String(id || '?').replace(/_/g, ' '), g:/watch/.test(id) ? 'C' : '?' }; }
+  function gradeTag(g){ return '<span class="om-tag g' + String(g).toLowerCase() + '">' + (g === 'C' ? 'C \u00b7 watch list, paper only' : g === 'A' ? 'Grade A' : g === 'B' ? 'Grade B' : 'ungraded') + '</span>'; }
+  var BF = { j:null, at:0, err:'', busy:false };
+  function coin(s){ return String(s || '').replace(/USDT$/, ''); }
+  function num(x, d){ x = +x; if(!isFinite(x)) return '\u2014'; var a = Math.abs(x); return x.toFixed(d != null ? d : a >= 1000 ? 1 : a >= 10 ? 2 : a >= 1 ? 3 : a >= 0.01 ? 5 : 7); }
+  function pct(x){ x = +x; return isFinite(x) ? Math.round(x * 1000) / 10 + '%' : '\u2014'; }
+  function when(t){ var d = new Date(t); if(!isFinite(d)) return '\u2014'; var s = Math.round((Date.now() - d) / 6e4), f = s < 0, a = Math.abs(s);
+    var x = a < 1 ? 'now' : a < 90 ? a + ' min' : a < 2880 ? Math.round(a / 60) + ' h' : Math.round(a / 1440) + ' d'; return a < 1 ? x : f ? 'in ' + x : x + ' ago'; }
+  function hm(t){ var d = new Date(t); return isFinite(d) ? ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) : '\u2014'; }
+  async function loadFeed(force){ if(BF.busy || !on()){ renderFeeds(); return; } if(!force && BF.at && Date.now() - BF.at < 110000){ renderFeeds(); return; }
+    BF.busy = true; renderFeeds();
+    try{ BF.j = await get('/bots/feed', 40000); BF.at = Date.now(); BF.err = ''; }catch(e){ BF.err = String(e && e.message || e); }
+    BF.busy = false; renderFeeds(); }
+  function byRule(pb){ var m = {}; function add(kind, x){ var k = x.strategy || '?'; (m[k] = m[k] || { open:[], rest:[] })[kind].push(x); }
+    (pb.open_positions || pb.open || []).forEach(function(x){ add('open', x); }); (pb.resting_orders || pb.resting || []).forEach(function(x){ add('rest', x); });
+    Object.keys(pb.approved || {}).forEach(function(k){ m[k] = m[k] || { open:[], rest:[] }; }); return m; }
+  function actions(pb){ var L = (pb.recent_log || pb.recent_actions || []).slice(-40).reverse(), out = [];
+    L.forEach(function(a){ var prev = out[out.length - 1], why = (a.reasons && a.reasons.join('; ')) || a.why || a.reason || a.exit_reason || '';
+      if(prev && a.event === 'refused' && prev.ev === 'refused' && prev.why === why){ prev.n++; prev.syms.push(coin(a.sym)); return; }
+      out.push({ t:a.t || a.time, ev:a.event || a.kind || '?', r:a.rule || a.strategy, sym:coin(a.sym), why:why, n:1, syms:[coin(a.sym)], px:a.price || a.entry || a.exit }); });
+    return out.slice(0, 8); }
+  function scoutBlock(name, sc){ if(!sc) return '<div class="bf-rule"><h4>' + esc(name) + '</h4><p class="om-meta" style="margin:0">No forecasts yet.</p></div>';
+    var L = (sc.latest || []).map(function(r){ return { s:coin(r.sym), u:+r.p_up_move, d:+r.p_down_move }; });
+    var up = L.slice().sort(function(a, b){ return b.u - a.u; }).slice(0, 3), dn = L.slice().sort(function(a, b){ return b.d - a.d; }).slice(0, 3);
+    var uf = sc.up_flags || {}, df = sc.down_flags || {};
+    return '<div class="bf-rule"><h4>' + esc(name) + ' <span class="om-tag">forecast</span></h4><p class="om-meta" style="margin:0 0 6px">Latest reading ' + esc(when(sc.latest_time)) + '</p>' +
+      '<div class="om-meta" style="margin-top:4px">Strongest up</div>' + up.map(function(x){ return '<div class="bf-call"><span>' + esc(x.s) + '</span><b style="color:var(--bull)">' + pct(x.u) + '</b></div>'; }).join('') +
+      '<div class="om-meta" style="margin-top:6px">Strongest down</div>' + dn.map(function(x){ return '<div class="bf-call"><span>' + esc(x.s) + '</span><b style="color:var(--bear)">' + pct(x.d) + '</b></div>'; }).join('') +
+      '<p class="bf-score">Forward record: ' + (sc.scored || 0) + ' of ' + (sc.predictions || 0) + ' forecasts scored. Up calls ' + (uf.flagged || 0) + ', hit ' + (uf.hit_rate == null ? '\u2014' : pct(uf.hit_rate)) +
+      ' vs base rate ' + (sc.base_rate_up == null ? '\u2014' : pct(sc.base_rate_up)) + '. Down calls ' + (df.flagged || 0) + ', hit ' + (df.hit_rate == null ? '\u2014' : pct(df.hit_rate)) + '.</p></div>'; }
+  function feedHead(small){ return '<div class="om-ch"><h3>' + (small ? '24/7 bots' : 'The 24/7 bots, live') + '</h3><span class="om-tag paper">Paper \u00b7 forecasts</span></div>'; }
+  function feedStatus(){ var j = BF.j; return '<p class="om-meta" style="margin:0 0 10px;">' + (BF.busy ? 'Updating\u2026 ' : '') + (BF.at ? 'Last updated ' + hm(BF.at) + (j && j.source ? ' \u00b7 from the ' + esc(j.source) : '') : (BF.busy ? '' : 'Not loaded yet.')) + (BF.err ? ' <span style="color:var(--bear)">\u00b7 ' + esc(BF.err) + '</span>' : '') + '</p>'; }
+  function renderFeeds(){ var big = el('botsFeed'), small = el('homeBotsFeed');
+    if(big){ if(!on()) big.innerHTML = '<div class="om-card">' + feedHead(false) + '<p class="om-meta" style="margin:0">The paper bot and the scouts run 24/7 in the cloud (and on the laptop Station). Add the Live API token in Settings &rsaquo; Data &amp; Keys to see their positions, orders and forecasts here.</p><div class="journal-actions" style="margin-top:10px"><button class="btn-outline" type="button" data-bfset="1">Open Settings</button></div></div>';
+      else { var j = BF.j || {}, pb = j.paper_bot || {}, R = byRule(pb), ids = Object.keys(R).sort(function(a, b){ return (rule(a).g + a).localeCompare(rule(b).g + b); });
+        var idle = ids.filter(function(id){ return !R[id].open.length && !R[id].rest.length; }); ids = ids.filter(function(id){ return idle.indexOf(id) < 0; });
+        var rules = ids.map(function(id){ var r = rule(id), x = R[id];
+          return '<div class="bf-rule"><h4>' + esc(r.name) + ' ' + gradeTag(r.g) + '</h4>' +
+            (x.open.length ? x.open.map(function(p){ return '<div class="bf-li"><b>' + esc(coin(p.sym)) + ' ' + esc(p.side || '') + '</b><span>open at ' + num(p.entry) + ' \u00b7 stop ' + num(p.stop_price) + (p.exit_due ? ' \u00b7 exits ' + esc(when(p.exit_due)) : '') + '</span></div>'; }).join('') : '') +
+            (x.rest.length ? x.rest.map(function(o){ return '<div class="bf-li"><b>' + esc(coin(o.sym)) + ' ' + esc(o.side || '') + '</b><span>resting ' + esc(o.kind || 'order') + ' ' + num(o.price) + ' \u00b7 until ' + esc(hm(o.expires_at)) + '</span></div>'; }).join('') : '') +
+            (!x.open.length && !x.rest.length ? '<p class="om-meta" style="margin:0">Nothing open or resting.</p>' : '') + '</div>'; }).join('');
+        var acts = actions(pb).map(function(a){ return '<div class="bf-act"><time>' + esc(hm(a.t)) + '</time><span><b>' + esc(a.ev) + '</b> ' + esc(a.n > 1 ? a.n + '\u00d7 (' + a.syms.slice(0, 4).join(', ') + (a.n > 4 ? '\u2026' : '') + ')' : a.sym) + (a.r ? ' \u00b7 ' + esc(rule(a.r).name) : '') + (a.why ? ' \u2014 <span class="om-meta">' + esc(String(a.why).slice(0, 90)) + '</span>' : '') + '</span></div>'; }).join('');
+        big.innerHTML = '<div class="om-card">' + feedHead(false) + feedStatus() +
+          (BF.j ? '<div class="om-meta" style="margin:0 0 8px">Paper bot: ' + (pb.open_positions || []).length + ' open, ' + (pb.resting_orders || []).length + ' resting, ' + (+pb.closed_trades || 0) + ' closed' + (pb.today_pnl_paper != null ? ' \u00b7 today ' + num(pb.today_pnl_paper, 2) + ' USDT (paper)' : '') + (pb.kill_switch ? ' \u00b7 <b style="color:var(--bear)">kill switch on</b>' : '') + '</div>' +
+            '<div class="om-grid2">' + (rules || '<p class="om-meta" style="margin:0">No open positions or resting orders right now.</p>') + '</div>' +
+            (idle.length ? '<p class="om-meta" style="margin:10px 0 0">Waiting for a signal: ' + idle.map(function(id){ var r = rule(id); return esc(r.name) + ' <b>(' + r.g + ')</b>'; }).join(', ') + '.</p>' : '') +
+            '<details class="om-about" style="margin:12px 0 0"><summary>Recent actions</summary><div class="om-about-body">' + (acts || 'None yet.') + '</div></details>' +
+            '<h3 style="margin:16px 0 8px">Scouts</h3><div class="om-grid2">' + scoutBlock('Hourly scouts (24 h ahead)', j.scouts_hourly) + scoutBlock('Fast scouts (4 h ahead)', j.scouts_fast) + '</div>' +
+            '<p class="om-meta" style="margin:10px 0 0">' + esc(j.note || 'Paper records and forecasts; information only, never an order.') + ' Grade C rules are a watch list: they failed their final test and trade on paper only. The scouts failed as trading rules (E81, E82) and are scored forward.</p>' : '') + '</div>'; } }
+    if(small){ if(!on()) small.innerHTML = ''; else { var jj = BF.j || {}, p2 = jj.paper_bot || {}, sh = jj.scouts_hourly, top = sh && (sh.latest || []).slice().sort(function(a, b){ return +b.p_up_move - +a.p_up_move; })[0];
+        small.innerHTML = '<div class="om-card">' + feedHead(true) + feedStatus() + (BF.j ? '<div class="bf-mini"><div><b>' + (p2.open_positions || []).length + '</b><span>open (paper)</span></div><div><b>' + (p2.resting_orders || []).length + '</b><span>resting orders</span></div><div><b>' + (top ? esc(coin(top.sym)) : '\u2014') + '</b><span>' + (top ? 'strongest up call ' + pct(top.p_up_move) : 'no forecast') + '</span></div></div>' : '') +
+          '<div class="journal-actions"><button class="btn-ghost" type="button" onclick="navigate(\'bot\')">Open Bots</button></div></div>'; } }
+    Array.prototype.forEach.call(document.querySelectorAll('[data-bfset]'), function(b){ b.onclick = openSettings; }); }
+
+  // ── settings ──
+  function wireSettings(){ var inp = el('liveTokenInput'), sv = el('liveTokenSave'), ts = el('liveTokenTest'), cl = el('liveTokenClear'), msg = el('liveTokenMsg'); if(!inp) return;
+    inp.value = token() ? '\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022' : ''; inp.setAttribute('data-masked', token() ? '1' : '');
+    inp.addEventListener('focus', function(){ if(inp.getAttribute('data-masked')){ inp.value = ''; inp.setAttribute('data-masked', ''); } });
+    function say(t, bad){ if(msg){ msg.textContent = t; msg.style.color = bad ? 'var(--bear)' : ''; } }
+    if(sv) sv.onclick = function(){ var v = String(inp.value || '').trim(); if(inp.getAttribute('data-masked')){ say('The saved token is unchanged.'); return; }
+      if(!v){ say('Paste the token first.', true); return; } if(v.length < 8 || /\s/.test(v)){ say('That does not look like a token (no spaces, at least 8 characters).', true); return; }
+      try{ localStorage.setItem(TOK, v); }catch(e){} inp.value = '\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022'; inp.setAttribute('data-masked', '1'); say('Saved on this device. Forex and the bots feed now use ' + server() + '.'); FX.at = {}; BF.at = 0; kc = {}; };
+    if(cl) cl.onclick = function(){ try{ localStorage.removeItem(TOK); }catch(e){} inp.value = ''; inp.setAttribute('data-masked', ''); say('Token removed from this device.'); renderFx(); renderFeeds(); };
+    if(ts) ts.onclick = async function(){ say('Testing ' + server() + '\u2026 (a sleeping server takes about a minute to wake)');
+      try{ var h = await get('/health', 70000); var extra = '';
+        if(on()){ try{ var q = await get('/fx/quote?symbol=EURUSD', 30000); extra = ' Token accepted: EUR/USD ' + (+q.price).toFixed(5) + (q.stale ? ' (market closed)' : '') + '.'; }catch(e){ extra = ' ' + e.message.charAt(0).toUpperCase() + e.message.slice(1) + '.'; } }
+        else extra = ' No token saved yet: forex and the bots feed need one.';
+        say('Server answers (version ' + esc(h && h.version || '?') + (h && h.twelvedata_key ? ', Twelve Data on the server' : ', candles from Yahoo') + ').' + extra, /missing|wrong|could not/.test(extra)); }
+      catch(e){ say('No answer: ' + (e && e.message || e), true); } }; }
+
+  // ── when the pages show ──
+  function active(p){ var e = el('page-' + p); return !!(e && e.classList.contains('active')); }
+  var prevAfter = window.__omegaAfterNav;
+  window.__omegaAfterNav = function(p){ try{ if(typeof prevAfter === 'function') prevAfter(p); }catch(e){}
+    if(p === 'forex') setTimeout(function(){ renderFx(); loadBoard(false); }, 20);
+    if(p === 'bot' || p === 'command') setTimeout(function(){ renderFeeds(); loadFeed(false); }, 40); };
+  function tick(){ if(document.hidden) return; if(active('forex')) loadBoard(true); }
+  function tickFeed(){ if(document.hidden) return; if(active('bot') || active('command')) loadFeed(true); }
+  function boot(){ wireSettings(); renderFx(); renderFeeds(); if(active('forex')) loadBoard(false); if(active('bot') || active('command')) loadFeed(false);
+    setInterval(tick, 20000); setInterval(tickFeed, 120000);
+    document.addEventListener('visibilitychange', function(){ if(!document.hidden){ if(active('forex')) loadBoard(false); if(active('bot') || active('command')) loadFeed(false); } }); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else setTimeout(boot, 0);
+  window.OMEGA_LAPI = { KEY:KEY, on:on, server:server, token:function(){ return !!token(); }, get:get, tdSeries:tdSeries, tdPlan:tdPlan, sourceOf:sourceOf,
+    fx:{ list:function(){ return LIST; }, state:function(){ return FX; }, load:loadBoard, render:renderFx, open:openOnCharts },
+    feed:{ state:function(){ return BF; }, load:loadFeed, render:renderFeeds, actions:actions, rule:rule } };
+})();
+</script>
+<style id="aboutCss">/* v6.5.113: About OMEGA (theme variables only) */
+.ab-hero{margin:4px 0 16px}.ab-kicker{margin:0 0 2px!important;font-size:11px!important;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)!important}
+.ab-list{display:flex;flex-direction:column;gap:10px}
+.ab-sec{background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.ab-sec>summary{cursor:pointer;list-style:none;padding:15px 18px;font-weight:600;font-size:15px;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:48px;box-sizing:border-box}
+.ab-sec>summary::-webkit-details-marker{display:none}
+.ab-sec>summary::after{content:'';flex:none;width:8px;height:8px;border-right:1.6px solid var(--text-dim);border-bottom:1.6px solid var(--text-dim);transform:rotate(45deg);transition:transform .2s;margin-right:4px}
+.ab-sec[open]>summary::after{transform:rotate(-135deg)}.ab-sec[open]>summary{border-bottom:1px solid var(--border)}
+.ab-body{padding:14px 18px 16px;font-size:14px;line-height:1.65;color:var(--text)}.ab-body p{margin:0 0 10px;color:var(--text-dim)}.ab-body p b{color:var(--text)}
+.ab-body h4{margin:16px 0 6px;font-size:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}.ab-body h4:first-of-type{margin-top:4px}
+.ab-body code{font-size:12.5px;background:var(--panel2);padding:1px 6px;border-radius:6px;overflow-wrap:anywhere}
+.ab-dl{margin:0;display:grid;grid-template-columns:minmax(120px,170px) 1fr;gap:8px 16px}.ab-dl dt{font-weight:600;color:var(--text);font-size:13.5px}.ab-dl dd{margin:0;color:var(--text-dim);font-size:13.5px}
+@media (max-width:560px){.ab-dl{grid-template-columns:1fr;gap:2px}.ab-dl dd{margin-bottom:10px}}
+.ab-warn{border-left:3px solid var(--amber);padding-left:10px}.ab-ver{text-align:center;margin:18px 0 8px}
+</style>
+<script>/* ═══ HEAVEN helpers (v6.5.113): light charts in the Heaven theme; the About page's version line ═══ */
+(function(){
+  'use strict';
+  function heaven(){ return document.documentElement.getAttribute('data-theme') === 'heaven'; }
+  var LIGHT = { layout:{ background:{ type:'solid', color:'#FFFFFF' }, textColor:'#586274' }, grid:{ vertLines:{ color:'#EEF1F6' }, horzLines:{ color:'#EEF1F6' } },
+    rightPriceScale:{ borderColor:'#E3E7EF' }, leftPriceScale:{ borderColor:'#E3E7EF' }, timeScale:{ borderColor:'#E3E7EF' }, crosshair:{ vertLine:{ color:'#B9C1CF' }, horzLine:{ color:'#B9C1CF' } } };
+  var DARK = { layout:{ background:{ type:'solid', color:'#0A0D12' }, textColor:'#8995A8' }, grid:{ vertLines:{ color:'#171C24' }, horzLines:{ color:'#171C24' } },
+    rightPriceScale:{ borderColor:'#212834' }, leftPriceScale:{ borderColor:'#212834' }, timeScale:{ borderColor:'#212834' } };
+  var made = [];
+  function paint(c){ try{ c.applyOptions(heaven() ? LIGHT : DARK); }catch(e){} }
+  var LW = window.LightweightCharts;
+  if(LW && typeof LW.createChart === 'function' && !LW.createChart.__heaven){
+    var orig = LW.createChart; var wrapped = function(){ var c = orig.apply(this, arguments); try{ made.push(c); if(heaven()) paint(c); }catch(e){} return c; };
+    wrapped.__heaven = true; try{ LW.createChart = wrapped; }catch(e){ try{ window.LightweightCharts = Object.assign({}, LW, { createChart:wrapped }); }catch(x){} } }
+  function charts(){ var all = made.slice(); try{ (window.OMEGA_CHARTUX ? window.OMEGA_CHARTUX.charts() : []).forEach(function(x){ if(x && x.chart && all.indexOf(x.chart) < 0) all.push(x.chart); }); }catch(e){}
+    all.forEach(paint); }
+  function version(){ var v = document.getElementById('aboutVersion'), b = document.querySelector('.mh-brand small'); if(v && b) v.textContent = 'OMEGA ' + b.textContent + ' · information only, never an order'; }
+  function boot(){ version(); if(heaven()) setTimeout(charts, 50); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else setTimeout(boot, 0);
+  window.addEventListener('load', function(){ if(heaven()) setTimeout(charts, 300); });
+  window.OMEGA_HEAVEN = { charts:charts, on:heaven };
+})();
+</script>
+<style id="tidyCss">/* v6.5.114: folds, clamps and Heaven polish (theme variables only) */
+details.hv-fold>summary{list-style:none;cursor:pointer}details.hv-fold>summary::-webkit-details-marker{display:none}
+details.cmd-card.hv-fold>summary.cmd-card-head{margin-bottom:0}details.cmd-card.hv-fold[open]>summary.cmd-card-head{margin-bottom:10px}
+details.hv-fold>summary h3::after,.hv-sum::after{content:'';display:inline-block;width:7px;height:7px;border-right:1.6px solid var(--text-dim);border-bottom:1.6px solid var(--text-dim);transform:rotate(45deg) translateY(-3px);margin-left:10px;transition:transform .2s}
+details.hv-fold[open]>summary h3::after,details.hv-fold[open]>.hv-sum::after{transform:rotate(-135deg) translateY(-1px)}
+.hv-sum{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px;font-weight:650;font-size:15px;color:var(--text);padding:2px 0;min-height:40px}.hv-sum span{font-weight:400;font-size:12.5px;color:var(--text-dim);order:2;flex-basis:100%}.hv-sum::after{order:1;margin-left:auto}
+details.wl-room.hv-fold:not([open]){padding-bottom:12px}details.wl-room.hv-fold[open]>.hv-sum{margin-bottom:12px}
+.hv-box{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:10px 16px;margin:0 0 14px}.hv-box[open]{padding-bottom:16px}
+.hv-clamp:not(.hv-self)>:first-child,.hv-self{position:relative}.hv-clamp:not(.hv-self):not(.hv-open)>:first-child,.hv-self:not(.hv-open){max-height:430px;overflow:hidden;box-sizing:border-box}
+.hv-clamp:not(.hv-self):not(.hv-open)>:first-child::after,.hv-self:not(.hv-open)::after{content:'Show the full evidence';position:absolute;left:0;right:0;bottom:0;height:86px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px;box-sizing:border-box;background:linear-gradient(to bottom,transparent,var(--panel) 62%);font-weight:600;font-size:13px;color:var(--gold);cursor:pointer;z-index:2}
+.hv-clamp:not(.hv-self).hv-open>:first-child::after,.hv-self.hv-open::after{content:'Show less';display:block;text-align:center;padding:10px 0 2px;font-weight:600;font-size:13px;color:var(--gold);cursor:pointer}
+html[data-theme="heaven"] .hv-dash{display:none}
+html[data-theme="heaven"] .ost-line,html[data-theme="heaven"] .ost-sheet{background:#FFFFFF}
+html[data-theme="heaven"] .omega-bottomnav{background:rgba(255,255,255,.98)}
+html[data-theme="heaven"] .page.active>:first-child{margin-top:12px}
+html[data-theme="heaven"] .ac-buy[disabled]{background:#EEF1F6;border-color:#E3E7EF;color:#586274;opacity:1;filter:none}
+html[data-theme="heaven"] .cmd-card.hv-fold:not([open]){padding-top:12px;padding-bottom:12px}
+</style>
+<script>/* ═══ TIDY (v6.5.114): long evidence clamped to its first screen, the text kept in the page ═══ */
+(function(){
+  'use strict';
+  var IDS = ['climaxSigBody', 'panicSigBody', 'dplanSigBody', 'creedReality'];
+  function clamp(id){ var h = document.getElementById(id); if(!h || h.__hvClamp) return; h.__hvClamp = true; h.classList.add('hv-clamp'); if(h.classList.contains('card')) h.classList.add('hv-self');
+    h.addEventListener('click', function(e){ var r = h.getBoundingClientRect(), t = e.target;
+      if(t && t.closest && t.closest('a,button,input,select,textarea,summary,label')) return;
+      if(!h.classList.contains('hv-open') ? e.clientY > r.bottom - 90 : e.clientY > r.bottom - 36){ h.classList.toggle('hv-open'); if(!h.classList.contains('hv-open')) try{ h.scrollIntoView({ block:'start' }); }catch(x){} } }); }
+  function boot(){ IDS.forEach(clamp); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else setTimeout(boot, 0);
+  window.OMEGA_TIDY = { clamp:clamp, IDS:IDS };
 })();
 </script>
 </body>

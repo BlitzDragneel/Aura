@@ -4,7 +4,8 @@
 const fs = require('fs'), path = require('path'); const FILE = process.argv[2], html = fs.readFileSync(FILE, 'utf8');
 let pass = 0, fail = 0; function ok(c, msg, x){ if(c){ pass++; console.log('ok   ' + msg); } else { fail++; console.log('FAIL ' + msg + (x !== undefined ? ' — ' + JSON.stringify(x).slice(0, 400) : '')); } }
 ok(/v6\.5\.1(0[89]|[1-9]\d) · build/.test(html), 'build v6.5.108 or later');
-ok(/<option value="neonglow" selected>Neon Glow \(default\)<\/option>/.test(html) && /<option value="dark">Dark \(classic\)<\/option>/.test(html), 'Neon Glow listed first and selected; Dark still offered');
+const HEAVEN = /<option value="heaven" selected>Heaven \(default\)<\/option>/.test(html);   // v6.5.113: Heaven became the default; Neon Glow stays selectable
+ok((HEAVEN ? /<option value="neonglow">Neon Glow<\/option>/.test(html) : /<option value="neonglow" selected>Neon Glow \(default\)<\/option>/.test(html)) && /<option value="dark">Dark \(classic\)<\/option>/.test(html), HEAVEN ? 'Neon Glow still offered (Heaven is the default from v6.5.113); Dark still offered' : 'Neon Glow listed first and selected; Dark still offered');
 ok(/html\[data-theme="neonglow"\]\{/.test(html) && /@keyframes omegaNeonPulse/.test(html) && /prefers-reduced-motion/.test(html), 'theme CSS present with reduced-motion fallback');
 (async () => { const pw = require('playwright'), b = await pw.chromium.launch();
   async function open(prep){ const ctx = await b.newContext({ viewport:{ width:412, height:915 } });
@@ -17,7 +18,8 @@ ok(/html\[data-theme="neonglow"\]\{/.test(html) && /@keyframes omegaNeonPulse/.t
   let { pg, errs, ctx } = await open();
   const fresh = await pg.evaluate(() => ({ t:document.documentElement.getAttribute('data-theme'), gold:getComputedStyle(document.documentElement).getPropertyValue('--gold').trim(),
     sh:getComputedStyle(document.querySelector('.card') || document.body).boxShadow, flag:localStorage.getItem('omega_neon108') }));
-  ok(fresh.t === 'neonglow' && fresh.gold.toUpperCase() === '#22F3FF' && fresh.sh !== 'none' && fresh.flag === '1', 'fresh browser: Neon Glow on, cyan accent, cards glow', fresh);
+  if(HEAVEN) ok(fresh.t === 'heaven' && fresh.flag === '1', 'fresh browser: the default theme (Heaven from v6.5.113) is on', fresh);
+  else ok(fresh.t === 'neonglow' && fresh.gold.toUpperCase() === '#22F3FF' && fresh.sh !== 'none' && fresh.flag === '1', 'fresh browser: Neon Glow on, cyan accent, cards glow', fresh);
   await pg.evaluate(() => navigate('creed')); await pg.waitForTimeout(1500);
   ok(!errs.length, 'no page errors on load and on the CREED desk', errs); await ctx.close();
   // old default saved -> switched once
