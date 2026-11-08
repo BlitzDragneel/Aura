@@ -2047,7 +2047,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   <!-- Mobile header (logo + hamburger) -->
   <header class="mobile-header">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.110 · build 2026-11-08 11:30 UTC</small></div>
+    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.111 · build 2026-11-08 15:43 UTC</small></div>
   </header>
 
   <!-- Sidebar -->
@@ -2451,11 +2451,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="journal-actions" style="margin:0 0 10px;"><button class="btn-outline" id="councilGo" type="button">Ask the council about this market</button></div>
         <div id="councilBox"></div>
       </section>
-      <section class="bd-card"><h3>Hypothesis registry — every idea, its ID and status</h3>
-        <div class="journal-actions" style="margin:0 0 10px;"><button class="btn-outline" id="rpExport" type="button">Export research package (for Claude)</button><span class="hint" id="rpMsg" style="margin:0;"></span></div>
-        <div id="hypRegistry"></div>
-        <p class="hint" style="margin:8px 0 0;">IDs never change, and failed ideas stay on record so they are never quietly revived. The research package holds every hypothesis with its results, stress tests and history, the data and assumptions behind them (lineage), what OMEGA does not know, and open questions — no keys or personal data.</p>
-      </section>
+      <p class="hint" style="margin:0 0 12px;">Research ideas, tests and their verdicts now live on the <a href="https://omega-board.onrender.com" target="_blank" rel="noopener">progress board</a>.</p>
       <section class="bd-card"><h3>Evidence ledger — every conclusion, auditable</h3><div id="rzLedger"></div></section>
       <div class="jv-2">
         <section class="bd-card"><h3>Prediction scorecard — written down before the outcome</h3>
@@ -11756,7 +11752,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   // surviving a reload, repeats folded into one line), with what to do, and shown with the
   // self-test and storage state under Settings → Diagnostics. Anything that looks like a key or
   // token is blanked before it is stored.
-  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.110 \u00b7 build 2026-11-08 11:30 UTC';   // rewritten by the build stamp on every release
+  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.111 \u00b7 build 2026-11-08 15:43 UTC';   // rewritten by the build stamp on every release
   function redact(s){ return String(s==null?'':s).replace(/((?:api_?key|apikey|key|token|secret|auth|password)=)[^&\s"']+/gi,'$1…').replace(/sk-ant-[A-Za-z0-9_\-]+/g,'sk-ant-…').replace(/Bearer\s+[A-Za-z0-9._\-]+/g,'Bearer …').slice(0,300); }
   function fixFor(msg){ var m = String(msg);
     if(/quota|QuotaExceeded/i.test(m)) return 'Storage full: old simulated journal rows move to the archive automatically; export a backup if this repeats.';
@@ -23632,7 +23628,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   var LAST_KEY = 'omega_research_pkg_last_v1';
   function L(){ return window.OMEGA_LAB; }
-  var BUILD = 'v6.5.110 \u00b7 build 2026-11-08 11:30 UTC';   // rewritten by the build stamp on every release
+  var BUILD = 'v6.5.111 \u00b7 build 2026-11-08 15:43 UTC';   // rewritten by the build stamp on every release
   function buildStamp(){ return BUILD; }
   function status(row){
     if(!row) return 'NOT TESTED';
