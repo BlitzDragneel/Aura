@@ -1,10 +1,10 @@
 # OMEGA paper bot: one paper-trading cycle every hour on GitHub's servers, so the forward record keeps growing
 # without any PC or Claude session. PAPER ONLY: no exchange keys exist here, so no order can ever be placed.
 # Code comes from CODE_REF; the bot's state and log live on the 'bot-state' branch (STATUS.txt = latest summary).
-name: OMEGA paper bot (hourly)
+name: OMEGA paper bot (every 15 minutes)
 on:
   schedule:
-    - cron: "7 * * * *"      # 7 minutes past every hour (hourly candles close on the hour)
+    - cron: "7,22,37,52 * * * *"   # every 15 minutes (the 5m/15m watch-list rules need it; hourly rules act once per hour)
   workflow_dispatch: {}
 permissions:
   contents: write
@@ -28,11 +28,17 @@ jobs:
         with:
           ref: bot-state
           path: state
+      - name: Candle cache (kept between runs, not committed)
+        uses: actions/cache@v4
+        with:
+          path: state/home/bars
+          key: paperbars-${{ github.run_id }}
+          restore-keys: paperbars-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install --quiet httpx pandas numpy pyarrow
+        run: pip install --quiet httpx pandas numpy pyarrow lightgbm scikit-learn
       - name: One paper cycle
         working-directory: code
         env:
