@@ -311,6 +311,374 @@
      ]
     }
    ]
+  },
+  {
+   "id": "m02",
+   "title": "Markets and mechanics",
+   "summary": "Spot, perpetual futures and CFDs; order types; spreads, fees, slippage and funding; margin and liquidation; lots and pips — all with real maths at a 100 USDT account size.",
+   "free": true,
+   "lessons": [
+    {
+     "id": "m02-l01",
+     "title": "Spot, perpetual futures and CFDs: what you actually own",
+     "minutes": 8,
+     "free": true,
+     "body_md": "\n# Spot, perpetual futures and CFDs\n\nThree very different products can all show you the \"same\" price chart. Knowing which one you are trading changes your costs, your risks and what can go wrong.\n\n## Spot\n\nOn a **spot** market (for example Binance Spot) you buy the actual coin. If you buy 0.001 BTC at 60,000 USDT, you pay 60 USDT and you own 0.001 BTC.\n\n- **Maximum loss:** what you paid (the coin can go towards zero, but you cannot lose more than you put in).\n- **No liquidation**, no funding payments.\n- **You can only profit from a rise** (unless you use margin or sell coins you already own).\n- **Costs:** a trading fee each side, plus the spread.\n\nSpot is the simplest and safest place for a beginner to learn execution.\n\n## Perpetual futures (perps)\n\nA **perpetual future** is a contract that tracks the price of a coin but never expires. On Binance USDT-M futures you post USDT as **margin** and open a position that can be **long** (profit if price rises) or **short** (profit if price falls).\n\n- **Leverage:** your position can be larger than your margin. 10 USDT margin at 5× controls a 50 USDT position.\n- **Liquidation:** if losses eat your margin down to the maintenance level, the exchange closes the position.\n- **Funding:** every 8 hours on most Binance perps (00:00, 08:00 and 16:00 UTC), longs pay shorts or shorts pay longs. This keeps the perp price near the spot price. (Lesson 4.)\n- **Mark price:** liquidation uses a \"mark price\" based on an index of several spot exchanges, not just the last trade, to reduce manipulation.\n\nYou do not own any coin. You own a contract with the exchange as counterparty and clearing house.\n\n## CFDs (forex and gold on Exness)\n\nA **CFD** (contract for difference) is an agreement with your broker to exchange the difference in price between opening and closing. When you trade XAUUSD (gold) or EURUSD on Exness, you own no gold and no euros.\n\n- **Leverage** is usually available, and can be very high. High available leverage does not mean you should use it.\n- **Costs:** mainly the **spread**, plus a commission on some account types, plus **swap** (overnight financing) if you hold past the daily rollover — unless your account/instrument is swap-free. Check your account's contract specification.\n- **Stop-out:** instead of \"liquidation\", brokers use a **margin call** level and a **stop-out** level (a margin level percentage at which they start closing your positions).\n- **Counterparty:** your broker. Regulation, segregation of client funds and negative-balance protection vary by broker entity and by country. Check which entity serves you in Trinidad and Tobago and what protections apply.\n- **Market hours:** forex and gold trade roughly from Sunday evening to Friday evening (New York time), with a daily break. Crypto trades 24/7.\n\n## Side by side\n\n| | Spot crypto | Perpetual futures | CFDs (forex/gold) |\n|---|---|---|---|\n| You own the asset | Yes | No | No |\n| Can go short | Not easily | Yes | Yes |\n| Leverage | No (on plain spot) | Yes | Yes |\n| Liquidation / stop-out | No | Yes | Yes |\n| Holding cost | None | Funding every 8 h | Swap at rollover (unless swap-free) |\n| Main trading cost | Fee + spread | Fee + spread + slippage | Spread (+ commission on some accounts) |\n| Hours | 24/7 | 24/7 | Weekdays |\n\n## Worked example: same move, three products\n\nBitcoin goes from 60,000 to 57,000 (−5%). You have 100 USDT.\n\n```\nSpot, 100 USDT of BTC:              −5 USDT  (account 95)\nPerp long, 100 USDT margin at 1×:   −5 USDT  (plus fees)\nPerp long, 100 USDT margin at 10×:  1,000 USDT position, −50 USDT (account 50)\nPerp long, 100 USDT margin at 20×:  2,000 USDT position, −100 USDT → liquidated before that\n```\n\nThe market did the same thing in every row. Only the product and the leverage changed the outcome.\n\n## Which should a beginner use?\n\n- Learn on **paper** first (the OMEGA Futures page is paper only).\n- Then **spot**, or a perp at **1×** with a tiny size, so liquidation is not a realistic risk.\n- For forex and gold, start with the **smallest lot size** your account allows and calculate the dollar value of every move before entering (Lesson 6).\n\n## Exercise\n\n1. Open the **Futures** page in OMEGA (paper only). Find where it shows liquidation, fees and funding. Read its section *\"Leverage — what the tests say\"*.\n2. On paper, repeat the worked example for a 3% *rise* at 1×, 5× and 10× with 100 USDT margin. (Answers: +3, +15, +30 USDT before fees.)\n3. If you have an Exness account, open the contract specification for XAUUSD and write down: contract size, minimum lot, and whether swaps apply to your account.\n",
+     "key_points": [
+      "Spot means you own the coin; your loss is limited to what you paid and there is no liquidation.",
+      "Perpetual futures are leveraged contracts with liquidation and funding every 8 hours on most Binance perps.",
+      "CFDs on forex and gold are contracts with your broker: spread, possible commission, swap and stop-out.",
+      "The same market move gives very different results depending on product and leverage.",
+      "Beginners should practise on paper, then spot or 1× with tiny size."
+     ],
+     "quiz": [
+      {
+       "q": "Which product has no liquidation and no funding?",
+       "options": [
+        "Perpetual futures",
+        "CFDs",
+        "Spot",
+        "All of them"
+       ],
+       "answer": 2,
+       "why": "On spot you own the coin outright; there is no margin to liquidate and no funding."
+      },
+      {
+       "q": "What is funding on a perpetual future?",
+       "options": [
+        "A deposit bonus",
+        "A periodic payment between longs and shorts that keeps the perp near spot",
+        "The exchange's withdrawal fee",
+        "Interest paid by the exchange to everyone"
+       ],
+       "answer": 1,
+       "why": "Funding is exchanged between longs and shorts, typically every 8 hours on Binance perps."
+      },
+      {
+       "q": "With 100 USDT margin at 10×, Bitcoin falls 5%. What happens?",
+       "options": [
+        "You lose 5 USDT",
+        "You lose about 50 USDT",
+        "You gain 50 USDT",
+        "Nothing until you close"
+       ],
+       "answer": 1,
+       "why": "A 1,000 USDT position × 5% = 50 USDT loss, half the account."
+      },
+      {
+       "q": "On a CFD broker, what is the 'stop-out' level?",
+       "options": [
+        "Your take-profit",
+        "The margin level at which the broker starts closing your positions",
+        "The daily market close",
+        "The spread"
+       ],
+       "answer": 1,
+       "why": "Brokers close positions automatically when your margin level drops to the stop-out percentage."
+      }
+     ]
+    },
+    {
+     "id": "m02-l02",
+     "title": "Order types: market, limit, stop and the rest",
+     "minutes": 7,
+     "free": true,
+     "body_md": "\n# Order types\n\nAn order type is an instruction about *how* you want to buy or sell. Choosing the right one saves money and prevents disasters.\n\n## The order book in one picture\n\n```\nSELLERS (asks)\n  60,030  0.8 BTC\n  60,020  1.2 BTC\n  60,010  0.5 BTC   <- best ask\n------------- spread = 10 -------------\n  60,000  0.7 BTC   <- best bid\n  59,990  2.0 BTC\n  59,980  1.1 BTC\nBUYERS (bids)\n```\n\nThe **best bid** is the highest price someone will pay. The **best ask** is the lowest price someone will sell at. The gap is the **spread**.\n\n## Market order\n\n\"Buy (or sell) now, at whatever price is available.\"\n\n- **Pros:** fills immediately.\n- **Cons:** you pay the spread and you are a **taker** (higher fee). In a thin market a large market order \"walks the book\" and fills at several worse prices — **slippage**.\n- Example: a market buy of 1.5 BTC in the book above fills 0.5 at 60,010, 1.0 at 60,020 — average about 60,017.\n\n## Limit order\n\n\"Buy at this price or lower\" (or sell at this price or higher).\n\n- **Pros:** you control the price; if it rests in the book you are a **maker** (lower fee on Binance futures: 0.02% versus 0.05% taker).\n- **Cons:** it may never fill. And the trades that *do* fill are often the ones where price kept going against you — this is called **adverse selection**.\n- In OMEGA's tests, a resting limit was only counted as filled if price traded **through** it (below a buy limit), not just touched it. That is a realistic, conservative assumption you should use too.\n\nThe panic bounce setup (Module 6) is a limit-order setup: it places a buy far below the current price and only fills during a sharp drop.\n\n## Stop (stop-market) order\n\n\"When price reaches X, send a market order.\"\n\n- Used to **exit a losing trade** (stop-loss) or to enter on a break.\n- Once triggered it is a market order, so in a fast move it can fill well past your stop price. A stop limits loss *in normal conditions*; it is not a guarantee. Gaps (forex and gold over a weekend) and crypto wicks can blow straight through it.\n- On Binance futures you can choose whether the stop triggers on **last price** or **mark price**. Mark price is less prone to brief wicks.\n\n## Stop-limit order\n\n\"When price reaches X, place a limit order at Y.\"\n\n- Controls the fill price, but in a fast move it may **not fill at all**, leaving you in a losing trade with no exit. For protective stops, most traders prefer stop-market.\n\n## Take-profit order\n\nA limit or stop order placed to close a winning trade at a target. Note: in OMEGA's exit lab (E80), adding take-profits to the two passed setups *reduced* their edge — the profits came from the big rebounds a tight target would cut off. A take-profit is a choice to test, not a must.\n\n## Useful flags\n\n| Flag | Meaning | Why it matters |\n|---|---|---|\n| **Reduce-only** | Can only shrink a position, never open or flip one | Stops a stop-loss from accidentally opening a new position |\n| **Post-only** | Cancelled if it would fill immediately as a taker | Guarantees maker fee |\n| **Time in force** (GTC / IOC / FOK) | Good-till-cancelled / immediate-or-cancel / fill-or-kill | Controls how long an order lives |\n| **OCO** (one-cancels-other) | A take-profit and a stop: when one fills, the other cancels | Common on spot |\n\nOn MetaTrader (Exness), the equivalents are **Buy/Sell** (market), **Buy Limit / Sell Limit**, **Buy Stop / Sell Stop**, with **SL** and **TP** fields on each position.\n\n## Worked example: cost of a market versus limit entry\n\nYou buy 50 USDT of a coin on Binance futures.\n\n```\nMarket (taker 0.05%):  fee 0.025 USDT, plus half the spread, say 0.02%: 0.01 USDT\nLimit  (maker 0.02%):  fee 0.010 USDT, no spread paid\nSaving per entry:      about 0.025 USDT\n```\n\nSmall? Over 200 trades it is 5 USDT — 5% of a 100 USDT account. But remember the trade-off: some limit orders won't fill, and the ones that do may be worse trades.\n\n## Exercise\n\n1. In the **Futures** page (paper) or on Binance's demo, place a limit buy well below price and a stop-market sell below that. Mark the stop as reduce-only.\n2. Write down: if price gaps 3% below your stop, roughly where would your stop-market fill? (Answer: near the first available price after the gap — about 3% below the stop, not at the stop.)\n3. Look at an order book on any coin and calculate the spread as a percentage: (ask − bid) / bid × 100.\n",
+     "key_points": [
+      "Market orders fill immediately but pay the spread, taker fees and possible slippage.",
+      "Limit orders control price and can earn maker fees but may not fill; fills suffer adverse selection.",
+      "A stop-market order becomes a market order when triggered; gaps and wicks can fill it far past the stop.",
+      "Use reduce-only on exits so a stop can never open a new position.",
+      "Count a limit as filled only if price trades through it — that is how OMEGA tested limits."
+     ],
+     "quiz": [
+      {
+       "q": "Which order guarantees a fill but not the price?",
+       "options": [
+        "Limit",
+        "Market",
+        "Stop-limit",
+        "Post-only"
+       ],
+       "answer": 1,
+       "why": "A market order fills at the best available prices, whatever they are."
+      },
+      {
+       "q": "Why can a stop-limit order be dangerous as a protective stop?",
+       "options": [
+        "It costs more fees",
+        "In a fast move the limit may never fill, leaving you in the trade",
+        "It always fills at a worse price",
+        "It cannot be cancelled"
+       ],
+       "answer": 1,
+       "why": "If price jumps past the limit, the order sits unfilled while losses grow."
+      },
+      {
+       "q": "What does the 'reduce-only' flag do?",
+       "options": [
+        "Lowers the fee",
+        "Ensures the order can only shrink an existing position",
+        "Reduces leverage automatically",
+        "Cancels after one minute"
+       ],
+       "answer": 1,
+       "why": "Reduce-only prevents an exit order from opening or flipping a position."
+      },
+      {
+       "q": "In OMEGA's research, when was a resting limit buy counted as filled?",
+       "options": [
+        "When price touched it",
+        "When price traded through (below) it",
+        "Always",
+        "At the next candle's open"
+       ],
+       "answer": 1,
+       "why": "A conservative fill rule: price must trade through the limit, as real queues mean a touch often doesn't fill."
+      }
+     ]
+    },
+    {
+     "id": "m02-l03",
+     "title": "Spreads, fees and slippage at a 100 USDT account",
+     "minutes": 7,
+     "free": true,
+     "body_md": "\n# Spreads, fees and slippage\n\nCosts are the one part of trading you can measure precisely before you trade. They are also the reason most strategies fail: OMEGA's research found that many ideas had a small edge *before* costs and none after.\n\n## The three costs\n\n1. **Fee** — charged by the exchange or broker per trade.\n2. **Spread** — you buy at the ask and sell at the bid; crossing the spread costs about half the spread on each side.\n3. **Slippage** — the difference between the price you expected and the price you got, from market impact or fast markets.\n\n## Binance USDT-M futures fees\n\nThe research used Binance's standard rates: **taker 0.05%** and **maker 0.02%** per side. (Your rate may be lower with BNB discounts or VIP tiers — check your account.) Fees are charged on the **position value (notional)**, not on your margin. That is the key point beginners miss.\n\n```\nFee = notional × fee rate\nNotional = margin × leverage\n```\n\n## Worked example at 100 USDT\n\nYou have 100 USDT. Compare three ways to trade the same idea, entering and exiting with market orders (taker both sides), with an extra 0.03% slippage-and-spread per side on a mid-sized coin.\n\n| Setup | Notional | Cost per side (0.05% + 0.03%) | Round trip | % of account |\n|---|---|---|---|---|\n| 10 USDT margin, 1× | 10 | 0.008 | 0.016 | 0.016% |\n| 10 USDT margin, 5× | 50 | 0.04 | 0.08 | 0.08% |\n| 100 USDT margin, 20× | 2,000 | 1.60 | 3.20 | 3.2% |\n\nAt 20× on the whole account, **every round trip costs 3.2% of your money**. Ten trades costs a third of the account in costs alone, win or lose.\n\n## Costs in \"basis points\"\n\nTraders often measure costs in **basis points (bp)**: 1 bp = 0.01%. A round trip of 0.05% + 0.05% taker = **10 bp**, plus slippage. Many research results in this course are quoted in bp per trade after costs, for example \"panic bounce H1: +19 bp in 2025–26\".\n\nAsk yourself: *if my idea makes 15 bp a trade before costs and costs 16 bp, what do I have?* A losing strategy.\n\n## Slippage is bigger where you least want it\n\n- **Small coins** have thinner order books: wider spreads and more slippage. OMEGA's cost model added slippage that depended on each coin's liquidity.\n- **Fast markets** (news, liquidation cascades, crashes) have the worst slippage — and that is exactly when stops trigger.\n- **Your size matters** relative to the book. At 100 USDT, you rarely move the market on large coins, but on tiny coins you can.\n\n## Forex and gold costs on Exness\n\nOn a CFD account the main cost is the spread, plus a commission on some account types (check yours). A useful habit: convert the spread into dollars for your lot size.\n\n```\nGold (XAUUSD), contract 100 oz per lot (check your spec):\n  Spread of 0.20 (20 cents) × 100 oz × 0.01 lot = 0.20 USD per trade\nEURUSD, 100,000 units per lot:\n  Spread of 1.0 pip (0.0001) × 100,000 × 0.01 lot = 1.00 USD per trade\n```\n\nSpreads widen at the daily rollover, around big news and on Monday opens. A \"typical\" spread can be several times wider at those moments.\n\n## A quick cost-versus-target check\n\nBefore any trade, compare your expected move to your costs:\n\n```\nTarget move: 0.6%   Round-trip cost: 0.16%\nCosts as a share of the target: 0.16 / 0.6 = 27%\n```\n\nIf costs eat a quarter of your target, you need to be right much more often just to break even. This is why the research found that very short-term trading (the 15-minute \"fast scouts\", E82) failed: they could see big moves coming, but **4-hour moves were too small to pay costs**.\n\n## Ways to cut costs honestly\n\n1. **Trade less.** The cheapest trade is the one you don't take.\n2. **Use lower leverage.** Same margin, smaller notional, smaller fees.\n3. **Prefer liquid markets** (BTC, ETH, majors; gold and EURUSD at active hours).\n4. **Use limit orders where it makes sense** — and test with realistic fills.\n5. **Avoid trading at the rollover and during big news** unless your plan is built for it.\n\n## Exercise\n\n1. Pick a coin in **Analysis**. Look up its spread on the exchange and compute a round trip in bp: fees (10 bp taker both sides) + spread.\n2. For the trade plan shown on that coin's in-depth view, divide your round-trip cost by the distance to the target. What share of the target do costs take?\n3. Write a personal rule: \"I will not take a trade where costs are more than ___% of the target.\" (Many traders choose 10–20%.)\n",
+     "key_points": [
+      "Fees are charged on notional (margin × leverage), not on margin.",
+      "Binance futures standard fees used in the research: taker 0.05%, maker 0.02% per side.",
+      "At 20× on a 100 USDT account, one round trip can cost about 3% of the account.",
+      "Slippage is worst in small coins and fast markets — exactly when stops trigger.",
+      "Compare costs to your target before each trade; very short-term moves often can't pay costs."
+     ],
+     "quiz": [
+      {
+       "q": "A position has 10 USDT margin at 5× leverage. On what amount is the fee charged?",
+       "options": [
+        "10 USDT",
+        "50 USDT",
+        "5 USDT",
+        "100 USDT"
+       ],
+       "answer": 1,
+       "why": "Fees apply to notional: 10 × 5 = 50 USDT."
+      },
+      {
+       "q": "How many basis points is a round trip of 0.05% taker on each side (before slippage)?",
+       "options": [
+        "5 bp",
+        "10 bp",
+        "50 bp",
+        "1 bp"
+       ],
+       "answer": 1,
+       "why": "0.05% + 0.05% = 0.10% = 10 bp."
+      },
+      {
+       "q": "On EURUSD with a 1.0 pip spread, what does 0.01 lot cost in spread?",
+       "options": [
+        "0.10 USD",
+        "1.00 USD",
+        "10 USD",
+        "100 USD"
+       ],
+       "answer": 1,
+       "why": "0.0001 × 100,000 × 0.01 = 1 USD."
+      },
+      {
+       "q": "Why did the 15-minute fast scouts (E82) fail as a trading rule?",
+       "options": [
+        "They could not predict big moves",
+        "The 4-hour moves were too small to pay costs",
+        "Binance banned them",
+        "They had no data"
+       ],
+       "answer": 1,
+       "why": "They forecast big moves about as well as the hourly scouts, but the moves were too small relative to costs."
+      }
+     ]
+    },
+    {
+     "id": "m02-l04",
+     "title": "Funding on perpetuals and swaps on CFDs",
+     "minutes": 7,
+     "free": true,
+     "body_md": "\n# Funding and swaps: the cost of holding\n\nFees and spreads are paid when you trade. **Funding** (perps) and **swap** (CFDs) are paid for *holding* a leveraged position over time.\n\n## Why perps have funding\n\nA perpetual future never expires, so nothing forces its price to meet the spot price. Funding solves that:\n\n- If the perp trades **above** spot (traders are keen to be long), the funding rate is **positive**: **longs pay shorts**.\n- If the perp trades **below** spot (keen to be short), funding is **negative**: **shorts pay longs**.\n\nOn most Binance USDT-M perps funding is exchanged every 8 hours, at **00:00, 08:00 and 16:00 UTC**. You pay or receive it only if you hold a position *at that moment*. (Some contracts settle more often; check the contract details.) In Trinidad and Tobago time (UTC−4 all year) those are **20:00, 04:00 and 12:00**.\n\n## Funding maths\n\n```\nFunding payment = position notional × funding rate\n```\n\nIn calm markets the rate on many coins sits near **0.01% per 8 hours**. That sounds small:\n\n```\n1,000 USDT notional × 0.01% = 0.10 USDT per 8 hours\nPer day (3 payments):        0.30 USDT\nPer 30 days:                 9 USDT\n```\n\nOn a 100 USDT account using 10× (1,000 notional), that is **9% of the account per month** just to hold a long. In hot markets funding can be many times higher — on small coins it can reach 1% or more per period, either direction.\n\n## Funding as a signal or a strategy? The evidence\n\nFunding looks like it should contain information about crowded traders. OMEGA tested this several ways:\n\n- **E34 funding harvest** (buy spot, short the perp, collect funding — \"delta-neutral\"): **+8.8% a year in 2021–24, then −17% a year in 2025–26, with one flip costing −64.6% in a month.** A classic \"small win every day, rare blow-up\" strategy.\n- **E54 funding as a contrarian signal**: three variants promoted, all failed validation in 2024; the best final version lost about −8.6 bp a day.\n- **E43 funding-settlement windows** (trading around the funding times): no variant had a positive mean.\n- **E28**: funding-carry effects were a 2021–22 phenomenon.\n\nThe OMEGA app's Simulation page shows a funding-rate carry monitor for information, and says plainly that OMEGA does not execute it and that carry *\"can flip negative in selloffs\"*.\n\n**Lesson:** treat funding as a **cost to manage**, not a free income.\n\n## Swaps on CFDs (forex and gold)\n\nOn a CFD you usually pay or receive a **swap** for each night a position is held past the broker's daily rollover. Swap comes from the interest-rate difference between the two currencies plus the broker's markup. Gold usually carries a swap charge on both sides at many brokers, but rates change.\n\n- Many brokers charge **triple swap** on one day of the week (often Wednesday) to cover the weekend.\n- Some Exness accounts or instruments may be **swap-free** depending on your account type and location. Check the contract specification and your account settings; do not assume.\n\n```\nSwap example (illustrative): swap long −5.0 USD per lot per night\n0.10 lot held 5 nights (including one triple): 0.10 × 5.0 × 7 = 3.50 USD\n```\n\n## Practical rules\n\n1. **Know when funding or rollover happens** and whether your plan holds across it. The research charged funding on every position held across 00/08/16 UTC when holding more than 8 hours.\n2. **Check the current funding rate** before opening a perp position you plan to hold for days.\n3. **Low leverage = small funding.** Funding is on notional, just like fees.\n4. **Be suspicious of \"yield\" from funding.** It is paid by the other side because they expect price to move in their favour.\n\n## Exercise\n\n1. Open the **Positioning Desk** in OMEGA. Find the funding section and the \"carry at your size\" panel. Note the current funding rate on BTC.\n2. Calculate: with 200 USDT notional at that rate, what would you pay or receive in one day (3 payments)?\n3. Convert the three funding times to your local time and write them in your trading plan notes.\n",
+     "key_points": [
+      "Funding keeps perps near spot: positive funding means longs pay shorts, negative means shorts pay longs.",
+      "On most Binance perps funding is every 8 hours at 00:00, 08:00 and 16:00 UTC (20:00, 04:00, 12:00 in T&T).",
+      "Funding is charged on notional, so leverage multiplies it.",
+      "Funding harvest earned +8.8%/yr in 2021–24 then lost −17%/yr in 2025–26, with a −64.6% month.",
+      "CFDs charge swap at the daily rollover, often triple on one weekday; check if your account is swap-free."
+     ],
+     "quiz": [
+      {
+       "q": "If the funding rate is positive, who pays?",
+       "options": [
+        "Shorts pay longs",
+        "Longs pay shorts",
+        "The exchange pays everyone",
+        "Nobody"
+       ],
+       "answer": 1,
+       "why": "Positive funding means the perp is above spot, so longs pay shorts."
+      },
+      {
+       "q": "At 0.01% per 8 hours on 1,000 USDT notional, roughly what is the daily funding?",
+       "options": [
+        "0.10 USDT",
+        "0.30 USDT",
+        "3 USDT",
+        "10 USDT"
+       ],
+       "answer": 1,
+       "why": "0.10 USDT per period × 3 periods = 0.30 USDT per day."
+      },
+      {
+       "q": "What happened to the delta-neutral funding harvest (E34) in 2025–26?",
+       "options": [
+        "It made +8.8% a year",
+        "It lost about −17% a year, with one month at −64.6%",
+        "It was not tested",
+        "It doubled"
+       ],
+       "answer": 1,
+       "why": "The funding harvest worked in 2021–24, then a funding flip produced large losses."
+      },
+      {
+       "q": "When do you pay funding on a Binance perp?",
+       "options": [
+        "Every trade",
+        "Only if you hold the position at the funding time",
+        "Once a month",
+        "Only on profitable trades"
+       ],
+       "answer": 1,
+       "why": "Funding is exchanged only by positions open at the settlement moment."
+      }
+     ]
+    },
+    {
+     "id": "m02-l05",
+     "title": "Margin, leverage and liquidation: the exact maths",
+     "minutes": 8,
+     "free": true,
+     "body_md": "\n# Margin, leverage and liquidation\n\nThis is the most important mechanics lesson in the course. Many accounts are lost not to bad analysis but to a misunderstanding of margin.\n\n## Definitions\n\n- **Margin**: the money you lock up to open a position.\n- **Notional (position size)**: the full value of the position.\n- **Leverage** = notional ÷ margin.\n- **Maintenance margin**: the minimum margin the exchange requires to keep the position open. On Binance it depends on the coin and position size; for small positions it is often around 0.4–1% of notional. The OMEGA research used **0.5%** as a round figure.\n- **Liquidation**: when your margin minus losses falls to the maintenance margin, the exchange closes the position. You lose (roughly) all the margin on it.\n\n## The liquidation distance\n\nFor an isolated position, a good approximation is:\n\n```\nLiquidation distance ≈ 1 / leverage − maintenance margin rate\n```\n\n| Leverage | 1 / leverage | Minus 0.5% | Liquidation distance |\n|---|---|---|---|\n| 1× | 100% | — | No practical liquidation for a long |\n| 2× | 50% | | 49.5% |\n| 3× | 33.3% | | 32.8% |\n| 5× | 20% | | 19.5% |\n| 10× | 10% | | 9.5% |\n| 20× | 5% | | **4.5%** |\n| 40× | 2.5% | | **2.0%** |\n\n(Fees and funding move the real liquidation price a little closer.)\n\n## Isolated versus cross margin\n\n- **Isolated:** only the margin assigned to that position can be lost. Liquidation ends that position; the rest of your account is untouched.\n- **Cross:** the whole futures wallet backs every position. A losing position can drain the entire balance before it is liquidated.\n\nFor beginners, **isolated** margin makes the worst case clear. Under cross margin, \"low leverage\" on one position is meaningless if your wallet is small.\n\n## Worked example: a 100 USDT account\n\nYou open a BTC long with **20 USDT isolated margin at 10×** (200 USDT notional) at 60,000.\n\n```\nLiquidation distance ≈ 10% − 0.5% = 9.5%\nLiquidation price ≈ 60,000 × (1 − 0.095) = 54,300\nLoss at liquidation ≈ 20 USDT (20% of the account)\n```\n\nNow the same idea with a **stop-loss at 58,800 (−2%)**:\n\n```\nLoss at stop ≈ 200 × 2% = 4 USDT + fees ≈ 4.2 USDT (about 4% of the account)\n```\n\nThe stop is well inside the liquidation distance, so you control the loss, not the exchange. **Rule from the OMEGA protocol: a stop must always sit inside the liquidation distance (stop distance < 1/leverage − 0.5%).**\n\n## Leverage does not change your risk — your size and stop do\n\nThis surprises people. Compare:\n\n```\nA: 50 USDT margin, 1×, stop 4% → notional 50,  loss at stop 2 USDT\nB: 5 USDT margin, 10×, stop 4% → notional 50,  loss at stop 2 USDT\n```\n\nSame notional, same stop, same 2 USDT risk. Leverage only decided how much margin was locked. The danger of leverage is that it **lets** you open a huge notional with a small account — and it brings the liquidation price close, so ordinary wicks can close you out before your stop is even reached. In crypto, stops can also slip.\n\n## What the research measured\n\nOMEGA's protocol reported leverage tables for the tested setups, using the worst intrabar move (MAE) of each trade, with 5% of equity as margin per trade:\n\n- November 2026 panic tests (E37/E38/E40): **1× had no liquidations** (drawdown 10–15%); **2× already liquidated**; at **20×, 29–31% of trades hit the liquidation distance** and the account fell to about 1 USDT; at **40× about 60% of trades** were liquidated.\n- The worst single intrabar move seen was **−83%** (an October 2025 wick).\n- For the passed rules in the bots' backtest: panic bounce H1 was liquidated **37 times at 2×, 107 times at 3×**, and wiped out at 20× and 40×. **The highest leverage with zero liquidations and drawdown under 35% was 1× for all three rules.**\n\nYou'll study these tables in Module 5. For now, remember: **leverage never creates an edge; it scales the edge and the tail.**\n\n## CFD margin: margin level and stop-out\n\nBrokers track **margin level = equity ÷ used margin × 100%**. If it drops to the broker's margin-call level you get a warning; at the **stop-out** level, positions start closing (largest loser first, typically). Check your Exness account for its exact levels. The same lesson applies: high available leverage only means a small adverse move can stop you out.\n\n## Exercise\n\n1. On the **Futures** page (paper), set a 100 USDT account and open a position at 5×, then at 20×. Note the liquidation price the page shows for each.\n2. For each, place a stop at 3% from entry. Which one has the stop *outside* the liquidation distance? (At 20× the liquidation distance is about 4.5%, so a 3% stop is inside; at 40× (2.0%) it would not be.)\n3. Calculate the loss at stop for: 15 USDT margin, 4×, 2.5% stop. (Answer: 60 × 2.5% = 1.5 USDT plus fees.)\n",
+     "key_points": [
+      "Leverage = notional ÷ margin; fees, funding and P&L are all on notional.",
+      "Liquidation distance ≈ 1/leverage − maintenance margin: about 4.5% at 20× and 2.0% at 40×.",
+      "Risk is set by notional and stop distance, not by leverage alone; a stop must sit inside the liquidation distance.",
+      "Isolated margin limits the loss to that position; cross margin puts the whole wallet at risk.",
+      "Research: 1× had no liquidations; 2× already liquidated; 20× and 40× wiped out the tested setups."
+     ],
+     "quiz": [
+      {
+       "q": "What is the approximate liquidation distance at 40× with 0.5% maintenance margin?",
+       "options": [
+        "40%",
+        "4.5%",
+        "2.0%",
+        "0.4%"
+       ],
+       "answer": 2,
+       "why": "2.5% − 0.5% = 2.0%."
+      },
+      {
+       "q": "Position A: 50 USDT margin at 1×, 4% stop. Position B: 5 USDT margin at 10×, 4% stop. Which risks more at the stop?",
+       "options": [
+        "A",
+        "B",
+        "They risk the same",
+        "Cannot tell"
+       ],
+       "answer": 2,
+       "why": "Both have 50 USDT notional and a 4% stop, so both lose about 2 USDT at the stop."
+      },
+      {
+       "q": "Why is cross margin riskier for beginners?",
+       "options": [
+        "It has higher fees",
+        "The whole futures wallet can be lost backing one position",
+        "It cannot use stops",
+        "It is only for shorts"
+       ],
+       "answer": 1,
+       "why": "Under cross margin, losses draw on the entire balance before liquidation."
+      },
+      {
+       "q": "In the bots' backtest, what was the highest leverage with zero liquidations for the passed rules?",
+       "options": [
+        "1×",
+        "3×",
+        "10×",
+        "20×"
+       ],
+       "answer": 0,
+       "why": "1× for all three rules; H1 was liquidated 37 times at 2× and 107 times at 3×."
+      }
+     ]
+    },
+    {
+     "id": "m02-l06",
+     "title": "Lots, pips and contract sizes: forex and gold on Exness",
+     "minutes": 7,
+     "free": true,
+     "body_md": "\n# Lots, pips and contract sizes\n\nOn Binance futures you size positions in USDT or coins. On Exness and other MetaTrader brokers you size in **lots**. If you don't convert lots into dollars per move, you don't know your risk.\n\n## The standard sizes (check your contract specification)\n\n| Instrument | 1 standard lot | Smallest common lot | Price step people talk about |\n|---|---|---|---|\n| EURUSD, GBPUSD (forex majors) | 100,000 units of the base currency | 0.01 (1,000 units) | 1 pip = 0.0001 |\n| USDJPY | 100,000 USD | 0.01 | 1 pip = 0.01 |\n| XAUUSD (gold) | 100 troy ounces | 0.01 (1 oz) | 1.00 USD per ounce |\n\nBrokers offer different account types (some with tiny \"cent\" units). Always open the **contract specification** for your exact symbol and account; that is the number that counts.\n\n## Value per pip / per dollar move\n\n```\nValue of a move = price change × units\n```\n\n**EURUSD**, 0.10 lot = 10,000 EUR:\n```\n1 pip = 0.0001 × 10,000 = 1.00 USD\nA 25-pip stop = 25 USD\n```\n\n**Gold (XAUUSD)**, 0.01 lot = 1 oz:\n```\nA 1.00 USD move in gold = 1.00 USD for you\nA 10.00 USD move (e.g. 2,650 → 2,640) = 10 USD\n```\n\n**Gold**, 0.10 lot = 10 oz: the same 10-dollar move = **100 USD**.\n\nGold regularly moves 20–40 dollars or more in a day. At 0.10 lot that can be 200–400 USD — far more than a small account can take.\n\n## Sizing a gold trade for a small account\n\nYou have **200 USD** and follow the Risk Guard's **0.5% per trade** rule: maximum risk = 1.00 USD.\n\n```\nPlanned stop distance: 6.00 USD (below a recent swing low)\nRisk per 0.01 lot at that stop: 6.00 × 1 oz = 6.00 USD\nAllowed risk: 1.00 USD\nAllowed lots = 1.00 / 6.00 × 0.01 = 0.0017 lot  → below the minimum 0.01\n```\n\nThe honest conclusion: **this trade is too big for this account at this risk level**. Your choices are: skip it, find a setup with a tighter (but still sensible) stop, accept a larger percentage risk knowingly, or use an account type with smaller units. What you must *not* do is ignore the maths.\n\nWith 1,000 USD at 1% risk (10 USD), the same 6-dollar stop allows 10 / 6 × 0.01 ≈ 0.016 → **0.01 lot** (round down).\n\n## Sizing a forex trade\n\nAccount 500 USD, risk 1% = 5 USD, EURUSD stop 20 pips.\n\n```\nValue per pip needed = 5 / 20 = 0.25 USD per pip\n1 pip per 0.01 lot = 0.10 USD\nLots = 0.25 / 0.10 × 0.01 = 0.025 → round down to 0.02 lot\nActual risk = 20 pips × 0.20 USD = 4 USD (0.8%)\n```\n\nAlways **round down**.\n\n## Margin on a CFD\n\n```\nRequired margin = notional / leverage\nGold 0.01 lot at 2,650 = 2,650 USD notional\nAt 1:100 leverage → 26.50 USD margin\nAt 1:500 → 5.30 USD margin\n```\n\nLeverage changed the margin, not the risk: the 6-dollar stop still costs 6 USD per 0.01 lot. High broker leverage simply lets you open positions far larger than your account can survive.\n\n## What the evidence says about forex and gold methods\n\nOMEGA's research is mostly crypto, but some forex and gold work was done:\n\n- **E15**: forex majors tested hour by hour — **all five failed**.\n- Gold hourly methods, session splits per market and a gold weekend-gap fade are on the protocol's **failed** list.\n- The app's **Breakout Desk** says both of its setups *failed a clean test* and are kept as a record only.\n\nThat doesn't mean you can't trade gold or forex. It means you should **treat any gold or forex method as untested until you test it** (Module 7), and size it small.\n\n## Exercise\n\n1. Open **Market Profiles** in OMEGA and read the gold profile, especially *\"How to size it\"*.\n2. Calculate the lot size for: account 300 USD, risk 0.5%, gold stop 4.50 USD. (Answer: risk 1.50 USD → 1.50 / 4.50 × 0.01 = 0.0033 → below minimum: the trade is too big at this risk.)\n3. Calculate for: account 2,000 USD, risk 1%, EURUSD stop 15 pips. (Answer: 20 USD / 15 = 1.33 USD per pip → 0.13 lot.)\n",
+     "key_points": [
+      "Convert lots to dollars per move: 1 lot EURUSD is 100,000 units (10 USD per pip); 1 lot gold is typically 100 oz.",
+      "At 0.01 lot, a 1-dollar move in gold is about 1 USD; at 0.10 lot it is 10 USD.",
+      "Size = allowed risk ÷ (stop distance × value per unit); always round down.",
+      "If the minimum lot risks too much, the trade is too big for the account — skip it.",
+      "Forex hour-by-hour (E15) and gold hourly methods failed OMEGA's tests; treat such methods as untested."
+     ],
+     "quiz": [
+      {
+       "q": "What is 1 pip worth on 0.10 lot of EURUSD?",
+       "options": [
+        "0.10 USD",
+        "1.00 USD",
+        "10 USD",
+        "100 USD"
+       ],
+       "answer": 1,
+       "why": "0.10 lot = 10,000 units; 0.0001 × 10,000 = 1 USD."
+      },
+      {
+       "q": "Gold moves from 2,650 to 2,630. What is the P&L on 0.05 lot (5 oz) long?",
+       "options": [
+        "−20 USD",
+        "−100 USD",
+        "−5 USD",
+        "−1,000 USD"
+       ],
+       "answer": 1,
+       "why": "20 USD × 5 oz = 100 USD loss."
+      },
+      {
+       "q": "Your allowed risk needs 0.004 lot but the minimum is 0.01. What should you do?",
+       "options": [
+        "Trade 0.01 anyway",
+        "Trade 0.10 to make it worthwhile",
+        "Skip it or find a tighter, sensible stop",
+        "Remove the stop"
+       ],
+       "answer": 2,
+       "why": "If the minimum size breaks your risk rule, the trade does not fit your account."
+      },
+      {
+       "q": "Raising broker leverage from 1:100 to 1:500 does what to the dollar risk of a 6 USD stop on 0.01 lot gold?",
+       "options": [
+        "Multiplies it by 5",
+        "Nothing; it only lowers the required margin",
+        "Divides it by 5",
+        "Removes it"
+       ],
+       "answer": 1,
+       "why": "Risk depends on size and stop; leverage only changes margin required."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
