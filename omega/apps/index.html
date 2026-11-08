@@ -30,20 +30,21 @@ tr.watch td:first-child{color:var(--amber);text-shadow:0 0 8px var(--amber)}
 .foot{color:var(--mut);font-size:12.5px;margin-top:26px}
 </style></head><body><div class="wrap">
 <h1>OMEGA · PROGRESS BOARD</h1>
-<div class="sub">Updated <b>08 Nov 2026 00:47 UTC</b> · research, bots and apps from the repository BlitzDragneel/Aura. Every number below
+<div class="sub">Updated <b>08 Nov 2026 00:57 UTC</b> · research, bots and apps from the repository BlitzDragneel/Aura. Every number below
 comes from the result files; nothing on this page is a forecast.</div>
 <div class="apps">
 <a class="app p" href="omega-prime.html"><b>OMEGA Prime →</b><span>Claude's lean app: today's verdict, your orders, signals, evidence</span></a>
 <a class="app o" href="omega-v6_5-47.html"><b>OMEGA original →</b><span>Your full app with CREED (4.5 MB, loads slower on phones)</span></a>
 <a class="app p" href="https://github.com/BlitzDragneel/Aura/blob/bot-state/STATUS.txt"><b>Paper bot record →</b><span>Runs every hour on GitHub (paper only): open orders, positions, last actions</span></a>
 <a class="app o" href="https://github.com/BlitzDragneel/Aura/blob/bot-state/scouts/SCOUTS.md"><b>UpScout / DownScout →</b><span>Hourly up/down and trend-turn calls on 30 coins, each scored 24 h later</span></a>
+<a class="app o" href="https://github.com/BlitzDragneel/Aura/blob/bot-state/fast_scouts/SCOUTS.md"><b>Fast scouts (15 min) →</b><span>Same calls on 15-minute candles every 15 minutes, scored 4 h later</span></a>
 <a class="app l" href="https://omega-live-api.onrender.com/health"><b>Live API health →</b><span>OKX/Binance crypto, Swissquote forex & gold, Deribit DVOL (wakes in ~1 min)</span></a>
 </div>
 <div class="stats">
-<div class="stat c1"><i>26</i><small>new plans judged (E37+)</small></div>
+<div class="stat c1"><i>27</i><small>new plans judged (E37+)</small></div>
 <div class="stat c2"><i>0</i><small>passed</small></div>
 <div class="stat c3"><i>5</i><small>watch list (grade C)</small></div>
-<div class="stat c4"><i>1,600</i><small>variants counted</small></div>
+<div class="stat c4"><i>1,608</i><small>variants counted</small></div>
 </div>
 <h2>Rules the bots may trade (edges/approved.json)</h2>
 <div class="rules"><div class="rule gA"><b>climax_a</b><span>grade A · paper · max 1×</span><p>3 sigma hourly drop, 3x volume, close in top 40% -&gt; buy next open, hold 12 h</p></div>
@@ -78,6 +79,7 @@ comes from the result files; nothing on this page is a forecast.</div>
 <tr class="fail"><td>E69</td><td>E69 — On-chain exchange flows and activity (CoinMetrics community), daily, BTC &amp; ETH</td><td>22</td><td>FAIL: no discovery variant beat the luck check (95th pct of shifted-data best t)</td></tr>
 <tr class="fail"><td>E70</td><td>E70 — New-data regime switch: hold BTC vs cash (owner request: slow rules welcome)</td><td></td><td>FAIL: nothing beat the luck check / B&amp;H in discovery</td></tr>
 <tr class="fail"><td>E80</td><td>E80 — Exit lab: take-profit, stop, trailing stop and hold time on the two passed rules (lead, 7 Nov 2026)</td><td>480</td><td>FAIL: no exit beats the original exits out of sample; climax TP+2%/6h passed luck in discovery (t 3.46 vs random p95 1.58) but lost in 2024 (-10 bp, t -0.13) an</td></tr>
-<tr class="fail"><td>E81</td><td>E81 — UpScout / DownScout: can technical features predict real up/down moves and trend turns? (lead, 8 Nov 202</td><td></td><td></td></tr></table>
+<tr class="fail"><td>E81</td><td>E81 — UpScout / DownScout: can technical features predict real up/down moves and trend turns? (lead, 8 Nov 202</td><td></td><td></td></tr>
+<tr class="fail"><td>E82</td><td>E82 — Fast scouts on 15-minute candles (lead, 8 Nov 2026)</td><td></td><td></td></tr></table>
 <div class="foot">Paper and testnet first. Grade A/B = passed a fair, pre-registered test; not a promise of future profit.</div>
 </div></body></html>
