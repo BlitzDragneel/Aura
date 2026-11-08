@@ -83,10 +83,23 @@ def test_fx_quote_and_exness_suffix(client):
     assert fx_pair("EUR/USD") == ("EUR", "USD") and okx_swap("ETHUSDT") == "ETH-USDT-SWAP"
 
 
-def test_fx_klines_need_key_and_say_so(client):
+def test_fx_klines_fall_back_to_yahoo_without_key(monkeypatch):
+    monkeypatch.delenv("TWELVEDATA_API_KEY", raising=False)
+    def h(req):
+        if req.url.host == "query2.finance.yahoo.com":
+            assert req.url.path.endswith("/EURUSD=X")
+            return httpx.Response(200, json={"chart": {"result": [{"timestamp": [NOW // 1000 - 7200, NOW // 1000 - 3600],
+                "indicators": {"quote": [{"open": [1.1, 1.2], "high": [1.2, 1.3], "low": [1.0, 1.1], "close": [1.15, 1.25], "volume": [0, 0]}]}}]}})
+        return httpx.Response(404)
+    c = TestClient(appmod.create_app(Http(httpx.Client(transport=httpx.MockTransport(h))), start_background=False))
+    r = c.get("/fx/klines?symbol=EURUSD&tf=1h&limit=5").json()
+    assert r["source"] == "yahoo" and [x["c"] for x in r["candles"]] == [1.15, 1.25]
+    assert c.get("/fx/list").json()["majors"][0] == "EURUSD"
+
+
+def test_fx_klines_502_when_every_source_fails(client):
     c, _ = client
-    r = c.get("/fx/klines?symbol=EURUSD")
-    assert r.status_code == 502 and "TWELVEDATA_API_KEY" in r.json()["detail"]
+    assert c.get("/fx/klines?symbol=EURUSD").status_code == 502
 
 
 def test_fx_recorder_builds_candles(client):

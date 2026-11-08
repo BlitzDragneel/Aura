@@ -265,6 +265,14 @@ class Crypto:
 
 
 # ------------------------------------------------------------------ forex / metals
+FX_MAJORS = ["EURUSD", "GBPUSD", "USDJPY", "USDCHF", "AUDUSD", "USDCAD", "NZDUSD"]
+FX_MINORS = ["EURGBP", "EURJPY", "EURCHF", "EURAUD", "EURCAD", "EURNZD", "GBPJPY", "GBPCHF", "GBPAUD", "GBPCAD", "GBPNZD",
+             "AUDJPY", "AUDCHF", "AUDCAD", "AUDNZD", "CADJPY", "CADCHF", "CHFJPY", "NZDJPY", "NZDCHF", "NZDCAD"]
+FX_EXOTICS = ["USDMXN", "USDZAR", "USDTRY", "USDSGD", "USDHKD", "USDNOK", "USDSEK", "USDDKK", "USDPLN", "USDHUF", "USDCZK",
+              "USDCNH", "USDTHB", "EURTRY", "EURNOK", "EURSEK", "EURPLN", "USDTTD"]
+METALS = ["XAUUSD", "XAGUSD", "XPTUSD", "XPDUSD"]
+
+
 class FX:
     SQ = "https://forex-data-feed.swissquote.com/public-quotes/bboquotes/instrument"
     TD = "https://api.twelvedata.com"
@@ -306,10 +314,47 @@ class FX:
         return first_ok([("swissquote", swissquote), ("twelvedata", twelve)])
 
     def klines(self, sym: str, tf: str = "1h", limit: int = 200) -> dict:
+        """Twelve Data when a key is set, otherwise Yahoo (free: 1m/5m 5-7 days, 15m 60 days, 1h 2 years, 1d decades)."""
+        return first_ok([("twelvedata", lambda: self._k_twelve(sym, tf, limit)),
+                         ("yahoo", lambda: self._k_yahoo(sym, tf, limit))])
+
+    YAHOO_METALS = {"XAUUSD": "GC=F", "XAGUSD": "SI=F", "XPTUSD": "PL=F", "XPDUSD": "PA=F"}
+
+    def _k_yahoo(self, sym, tf, limit):
+        a, b = fx_pair(sym)
+        pair = a + b
+        ysym = self.YAHOO_METALS.get(pair, f"{pair}=X")
+        iv, rng = {"1m": ("1m", "5d"), "5m": ("5m", "5d"), "15m": ("15m", "60d"), "1h": ("60m", "730d"),
+                   "4h": ("60m", "730d"), "1d": ("1d", "10y")}[tf]
+        d = self.h.get("yahoo", f"https://query2.finance.yahoo.com/v8/finance/chart/{ysym}", interval=iv, range=rng)
+        res = (d.get("chart") or {}).get("result")
+        if not res:
+            raise ProviderError(f"yahoo: no data for {ysym}")
+        r = res[0]
+        q = r["indicators"]["quote"][0]
+        rows = []
+        for i, t in enumerate(r.get("timestamp") or []):
+            o, h, l, c = q["open"][i], q["high"][i], q["low"][i], q["close"][i]
+            if None in (o, h, l, c):
+                continue
+            rows.append(dict(t=int(t) * 1000, o=float(o), h=float(h), l=float(l), c=float(c),
+                             v=float(q.get("volume", [0] * (i + 1))[i] or 0), qv=0.0, closed=True))
+        if tf == "4h":  # build 4h from hourly, UTC-aligned
+            agg = {}
+            for x in rows:
+                k = x["t"] // 14_400_000 * 14_400_000
+                g = agg.setdefault(k, dict(x, t=k))
+                g["h"], g["l"], g["c"], g["v"] = max(g["h"], x["h"]), min(g["l"], x["l"]), x["c"], g["v"] + x["v"]
+            rows = [agg[k] for k in sorted(agg)]
+        if rows:
+            rows[-1]["closed"] = rows[-1]["t"] + TF_MS[tf] <= time.time() * 1000
+        return dict(symbol=pair, tf=tf, source="yahoo" + (" (futures proxy " + ysym + ")" if pair in self.YAHOO_METALS else ""),
+                    candles=rows[-int(limit):])
+
+    def _k_twelve(self, sym, tf, limit):
         a, b = fx_pair(sym)
         if not self.key:
-            raise ProviderError("forex candles need a Twelve Data key: set TWELVEDATA_API_KEY "
-                                "(or use /fx/recorded for candles built from live quotes since the service started)")
+            raise ProviderError("twelvedata: no key set")
         iv = {"1m": "1min", "5m": "5min", "15m": "15min", "1h": "1h", "4h": "4h", "1d": "1day"}[tf]
         d = self.h.get("twelvedata", f"{self.TD}/time_series", symbol=f"{a}/{b}", interval=iv,
                        outputsize=min(int(limit), 5000), timezone="UTC", apikey=self.key)

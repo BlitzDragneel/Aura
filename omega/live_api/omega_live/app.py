@@ -24,7 +24,8 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from fastapi.responses import StreamingResponse
 
 from . import __version__
-from .providers import FX, TF, TF_MS, Crypto, Http, Options, ProviderError
+from .providers import FX, FX_EXOTICS, FX_MAJORS, FX_MINORS, METALS, TF, TF_MS, Crypto, Http, Options, ProviderError
+from .feed import Feed
 from .signals import LiveSignals, approved_rules
 from .scouts import Scouts
 
@@ -115,6 +116,7 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
     crypto, fx, opt = Crypto(http), FX(http), Options(http)
     live = LiveSignals(crypto)
     scouts = Scouts(crypto)
+    feed = Feed()
     cache = TTLCache()
     rec = FXRecorder(fx, [s.strip() for s in os.environ.get("OMEGA_FX_RECORD", "EURUSD,GBPUSD,USDJPY,XAUUSD")
                           .split(",") if s.strip()])
@@ -225,6 +227,31 @@ h1{color:#fff;text-shadow:0 0 8px #22f3ff,0 0 20px #22f3ff}a{color:#22f3ff}code{
     def fx_klines(symbol: str = "EURUSD", tf: str = "1h", limit: int = Query(200, ge=1, le=5000)):
         check_symbol(symbol); tf_ok(tf)
         return guard(lambda: cache.get(("fk", symbol.upper(), tf, limit), 60, lambda: fx.klines(symbol, tf, limit)))
+
+    @app.get("/fx/list")
+    def fx_list():
+        return dict(majors=FX_MAJORS, minors=FX_MINORS, exotics=FX_EXOTICS, metals=METALS,
+                    candles="Twelve Data with a key, otherwise Yahoo (1h: 2 years, 15m: 60 days, 5m: 5 days, 1d: 10 years; "
+                            "metals candles are futures GC/SI/PL/PA as a proxy)", quotes="Swissquote live bid/ask")
+
+    @app.get("/fx/board", dependencies=d)
+    def fx_board(group: str = Query("majors", pattern="^(majors|minors|exotics|metals|all)$")):
+        syms = {"majors": FX_MAJORS, "minors": FX_MINORS, "exotics": FX_EXOTICS, "metals": METALS,
+                "all": FX_MAJORS + FX_MINORS + FX_EXOTICS + METALS}[group]
+
+        def build():
+            rows, errs = [], []
+            for s_ in syms:
+                try:
+                    rows.append(cache.get(("q", s_), 10, lambda s_=s_: fx.quote(s_)))
+                except (ProviderError, ValueError) as e:
+                    errs.append(f"{s_}: {e}")
+            return dict(group=group, quotes=rows, missing=errs)
+        return cache.get(("board", group), 10, build)
+
+    @app.get("/bots/feed", dependencies=d)
+    def bots_feed():
+        return feed.get()
 
     @app.get("/fx/recorded", dependencies=d)
     def fx_recorded(symbol: str = "EURUSD", tf: str = "1m"):
