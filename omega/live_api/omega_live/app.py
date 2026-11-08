@@ -26,6 +26,7 @@ from fastapi.responses import StreamingResponse
 from . import __version__
 from .providers import FX, TF, TF_MS, Crypto, Http, Options, ProviderError
 from .signals import LiveSignals, approved_rules
+from .scouts import Scouts
 
 HOST = os.environ.get("OMEGA_API_HOST", "127.0.0.1")
 TOKEN = os.environ.get("OMEGA_API_TOKEN", "")
@@ -113,6 +114,7 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
     http = http or Http()
     crypto, fx, opt = Crypto(http), FX(http), Options(http)
     live = LiveSignals(crypto)
+    scouts = Scouts(crypto)
     cache = TTLCache()
     rec = FXRecorder(fx, [s.strip() for s in os.environ.get("OMEGA_FX_RECORD", "EURUSD,GBPUSD,USDJPY,XAUUSD")
                           .split(",") if s.strip()])
@@ -237,6 +239,11 @@ h1{color:#fff;text-shadow:0 0 8px #22f3ff,0 0 20px #22f3ff}a{color:#22f3ff}code{
     @app.get("/signals", dependencies=d)
     def signals():
         return cache.get(("sig",), 60, live.run)
+
+    @app.get("/scouts", dependencies=d)
+    def scouts_now(speed: str = Query("fast", pattern="^(fast|hourly)$"), symbols: str = Query("", max_length=400)):
+        syms = [check_symbol(x.strip()) for x in symbols.split(",") if x.strip()] or None
+        return guard(lambda: scouts.read(speed, syms))
 
     @app.get("/stream", dependencies=d)
     async def stream(crypto_symbols: str = "BTCUSDT,ETHUSDT", fx_symbols: str = "EURUSD,XAUUSD",

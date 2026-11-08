@@ -103,3 +103,9 @@ Read with care: much of the AUC is a volatility forecast (when a big move comes,
 needs the trend to be down/up now, which the model sees. Direction skill is small. UpScout is the closest to useful
 (positive both years) but misses t ≥ 2 in 2025–26 → not tradeable; both scouts run live as public, forward-scored
 predictions (bot-state branch, scouts/) and feed no bot until their forward record shows skill.
+
+## Lead — E82 fast scouts on 15-minute candles (md5 e4eabd0f…): FAIL as a trading rule, run live as information
+Same model on 15m bars, 4 h horizon, 30 coins; train 2022–23 → 2024, train 2022–24 → 2025–26.
+2025–26: FastUp AUC 0.623 (top-2% calls −24.7 bp after costs, t −1.70), FastDown 0.614 (−7.2 bp), turn-up 0.807 (−33.7 bp),
+turn-down 0.817 (−19.3 bp, t −1.95). They see big moves coming as well as the hourly scouts, but 4-hour moves are too
+small to pay costs. Live: every 15 minutes on GitHub (bot-state/fast_scouts/), and on demand at the Live API `/scouts`.

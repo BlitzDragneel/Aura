@@ -70,7 +70,8 @@ def features(df: pd.DataFrame, btc: pd.DataFrame | None = None) -> pd.DataFrame:
     return f.replace([np.inf, -np.inf], np.nan)
 
 
-def labels(df: pd.DataFrame) -> pd.DataFrame:
+def labels(df: pd.DataFrame, H: int = H) -> pd.DataFrame:
+    """H = horizon in bars (24 on 1h bars = 24 h; 16 on 15m bars = 4 h)."""
     c = df.c
     lr = np.log(c).diff()
     sig24 = lr.rolling(168, min_periods=100).std() * np.sqrt(H)

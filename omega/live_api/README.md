@@ -25,7 +25,7 @@ Optional forex candles: before step 2, `setx TWELVEDATA_API_KEY yourkey` (new ke
 `/health` · `/crypto/ticker?symbols=BTCUSDT,ETHUSDT` · `/crypto/klines?symbol=BTCUSDT&tf=1h&limit=200` ·
 `/crypto/funding?symbol=` · `/crypto/oi?symbol=` · `/crypto/top?n=30` · `/crypto/spot?symbol=` · `/crypto/coinbase-premium?asset=BTC` ·
 `/fx/quote?symbol=XAUUSD` · `/fx/klines?symbol=EURUSD&tf=1h` (key) · `/fx/recorded?symbol=EURUSD&tf=5m` · `/options/dvol?currency=BTC&hours=48` ·
-`/signals` · `/stream` (Server-Sent Events: crypto + forex prices every 5 s).
+`/signals` · `/scouts?speed=fast|hourly` (UpScout/DownScout reading from the latest closed 15m or 1h candle, any time; information only) · `/stream` (Server-Sent Events: crypto + forex prices every 5 s).
 Candles: `{t (open, ms UTC), o, h, l, c, v, qv, closed}` — `closed:false` marks the bar still forming; rules only use closed bars.
 
 ## Phone access

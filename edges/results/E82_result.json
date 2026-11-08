@@ -1,0 +1,78 @@
+{
+ "plan": "edges/plans/E82_fast_scouts.md",
+ "horizon": "4h on 15m bars",
+ "results": {
+  "FastUp": {
+   "validation_2024": {
+    "n_test": 263043,
+    "auc": 0.6127,
+    "brier_skill": 0.0159,
+    "trades": 4049,
+    "mean_net_bp": 12.9,
+    "t_week": 0.98
+   },
+   "final_2025_26": {
+    "n_test": 483000,
+    "auc": 0.6233,
+    "brier_skill": 0.0201,
+    "trades": 7800,
+    "mean_net_bp": -24.7,
+    "t_week": -1.7
+   }
+  },
+  "FastDown": {
+   "validation_2024": {
+    "n_test": 263043,
+    "auc": 0.6246,
+    "brier_skill": 0.0194,
+    "trades": 3295,
+    "mean_net_bp": 11.7,
+    "t_week": 0.59
+   },
+   "final_2025_26": {
+    "n_test": 483000,
+    "auc": 0.6143,
+    "brier_skill": 0.0166,
+    "trades": 8907,
+    "mean_net_bp": -7.2,
+    "t_week": -0.36
+   }
+  },
+  "FastTurnUp": {
+   "validation_2024": {
+    "n_test": 263043,
+    "auc": 0.8164,
+    "brier_skill": 0.1622,
+    "trades": 4162,
+    "mean_net_bp": 9.0,
+    "t_week": 0.57
+   },
+   "final_2025_26": {
+    "n_test": 483000,
+    "auc": 0.8073,
+    "brier_skill": 0.1495,
+    "trades": 7863,
+    "mean_net_bp": -33.7,
+    "t_week": -1.69
+   }
+  },
+  "FastTurnDown": {
+   "validation_2024": {
+    "n_test": 263043,
+    "auc": 0.8181,
+    "brier_skill": 0.1614,
+    "trades": 3667,
+    "mean_net_bp": 1.5,
+    "t_week": 0.11
+   },
+   "final_2025_26": {
+    "n_test": 483000,
+    "auc": 0.8166,
+    "brier_skill": 0.1596,
+    "trades": 8774,
+    "mean_net_bp": -19.3,
+    "t_week": -1.95
+   }
+  }
+ }
+}

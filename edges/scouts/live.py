@@ -25,11 +25,16 @@ from edges.scouts.model import features, H  # noqa: E402
 MODELS = os.environ.get("SCOUT_MODELS") if os.path.exists(os.path.join(os.environ.get("SCOUT_MODELS", "/nonexistent"), "meta.json")) \
     else os.path.join(os.path.dirname(os.path.abspath(__file__)), "models")
 TARGETS = ("up_move", "down_move", "turn_up", "turn_down")
+FAST = "--fast" in sys.argv
+TF, HB, STEP = ("15m", 16, pd.Timedelta(minutes=15)) if FAST else ("1h", H, pd.Timedelta(hours=1))
+if FAST:
+    MODELS = os.environ.get("SCOUT_MODELS15") if os.path.exists(os.path.join(os.environ.get("SCOUT_MODELS15", "/nonexistent"), "meta.json")) \
+        else os.path.join(os.path.dirname(os.path.abspath(__file__)), "models15")
 COST = 0.0014  # round trip for liquid coins (2 x (0.05% taker + 0.02% slippage))
 
 
 def candles(cx, sym, n=500):
-    k = cx.klines(sym, "1h", n)
+    k = cx.klines(sym, TF, n)
     df = pd.DataFrame([c for c in k["candles"] if c["closed"]])
     df.index = pd.to_datetime(df.pop("t"), unit="ms", utc=True)
     return df[["o", "h", "l", "c", "v", "qv"]], k["source"]
@@ -53,7 +58,7 @@ def predict(state):
         F = features(d, btc)
         x = F.iloc[[-1]][meta["features"]]
         lr = np.log(d.c).diff()
-        sig24 = float(lr.rolling(168, min_periods=100).std().iloc[-1] * np.sqrt(H))
+        sig24 = float(lr.rolling(168, min_periods=100).std().iloc[-1] * np.sqrt(HB))
         r = dict(time=F.index[-1].isoformat(), sym=s, close=float(d.c.iloc[-1]), sig24=sig24, source=src)
         for t in TARGETS:
             p = float(boosters[t].predict(x)[0])
@@ -75,7 +80,7 @@ def score(allp, bars):
     now = max(d.index[-1] for d in bars.values())
     for i, r in allp[allp.fwd.isna()].iterrows():
         t = pd.Timestamp(r.time)
-        t2 = t + pd.Timedelta(hours=H)
+        t2 = t + HB * STEP
         d = bars.get(r.sym)
         if d is None or t2 > now or t2 not in d.index:
             continue
@@ -89,9 +94,10 @@ def score(allp, bars):
 def board(allp, meta, state):
     from sklearn.metrics import roc_auc_score
     s = allp.dropna(subset=["fwd"])
-    lines = [f"# UpScout / DownScout — forward record", "",
+    name = "Fast scouts (15-minute candles, 4-hour horizon)" if FAST else "UpScout / DownScout (hourly candles, 24-hour horizon)"
+    lines = [f"# {name} — forward record", "",
              f"Updated {time.strftime('%Y-%m-%d %H:%M UTC', time.gmtime())}. Predictions so far: {len(allp)}; "
-             f"scored (24 h passed): {len(s)}. Models trained to {meta['trained_to'][:10]}. "
+             f"scored (horizon passed): {len(s)}. Models trained to {meta['trained_to'][:10]}. "
              "Every prediction is written before its outcome is known. Information only: no bot trades these.", ""]
     if len(s) >= 50:
         lines += ["| Scout | forward AUC | flagged calls | hit rate when flagged | base rate | paper P&L of flags after costs |",
@@ -109,10 +115,10 @@ def board(allp, meta, state):
         lines += ["", "Skill is real only if forward AUC stays above 0.55 and flagged hit rates stay above the base rate "
                   "over hundreds of scored calls (history: UpScout AUC 0.61, DownScout 0.57 in 2025–26)."]
     else:
-        lines.append("Not enough scored predictions yet (needs 50+; the first are scored 24 hours after they are made).")
+        lines.append("Not enough scored predictions yet (needs 50+; each is scored once its horizon has passed: 4 h fast, 24 h hourly).")
     last = allp[allp.time == allp.time.max()].sort_values("p_up_move", ascending=False)
     lines += ["", f"## Latest call ({allp.time.max()[:16]} UTC)", "",
-              "| coin | P(up move 24h) | P(down move 24h) | P(trend turns up) | P(trend turns down) | flags |", "|---|---|---|---|---|---|"]
+              f"| coin | P(up move {'4h' if FAST else '24h'}) | P(down move {'4h' if FAST else '24h'}) | P(trend turns up) | P(trend turns down) | flags |", "|---|---|---|---|---|---|"]
     for _, r in last.iterrows():
         fl = " ".join(n for n, k in (("UP", "flag_up_move"), ("DOWN", "flag_down_move"), ("TURN↑", "flag_turn_up"),
                                      ("TURN↓", "flag_turn_down")) if r[k] == 1)
@@ -121,7 +127,8 @@ def board(allp, meta, state):
 
 
 def main():
-    state = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.getcwd(), "scouts_state")
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    state = args[0] if args else os.path.join(os.getcwd(), "scouts_state")
     os.makedirs(state, exist_ok=True)
     allp, bars, meta = predict(state)
     allp = score(allp, bars)
