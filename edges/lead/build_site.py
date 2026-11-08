@@ -94,6 +94,7 @@ comes from the result files; nothing on this page is a forecast.</div>
 <div class="apps">
 <a class="app p" href="omega-prime.html"><b>OMEGA Prime →</b><span>Claude's lean app: today's verdict, your orders, signals, evidence</span></a>
 <a class="app o" href="omega-v6_5-47.html"><b>OMEGA original →</b><span>Your full app with CREED (4.5 MB, loads slower on phones)</span></a>
+<a class="app p" href="https://github.com/BlitzDragneel/Aura/blob/bot-state/STATUS.txt"><b>Paper bot record →</b><span>Runs every hour on GitHub (paper only): open orders, positions, last actions</span></a>
 <a class="app l" href="https://omega-live-api.onrender.com/health"><b>Live API health →</b><span>OKX/Binance crypto, Swissquote forex & gold, Deribit DVOL (wakes in ~1 min)</span></a>
 </div>
 <div class="stats">
