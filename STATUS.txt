@@ -1,4 +1,4 @@
-Updated 2026-11-08 00:29 UTC - paper only, no keys, no real orders
+Updated 2026-11-08 07:15 UTC - paper only, no keys, no real orders
 
 {
  "home": "/home/runner/work/Aura/Aura/state/home",
@@ -23,155 +23,184 @@ Updated 2026-11-08 00:29 UTC - paper only, no keys, no real orders
   "panic_h1": "paper",
   "panic_h3": "paper"
  },
- "last_bar": "2026-11-07T23:00:00+00:00",
+ "last_bar": "2026-11-08T06:00:00+00:00",
  "resting_orders": [
+  {
+   "id": "fb97e05dee7b40aa",
+   "strategy": "panic_h1",
+   "sym": "BCHUSDT",
+   "side": "long",
+   "kind": "limit",
+   "qty": 0.020694,
+   "price": 241.62387257,
+   "placed_at": "2026-11-08T07:11:29.990508+00:00",
+   "expires_at": "2026-11-08T10:00:00+00:00",
+   "hold_bars": 24,
+   "stop_price": 120.81193629,
+   "target_price": null,
+   "leverage": 1,
+   "margin_usdt": 5.0,
+   "signal_bar": "2026-11-08T06:00:00+00:00",
+   "exchange_ids": {
+    "paper": true
+   },
+   "status": "pending",
+   "note": "r24 -6.2% <= own q10 -4.8%; sigma 0.74%",
+   "valid_for_bars": 3,
+   "ref_price": 245.22
+  }
+ ],
+ "open_positions": [
   {
    "id": "eb79e0b087d744dd",
    "strategy": "panic_h1",
    "sym": "ARXUSDT",
    "side": "long",
-   "kind": "limit",
    "qty": 23.997871,
-   "price": 0.20835182,
-   "placed_at": "2026-11-08T00:25:46.928697+00:00",
-   "expires_at": "2026-11-08T03:00:00+00:00",
-   "hold_bars": 24,
+   "entry": 0.20835182,
+   "entry_time": "2026-11-08T07:15:03.683016+00:00",
+   "exit_due": "2026-11-09T01:00:00+00:00",
    "stop_price": 0.10417591,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-07T23:00:00+00:00",
+   "entry_kind": "limit",
    "exchange_ids": {
     "paper": true
    },
-   "status": "pending",
+   "status": "open",
+   "exit": null,
+   "exit_time": null,
+   "exit_reason": "",
+   "pnl_usdt": null,
    "note": "r24 -14.8% <= own q10 -5.9%; sigma 1.59%",
-   "valid_for_bars": 3,
-   "ref_price": 0.2151
-  },
-  {
-   "id": "b1eb2e1c60b64778",
-   "strategy": "panic_h1",
-   "sym": "BCHUSDT",
-   "side": "long",
-   "kind": "limit",
-   "qty": 0.020339,
-   "price": 245.84182849,
-   "placed_at": "2026-11-08T00:25:46.928697+00:00",
-   "expires_at": "2026-11-08T03:00:00+00:00",
-   "hold_bars": 24,
-   "stop_price": 122.92091425,
-   "target_price": null,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "signal_bar": "2026-11-07T23:00:00+00:00",
-   "exchange_ids": {
-    "paper": true
-   },
-   "status": "pending",
-   "note": "r24 -5.5% <= own q10 -4.9%; sigma 0.74%",
-   "valid_for_bars": 3,
-   "ref_price": 249.5
+   "entry_bar": "2026-11-08T00:00:00+00:00"
   },
   {
    "id": "06ba06f2605d4cdb",
    "strategy": "panic_h1",
    "sym": "FOGOUSDT",
    "side": "long",
-   "kind": "limit",
    "qty": 2421.506855,
-   "price": 0.00206483,
-   "placed_at": "2026-11-08T00:25:46.928697+00:00",
-   "expires_at": "2026-11-08T03:00:00+00:00",
-   "hold_bars": 24,
+   "entry": 0.00206483,
+   "entry_time": "2026-11-08T07:15:03.684665+00:00",
+   "exit_due": "2026-11-09T03:00:00+00:00",
    "stop_price": 0.00103242,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-07T23:00:00+00:00",
+   "entry_kind": "limit",
    "exchange_ids": {
     "paper": true
    },
-   "status": "pending",
+   "status": "open",
+   "exit": null,
+   "exit_time": null,
+   "exit_reason": "",
+   "pnl_usdt": null,
    "note": "r24 -9.4% <= own q10 -8.6%; sigma 1.62%",
-   "valid_for_bars": 3,
-   "ref_price": 0.002133
+   "entry_bar": "2026-11-08T02:00:00+00:00"
   }
  ],
- "open_positions": [],
  "closed_trades": 0,
  "today_pnl_paper": 0,
  "recent_log": [
   {
-   "t": "2026-11-08T00:29:23Z",
-   "event": "order",
+   "t": "2026-11-08T07:15:03Z",
+   "event": "filled",
    "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "ARXUSDT",
-   "kind": "limit",
-   "qty": 23.997871,
-   "price": 0.20835182,
-   "ref": 0.2151,
-   "stop": 0.10417591,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "expires": "2026-11-08T03:00:00+00:00",
-   "why": "r24 -14.8% <= own q10 -5.9%; sigma 1.59%"
+   "strategy": "panic_h1",
+   "sym": "FOGOUSDT",
+   "qty": 2421.506855,
+   "price": 0.00206483,
+   "exit_due": "2026-11-09T03:00:00+00:00",
+   "stop": 0.00103242
   },
   {
-   "t": "2026-11-08T00:29:23Z",
+   "t": "2026-11-08T07:15:04Z",
+   "event": "ignored_busy",
+   "rule": "panic_h1",
+   "sym": "ARXUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-08T07:15:04Z",
    "event": "order",
    "mode": "paper",
    "rule": "panic_h1",
    "sym": "BCHUSDT",
    "kind": "limit",
-   "qty": 0.020339,
-   "price": 245.84182849,
-   "ref": 249.5,
-   "stop": 122.92091425,
+   "qty": 0.020694,
+   "price": 241.62387257,
+   "ref": 245.22,
+   "stop": 120.81193629,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "expires": "2026-11-08T03:00:00+00:00",
-   "why": "r24 -5.5% <= own q10 -4.9%; sigma 0.74%"
+   "expires": "2026-11-08T10:00:00+00:00",
+   "why": "r24 -6.2% <= own q10 -4.8%; sigma 0.74%"
   },
   {
-   "t": "2026-11-08T00:29:23Z",
-   "event": "order",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "FOGOUSDT",
-   "kind": "limit",
-   "qty": 2421.506855,
-   "price": 0.00206483,
-   "ref": 0.002133,
-   "stop": 0.00103242,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "expires": "2026-11-08T03:00:00+00:00",
-   "why": "r24 -9.4% <= own q10 -8.6%; sigma 1.62%"
-  },
-  {
-   "t": "2026-11-08T00:29:23Z",
+   "t": "2026-11-08T07:15:04Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
-   "sym": "SIGNUSDT",
+   "sym": "CASHCATUSDT",
    "reasons": [
     "3 positions/orders already open (max 3)"
    ]
   },
   {
-   "t": "2026-11-08T00:29:23Z",
+   "t": "2026-11-08T07:15:04Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
-   "sym": "WOOUSDT",
+   "sym": "GRAMUSDT",
    "reasons": [
     "3 positions/orders already open (max 3)"
    ]
   },
   {
-   "t": "2026-11-08T00:29:23Z",
+   "t": "2026-11-08T07:15:04Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "PIEVERSEUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-08T07:15:04Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "PIUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-08T07:15:04Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "PNUTUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-08T07:15:04Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "PONSUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-08T07:15:04Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
