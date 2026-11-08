@@ -36,9 +36,13 @@ if(prev){ const k = s => s.slice(s.indexOf('function analyseSeries('), s.indexOf
   ok(await pg.evaluate(() => document.getElementById('page-command').classList.contains('active')), 'a link to a removed page lands on Home');
   await pg.evaluate(() => navigate('osig')); await pg.waitForTimeout(3000);
   const sig = await pg.evaluate(() => ({ t:document.getElementById('page-osig').innerText, a:Array.from(document.querySelectorAll('#osigEvidence a')).map(a => a.href),
-    hosts:['climaxSigBody', 'panicSigBody', 'dplanSigBody'].map(id => !!document.getElementById(id)), lab:!!document.getElementById('osigActive') }));
+    hosts:['climaxSigBody', 'panicSigBody', 'dplanSigBody'].map(id => !!document.getElementById(id)), lab:!!document.getElementById('osigActive'),
+    cards:['climaxSigBody', 'panicSigBody', 'dplanSigBody'].map(id => (document.getElementById(id) || {}).innerText || '').map(x => x.length), pb:!!document.getElementById('pbCss') }));
+  ok(sig.cards.every(n => n > 100) && sig.pb && /GRADE B/i.test(sig.t), 'Signals: the climax, panic-bounce (with its styles) and Daily Plan cards render on this page alone', { cards:sig.cards, pb:sig.pb });
   ok(sig.hosts.every(Boolean) && /grade C/.test(sig.t) && /Evidence — what passed and what failed/i.test(sig.t) && sig.a.some(h => /^https:\/\/omega-board\.onrender\.com/.test(h)) && !sig.lab,
     'Signals: climax, panic bounce, Daily Plan (grade C) and the Evidence note with the board link; the Lab lists are gone', { hosts:sig.hosts, a:sig.a });
+  await pg.evaluate(() => navigate('intel')); await pg.waitForTimeout(1200);
+  ok(await pg.evaluate(() => { const c = document.getElementById('clockBody'); return !!c && !!c.closest('#page-intel') && c.innerText.length > 50; }), 'Market Clock (sessions and the CPI/FOMC calendar) moved to Market Intelligence');
   for(const p of KEPT){ await pg.evaluate(x => navigate(x), p); await pg.waitForTimeout(700); }
   const fut = await pg.evaluate(() => ({ lev:!!document.getElementById('futLevTruth'), lab:!!document.getElementById('futRunLab'), acct:!!document.getElementById('perpAccount') }));
   ok(fut.lev && fut.acct && !fut.lab, 'Futures keeps the leverage warning and paper account, without research buttons', fut);

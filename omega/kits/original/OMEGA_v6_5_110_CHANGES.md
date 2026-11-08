@@ -18,4 +18,5 @@
   `cd omega/kits/original && python3 patch110.py ../../apps/omega-v6_5-47.html ../../apps/omega-v6_5-47.html`
   (optional 3rd/4th arguments: another course.json / pricing.json).
 - CREED's engine byte-identical (s102/s109 with PREV = v6.5.108). Build: `python3 patch110.py <v6.5.109> <out>`. Test: s110 (25/25,
-  server mocked with route() in the contract's shapes).
+  server mocked with route() in the contract's shapes). Built with 19 free lessons from course.json as it stood at 11:28 UTC
+  (the course is still being written: refresh with the command above). Size 2,621,277 bytes. Phone shots: audits/ux/shots/v110/.

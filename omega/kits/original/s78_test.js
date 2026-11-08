@@ -7,7 +7,7 @@ function grab(name){ const m = html.match(new RegExp('<script>(\\/\\* ═══ 
 let pass = 0, fail = 0; function ok(c, msg, x){ if(c){ pass++; console.log('ok   ' + msg); } else { fail++; console.log('FAIL ' + msg + (x !== undefined ? ' — ' + JSON.stringify(x).slice(0, 500) : '')); } }
 const store = {}; global.window = {}; global.document = { getElementById: () => null, createElement: () => ({}) }; global.localStorage = { getItem:k => store[k] || null, setItem:(k, v) => { store[k] = String(v); } };
 global.setInterval = () => 0; global.setTimeout = () => 0;
-new Function(grab('EDGE LIBRARY'))(); new Function(grab('CLIMAX REVERSAL'))(); const W = window.OMEGA_CLIMAX, X = W._;
+/* v6.5.109: the edge library was removed; climax uses its own nwT */ if(html.indexOf('/* ═══ EDGE LIBRARY') > -1) new Function(grab('EDGE LIBRARY'))(); new Function(grab('CLIMAX REVERSAL'))(); const W = window.OMEGA_CLIMAX, X = W._;
 const fx = JSON.parse(fs.readFileSync(path.join(D0, 'fixtures/climax25.json'), 'utf8'));
 function data(f){ return { h0:f.h0, syms:f.syms, c:f.c, o:f.o, h:f.h, l:f.l, v:f.v, F:f.F, first:f.first }; }
 function run(D, w0, w1){ const fired = {}; for(let t = w0; t < w1; t++){ const f = X.firesAt(D, t); if(f.length) fired[t] = f; } return X.book(D, fired); }
@@ -38,7 +38,8 @@ const P = X.hourlyPnl(Dsh, T.filter(tr => tr.t + Dsh.h0 >= W.FREEZE_H), 1, fx.c[
 ok(f2.trades === T.length && Math.abs(sumP - sumT) < 1e-9 && f2.weeks > 10 && isFinite(f2.alpha), 'forward record: hourly P&L adds up to the trades; ' + f2.weeks + ' weeks judged against the market');
 // 6. the card, the record, the knowledge
 const card = X.html(); ok(W.STATUS() === 'EDGE' && /passed its final test on 324 untouched coins/.test(card) && /z 2\.35 against a bar of 2\.326/.test(card) && /passed the final bar only just/.test(card) && !/NaN|undefined/.test(card), 'the card states the rule, all three results, and that it passed only just');
-ok(html.includes("{ round:'16',") && /climax reversal/.test(html) && html.includes('"r":"16"') && /earlier studies \(rounds 1–1[6-9], CREED,/.test(html), 'research record and built-in knowledge include round 16');
-ok(/climaxWatchBody/.test(grab('CLIMAX REVERSAL')) && /edgelabBody/.test(grab('CLIMAX REVERSAL')), 'the watch is on the Edge Lab and on Market Watch');
+if(html.indexOf('/* ═══ EDGE LAB (v6.5.70)') > -1) ok(html.includes("{ round:'16',") && /climax reversal/.test(html) && html.includes('"r":"16"') && /earlier studies \(rounds 1–1[6-9], CREED,/.test(html), 'research record and built-in knowledge include round 16');   // v6.5.109: the research record and Edge Lab left the app
+if(html.indexOf('/* ═══ EDGE LAB (v6.5.70)') > -1) ok(/climaxWatchBody/.test(grab('CLIMAX REVERSAL')) && /edgelabBody/.test(grab('CLIMAX REVERSAL')), 'the watch is on the Edge Lab and on Market Watch');
+else ok(/el\('climaxSigBody'\)/.test(grab('CLIMAX REVERSAL')) && !/edgelabBody/.test(grab('CLIMAX REVERSAL')), 'v6.5.109: the watch lives on the Signals page');
 ok(!/c047445f|apikey=/i.test(grab('CLIMAX REVERSAL')), 'no key in the watch');
 console.log('\n' + pass + ' passed, ' + fail + ' failed'); process.exit(fail ? 1 : 0);

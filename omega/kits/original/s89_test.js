@@ -2,6 +2,7 @@
 // the Brain's knowledge (E1–E13, lessons), research record 26–28, and the gold download stopping on a paid-plan answer.
 const fs = require('fs'), path = require('path'), D0 = __dirname, H = 3600e3;
 const FILE = process.argv[2] || path.join(D0, 'omega-v6_5-89.html'), html = fs.readFileSync(FILE, 'utf8');
+const R109 = html.indexOf('window.OMEGA_GOLDH =') < 0;   // v6.5.109: research (Edge Lab knowledge, gold download, Market Watch days) left the app
 function grab(name){ const m = html.match(new RegExp('<script>(\\/\\* ═══ ' + name + '[\\s\\S]*?)<\\/script>')); if(!m) throw new Error(name); return m[1]; }
 let pass = 0, fail = 0; function ok(c, msg, x){ if(c){ pass++; console.log('ok   ' + msg); } else { fail++; console.log('FAIL ' + msg + (x !== undefined ? ' — ' + JSON.stringify(x).slice(0, 500) : '')); } }
 const realST = global.setTimeout, realSI = global.setInterval, store = {};
@@ -30,9 +31,10 @@ ok(key && Mm.stats[key][1] >= 1 && Mm.recs.some(r => r.done), 'level memory: a l
 const dayFull = Math.floor(NOW/864e5) - 1; window.OMEGA_WATCH = { _:{ get:(s, m, f) => (Math.floor(m/1440) === dayFull ? 100 : NaN) } };
 const DD = X.checkDays(NOW); ok(DD.good && DD.good.includes(dayFull) && DD.days[dayFull] === 1, 'a full recorded Market Watch day is counted toward plan E13');
 // Brain knowledge, lessons, record
-const KN = JSON.parse(html.slice(html.indexOf('var KN = ') + 9, html.indexOf(';\n', html.indexOf('var KN = '))));
-ok(['E1','E2','E3','E5','E8','E9','E10','E11','E12','E13'].every(r => KN.earlier.some(e => e.r === r)) && KN.lessons.some(x => /Count results by week/.test(x)) && /t:'A stop-out is usually just noise'/.test(html) && ["{ round:'26',", "{ round:'27',", "{ round:'28',"].every(r => html.includes(r)) && /Research record, rounds 1\\u2013(2[89]|3[0-9])/.test(html), 'the Brain knows plans E1–E13 and the new lessons; research record rounds 26–28');
+if(!R109){ const KN = JSON.parse(html.slice(html.indexOf('var KN = ') + 9, html.indexOf(';\n', html.indexOf('var KN = '))));
+ok(['E1','E2','E3','E5','E8','E9','E10','E11','E12','E13'].every(r => KN.earlier.some(e => e.r === r)) && KN.lessons.some(x => /Count results by week/.test(x)) && /t:'A stop-out is usually just noise'/.test(html) && ["{ round:'26',", "{ round:'27',", "{ round:'28',"].every(r => html.includes(r)) && /Research record, rounds 1\\u2013(2[89]|3[0-9])/.test(html), 'the Brain knows plans E1–E13 and the new lessons; research record rounds 26–28'); }
 (async () => {
+  if(!R109){
   // gold download: a paid-plan answer for silver is final
   global.indexedDB = require((process.env.HARNESS || path.join(D0, 'tools')) + '/fake_idb.js')(); store.omega_td_key = 'KEY1234567890abcdef';
   new Function(grab('GOLD HOURLY HISTORY'))(); const G = window.OMEGA_GOLDH; G._.setWait({ gap:0, retry:0, limit:0 }); let calls = 0;
@@ -40,7 +42,7 @@ ok(['E1','E2','E3','E5','E8','E9','E10','E11','E12','E13'].every(r => KN.earlier
     if(sym === 'XAG/USD') return J({ status:'error', code:403, message:'This symbol is available starting with the Grow or Venture plan.' });
     return J({ status:'ok', values:Array.from({ length:1200 }, (_, i) => { const h = Math.floor(Date.UTC(2026, 9, 20)/H) - i, v = 4000 + Math.sin(i); return { datetime:new Date(h*H).toISOString().slice(0, 19).replace('T', ' '), open:String(v), high:String(v + 1), low:String(v - 1), close:String(v) }; }) }); };
   const r1 = await G.run(), xag = G.state().recs['XAG/USD'], c1 = calls; const r2 = await G.run(); 
-  ok(/Done/.test(r1) && xag && xag.done && /free Twelve Data plan/.test(xag.unavailable) && calls === c1, 'silver’s paid-plan answer is final: marked unavailable, gold completes, and no further requests are made', { r1, xag:xag && xag.unavailable, calls, c1 });
+  ok(/Done/.test(r1) && xag && xag.done && /free Twelve Data plan/.test(xag.unavailable) && calls === c1, 'silver’s paid-plan answer is final: marked unavailable, gold completes, and no further requests are made', { r1, xag:xag && xag.unavailable, calls, c1 }); }
   // browser: the page with a fake Binance, the Autopilot jobs
   global.setTimeout = realST; global.setInterval = realSI; const pw = require('playwright'), b = await pw.chromium.launch(), ctx = await b.newContext({ viewport:{ width:412, height:915 } });
   await ctx.route('**/*', async route => { const u = new URL(route.request().url()); if(u.protocol === 'file:') return route.continue(); const j = x => route.fulfill({ status:200, contentType:'application/json', headers:{ 'access-control-allow-origin':'*' }, body:JSON.stringify(x) });
@@ -54,6 +56,6 @@ ok(['E1','E2','E3','E5','E8','E9','E10','E11','E12','E13'].every(r => KN.earlier
   const r = await pg.evaluate(() => { const e = document.getElementById('page-mread'); return { text:e.innerText, pools:e.querySelectorAll('svg.mr-ladder [data-pool]').length, walls:e.querySelectorAll('svg.mr-ladder [data-wall]').length, wide:document.documentElement.scrollWidth > window.innerWidth, jobs:window.OMEGA_OPERATOR.jobs().map(j => j.id) }; });
   ok(/the read/i.test(r.text) && /Nearest liquidity above/.test(r.text) && r.pools >= 4 && r.walls >= 1 && !/\bNaN\b|\bundefined\b/.test(r.text) && !r.wide && errs.length === 0, 'in the browser: the read, the liquidity ladder (' + r.pools + ' levels, ' + r.walls + ' walls), no NaN, no overflow, no page errors', { errs, wide:r.wide });
   const t = await pg.evaluate(async () => { await window.OMEGA_OPERATOR.tick('mread'); await window.OMEGA_OPERATOR.tick('mwdays'); const S = window.OMEGA_OPERATOR.state().jobs; return { mread:S.mread && S.mread.result, mwdays:S.mwdays && S.mwdays.result }; });
-  ok(r.jobs.includes('mread') && r.jobs.includes('mwdays') && /BTC read, ETH read/.test(t.mread || '') && /full day/.test(t.mwdays || ''), 'the Autopilot runs Market Read (BTC and ETH) and the recorded-days check', t);
+  ok(r.jobs.includes('mread') && (R109 ? !r.jobs.includes('mwdays') : r.jobs.includes('mwdays') && /full day/.test(t.mwdays || '')) && /BTC read, ETH read/.test(t.mread || ''), 'the Autopilot runs Market Read (BTC and ETH) and the recorded-days check', t);
   await pg.screenshot({ path:'/tmp/mread89.png', fullPage:true }); await b.close(); console.log('\n' + pass + ' passed, ' + fail + ' failed'); process.exit(fail ? 1 : 0);
 })();

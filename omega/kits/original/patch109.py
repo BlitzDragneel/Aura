@@ -219,6 +219,22 @@ rep("    t('edge lab wiring', function(){\n      if(typeof window.labEdgeCheck !
     "    t('carry monitor', function(){\n      if(!window.OMEGA_CARRY) return FAIL('carry monitor module missing');\n      return 'OMEGA_CARRY registered';")
 m = re.search(r"    /\* 17\. resample closed-bar integrity.*?\n    \}\);\n", s, re.S); assert m and '__omegaLabInternals' in m.group(0); s = s.replace(m.group(0), '', 1)
 
+# Market Read's "Market Watch recording" section and Risk Guard's "Research exports" card left with their modules
+m = re.search(r"    h \+= '<div class=\"mr-sec\"><h4>Market Watch recording \(for plan E13\)</h4>.*?\n", s); assert m and m.group(0).rstrip().endswith("</div></div>';")
+s = s.replace(m.group(0), "    h += '</div>';   // v6.5.109: Market Watch recording section removed with the recorder\n", 1)
+m = re.search(r"    h \+= '<div class=\"dp-card\"><h3 class=\"dp-h\">Research exports \(automatic\)</h3>.*?\n", s); assert m
+s = s.replace(m.group(0), "", 1)
+
+# climax and panic cards: their other hosts were on the Edge Lab and Market Watch pages; wire them to the Signals page alone
+m = re.search(r"  function wire\(\)\{ var ok = false, b = el\('edgelabBody'\);.*?\n.*?\n    if\(el\('climaxBody'\)\)\{ ok = true; render\(\); start\(\); \} return ok; \}\n", s); assert m
+s = s.replace(m.group(0), "  function wire(){ var ok = false;   // v6.5.109: the Signals page is its only host now\n    if(el('climaxSigBody')){ ok = true; render(); start(); } return ok; }\n", 1)
+rep("  var HOSTS = [['panicSigBody', 'climaxSigBody'], ['panicBody', 'climaxBody'], ['panicWatchBody', 'climaxWatchBody']];",
+    "  var HOSTS = [['panicSigBody', 'climaxSigBody']];   // v6.5.109: Edge Lab and Market Watch hosts removed")
+
+# Market Clock (session hours, CPI/FOMC/expiry calendar) lived on Market Watch: it moves under the Market Intelligence banner
+rep("  function wire(){ var w = el('watchBody'); if(!w) return false; if(!el('clockBody')){ var d = document.createElement('div'); d.id = 'clockBody'; w.parentNode.insertBefore(d, w); } render(); return true; }",
+    "  function wire(){ var pg = el('page-intel'), w = pg && pg.querySelector('.creed-banner'); if(!w) return false; if(!el('clockBody')){ var d = document.createElement('div'); d.id = 'clockBody'; w.parentNode.insertBefore(d, w.nextSibling); } render(); return true; }   // v6.5.109: on Market Intelligence")
+
 # ── version ──
 now = datetime.datetime.now(datetime.UTC).strftime('%Y-%m-%d %H:%M')
 o = re.search(r'v6\.5\.108 (?:·|\\u00b7) build (\d{4}-\d{2}-\d{2} \d{2}:\d{2}) UTC', s).group(1)

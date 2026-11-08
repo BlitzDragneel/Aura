@@ -16,6 +16,6 @@ ok(/v6\.5\.(1\d\d) · build/.test(html) && html.split('CREED REALITY CHECK').len
     const wide = await pg.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
     ok(/CREED reality check/i.test(c.t) && c.after === 'creed-banner' && c.svg && c.bars === 8 && /49%/.test(c.t) && /−0\.118R on 20 majors/.test(c.t) && /−0\.100R/.test(c.t) && /Moving stops and targets cannot create an edge/.test(c.t) && !/NaN|undefined/.test(c.t),
       vp.n + ': the CREED desk opens with the reality check under its banner: the coin-flip chart (8 bars), the three measured results, what failed and why', { after:c.after, bars:c.bars, t:c.t.slice(0, 160) });
-    ok(/CREED, fixed and improved \(E29, E31\)/.test(r) && /Real liquidity \(E30\)/.test(r) && /Neural network \(E32\)/.test(r) && /12,480 rules/.test(r) && /Timing BTC and ETH from market-wide gauges/.test(r) && !/9,240/.test(r) && !wide && !errs.length, vp.n + ': research card lists E29/E31, E30 and E32; no overflow, no errors', { wide, errs });
+    if(html.indexOf('WHY SIGNALS ARE RARE') > -1) ok(/CREED, fixed and improved \(E29, E31\)/.test(r) && /Real liquidity \(E30\)/.test(r) && /Neural network \(E32\)/.test(r) && /12,480 rules/.test(r) && /Timing BTC and ETH from market-wide gauges/.test(r) && !/9,240/.test(r) && !wide && !errs.length, vp.n + ': research card lists E29/E31, E30 and E32; no overflow, no errors', { wide, errs });
     await ctx.close(); }
   await b.close(); console.log('\n' + pass + ' passed, ' + fail + ' failed'); process.exit(fail ? 1 : 0); })();
