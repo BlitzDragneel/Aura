@@ -26,7 +26,7 @@ Sign up at cron-job.org (free). For each job: **Create cronjob**, then:
 |---|---|---|
 | Fast scouts | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-fast-scouts.yml/dispatches` | minutes 2, 17, 32, 47 of every hour |
 | Hourly scouts | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-scouts.yml/dispatches` | minute 17 of every hour |
-| Paper bot | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-paper-bot.yml/dispatches` | minute 7 of every hour |
+| Paper bot | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-paper-bot.yml/dispatches` | minutes 7, 22, 37, 52 of every hour |
 
 (Optional, keeps the Live API awake for your phone: a 4th job, method GET, URL
 `https://omega-live-api.onrender.com/health`, every 10 minutes, no headers. On Render's free plan this uses most of
