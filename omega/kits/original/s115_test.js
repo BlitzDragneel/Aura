@@ -32,5 +32,23 @@ const FOLDS = { intel:5, flow:2, radar:4, brain:3, auto:4, growth:1, settings:1 
   const bd = await pg.evaluate(() => { const td = document.querySelector('.ost-td'), ck = document.querySelector('.omega-clock .ck-sess'), ch = document.querySelector('#climaxSigBody .es-chip');
     const one = e => !e || e.getClientRects().length === 1; return { td:one(td) && (!td || getComputedStyle(td).whiteSpace === 'nowrap'), ck:one(ck), chip:!ch || (getComputedStyle(ch).display === 'inline-block' && ch.getClientRects().length === 1), wide:document.documentElement.scrollWidth > window.innerWidth + 1 }; });
   ok(bd.td && bd.ck && bd.chip && !bd.wide, 'phone: TD counter and clock chip on one line, evidence chips as one block each, no sideways overflow', bd);
+  // install: file:// keeps the inline manifest and explains; the box lists the three device instructions
+  await pg.click('#sbInstall', { force:true }).catch(() => pg.evaluate(() => OMEGA_INSTALL.open())); await pg.waitForTimeout(300);
+  const ins = await pg.evaluate(() => ({ act:document.getElementById('page-settings').classList.contains('active'), box:document.getElementById('installBox').innerText, st:OMEGA_INSTALL.state(), btn:!!document.getElementById('setInstallBtn'), meta:document.querySelector('meta[name="theme-color"]').content }));
+  ok(ins.act && /Android, Chrome: menu ⋮ → Install app/.test(ins.box) && /iPhone or iPad, Safari: Share → Add to Home Screen/.test(ins.box) && /Windows or Mac, Chrome or Edge/.test(ins.box) && /opened from a file/.test(ins.box) && ins.btn && ins.st.real === null && ins.meta === '#F7F8FC',
+    'Install OMEGA (More and Settings): instructions for Android, iPhone and computers; file:// keeps the inline manifest; light browser bar in Heaven', ins);
+  await pg.evaluate(() => { const e = new Event('beforeinstallprompt'); window.__asked = 0; e.prompt = () => { window.__asked++; }; e.userChoice = Promise.resolve({ outcome:'accepted' }); window.dispatchEvent(e); }); await pg.waitForTimeout(200);
+  await pg.click('#installNow'); await pg.waitForTimeout(300);
+  const asked = await pg.evaluate(() => ({ n:window.__asked, t:document.getElementById('installBox').innerText.slice(0, 80) })); ok(asked.n === 1 && /INSTALLED|Installed/.test(asked.t), 'where the browser offers it, "Install now" opens its own install prompt', asked);
   ok(!errs.length, 'no page errors', errs);
+  // on https: the real manifest.json is used when it answers, the inline one when it does not
+  for(const has of [true, false]){ const c2 = await b.newContext(); const body = fs.readFileSync(FILE);
+    await c2.route('**/*', r => { const u = new URL(r.request().url()); if(u.hostname === 'omega.test'){ if(/omega-v6_5-47\.html$/.test(u.pathname)) return r.fulfill({ status:200, contentType:'text/html', body });
+        if(/manifest\.json$/.test(u.pathname)) return has ? r.fulfill({ status:200, contentType:'application/manifest+json', body:JSON.stringify({ name:'OMEGA', start_url:'omega-v6_5-47.html', icons:[{ src:'icon-192.png', sizes:'192x192' }] }) }) : r.fulfill({ status:404, body:'no' });
+        return r.fulfill({ status:404, body:'' }); }
+      return r.fulfill({ status:200, contentType:'application/json', body:'[]' }); });
+    const p2 = await c2.newPage(); await p2.goto('https://omega.test/omega-v6_5-47.html'); await p2.waitForTimeout(4000);
+    const h = await p2.evaluate(() => ({ href:document.querySelector('link[rel="manifest"]').getAttribute('href'), real:OMEGA_INSTALL.state().real }));
+    ok(has ? (h.href === 'manifest.json' && h.real === true) : (/^blob:/.test(h.href) && h.real === false), has ? 'https: the real manifest.json (with icons) is kept' : 'https without manifest.json: the inline manifest is used', h);
+    await c2.close(); }
   await b.close(); console.log('\n' + pass + ' passed, ' + fail + ' failed'); process.exit(fail ? 1 : 0); })();

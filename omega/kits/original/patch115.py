@@ -11,6 +11,12 @@ Layout only; every card, number and control is still in the app; CREED's engine 
     Duplicate headers go (Journal, Growth and Settings keep one title; their subtitles move to About).
  2. Phones: the status line's "TD 1/800", clock session chips, pills and grade tags stay on one line; long evidence chips
     (es-chip) become tidy rounded blocks instead of breaking mid-pill; in Heaven they use the text font.
+ 3. Install OMEGA on phone and computer: on http(s) the real manifest.json next to the app (icons, start_url; served by the
+    board site with service-worker.js) replaces the icon-less inline manifest when it answers (fetch, no-store); the inline one
+    stays on file:// or when the file is missing (CREED's start-up code that writes it stays byte-identical, so this runs
+    after it). "Install OMEGA" in Settings and More: the browser's install prompt where offered (beforeinstallprompt),
+    otherwise instructions for Android Chrome, iPhone Safari and Chrome/Edge on Windows/Mac. The browser bar colour follows
+    the theme (#F7F8FC in Heaven, light for Light/Paper, dark for dark themes).
 usage: python3 patch115.py <v6.5.114> <out>
 """
 import sys, re, datetime
@@ -116,6 +122,63 @@ about('rguard', '<p>' + sub('rguard').capitalize() + '. The rules: 0.5% of the a
 about('mread', '<p>' + sub('mread').capitalize() + '. Today&rsquo;s plan is grade C: a written plan followed on paper, not a tested edge. Liquidity marks show where stops and resting orders sit; place a stop beyond the obvious level, not on it.</p>')
 about('posdesk', '<p>' + sub('posdesk').capitalize() + '. Funding, open interest, long/short ratios and liquidations, with what seven years of data say about them. Measured: crowd positioning did not predict direction (E30); it describes risk, not a signal.</p>')
 about('futures', '<p>' + sub('futures').capitalize() + '. The paper account replays OMEGA&rsquo;s own trades at your margin and leverage, with fees and funding. The leverage warning above stays: in the tests 2&times; already liquidated and 40&times; liquidated about 60% of trades.</p>')
+
+
+# ── 3. Install OMEGA (phone and computer) ──
+def rep(a, b, n=1):
+    global s
+    assert s.count(a) == n, (s.count(a), a[:140])
+    s = s.replace(a, b)
+
+
+# browser bar colour: light themes light, dark themes dark
+rep("mt.setAttribute('content', t === 'heaven' ? '#F6F8FC' : '#0A0D12');",
+    "mt.setAttribute('content', t === 'heaven' ? '#F7F8FC' : t === 'light' ? '#F4F6FA' : t === 'paper' ? '#EDE8DC' : '#0A0D12');")
+rep('<meta name="theme-color" content="#0A0D12">', '<meta name="theme-color" content="#F7F8FC">')
+rep("onclick=\"navigate('about')\">About OMEGA — how everything works</button></p>\n",
+    "onclick=\"navigate('about')\">About OMEGA — how everything works</button>\n"
+    "            <button class=\"btn-ghost\" type=\"button\" id=\"setInstallBtn\" onclick=\"OMEGA_INSTALL.open()\">Install OMEGA on this device</button></p>\n"
+    "          <div id=\"installBox\" class=\"om-card\" style=\"display:none;margin:12px 0 0;\"></div>\n")
+rep("<span class=\"sb-icon\">ⓘ</span> About OMEGA</li>\n",
+    "<span class=\"sb-icon\">ⓘ</span> About OMEGA</li>\n      <li id=\"sbInstall\" onclick=\"OMEGA_INSTALL.open()\"><span class=\"sb-icon\">⤓</span> Install OMEGA</li>\n")
+IJS = r"""<script>/* ═══ INSTALL OMEGA (v6.5.115) ═══
+   The board site serves a real manifest.json (icons, start_url) and service-worker.js next to this file. CREED's start-up
+   code swaps the manifest link for an inline blob without icons; that module stays byte-identical, so instead, on http(s),
+   this puts the real file back when manifest.json answers (fetch, cache no-store). The blob stays only on file:// or when
+   the file is missing. "Install OMEGA" (Settings and More) uses the browser's install prompt where offered, otherwise
+   short instructions per device. */
+(function(){
+  'use strict';
+  var deferred = null, installed = false, real = null;
+  function el(id){ return document.getElementById(id); }
+  function web(){ return /^https?:$/.test(location.protocol); }
+  function standalone(){ try{ return installed || window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true; }catch(e){ return installed; } }
+  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); deferred = e; draw(); });
+  window.addEventListener('appinstalled', function(){ installed = true; deferred = null; draw(); });
+  async function realManifest(){ if(!web()) return false;
+    try{ var r = await fetch('manifest.json', { cache:'no-store' }); if(!r.ok) throw new Error('HTTP ' + r.status); await r.json(); real = true;
+      var link = document.querySelector('link[rel="manifest"]'); if(!link){ link = document.createElement('link'); link.rel = 'manifest'; document.head.appendChild(link); }
+      if(!/manifest\.json(\?|$)/.test(link.getAttribute('href') || '')){ var old = link.href; link.setAttribute('href', 'manifest.json'); if(/^blob:/.test(old)) try{ URL.revokeObjectURL(old); }catch(e){} }
+      return true; }catch(e){ real = false; return false; } }
+  function draw(){ var b = el('installBox'); if(!b || b.style.display === 'none') return;
+    var h = '<div class="om-ch"><h3>Install OMEGA</h3>' + (standalone() ? '<span class="om-tag live">Installed</span>' : '') + '</div>';
+    if(standalone()) h += '<p class="om-meta" style="margin:0">OMEGA is running as an installed app on this device.</p>';
+    else {
+      if(deferred) h += '<p class="om-meta" style="margin:0 0 10px">This browser can install OMEGA as an app: its own icon and window, and it opens offline.</p><div class="journal-actions"><button class="btn-primary" type="button" id="installNow">Install now</button></div>';
+      if(!web()) h += '<p class="om-meta" style="margin:0 0 10px">This copy was opened from a file. Open OMEGA from its web address (https) to install it.</p>';
+      h += '<ul class="om-meta" id="installHow" style="margin:10px 0 0;padding-left:18px;line-height:1.7"><li><b>Android, Chrome:</b> menu &#8942; &rarr; <b>Install app</b>.</li>' +
+        '<li><b>iPhone or iPad, Safari:</b> Share &rarr; <b>Add to Home Screen</b>.</li><li><b>Windows or Mac, Chrome or Edge:</b> the install icon in the address bar.</li></ul>'; }
+    b.innerHTML = h; var n = el('installNow');
+    if(n) n.onclick = async function(){ var d = deferred; if(!d) return; deferred = null; try{ d.prompt(); var c = await d.userChoice; if(c && c.outcome === 'accepted') installed = true; }catch(e){} draw(); }; }
+  function open(){ if(window.navigate) window.navigate('settings'); var b = el('installBox'); if(!b) return; b.style.display = '';
+    draw(); setTimeout(function(){ try{ b.scrollIntoView({ block:'center' }); }catch(e){} }, 80); }
+  function boot(){ realManifest(); window.addEventListener('load', function(){ setTimeout(realManifest, 400); }); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  window.OMEGA_INSTALL = { open:open, draw:draw, realManifest:realManifest, state:function(){ return { prompt:!!deferred, installed:standalone(), real:real, web:web() }; } };
+})();
+</script>
+"""
+s = s.replace('</body>', IJS + '</body>', 1)
 
 CSS = r'''<style id="tidy115Css">/* v6.5.115: folded sections everywhere; badges that keep their shape on phones */
 .hv-sec{margin:0 0 14px}.hv-sec .lower-grid,.hv-sec>.bd-card,.hv-sec>.card{margin:10px 0 0!important}
