@@ -68,7 +68,7 @@ ok(['BTCUSDT', 'ETHUSDT', 'SOLUSDT'].map(E.half).join() === ['BTCUSDT', 'ETHUSDT
   const k2 = [[Date.UTC(2026, 9, 14), '1', '2', '0.5', '99', '100', 0, '0', 0, '40', '0', '0'], [Date.UTC(2026, 9, 15), '1', '2', '0.5', '11', '100', 0, '0', 0, '40', '0', '0']], f2 = [[Date.UTC(2026, 9, 15, 0), 0.0005], [Date.UTC(2026, 9, 14, 16), 0.0003]];
   R = M(R, 'XUSDT', k2, f2, now); const i14 = Date.UTC(2026, 9, 14)/day - R.k0; ok(R.c[i14] === 99 && R.c[i14 + 1] === 11 && Math.abs(R.ff[i14] - 0.0006) < 1e-12 && R.fc[i14] === 3 && R.fc[i14 + 1] === 1 && R.f1 === Date.UTC(2026, 9, 15, 0), 'store: an update overwrites the last days and re-adds a known payment once (no double count)');
   // 8. the store end to end on an IndexedDB stand-in: a coin not stored yet reads as nothing (the bug the v6.5.70 browser test found), then fills and updates
-  global.indexedDB = require('/home/claude/fake_idb.js')(); const DAYm = 864e5, nowT = Date.UTC(2026, 9, 18, 12);
+  global.indexedDB = require(process.env.HARNESS + '/fake_idb.js')(); const DAYm = 864e5, nowT = Date.UTC(2026, 9, 18, 12);
   global.fetch = async (url) => { const u = new URL(url), sym = u.searchParams.get('symbol'), st = +u.searchParams.get('startTime'), en = +u.searchParams.get('endTime'), out = [];
     if(/klines/.test(url)){ for(let t = Date.UTC(2026, 6, 1); t <= en && t < Date.UTC(2026, 9, 18); t += DAYm) if(t >= st) out.push([t, '1', '2', '0.5', '1.5', '10', t + DAYm - 1, '0', 1, '4', '0', '0']); }
     else { for(let t = Date.UTC(2026, 6, 1); t <= en && t < nowT; t += 8*3600e3) if(t >= st) out.push({ fundingTime:t, fundingRate:'0.00010000' }); }

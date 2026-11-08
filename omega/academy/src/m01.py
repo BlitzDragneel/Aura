@@ -1,0 +1,478 @@
+MODULE = {
+"id": "m01", "title": "Start here", "free": True,
+"summary": "What trading really is, why most traders lose, and how this course is different: we test before we trust, and we put risk first.",
+"lessons": [
+{
+"id": "m01-l01", "title": "Welcome, and the honest promise of this course",
+"body_md": r"""
+# Welcome to OMEGA Academy
+
+Welcome. Before you read a single chart pattern, you deserve to know exactly what this course is, what it is not, and what it can and cannot do for you.
+
+## What this course is
+
+OMEGA Academy is a course about **trading with evidence**. It teaches you:
+
+1. **How markets actually work** — spot crypto, perpetual futures (for example on Binance), and CFDs on forex and gold (for example on Exness). Fees, spreads, funding, margin and liquidation, with real numbers at a small account size.
+2. **How to read a chart** without fooling yourself.
+3. **How to manage risk first**, so that one bad week cannot end your trading.
+4. **Which trading ideas have survived fair tests** — and, just as important, the long list that did not.
+5. **How to test your own ideas** before you put money on them.
+6. **How to build a routine, a journal and a written plan**, and how to use bots safely if you choose to.
+
+Every lesson uses the OMEGA app for exercises: the Analysis page, Market Read, the CREED desk, OMEGA Signals, the Risk Guard, the Growth page and the Journal.
+
+## What this course is not
+
+- It is **not** a get-rich-quick system. There is no secret indicator here.
+- It is **not** a signal service. Nothing in this course tells you to buy or sell anything.
+- It does **not** promise profits. Nobody honest can.
+
+You may have seen courses that show screenshots of huge wins and Lamborghinis. We will show you something different: the results of **thousands of trading rules tested fairly**, and what happened to them.
+
+## The research behind this course
+
+OMEGA's research was run with strict rules: every test was written down and fingerprinted *before* the data was looked at, every attempt was counted, costs were always included, and each final test was run once. Here is the short version of what that research found:
+
+| What was tested | Result |
+|---|---|
+| 12,480 daily trading rules (E28) | Daily direction never paid its costs |
+| More than 1,300 variants in the November 2026 round (reversals, trend, momentum, new data sources, exits) | All failed the full test |
+| CREED, a popular-style "4H → 1H → 15M" method, on about 11,000 setups | About a coin flip, then a small loss after costs (−0.10R to −0.12R a trade) |
+| Climax reversal and panic bounce | **Passed** fair tests — but their edge is **shrinking** in 2024–2026 |
+
+Read that table again. Out of many thousands of ideas, **two** passed, and even those are fading. That is not a sales pitch. It is the most useful thing a new trader can learn, because it tells you where *not* to waste your money.
+
+## Who this course is for
+
+- Beginners who want to learn properly, from the mechanics up.
+- Intermediate traders who have lost money and want to understand why.
+- Anyone who trades crypto on an exchange like Binance or forex and gold on a broker like Exness and wants a disciplined, tested approach.
+
+## How to get the most out of it
+
+- **Go in order.** Modules 1 and 2 build the foundations every later lesson relies on.
+- **Do the exercises in the app.** Reading about position sizing is not the same as calculating it for a real chart.
+- **Take the quizzes.** They are short and each answer comes with an explanation.
+- **Paper trade first.** Every exercise can be done on paper or in the app's paper features. You do not need to risk money to complete this course.
+
+## The risk disclaimer (please read it properly)
+
+> Trading spot crypto, perpetual futures and CFDs carries a high risk of losing money. Leveraged products can lose your entire deposit quickly — sometimes in minutes. Nothing in this course is financial advice or a recommendation to trade. Backtested and past results do not guarantee future results. Only trade money you can afford to lose completely. Check that your exchange or broker is permitted to serve you where you live, and seek independent advice if you are unsure.
+
+This is not small print. It is the first lesson. The traders who last are the ones who take risk seriously from day one.
+
+## Exercise
+
+1. Open the OMEGA app and go to **Settings**. Note the server address and your markets.
+2. Open the **Journal**. It is probably empty. That is where every trade you take during this course — paper or real — will be recorded.
+3. Write down, in one sentence, why you want to trade. Keep it. We will come back to it in the final module when you write your trading plan.
+""",
+"key_points": [
+ "This course teaches mechanics, risk, evidence and testing — not a secret system or signals.",
+ "OMEGA's research tested many thousands of rules; almost all failed fair tests after costs.",
+ "Only two setups passed (climax reversal and panic bounce), and both are fading in 2024–2026.",
+ "No profit is promised. Trading leveraged products can lose your whole deposit.",
+ "Do the exercises in the OMEGA app and paper trade first."
+],
+"quiz": [
+ {"q": "What is the main promise of OMEGA Academy?", "options": ["A guaranteed monthly return", "A secret indicator that wins most trades", "To teach how to trade and how to test ideas before trusting them, with risk first", "Daily buy and sell signals"], "answer": 2, "why": "The course teaches mechanics, risk management and testing. It makes no profit promise and is not a signal service."},
+ {"q": "In OMEGA's research, how did 12,480 daily trading rules (E28) do?", "options": ["Most were profitable", "Daily direction never paid its costs", "About half passed", "They were never tested"], "answer": 1, "why": "E28 found that daily direction rules never paid their costs, and the 2024 validation failed."},
+ {"q": "Which statement about the two setups that passed is true?", "options": ["They are guaranteed to keep working", "They work best at 20× leverage", "They passed fair tests but their edge is shrinking", "They win every trade"], "answer": 2, "why": "Climax and panic bounce passed, but 2024–2026 results show the edge fading. Leverage liquidates them."},
+ {"q": "What should you do before risking real money on anything in this course?", "options": ["Practise on paper or a demo first", "Borrow to increase your account", "Use the highest leverage available", "Skip the risk module"], "answer": 0, "why": "Paper trading first is a standing rule throughout the course and the OMEGA research."}
+]
+},
+{
+"id": "m01-l02", "title": "What trading is — and what it isn't",
+"body_md": r"""
+# What trading is — and what it isn't
+
+Before learning *how* to trade, it helps to be clear about *what* trading is. A lot of losses come from a wrong picture of the activity itself.
+
+## Trading versus investing
+
+| | Investing | Trading |
+|---|---|---|
+| Holding time | Months to years | Minutes to days |
+| Source of return | Growth of the asset (a business, a network, an economy) | Price changes, often small, in either direction |
+| Main cost | Small (buy once, hold) | Large (fees, spread, slippage and funding on every trade) |
+| Main risk | Long declines | Costs, leverage, mistakes, emotions |
+
+When you **invest**, you own something and hope it becomes more valuable over time. When you **trade**, you try to profit from price movements over a short period. A trader does not need the asset to grow; they need to be right about the next move *by more than their costs*.
+
+## Trading is close to a zero-sum game — before costs
+
+In the short term, for every buyer there is a seller. If you buy Bitcoin at 60,000 and sell at 61,000, someone sold it to you at 60,000 and someone bought it from you at 61,000. Over minutes or hours, the asset itself does not create much value. Your profit is, roughly, someone else's missed profit.
+
+Then add costs. Every trade pays:
+
+- **Fees** to the exchange or broker,
+- **The spread** (the gap between the buy and sell price),
+- **Slippage** (getting a worse price than you expected),
+- **Funding** or **swap** if you hold a leveraged position over certain times.
+
+So short-term trading as a group is a **negative-sum game after costs**. The exchange and broker always get paid. For the traders, the total is less than zero.
+
+### A simple illustration
+
+Imagine 100 traders, each with 100 USDT, flipping a fair coin to decide to go long or short, with a 1% move either way and 0.1% total costs per trade.
+
+```
+Average result per trade before costs:  0%
+Average cost per trade:                 −0.1%
+Average result per trade after costs:   −0.1%
+After 200 trades: roughly −20% on average (and many far worse)
+```
+
+A trader with no edge does not stand still. **They slowly bleed.** Costs make the coin flip a losing game.
+
+## What an "edge" is
+
+An **edge** is a reason your trades should, on average, make more than they cost. It must be:
+
+1. **Positive after costs** — not just before.
+2. **Repeatable** — it shows up across many trades, not one lucky month.
+3. **Tested fairly** — on data you did not use to design it.
+
+Most things people call an edge ("the trend is your friend", "RSI under 30 is oversold", "buy the breakout") were tested in OMEGA's research and **did not pay their costs** in fair tests. You will see the numbers in Module 4.
+
+## What trading is not
+
+- **Not a salary.** Trading results come in lumps. There will be losing weeks and months, even for a real edge. The OMEGA research found that the setups that passed made much of their money on a small number of big rebounds.
+- **Not a prediction contest.** You do not need to know where price is going. You need a plan with a positive average result and a size that lets you survive the losing streaks.
+- **Not a test of intelligence.** Very smart people lose money trading because they trust ideas without testing them.
+- **Not gambling — if done properly.** But it becomes gambling the moment you trade without an edge, without a plan, or with a size that one bad move can wipe out.
+
+## What a trader's job really is
+
+A good trader spends most of their time on things that are not clicking buy or sell:
+
+1. **Preparing** — knowing which markets move when, what news is scheduled, what the plan is.
+2. **Managing risk** — deciding how much to lose if wrong, before entering.
+3. **Executing a tested plan** — taking the trades the plan says, skipping the ones it does not.
+4. **Recording and reviewing** — journaling every trade and checking whether reality matches the plan.
+
+## Worked example: the cost of "just trading a lot"
+
+Say you trade a 100 USDT account on Binance futures, using 50 USDT of position size per trade (that is 0.5× of your account, no high leverage). Taker fee is 0.05% per side.
+
+```
+Fee per side:     50 × 0.0005 = 0.025 USDT
+Round trip:       0.05 USDT  (plus spread/slippage, say another 0.02)
+Total per trade:  ~0.07 USDT
+10 trades a day × 20 days = 200 trades
+Total cost:       200 × 0.07 = 14 USDT = 14% of the account per month
+```
+
+That 14% has to be earned back *before* you make a cent. Now imagine trading 20× leverage on the full 100 USDT (2,000 USDT position): the same 200 trades would cost around 280 USDT — almost three times the account. This is why frequent, high-leverage trading drains small accounts even when the trader is "right" half the time.
+
+## Exercise
+
+1. Open the **Journal** in OMEGA and look at the filters: real trades and simulated trades are kept separate. Decide now that you will log every practice trade.
+2. Write down three things you believed about trading before starting this course. After Module 4, come back and check which ones survived the evidence.
+""",
+"key_points": [
+ "Investing earns from an asset's growth; trading earns only from price moves larger than costs.",
+ "Short-term trading is close to zero-sum before costs and negative-sum after costs.",
+ "An edge must be positive after costs, repeatable, and tested on unseen data.",
+ "A trader with no edge slowly loses money through fees, spread, slippage and funding.",
+ "Most of a trader's work is preparation, risk management, execution and review."
+],
+"quiz": [
+ {"q": "Why is short-term trading a negative-sum game for traders as a group?", "options": ["Because prices always fall", "Because fees, spreads, slippage and funding are taken out of every trade", "Because exchanges trade against everyone", "It is not; everyone can win"], "answer": 1, "why": "Before costs it is roughly zero-sum; costs make the total negative for traders."},
+ {"q": "Which of these is required for a real edge?", "options": ["It worked last week", "A famous trader uses it", "It is positive after costs on data not used to design it", "It has a high win rate"], "answer": 2, "why": "An edge must survive costs and be tested on unseen data. Win rate alone says nothing about profit."},
+ {"q": "A trader pays about 0.07 USDT per trade and makes 200 trades in a month on a 100 USDT account. What do costs take?", "options": ["About 1.4%", "About 14%", "About 0.14%", "Nothing, fees are refunded"], "answer": 1, "why": "200 × 0.07 = 14 USDT, which is 14% of a 100 USDT account."},
+ {"q": "What happens to a trader with no edge who trades often?", "options": ["They break even", "They slowly lose because of costs", "They win half the time and end up ahead", "They always lose everything in one day"], "answer": 1, "why": "With no edge, the average result before costs is about zero, so costs make the average result negative."}
+]
+},
+{
+"id": "m01-l03", "title": "Why most traders lose",
+"body_md": r"""
+# Why most traders lose
+
+Most retail traders lose money. CFD brokers in many countries are required to publish the share of their retail accounts that lose, and the figures shown are usually well over half. You do not need a statistic to see why, though. The reasons are simple, and almost all of them can be fixed.
+
+## Reason 1: No edge, plus costs
+
+As we saw in the last lesson, a trader with no edge loses slowly through costs. Most popular strategies — moving-average crosses, RSI "oversold" buys, breakouts, trend following on crypto — were tested in OMEGA's research and **failed to pay their costs** out of sample. Many traders are running strategies that, on average, lose a little per trade. They just don't know it, because they never tested them.
+
+## Reason 2: Too much leverage
+
+Leverage is the fastest way to turn a small mistake into a total loss. On a perpetual future, the price only has to move about `1 / leverage` against you (a bit less, after maintenance margin) for the position to be liquidated.
+
+| Leverage | Approximate move to liquidation (isolated, 0.5% maintenance) |
+|---|---|
+| 2× | about 49.5% |
+| 5× | about 19.5% |
+| 10× | about 9.5% |
+| 20× | about 4.5% |
+| 40× | about 2.0% |
+
+Crypto coins move 4.5% in a day all the time. The OMEGA research measured this directly: on the November 2026 panic-bounce tests, at **20× leverage 29–31% of trades hit the liquidation distance** and the test account fell to about 1 USDT; at **40× about 60% of trades** were liquidated. The highest leverage with zero liquidations for the setups that passed was **1×**.
+
+## Reason 3: Losses are harder to recover than gains
+
+Drawdowns compound against you:
+
+| Loss | Gain needed to get back to even |
+|---|---|
+| 10% | 11.1% |
+| 25% | 33.3% |
+| 50% | 100% |
+| 75% | 300% |
+| 90% | 900% |
+
+A trader who loses half the account needs to *double* what is left just to break even. That is why big losses are so destructive, and why risk management (Module 5) matters more than finding entries.
+
+## Reason 4: Small wins, big losses
+
+Many beginners take profits quickly ("lock it in!") and let losses run ("it will come back"). The result is a high win rate and a losing account:
+
+```
+Win rate:          70%
+Average win:       +5 USDT
+Average loss:      −15 USDT
+Expectancy per trade = 0.70 × 5 − 0.30 × 15 = 3.5 − 4.5 = −1.0 USDT
+```
+
+Seventy percent winners, and still losing one dollar per trade. Win rate is not profit.
+
+## Reason 5: Emotions and overtrading
+
+- **Revenge trading** after a loss, with a bigger size to "win it back".
+- **FOMO** — jumping into a move that has already happened.
+- **Boredom trades** — taking trades because you are sitting at the screen.
+- **Overconfidence** after a winning streak, raising size just before the inevitable losing streak.
+
+Each of these increases the number of trades (more costs) and the size of the losers (bigger drawdowns).
+
+## Reason 6: Strategies that win small and blow up rarely
+
+Some strategies look wonderful for months: grid bots, funding harvests, high-win-rate scalping, martingale (doubling after a loss). They win small amounts very often, then lose a huge amount once. OMEGA's research measured one of these, a delta-neutral funding harvest (E34): **+8.8% a year in 2021–24, then −17% a year in 2025–26, including one funding flip that lost −64.6% in a single month.**
+
+## Reason 7: Trusting untested ideas
+
+This is the root of most of the others. Traders copy a setup from a video, see a few nice examples, and trade it with real money. Without a fair test, you cannot tell a real edge from a lucky streak. OMEGA's "turn of the month" idea (E45) looked superb on 2020–23 data — a t-statistic of 4.84, which looks very significant — then went negative in 2024 and **−292 basis points a trade (t −2.65) in 2025–26**. If you had trusted the first test, you would have lost.
+
+## What the winners do differently
+
+The traders who last tend to do a few unglamorous things:
+
+1. They trade **small** — risking a fraction of a percent to about 1% of the account per trade.
+2. They use **low or no leverage**.
+3. They **test** before they trust.
+4. They follow a **written plan** and keep a **journal**.
+5. They stop trading when a daily or weekly loss limit is hit.
+6. They accept that most days are for waiting.
+
+This course is built around those habits.
+
+## Exercise
+
+1. Open the **Risk Guard** page in OMEGA. Read its headline rules: *0.5% a trade, 2 open at most, −2% a day stops, −5% a week stops, review at −20%*.
+2. For your own account size, calculate what 0.5% of your account is in dollars or USDT. Write it down. That is roughly the maximum you would lose on one trade under these rules.
+3. Using the drawdown table above, work out the gain needed to recover from a 30% loss. (Answer: 1 / 0.70 − 1 ≈ 42.9%.)
+""",
+"key_points": [
+ "Most traders lose because they have no tested edge and pay costs on every trade.",
+ "High leverage turns normal price moves into liquidations; at 20× a ~4.5% move is enough.",
+ "Losses compound: a 50% loss needs a 100% gain to recover.",
+ "A high win rate with big losers still loses money; expectancy is what counts.",
+ "Strategies that win small and often can hide rare, huge losses (e.g. funding harvest −64.6% in a month)."
+],
+"quiz": [
+ {"q": "At 20× leverage, roughly how far does price need to move against you to be liquidated (with about 0.5% maintenance margin)?", "options": ["About 45%", "About 20%", "About 4.5%", "About 0.5%"], "answer": 2, "why": "Liquidation distance is about 1/leverage minus maintenance: 5% − 0.5% = 4.5%."},
+ {"q": "After a 50% loss, what gain do you need to get back to even?", "options": ["50%", "75%", "100%", "150%"], "answer": 2, "why": "Half the account must double: 50 → 100 is a 100% gain."},
+ {"q": "A trader wins 70% of trades, averaging +5, and loses 30%, averaging −15. What is the expectancy per trade?", "options": ["+2.0", "+1.0", "0", "−1.0"], "answer": 3, "why": "0.7 × 5 − 0.3 × 15 = 3.5 − 4.5 = −1.0 per trade."},
+ {"q": "What happened to the turn-of-month idea (E45) after its strong 2020–23 result?", "options": ["It kept working", "It went negative in 2024 and clearly negative in 2025–26", "It was never tested again", "It became the best setup"], "answer": 1, "why": "Validation 2024 was −36.5 bp and 2025–26 was −292 bp a trade (t −2.65). A great in-sample result is not proof."}
+]
+},
+{
+"id": "m01-l04", "title": "How this course is different: test before you trust",
+"body_md": r"""
+# How this course is different: test before you trust
+
+Most trading courses teach you what the author believes. This one teaches you what **survived a fair test**, and how to run those tests yourself. Here is how OMEGA's research was done, and why it matters to you.
+
+## The five standing rules
+
+Every OMEGA test followed the same rules:
+
+1. **Never fabricate data.** Only real market history, including coins that were later delisted.
+2. **Plan before data.** The idea, the exact rules and the pass mark are written down and fingerprinted (a digital checksum called an *md5*) *before* the test data is looked at. You cannot quietly change the rules after seeing results.
+3. **Count every try.** If you test 100 variants and show only the best one, it will look good by luck. Every variant is logged.
+4. **Report true results after costs.** Fees, slippage and funding are always included.
+5. **Paper and testnet first.** Nothing goes to real money until it has a forward record.
+
+## Three periods, judged in order
+
+The November 2026 research used fixed periods for every plan:
+
+| Period | Dates | What happens |
+|---|---|---|
+| Discovery | 2020 → 2023 | Search freely; count every variant |
+| Validation | 2024 | Only the promoted variants; judged once |
+| Final | 2025 → latest | The single chosen variant; judged once, never re-tuned |
+
+The idea is simple: an edge that was only "found" in the discovery data might be luck. If it is real, it should keep working on data it has never seen.
+
+## The pass mark
+
+To pass, a rule needed **all** of these:
+
+1. Final-period average after costs above zero, with a t-statistic of at least 2.0 (a measure of how unlikely the result is to be luck; you'll learn this in Module 7). Validation also positive with t ≥ 1.5.
+2. Better than a **luck check**: the real best result must beat what the same search finds on shuffled or random-time data (at least the 95th percentile).
+3. Positive in at least 60% of calendar years, and not carried by one month — results are also reported *without the best 5% of trades*.
+4. Realistic costs: taker fee 0.05% per side plus slippage; maker fee 0.02% only when a limit order would really have filled; funding charged when held across funding times.
+5. Enough trades — at least 100 in the final period (or 50 with t ≥ 3).
+
+That is a hard bar. It is meant to be. Your money deserves that bar too.
+
+## What survived
+
+| Idea | Verdict |
+|---|---|
+| Climax reversal (3σ hourly drop on 3× volume, close in the top 40% of the candle → buy next open, hold 12 h) | **Grade A** — passed on 324 untouched coins |
+| Panic bounce H1/H3 (buy deep limit dips during panics) | **Grade B** — passed, including a survivorship test with 143 delisted coins |
+| Everything else in E28–E82 | Failed |
+
+Those two survivors share a theme: **panic selling gets overdone**. It was the only durable edge found. And even it is weakening: for the panic bounce H1, the bots' backtest shows about +127 basis points (1.27%) a trade in 2020–23, +33 bp in 2024 and +19 bp in 2025–26 — positive, but no longer statistically significant. Without the best 5% of trades, it loses money.
+
+## What failed (a partial list)
+
+- 12,480 daily rules (E28)
+- CREED, about 11,000 setups (E29, E31): about a coin flip, −0.10R to −0.12R a trade after costs
+- Order-book depth and crowd positioning (E30)
+- A neural network on 33 daily measures (E32)
+- Funding harvest (E34), new-listing fade (E35), pairs trading (E36)
+- Forex majors hour by hour (E15)
+- 5-minute and 15-minute reversals, the US open, funding windows, turn of the month (E37–E46)
+- Trend following, breakouts, momentum, funding as a signal, BTC→alt lead-lag (E50–E55)
+- Fear & Greed, implied volatility, Coinbase premium, exchange flows (E63–E70)
+- 480 exit variants on the two survivors (E80): no exit improved them
+- Machine-learning "scouts" that predict direction (E81, E82): good at predicting *when* big moves come, not *which way*
+
+## Why this helps you
+
+Knowing what failed saves you money and years. When someone shows you a moving-average cross that "works", you will know that trend and breakout rules were tested on hundreds of coins and did no better than random entries with the same stop. When a bot promises 1% a day, you will know what "small wins every day" strategies did in the research.
+
+You will also learn the method. By Module 7 you will be able to write a plan, split your data, run a luck check and judge your own idea honestly — in the OMEGA app's Research Lab or on paper.
+
+## The one-sentence philosophy
+
+> **Size is predictable, direction is not; panic selling gets overdone; plan first, count every try, check luck.**
+
+That line, from OMEGA's own research summary, is the backbone of the course.
+
+## Exercise
+
+1. Open **OMEGA Signals** in the app. Read the header: *"only what has been tested — held out-of-sample → fires on a closed hour → signal → outcome → journal."* Notice it says signals are research signals and no order is placed.
+2. Open the **Scoreboard** page. It compares CREED and OMEGA against "a system with no skill at the same reward:risk". Write down why comparing against a no-skill baseline is fairer than just looking at profit.
+""",
+"key_points": [
+ "OMEGA's rules: never fabricate data, plan before data, count every try, report after costs, paper first.",
+ "Every idea was judged on discovery (2020–23), validation (2024) and final (2025→) data, in that order.",
+ "The pass mark included a t-statistic, a luck check, yearly consistency, realistic costs and enough trades.",
+ "Only the climax reversal (A) and panic bounce (B) passed — both built on overdone panic selling — and both are fading.",
+ "Knowing what failed is as valuable as knowing what passed."
+],
+"quiz": [
+ {"q": "Why is the plan written and fingerprinted before looking at the test data?", "options": ["To make the test faster", "So the rules cannot be quietly changed after seeing results", "Because exchanges require it", "To hide the results"], "answer": 1, "why": "Fingerprinting the plan first prevents adjusting the rules to fit the data you have already seen."},
+ {"q": "What does the final period (2025 → latest) represent?", "options": ["Data used to search for the best idea", "Data for tuning the parameters", "Unseen data on which the chosen variant is judged once", "Data that is ignored"], "answer": 2, "why": "The final period is judged once with a single chosen variant and nothing is re-tuned afterwards."},
+ {"q": "What theme do the two surviving setups share?", "options": ["Trend following", "Overdone panic selling", "Breakouts", "Funding carry"], "answer": 1, "why": "Both the climax reversal and the panic bounce buy after overdone selling; that was the only durable edge found."},
+ {"q": "What did the E80 exit lab find?", "options": ["A take-profit doubled the edge", "Tight stops rescued the fading edge", "No exit design improved the two rules; the original exits were best", "Trailing stops were essential"], "answer": 2, "why": "480 exit variants were tried. Stops and quick take-profits made the rules worse; the original exits were kept."}
+]
+},
+{
+"id": "m01-l05", "title": "A tour of the OMEGA app and how to use this course",
+"body_md": r"""
+# A tour of the OMEGA app
+
+This course uses the OMEGA app for exercises. You do not need to use every page, but you should know where things are. This lesson is a guided tour, page by page, with what each page is *for* and how honest it is about the evidence.
+
+## The main pages you will use
+
+| Page | What it does | Used in |
+|---|---|---|
+| **Command** | Everything that needs you, in one place: *Observe → Understand → Validate → Decide → Execute → Record → Learn* | Every module |
+| **Analysis** | Charts and structure on 5-minute, 15-minute and 1-hour candles, a setup score and reward-to-risk per market, plus an in-depth view with a trade plan | Modules 3, 4 |
+| **Market Read** | What is going on now: stops above and below, resting orders, who is crowded, and what the research supports | Modules 3, 8 |
+| **Market Profiles** | Gold and five coins studied one by one: when they move, how they behave, how to size them, what was tested | Modules 3, 8 |
+| **CREED desk** | One method run exactly as taught: 4H battlefield → 1H pullback zone → 15M sweep → acceptance | Module 6 |
+| **OMEGA Signals** | Only conditions that held out-of-sample; each signal is followed to its outcome and journaled. Research signals — no order is placed | Module 6 |
+| **Risk Guard** | 0.5% a trade, 2 open at most, −2% a day stops, −5% a week stops, review at −20% | Module 5 |
+| **Futures** | Paper futures with your margin and leverage; shows liquidation, fees and funding, and what the tests say about leverage | Modules 2, 5 |
+| **Growth** | Your real expectancy from your own logged trades, and a sustainable growth projection | Modules 5, 8 |
+| **Journal** | Every closed trade from every section, real and simulated kept separate, with review notes | Modules 8, 10 |
+| **Research Lab** | OMEGA tests its own conditions on your stored history: hypothesis → in-sample → held-out test | Module 7 |
+| **Edge Lab** | Paper only: untested candidates, half A then half B, forward weeks | Module 7 |
+| **Scoreboard** | CREED vs OMEGA vs a no-skill baseline, on their own records | Modules 6, 9 |
+| **Trading Bots** | Paper-trading bots; no real orders, no broker connection | Module 9 |
+
+## Important honesty labels in the app
+
+The app labels things plainly, and you should read those labels:
+
+- The **Analysis** page says its score is *"the classic analysis engine, not a tested OMEGA idea"*. A score of 60 or more with at least 2:1 reward-to-risk "meets the bar" — but meeting the bar is not evidence of profit.
+- The **Breakout Desk** says *"both setups FAILED a clean test (record only)"*.
+- The **Futures** page states that *"no tested rule has an edge large enough to lever"*.
+- **OMEGA Signals** says signals are *"hypothetical, not financial advice, and no order is ever placed"*.
+
+An app that tells you when its own tools failed is unusual. Use that honesty: whenever a page gives you a number, ask *"has this been tested out of sample, after costs?"*
+
+## Real versus simulated
+
+The Journal keeps **real trades** (manual, analysis, signals) separate from **simulated trades** (bots, paper, backtests). Simulated results are never mixed into real statistics. Keep it that way in your own records too: a paper result is useful practice, not proof.
+
+## How each lesson works
+
+Every lesson has:
+
+1. **The reading** — 6 to 15 minutes, with worked examples.
+2. **An exercise** — usually in the OMEGA app, sometimes on paper with a calculator.
+3. **Key points** — a summary to review later.
+4. **A short quiz** — 3 to 5 questions, each with an explanation.
+
+Your progress is saved on your device. Modules 1 and 2 are free, as is the first lesson of every other module.
+
+## A suggested pace
+
+| Week | Modules | Practice |
+|---|---|---|
+| 1 | 1–2: foundations and mechanics | Fee and margin calculations |
+| 2 | 3–4: charts and indicators | Daily mark-up on Analysis / Market Read |
+| 3 | 5: risk management | Size every paper trade with the Risk Guard rules |
+| 4 | 6: setups with evidence | Watch OMEGA Signals and CREED; log what you see |
+| 5 | 7: testing your own ideas | Write and run one test plan |
+| 6 | 8–9: routine and bots | Daily routine, journal review, paper bot |
+| 7+ | 10: your plan | 30-day practice schedule and capstone |
+
+You can go faster, but do not skip the practice. Understanding comes from doing.
+
+## Safety settings to check now
+
+- Make sure any bot or autopilot you start is in **paper** mode. The Trading Bots page states that no bot there places real orders.
+- If you use API keys for an exchange anywhere, they should never have **withdrawal** permission, and ideally should be restricted to your IP address. You will learn more in Module 9.
+
+## Exercise
+
+1. Open **Command** and read the seven steps across the top. Write one sentence for each step about what you think it means for your own trading.
+2. Open **Analysis**, press *Scan now*, and pick one market. Note its score, its reward-to-risk and the label that says it is not a tested OMEGA idea.
+3. Open **Market Profiles** and read one profile (gold or a coin). Note when that market tends to move.
+4. Open the **Journal** and set the filter to *Real only*. This is where your real record will live.
+""",
+"key_points": [
+ "Know the main pages: Command, Analysis, Market Read, CREED, OMEGA Signals, Risk Guard, Futures, Growth, Journal, Research Lab.",
+ "The app labels what is tested and what is not — e.g. the Analysis score is not a tested OMEGA idea.",
+ "Real and simulated trades are always kept separate; paper results are practice, not proof.",
+ "Each lesson has reading, an app exercise, key points and a quiz.",
+ "Keep bots in paper mode and never give API keys withdrawal permission."
+],
+"quiz": [
+ {"q": "What does the Analysis page say about its own score?", "options": ["It is OMEGA's best tested signal", "It is the classic analysis engine, not a tested OMEGA idea", "It guarantees a 2:1 return", "It is only for gold"], "answer": 1, "why": "The page states plainly that it is not a tested OMEGA idea; OMEGA's own tested signals are on the Signals page."},
+ {"q": "Where are the Risk Guard's default rules summarised?", "options": ["0.5% a trade, 2 open at most, −2% a day, −5% a week, review at −20%", "5% a trade, 10 open, no daily limit", "Use 20× and stop at −50%", "There are no rules"], "answer": 0, "why": "Those are the headline rules shown on the Risk Guard page."},
+ {"q": "Why does the Journal keep real and simulated trades separate?", "options": ["To save space", "Because simulated results are not proof and must not inflate real statistics", "Because bots trade different markets", "It doesn't"], "answer": 1, "why": "Mixing paper or backtest results into real stats would give a false picture of your actual performance."},
+ {"q": "What permission should an exchange API key used with bots never have?", "options": ["Read", "Futures trading", "Withdrawal", "Spot trading"], "answer": 2, "why": "A key without withdrawal permission cannot be used to move your funds off the exchange if it leaks."}
+]
+}
+]}

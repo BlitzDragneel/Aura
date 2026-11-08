@@ -1,7 +1,7 @@
 // Crawl every page of a build; report page errors, console errors, suspicious text (NaN, undefined, Infinity, [object Object]) and sideways overflow.
 const { chromium } = require('playwright'); const fs = require('fs');
 const FILE = process.argv[2], MODE = process.argv[3] || 'offline', OUT = process.argv[4];
-const PAGES = ['command','journal','score','brain','posdesk','edgelab','watch','futures','creed','radar','simulation','ostrat','ostratscan','ostratbt','auto','mind','intel','flow','osig','bdesk','mprof','mread','rguard','lab','analysis','growth','bot','settings'];
+const PAGES = process.env.PAGES ? process.env.PAGES.split(',') : ['command','journal','score','brain','posdesk','edgelab','watch','futures','creed','radar','simulation','ostrat','ostratscan','ostratbt','auto','mind','intel','flow','osig','bdesk','mprof','mread','rguard','lab','analysis','growth','bot','settings'];
 const H = 3600e3;
 function kl(sym, interval, start, limit){ const step = { '1m':60e3, '5m':300e3, '15m':900e3, '1h':H, '4h':4*H, '1d':24*H, '1w':7*24*H, '1M':30*24*H }[interval] || H; const n = Math.min(limit || 500, 1000); const end = Math.floor(Date.now()/step)*step; const t0 = start ? Math.max(+start, end - 3000*step) : end - n*step;
   let p = sym && sym.startsWith('BTC') ? 60000 : sym && sym.startsWith('ETH') ? 3000 : 2, out = []; let seed = 7; for(let t = t0; t <= end && out.length < n; t += step){ seed = (seed*16807) % 2147483647; const r = (seed/2147483647 - 0.5)*0.01; const o = p, c = p*(1 + r); p = c; const v = 1000 + seed % 500; out.push([t, o.toFixed(4), (Math.max(o, c)*1.002).toFixed(4), (Math.min(o, c)*0.998).toFixed(4), c.toFixed(4), String(v), t + step - 1, String(v*c), 100, String(v*0.52), String(v*0.52*c), '0']); } return out; }
