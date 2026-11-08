@@ -121,15 +121,16 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
 
     app = FastAPI(title="OMEGA Live API", version=__version__,
                   description="Live crypto, forex/metals and options data for OMEGA. Read-only, places no orders.")
-    origins = ["null", "http://localhost", "http://127.0.0.1", "http://localhost:8787", "http://127.0.0.1:8787"]
+    origins = ["null", "http://localhost", "http://127.0.0.1", "http://localhost:8787", "http://127.0.0.1:8787",
+               "https://omega-board.onrender.com"]
     origins += [o.strip() for o in os.environ.get("OMEGA_API_ORIGINS", "").split(",") if o.strip()]
     if not TOKEN:
         # No token = loopback only. Refuse any other Host header, so a web page cannot reach this service through
         # DNS rebinding (a hostile name that resolves to 127.0.0.1). OMEGA_API_HOSTS adds names if ever needed.
         hosts = ["127.0.0.1", "localhost", "[::1]", "::1"] + [h.strip() for h in os.environ.get("OMEGA_API_HOSTS", "").split(",") if h.strip()]
         app.add_middleware(TrustedHostMiddleware, allowed_hosts=hosts)
-    app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["GET"],
-                       allow_headers=["Authorization"], allow_credentials=False)
+    app.add_middleware(CORSMiddleware, allow_origins=origins, allow_methods=["GET", "POST"],
+                       allow_headers=["Authorization", "Content-Type", "X-Academy-Token"], allow_credentials=False)
 
     def auth(request: Request):
         if not TOKEN:
@@ -269,5 +270,7 @@ h1{color:#fff;text-shadow:0 0 8px #22f3ff,0 0 20px #22f3ff}a{color:#22f3ff}code{
                 await asyncio.sleep(every)
         return StreamingResponse(gen(), media_type="text/event-stream", headers={"Cache-Control": "no-cache"})
 
+    from .academy import router as academy_router
+    app.include_router(academy_router())
     app.state.recorder, app.state.http = rec, http
     return app
