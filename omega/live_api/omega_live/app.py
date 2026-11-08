@@ -157,6 +157,19 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
         def _start():
             rec.start()
 
+    @app.get("/", include_in_schema=False)
+    def root():
+        from fastapi.responses import HTMLResponse
+        return HTMLResponse("""<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OMEGA Live API</title><style>body{background:#05060d;color:#e8ecff;font:16px system-ui;padding:24px;max-width:640px;margin:auto}
+h1{color:#fff;text-shadow:0 0 8px #22f3ff,0 0 20px #22f3ff}a{color:#22f3ff}code{color:#9dff3a}li{margin:6px 0}</style></head><body>
+<h1>OMEGA Live API</h1><p>Running. This is a data service for the OMEGA apps and bots: it has no screens of its own.</p>
+<ul><li><a href="/health">/health</a>: status (open to anyone)</li>
+<li><a href="/docs">/docs</a>: the list of every endpoint</li>
+<li>Data endpoints need the header <code>Authorization: Bearer &lt;token&gt;</code></li>
+<li>Progress board and apps: <a href="https://omega-board.onrender.com">omega-board.onrender.com</a></li></ul>
+<p>Read-only: it never places orders.</p></body></html>""")
+
     @app.get("/health")
     def health():
         return dict(ok=True, version=__version__, time=int(time.time() * 1000), providers=http.status(),

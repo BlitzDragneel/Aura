@@ -56,3 +56,37 @@ they lived in 2025 and faded in 2026. Watch list only, no approved.json entry. (
 justified; at the drawdowns seen (single trades −60…−85%, mae up to −85%) 20× and 40× would liquidate on the first bad trade.
 (4) E66's 24 discovery rows are logged twice in attempts.jsonl (rerun after a crash fix, identical code/numbers); E67's shift null
 was stopped once it could not change the verdict. Code `edges/research3/`, results `edges/results/E63…E70_result.json`.
+
+## Research bot 2 — E50–E55: trend, momentum, cross-section, positioning (slower timeframes) — all FAIL
+Plans (md5): common rules `E50_common_bot2.md` bd067228…, E50 2daeedca…, E51 bac0f5b6…, E52 d80e1d85…, E53 791a5907…,
+E54 d76471e5…, E55 0607685d…. Code `edges/research2/`. Crypto-only universe (stocks/ETFs/metals/stablecoins excluded,
+`edges/research2/excluded.json`), survivorship-free top-N by 30-day volume, liquidity costs, real funding, 5% delisting penalty.
+Selection: weakest discovery year (needs t ≥ 2 and every year > 0), luck check vs ≥ 200 null grids, ≤ 3 promoted.
+Unique variants 512 (E50 192, E51 48, E52 128, E53 60, E54 36, E55 48); attempts.jsonl also holds 96 superseded E50 4h runs
+(funding over-charge bug in my code, fixed) and 14 duplicate logs from restarted jobs.
+
+| Plan | Idea | Luck check | Eligible / validation | 2025–26 (FINAL, info only unless promoted) | Verdict |
+|---|---|---|---|---|---|
+| E50 | own-trend (TSMOM) BTC/ETH/top-10, 1d & 4h, vol target | best +8.5 bp/day = 70th pct (need 95th) | 10 eligible, none promoted | BTC R60 L/S 4h: +4.2 bp/day t 0.54, CAGR +6.4%, DD −28% (BTC hold −14.6%, −54%) | FAIL |
+| E51 | Donchian + ATR trail, 4h, 10 majors | random entries + same stop beat it (p95 +123 bp) | 0 eligible (2022 / 2020–21 losses) | N100 ×3 both: −42.5 bp/trade t −0.58, n 422 | FAIL |
+| E52 | weekly / 4-weekly cross-section mom & rev, top-100 | passed (97th pct) | 0 eligible (best t 1.45) | 2026: short leg held RAVEUSDT (~50× in a week) → book lost >100% in a day | FAIL |
+| E53 | ALT/BTC ratio trend | 37th pct | 0 eligible | +2.3 bp/day t 0.91, CAGR +7.9%, DD −18%; 2024 negative | FAIL |
+| E54 | funding as contrarian signal (level, own-history z, market gauge) | passed (97th pct) | 3 promoted (funding level = E28 carry): 2024 t 0.33 / −0.39 / −0.87 | best: −8.6 bp/day, CAGR −43%, DD −73% | FAIL |
+| E55 | BTC→alt lead-lag 5m/15m | 13th pct | 0 eligible: gross ≈ 0 bp, net −19 to −32 bp/trade | not run | FAIL |
+
+Why: crypto trend following earns the market's drift, but no more than a shifted signal with the same long bias (E50). The
+catch-up from BTC to alts is gone by the next bar's open (E55). Breakouts add nothing over a random entry with the same stop
+(E51). Cross-sectional and funding effects were 2020–22 phenomena (E52, E54, as in E28). Market-neutral books with short alt
+legs carry squeeze-ruin risk (E52, April 2026). Holding BTC lost 14.6%/yr in 2025–26; trend and ratio rules would have lost less
+or made a little, but not significantly: a risk view, not an edge. No leverage table: nothing passed, and 20×/40× on any
+of these books would have been liquidated: worst single days at 1× were −16.6% (E50 trend book), −16.8% (E54) and −4.5% even for
+the low-risk E53 ratio book, which is already at 20×'s liquidation line (5% − 0.5% margin); 40× (2.0%) dies on ordinary days.
+
+## Lead — E80 exit lab (md5 69205601…): FAIL
+480 exit variants (hold 6–72 h × take-profit × stop × trailing stop) on the two passed rules, 923 perps, real costs and funding.
+- **Panic bounce H1:** the best exit in 2020–23 is the original one (sell 24 h after the fill, no TP, no stop; +109 bp, t 3.02).
+  Every take-profit, stop or trailing stop lowered t; stops hurt most (the edge lives in the deep rebounds). 2024 +31 bp (t 0.50),
+  2025–26 +21 bp (t 0.69, n 39,383).
+- **Climax:** TP +2% within 6 h had the best discovery t (3.46 vs 1.72 for the original 12 h hold, random-entry p95 1.58), but
+  2024 −10 bp (t −0.13) and 2025–26 −23 bp (t −0.67, n 1,267), while the original exit made +126 / +109 bp. A quick TP cut the winners.
+- **Conclusion:** keep the original exits; tighter stops or quick take-profits make these rules worse, and no exit design rescues their fading edge.

@@ -30,7 +30,7 @@ tr.watch td:first-child{color:var(--amber);text-shadow:0 0 8px var(--amber)}
 .foot{color:var(--mut);font-size:12.5px;margin-top:26px}
 </style></head><body><div class="wrap">
 <h1>OMEGA · PROGRESS BOARD</h1>
-<div class="sub">Updated <b>07 Nov 2026 19:23 UTC</b> · research, bots and apps from the repository BlitzDragneel/Aura. Every number below
+<div class="sub">Updated <b>08 Nov 2026 00:06 UTC</b> · research, bots and apps from the repository BlitzDragneel/Aura. Every number below
 comes from the result files; nothing on this page is a forecast.</div>
 <div class="apps">
 <a class="app p" href="omega-prime.html"><b>OMEGA Prime →</b><span>Claude's lean app: today's verdict, your orders, signals, evidence</span></a>
@@ -38,10 +38,10 @@ comes from the result files; nothing on this page is a forecast.</div>
 <a class="app l" href="https://omega-live-api.onrender.com/health"><b>Live API health →</b><span>OKX/Binance crypto, Swissquote forex & gold, Deribit DVOL (wakes in ~1 min)</span></a>
 </div>
 <div class="stats">
-<div class="stat c1"><i>20</i><small>new plans judged (E37+)</small></div>
+<div class="stat c1"><i>25</i><small>new plans judged (E37+)</small></div>
 <div class="stat c2"><i>0</i><small>passed</small></div>
 <div class="stat c3"><i>5</i><small>watch list (grade C)</small></div>
-<div class="stat c4"><i>1,020</i><small>variants counted</small></div>
+<div class="stat c4"><i>1,592</i><small>variants counted</small></div>
 </div>
 <h2>Rules the bots may trade (edges/approved.json)</h2>
 <div class="rules"><div class="rule gA"><b>climax_a</b><span>grade A · paper · max 1×</span><p>3 sigma hourly drop, 3x volume, close in top 40% -&gt; buy next open, hold 12 h</p></div>
@@ -61,7 +61,11 @@ comes from the result files; nothing on this page is a forecast.</div>
 <tr class="fail"><td>E44</td><td>E44 — US cash-open drift conditioned on the pre-open move (10 majors, 5m)</td><td>12</td><td>FAIL</td></tr>
 <tr class="fail"><td>E45</td><td>E45 — Turn-of-month long (10 majors, from 1h bars, 2020 →)</td><td>6</td><td>FAIL</td></tr>
 <tr class="fail"><td>E46</td><td>E46 — Extreme 5m wick / volume-spike reversals (liquidation-cascade proxy, 30 coins)</td><td>16</td><td>FAIL</td></tr>
+<tr class="fail"><td>E50</td><td>E50 — Time-series momentum / trend following on BTC, ETH and a top-10 basket (4h and daily), vol-targeted port</td><td>192</td><td>FAIL</td></tr>
 <tr class="fail"><td>E51</td><td>E51 — Donchian breakout with ATR trailing stop on majors, 4h, both directions</td><td>48</td><td>FAIL</td></tr>
+<tr class="fail"><td>E52</td><td>E52 — Cross-sectional momentum and reversal, weekly / 4-weekly rebalance, top-100 by liquidity, survivorship-f</td><td>128</td><td>FAIL</td></tr>
+<tr class="fail"><td>E53</td><td>E53 — ALT/BTC ratio trend (E20&#x27;s suggested next hypothesis)</td><td>60</td><td>FAIL</td></tr>
+<tr class="fail"><td>E54</td><td>E54 — Funding as a CONTRARIAN price signal on weekly horizons (not a harvest)</td><td>36</td><td>FAIL</td></tr>
 <tr class="fail"><td>E55</td><td>E55 — BTC → alt lead-lag at 5m / 15m on the 30-coin 5m set</td><td>48</td><td>FAIL</td></tr>
 <tr class="fail"><td>E63</td><td>E63 — Fear &amp; Greed index extremes as a contrarian daily signal (BTC, ETH)</td><td>27</td><td>FAIL: no discovery variant beat the luck check (95th pct of shifted-data best t)</td></tr>
 <tr class="fail"><td>E64</td><td>E64 — Deribit DVOL (30-day implied vol) spikes and implied-minus-realized vol (BTC, ETH)</td><td>17</td><td>FAIL: no discovery variant beat the luck check (95th pct of shifted-data best t)</td></tr>
@@ -70,6 +74,7 @@ comes from the result files; nothing on this page is a forecast.</div>
 <tr class="fail"><td>E67</td><td>E67 — Taker buy/sell imbalance (klines taker-buy volume), 1h, liquid top-100 perps</td><td>18</td><td>FAIL: every momentum variant strongly negative after costs (t -6 to -20); best exhaustion variant +43.6 bp t 0.61, 1/4 years</td></tr>
 <tr class="watch"><td>E68</td><td>E68 — New-data regime filters on the PASSED panic bounce H1 and climax reversal</td><td></td><td>FAIL at FINAL</td></tr>
 <tr class="fail"><td>E69</td><td>E69 — On-chain exchange flows and activity (CoinMetrics community), daily, BTC &amp; ETH</td><td>22</td><td>FAIL: no discovery variant beat the luck check (95th pct of shifted-data best t)</td></tr>
-<tr class="fail"><td>E70</td><td>E70 — New-data regime switch: hold BTC vs cash (owner request: slow rules welcome)</td><td></td><td>FAIL: nothing beat the luck check / B&amp;H in discovery</td></tr></table>
+<tr class="fail"><td>E70</td><td>E70 — New-data regime switch: hold BTC vs cash (owner request: slow rules welcome)</td><td></td><td>FAIL: nothing beat the luck check / B&amp;H in discovery</td></tr>
+<tr class="fail"><td>E80</td><td>E80 — Exit lab: take-profit, stop, trailing stop and hold time on the two passed rules (lead, 7 Nov 2026)</td><td>480</td><td>FAIL: no exit beats the original exits out of sample; climax TP+2%/6h passed luck in discovery (t 3.46 vs random p95 1.58) but lost in 2024 (-10 bp, t -0.13) an</td></tr></table>
 <div class="foot">Paper and testnet first. Grade A/B = passed a fair, pre-registered test; not a promise of future profit.</div>
 </div></body></html>
