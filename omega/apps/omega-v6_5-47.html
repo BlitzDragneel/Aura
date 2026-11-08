@@ -49,6 +49,34 @@ html[data-theme="paper"]{
 }
 /* ── v4.3 THEME PACK — 21 additions incl. two-colour blends ── */
 html[data-theme="neon"]{ --bg:#05080A; --panel:#0A1214; --panel2:#0F1A1D; --border:#173036; --text:#DCFCF4; --text-dim:#5FA79A; --bull:#00FFC8; --bear:#FF4D6D; --gold:#00FFC8; --amber:#3BE8C8; --violet:#5EEAD4; }
+
+/* ═══ v6.5.108 — NEON GLOW theme (look only) ═══ */
+html[data-theme="neonglow"]{ --bg:#05060D; --panel:#0B0E1C; --panel2:#111633; --border:#262C5A;
+  --text:#ECF0FF; --text-dim:#97A0C8; --bull:#3DFFB0; --bear:#FF4D7A; --gold:#22F3FF !important; --amber:#FF2BD6; --violet:#B98CFF;
+  --neon1:#22F3FF; --neon2:#FF2BD6; --neon3:#9DFF3A; }
+html[data-theme="neonglow"] body{ background:
+  radial-gradient(1100px 520px at 0% -8%, rgba(120,40,255,.20), transparent 60%),
+  radial-gradient(900px 480px at 105% 0%, rgba(0,200,255,.14), transparent 55%), var(--bg) fixed; }
+html[data-theme="neonglow"] h1, html[data-theme="neonglow"] h2, html[data-theme="neonglow"] .mh-brand{
+  text-shadow:0 0 6px rgba(34,243,255,.55), 0 0 18px rgba(34,243,255,.30); }
+html[data-theme="neonglow"] h3{ text-shadow:0 0 8px rgba(255,43,214,.35); }
+html[data-theme="neonglow"] .mh-glyph{ color:var(--neon1); text-shadow:0 0 8px var(--neon1),0 0 22px var(--neon1),0 0 40px #0af;
+  animation:omegaNeonPulse 3.2s ease-in-out infinite; }
+@keyframes omegaNeonPulse{ 0%,100%{ text-shadow:0 0 6px var(--neon1),0 0 16px var(--neon1); } 50%{ text-shadow:0 0 10px var(--neon1),0 0 28px var(--neon1),0 0 48px #0af; } }
+html[data-theme="neonglow"] .card{ border-color:rgba(34,243,255,.28);
+  box-shadow:0 0 0 1px rgba(34,243,255,.10), 0 0 16px rgba(34,243,255,.10), inset 0 0 22px rgba(120,60,255,.06); }
+html[data-theme="neonglow"] .card:hover{ box-shadow:0 0 0 1px rgba(34,243,255,.30), 0 0 22px rgba(34,243,255,.22); }
+html[data-theme="neonglow"] .btn-primary{ background:linear-gradient(90deg,#16C8FF,#B44CFF); color:#05060D; border-color:transparent;
+  box-shadow:0 0 12px rgba(34,243,255,.55), 0 0 26px rgba(180,76,255,.35); }
+html[data-theme="neonglow"] .btn-outline{ border-color:var(--neon1); color:var(--neon1); box-shadow:0 0 8px rgba(34,243,255,.30); }
+html[data-theme="neonglow"] .btn-outline:hover, html[data-theme="neonglow"] .btn-ghost:hover{ box-shadow:0 0 14px rgba(34,243,255,.55); }
+html[data-theme="neonglow"] .btn-ghost{ color:var(--neon2); }
+html[data-theme="neonglow"] .active, html[data-theme="neonglow"] [aria-current="page"]{ text-shadow:0 0 8px rgba(34,243,255,.7); }
+html[data-theme="neonglow"] input:focus, html[data-theme="neonglow"] select:focus, html[data-theme="neonglow"] textarea:focus{
+  outline:none; border-color:var(--neon1); box-shadow:0 0 0 2px rgba(34,243,255,.25), 0 0 14px rgba(34,243,255,.35); }
+html[data-theme="neonglow"] .bull, html[data-theme="neonglow"] .up{ text-shadow:0 0 8px rgba(61,255,176,.45); }
+html[data-theme="neonglow"] .bear, html[data-theme="neonglow"] .down{ text-shadow:0 0 8px rgba(255,77,122,.45); }
+@media (prefers-reduced-motion: reduce){ html[data-theme="neonglow"] .mh-glyph{ animation:none; } }
 html[data-theme="ocean"]{ --bg:#06101C; --panel:#0B1826; --panel2:#102133; --border:#1B324A; --text:#DCEBF8; --text-dim:#6E8FAD; --bull:#38C6A0; --bear:#F26D7E; --gold:#4A9CE8; --amber:#57ADF5; --violet:#7FB4EF; }
 html[data-theme="sunset"]{ --bg:#160C0A; --panel:#211310; --panel2:#2C1A15; --border:#43281F; --text:#F6E6DE; --text-dim:#B08A79; --bull:#3ECF8E; --bear:#F45B69; --gold:#F47560; --amber:#F59E5B; --violet:#E88AA0; }
 html[data-theme="lavender"]{ --bg:#0F0C16; --panel:#171223; --panel2:#1F1930; --border:#312747; --text:#EAE4F5; --text-dim:#948AB0; --bull:#5FD3A5; --bear:#F0708C; --gold:#B39DDB; --amber:#C0A8E8; --violet:#B39DDB; }
@@ -2019,7 +2047,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   <!-- Mobile header (logo + hamburger) -->
   <header class="mobile-header">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.107 · build 2026-11-07 19:08 UTC</small></div>
+    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.108 · build 2026-11-08 00:07 UTC</small></div>
   </header>
 
   <!-- Sidebar -->
@@ -4126,7 +4154,8 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <div class="field">
           <label>Theme</label>
           <select id="setTheme" onchange="applyTheme()">
-            <option value="dark" selected>Dark (default)</option>
+            <option value="neonglow" selected>Neon Glow (default)</option>
+            <option value="dark">Dark (classic)</option>
             <option value="midnight">Midnight Blue</option>
             <option value="carbon">Carbon (purple)</option>
             <option value="forest">Forest Green</option>
@@ -9843,6 +9872,9 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
 
   document.addEventListener('DOMContentLoaded', function(){
     loadSettings();
+    try{ if(!localStorage.getItem('omega_neon108')){ var th=document.getElementById('setTheme');   // v6.5.108: one-time move to Neon Glow
+      if(th && th.value==='dark'){ th.value='neonglow'; saveSettings(); }
+      localStorage.setItem('omega_neon108','1'); applyTheme(); } }catch(e){}
     loadIndicatorToggles();
     SETTING_IDS.forEach(function(id){ var e=el(id); if(e) e.addEventListener('change', function(){ saveSettings(); if(id==='setAccent') applyAccent(); if(id==='setAnims') applyAnims(); }); });
     var imp = el('importSettingsInput');
@@ -12921,7 +12953,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   // surviving a reload, repeats folded into one line), with what to do, and shown with the
   // self-test and storage state under Settings → Diagnostics. Anything that looks like a key or
   // token is blanked before it is stored.
-  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.107 \u00b7 build 2026-11-07 19:08 UTC';   // rewritten by the build stamp on every release
+  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.108 \u00b7 build 2026-11-08 00:07 UTC';   // rewritten by the build stamp on every release
   function redact(s){ return String(s==null?'':s).replace(/((?:api_?key|apikey|key|token|secret|auth|password)=)[^&\s"']+/gi,'$1…').replace(/sk-ant-[A-Za-z0-9_\-]+/g,'sk-ant-…').replace(/Bearer\s+[A-Za-z0-9._\-]+/g,'Bearer …').slice(0,300); }
   function fixFor(msg){ var m = String(msg);
     if(/quota|QuotaExceeded/i.test(m)) return 'Storage full: old simulated journal rows move to the archive automatically; export a backup if this repeats.';
@@ -25086,7 +25118,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   var LAST_KEY = 'omega_research_pkg_last_v1';
   function L(){ return window.OMEGA_LAB; }
-  var BUILD = 'v6.5.107 \u00b7 build 2026-11-07 19:08 UTC';   // rewritten by the build stamp on every release
+  var BUILD = 'v6.5.108 \u00b7 build 2026-11-08 00:07 UTC';   // rewritten by the build stamp on every release
   function buildStamp(){ return BUILD; }
   function status(row){
     if(!row) return 'NOT TESTED';
