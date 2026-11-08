@@ -56,6 +56,8 @@ class Strategy:
     universe = "all"                   # "all" or a list of symbols
     lookback = 24 * 30                 # bars of history signals() needs
     needs_all = False                  # True when the rule is cross-sectional (needs every coin's bars, e.g. breadth)
+    source_tf = None                   # candles the runner fetches to build `tf` bars (None = tf itself; "5m" for a
+                                       # 15m rule whose research built 15m bars from 5m ones, see core.resample)
 
     def __init__(self):
         # sym -> {"first_ts": pd.Timestamp}: when the coin's history starts (listing). Runners fill this in;
@@ -161,6 +163,23 @@ def dense(df: pd.DataFrame, tf: str = "1h") -> pd.DataFrame:
             df = df.copy()
             df.loc[bad, [c for c in ("o", "h", "l", "c", "v", "qv") if c in df]] = np.nan
     return df
+
+
+def resample(df: pd.DataFrame, tf: str, src: str = "5m") -> pd.DataFrame:
+    """Build `tf` bars from `src` bars exactly as the research did (edges/research1/lib1.load_tf): bins of
+    `tf` aligned to the epoch, labelled by their open time; a bar is valid only if EVERY sub-bar exists (else o/h/l/c/v/qv
+    are NaN). Input: a dense `src` frame (missing / volume-0 bars NaN). A trailing bin whose sub-bars have not all closed
+    yet comes out NaN - callers drop bins that end after the last closed sub-bar."""
+    if df is None or len(df) == 0 or tf == src:
+        return df
+    k = TF_SECONDS[tf] // TF_SECONDS[src]
+    g = df.resample(f"{TF_SECONDS[tf] // 60}min", label="left", closed="left", origin="epoch")
+    cnt = g.c.count()
+    out = pd.DataFrame({"o": g.o.first(), "h": g.h.max(), "l": g.l.min(), "c": g.c.last(), "v": g.v.sum(min_count=1),
+                        "qv": g.qv.sum(min_count=1)})
+    bad = cnt < k
+    out.loc[bad, ["o", "h", "l", "c", "v", "qv"]] = np.nan
+    return out
 
 
 def bar_time(now, tf="1h") -> pd.Timestamp:
