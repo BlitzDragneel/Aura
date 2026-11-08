@@ -110,3 +110,7 @@ modules in the original build. Test: `node s_prime_test.js`.
   buttons, chart pills, ticket buttons and inputs ≥ 44 px tall, small print 12.5 → 13 px.
 - Checks: `s_prime_test.js` 10/10, `s_prime_panic_test.js` 17/17, `s_prime_tickets_test.js` 14/14 before and after (tests unchanged).
   Screenshots and the audit: `audits/ux/`. Not run on a real phone.
+
+## 8 Nov 2026 — evidence update (`patch_prime_evidence.py`, after `patch_prime_ux.py`)
+Ledger rows only: the funding harvest row now reads as the fail it is (E34), and the November round (E37–E80, 34 plans,
+none passed, the leverage result, the passed rules re-measured) is in Evidence. Prime tests 10/17/14 pass.
