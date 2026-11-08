@@ -1,0 +1,40 @@
+# Monthly retrain of UpScout / DownScout on all history up to now (30 liquid coins, hourly, data.binance.vision).
+# New models go to bot-state/scouts/models and are used by the hourly job from then on.
+name: OMEGA scouts retrain (monthly)
+on:
+  schedule:
+    - cron: "41 3 2 * *"     # 03:41 UTC on the 2nd of every month (the month's archive files exist by then)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: omega-bot-state
+  cancel-in-progress: false
+env:
+  CODE_REF: claude/trading-edge-research-bots-gpkvi1
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ env.CODE_REF }}", path: code }
+      - uses: actions/checkout@v4
+        with: { ref: bot-state, path: state }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --quiet httpx pandas numpy pyarrow lightgbm scikit-learn
+      - name: Data and training
+        working-directory: code
+        env:
+          OMEGA_DATA: ${{ runner.temp }}/data
+          SCOUT_MODELS: ${{ github.workspace }}/state/scouts/models
+        run: |
+          python edges/data/fetch.py top1h | tail -n 3
+          python -W ignore -m edges.scouts.train
+      - name: Save
+        working-directory: state
+        run: |
+          git config user.name "omega-scouts"; git config user.email "omega-scouts@users.noreply.github.com"
+          git add -A; git diff --cached --quiet || git commit -q -m "scouts retrained $(date -u '+%Y-%m-%d')"
+          for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done

@@ -1,0 +1,37 @@
+# UpScout / DownScout: every hour, predict real up/down moves and trend turns for 30 coins, score every prediction
+# 24 h later, publish scouts/SCOUTS.md on the 'bot-state' branch. Information only: no orders anywhere.
+name: OMEGA scouts (hourly)
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: omega-bot-state      # never write bot-state at the same time as another job
+  cancel-in-progress: false
+env:
+  CODE_REF: claude/trading-edge-research-bots-gpkvi1
+jobs:
+  scouts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ env.CODE_REF }}", path: code }
+      - uses: actions/checkout@v4
+        with: { ref: bot-state, path: state }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --quiet httpx pandas numpy pyarrow lightgbm scikit-learn
+      - name: Predict and score
+        working-directory: code
+        env:
+          SCOUT_MODELS: ${{ github.workspace }}/state/scouts/models
+        run: python -W ignore -m edges.scouts.live ../state/scouts | tail -n 20
+      - name: Save
+        working-directory: state
+        run: |
+          git config user.name "omega-scouts"; git config user.email "omega-scouts@users.noreply.github.com"
+          git add -A; git diff --cached --quiet || git commit -q -m "scouts $(date -u '+%Y-%m-%d %H:%M')"
+          for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
