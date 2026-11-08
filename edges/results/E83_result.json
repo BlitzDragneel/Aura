@@ -1,0 +1,233 @@
+{
+ "plan": "edges/plans/E83_overnight_drift.md",
+ "md5": "40fdf85fa54320c4d8233a8e3d88941a",
+ "discovery": {
+  "SPY/all": {
+   "n": 4024,
+   "mean_bp": -1.75,
+   "t": -1.83,
+   "ann_pct": -4.9,
+   "max_dd": -0.623,
+   "years_pos": "5/16"
+  },
+  "SPY/weekday": {
+   "n": 3267,
+   "mean_bp": -0.85,
+   "t": -0.83,
+   "ann_pct": -2.7,
+   "max_dd": -0.514,
+   "years_pos": "9/16"
+  },
+  "SPY/after_down": {
+   "n": 1888,
+   "mean_bp": -0.94,
+   "t": -0.61,
+   "ann_pct": -2.9,
+   "max_dd": -0.356,
+   "years_pos": "8/16"
+  },
+  "QQQ/all": {
+   "n": 4024,
+   "mean_bp": 0.3,
+   "t": 0.23,
+   "ann_pct": -0.3,
+   "max_dd": -0.479,
+   "years_pos": "11/16"
+  },
+  "QQQ/weekday": {
+   "n": 3267,
+   "mean_bp": 1.28,
+   "t": 0.9,
+   "ann_pct": 2.2,
+   "max_dd": -0.396,
+   "years_pos": "10/16"
+  },
+  "QQQ/after_down": {
+   "n": 1911,
+   "mean_bp": -0.57,
+   "t": -0.25,
+   "ann_pct": -2.6,
+   "max_dd": -0.535,
+   "years_pos": "11/16"
+  },
+  "IWM/all": {
+   "n": 3923,
+   "mean_bp": 0.77,
+   "t": 0.67,
+   "ann_pct": 1.1,
+   "max_dd": -0.348,
+   "years_pos": "10/16"
+  },
+  "IWM/weekday": {
+   "n": 3184,
+   "mean_bp": 1.34,
+   "t": 1.07,
+   "ann_pct": 2.7,
+   "max_dd": -0.316,
+   "years_pos": "10/16"
+  },
+  "IWM/after_down": {
+   "n": 1879,
+   "mean_bp": 0.54,
+   "t": 0.27,
+   "ann_pct": 0.5,
+   "max_dd": -0.381,
+   "years_pos": "9/16"
+  },
+  "DIA/all": {
+   "n": 4024,
+   "mean_bp": -2.51,
+   "t": -2.92,
+   "ann_pct": -6.6,
+   "max_dd": -0.7,
+   "years_pos": "4/16"
+  },
+  "DIA/weekday": {
+   "n": 3267,
+   "mean_bp": -1.56,
+   "t": -1.68,
+   "ann_pct": -4.3,
+   "max_dd": -0.575,
+   "years_pos": "8/16"
+  },
+  "DIA/after_down": {
+   "n": 1868,
+   "mean_bp": -1.27,
+   "t": -0.89,
+   "ann_pct": -3.7,
+   "max_dd": -0.295,
+   "years_pos": "6/16"
+  }
+ },
+ "benchmarks": {},
+ "chosen": "IWM/weekday",
+ "chosen_periods": {
+  "discovery": {
+   "cfd": {
+    "n": 3184,
+    "mean_bp": 1.34,
+    "t": 1.07,
+    "ann_pct": 2.7,
+    "max_dd": -0.316,
+    "years_pos": "10/16"
+   },
+   "etf": {
+    "n": 3184,
+    "mean_bp": 2.8,
+    "t": 2.23,
+    "ann_pct": 6.5,
+    "max_dd": -0.292,
+    "years_pos": "12/16"
+   },
+   "gross": {
+    "n": 3184,
+    "mean_bp": 4.8,
+    "t": 3.83,
+    "ann_pct": 12.0,
+    "max_dd": -0.268,
+    "years_pos": "14/16"
+   },
+   "intraday_same_days": {
+    "n": 3923,
+    "mean_bp": -2.34,
+    "t": -1.19,
+    "ann_pct": -7.9,
+    "max_dd": -0.787,
+    "years_pos": "7/16"
+   },
+   "buy_and_hold": {
+    "n": 3922,
+    "mean_bp": 3.4,
+    "t": 1.51,
+    "ann_pct": 5.7,
+    "max_dd": -0.595,
+    "years_pos": "11/16"
+   }
+  },
+  "validation": {
+   "cfd": {
+    "n": 1023,
+    "mean_bp": 3.14,
+    "t": 1.38,
+    "ann_pct": 7.2,
+    "max_dd": -0.158,
+    "years_pos": "3/5"
+   },
+   "etf": {
+    "n": 1023,
+    "mean_bp": 4.6,
+    "t": 2.02,
+    "ann_pct": 11.2,
+    "max_dd": -0.154,
+    "years_pos": "4/5"
+   },
+   "gross": {
+    "n": 1023,
+    "mean_bp": 6.6,
+    "t": 2.9,
+    "ann_pct": 17.0,
+    "max_dd": -0.149,
+    "years_pos": "5/5"
+   },
+   "intraday_same_days": {
+    "n": 1259,
+    "mean_bp": -2.22,
+    "t": -0.79,
+    "ann_pct": -6.8,
+    "max_dd": -0.467,
+    "years_pos": "2/5"
+   },
+   "buy_and_hold": {
+    "n": 1258,
+    "mean_bp": 5.67,
+    "t": 1.37,
+    "ann_pct": 12.3,
+    "max_dd": -0.423,
+    "years_pos": "4/5"
+   }
+  },
+  "final": {
+   "cfd": {
+    "n": 1196,
+    "mean_bp": 1.8,
+    "t": 0.8,
+    "ann_pct": 3.7,
+    "max_dd": -0.207,
+    "years_pos": "4/6"
+   },
+   "etf": {
+    "n": 1196,
+    "mean_bp": 3.27,
+    "t": 1.45,
+    "ann_pct": 7.7,
+    "max_dd": -0.179,
+    "years_pos": "4/6"
+   },
+   "gross": {
+    "n": 1196,
+    "mean_bp": 5.27,
+    "t": 2.34,
+    "ann_pct": 13.2,
+    "max_dd": -0.151,
+    "years_pos": "4/6"
+   },
+   "intraday_same_days": {
+    "n": 1469,
+    "mean_bp": -3.23,
+    "t": -1.19,
+    "ann_pct": -9.4,
+    "max_dd": -0.534,
+    "years_pos": "2/6"
+   },
+   "buy_and_hold": {
+    "n": 1468,
+    "mean_bp": 3.35,
+    "t": 0.96,
+    "ann_pct": 6.1,
+    "max_dd": -0.331,
+    "years_pos": "5/6"
+   }
+  }
+ },
+ "verdict": "FAIL: IWM/weekday CFD final 1.8 bp/night t 0.8, validation 3.14 t 1.38"
+}

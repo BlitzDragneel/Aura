@@ -109,3 +109,15 @@ Same model on 15m bars, 4 h horizon, 30 coins; train 2022–23 → 2024, train 2
 2025–26: FastUp AUC 0.623 (top-2% calls −24.7 bp after costs, t −1.70), FastDown 0.614 (−7.2 bp), turn-up 0.807 (−33.7 bp),
 turn-down 0.817 (−19.3 bp, t −1.95). They see big moves coming as well as the hourly scouts, but 4-hour moves are too
 small to pay costs. Live: every 15 minutes on GitHub (bot-state/fast_scouts/), and on demand at the Live API `/scouts`.
+
+## Lead — E83 US index overnight drift (md5 40fdf85f…): FAIL after CFD costs (real before costs)
+SPY/QQQ/IWM/DIA daily 2000–2026, buy the close / sell the next open; 12 variants; chosen IWM weekday nights.
+Gross: +4.8 / +6.6 / +5.3 bp a night (t 3.8 / 2.9 / 2.3) in 2000–15 / 2016–20 / 2021–26 — the anomaly is real, and the day
+session (open→close) lost in every period. Net as an Exness CFD (0.015% spread + 6.5%/yr financing per night): +1.3 / +3.1 /
++1.8 bp (t 1.07 / 1.38 / 0.80) → FAIL. With a zero-commission ETF broker at auction prices: 2021–26 +3.3 bp/night, +7.7%/yr,
+max drawdown −18% (t 1.45) vs buy-and-hold +6.1%/yr, −33%. Not a pass; a low-cost broker variant stays on the watch list.
+
+## Lead — E84 volatility-managed holding (md5 3badc45b…): FAIL
+Exposure = target vol / EWMA vol (cap 1× or 2×), BTC/ETH, 24 variants. Chosen ETH tv 40% hl 10 cap 1×: Sharpe 1.17 vs 1.06
+(2020–23), 0.82 vs 0.70 (2024), −0.10 vs −0.02 (2025–26); drawdown −56/−38/−55% vs −80/−48/−68%. Luck check fails: the
+best Sharpe gain (+0.11) is far below shifted-volatility runs (95th pct +0.51) — the benefit is just holding less, not timing.
