@@ -158,6 +158,8 @@ if __name__ == "__main__":
     if what in ("5m", "all"):
         run(lambda s: klines(s, "5m", "2022-01"), [s for s in TOP if s in syms], 8)
         print("5m DONE", flush=True)
+    if what == "top1h":   # only the 30 liquid coins (scouts' monthly retrain on GitHub)
+        run(lambda s: klines(s, "1h", "2020-01"), [s for s in TOP if s in syms], 8)
     if what in ("1h", "all"):
         run(lambda s: klines(s, "1h", "2020-01"), syms, 16)
         print("1h DONE", flush=True)

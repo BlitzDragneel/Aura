@@ -1,0 +1,181 @@
+{
+ "plan": "edges/plans/E81_trend_scouts.md",
+ "results": {
+  "UpScout": {
+   "validation_2024": {
+    "n_test": 87638,
+    "base_rate_train": 0.1342,
+    "base_rate_test": 0.136,
+    "auc": 0.618,
+    "brier_skill": 0.016,
+    "hit_rate_top2pct": 0.2506,
+    "trades_top2pct": 1325,
+    "mean_net_bp": 120.7,
+    "t_week": 2.2,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "btc_r24",
+     "r336",
+     "dow",
+     "sig168",
+     "slope_ma200",
+     "atr_ratio"
+    ]
+   },
+   "final_2025_26": {
+    "n_test": 160800,
+    "base_rate_train": 0.1347,
+    "base_rate_test": 0.1284,
+    "auc": 0.6118,
+    "brier_skill": 0.0164,
+    "hit_rate_top2pct": 0.273,
+    "trades_top2pct": 1938,
+    "mean_net_bp": 118.0,
+    "t_week": 1.29,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "dow",
+     "btc_r24",
+     "sig168",
+     "r336",
+     "slope_ma200",
+     "atr_ratio"
+    ]
+   }
+  },
+  "DownScout": {
+   "validation_2024": {
+    "n_test": 87638,
+    "base_rate_train": 0.1251,
+    "base_rate_test": 0.1292,
+    "auc": 0.6066,
+    "brier_skill": 0.0076,
+    "hit_rate_top2pct": 0.1151,
+    "trades_top2pct": 608,
+    "mean_net_bp": -112.2,
+    "t_week": -1.75,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "btc_r24",
+     "dow",
+     "r336",
+     "sig168",
+     "slope_ma200",
+     "vol_z24"
+    ]
+   },
+   "final_2025_26": {
+    "n_test": 160800,
+    "base_rate_train": 0.1262,
+    "base_rate_test": 0.1431,
+    "auc": 0.5667,
+    "brier_skill": 0.0005,
+    "hit_rate_top2pct": 0.2098,
+    "trades_top2pct": 2083,
+    "mean_net_bp": 28.3,
+    "t_week": 0.43,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "btc_r24",
+     "dow",
+     "r336",
+     "sig168",
+     "slope_ma200",
+     "atr_ratio"
+    ]
+   }
+  },
+  "UpScout_turn": {
+   "validation_2024": {
+    "n_test": 87638,
+    "base_rate_train": 0.1215,
+    "base_rate_test": 0.1274,
+    "auc": 0.8159,
+    "brier_skill": 0.1502,
+    "hit_rate_top2pct": 0.3876,
+    "trades_top2pct": 1205,
+    "mean_net_bp": 136.9,
+    "t_week": 1.46,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "btc_r24",
+     "dow",
+     "r336",
+     "sig168",
+     "atr_ratio",
+     "slope_ma12"
+    ]
+   },
+   "final_2025_26": {
+    "n_test": 160800,
+    "base_rate_train": 0.1231,
+    "base_rate_test": 0.1218,
+    "auc": 0.7973,
+    "brier_skill": 0.1275,
+    "hit_rate_top2pct": 0.337,
+    "trades_top2pct": 2089,
+    "mean_net_bp": 47.3,
+    "t_week": 0.43,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "btc_r24",
+     "dow",
+     "r336",
+     "sig168",
+     "atr_ratio",
+     "slope_ma12"
+    ]
+   }
+  },
+  "DownScout_turn": {
+   "validation_2024": {
+    "n_test": 87638,
+    "base_rate_train": 0.1237,
+    "base_rate_test": 0.1191,
+    "auc": 0.8071,
+    "brier_skill": 0.1259,
+    "hit_rate_top2pct": 0.2031,
+    "trades_top2pct": 901,
+    "mean_net_bp": -93.0,
+    "t_week": -1.74,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "btc_r24",
+     "dow",
+     "r336",
+     "sig168",
+     "vol_z24",
+     "slope_ma200"
+    ]
+   },
+   "final_2025_26": {
+    "n_test": 160800,
+    "base_rate_train": 0.1225,
+    "base_rate_test": 0.1311,
+    "auc": 0.8075,
+    "brier_skill": 0.148,
+    "hit_rate_top2pct": 0.2868,
+    "trades_top2pct": 2402,
+    "mean_net_bp": -6.2,
+    "t_week": -0.13,
+    "top_features": [
+     "btc_r168",
+     "btc_dist_ma200",
+     "btc_r24",
+     "dow",
+     "r336",
+     "sig168",
+     "vol_z24",
+     "slope_ma200"
+    ]
+   }
+  }
+ }
+}

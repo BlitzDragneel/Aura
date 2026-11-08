@@ -90,3 +90,16 @@ the low-risk E53 ratio book, which is already at 20×'s liquidation line (5% −
 - **Climax:** TP +2% within 6 h had the best discovery t (3.46 vs 1.72 for the original 12 h hold, random-entry p95 1.58), but
   2024 −10 bp (t −0.13) and 2025–26 −23 bp (t −0.67, n 1,267), while the original exit made +126 / +109 bp. A quick TP cut the winners.
 - **Conclusion:** keep the original exits; tighter stops or quick take-profits make these rules worse, and no exit design rescues their fading edge.
+
+## Lead — E81 UpScout / DownScout (md5 8c6e9e6c…): FAIL as a trading rule, kept as forward-scored predictors
+LightGBM on ~40 technical features, 30 liquid coins, 24 h horizon; one configuration; train 2020–23 → 2024, train 2020–24 → 2025–26.
+| Scout | AUC 2024 | AUC 2025–26 | Brier skill 2025–26 | top-2% trades after costs 2024 | 2025–26 |
+|---|---|---|---|---|---|
+| UpScout (≥ +1σ in 24 h) | 0.618 | 0.612 | +0.016 | +121 bp, t 2.20 | +118 bp, t 1.29 |
+| DownScout (≤ −1σ) | 0.607 | 0.567 | +0.001 | −112 bp, t −1.75 | +28 bp, t 0.43 |
+| Trend turn up | 0.816 | 0.797 | +0.128 | +137 bp, t 1.46 | +47 bp, t 0.43 |
+| Trend turn down | 0.807 | 0.808 | +0.148 | −93 bp, t −1.74 | −6 bp, t −0.13 |
+Read with care: much of the AUC is a volatility forecast (when a big move comes, either way) and, for turns, the label
+needs the trend to be down/up now, which the model sees. Direction skill is small. UpScout is the closest to useful
+(positive both years) but misses t ≥ 2 in 2025–26 → not tradeable; both scouts run live as public, forward-scored
+predictions (bot-state branch, scouts/) and feed no bot until their forward record shows skill.
