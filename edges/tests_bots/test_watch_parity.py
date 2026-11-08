@@ -116,7 +116,8 @@ def test_resample_matches_research_loader():
         ref = lib.load_tf(s, "15m")
         mine = bot_frame(s, "15m", 4000)
         ref = ref.loc[mine.index[0]:mine.index[-1]]
-        pd.testing.assert_frame_equal(mine[["o", "h", "l", "c"]], ref[["o", "h", "l", "c"]], check_freq=False)
+        assert (mine.index == ref.index).all() and len(mine) == len(ref)
+        assert np.allclose(mine[["o", "h", "l", "c"]].values, ref[["o", "h", "l", "c"]].values, equal_nan=True, rtol=0, atol=0)
         assert np.allclose(mine.qv.values, ref.qv.values, equal_nan=True)
 
 

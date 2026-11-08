@@ -34,5 +34,57 @@
   "venue": "binance",
   "evidence": "edges/results/E25_result.json; omega/research/e25kit/reference_e22.py",
   "note": "market-wide panic, taker"
+ },
+ {
+  "id": "panic5m_watch",
+  "plan": "E37",
+  "tf": "5m",
+  "grade": "C",
+  "max_leverage": 1,
+  "margin_usdt": 5,
+  "status": "paper",
+  "venue": "binance",
+  "book": "own",
+  "evidence": "edges/results/E37_result.json; edges/research1/run_panic.py (E37), lib1.py",
+  "note": "WATCH (paper only, not tradable): E37 FAILED final (L288 k4 W3 H288: +31.8 bp, t 1.05, n 3,345; without best 5% -32.7). Forward record only. 30 coins, 5m."
+ },
+ {
+  "id": "panic15m_watch",
+  "plan": "E38",
+  "tf": "15m",
+  "grade": "C",
+  "max_leverage": 1,
+  "margin_usdt": 5,
+  "status": "paper",
+  "venue": "binance",
+  "book": "own",
+  "evidence": "edges/results/E38_result.json; edges/research1/run_panic.py (E38), lib1.py",
+  "note": "WATCH (paper only, not tradable): E38 FAILED final (L96 k2 W12 H96: +2.8 bp, t 0.10, n 4,095). 15m bars from 5m candles. Forward record only."
+ },
+ {
+  "id": "breadth15m_watch",
+  "plan": "E40",
+  "tf": "15m",
+  "grade": "C",
+  "max_leverage": 1,
+  "margin_usdt": 5,
+  "status": "paper",
+  "venue": "binance",
+  "book": "own",
+  "evidence": "edges/results/E40_result.json; edges/research1/run_breadth.py",
+  "note": "WATCH (paper only, not tradable): E40 FAILED final (L96 b20 q5 H96: +24.7 bp, t 0.74, n 3,287; without best 5% -44.1). Market-wide panic over the 30 research coins, taker."
+ },
+ {
+  "id": "upscout_watch",
+  "plan": "E81",
+  "tf": "1h",
+  "grade": "C",
+  "max_leverage": 1,
+  "margin_usdt": 5,
+  "status": "paper",
+  "venue": "binance",
+  "book": "own",
+  "evidence": "edges/results/E81_result.json; edges/RESULTS.md (E81); edges/scouts/models/meta.json; edges/scouts/model.py",
+  "note": "WATCH (paper only, not tradable): UpScout top-2% longs, hold 24 h. E81 2025-26 +118 bp, t 1.29 (missed t >= 2). Live model trained to 2026-11-03."
  }
 ]

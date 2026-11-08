@@ -12,6 +12,10 @@ DEFAULTS = {
     "history_bars": 1000,                  # bars fetched per coin on start (rules need ~820)
     "poll_delay_s": 20,                    # wait after a bar closes so the exchange has the final candle
     "check_every_s": 60,                   # between bar closes: check fills, stops, kill switch
+    "catchup_hours": 24,                   # paper: evaluate every bar closed since the last run (runs every 15 min)
+    "fetch_workers": 6,                    # parallel candle requests (each provider still paces its own calls)
+    "bar_cache": True,                     # keep candles in <home>/bars/<tf>/<sym>.parquet: later runs fetch only new bars
+    "universe_refresh_h": 6,
     "binance": {
         "testnet_url": "https://demo-fapi.binance.com",   # Binance's current futures testnet ("demo") REST base
         "live_url": "https://fapi.binance.com",
@@ -23,6 +27,7 @@ DEFAULTS = {
         "stop_via_algo": True,             # since 2025-12-09 STOP_MARKET goes through POST /fapi/v1/algoOrder
         "rebase_testnet_prices": True,     # testnet prices differ from the real market: scale limits by venue/real price
         "request_spacing_s": 0.12,
+        "fallback_gap_s": 0.11,            # seconds between OKX calls when Binance is unreachable (OKX: 20 history calls / 2 s)
     },
     "guard": {
         "hard_max_leverage": 3,            # global cap; each rule's max_leverage in approved.json applies too

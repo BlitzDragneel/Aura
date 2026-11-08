@@ -35,6 +35,9 @@ class MyRule(Strategy):
   "listed ≥ N days" rules and for daily windows anchored as in the research.
 - `now` may be the last closed bar's open time (runners) or a wall-clock time (omega/live_api passes
   `Timestamp.now()`); use `edges.bots.core.is_current(df, now, tf)`.
+- `tf` may be `5m`, `15m` or `1h`; `lookback`, `valid_for_bars` and `hold_bars` count bars of the rule's own `tf`.
+  `source_tf = "5m"` makes the runner fetch 5m candles and build the rule's bars with `core.resample` (a 15m bar exists
+  only if all three 5m bars do, as the research's `lib1.load_tf`).
 - Optional `scan(data, start, end)`: a vectorised `signals()` for the backtester; `edges/tests_bots/test_strategies.py`
   checks scan == bar-by-bar. Set `needs_all = True` for cross-sectional rules (breadth).
 
@@ -42,7 +45,7 @@ class MyRule(Strategy):
 
 # Running the bots (Maro, Windows)
 
-**What they do:** at every hourly close, fetch closed candles, run every rule in `edges/approved.json` whose status
+**What they do:** at every bar close of the shortest rule (5m with the watch list), fetch closed candles, run every rule in `edges/approved.json` whose status
 allows the mode, and (testnet/live) place the orders on Binance USDT-M futures with a protective stop, cancel unfilled
 limits when the rule's window ends, and sell when the rule's hold time is over. Paper mode places nothing.
 
@@ -74,6 +77,22 @@ risk per trade (size × stop) ≤ 3 USDT, daily loss limit 5 USDT, a stop on eve
 distance (2% buffer live), entry undone if its stop cannot be placed (if even that fails: kill switch + the position is
 kept as UNPROTECTED and closed by the kill cycle). Keys only from the OS vault or environment variables; config files
 containing a key/secret are refused; logs redact secrets.
+
+## Watch list (grade C, paper only)
+`panic5m_watch` (E37), `panic15m_watch` (E38), `breadth15m_watch` (E40) and `upscout_watch` (E81) failed their final
+test only narrowly. They run in **paper only** to build a forward record; `edges/tests_bots/test_watch_parity.py` proves
+they trade exactly the research's trades. `"book": "own"` in approved.json gives each its own paper book: it records
+every signal (one position per coin per rule, as in the research) and never takes a seat from, or is refused because
+of, another rule (max open / one per coin / daily loss apply to the shared book only). Never set them to testnet/live.
+
+**Runner data path (GitHub Actions every 15 min):** candles are cached in `<home>/bars/<tf>/<sym>.parquet`; a run
+fetches only the bars closed since the last one (one request per coin per candle size; 1h only after an hour closes),
+in parallel threads, Binance → OKX → Gate (OKX `1000PEPE` = `PEPE` × 1000). A blocked Binance (HTTP 451) is skipped
+for 15 minutes after one failure. In paper mode each rule catches up every bar closed since its last evaluation
+(`catchup_hours`, default 24), fills/exits judged bar by bar in time order, so a 5m rule run every 15 minutes still sees
+every bar; testnet/live evaluate only the bar that just closed. Persist `<home>` between runs (actions/cache or the
+bot-state branch). Measured from Claude's sandbox (OKX fallback): `top:40` universe + the 30 watch coins, cold cache
+134 s, warm 11-14 s; default `all` universe (200 coins via OKX), cold 446 s before the OKX pacing was lowered to 0.11 s.
 
 ## Honest risk text
 - These rules are rare-event, fat-tailed bets. **H1 as a 100 USDT account (E26) had 56–59% drawdowns** and made most of

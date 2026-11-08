@@ -185,3 +185,48 @@ def approve(home, rules):
     json.dump(rules, open(p, "w"))
     json.dump({"approved_file": p, "universe": ["ETHUSDT"]}, open(os.path.join(home, "config.json"), "w"))
     return p
+
+
+def bars(tf="5m", n=600, start="2026-11-01 00:00", price=100.0):
+    idx = pd.date_range(start, periods=n, freq=pd.Timedelta(tf), tz="UTC")
+    c = np.full(n, price)
+    return pd.DataFrame(dict(o=c, h=c * 1.001, l=c * 0.999, c=c, v=1000.0, qv=1e5), index=idx)
+
+
+class TFMarket:
+    """Market data at several candle sizes {tf: {sym: frame}}: history()/klines() return only bars closed by `clock()`
+    and every call is recorded (sym, tf, n)."""
+    def __init__(self, frames, clock):
+        self.frames, self.clock, self.calls = frames, clock, []
+
+    def exchange_info(self):
+        raise RuntimeError("no exchange info in this fake")
+
+    def universe(self, info=None, top=None):
+        return {s: {} for tf in self.frames for s in self.frames[tf]}
+
+    def history(self, sym, tf="1h", n=1000):
+        self.calls.append((sym, tf, n))
+        d = self.frames[tf][sym]
+        return d[d.index + pd.Timedelta(tf) <= self.clock()].iloc[-n:]
+
+    klines = history
+
+
+class EveryBar(Strategy):
+    """Signals at every listed bar; records the bars it was evaluated at."""
+    id = "fake_rule"
+    universe = ["ETHUSDT"]
+    lookback = 20
+
+    def __init__(self, tf, at, sig, source_tf=None):
+        super().__init__()
+        self.tf, self.source_tf = tf, source_tf
+        self.at, self.sig = {pd.Timestamp(t) for t in at}, sig
+        self.seen = []
+
+    def signals(self, bars, now):
+        self.seen.append((pd.Timestamp(now), {s: (len(d), d.index[-1]) for s, d in bars.items()}))
+        if pd.Timestamp(now) in self.at and self.sig.sym in bars:
+            return [Signal(**self.sig.to_dict())]
+        return []

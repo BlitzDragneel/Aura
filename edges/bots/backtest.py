@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 
 from edges.lib import bt
-from edges.bots.core import Signal, dense, tf_delta
+from edges.bots.core import Signal, dense, resample, tf_delta
 from edges.bots import strategies as S
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -217,15 +217,19 @@ def run(strategy_id, syms=None, start="2020-01-01", end=None, tf=None, stop_pct=
         gap_policy="next", funding=True, max_coins=None, verbose=True):
     st = S.load(strategy_id)
     tf = tf or st.tf
-    syms = syms or (st.universe if isinstance(st.universe, list) else available(tf))
+    syms = syms or (st.universe if isinstance(st.universe, list) else available(getattr(st, "source_tf", None) or tf))
     if max_coins:
         syms = syms[:max_coins]
     pad = st.lookback + 24 * 31
+    src = getattr(st, "source_tf", None) or tf
+    k = max(1, int(tf_delta(tf) / tf_delta(src)))
     data, meta = {}, {}
     t0 = time.time()
     for s in syms:
         try:
-            d, m = load_coin(s, tf, start, end, pad_bars=pad)
+            d, m = load_coin(s, src, start, end, pad_bars=pad * k)
+            if src != tf and d is not None:
+                d = resample(d, tf, src)                 # e.g. 15m bars from 5m files, as the research built them
         except (FileNotFoundError, OSError, ValueError):
             continue
         if d is None or len(d) < 50:

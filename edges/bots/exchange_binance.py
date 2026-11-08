@@ -42,19 +42,34 @@ class TransportError(BinanceError):
 class MarketData:
     """Closed candles for the signal side. Binance futures first; if unreachable, omega/live_api's providers
     (OKX, Gate) when that package is importable. Every frame is indexed by UTC bar-open time; the bar still forming is
-    dropped."""
+    dropped. A Binance failure is remembered for `cooldown_s` so a blocked fapi (HTTP 451) costs one request per
+    cooldown, not one per coin. `history()` pages past the per-request limits (Binance 1500, OKX 300 per call)."""
 
-    def __init__(self, base="https://fapi.binance.com", client=None, spacing=0.12, fallback=True):
+    TF_MS = {"1m": 60_000, "5m": 300_000, "15m": 900_000, "1h": 3_600_000, "4h": 14_400_000, "1d": 86_400_000}
+
+    def __init__(self, base="https://fapi.binance.com", client=None, spacing=0.12, fallback=True, cooldown_s=900,
+                 alt_gap_s=None):
         self.base = base.rstrip("/")
         self.c = client or httpx.Client(timeout=15, headers=UA)
         self.spacing = spacing
         self.fallback = fallback
+        self.cooldown_s = cooldown_s
+        self.alt_gap_s = alt_gap_s
         self._alt = None
+        self._down_until = 0.0
         self.source = "binance"
 
     def _get(self, path, **params):
-        r = self.c.get(self.base + path, params=params)
+        if self.fallback and time.time() < self._down_until:
+            raise BinanceError(f"Binance skipped for {self._down_until - time.time():.0f}s after an error", status=0)
+        try:
+            r = self.c.get(self.base + path, params=params)
+        except httpx.HTTPError:
+            self._down_until = time.time() + self.cooldown_s
+            raise
         if r.status_code != 200:
+            if r.status_code not in (400, 404):
+                self._down_until = time.time() + self.cooldown_s
             raise BinanceError(f"Binance {r.status_code} on {path}", status=r.status_code)
         return r.json()
 
@@ -88,26 +103,78 @@ class MarketData:
             if root not in sys.path:
                 sys.path.insert(0, root)
             from omega_live.providers import Crypto, Http   # noqa: import-optional
-            self._alt = Crypto(Http())
+            h = Http()
+            if self.alt_gap_s is not None:
+                h.min_gap["okx"] = float(self.alt_gap_s)
+            self._alt = Crypto(h)
         return self._alt
 
-    def klines(self, sym, tf="1h", limit=1000, now_ms=None):
+    @staticmethod
+    def _alt_symbol(sym):
+        """Binance '1000PEPEUSDT' is OKX/Gate 'PEPE' (price per coin): returns (provider symbol, price multiplier)."""
+        if sym.startswith("1000") and len(sym) > 8:
+            return sym[4:], 1000.0
+        return sym, 1.0
+
+    @staticmethod
+    def _frame(rows):
+        df = pd.DataFrame(rows, columns=["ts", "o", "h", "l", "c", "v", "qv"])
+        df = df.drop_duplicates("ts", keep="last").sort_values("ts")
+        df.index = pd.to_datetime(df.pop("ts"), unit="ms", utc=True)
+        return df.astype(float)
+
+    def _binance_rows(self, sym, tf, n, now_ms):
+        rows, end = [], None
+        while len(rows) < n:
+            p = dict(symbol=sym, interval=tf, limit=min(1500, n - len(rows) + 1))
+            if end is not None:
+                p["endTime"] = end
+            d = self._get("/fapi/v1/klines", **p)
+            chunk = [(int(k[0]), float(k[1]), float(k[2]), float(k[3]), float(k[4]), float(k[5]), float(k[7]))
+                     for k in d if int(k[6]) < now_ms]
+            if not d:
+                break
+            rows = chunk + rows
+            end = int(d[0][0]) - 1
+            if len(d) < p["limit"]:
+                break
+            if self.spacing:
+                time.sleep(self.spacing)
+        return rows
+
+    def _alt_rows(self, sym, tf, n):
+        alt = self._alt_crypto()
+        asym, mult = self._alt_symbol(sym)
+        errors = []
+        for name, fn in (("okx", lambda: alt._k_okx(asym, tf, n)), ("gate", lambda: alt._k_gate(asym, tf, min(n, 1999)))):
+            try:
+                k = fn()
+                break
+            except Exception as e:          # ProviderError, bad payloads: try the next provider
+                errors.append(f"{name}: {type(e).__name__}: {e}")
+        else:
+            raise BinanceError("no candle provider answered: " + "; ".join(errors))
+        self.source = k.get("source", "fallback")
+        return [(c["t"], c["o"] * mult, c["h"] * mult, c["l"] * mult, c["c"] * mult, c["v"] / mult, c["qv"])
+                for c in k["candles"] if c.get("closed")]
+
+    def history(self, sym, tf="1h", n=1000, now_ms=None):
+        """The last `n` CLOSED bars (fewer if the coin is younger), paging as needed."""
         now_ms = now_ms or int(time.time() * 1000)
+        n = max(1, int(n))
         try:
-            d = self._get("/fapi/v1/klines", symbol=sym, interval=tf, limit=min(int(limit), 1500))
-            rows = [(int(k[0]), float(k[1]), float(k[2]), float(k[3]), float(k[4]), float(k[5]), float(k[7]))
-                    for k in d if int(k[6]) < now_ms]
+            rows = self._binance_rows(sym, tf, n, now_ms)
             self.source = "binance"
         except (BinanceError, httpx.HTTPError):
             if not self.fallback:
                 raise
-            alt = self._alt_crypto().klines(sym, tf, min(int(limit), 1000))
-            rows = [(c["t"], c["o"], c["h"], c["l"], c["c"], c["v"], c["qv"]) for c in alt["candles"] if c.get("closed")]
-            self.source = alt.get("source", "fallback")
-        if self.spacing:
+            rows = [r for r in self._alt_rows(sym, tf, n + 1) if r[0] + self.TF_MS[tf] <= now_ms]
+        return self._frame(rows).iloc[-n:]
+
+    def klines(self, sym, tf="1h", limit=1000, now_ms=None):
+        df = self.history(sym, tf, limit, now_ms)
+        if self.spacing and self.source == "binance":
             time.sleep(self.spacing)
-        df = pd.DataFrame(rows, columns=["ts", "o", "h", "l", "c", "v", "qv"])
-        df.index = pd.to_datetime(df.pop("ts"), unit="ms", utc=True)
         return df
 
 

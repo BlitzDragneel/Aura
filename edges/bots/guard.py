@@ -64,6 +64,8 @@ def rule_refusals(cfg, mode, rule):
     st = rule.get("status", "paper")
     if st not in ALLOWED_STATUS.get(mode, set()):
         return [f"rule {rule['id']} has status {st!r}: {mode} mode needs one of {sorted(ALLOWED_STATUS[mode])}"]
+    if mode != "paper" and (rule.get("grade") == "C" or rule.get("book") == "own"):
+        return [f"rule {rule['id']} is on the watch list (grade C / own paper book): paper only"]
     if mode == "live" and not (cfg.get("live") and os.environ.get("OMEGA_LIVE") == LIVE_PHRASE):
         return ["live needs config live:true and OMEGA_LIVE=" + LIVE_PHRASE]
     return []
