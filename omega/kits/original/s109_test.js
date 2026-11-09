@@ -5,8 +5,9 @@ const fs = require('fs'), path = require('path'); const FILE = process.argv[2], 
 let pass = 0, fail = 0; function ok(c, msg, x){ if(c){ pass++; console.log('ok   ' + msg); } else { fail++; console.log('FAIL ' + msg + (x !== undefined ? ' — ' + JSON.stringify(x).slice(0, 500) : '')); } }
 const REMOVED = ['lab', 'edgelab', 'watch', 'mprof', 'bdesk', 'ostrat', 'ostratscan', 'ostratbt', 'simulation', 'mind', 'score'];
 const KEPT = ['command', 'radar', 'flow', 'intel', 'rguard', 'mread', 'osig', 'posdesk', 'futures', 'auto', 'brain', 'analysis', 'journal', 'growth', 'bot', 'creed', 'settings'];
-const GONE_JOBS = ['deep', 'creed', 'patterns', 'topup', 'lab', 'edge', 'context', 'entry', 'forecast', 'reflect', 'council', 'backtests', 'explore', 'portfolio', 'workshop',
-  'harvest', 'r12', 'btctrend', 'wide', 'edgelab', 'bdesk', 'mprof', 'mwatch', 'mwdays', 'goldh', 'autoexp'];
+const R116 = /v6\.5\.1(1[6-9]|[2-9]\d) · build/.test(html);   // v6.5.116: forecast and reflect run again (the Brain page reads them)
+const GONE_JOBS = ['deep', 'creed', 'patterns', 'topup', 'lab', 'edge', 'context', 'entry'].concat(R116 ? [] : ['forecast', 'reflect']).concat(['council', 'backtests', 'explore', 'portfolio', 'workshop',
+  'harvest', 'r12', 'btctrend', 'wide', 'edgelab', 'bdesk', 'mprof', 'mwatch', 'mwdays', 'goldh', 'autoexp']);
 const KEPT_JOBS = ['intel', 'scanner', 'positioning', 'live', 'journal', 'reason', 'desk', 'analysis', 'bots', 'health', 'panic', 'climax', 'mread', 'dplan', 'rguard', 'cockpit', 'truth'];
 ok(/v6\.5\.1(09|[1-9]\d) · build/.test(html), 'build v6.5.109 or later');
 ok(Buffer.byteLength(html) < 2.8e6, 'the app lost real weight: under 2.8 MB (v6.5.108 was 4.57 MB)', Buffer.byteLength(html));

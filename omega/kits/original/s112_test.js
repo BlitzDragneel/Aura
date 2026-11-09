@@ -8,7 +8,7 @@ const M = require(path.resolve(process.env.HARNESS || path.join(__dirname, 'tool
 let pass = 0, fail = 0; function ok(c, msg, x){ if(c){ pass++; console.log('ok   ' + msg); } else { fail++; console.log('FAIL ' + msg + (x !== undefined ? ' — ' + JSON.stringify(x).slice(0, 500) : '')); } }
 ok(/v6\.5\.1(1[2-9]|[2-9]\d) · build/.test(html), 'build v6.5.112 or later');
 ok(/id="liveTokenInput"/.test(html) && /id="page-forex"/.test(html) && /data-page="forex"/.test(html) && /navigate\('forex'\)">Forex board/.test(html), 'token field, Forex page, menu entry and the Charts tab exist');
-ok(/setInterval\(tickFeed, 120000\)/.test(html), 'bots feed refreshes every 2 minutes while visible');
+ok(/setInterval\(tickFeed, 120000\)/.test(html) || /id:'botsfeed'[\s\S]{0,400}120e3 : 15\*60e3/.test(html), 'bots feed refreshes every 2 minutes while visible (from v6.5.116 as the Autopilot job "botsfeed")');
 const prev = process.env.PREV && fs.readFileSync(process.env.PREV, 'utf8');
 if(prev){ const k = s => s.slice(s.indexOf('function analyseSeries('), s.indexOf('function analyseSeries(') + 60000);
   const mod = s => { const i = s.indexOf('// OMEGA v6.5 — CREED / ACCEPTANCE STRATEGY MODULE'); return s.slice(i, s.indexOf('</script>', i)).replace(/\n    if\(!key && window\.OMEGA_LAPI[^\n]*/, ''); };
