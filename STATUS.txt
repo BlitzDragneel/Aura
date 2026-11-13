@@ -1,4 +1,4 @@
-Updated 2026-11-12 19:13 UTC - paper only, no keys, no real orders
+Updated 2026-11-13 00:33 UTC - paper only, no keys, no real orders
 
 {
  "home": "/home/runner/work/Aura/Aura/state/home",
@@ -27,89 +27,62 @@ Updated 2026-11-12 19:13 UTC - paper only, no keys, no real orders
   "breadth15m_watch": "paper",
   "upscout_watch": "paper"
  },
- "last_bar": "2026-11-12T18:00:00+00:00",
+ "last_bar": "2026-11-12T23:00:00+00:00",
  "resting_orders": [
   {
-   "id": "93838d539e0d4b81",
-   "strategy": "panic15m_watch",
-   "sym": "SUIUSDT",
-   "side": "long",
-   "kind": "limit",
-   "qty": 6.329626,
-   "price": 0.78993621,
-   "placed_at": "2026-11-12T17:30:00+00:00",
-   "expires_at": "2026-11-12T20:30:00+00:00",
-   "hold_bars": 96,
-   "stop_price": 0.39496811,
-   "target_price": null,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "signal_bar": "2026-11-12T17:15:00+00:00",
-   "exchange_ids": {
-    "paper": true
-   },
-   "status": "pending",
-   "note": "r96 -6.37% <= own q10 -5.07%; sigma 0.357%",
-   "valid_for_bars": 12,
-   "ref_price": 0.7956,
-   "tf": "15m",
-   "src_tf": "5m"
-  },
-  {
-   "id": "60e7bac4fd5349ca",
+   "id": "60919f7a5a664795",
    "strategy": "panic_h1",
    "sym": "BTCUSDT",
    "side": "long",
    "kind": "limit",
    "qty": 7.1e-05,
-   "price": 71197.79003848,
-   "placed_at": "2026-11-12T19:00:00+00:00",
-   "expires_at": "2026-11-12T22:00:00+00:00",
+   "price": 70997.1049968,
+   "placed_at": "2026-11-12T22:00:00+00:00",
+   "expires_at": "2026-11-13T01:00:00+00:00",
    "hold_bars": 24,
-   "stop_price": 35598.89501924,
+   "stop_price": 35498.5524984,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-12T18:00:00+00:00",
+   "signal_bar": "2026-11-12T21:00:00+00:00",
    "exchange_ids": {
     "paper": true
    },
    "status": "pending",
-   "note": "r24 -3.7% <= own q10 -2.5%; sigma 0.38%",
+   "note": "r24 -3.9% <= own q10 -2.5%; sigma 0.37%",
    "valid_for_bars": 3,
-   "ref_price": 71734.0,
+   "ref_price": 71530.6,
+   "tf": "1h",
+   "src_tf": "1h"
+  },
+  {
+   "id": "7a54032bd30342dd",
+   "strategy": "panic_h1",
+   "sym": "INITUSDT",
+   "side": "long",
+   "kind": "limit",
+   "qty": 49.110361,
+   "price": 0.10181151,
+   "placed_at": "2026-11-12T23:00:00+00:00",
+   "expires_at": "2026-11-13T02:00:00+00:00",
+   "hold_bars": 24,
+   "stop_price": 0.05090576,
+   "target_price": null,
+   "leverage": 1,
+   "margin_usdt": 5.0,
+   "signal_bar": "2026-11-12T22:00:00+00:00",
+   "exchange_ids": {
+    "paper": true
+   },
+   "status": "pending",
+   "note": "r24 -16.3% <= own q10 -11.8%; sigma 5.32%",
+   "valid_for_bars": 3,
+   "ref_price": 0.11324,
    "tf": "1h",
    "src_tf": "1h"
   }
  ],
  "open_positions": [
-  {
-   "id": "65a9e3d544f248a7",
-   "strategy": "panic_h1",
-   "sym": "PIEVERSEUSDT",
-   "side": "long",
-   "qty": 3.122676,
-   "entry": 1.60119097,
-   "entry_time": "2026-11-11T20:00:00+00:00",
-   "exit_due": "2026-11-12T20:00:00+00:00",
-   "stop_price": 0.80059549,
-   "target_price": null,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "entry_kind": "limit",
-   "exchange_ids": {
-    "paper": true
-   },
-   "status": "open",
-   "exit": null,
-   "exit_time": null,
-   "exit_reason": "",
-   "pnl_usdt": null,
-   "note": "r24 -9.8% <= own q10 -4.5%; sigma 2.23%",
-   "entry_bar": "2026-11-11T19:00:00+00:00",
-   "tf": "1h",
-   "src_tf": "1h"
-  },
   {
    "id": "5d3c4056ca8e464f",
    "strategy": "panic5m_watch",
@@ -1191,77 +1164,77 @@ Updated 2026-11-12 19:13 UTC - paper only, no keys, no real orders
    "src_tf": "5m"
   }
  ],
- "closed_trades": 55,
- "today_pnl_paper": -2.664821,
+ "closed_trades": 56,
+ "today_pnl_paper": 0,
  "recent_log": [
   {
-   "t": "2026-11-12T19:13:23Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "DOGEUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-12T19:13:23Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "INJUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-12T19:13:23Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "SOLUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-12T19:13:23Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "UNIUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-12T19:13:23Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "1000PEPEUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-12T19:13:23Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "AAVEUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-12T19:13:23Z",
+   "t": "2026-11-13T00:33:46Z",
    "event": "ignored_busy",
    "rule": "panic5m_watch",
    "sym": "BNBUSDT",
    "note": "the rule already holds this coin (as in the research)"
   },
   {
-   "t": "2026-11-12T19:13:23Z",
+   "t": "2026-11-13T00:33:46Z",
    "event": "ignored_busy",
    "rule": "panic5m_watch",
    "sym": "BTCUSDT",
    "note": "the rule already holds this coin (as in the research)"
   },
   {
-   "t": "2026-11-12T19:13:23Z",
+   "t": "2026-11-13T00:33:46Z",
    "event": "ignored_busy",
    "rule": "panic5m_watch",
-   "sym": "INJUSDT",
+   "sym": "BNBUSDT",
    "note": "the rule already holds this coin (as in the research)"
   },
   {
-   "t": "2026-11-12T19:13:23Z",
+   "t": "2026-11-13T00:33:46Z",
    "event": "ignored_busy",
    "rule": "panic5m_watch",
-   "sym": "UNIUSDT",
+   "sym": "BTCUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-13T00:33:46Z",
+   "event": "ignored_busy",
+   "rule": "panic5m_watch",
+   "sym": "BNBUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-13T00:33:46Z",
+   "event": "ignored_busy",
+   "rule": "panic5m_watch",
+   "sym": "BTCUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-13T00:33:46Z",
+   "event": "ignored_busy",
+   "rule": "panic15m_watch",
+   "sym": "BNBUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-13T00:33:46Z",
+   "event": "ignored_busy",
+   "rule": "panic15m_watch",
+   "sym": "BTCUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-13T00:33:46Z",
+   "event": "ignored_busy",
+   "rule": "panic5m_watch",
+   "sym": "BNBUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-13T00:33:46Z",
+   "event": "ignored_busy",
+   "rule": "panic5m_watch",
+   "sym": "BTCUSDT",
    "note": "the rule already holds this coin (as in the research)"
   }
  ]
