@@ -28,9 +28,9 @@ INSTR = {
     "XAGUSD": dict(pip=0.01, usd_per_unit_per_lot=5000.0, spread=0.03, data="XAGUSDT", kind="perp"),
     "BTCUSD": dict(pip=1.0, usd_per_unit_per_lot=1.0, spread=10.0, data="BTCUSDT", kind="perp"),
     "ETHUSD": dict(pip=0.1, usd_per_unit_per_lot=1.0, spread=1.0, data="ETHUSDT", kind="perp"),
-    "US30": dict(pip=1.0, usd_per_unit_per_lot=1.0, spread=2.0, data="YM=F", kind="yahoo"),
-    "NAS100": dict(pip=1.0, usd_per_unit_per_lot=1.0, spread=1.5, data="NQ=F", kind="yahoo"),
-    "US500": dict(pip=0.1, usd_per_unit_per_lot=1.0, spread=0.5, data="ES=F", kind="yahoo"),
+    "US30": dict(pip=1.0, usd_per_unit_per_lot=1.0, spread=2.0, data="YM=F", cash="^DJI", kind="yahoo"),
+    "NAS100": dict(pip=1.0, usd_per_unit_per_lot=1.0, spread=1.5, data="NQ=F", cash="^NDX", kind="yahoo"),
+    "US500": dict(pip=0.1, usd_per_unit_per_lot=1.0, spread=0.5, data="ES=F", cash="^GSPC", kind="yahoo"),
     "GER40": dict(pip=1.0, usd_per_unit_per_lot=1.0, spread=1.5, data="^GDAXI", kind="yahoo"),
 }
 ALIASES = {"GOLD": "XAUUSD", "XAU": "XAUUSD", "XAUUSDM": "XAUUSD", "SILVER": "XAGUSD", "XAG": "XAGUSD",

@@ -27,6 +27,8 @@ class Prices:
         for fn in fns:
             try:
                 rows, src = fn(spec["data"], start_ms, end_ms)
+                if rows and spec.get("cash"):
+                    rows, src = self._to_cash(rows, src, spec["cash"], start_ms)
                 if rows:
                     return rows, src
                 errors.append(f"{fn.__name__}: empty")
@@ -65,6 +67,19 @@ class Prices:
             time.sleep(0.12)
         out = sorted({x["t"]: x for x in out if x["t"] >= a - 60_000}.values(), key=lambda x: x["t"])
         return out, "okx-perp-1m"
+
+    def _to_cash(self, rows, src, cash, start_ms):
+        """Index CFDs trade nearly 24 h at the cash index level; futures sit a carry gap (basis) above it. Shift the
+        futures bars by the median futures-minus-cash gap over the overlapping minutes of the last few sessions."""
+        a = start_ms - 3 * 86_400_000
+        fut, _ = self._yahoo(src.split("-")[1], a, rows[-1]["t"])
+        idx, _ = self._yahoo(cash, a, rows[-1]["t"])
+        fc = {r["t"]: r["c"] for r in fut}
+        gaps = sorted(fc[r["t"]] - r["c"] for r in idx if r["t"] in fc)
+        if len(gaps) < 20:
+            return rows, src + " (futures level: no cash overlap to correct)"
+        g = gaps[len(gaps) // 2]
+        return [dict(t=r["t"], o=r["o"] - g, h=r["h"] - g, l=r["l"] - g, c=r["c"] - g) for r in rows], f"{src} minus basis {g:.1f}"
 
     def _yahoo(self, sym, a, b):
         recent = (time.time() * 1000 - a) < 6.5 * 24 * H
