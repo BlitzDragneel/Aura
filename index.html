@@ -8929,6 +8929,7 @@ try{
 const APP_VERSION="2026.11.14";
 const CHANGELOG=[
   {v:"2026.11.14", items:[
+    "Your settings stay put: the app asks the browser to keep its storage permanently, and a settings link carries your choices to another browser, the installed app or another device — open it once and setup is skipped.",
     "Help now knows the people and places of the Bible — ask “who is Ruth?” or “where is Bethel?” — and hands Bible questions straight to the Study engine.",
     "Prayer journal: a Lock button, an automatic lock after five minutes in the background, and a proper passphrase check.",
     "Backups are now a few kilobytes instead of many megabytes — the search indexes the app builds for itself are left out and rebuilt on the device.",
@@ -9977,7 +9978,7 @@ const HELP_KB=[
   a:"Choose <b>Lighter effects</b> under <b>App speed</b> at the bottom of this screen. It turns off the blur and glow effects that modest phones struggle with; the text is unchanged. On Auto the app already does this for devices that need it.",v:null},
  {id:"lost",t:"Finding your way around",k:"menu navigate where is find screen lost home tabs drawer all features what can it do help tour",
   a:"The five tabs at the bottom are <b>Home</b>, <b>Read</b>, <b>Study</b>, <b>Learn</b> and <b>More</b>. The <b>menu</b> button at the top left lists every screen, and the <b>magnifier</b> jumps to any screen or verse by name.",v:"home",b:"Go to Home"},
- {id:"setup",t:"Running the first-time setup again",k:"setup set up preferences onboarding welcome first time again wizard configure",
+ {id:"setup",t:"Running the first-time setup again",k:"setup run redo onboarding welcome wizard configure start over",
   a:"You can go through the first-time setup again whenever you like — name, colours, text and edition.",v:null,setup:true}
 ];
 const HELP_STOP=new Set("a an the is are was be do does did i me my we you your it its to of in on at for with and or how can could would should what where when which who why this that there here app scroll please want need get make have has use using there's im i'm into from about if so not no yes any some".split(" "));
@@ -10089,7 +10090,7 @@ function helpMsgHTML(m,i){
   if(m.kind==="search") return `<div class="hp-m b"><p>I can search the Bible for “${esc(m.term)}”.</p><div class="hp-act"><button class="btn pri" onclick="helpSearch(${i})">Search the Bible</button><button class="btn" onclick="go('ask')">Ask the Study engine</button></div></div>`;
   if(m.kind==="custom") return `<div class="hp-m b"><b class="t">${esc(m.q)}</b><p>${esc(m.a).replace(/\n/g,"<br>")}</p><p class="tiny muted">An answer you wrote.</p></div>`;
   if(m.kind==="kb"){ const e=helpEntry(m.id); if(!e) return "";
-    const act=(e.v?`<button class="btn pri" onclick="go('${e.v}')">${esc(e.b||"Take me there")}</button>`:"")+(e.setup?`<button class="btn pri" onclick="setupOpen(true)">Run setup again</button>`:"");
+    const act=(e.v?`<button class="btn pri" onclick="go('${e.v}')">${esc(e.b||"Take me there")}</button>`:"")+(e.setup?`<button class="btn pri" onclick="setupOpen(true)">Run setup again</button>`:"")+(e.id==="keep"?`<button class="btn pri" onclick="copyPrefsLink()">Copy my settings link</button>`:"");
     const fb=m.fb==="y"?`<span class="done">✓ Thanks — I’ll remember that.</span>`:m.fb==="n"?`<span>Sorry about that. I’ve kept your question so it can be answered properly.</span>`
       :`<span>Did this answer it?</span><button onclick="helpFeedback(${i},1)">Yes</button><button onclick="helpFeedback(${i},0)">No</button>`;
     return `<div class="hp-m b"><b class="t">${esc(e.t)}</b><p>${e.a}</p>${act?`<div class="hp-act">${act}</div>`:""}
@@ -10404,6 +10405,101 @@ function prayerLock(){ prayerKey=null; if(currentView==="prayer") render(); toas
     return r;
   };
 })();
+
+
+/* ============================================================
+   PREFS LINK + PERSISTENT STORAGE
+   Preferences live on the device (no account, nothing on a server).
+   Two things make them stick:
+   1. the browser is asked to keep the app's storage permanently, so it
+      is not cleared to free space or after a week of not opening it;
+   2. a "settings link" carries the reader's choices (never notes,
+      prayers or keys) to another browser, the installed app, or another
+      device: open it once there and setup is skipped.
+   ============================================================ */
+const PREF_KEYS=["theme","accent","contrast","dys","fscale","rscale","rfont","lh","ls","measure","justify","vn","motion","trans","glow","bannerStyle","wordtap","nameForm","perf","mode"];
+function askPersist(){
+  try{ if(navigator.storage&&navigator.storage.persist){ navigator.storage.persisted().then(p=>{ if(!p) navigator.storage.persist().catch(()=>{}); }).catch(()=>{}); } }catch(e){}
+}
+function prefsCode(){
+  const s=state.settings, o={};
+  for(const k of PREF_KEYS) if(k in s) o[k]=s[k];
+  const nm=readerName(); if(nm) o._n=nm;
+  const bytes=new TextEncoder().encode(JSON.stringify(o)); let bin=""; bytes.forEach(b=>bin+=String.fromCharCode(b));
+  return btoa(bin).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+}
+function prefsLink(){ return location.origin+location.pathname+"#/prefs?d="+prefsCode(); }
+function prefsDecode(code){
+  try{
+    const b=String(code||"").replace(/-/g,"+").replace(/_/g,"/"); if(!b||b.length>3000) return null;
+    const bin=atob(b+"===".slice((b.length+3)%4)); const u=new Uint8Array(bin.length); for(let i=0;i<bin.length;i++) u[i]=bin.charCodeAt(i);
+    const raw=JSON.parse(new TextDecoder().decode(u)); if(!raw||typeof raw!=="object"||Array.isArray(raw)) return null;
+    const pick={}; for(const k of PREF_KEYS) if(k in raw) pick[k]=raw[k];
+    const clean=cleanSettings(pick)||{}; delete clean.ai;
+    return {settings:clean,name:typeof raw._n==="string"?raw._n.slice(0,32):""};
+  }catch(e){ return null; }
+}
+async function copyPrefsLink(){
+  const url=prefsLink();
+  try{ if(navigator.share && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)){ await navigator.share({title:"My Scroll settings",url}); return; } }catch(e){ if(e&&e.name==="AbortError") return; }
+  copyText(url); toast("Settings link copied. Open it in the other browser or on your other device.");
+}
+async function applyPrefs(code){
+  const p=prefsDecode(code); if(!p){ toast("That settings link is damaged."); return; }
+  const oldTrans=state.settings.trans;
+  Object.assign(state.settings,p.settings); normalizeSettings();
+  const newTrans=state.settings.trans; state.settings.trans=oldTrans; saveSettings();
+  if(p.name) setReaderName(p.name);
+  try{ store.set("noticeAccepted",Date.now()); }catch(e){}
+  const su=document.getElementById("setup"); if(su) su.remove();
+  askPersist();
+  if(newTrans && newTrans!==oldTrans){ try{ await setTranslation(newTrans); }catch(e){} }
+  toast(p.name?("Welcome back, "+p.name+". Your settings are in place."):"Your settings are in place.");
+  go("home");
+}
+VIEWS.prefs=(params)=>{
+  const p=prefsDecode(params&&params.d);
+  if(!p) return `<h1 class="h1">Settings link</h1><p class="lead">This link is incomplete or damaged. Ask for a fresh one from <b>Help → Your settings on another device</b>.</p><a class="btn pri" href="#/home">Go to Home</a>`;
+  const s=p.settings, rows=[];
+  if(p.name) rows.push(["Name",p.name]);
+  if(s.theme&&THEMES[s.theme]) rows.push(["Theme",(THEMES[s.theme].name||s.theme)]);
+  if(s.rscale) rows.push(["Text size",Math.round(s.rscale*100)+"%"]);
+  if(s.rfont) rows.push(["Typeface",{serif:"Serif",sans:"Sans",dys:"Easy-read"}[s.rfont]||s.rfont]);
+  if(s.trans&&TRANSLATIONS[s.trans]) rows.push(["Edition",transMeta(s.trans).label]);
+  if(s.motion) rows.push(["Motion",s.motion==="off"?"Reduced":"On"]);
+  return `<h1 class="h1">Use your settings here?</h1>
+  <p class="lead">This link carries the preferences you chose on another browser or device. Your notes, prayers and keys are never in it.</p>
+  <ul class="su-sum">${rows.map(r=>`<li><span>${esc(r[0])}</span><b>${esc(r[1])}</b></li>`).join("")}</ul>
+  <div class="row"><button class="btn pri" onclick="applyPrefs(${jsq(params.d)})">Use these settings</button><a class="btn" href="#/home">Not now</a></div>`;
+};
+try{ TAB_OF.prefs="more"; }catch(e){}
+/* the setup never interrupts someone opening a settings link */
+(function(){
+  const _sf=showFirstRunNotice;
+  window.showFirstRunNotice=showFirstRunNotice=function(){ if(/^#\/?prefs/.test(location.hash)) return; return _sf.apply(this,arguments); };
+  const _sd=setupDone;
+  window.setupDone=setupDone=function(){ const r=_sd.apply(this,arguments); askPersist(); return r; };
+  const _st=setupStepHTML;
+  window.setupStepHTML=setupStepHTML=function(i){
+    let h=_st.apply(this,arguments);
+    if(i===SETUP_STEPS-1) h+=`<span class="su-lbl">Using another browser or device too?</span>
+      <div class="card" style="margin:0"><p class="tiny" style="margin:0 0 10px">Your choices are saved on this device. Send yourself a settings link and open it there once — no account needed, and you won’t have to set up again.</p>
+      <button class="btn" onclick="copyPrefsLink()">Copy my settings link</button></div>`;
+    return h;
+  };
+  const _help=VIEWS.help;
+  VIEWS.help=function(){ return _help.apply(this,arguments).replace('<details class="hp-sec"><summary>First-time setup</summary>',
+    `<details class="hp-sec"><summary>Your settings on another device</summary><div class="in">
+      <p style="margin:0 0 10px">Your preferences are saved on this device and stay when you close the app. Each browser — and the installed app on iPhone — keeps its own copy, so to bring them somewhere else, copy your settings link and open it there once. Notes and prayers move with <b>Settings → Export backup</b>.</p>
+      <button class="btn" onclick="copyPrefsLink()">Copy my settings link</button></div></details>
+    <details class="hp-sec"><summary>First-time setup</summary>`); };
+})();
+if(store.get("noticeAccepted",false)) setTimeout(askPersist,4000);
+HELP_KB.push(
+ {id:"keep",t:"Why setup keeps coming back / keeping your settings",k:"settings reset forget forgot keep keeps set save saved everytime remember preferences every each time always again asks asking lost login log in account sign in sync other device browser phone computer transfer",
+  a:"Your preferences are saved on this device and stay when you close the app — there is no account to log into. Setup only appears again in a <b>different</b> browser, a private window, an app’s built-in browser (opening the link inside Instagram or Messenger), or the installed app on iPhone, because each keeps its own storage. To bring your settings there, use <b>Copy my settings link</b> below and open the link once. Installing the app to your home screen keeps everything safest.",v:null},
+);
+HELP_IDX=null;
 
 performance.mark&&performance.mark("scroll-boot");
 __boot();
