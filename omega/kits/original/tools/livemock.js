@@ -50,7 +50,7 @@ function desk(a){ const NAME = { BTC:'Bitcoin', XAU:'Gold', XAG:'Silver' }, PERP
     notebook:[{ title:'What the research found', lines:['The research on ' + NAME[a] + ' is still running.'] }, { title:'Day trades', lines:['No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.'] }, { title:'Habits I measure myself', lines:['A typical day ranges 2.5% from low to high (last 60 days).'] }],
     runs:42, honesty:'Calls come only from rules that passed a pre-registered test.', disclaimer:'information only: calls come only from rules that passed a pre-registered test; WAIT when nothing qualifies; never an order' }; }
 const DESKS = {};
-const calls = [];
+const calls = [], AUD = [];
 function handle(route){ let u; try{ u = new URL(route.request().url()); }catch(e){ return null; } if(u.hostname !== 'omega-live-api.onrender.com' && u.hostname !== 'live.test') return null;
   const auth = route.request().headers()['authorization'] || '', q = u.searchParams; calls.push({ path:u.pathname, q:u.search, auth:!!auth });
   const j = (x, st) => route.fulfill({ status:st || 200, contentType:'application/json', headers:{ 'access-control-allow-origin':'*' }, body:JSON.stringify(x) });
@@ -62,9 +62,26 @@ function handle(route){ let u; try{ u = new URL(route.request().url()); }catch(e
   if(u.pathname === '/fx/quote') return j(quote((q.get('symbol') || 'EURUSD').replace('/', '').toUpperCase()));
   if(u.pathname === '/fx/klines') return j(klines((q.get('symbol') || 'EURUSD').replace('/', '').toUpperCase(), q.get('tf') || '1h', Math.min(+q.get('limit') || 200, 1500)));
   if(u.pathname === '/bots/feed') return j(FEED());
+  if(u.pathname.startsWith('/auditor/')){ let body = {}; try{ body = route.request().postDataJSON() || {}; }catch(e){} AUD.push({ path:u.pathname, body });
+    if(route.request().method() !== 'POST') return j({ detail:'Method Not Allowed' }, 405);
+    if(u.pathname === '/auditor/parse'){ const m = /(XAUUSD|GOLD|EURUSD|US30)\s+(BUY|SELL)/i.exec(body.text || ''); if(!m) return j({ detail:'could not read a symbol and a side (buy/sell) in that message' }, 422);
+      const n = k => { const x = new RegExp(k + '\\D{0,3}([0-9.]+)', 'i').exec(body.text); return x ? +x[1] : null; }; const stop = n('SL'), lim = /limit|@/i.test(body.text) ? n('(?:limit|@)') : null;
+      return j({ signal:{ symbol:/GOLD/i.test(m[1]) ? 'XAUUSD' : m[1].toUpperCase(), side:m[2].toLowerCase(), logged_ms:Date.now(), entry:lim, entry_hi:null, stop, targets:[n('TP1') || n('TP')].filter(Boolean), provider:body.provider || '', note:String(body.text).slice(0, 500), claimed_pips:null, id:'' },
+        problems:stop ? [] : ['NO STOP: cannot be measured in R (risk units)'] }); }
+    if(u.pathname === '/auditor/score'){ const sc = (body.signals || []).map(d => { const base = { symbol:d.symbol, side:d.side, provider:d.provider, logged_ms:d.logged_ms, problems:d.stop ? [] : ['NO STOP: cannot be measured in R (risk units)'] };
+        if(d.entry) return Object.assign(base, { status:'waiting for entry' });
+        const win = d.side === 'buy'; return Object.assign(base, { status:'closed', fill_ms:d.logged_ms + 6e4, fill:4105.2, risk_pips:100, mfe_pips:60, mae_pips:20, source:'binance XAUUSDT 1m',
+          tp1:{ outcome:win ? 'target 1' : 'stop', pips:win ? 47 : -103, R:win ? 0.47 : -1.03, exit_ms:d.logged_ms + 36e5, usd_per_lot:win ? 470 : -1030 }, ladder:{ outcome:win ? 'targets' : 'stop', pips:win ? 80 : -103, R:win ? 0.8 : -1.03, exit_ms:d.logged_ms + 72e5, usd_per_lot:0 } }); });
+      const sum = L => { const c = L.filter(x => x.status === 'closed'), rs = c.map(x => x.tp1.R); return { logged:L.length, closed:c.length, not_filled:0, running:L.length - c.length, no_stop:0,
+        tp1:{ n:c.length, avg_R:c.length ? +(rs.reduce((a, b) => a + b, 0) / c.length).toFixed(3) : undefined, win_rate:c.length ? rs.filter(x => x > 0).length / c.length : undefined, t:0.4, pips_scored:c.reduce((a, x) => a + x.tp1.pips, 0) }, ladder:{ n:c.length, pips_scored:c.reduce((a, x) => a + x.ladder.pips, 0) },
+        verdict:'Too early: ' + c.length + ' closed signals with a stop. About 30 are needed before the numbers mean anything, 50+ to trust them.' }; };
+      const by = {}; sc.forEach(x => (by[x.provider || 'unnamed'] = by[x.provider || 'unnamed'] || []).push(x)); return j({ scored:sc, summary:sum(sc), by_provider:Object.fromEntries(Object.entries(by).map(([k, v]) => [k, sum(v)])), rules:'edges/auditor/RULES.md' }); }
+    if(u.pathname === '/auditor/risk'){ if(!(body.balance > 0) || !(body.positions || []).length) return j({ detail:'balance must be > 0 and at least one position is needed' }, 422); const p = body.positions[0], usd = p.lots * 100;
+      return j({ balance:body.balance, by_symbol:[{ symbol:p.symbol, net_direction:p.side, usd_per_1_move:usd, usd_per_pip:usd / 10, move_to_lose_balance:+(body.balance / usd).toFixed(3), pips_to_lose_balance:+(body.balance / usd * 10).toFixed(1),
+        typical_moves:{ '15-minute':4.2, day:40 }, plain:'a typical 15-minute move is 4.2 (' + Math.round(4.2 / (body.balance / usd) * 100) + '% of the balance); a typical day move is 40 (' + Math.round(40 / (body.balance / usd) * 100) + '% of the balance)' }] }); } }
   if(u.pathname === '/crypto/klines') return j(cklines((q.get('symbol') || 'BTCUSDT').toUpperCase(), q.get('tf') || '1h', Math.min(+q.get('limit') || 200, 1000)));
   if(u.pathname === '/crypto/ticker') return j((q.get('symbols') || 'BTCUSDT').split(',').map(x => ({ symbol:x, price:PERP_PX[x] || 100, bid:(PERP_PX[x] || 100) * 0.9999, ask:(PERP_PX[x] || 100) * 1.0001, ts:Date.now(), source:'okx-swap' })));
   if(u.pathname === '/assets') return j({ available:true, source:'cloud bots (GitHub bot-state)', assets:{ BTC:'Bitcoin', XAU:'Gold', XAG:'Silver' } });
   const am = u.pathname.match(/^\/assets\/(BTC|XAU|XAG)$/i); if(am){ const a = am[1].toUpperCase(); return j(DESKS[a] || desk(a)); }
   return j({ detail:'Not Found' }, 404); }
-module.exports = { handle, TOKEN, calls, LIST, DESKS, desk, PERP_PX };
+module.exports = { handle, TOKEN, calls, LIST, DESKS, desk, PERP_PX, AUD };

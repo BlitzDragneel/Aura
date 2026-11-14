@@ -306,3 +306,32 @@ range) and a random-entry control, trailing stop 1×ATR(5m), max 4 h, spread 0.2
   the first days of every period, every variant.
 Verdict: FAIL (does not beat random entries; does not survive double costs). Recorded for the owner: adding to winners
 only works while gold trends, and at 0.1 lot per add on a $560 account one choppy day ends it.
+
+## Lead — E141 learn-from-losses cycle on gold pyramiding (md5 d32d08c1…): FAIL
+Reflection on E140's DISCOVERY trades only (80 buckets examined: hour, weekday, 24h trend efficiency, volatility
+percentile, daily-trend agreement). Losses and wins clustered in different places on the two gold series (perp: weekends
+good; PAXG: weekends worst), so the only bucket ranking well on both was hour = 08 UTC. Filtered rule: XAU validation
++0.33R (t 0.48), FINAL −0.85R (t −4.5); PAXG validation −1.29R. The "lesson" from the losses did not carry forward.
+New tool: edges/lib/reflect.py (counts every bucket it looks at) for future cycles.
+
+## Lead — E142 movement forecast and WATCH-armed breakouts, BTC and gold (md5 5f8d4899…): forecasts of SIZE work, trading FAIL
+15-minute bars; LightGBM trained on TRAIN, tuned on VALIDATION, judged on FINAL (BTC 2025–Nov 2026, gold perp Sep–Nov
+2026, PAXG 2025). Control = volatility + clock only.
+**When/how much (works):** big-move WATCH (top quarter of predictions):
+| | base rate of a big 4h move | inside WATCH | median 4h range in WATCH vs outside | days with a WATCH |
+|---|---|---|---|---|
+| BTC | 34.6% | 54.1% | $1,266 vs $829 | 599 of 671 |
+| Gold perp | 23.7% | 42.2% | $35.8 vs $18.6 | 64 of 74 |
+| PAXG | 19.0% | 34.8% | $24.7 vs $13.0 | 260 of 334 |
+AUC 0.66 (BTC) / 0.75 (gold) / 0.73 (PAXG) for 4h; 0.76–0.79 for "big move by the end of the day". Range-size error is
+26–37% lower than "same as the last 4–8 h", but only 1–4% lower than the volatility+clock control (significant on BTC
+4h/day and PAXG; not on the short gold-perp sample). An external claim of a 17–21% cut vs a vol/clock control is not
+reproduced here. Most of the forecast is "volatility clusters and follows the clock".
+**Which way (does not work):** direction AUC 0.51–0.53 everywhere; on gold perp the confident-direction calls were right
+49% (4h). "Reaches +$4/+$7 before −$4/−$7" was predicted no better than by the control.
+**Trading (all FAIL), FINAL mean per trade after costs:** WATCH-armed breakout BTC −14.5 bp (gross −0.5; t −11), gold
+−0.9 bp at 2 bp/side (gross +3.2), +2.7 bp at a tight 0.20 USD round trip (t 1.52; validation −1.0 → fail), PAXG −20.
+Every-bar breakout (control) −16 / −4 / −23. WATCH + direction model: +15 bp gross in training, −1 to −5 gross out of
+sample (overfit). Fading the break: negative. WATCH roughly halves the breakout's losses but the break itself has no
+follow-through after costs.
+Use: WATCH is kept as an alarm ("a big move is likely in the next 4 hours; direction unknown") on the asset desks.

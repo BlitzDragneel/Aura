@@ -8,7 +8,7 @@ const M = require(path.resolve(process.env.HARNESS || path.join(__dirname, 'tool
 const SHOTS = process.env.SHOTS; if(SHOTS) fs.mkdirSync(SHOTS, { recursive:true });
 let pass = 0, fail = 0; function ok(c, msg, x){ if(c){ pass++; console.log('ok   ' + msg); } else { fail++; console.log('FAIL ' + msg + (x !== undefined ? ' — ' + JSON.stringify(x).slice(0, 700) : '')); } }
 ok(/v6\.5\.1(19|[2-9]\d) · build/.test(html), 'build v6.5.119 or later');
-ok(html.split('id="page-desks"').length === 2 && /data-page="desks"/.test(html) && /'desks'\];   \/\/ v6\.5\.119/.test(html), 'one Desks page, a menu entry, known to the navigator');
+ok(html.split('id="page-desks"').length === 2 && /data-page="desks"/.test(html) && /'desks'(,'auditor')?\];   \/\/ v6\.5\.119/.test(html), 'one Desks page, a menu entry, known to the navigator');
 const CALL = { id:'btc_rule-202611141500', rule:'btc_trend_day', horizon:'day', asset:'BTC', symbol:'BTCUSDT', side:'long', entry_type:'market', entry:75830, stop:74314, target:78863, tf:'1h',
   signal_bar:new Date(Date.now() - 36e5).toISOString(), exit_by:new Date(Date.now() + 3 * 36e5).toISOString(), size:{ margin_usdt:5, leverage:1, notional_usdt:5 }, grade:'B', status_rule:'paper',
   evidence:'edges/results/E90_result.json', note:'w=0.30 BTC leg', research_only:true, execution_allowed:false, state:'TRIGGERED', fill_time:null, fill_price:null };
