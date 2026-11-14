@@ -7990,7 +7990,8 @@ function importData(file){
     let count=0;
     const keepKey=(state.settings&&state.settings.ai&&state.settings.ai.key)||"";
     Object.entries(d).forEach(([k,v])=>{ if(typeof k==="string" && k.startsWith("scroll:") && k.length<200 && typeof v==="string"){ let val; try{val=JSON.parse(v);}catch(e){val=v;}
-      const name=k.slice(7); if(!name||name==="__proto__"||name==="constructor"||name==="prototype") return;
+      const name=k.slice(7); if(!name||name==="__proto__"||name==="constructor"||name==="prototype"||/^(conc:|strongsidx:)/.test(name)) return;
+      val=(typeof cleanStored==="function")?cleanStored(name,val):val; if(val===undefined) return;
       /* a backup never carries an API key; keep the one already on this device */
       if(name==="settings" && val && typeof val==="object"){ if(!val.ai||typeof val.ai!=="object") val.ai={provider:"none",key:"",model:"",endpoint:""}; if(!val.ai.key) val.ai.key=keepKey; }
       store.set(name,val); count++; } });
@@ -8925,8 +8926,15 @@ try{
    WHAT'S NEW \u2014 shown once after an update, never on a first open.
    Add a new entry at the TOP when you publish; keep each line plain.
    --------------------------------------------------------------- */
-const APP_VERSION="2026.11.10";
+const APP_VERSION="2026.11.14";
 const CHANGELOG=[
+  {v:"2026.11.14", items:[
+    "Help now knows the people and places of the Bible — ask “who is Ruth?” or “where is Bethel?” — and hands Bible questions straight to the Study engine.",
+    "Prayer journal: a Lock button, an automatic lock after five minutes in the background, and a proper passphrase check.",
+    "Backups are now a few kilobytes instead of many megabytes — the search indexes the app builds for itself are left out and rebuilt on the device.",
+    "Safer: everything restored from a backup file is checked before it is used.",
+    "Easier to read: verse numbers on dark themes, underlined links, and settings sections that work properly with a screen reader."
+  ]},
   {v:"2026.11.10", items:[
     "Opens faster: the app is ready before the whole Bible has finished loading, and the opening animation plays in full only the first time.",
     "A proper first-time setup: your name, colours, text size and font, and edition \u2014 step by step, with a live preview. Run it again any time from Help.",
@@ -9696,6 +9704,11 @@ body[data-base="dark"] .hp-m.u{ color:#0b1020; }
 body:has(#helpLog) #totop{ display:none !important; }
 .hp-miss{ border-top:1px solid var(--line); padding:10px 0; color:var(--tx); }
 .hp-miss textarea{ width:100%; box-sizing:border-box; margin-top:8px; min-height:70px; }
+
+/* ---- audit 2026.11.14: readable verse numbers on dark themes, links that look like links ---- */
+body[data-base="dark"] #chapterText .vn, body[data-base="dark"] .xrefdot{ color:var(--tx-2) !important; opacity:1 !important; }
+:is(p,.lead,.home-foot,.tiny) > a:not(.btn):not(.chip){ text-decoration:underline; text-underline-offset:2px; }
+button.set-chev{ border:0; background:none; font:inherit; color:var(--tx-3); min-width:36px; min-height:36px; margin-left:auto; cursor:pointer; border-radius:8px; }
 </style>
 <script>
 /* ============================================================
@@ -9994,6 +10007,21 @@ function helpData(){
   if(!Array.isArray(d.miss)) d.miss=[];
   if(!Array.isArray(d.custom)) d.custom=[];
   if(!Array.isArray(d.log)) d.log=[];
+  /* never trust what comes back from storage or a backup file */
+  const S=v=>typeof v==="string"?v.slice(0,1000):"", ID=/^[a-z0-9]{2,6}$/;
+  d.log=d.log.filter(m=>m&&typeof m==="object").map(m=>{
+    if(m.r==="u") return {r:"u",q:S(m.q)};
+    if(m.kind==="kb") return helpEntry(m.id)?{r:"b",kind:"kb",id:m.id,ask:S(m.ask),fb:(m.fb==="y"||m.fb==="n")?m.fb:undefined,rel:Array.isArray(m.rel)?m.rel.filter(helpEntry):[]}:null;
+    if(m.kind==="ref") return ID.test(m.id)?{r:"b",kind:"ref",id:m.id,ch:Math.max(1,+m.ch|0),v:Math.max(0,+m.v|0),name:S(m.name)}:null;
+    if(m.kind==="search") return {r:"b",kind:"search",term:S(m.term)};
+    if(m.kind==="custom") return {r:"b",kind:"custom",q:S(m.q),a:S(m.a)};
+    if(m.kind==="miss") return {r:"b",kind:"miss",q:S(m.q),bible:!!m.bible,sug:Array.isArray(m.sug)?m.sug.filter(helpEntry):[]};
+    if(m.kind==="who") return {r:"b",kind:"who",q:S(m.q),people:Array.isArray(m.people)?m.people.map(x=>+x).filter(x=>Number.isInteger(x)&&x>=0):[],places:Array.isArray(m.places)?m.places.map(String).filter(x=>/^[\w-]{1,40}$/.test(x)):[]};
+    return null; }).filter(Boolean);
+  d.miss=d.miss.filter(x=>x&&typeof x.q==="string").map(x=>({q:S(x.q),at:+x.at||0,n:Math.max(1,+x.n|0)}));
+  d.custom=d.custom.filter(x=>x&&typeof x.q==="string"&&typeof x.a==="string").map(x=>({q:S(x.q),a:S(x.a),at:+x.at||0}));
+  for(const k of Object.keys(d.learn)){ if(!helpEntry(k)||!Array.isArray(d.learn[k])) delete d.learn[k]; else d.learn[k]=d.learn[k].filter(x=>typeof x==="string").map(S); }
+  for(const o of [d.votes,d.asked]) for(const k of Object.keys(o)){ if(!helpEntry(k)) delete o[k]; else o[k]=Math.max(-50,Math.min(10000,+o[k]||0)); }
   return d;
 }
 function helpSave(d){ try{ d.log=d.log.slice(-40); d.miss=d.miss.slice(-60); d.custom=d.custom.slice(-80); store.set("help",d); }catch(e){} }
@@ -10037,13 +10065,19 @@ function helpAnswer(q){
   const m=text.match(/^(?:search(?: the bible)?(?: for)?|find(?: verses?)?(?: about| on| with)?|verses? (?:about|on|with)|where does (?:it|the bible) say)\s+["“]?(.{2,80}?)["”]?\??$/i);
   const ranked=helpRank(text,d);
   if(m && !/^how\b/i.test(text)) return {r:"b",kind:"search",term:m[1].trim()};
-  /* 4) the built-in answers */
+  /* 4) a person or place in the Bible ("who is Moses", "where is Bethel") */
+  const who=helpNames(text);
+  if(who && (!ranked.length || ranked[0].score<2.6 || /^\s*(who|where|what)\b/i.test(text))) return who;
+  /* 5) a question about the Bible itself, not about the app: the Study engine answers those */
+  if(helpLooksBiblical(text) && !/\b(app|setting|settings|screen|button|tap|install|download|font|theme|backup|offline|turn on|turn off|how do i|how can i|where do i|where can i)\b/i.test(text) && !(ranked[0]&&ranked[0].score>=3.2))
+    return {r:"b",kind:"miss",q:text,bible:true,sug:[]};
+  /* 6) the built-in answers */
   if(ranked.length && ranked[0].score>=HELP_THRESHOLD){
     const top=ranked[0];
     return {r:"b",kind:"kb",id:top.e.id,ask:text,rel:ranked.slice(1,3).filter(x=>x.score>=top.score*0.55).map(x=>x.e.id)};
   }
   /* 5) not known yet: keep the question so it can be taught */
-  return {r:"b",kind:"miss",q:text,sug:ranked.slice(0,3).map(x=>x.e.id)};
+  return {r:"b",kind:"miss",q:text,bible:helpLooksBiblical(text),sug:ranked.slice(0,3).map(x=>x.e.id)};
 }
 function helpEntry(id){ return HELP_KB.find(e=>e.id===id)||null; }
 function helpMsgHTML(m,i){
@@ -10051,7 +10085,7 @@ function helpMsgHTML(m,i){
   const chips=(ids,from)=>ids.map(id=>{ const e=helpEntry(id); return e?`<button class="chip" onclick="helpPick('${e.id}',${from?i:-1})">${esc(e.t)}</button>`:""; }).join("");
   if(m.kind==="hello") return `<div class="hp-m b"><p>${readerName()?("Hello, "+esc(readerName())+". "):"Hello. "}Ask me how to do anything in The Scroll — for example “how do I make the text bigger?” or “how do I install it?”. You can also type a reference like <i>John 3:16</i> and I’ll open it.</p><p class="tiny muted">I work on this device only. Nothing you type is sent anywhere.</p></div>`;
   if(m.kind==="ref"){ const label=esc(m.name)+" "+(+m.ch)+(m.v?":"+(+m.v):"");
-    return `<div class="hp-m b"><p>That looks like a reference.</p><div class="hp-act"><button class="btn pri" onclick="go('read',{id:'${esc(m.id)}',ch:${+m.ch}${m.v?",v:"+(+m.v):""}})">Open ${label}</button></div></div>`; }
+    return `<div class="hp-m b"><p>That looks like a reference.</p><div class="hp-act"><button class="btn pri" onclick="go('read',{id:${jsq(m.id)},ch:${+m.ch||1}${m.v?",v:"+(+m.v||1):""}})">Open ${label}</button></div></div>`; }
   if(m.kind==="search") return `<div class="hp-m b"><p>I can search the Bible for “${esc(m.term)}”.</p><div class="hp-act"><button class="btn pri" onclick="helpSearch(${i})">Search the Bible</button><button class="btn" onclick="go('ask')">Ask the Study engine</button></div></div>`;
   if(m.kind==="custom") return `<div class="hp-m b"><b class="t">${esc(m.q)}</b><p>${esc(m.a).replace(/\n/g,"<br>")}</p><p class="tiny muted">An answer you wrote.</p></div>`;
   if(m.kind==="kb"){ const e=helpEntry(m.id); if(!e) return "";
@@ -10061,9 +10095,18 @@ function helpMsgHTML(m,i){
     return `<div class="hp-m b"><b class="t">${esc(e.t)}</b><p>${e.a}</p>${act?`<div class="hp-act">${act}</div>`:""}
       ${m.rel&&m.rel.length&&!m.fb?`<div class="chips" style="margin-top:10px">${chips(m.rel,false)}</div>`:""}
       <div class="hp-fb">${fb}</div></div>`; }
-  if(m.kind==="miss") return `<div class="hp-m b"><p>I don’t have an answer for that yet. I’ve kept your question in the list at the bottom of this screen so it can be answered.</p>
+  if(m.kind==="who"){
+    const ppl=(typeof PP!=="undefined"&&PP.list)?m.people.map(i=>PP.list[i]).filter(Boolean):[];
+    const pls=(typeof PL!=="undefined"&&PL.list)?m.places.map(id=>PL.list.find(x=>String(x.id)===id)).filter(Boolean):[];
+    return `<div class="hp-m b"><p>${ppl.length||pls.length?"Here is what the app knows:":"Loading people and places\u2026"}</p>
+      ${ppl.length?`<div class="chips">${ppl.map(p=>`<a class="chip" href="#/people?p=${+p.i}">${esc(edName(p.n))}${typeof personTag==="function"?` \u00b7 ${esc(personTag(p))}`:""}</a>`).join("")}</div>`:""}
+      ${pls.length?`<div class="chips" style="margin-top:6px">${pls.map(p=>`<a class="chip" href="#/places?p=${encodeURIComponent(p.id)}">${esc(p.n)} \u00b7 on the map</a>`).join("")}</div>`:""}
+      <div class="hp-act"><button class="btn" onclick="helpAskEngine(${i})">Ask the Study engine</button></div></div>`; }
+  if(m.kind==="miss" && m.bible) return `<div class="hp-m b"><p>That sounds like a question about the Bible itself. I only know how the app works \u2014 but the Study engine answers from the real text, offline.</p>
+    <div class="hp-act"><button class="btn pri" onclick="helpAskEngine(${i})">Ask the Study engine</button><button class="btn" onclick="helpSearch(${i})">Search the Bible</button></div></div>`;
+  if(m.kind==="miss") return `<div class="hp-m b"><p>I don\u2019t have an answer for that yet. I\u2019ve kept your question in the list at the bottom of this screen so it can be answered.</p>
     ${m.sug&&m.sug.length?`<p class="tiny muted" style="margin-top:8px">Did you mean one of these?</p><div class="chips">${chips(m.sug,true)}</div>`:""}
-    <div class="hp-act"><button class="btn" onclick="helpSearch(${i})">Search the Bible for it</button><button class="btn" onclick="go('ask')">Ask the Study engine</button></div></div>`;
+    <div class="hp-act"><button class="btn" onclick="helpSearch(${i})">Search the Bible for it</button><button class="btn" onclick="helpAskEngine(${i})">Ask the Study engine</button></div></div>`;
   return "";
 }
 function helpPaint(scroll){
@@ -10073,14 +10116,15 @@ function helpPaint(scroll){
   helpPaintMiss();
   if(scroll){ const last=el.lastElementChild; if(last) try{ last.scrollIntoView({block:"nearest",behavior:(document.body.getAttribute("data-motion")==="off")?"auto":"smooth"}); }catch(e){} }
 }
-function helpSend(text){
+async function helpSend(text){
   const inp=document.getElementById("helpIn");
   const q=String(text!=null?text:(inp?inp.value:"")).trim(); if(!q) return;
   if(inp) inp.value="";
+  try{ await Promise.race([Promise.all([peopleLoad(),placesLoad()]),new Promise(r=>setTimeout(r,1500))]); }catch(e){}
   const d=helpData(); const ans=helpAnswer(q); if(!ans) return;
   d.log.push({r:"u",q:q.slice(0,300)}); d.log.push(ans);
   if(ans.kind==="kb") d.asked[ans.id]=(d.asked[ans.id]||0)+1;
-  if(ans.kind==="miss"){ const k=q.toLowerCase(); const ex=d.miss.find(x=>x.q.toLowerCase()===k); if(ex){ ex.n=(ex.n||1)+1; ex.at=Date.now(); } else d.miss.push({q:q.slice(0,300),at:Date.now(),n:1}); }
+  if(ans.kind==="miss" && !ans.bible){ const k=q.toLowerCase(); const ex=d.miss.find(x=>x.q.toLowerCase()===k); if(ex){ ex.n=(ex.n||1)+1; ex.at=Date.now(); } else d.miss.push({q:q.slice(0,300),at:Date.now(),n:1}); }
   helpSave(d); helpPaint(true);
 }
 /* a suggestion tapped after a miss: show it, and offer to learn the link */
@@ -10177,8 +10221,189 @@ VIEWS.help=()=>{
     <p style="margin:0 0 10px">For questions about Scripture itself, use the Study engine.</p>
     <div class="hp-act"><button class="btn ghost" onclick="helpClearChat()">Clear this conversation</button><button class="btn ghost" onclick="helpForget()">Forget what it learned</button></div></div></details>`;
 };
-VIEWS.help_after=()=>{ helpPaint(false); };
+VIEWS.help_after=()=>{ helpPaint(false);
+  try{ Promise.all([peopleLoad(),placesLoad()]).then(()=>{ if(currentView==="help") helpPaint(false); }); }catch(e){} };
 try{ TAB_OF.help="more"; }catch(e){}
+
+
+/* ============================================================
+   AUDIT 2026.11.14
+   ============================================================ */
+/* ---- Help: people and places by name; Bible questions to the Study engine ---- */
+const HELP_NOT_NAMES=new Set("the and god lord who what where when why how is are was were did does do bible app book books verse verses chapter read search help text name names jesus christ".split(" "));
+function helpNames(text){
+  try{
+    if(!(typeof PP!=="undefined"&&PP.list) && !(typeof PL!=="undefined"&&PL.list)) return null;
+    const words=String(text).replace(/[^A-Za-zÀ-ÿ' -]/g," ").split(/\s+/).filter(w=>w.length>=3&&!HELP_NOT_NAMES.has(w.toLowerCase()));
+    if(!words.length||words.length>8) return null;
+    const want=new Set(words.map(w=>w.toLowerCase().replace(/'s$/,"")));
+    const ppl=(PP.list||[]).filter(p=>!p.divine&&want.has(String(p.n).toLowerCase())).sort((a,b)=>b.v.length-a.v.length).slice(0,4).map(p=>p.i);
+    const seen=new Set();
+    const pls=(PL.list||[]).filter(p=>want.has(String(p.n).toLowerCase())).sort((a,b)=>b.v.length-a.v.length)
+      .filter(p=>{ const k=String(p.n).toLowerCase(); if(seen.has(k)) return false; seen.add(k); return true; }).slice(0,3).map(p=>String(p.id));
+    if(!ppl.length&&!pls.length) return null;
+    return {r:"b",kind:"who",q:String(text).slice(0,300),people:ppl,places:pls};
+  }catch(e){ return null; }
+}
+function helpLooksBiblical(t){
+  return /\b(god|jesus|christ|lord|spirit|bible|scripture|verse|gospel|sin|salvation|saved|heaven|hell|prayer|pray|faith|grace|church|prophet|apostle|psalm|proverb|genesis|exodus|revelation|commandment|sabbath|baptism|resurrection|cross|angel|devil|satan)\b/i.test(t)
+    || /^(why did|why does|what does .* mean|what is the meaning|who wrote|when was .* written)/i.test(t);
+}
+function helpAskEngine(i){
+  const d=helpData(); const m=d.log[i]; const q=String((m&&(m.q||m.term))||"").trim();
+  go("ask");
+  if(!q) return;
+  setTimeout(()=>{ const inp=document.getElementById("askq"), send=document.getElementById("askSend"); if(inp){ inp.value=q; if(send) send.click(); else inp.dispatchEvent(new KeyboardEvent("keydown",{key:"Enter"})); } },220);
+}
+HELP_KB.push(
+ {id:"lock",t:"Locking the prayer journal",k:"lock prayer journal passphrase password private auto lock forgot secure close hide",
+  a:"Tap <b>Lock</b> at the top of the prayer journal to close it at once. It also locks by itself when the app has been in the background for five minutes. If you forget the passphrase the journal cannot be recovered — that is what keeps it private.",v:"prayer",b:"Open Prayer journal"},
+ {id:"who",t:"Looking up a person or place",k:"who is was person character where is place city land find someone",
+  a:"Type a name to me — for example <i>who is Ruth</i> or <i>where is Bethel</i> — and I’ll take you to their page. You can also browse <b>People & families</b> and <b>Places & maps</b>.",v:"people",b:"Open People"}
+);
+HELP_IDX=null;
+
+/* ---- Stored data is checked before it is used ----
+   Everything the app keeps can also arrive from a backup file, and a
+   backup file can come from anywhere. Each value is checked against
+   the shape the app itself writes; anything else is repaired or dropped,
+   so a crafted file can never inject code or break a screen. */
+const SAFE_ID=/^[a-z0-9]{2,6}$/, SAFE_VK=/^[a-z0-9]{2,6}\.\d{1,3}\.\d{1,3}$/, SAFE_WORD=/^[\w.:-]{0,40}$/;
+function cleanSettings(s){
+  if(!s||typeof s!=="object"||Array.isArray(s)) return null;
+  const o={};
+  for(const k of Object.keys(s)){
+    if(k==="__proto__"||k==="constructor"||k==="prototype") continue;
+    const v=s[k], d=(typeof SET_DEFAULTS!=="undefined")?SET_DEFAULTS[k]:undefined;
+    if(k==="ai") continue;
+    if(d!==undefined && typeof v!==typeof d) continue;
+    if(typeof v==="number"){ if(isFinite(v)) o[k]=v; continue; }
+    if(typeof v==="boolean"){ o[k]=v; continue; }
+    if(typeof v==="string"){ if(SAFE_WORD.test(v)) o[k]=v; continue; }
+  }
+  const clamp=(k,lo,hi)=>{ if(k in o) o[k]=Math.min(hi,Math.max(lo,+o[k])); };
+  clamp("fscale",.7,1.6); clamp("rscale",.7,2); clamp("lh",1,3); clamp("ls",0,.3); clamp("measure",20,80);
+  if(o.theme && !THEMES[o.theme]) delete o.theme;
+  if(o.accent && o.accent!=="default" && !(o.accent in ACCENTS)) delete o.accent;
+  if(o.trans && !TRANSLATIONS[o.trans]) delete o.trans;
+  if(o.parallel && !TRANSLATIONS[o.parallel]) o.parallel="";
+  const a=(s.ai&&typeof s.ai==="object")?s.ai:{};
+  const str=(v,n)=>typeof v==="string"?v.slice(0,n):"";
+  o.ai={provider:/^[a-z]{0,20}$/.test(a.provider||"")?(a.provider||"none"):"none",key:str(a.key,400),
+        model:/^[\w.:\/-]{0,80}$/.test(a.model||"")?(a.model||""):"",endpoint:/^https?:\/\/[^\s"'<>]{1,300}$/.test(a.endpoint||"")?a.endpoint:""};
+  return o;
+}
+function cleanStored(name,v){
+  const obj=x=>x&&typeof x==="object"&&!Array.isArray(x);
+  const int=(x,lo,hi)=>{ x=Math.round(+x); return isFinite(x)?Math.min(hi,Math.max(lo,x)):lo; };
+  switch(name){
+    case "settings": return cleanSettings(v);
+    case "lastread": if(!obj(v)||!SAFE_ID.test(v.id)) return undefined;
+      return {id:v.id,ch:int(v.ch,1,200),v:v.v==null?undefined:int(v.v,1,200),at:+v.at||undefined};
+    case "bm": { if(!obj(v)) return {}; const o={}; for(const k in v) if(SAFE_VK.test(k)) o[k]=+v[k]||Date.now(); return o; }
+    case "hl": { if(!obj(v)) return {}; const o={}; for(const k in v) if(SAFE_VK.test(k)){ const n=int(v[k],0,5); if(n) o[k]=n; } return o; }
+    case "notes": { if(!obj(v)) return {}; const o={}; for(const k in v) if(SAFE_VK.test(k)&&obj(v[k])&&typeof v[k].text==="string") o[k]={text:v[k].text.slice(0,20000),at:+v[k].at||0}; return o; }
+    case "cards": return Array.isArray(v)?v.filter(c=>obj(c)&&typeof c.ref==="string"&&typeof c.text==="string").map(c=>({ref:c.ref.slice(0,80),text:c.text.slice(0,4000),box:int(c.box,0,4),due:+c.due||0})):[];
+    case "plans": { if(!obj(v)) return {}; const o={}; for(const k in v) if(PLANS[k]) o[k]=int(v[k],0,PLANS[k].days.length); return o; }
+    case "readerName": return typeof v==="string"?v.slice(0,32):"";
+    case "prayers": return Array.isArray(v)?v.filter(p=>obj(p)&&obj(p.data)&&typeof p.data.iv==="string"&&typeof p.data.ct==="string").map(p=>({id:+p.id||Date.now(),data:{iv:p.data.iv,ct:p.data.ct}})):[];
+    case "prayerMeta": return (obj(v)&&typeof v.salt==="string")?{salt:v.salt,check:(obj(v.check)&&typeof v.check.iv==="string"&&typeof v.check.ct==="string")?{iv:v.check.iv,ct:v.check.ct}:undefined}:undefined;
+    case "recentPlaces": return Array.isArray(v)?v.filter(x=>typeof x==="string"||typeof x==="number").slice(0,20):[];
+    case "setOpen": case "pathDone": case "teachDone": return Array.isArray(v)?v.filter(x=>typeof x==="string"&&SAFE_WORD.test(x)).slice(0,500):[];
+    default: return v;
+  }
+}
+function sanitizeStore(){
+  try{
+    for(const k of store.keys()){
+      if(k==="__proto__"||k==="constructor"||k==="prototype"){ store.del(k); continue; }
+      const v=store.get(k); const c=cleanStored(k,v);
+      if(c===undefined){ store.del(k); continue; }
+      if(c!==v && JSON.stringify(c)!==JSON.stringify(v)) store.set(k,c);
+    }
+  }catch(e){}
+}
+/* run before the first paint (after the quick local copy is read) and again once the full store has loaded */
+(function(){
+  const _seed=seedScrollFromDisk; window.seedScrollFromDisk=seedScrollFromDisk=function(){ sanitizeStore(); return _seed.apply(this,arguments); };
+  const _ml=marksLoad; window.marksLoad=marksLoad=function(){ sanitizeStore(); return _ml.apply(this,arguments); };
+})();
+
+/* ---- Backups: only the reader's own data. The search indexes the app builds
+   for itself (13 MB and more) are left out; they are rebuilt on the device. ---- */
+const BACKUP_SKIP=/^(conc:|strongsidx:)/;
+window.exportData=exportData=function(){
+  const data={}; for(const k of store.keys()){ if(k==="lastBackup"||BACKUP_SKIP.test(k)) continue;
+    let v=store.get(k);
+    if(k==="settings" && v && v.ai && v.ai.key){ v=Object.assign({},v,{ai:Object.assign({},v.ai,{key:""})}); }
+    data["scroll:"+k]=JSON.stringify(v); }
+  const payload={ _app:"The Scroll", _kind:"backup", _v:2, _at:Date.now(), _items:Object.keys(data).length, data };
+  const blob=new Blob([JSON.stringify(payload)],{type:"application/json"});
+  const d=new Date(); const stamp=d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="the-scroll-backup-"+stamp+".json"; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>{ try{ URL.revokeObjectURL(a.href); }catch(e){} },4000);
+  try{ store.set("lastBackup", Date.now()); }catch(e){}
+  try{ if(typeof refreshDataSafety==="function") refreshDataSafety(); }catch(e){}
+  toast("Backup saved. Keep this file somewhere safe — email it to yourself, or save to your cloud drive.");
+};
+
+/* ---- Prayer journal: a real passphrase check, a Lock button, and an automatic lock ---- */
+const PRAYER_CHECK="the-scroll-journal-ok";
+window.doPrayerSetup=doPrayerSetup=async function(){
+  const el=$("#pp"); const pass=el?el.value:""; if(pass.length<6){ toast("Use at least 6 characters."); return; }
+  const salt=crypto.getRandomValues(new Uint8Array(16));
+  const key=await deriveKey(pass,salt);
+  store.set("prayerMeta",{salt:b64(salt),check:await enc(key,PRAYER_CHECK)});
+  prayerKey=key; store.set("prayers",[]); render();
+};
+window.doUnlock=doUnlock=async function(){
+  const el=$("#pp"); const pass=el?el.value:""; const meta=store.get("prayerMeta",null); if(!meta) return;
+  try{
+    const key=await deriveKey(pass,unb64(meta.salt));
+    if(meta.check){ if(await dec(key,meta.check)!==PRAYER_CHECK) throw new Error("bad"); }
+    else{
+      const list=store.get("prayers",[]);
+      if(!list.length) throw new Error("unverifiable");   /* old journal with nothing to check against: start it again safely below */
+      await dec(key,list[0].data);
+      meta.check=await enc(key,PRAYER_CHECK); store.set("prayerMeta",meta);   /* add the check for next time */
+    }
+    prayerKey=key; render();
+  }catch(e){
+    prayerKey=null;
+    if(e&&e.message==="unverifiable"){ store.del("prayerMeta"); toast("Your empty journal was reset. Choose a passphrase to start it again."); render(); return; }
+    toast("That passphrase didn’t work.");
+  }
+};
+function prayerLock(){ prayerKey=null; if(currentView==="prayer") render(); toast("Journal locked."); }
+(function(){
+  const _pl=prayerList; window.prayerList=prayerList=function(){
+    return _pl.apply(this,arguments).replace('<h1 class="h1">Prayer journal</h1>',
+      '<div class="row" style="justify-content:space-between;align-items:center"><h1 class="h1" style="margin:0">Prayer journal</h1><button class="btn" onclick="prayerLock()" aria-label="Lock the journal">\u{1F512} Lock</button></div>');
+  };
+  let hiddenAt=0;
+  document.addEventListener("visibilitychange",()=>{
+    if(document.hidden){ hiddenAt=Date.now(); return; }
+    if(prayerKey && hiddenAt && Date.now()-hiddenAt>5*60*1000){ prayerKey=null; if(currentView==="prayer") render(); }
+  });
+})();
+
+/* ---- Settings sections: the toggle is a real button, not a button wrapped around buttons ---- */
+(function(){
+  const _sa=VIEWS.settings_after;
+  VIEWS.settings_after=function(){
+    const r=_sa.apply(this,arguments);
+    try{ (window.__setSecs||[]).forEach(el=>{
+      const h=el.querySelector('.set-col-h'); if(!h) return;
+      h.removeAttribute('role'); h.removeAttribute('tabindex'); h.removeAttribute('aria-expanded'); h.onkeydown=null;
+      let c=h.querySelector('.set-chev');
+      if(c && c.tagName!=="BUTTON"){ const b=document.createElement('button'); b.type='button'; b.className='set-chev';
+        b.setAttribute('aria-label',(h.textContent||'section').replace('▾','').trim().slice(0,40)+': show or hide'); b.textContent='▾'; c.replaceWith(b); c=b; }
+      if(c){ const sync=()=>c.setAttribute('aria-expanded',String(!el.classList.contains('closed'))); sync();
+        new MutationObserver(sync).observe(el,{attributes:true,attributeFilter:['class']}); }
+    }); }catch(e){}
+    return r;
+  };
+})();
 
 performance.mark&&performance.mark("scroll-boot");
 __boot();
