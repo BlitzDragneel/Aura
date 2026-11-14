@@ -290,3 +290,19 @@ BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federal
   Jan 2026). Weekends are quiet (11 vs 49 bp mean |hourly move|).
 - *Leverage:* nothing passed, so there is no table. Silver fell −31% close-to-close on 30 Jan 2026. The watch rule's
   worst 2026 intrabar move was −16%, which liquidates 5× and above; 20×/40× die on ordinary days (2σ ≈ 4%).
+
+## Lead — E140 gold pyramiding: add on strength, trail one stop (md5 791d7764…): FAIL
+Owner's question: a signal trader starts small, adds while the move continues and exits fast when it turns. Tested on
+XAUUSDT perp 1-minute (Dec 2025–Nov 2026) and PAXG 1-minute (2021–2025), momentum entries (5m close beyond the 60-min
+range) and a random-entry control, trailing stop 1×ATR(5m), max 4 h, spread 0.20 USD per unit (each add pays it).
+- XAU FINAL (Sep–Nov 2026), mean R per trade: SINGLE −0.02 (win 34%); PYR k0.5 N6 +0.71 (t 2.66, win 18%).
+  But the RANDOM-entry pyramid did as well or better: +0.76 (t 4.35). The gain is gold's 2026 trend, not the entry.
+  Doubled spread turns every momentum pyramid negative (−0.14 to −0.22 R).
+- PAXG 2021–2024: every pyramid loses heavily (−0.5 to −0.9 R, t ≈ −10 to −12); 2025 (the big gold rally) positive.
+  Pyramiding is a bet that the market trends: it pays in trend years and bleeds in ranges.
+- Typical trade: 80% of pyramid trades lose; the average per unit of peak risk is negative (−0.3 to −0.45); a few big
+  trend days pay for everything.
+- At the trader's size (balance $560, 0.1 lot = 10 oz per unit), taking every momentum signal wiped the account within
+  the first days of every period, every variant.
+Verdict: FAIL (does not beat random entries; does not survive double costs). Recorded for the owner: adding to winners
+only works while gold trends, and at 0.1 lot per add on a $560 account one choppy day ends it.
