@@ -108,6 +108,11 @@ def parse(text: str, logged_ms: int, provider: str = "") -> Signal:
     nums = [_f(x) for x in re.findall(NUM, head)]
     entry = entry_hi = None
     if nums:
+        raw = re.findall(NUM, head)
+        if len(nums) >= 2 and nums[1] < nums[0] and len(raw[1]) < len(raw[0].split(".")[0]):
+            # shorthand zone '4118-14' = 4118 to 4114
+            k = len(raw[1].split(".")[0])
+            nums[1] = float(raw[0].split(".")[0][:-k] + raw[1])
         if len(nums) >= 2 and abs(nums[1] - nums[0]) < 0.02 * nums[0]:
             entry, entry_hi = min(nums[:2]), max(nums[:2])
         else:

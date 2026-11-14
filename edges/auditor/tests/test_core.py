@@ -49,3 +49,8 @@ def test_summary_and_risk():
     assert s["tp1"]["n"] == 5 and "Too early" in s["verdict"]
     rc = risk_check(564.58, [dict(symbol="XAUUSDm", side="sell", lots=0.1)] * 9)
     assert rc["by_symbol"][0]["usd_per_1_move"] == 90 and round(rc["by_symbol"][0]["move_to_lose_balance"], 2) == 6.27
+
+
+def test_shorthand_zone():
+    s = parse("PAIR: gold (xau usd) DIRECTION: BUY ENTRY: 4118-14 SL:4108 TP: 4123 TP2: 4128 Tp3: 4133", 0)
+    assert (s.entry, s.entry_hi, s.stop, s.targets) == (4114, 4118, 4108, [4123, 4128, 4133])
