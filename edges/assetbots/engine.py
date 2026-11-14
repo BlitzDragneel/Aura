@@ -46,7 +46,13 @@ class LiveProvider:
         self.cx, self.fx = Crypto(h), FX(h)
 
     def klines(self, sym, tf, limit):
-        k = self.cx.klines(sym, tf, limit)
+        if limit > 1000:      # a rule with a long lookback: page through OKX's history (the providers cap one call at 1000)
+            try:
+                k = self.cx._k_okx(sym, tf, int(limit))
+            except Exception:
+                k = self.cx.klines(sym, tf, 1000)
+        else:
+            k = self.cx.klines(sym, tf, limit)
         rows = [c for c in k["candles"] if c["closed"]]
         df = pd.DataFrame(rows)
         if df.empty:
@@ -92,6 +98,7 @@ class AssetBot:
         self.provider = provider
         self.approved = approved
         self.scouts = scouts or ScoutReader(self.spec.code, self.root)
+        self._extra = {}
 
     # ---------------------------------------------------------------- state files
     def _state(self) -> dict:
@@ -129,20 +136,36 @@ class AssetBot:
             errors.append(f"funding: {type(e).__name__}")
         return bars, quote, funding, errors
 
+    def _sym_bars(self, sym, tf, need, bars):
+        """Closed `tf` bars of `sym` with at least `need` rows when the provider can give them (cached per cycle).
+        The asset's own perp reuses the cycle's candles when they are long enough; other symbols (e.g. the PAXG leg of a
+        BTC/gold rule) are fetched on their own - never substituted by this asset's candles."""
+        key = (sym, tf)
+        if key in self._extra:
+            return self._extra[key]
+        df = bars.get(tf) if sym == self.spec.perp else None
+        if (df is None or len(df) < need) and self.provider is not None:
+            try:
+                got = self.provider.klines(sym, tf, max(TFS.get(tf, 500), need))
+                if got is not None and (df is None or len(got) > len(df)):
+                    df = got
+            except Exception:
+                pass
+        self._extra[key] = df
+        return df
+
     def _rule_bars(self, strat, bars):
         tf = getattr(strat, "tf", "1h")
-        df = bars.get(tf)
-        if df is None and self.provider is not None:
-            try:
-                df = self.provider.klines(self.spec.perp, tf, max(TFS.get(tf, 500), getattr(strat, "lookback", 0) + 5))
-                bars[tf] = df
-            except Exception:
-                df = None
-        if df is None:
-            return None, tf
+        need = int(getattr(strat, "lookback", 0)) + 5
         uni = getattr(strat, "universe", "all")
         syms = [self.spec.perp] if uni == "all" else list(uni)
-        return {s: df for s in syms}, tf
+        data = {}
+        for sym in syms:
+            df = self._sym_bars(sym, tf, need, bars)
+            if df is None or not len(df):
+                return None, tf
+            data[sym] = df
+        return data, tf
 
     # ---------------------------------------------------------------- calls book
     def _new_call(self, rule, sig, bar_time, tf, horizon) -> dict:
@@ -153,8 +176,9 @@ class AssetBot:
         target = entry * (1 + side * sig.target_pct) if entry and sig.target_pct else None
         exit_time = pd.Timestamp(bar_time) + TF_DELTA[tf] * (int(sig.hold_bars) + (1 if sig.entry == "market" else 0))
         margin, lev = float(rule.get("margin_usdt") or 0), float(rule.get("max_leverage") or 1)
-        return dict(id=f"{rule['id']}-{pd.Timestamp(bar_time):%Y%m%d%H%M}", rule=rule["id"], horizon=horizon,
-                    asset=self.spec.code, symbol=self.spec.perp, side=sig.side, entry_type=sig.entry, entry=entry,
+        leg = "" if sig.sym == self.spec.perp else f"-{sig.sym}"
+        return dict(id=f"{rule['id']}{leg}-{pd.Timestamp(bar_time):%Y%m%d%H%M}", rule=rule["id"], horizon=horizon,
+                    asset=self.spec.code, symbol=sig.sym, side=sig.side, entry_type=sig.entry, entry=entry,
                     stop=stop, target=target, valid_for_bars=int(sig.valid_for_bars), hold_bars=int(sig.hold_bars),
                     tf=tf, signal_bar=_iso(bar_time), exit_by=_iso(exit_time),
                     size=dict(margin_usdt=margin, leverage=lev, notional_usdt=margin * lev),
@@ -311,6 +335,7 @@ class AssetBot:
         bars = {k: v for k, v in bars.items() if v is not None and len(v)}
         now = pd.Timestamp(now) if now is not None else pd.Timestamp.now(tz="UTC")
         st = self._state()
+        self._extra = {}
         scouts = self.scouts.read(bars, self.spec)
         read = market.read(bars, now, self.spec, quote, funding, scouts)
         approved = rules.load_approved() if self.approved is None else self.approved
@@ -319,7 +344,7 @@ class AssetBot:
         closed_now = []
         still = []
         for c in st["open_calls"]:
-            c = self.update_call(c, bars.get(c["tf"]))
+            c = self.update_call(c, self._sym_bars(c.get("symbol", self.spec.perp), c["tf"], 0, bars))
             if c["state"] in ("TRIGGERED", "CONFIRMED"):
                 still.append(c)
             else:
@@ -343,7 +368,7 @@ class AssetBot:
                 if data is None:
                     notes.append(f"{r['id']}: no {tf} candles this cycle")
                     continue
-                last_t = next(iter(data.values())).index[-1]
+                last_t = (data.get(self.spec.perp) if self.spec.perp in data else next(iter(data.values()))).index[-1]
                 try:
                     sigs = strat.signals({s: d.iloc[-(getattr(strat, 'lookback', 500) + 1):] for s, d in data.items()},
                                          last_t)

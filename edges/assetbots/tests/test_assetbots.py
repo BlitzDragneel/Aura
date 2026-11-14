@@ -247,3 +247,42 @@ def test_metal_scouts_load_and_carry_skill_labels(home):
     assert "missing" not in out
     assert out["swing"]["skill_ok"] is False and out["swing"]["flag"] is False      # no validated skill -> never WATCH
     assert out["day"]["direction"].startswith("none")
+
+
+# ---------------------------------------------------------------- multi-symbol rules (e.g. BTC/gold allocation)
+class TwoLegs(Strategy):
+    id, tf, universe, lookback = "btc_two_legs", "1h", ["BTCUSDT", "PAXGUSDT"], 700
+
+    def __init__(self, when):
+        super().__init__()
+        self.when, self.seen = when, {}
+
+    def signals(self, bars, now):
+        self.seen = {k: (len(v), float(v.c.iloc[-1])) for k, v in bars.items()}
+        if pd.Timestamp(now) != self.when:
+            return []
+        return [Signal(sym="BTCUSDT", side="long", hold_bars=24, note="w=0.3 BTC leg"),
+                Signal(sym="PAXGUSDT", side="long", hold_bars=24, note="w=0.7 gold leg")]
+
+
+class FakeProvider:
+    def __init__(self):
+        self.asked = []
+
+    def klines(self, sym, tf, limit):
+        self.asked.append((sym, tf, limit))
+        return frame(tf, T0, n=limit, price=4000.0 if sym == "PAXGUSDT" else 75000.0, seed=3)
+
+
+def test_other_legs_use_their_own_candles_with_the_rule_lookback(home, monkeypatch):
+    strat, prov = TwoLegs(T0), FakeProvider()
+    monkeypatch.setattr(rules, "load_strategy", lambda rid: strat if rid == strat.id else None)
+    b = BOTS["BTC"](home, provider=prov, approved=[rule(asset="BTC", horizon="hold", rid="btc_two_legs")], scouts=NoScouts())
+    d = b.run_once(bars=bars_at(T0, price=75000.0), now=T0 + pd.Timedelta(hours=1, minutes=4))
+    assert strat.seen["PAXGUSDT"][1] == pytest.approx(4000.0) and strat.seen["BTCUSDT"][1] == pytest.approx(75000.0)
+    assert strat.seen["PAXGUSDT"][0] >= 700 and strat.seen["BTCUSDT"][0] >= 700        # the rule's lookback, not 500
+    assert ("PAXGUSDT", "1h", 705) in prov.asked
+    legs = {c["symbol"]: c for c in d["open_calls"]}
+    assert set(legs) == {"BTCUSDT", "PAXGUSDT"} and legs["PAXGUSDT"]["entry"] == pytest.approx(4000.0)
+    assert legs["PAXGUSDT"]["note"] == "w=0.7 gold leg" and legs["BTCUSDT"]["id"] != legs["PAXGUSDT"]["id"]
+    assert d["horizons"]["hold"]["state"] == "TRIGGERED"

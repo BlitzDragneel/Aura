@@ -11,7 +11,7 @@ ok(/v6\.5\.1(19|[2-9]\d) · build/.test(html), 'build v6.5.119 or later');
 ok(html.split('id="page-desks"').length === 2 && /data-page="desks"/.test(html) && /'desks'\];   \/\/ v6\.5\.119/.test(html), 'one Desks page, a menu entry, known to the navigator');
 const CALL = { id:'btc_rule-202611141500', rule:'btc_trend_day', horizon:'day', asset:'BTC', symbol:'BTCUSDT', side:'long', entry_type:'market', entry:75830, stop:74314, target:78863, tf:'1h',
   signal_bar:new Date(Date.now() - 36e5).toISOString(), exit_by:new Date(Date.now() + 3 * 36e5).toISOString(), size:{ margin_usdt:5, leverage:1, notional_usdt:5 }, grade:'B', status_rule:'paper',
-  evidence:'edges/results/E90_result.json', research_only:true, execution_allowed:false, state:'TRIGGERED', fill_time:null, fill_price:null };
+  evidence:'edges/results/E90_result.json', note:'w=0.30 BTC leg', research_only:true, execution_allowed:false, state:'TRIGGERED', fill_time:null, fill_price:null };
 (async () => { const pw = require('playwright'), b = await pw.chromium.launch();
   async function open(o){ o = o || {}; const ctx = await b.newContext({ viewport:{ width:o.w || 412, height:o.h || 915 } });
     await ctx.route('**/*', r => { let u; try{ u = new URL(r.request().url()); }catch(e){ return r.abort(); } if(u.protocol === 'file:') return r.continue(); if(M.handle(r)) return;
@@ -65,7 +65,7 @@ const CALL = { id:'btc_rule-202611141500', rule:'btc_trend_day', horizon:'day', 
   t = await deskText(pg);
   ok(/A tested rule has called a trade: day trades — long \(rule btc_trend_day, grade B, waiting for its entry\)/.test(t) && /TRIGGERED · long/.test(t) && /Calls come only from rules that passed a fair test/.test(t),
     'Bitcoin: a call from a tested rule says so plainly, with its direction', t.slice(0, 500));
-  ok(/Entry\s*75,830\.0/.test(t) && /Stop\s*74,314\.0/.test(t) && /Target\s*78,863\.0/.test(t) && /5 USDT margin × 1/.test(t) && /edges\/results\/E90_result\.json/.test(t) && /paper record \(research only\): not an order/.test(t) && /Grade B/i.test(t),
+  ok(/Entry\s*75,830\.0/.test(t) && /Stop\s*74,314\.0/.test(t) && /Target\s*78,863\.0/.test(t) && /5 USDT margin × 1/.test(t) && /Rule note\s*w=0\.30 BTC leg/.test(t) && /edges\/results\/E90_result\.json/.test(t) && /paper record \(research only\): not an order/.test(t) && /Grade B/i.test(t),
     'the call shows entry, stop, target, exit time, size from the rule, grade, evidence, and that it is a paper record', t.slice(0, 900));
   await shot(pg, 'phone_btc_call', true);
   // 3. a desk the bot has not written yet

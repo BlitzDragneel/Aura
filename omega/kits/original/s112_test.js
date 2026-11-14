@@ -11,8 +11,8 @@ ok(/id="liveTokenInput"/.test(html) && /id="page-forex"/.test(html) && /data-pag
 ok(/setInterval\(tickFeed, 120000\)/.test(html) || /id:'botsfeed'[\s\S]{0,400}120e3 : 15\*60e3/.test(html), 'bots feed refreshes every 2 minutes while visible (from v6.5.116 as the Autopilot job "botsfeed")');
 const prev = process.env.PREV && fs.readFileSync(process.env.PREV, 'utf8');
 if(prev){ const k = s => s.slice(s.indexOf('function analyseSeries('), s.indexOf('function analyseSeries(') + 60000);
-  const mod = s => { const i = s.indexOf('// OMEGA v6.5 — CREED / ACCEPTANCE STRATEGY MODULE'); return s.slice(i, s.indexOf('</script>', i)).replace(/\n    if\(!key && window\.OMEGA_LAPI[^\n]*/, ''); };
-  ok(k(prev) === k(html) && mod(prev) === mod(html), 'CREED: engine byte-identical; the module differs only by the one data-source line'); }
+  const mod = s => { const i = s.indexOf('// OMEGA v6.5 — CREED / ACCEPTANCE STRATEGY MODULE'); return s.slice(i, s.indexOf('</script>', i)).replace(/\n    if\(!key && window\.OMEGA_LAPI[^\n]*/, '').replace(/\n    crypto: \['BTCUSDT',[^\n]*/, ''); };   // v6.5.118: the Desk's crypto symbol list (gold/silver perpetuals) is a data line too
+  ok(k(prev) === k(html) && mod(prev) === mod(html), 'CREED: engine byte-identical; the module differs only by the one data-source line (and from v6.5.118 its crypto symbol list)'); }
 (async () => { const pw = require('playwright'), b = await pw.chromium.launch();
   async function open(prep){ const ctx = await b.newContext({ viewport:{ width:412, height:915 } }); const tdCalls = [];
     await ctx.route('**/*', r => { let u; try{ u = new URL(r.request().url()); }catch(e){ return r.abort(); } if(u.protocol === 'file:') return r.continue();

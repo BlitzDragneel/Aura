@@ -113,6 +113,7 @@ JS = r'''<script>/* ═══ DESKS: BITCOIN, GOLD, SILVER (v6.5.119) ═══
       '<dt>Stop</dt><dd>' + num(c.stop, d) + '</dd><dt>Target</dt><dd>' + (c.target ? num(c.target, d) : 'none (time exit)') + '</dd><dt>Exit by</dt><dd>' + esc(when(c.exit_by)) + '</dd>' +
       '<dt>Size</dt><dd>' + (c.size ? num(c.size.margin_usdt, 0) + ' USDT margin × ' + num(c.size.leverage, 0) + ' (the rule’s tested maximum)' : '—') + '</dd>' +
       (c.outcome ? '<dt>Outcome</dt><dd>' + esc(c.outcome) + (c.net_pct != null ? ' · ' + pct(c.net_pct) + ' after costs' : '') + '</dd>' : '') +
+      (c.note ? '<dt>Rule note</dt><dd>' + esc(c.note) + (c.symbol && META[c.asset] && c.symbol !== META[c.asset].perp ? ' (' + esc(c.symbol) + ' leg)' : '') + '</dd>' : '') +
       '<dt>Evidence</dt><dd>' + esc(c.evidence || '—') + '</dd><dt>Status</dt><dd>' + (c.execution_allowed ? 'testnet/live rule: the trading bot may execute it' : 'paper record (research only): not an order') + '</dd></dl></div>'; }
   function hzTile(j, h, d){ var x = stateOf(j, h[0]); if(!x) return '<div class="dk-h"><h4>' + h[1] + ' <small>' + h[2] + '</small></h4><span class="dk-st">—</span><p>No reading yet.</p></div>';
     var rs = (x.reasons || []).filter(Boolean), dir = /TRIGGERED|CONFIRMED/.test(x.state) && x.direction ? ' · ' + esc(x.direction) : '';
