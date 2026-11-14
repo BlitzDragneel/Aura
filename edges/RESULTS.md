@@ -121,3 +121,17 @@ max drawdown −18% (t 1.45) vs buy-and-hold +6.1%/yr, −33%. Not a pass; a low
 Exposure = target vol / EWMA vol (cap 1× or 2×), BTC/ETH, 24 variants. Chosen ETH tv 40% hl 10 cap 1×: Sharpe 1.17 vs 1.06
 (2020–23), 0.82 vs 0.70 (2024), −0.10 vs −0.02 (2025–26); drawdown −56/−38/−55% vs −80/−48/−68%. Luck check fails: the
 best Sharpe gain (+0.11) is far below shifted-volatility runs (95th pct +0.51) — the benefit is just holding less, not timing.
+
+## Lead — E85 trend/volatility long-or-cash controller from the external handoff (md5 fb92a37b…): FAIL as an edge, works as a drawdown limiter
+Rule exactly as given in OMEGA-HANDOFF (12–14 Nov): exposure = share of positive 20/60/120-day returns × min(1, 10% / max(vol20, vol60)).
+One configuration, costs 0.10% (BTC) / 0.05% (gold) of turnover, BTC funding charged. Sharpe, CAGR, max drawdown:
+| | controller | buy & hold | volatility-only |
+|---|---|---|---|
+| BTC 2020–23 | 1.25, +8.5%, −11% | 0.80, +35%, −79% | 0.76, +7.4%, −19% |
+| BTC 2024 | 1.44, +11%, −6% | 1.47, +90%, −29% | 1.55, +16%, −7% |
+| BTC 2025–26 | −0.09, −0.7%, −8% | −0.14, −14%, −54% | −0.26, −3%, −19% |
+| Gold 2001–17 | 0.52, +3.6%, −23% | 0.61, +9.8%, −44% | 0.72, +6.9%, −30% |
+| Gold 2018–21 | 0.53, +3.7%, −11% | 0.59, +8.2%, −19% | 0.61, +5.6%, −13% |
+| Gold 2022–26 | 1.09, +8.7%, −8% | 0.91, +17%, −27% | 1.07, +11%, −14% |
+Drawdowns are 3–7× smaller than holding, but returns are much lower and the trend part does not beat the simpler
+volatility-only sizing in 2024 (BTC) or 2018–21 (gold). Same conclusion as the handoff: a risk-control tool, not an edge.
