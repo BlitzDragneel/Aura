@@ -26,6 +26,7 @@ from fastapi.responses import StreamingResponse
 from . import __version__
 from .providers import FX, FX_EXOTICS, FX_MAJORS, FX_MINORS, METALS, TF, TF_MS, Crypto, Http, Options, ProviderError
 from .feed import Feed
+from .assets import AssetDesks
 from .signals import LiveSignals, approved_rules
 from .scouts import Scouts
 
@@ -117,6 +118,7 @@ def create_app(http: Http | None = None, start_background: bool = True) -> FastA
     live = LiveSignals(crypto)
     scouts = Scouts(crypto)
     feed = Feed()
+    desks = AssetDesks()
     cache = TTLCache()
     rec = FXRecorder(fx, [s.strip() for s in os.environ.get("OMEGA_FX_RECORD", "EURUSD,GBPUSD,USDJPY,XAUUSD")
                           .split(",") if s.strip()])
@@ -253,6 +255,15 @@ h1{color:#fff;text-shadow:0 0 8px #22f3ff,0 0 20px #22f3ff}a{color:#22f3ff}code{
     def bots_feed():
         return feed.get()
 
+    @app.get("/assets", dependencies=d)
+    def assets_index():
+        return desks.index()
+
+    @app.get("/assets/{asset}", dependencies=d)
+    def asset_desk(asset: str):
+        check_symbol(asset)
+        return guard(lambda: desks.get(asset))
+
     @app.get("/fx/recorded", dependencies=d)
     def fx_recorded(symbol: str = "EURUSD", tf: str = "1m"):
         check_symbol(symbol); tf_ok(tf)
@@ -299,5 +310,7 @@ h1{color:#fff;text-shadow:0 0 8px #22f3ff,0 0 20px #22f3ff}a{color:#22f3ff}code{
 
     from .academy import router as academy_router
     app.include_router(academy_router())
+    from .auditor import router as auditor_router
+    app.include_router(auditor_router(auth))
     app.state.recorder, app.state.http = rec, http
     return app

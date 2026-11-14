@@ -86,5 +86,20 @@
   "book": "own",
   "evidence": "edges/results/E81_result.json; edges/RESULTS.md (E81); edges/scouts/models/meta.json; edges/scouts/model.py",
   "note": "WATCH (paper only, not tradable): UpScout top-2% longs, hold 24 h. E81 2025-26 +118 bp, t 1.29 (missed t >= 2). Live model trained to 2026-11-03."
+ },
+ {
+  "id": "btc_gold_invvol",
+  "asset": "BTC",
+  "horizon": "hold",
+  "grade": "B",
+  "plan": "E94 (H6), E97",
+  "tf": "1h",
+  "max_leverage": 1,
+  "margin_usdt": 5,
+  "status": "paper",
+  "venue": "binance",
+  "book": "own",
+  "evidence": "edges/results/E94_result.json; edges/results/E97_result.json; edges/results/E97_leverage.json; edges/assets/BTC/FINDINGS.md",
+  "note": "HOLDING allocation, not a trade signal: monthly inverse-vol weights BTC/gold (PAXG), long only, 1x. Weights are in the Signal note; the runner does not size by weight yet -> PAPER ONLY. Weak point: chosen after seeing 2024-26, confirmed once on untouched 2014-19 (Sharpe 0.90 vs BTC 0.88, max DD -30% vs -84%, CAGR 14.6% vs 46%). A drawdown tool with lower returns than BTC in bull years. 2x leverage already gives -57% drawdown (2020-26)."
  }
 ]

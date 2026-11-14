@@ -1,0 +1,348 @@
+{
+ "plan": "E112",
+ "md5": "bb32cf10bb4e540c2fadc6217c078941",
+ "describe": {
+  "month_mean_bp_discovery": {
+   "1": 13.08,
+   "2": 5.29,
+   "3": -2.52,
+   "4": 3.15,
+   "5": 2.14,
+   "6": -4.32,
+   "7": 1.66,
+   "8": 12.74,
+   "9": 7.73,
+   "10": -2.73,
+   "11": 11.99,
+   "12": 3.25
+  },
+  "weekday_mean_bp_discovery": {
+   "0": 6.17,
+   "1": -2.05,
+   "2": 2.58,
+   "3": 2.54,
+   "4": 12.2
+  },
+  "month_mean_bp_validation": {
+   "1": 19.93,
+   "2": 11.12,
+   "3": 0.82,
+   "4": 10.9,
+   "5": -0.61,
+   "6": 11.89,
+   "7": 11.6,
+   "8": 5.71,
+   "9": -10.34,
+   "10": -0.08,
+   "11": -15.06,
+   "12": 15.34
+  },
+  "month_mean_bp_final": {
+   "1": 13.66,
+   "2": 5.8,
+   "3": 11.02,
+   "4": 10.59,
+   "5": 1.48,
+   "6": -17.32,
+   "7": 5.74,
+   "8": 13.63,
+   "9": -2.66,
+   "10": 4.98,
+   "11": 9.82,
+   "12": 10.58
+  }
+ },
+ "rules": {
+  "S1_best6": {
+   "discovery": {
+    "rule": {
+     "n": 3844,
+     "mean_bp": 4.683,
+     "t_nw": 3.58,
+     "sharpe": 0.89,
+     "cagr": 0.1155,
+     "max_dd": -0.235,
+     "years_pos": 13,
+     "years_total": 16,
+     "total": 4.295
+    },
+    "buy_hold": 0.57,
+    "on_mean_bp": 9.02,
+    "off_mean_bp": -0.5,
+    "on_minus_off_t": 2.52
+   },
+   "validation": {
+    "rule": {
+     "n": 1256,
+     "mean_bp": 2.306,
+     "t_nw": 1.37,
+     "sharpe": 0.58,
+     "cagr": 0.0545,
+     "max_dd": -0.148,
+     "years_pos": 5,
+     "years_total": 5,
+     "total": 0.303
+    },
+    "buy_hold": 0.86,
+    "on_mean_bp": 4.42,
+    "off_mean_bp": 5.66,
+    "on_minus_off_t": -0.24
+   },
+   "final": {
+    "rule": {
+     "n": 1477,
+     "mean_bp": 4.67,
+     "t_nw": 2.41,
+     "sharpe": 0.92,
+     "cagr": 0.1156,
+     "max_dd": -0.16,
+     "years_pos": 5,
+     "years_total": 6,
+     "total": 0.899
+    },
+    "buy_hold": 0.75,
+    "on_mean_bp": 8.47,
+    "off_mean_bp": 2.87,
+    "on_minus_off_t": 0.91
+   }
+  },
+  "S2_best3": {
+   "discovery": {
+    "rule": {
+     "n": 3844,
+     "mean_bp": 3.468,
+     "t_nw": 3.75,
+     "sharpe": 0.98,
+     "cagr": 0.087,
+     "max_dd": -0.14,
+     "years_pos": 15,
+     "years_total": 16,
+     "total": 2.57
+    },
+    "buy_hold": 0.57,
+    "on_mean_bp": 12.59,
+    "off_mean_bp": 1.43,
+    "on_minus_off_t": 2.63
+   },
+   "validation": {
+    "rule": {
+     "n": 1256,
+     "mean_bp": 1.102,
+     "t_nw": 0.92,
+     "sharpe": 0.38,
+     "cagr": 0.0254,
+     "max_dd": -0.119,
+     "years_pos": 3,
+     "years_total": 5,
+     "total": 0.133
+    },
+    "buy_hold": 0.86,
+    "on_mean_bp": 3.55,
+    "off_mean_bp": 5.56,
+    "on_minus_off_t": -0.34
+   },
+   "final": {
+    "rule": {
+     "n": 1477,
+     "mean_bp": 3.961,
+     "t_nw": 2.54,
+     "sharpe": 1.03,
+     "cagr": 0.0997,
+     "max_dd": -0.108,
+     "years_pos": 5,
+     "years_total": 6,
+     "total": 0.746
+    },
+    "buy_hold": 0.75,
+    "on_mean_bp": 12.46,
+    "off_mean_bp": 3.29,
+    "on_minus_off_t": 1.26
+   }
+  },
+  "S3_AugFeb": {
+   "discovery": {
+    "rule": {
+     "n": 3844,
+     "mean_bp": 4.414,
+     "t_nw": 3.06,
+     "sharpe": 0.77,
+     "cagr": 0.1061,
+     "max_dd": -0.229,
+     "years_pos": 12,
+     "years_total": 16,
+     "total": 3.658
+    },
+    "buy_hold": 0.57,
+    "on_mean_bp": 7.18,
+    "off_mean_bp": -0.01,
+    "on_minus_off_t": 1.88
+   },
+   "validation": {
+    "rule": {
+     "n": 1256,
+     "mean_bp": 2.301,
+     "t_nw": 1.32,
+     "sharpe": 0.55,
+     "cagr": 0.0537,
+     "max_dd": -0.173,
+     "years_pos": 4,
+     "years_total": 5,
+     "total": 0.298
+    },
+    "buy_hold": 0.86,
+    "on_mean_bp": 3.74,
+    "off_mean_bp": 6.85,
+    "on_minus_off_t": -0.58
+   },
+   "final": {
+    "rule": {
+     "n": 1477,
+     "mean_bp": 5.031,
+     "t_nw": 2.37,
+     "sharpe": 0.91,
+     "cagr": 0.124,
+     "max_dd": -0.173,
+     "years_pos": 5,
+     "years_total": 6,
+     "total": 0.984
+    },
+    "buy_hold": 0.75,
+    "on_mean_bp": 7.92,
+    "off_mean_bp": 2.43,
+    "on_minus_off_t": 0.88
+   }
+  },
+  "S4_TOM": {
+   "discovery": {
+    "rule": {
+     "n": 3844,
+     "mean_bp": 0.536,
+     "t_nw": 0.59,
+     "sharpe": 0.15,
+     "cagr": 0.0095,
+     "max_dd": -0.338,
+     "years_pos": 8,
+     "years_total": 16,
+     "total": 0.156
+    },
+    "buy_hold": 0.57,
+    "on_mean_bp": 2.3,
+    "off_mean_bp": 4.81,
+    "on_minus_off_t": -0.57
+   },
+   "validation": {
+    "rule": {
+     "n": 1256,
+     "mean_bp": 2.354,
+     "t_nw": 1.99,
+     "sharpe": 0.81,
+     "cagr": 0.0582,
+     "max_dd": -0.109,
+     "years_pos": 3,
+     "years_total": 5,
+     "total": 0.326
+    },
+    "buy_hold": 0.86,
+    "on_mean_bp": 10.44,
+    "off_mean_bp": 3.36,
+    "on_minus_off_t": 1.14
+   },
+   "final": {
+    "rule": {
+     "n": 1477,
+     "mean_bp": 3.562,
+     "t_nw": 2.45,
+     "sharpe": 0.86,
+     "cagr": 0.0878,
+     "max_dd": -0.125,
+     "years_pos": 5,
+     "years_total": 6,
+     "total": 0.638
+    },
+    "buy_hold": 0.75,
+    "on_mean_bp": 12.66,
+    "off_mean_bp": 3.32,
+    "on_minus_off_t": 1.19
+   }
+  },
+  "S5_weekday4": {
+   "discovery": {
+    "rule": {
+     "n": 3844,
+     "mean_bp": 0.968,
+     "t_nw": 1.09,
+     "sharpe": 0.28,
+     "cagr": 0.0209,
+     "max_dd": -0.321,
+     "years_pos": 11,
+     "years_total": 16,
+     "total": 0.372
+    },
+    "buy_hold": 0.57,
+    "on_mean_bp": 12.2,
+    "off_mean_bp": 2.23,
+    "on_minus_off_t": 2.06
+   },
+   "validation": {
+    "rule": {
+     "n": 1256,
+     "mean_bp": -0.75,
+     "t_nw": -0.69,
+     "sharpe": -0.29,
+     "cagr": -0.0209,
+     "max_dd": -0.165,
+     "years_pos": 2,
+     "years_total": 5,
+     "total": -0.1
+    },
+    "buy_hold": 0.86,
+    "on_mean_bp": 4.36,
+    "off_mean_bp": 5.23,
+    "on_minus_off_t": -0.13
+   },
+   "final": {
+    "rule": {
+     "n": 1477,
+     "mean_bp": 0.375,
+     "t_nw": 0.26,
+     "sharpe": 0.1,
+     "cagr": 0.005,
+     "max_dd": -0.167,
+     "years_pos": 3,
+     "years_total": 6,
+     "total": 0.03
+    },
+    "buy_hold": 0.75,
+    "on_mean_bp": 6.21,
+    "off_mean_bp": 5.4,
+    "on_minus_off_t": 0.1
+   }
+  }
+ },
+ "best6": [
+  12,
+  2,
+  9,
+  11,
+  8,
+  1
+ ],
+ "best3": [
+  11,
+  8,
+  1
+ ],
+ "luck": {
+  "S1_real": 2.52,
+  "S1_null_p95": 3.46,
+  "S2_real": 2.63,
+  "S2_null_p95": 3.27
+ },
+ "verdicts": {
+  "S1_best6": "FAIL",
+  "S2_best3": "FAIL",
+  "S3_AugFeb": "FAIL",
+  "S4_TOM": "FAIL",
+  "S5_weekday4": "FAIL"
+ }
+}

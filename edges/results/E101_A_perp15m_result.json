@@ -1,0 +1,320 @@
+{
+ "panel": "A_perp15m",
+ "bars": 32416,
+ "periods": {
+  "train": [
+   "2025-12-11 00:00:00+00:00",
+   "2026-07-01 00:00:00+00:00"
+  ],
+  "select": [
+   "2026-07-01 00:00:00+00:00",
+   "2026-09-01 00:00:00+00:00"
+  ],
+  "eval": [
+   "2026-09-01 00:00:00+00:00",
+   "2026-11-01 00:00:00+00:00"
+  ],
+  "check": [
+   "2026-11-01 00:00:00+00:00",
+   "2026-11-14 00:00:00+00:00"
+  ]
+ },
+ "price_model_q_select": {
+  "0.4": [
+   299,
+   -2717.4
+  ],
+  "0.45": [
+   239,
+   -3155.2
+  ],
+  "0.5": [
+   145,
+   -1795.3
+  ],
+  "0.55": [
+   69,
+   -929.3
+  ],
+  "0.6": [
+   22,
+   -313.5
+  ]
+ },
+ "price_model_q": 0.6,
+ "families": {
+  "select": {
+   "price_model": {
+    "n": 22,
+    "acct_pct_6bp": -2.315,
+    "acct_pct_12bp": -3.344,
+    "gross_bp": -2.36,
+    "breakeven_bp_side": -1.18,
+    "cfd_mean_bp": -6.25,
+    "cfd_t_week": -0.82,
+    "handoff_cost_t_week": -1.86
+   },
+   "price_breakout": {
+    "n": 282,
+    "acct_pct_6bp": -22.16,
+    "acct_pct_12bp": -36.956,
+    "gross_bp": 0.62,
+    "breakeven_bp_side": 0.31,
+    "cfd_mean_bp": -3.34,
+    "cfd_t_week": -1.86,
+    "handoff_cost_t_week": -6.31
+   },
+   "compression": {
+    "n": 157,
+    "acct_pct_6bp": -14.243,
+    "acct_pct_12bp": -21.696,
+    "gross_bp": -1.46,
+    "breakeven_bp_side": -0.73,
+    "cfd_mean_bp": -5.42,
+    "cfd_t_week": -1.69,
+    "handoff_cost_t_week": -4.19
+   },
+   "compression_confirm": {
+    "n": 132,
+    "acct_pct_6bp": -10.73,
+    "acct_pct_12bp": -17.385,
+    "gross_bp": -0.08,
+    "breakeven_bp_side": -0.04,
+    "cfd_mean_bp": -4.05,
+    "cfd_t_week": -1.26,
+    "handoff_cost_t_week": -3.76
+   },
+   "accepted_retest": {
+    "n": 237,
+    "acct_pct_6bp": -18.432,
+    "acct_pct_12bp": -30.998,
+    "gross_bp": 0.31,
+    "breakeven_bp_side": 0.15,
+    "cfd_mean_bp": -3.65,
+    "cfd_t_week": -1.87,
+    "handoff_cost_t_week": -5.97
+   },
+   "failed_auction": {
+    "n": 88,
+    "acct_pct_6bp": -9.277,
+    "acct_pct_12bp": -13.433,
+    "gross_bp": -4.77,
+    "breakeven_bp_side": -2.39,
+    "cfd_mean_bp": -8.77,
+    "cfd_t_week": -3.06,
+    "handoff_cost_t_week": -5.85
+   }
+  },
+  "eval": {
+   "price_model": {
+    "n": 14,
+    "acct_pct_6bp": -0.349,
+    "acct_pct_12bp": -1.198,
+    "gross_bp": 10.64,
+    "breakeven_bp_side": 5.32,
+    "cfd_mean_bp": 6.84,
+    "cfd_t_week": 0.65,
+    "handoff_cost_t_week": -0.11
+   },
+   "price_breakout": {
+    "n": 272,
+    "acct_pct_6bp": -24.245,
+    "acct_pct_12bp": -38.591,
+    "gross_bp": -0.82,
+    "breakeven_bp_side": -0.41,
+    "cfd_mean_bp": -4.68,
+    "cfd_t_week": -4.1,
+    "handoff_cost_t_week": -11.11
+   },
+   "compression": {
+    "n": 152,
+    "acct_pct_6bp": -14.493,
+    "acct_pct_12bp": -20.963,
+    "gross_bp": -3.41,
+    "breakeven_bp_side": -1.71,
+    "cfd_mean_bp": -7.26,
+    "cfd_t_week": -3.31,
+    "handoff_cost_t_week": -6.96
+   },
+   "compression_confirm": {
+    "n": 127,
+    "acct_pct_6bp": -13.063,
+    "acct_pct_12bp": -18.056,
+    "gross_bp": -5.71,
+    "breakeven_bp_side": -2.86,
+    "cfd_mean_bp": -9.44,
+    "cfd_t_week": -3.86,
+    "handoff_cost_t_week": -7.14
+   },
+   "accepted_retest": {
+    "n": 217,
+    "acct_pct_6bp": -19.509,
+    "acct_pct_12bp": -29.914,
+    "gross_bp": -1.73,
+    "breakeven_bp_side": -0.86,
+    "cfd_mean_bp": -5.58,
+    "cfd_t_week": -2.15,
+    "handoff_cost_t_week": -5.24
+   },
+   "failed_auction": {
+    "n": 97,
+    "acct_pct_6bp": -8.027,
+    "acct_pct_12bp": -13.594,
+    "gross_bp": 0.66,
+    "breakeven_bp_side": 0.33,
+    "cfd_mean_bp": -3.47,
+    "cfd_t_week": -0.91,
+    "handoff_cost_t_week": -3.01
+   }
+  },
+  "check": {
+   "price_model": {
+    "n": 4,
+    "acct_pct_6bp": -0.514,
+    "acct_pct_12bp": -0.734,
+    "gross_bp": -6.19,
+    "breakeven_bp_side": -3.09,
+    "cfd_mean_bp": -10.19,
+    "cfd_t_week": -31.55,
+    "handoff_cost_t_week": -56.34
+   },
+   "price_breakout": {
+    "n": 57,
+    "acct_pct_6bp": -1.947,
+    "acct_pct_12bp": -5.122,
+    "gross_bp": 7.77,
+    "breakeven_bp_side": 3.88,
+    "cfd_mean_bp": 3.77,
+    "cfd_t_week": 0.86,
+    "handoff_cost_t_week": -0.97
+   },
+   "compression": {
+    "n": 34,
+    "acct_pct_6bp": -2.135,
+    "acct_pct_12bp": -3.933,
+    "gross_bp": 2.0,
+    "breakeven_bp_side": 1.0,
+    "cfd_mean_bp": -2.0,
+    "cfd_t_week": -1.65,
+    "handoff_cost_t_week": -8.24
+   },
+   "compression_confirm": {
+    "n": 31,
+    "acct_pct_6bp": -1.232,
+    "acct_pct_12bp": -3.021,
+    "gross_bp": 5.86,
+    "breakeven_bp_side": 2.93,
+    "cfd_mean_bp": 1.86,
+    "cfd_t_week": 1.35,
+    "handoff_cost_t_week": -4.46
+   },
+   "accepted_retest": {
+    "n": 48,
+    "acct_pct_6bp": -3.185,
+    "acct_pct_12bp": -5.398,
+    "gross_bp": 3.31,
+    "breakeven_bp_side": 1.65,
+    "cfd_mean_bp": -0.69,
+    "cfd_t_week": -0.1,
+    "handoff_cost_t_week": -1.21
+   },
+   "failed_auction": {
+    "n": 21,
+    "acct_pct_6bp": -2.186,
+    "acct_pct_12bp": -3.491,
+    "gross_bp": -4.57,
+    "breakeven_bp_side": -2.29,
+    "cfd_mean_bp": -8.57,
+    "cfd_t_week": -13.95,
+    "handoff_cost_t_week": -26.97
+   }
+  }
+ },
+ "movement_watch": {
+  "select": {
+   "base_rate": 0.258,
+   "watch_rate": 0.491,
+   "control_watch_rate": 0.456,
+   "logloss_model": 0.4691,
+   "logloss_control": 0.4954,
+   "n": 5952
+  },
+  "eval": {
+   "base_rate": 0.218,
+   "watch_rate": 0.384,
+   "control_watch_rate": 0.351,
+   "logloss_model": 0.453,
+   "logloss_control": 0.4758,
+   "n": 5856
+  },
+  "check": {
+   "base_rate": 0.324,
+   "watch_rate": 0.548,
+   "control_watch_rate": 0.538,
+   "logloss_model": 0.5381,
+   "logloss_control": 0.5564,
+   "n": 1232
+  }
+ },
+ "ny0812": {
+  "select": {
+   "model_in_ny0812": [
+    5,
+    -0.547
+   ],
+   "const_short_same_bars": [
+    5,
+    -0.547
+   ],
+   "const_short_every_0800": [
+    62,
+    -6.995
+   ],
+   "const_long_every_0800": [
+    62,
+    -3.986
+   ]
+  },
+  "eval": {
+   "model_in_ny0812": [
+    2,
+    0.092
+   ],
+   "const_short_same_bars": [
+    2,
+    -0.241
+   ],
+   "const_short_every_0800": [
+    61,
+    -1.345
+   ],
+   "const_long_every_0800": [
+    61,
+    -8.269
+   ]
+  },
+  "check": {
+   "model_in_ny0812": [
+    0,
+    0.0
+   ],
+   "const_short_same_bars": [
+    0,
+    0.0
+   ],
+   "const_short_every_0800": [
+    13,
+    -0.203
+   ],
+   "const_long_every_0800": [
+    13,
+    -1.73
+   ]
+  }
+ },
+ "flat_share": {
+  "weekend": 0.739,
+  "weekday": 0.267,
+  "weekend_share_of_windows": 0.284
+ }
+}

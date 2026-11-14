@@ -1,0 +1,53 @@
+# OMEGA asset bots (BTC, gold, silver). Copy to .github/workflows/omega-assets.yml on `main` (the lead does this).
+# Every 15 minutes: each bot reads its market on closed candles (Binance -> OKX -> Gate perps; Swissquote spot for metals),
+# steps its day/swing/hold state machine, writes calls ONLY from rules in edges/approved.json for its asset+horizon,
+# scores older readings/calls, and saves bot-state/assets/ (BTC.json, XAU.json, XAG.json, INDEX.json, <ASSET>/ history).
+# Monthly (2nd, 03:51 UTC): re-download the metals history and retrain the gold/silver scouts into bot-state/assets/models.
+# Information only: no keys, no orders anywhere.
+name: OMEGA asset bots (every 15 minutes)
+on:
+  schedule:
+    - cron: "4,19,34,49 * * * *"   # 4 minutes after each 15-minute candle closes
+    - cron: "51 3 2 * *"           # monthly retrain of the metal scouts
+  workflow_dispatch:
+    inputs:
+      retrain: { description: "retrain the metal scouts now", type: boolean, default: false }
+permissions:
+  contents: write
+concurrency:
+  group: omega-assets
+  cancel-in-progress: false
+env:
+  CODE_REF: claude/trading-edge-research-bots-gpkvi1
+jobs:
+  desks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ env.CODE_REF }}", path: code }
+      - uses: actions/checkout@v4
+        with: { ref: bot-state, path: state }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --quiet httpx pandas numpy pyarrow lightgbm scikit-learn
+      - name: Retrain metal scouts (monthly)
+        if: github.event.schedule == '51 3 2 * *' || inputs.retrain
+        working-directory: code
+        env:
+          OMEGA_DATA: ${{ runner.temp }}/data
+        run: |
+          python edges/data/fetch_metals.py | tail -n 3
+          python -W ignore -m edges.assetbots train all --out ../state/assets/models
+      - name: Read, call, score
+        working-directory: code
+        env:
+          SCOUT_MODELS: ${{ github.workspace }}/state/scouts/models
+          SCOUT_MODELS15: ${{ github.workspace }}/state/fast_scouts/models
+        run: python -W ignore -m edges.assetbots run ../state | tail -n 10
+      - name: Save
+        working-directory: state
+        run: |
+          git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
+          git add -A assets; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
+          for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done

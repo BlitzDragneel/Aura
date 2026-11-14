@@ -1,0 +1,95 @@
+{
+ "asset": "XAG",
+ "data": "SI=F silver futures hourly (CME hours)",
+ "features": [
+  "r1",
+  "r3",
+  "r6",
+  "r12",
+  "r24",
+  "r72",
+  "r168",
+  "r336",
+  "sig168",
+  "rz6",
+  "rz24",
+  "rz72",
+  "rz168",
+  "dist_ma12",
+  "slope_ma12",
+  "dist_ma24",
+  "slope_ma24",
+  "dist_ma72",
+  "slope_ma72",
+  "dist_ma200",
+  "slope_ma200",
+  "ma_cross_12_72",
+  "rsi14",
+  "rsi14_chg",
+  "atr_ratio",
+  "bb_pos",
+  "bb_width",
+  "range_pos72",
+  "vol_z24",
+  "vol_z1",
+  "close_pos",
+  "body",
+  "hour",
+  "dow"
+ ],
+ "tf": "1h",
+ "horizons": {
+  "day": 4,
+  "swing": 24
+ },
+ "discovery": [
+  "2024-06-01",
+  "2025-07-01"
+ ],
+ "validation": [
+  "2025-07-01",
+  "2026-01-01"
+ ],
+ "final_untouched_from": "2026-01-01",
+ "thresholds": {
+  "day_up_move": 0.2979919974372755,
+  "day_down_move": 0.27759970697285036,
+  "swing_up_move": 0.49313008959331583,
+  "swing_down_move": 0.384091658775983
+ },
+ "validation_scores": {
+  "day_up_move": {
+   "n_train": 5769,
+   "n_val": 2886,
+   "auc": 0.5763,
+   "brier_skill": -0.0049
+  },
+  "day_down_move": {
+   "n_train": 5769,
+   "n_val": 2886,
+   "auc": 0.6141,
+   "brier_skill": -0.0001
+  },
+  "swing_up_move": {
+   "n_train": 5749,
+   "n_val": 2866,
+   "auc": 0.5437,
+   "brier_skill": -0.0478
+  },
+  "swing_down_move": {
+   "n_train": 5749,
+   "n_val": 2866,
+   "auc": 0.4938,
+   "brier_skill": -0.0672
+  }
+ },
+ "base_rates": {
+  "day_up_move": 0.12531762531762533,
+  "day_down_move": 0.10718410718410719,
+  "swing_up_move": 0.17886084741838387,
+  "swing_down_move": 0.12421856911322066
+ },
+ "status": "UNTESTED as a trading signal: big-move risk only, never a direction",
+ "trained_to": "2025-12-31",
+ "trained_at": "2026-11-14T15:46:13"
+}

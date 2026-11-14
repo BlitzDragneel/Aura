@@ -15,7 +15,7 @@ ok(!/OMEGA_SEED_B64|window\.OMEGA_EDGELAB =|window\.OMEGA_WATCH =|window\.OMEGA_
 ok(REMOVED.every(p => html.indexOf('id="page-' + p + '"') < 0 && html.indexOf('data-page="' + p + '"') < 0), 'no markup or menu entry for a removed page');
 const prev = process.env.PREV && fs.readFileSync(process.env.PREV, 'utf8');
 if(prev){ const k = s => s.slice(s.indexOf('function analyseSeries('), s.indexOf('function analyseSeries(') + 60000);
-  const mod = s => { const i = s.indexOf('// OMEGA v6.5 — CREED / ACCEPTANCE STRATEGY MODULE'); return s.slice(i, s.indexOf('</script>', i)).replace(/\n    if\(!key && window\.OMEGA_LAPI[^\n]*/, ''); };   // v6.5.112: the one data-source line (Live API fallback) is not part of the method
+  const mod = s => { const i = s.indexOf('// OMEGA v6.5 — CREED / ACCEPTANCE STRATEGY MODULE'); return s.slice(i, s.indexOf('</script>', i)).replace(/\n    if\(!key && window\.OMEGA_LAPI[^\n]*/, '').replace(/\n    crypto: \['BTCUSDT',[^\n]*/, ''); };   // v6.5.112: the one data-source line (Live API fallback) is not part of the method; v6.5.118: nor the Desk's crypto symbol list (gold/silver perpetuals added)
   ok(k(prev) === k(html) && mod(prev) === mod(html), 'CREED’s engine and its whole module are byte-identical to the previous build'); }
 (async () => { const pw = require('playwright'), b = await pw.chromium.launch();
   const ctx = await b.newContext({ viewport:{ width:412, height:915 } });

@@ -135,3 +135,158 @@ One configuration, costs 0.10% (BTC) / 0.05% (gold) of turnover, BTC funding cha
 | Gold 2022–26 | 1.09, +8.7%, −8% | 0.91, +17%, −27% | 1.07, +11%, −14% |
 Drawdowns are 3–7× smaller than holding, but returns are much lower and the trend part does not beat the simpler
 volatility-only sizing in 2024 (BTC) or 2018–21 (gold). Same conclusion as the handoff: a risk-control tool, not an edge.
+
+## BTC bot — E86–E98: day and swing nothing passed; holding: btc_gold_invvol PASS grade B (paper)
+Common rules `plans/E86_common_btc.md` (e0ce60bc). Code `edges/research_btc/`, results `edges/results/E86…E98_result.json`.
+166 unique variants (178 rows in attempts.jsonl, validation/final rows included). Costs: taker 0.07% per side, maker 0.02%
+only on trade-through, funding on every settlement. Mean = bp per trade after costs; t = week-clustered (daily: Newey–West).
+FOMC dates come from federalreserve.gov. **CPI/NFP not tested** (bls.gov 403, FRED connection reset; no dates typed from memory).
+
+| Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025–26 | Verdict |
+|---|---|---|---|---|---|---|---|
+| E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | −12…−17, t −3…−9 | −13…−17, t −7…−11 (n 800–3,200); gross ≈ 0 | FAIL |
+| E87 handoff models (7d82df2f) | day | 5 | A: price-only 3-class LightGBM | — | −17.1, t −3.57, n 295 | −14.3, t −3.35, n 215 | FAIL |
+| E88 weekend/CME gap/Monday/Asia range 1h (4acf1760) | day | 14 | WEEKEND LONG +12.4 t 0.58 | 0.58 vs 2.41 | +12.5 t 0.42 | info −16.5 t −0.74 | FAIL |
+| E89 BTC panic 5m/15m maker TP + vol gate (118e7893) | day | 32 | 5m L24 k4 TP HIVOL +29.2 t 2.12 n 192 | 2.12 vs 3.47 | +7.7 t 0.68 | info −3.0 t −0.32 | FAIL |
+| E90 quiet-window maker reversion 15m (19486196) | day | 10 | none > 0 (−7…−9 bp, win 75–80%) | — | — | — | FAIL |
+| E95 CME gap FOLLOW, 1 config (284b07db) | day | 1 | +35.1 t 0.72 n 115 (idea from E88's discovery) | 0.72 vs 1.20 | +196 t 3.42 n 26 | info −31.6 t −0.84 n 42 | FAIL |
+| E96 movement-watch + stop-entry breakout (2da1f15f) | day | 8 | none > 0 (−13…−20) | — | −9…−22 | −13…−19 | FAIL |
+| E91 post-shock drift daily (59a46b87) | swing | 32 | DN k2 FOLLOW H5 +149 t 1.15 n 43 | 1.15 vs 2.76 | −143 t −0.81 | info +153 t 1.33 n 20 | FAIL |
+| E92 1–5 d mom/rev vol-targeted (18e5542b) | swing | 16 | N3 MOM long-only NW t 0.89 | 0.89 vs 1.86 | +8.8 bp/d t 0.93 | info −5.5 bp/d | FAIL |
+| E93 BTC vs gold (PAXG) relative (7f41b26f) | swing | 16 | none positive in all of 2021–23 | — | — | — | FAIL |
+| E98 dip in uptrend (cbb9fb91) | swing | 18 | none with n ≥ 30 and 3/4 years positive | — | — | — | FAIL |
+| E94 holding combos (86293976) | hold | 8 | chosen H2 (E85 controller) | SMA timing fails shifted check | Sh 1.55 vs 1.53 | Sh −0.01 vs −0.08, CAGR −0.2% | FAIL (return < 0) |
+| E97 H6 inverse-vol BTC/gold on untouched 2014–19 (9792bb1a) | hold | 1 | H6 (selected after seeing 2024–26, stated in plan) | allocation, no timing claim | (E94: Sh 2.13 vs 1.53, DD −8.5% vs −29%) | (E94: Sh 0.56 vs −0.08, DD −32% vs −54%) | **PASS → grade B** |
+
+Handoff comparison, Sep–Oct 2026, account % at 6 bp/side (handoff in brackets): breakout 270 trades −25.6% (383, −29.6%);
+compression 72, −11.5% (137, −14.6%); compression+confirmation 60, −7.8% (16, −1.6%); accepted retest 223, −21.9% (96, −8.1%);
+failed auction 99, −5.2% (94, −4.6%); price-only model 15 trades, −0.30% (1, +0.25%). Over 2022–26 every family's gross
+was 0 ± 3 bp, so the losses are costs. Movement timing (E87-B): big-move rate in the watch windows was 52% vs a 34% base
+in 2025–26 (Sep–Oct 2026: 51% vs 32%; Nov: 47% vs 29%). Here the model BEAT the vol/clock control on log loss (0.613 vs 0.630),
+which is the opposite of the handoff. That makes it information for sizing; it is not direction (E96: trading it loses).
+FOMC 4 h follow, gross: 2024–25 +85 bp → 2026 −5 bp (handoff +64 → −13), n = 39 meetings 2022–26.
+
+**Passed: btc_gold_invvol (hold, grade B, paper, max_leverage 1).** On the first UTC day of each month, set the BTC weight
+to (1/σ60_BTC) / (1/σ60_BTC + 1/σ60_gold); gold (PAXG) gets the rest; long only, 1×. 2014–19, judged once: Sharpe 0.90 vs
+BTC 0.88, CAGR +14.6% vs +46.3%, max DD −30% vs −84%, 4 of 6 years positive. 2020-09–23: Sharpe 0.71 vs 0.70, DD −28% vs −79%.
+Weak points: it was picked after seeing 2024–26; the Sharpe edge is tiny outside 2024–26; returns are much lower in bull
+markets. It is a drawdown tool. Leverage (2020–26): 1× DD −32%, 2× −57%, 3× −74%, 5× −92%, 10×/20×/40× wiped out.
+Files: `bots/strategies/btc_gold_invvol.py`, `tests_bots/test_btc_gold_invvol.py` (weights and timing equal the research
+for all 70 months 2021–26), approved.json entry. Paper only: the runner does not yet size orders by weight.
+
+**Per horizon (the content intended for `edges/assets/BTC/FINDINGS.md`; the harness blocked this bot from creating that
+file, so the lead should create it from this section):**
+- *Day:* nothing passed. Gross edge ≈ 0 for every breakout-type rule; mean-reversion rules win 75–80% of trades but lose on
+  rare deep moves; the weekend and CME clocks are not special; every rule that looked good in 2024 (gap follow +196 bp,
+  FOMC follow, panic bounce) weakened or reversed in 2025–26. Best evidence remains the 30-coin E37/E38 watch rules. The
+  BTC bot should log the E87-B movement-watch flag as a "stand aside / size down" input only.
+- *Swing:* nothing passed. Best-evidence rule, LABELLED FAILED: go long for 5 days after a ≥ 2σ daily fall (E91). It made
+  +153 bp per trade in 2025–26 (n 20, t 1.33), lost in 2024, and failed the luck check. Paper-log only.
+- *Hold:* btc_gold_invvol (grade B, paper). The E85 controller is rejected as an edge: 2014–19 Sharpe 1.56 with DD −10%,
+  but CAGR ≤ 12% and flat in 2025–26. SMA200 timing failed the shifted-signal check.
+- *Current market (data to 3 Nov 2026):* BTC 77,442, which is 38% below the 6 Oct 2025 high of 124,628. It is −30% over a
+  year but +22% over 120 days and above its SMA200 (73,151). The last 20 and 60 days are negative (−6.8%, −4.7%). Volatility
+  is 27% annualised over 20 days and 33% over 60 days. The E85 controller would hold ~10% exposure. The inverse-vol BTC weight
+  was 0.38 on 1 Oct 2026 and is 0.35 now.
+
+## Gold (XAU) bot — E100–E115: nothing passed on any horizon (day, swing, hold)
+Common rules `plans/E100_common_xau.md` (md5 78d284f7…). Code `edges/assets/XAU/code/`. Numbers
+`edges/results/E101…E115_result.json` plus `E101_perp_description.json`; md5s in `assets/XAU/code/plan_md5.json`.
+304 gold variants are logged in attempts.jsonl; 24 are empty rows from a first E114 run with a timestamp bug, rerun.
+Costs: CFD 0.02%/side plus 6.5%/yr financing per NY rollover (stress 2×); daily rules 0.05% of turnover. Periods per the
+brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
+Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
+federalreserve.gov. Fetched: PAXG 15m, Binance XAUUSDT perp 15m/1h + funding, Yahoo DXY/^IRX/^TNX (`code/fetch_xau.py`).
+**`edges/assets/XAU/FINDINGS.md` could not be created: this agent's file tool refuses new .md report files. This section
+is the full findings, and the lead should copy it there.**
+
+**E101 handoff re-run** (account %, 10k, 25 risk/trade, 6 bp/side):
+| family | handoff Sep–Oct 26 | re-run, same sample (perp 15m) | PAXG 2025-01→26-10 | GC 1h 2026 |
+|---|---|---|---|---|
+| price-only model | 71 tr −0.71% | 14 tr −0.35% | 236 tr −4.9% (at CFD 2 bp: +5.5 bp/tr, t 1.52) | 25 tr −2.0% |
+| break-even/side | ≈5.2 bp | 5.3 bp (14 tr) | 4.7 bp | <0 |
+| breakout | 433 −36.3% | 272 −24.2% | 2,962 −255% | 299 −8.9% |
+| compression | 118 −13.8% | 152 −14.5% | 1,646 −142% | 140 −4.3% |
+| accepted retest | 82 −5.3% | 217 −19.5% | 2,298 −190% | 232 −6.2% |
+| failed auction | 100 −8.2% | 97 −8.0% | 979 −89% | 75 −1.1% |
+In NY 08–12 the model made +0.09% on 2 trades vs a constant short on the same bars −0.24%. Shorting every 08:00 NY lost
+(−1.3% perp, −52% PAXG), so the claim that "constant short beat the model" is not reproduced. Weekend windows were flat
+73.9% (perp) / 59.9% (PAXG) vs 82.8% claimed. The movement watch BEAT its vol/clock control on 15m (log loss 0.453 vs
+0.476 perp, 0.510 vs 0.537 PAXG; large-move rate 21.8% → 38.4% in watch windows) but not on GC 1h (0.433 vs 0.411).
+Perp vs futures (11 months, too short to judge): ρ 0.984; it trades 0.42% below GC; 29% of its hours fall in the CME
+closure, with volatility 9 vs 35 bp/h; funding is paid every 4 h, about **+12.7%/yr paid by longs**.
+
+| Plan | Horizon | Idea | Var. | Discovery best | Luck (real vs null p95) | Verdict |
+|---|---|---|---|---|---|---|
+| E102 | day | FOMC follow/fade 4 h | 4 | follow 60 m +14 bp, t 1.49 (26 ev.); 2024 +13 (8), 2025–26 +30 (16) | — | FAIL (t, events) |
+| E103 | day | sessions Asia/London/NY, opens, outside-US | 16 | OUTUS long +0.7 bp, t 0.38 | 0.38 vs 0.13 | FAIL (nothing ≥ cost) |
+| E104 | day | London fix 10:30/15:00 | 16 | AM fade −1.0 bp (gross +3) | −0.4 vs 0.29 | FAIL |
+| E105 | day | CME break gap fade/follow | 12 | fade big gaps 2 h +1.2, t 0.58 | 0.58 vs 0.12 | FAIL |
+| E106 | day | session range breakout, vol gate, maker fade | 20 | maker fade −0.4 (gross +3.6) | not needed | FAIL |
+| E107 | day | intraday momentum | 12 | all < 0 | — | FAIL |
+| E114 | day | hourly panic bounce / spike fade | 24 | spike-fade limit k3 H12 +20 bp, t 1.89 | 1.89 vs 3.41 | FAIL (luck) |
+| E108 | swing | TSMOM 5–250 d, vol 10%, CFD-financed | 12 | 250 d long/flat, NW t 1.97 | 1.97 vs 1.85 | FAIL (t < 2) |
+| E109 | swing | post-shock drift/reversal | 32 | 3σ down, follow 1 d +33 bp, t 1.87 | 1.87 vs 2.43 | FAIL (luck) |
+| E110 | swing | DXY trend / 10y yields | 10 | DXY < MA200 long/flat, t 0.92 | 0.92 vs 1.77 | FAIL |
+| E111 | hold | 8 trend/vol controllers + E85 | 9 | none beats B&H AND matched vol-only in 2016–20 and 2021–26 | only 12-1 mom ok | FAIL |
+| E112 | hold | seasonality (months, Aug–Feb, TOM, weekday) | 5 | best-6 months on−off t 2.52 | 2.52 vs 3.46 | FAIL (reverses 2016–20) |
+| E113 | hold | vol-managed gold (contaminated: E85/E111 control) | 2 | excess Sharpe 0.62 vs B&H 0.49 | 0.13 vs 0.08 gain ✔ | not a pass (2016–20 0.76 < 0.79) |
+| E115 | hold | rotation gold/silver/cash | 3 | worse than gold in all periods | fails | FAIL |
+Disclosure: the hold plans (E111/E112/E113/E115) and E102 report every registered variant in validation/FINAL by design.
+None was selected from those numbers and none passed.
+
+Holding, unfunded, cash in T-bills — Sharpe / CAGR / max DD for 2000–15 | 2016–20 | 2021–26:
+- **buy & hold:** 0.57/9.3%/−44% | 0.86/12.4%/−17% | 0.75/13.0%/−27%.
+- **via CFD swap 6.5%:** 0.21/2.3%/−58% | 0.42/5.2%/−25% | 0.40/5.8%/−31%.
+- **vol-only 10%:** 0.78/7.3%/−29% | 0.87/8.3%/−13% | 1.04/10.2%/−13%.
+- **E85:** 0.70/4.8%/−23% | 0.68/5.0%/−11% | 1.10/8.5%/−8%.
+
+**Best-evidence rules (all LABELLED NOT PASSED, paper-watch only, nothing in approved.json, no strategy file):**
+- *Day:*
+  - Long gold outside US hours (17:00 → 08:00 NY): +0.7 / +7.4 / +5.8 bp (PAXG), +5.4 bp (GC 2026); t never ≥ 2, and the
+    split was already seen in E3/E5.
+  - The 15m price-only model: positive only if costs stay ≤ ~4.7 bp/side.
+  - FOMC 1-hour follow: few events.
+  - Gross intraday edges are 0–4 bp against a 4 bp CFD round trip: gold day-trading is a cost problem.
+- *Swing:* 12-month trend, long/flat with a 10% vol target (t 1.97). The 6.5%/yr CFD financing is the main drag.
+- *Hold:* vol-managed gold, min(1, 10%/max(vol20, vol60)) with cash in T-bills (E113).
+  - It halves drawdowns (−13% vs −27% in 2021–26) and raises Sharpe in 2000–15 and 2021–26; luck check ok; whole-sample
+    bootstrap p = 0.052.
+  - It misses 2016–20 and is contaminated, so it is a drawdown limiter, not an edge. It gives up CAGR in bull runs
+    (10.2% vs 13.0%).
+  - Hold gold unfunded: CFD swaps and perp funding (≈ 6.5–12.7%/yr) eat most of gold's long-run return.
+- *Leverage:* nothing passed, so there is no table. 20× (≈ −4.5% liquidation) and 40× (≈ −2%) are liquidated by ordinary
+  bad gold days.
+
+## Silver (XAG) bot — E120–E128: nothing passed on any horizon (day, swing, hold)
+Common methods `plans/E120_common_xag.md` (8cb3848d). Code `edges/research_xag/`, numbers `results/E121–E128_result.json`.
+197 logged attempts, about 170 distinct variants (E121 was run twice after a bug fix: FOMC window and in-sample model
+selection; both runs are logged). Costs: CFD 0.04%/side for silver and 0.02% for gold + 6.5%/yr financing per night;
+maker variants use perp costs. Hourly data is 1h only (no 15m) and is short, and the bar was not lowered for it.
+BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
+
+| Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
+|---|---|---|---|---|---|---|---|
+| E121 handoff families 1h | 214c2b88 | 9 | failed auction −3.6 bp, t −0.4 (model's discovery = training, excluded) | grid t 0.97 | breakout −2.0; compr+conf +22.4 (t 1.1); model +1.6 (t 0.4) | info: breakout −16.6 (t −2.2), model −9.8 (n 393) | FAIL |
+| E122 break gap / silver fix / ORB | 3528118b | 24 | ORB NY hi-vol +2.3, t 0.2 | grid t 1.15 | not promoted | info −25.7 | FAIL |
+| E123A hourly shocks × vol gate | ead0af26 | 24 | z3 FADE high-vol h4 +19.3, t 1.2 (n 40) | grid t 1.70 | not promoted | — | FAIL |
+| E123B maker dip limit (perp) | ead0af26 | 4 (+4 mirror) | k3 H4 +25.4 bp, t 3.47, n 254 | random −0.0 bp | **+44.9, t 2.82, n 108** | **−4.7, t −0.41, n 168 (ex-top5% −27.8)** | FAIL at FINAL → grade C watch |
+| E124 gold/silver ratio MR + trend | 99ad36a4 | 18 | trend L20 silver +0.1 bp/day, t 0.03 | grid t 1.71 | −4.0 | info −1.9 | FAIL |
+| E125 momentum/reversal + post-shock | 997a208b | 28 | MOM L10 long +2.4 bp/day, t 1.34 | grid t 2.43 | −2.3 | info +0.1 | FAIL |
+| E126 hold: E85 / improvements / rotation | 13cd962b | 13 | E85: Sharpe 0.26/0.31 (val/final) vs B&H 0.63/0.46; best B 0.50; best rotation 0.47 | Sharpe 0.52 / 0.64 | — | — | FAIL |
+| E127 residual reversal 1–5 d | cdd9350a | 12 | best t −0.37 | grid t 1.36 | −3.8 | info −3.1 | FAIL |
+| E128 hold: MA gates (silver/gold/both) | 349a4ae4 | 12 | gold-MA200 + vol size Sharpe 0.44 | Sharpe 0.66 | — | — | FAIL |
+
+- *Day:* the handoff's gold findings carry over to silver. Breakouts lose most, there is no direction edge, and the
+  movement-timing model sees big moves (21–27% hit rate vs 14%) but has worse log loss than a vol-and-clock control.
+  The cost share is the same as gold's (8 bp ≈ 10.6% of the average 4 h move), so the missing edge, not costs, is the
+  problem. The maker dip limit (E123B) is the only rule that passed validation; it failed 2026.
+- *Swing:* ratio mean reversion and ratio/residual trades are all negative. Silver momentum/shock rules fail the luck check.
+- *Hold:* E85 as written fails (2%/yr, drawdown −15% vs −57%). Trend gates whipsaw on silver. The best-evidence risk
+  tool is vol-only sizing (20% target: final Sharpe 0.48 vs 0.46, drawdown −31% vs −57%). Holding gold beat holding
+  silver on Sharpe in every period.
+- *Perp (info, too short to judge):* Binance XAGUSDT Jan–Oct 2026 saved to /home/user/data/metals/XAGUSDT_perp_*.parquet:
+  about $790M per day, 0.993 hourly correlation with COMEX. **Longs paid about 20%/yr in funding** (4-hourly; 6.3% in
+  Jan 2026). Weekends are quiet (11 vs 49 bp mean |hourly move|).
+- *Leverage:* nothing passed, so there is no table. Silver fell −31% close-to-close on 30 Jan 2026. The watch rule's
+  worst 2026 intrabar move was −16%, which liquidates 5× and above; 20×/40× die on ordinary days (2σ ≈ 4%).

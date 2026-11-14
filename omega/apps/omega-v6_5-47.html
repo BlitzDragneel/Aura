@@ -1741,6 +1741,52 @@ td.warn{ color:var(--gold); }
   window.OMEGA_METALS = { symbols:function(){ return Object.keys(TRADFI); }, rewrite:rewrite, isMetalPerp:function(s){ return !!TRADFI[String(s || '').toUpperCase()]; } };
 })();
 </script>
+<script>/* ═══ GOLD AND SILVER: BINANCE, THEN OKX, THEN THE LIVE API (v6.5.118) ═══
+   Requests for XAUUSDT / XAGUSDT candles and tickers go to Binance first (direct, keyless, as since v6.5.40). If Binance does
+   not answer (blocked region, 451/403, outage), the same request is answered from OKX's XAU/XAG-USDT-SWAP (direct from the
+   browser, keyless), then from the OMEGA Live API (needs the token). The answer keeps Binance's shape, so nothing else changes.
+   Read-only: nothing here places an order. */
+(function(){
+  'use strict';
+  var PERP = { XAUUSDT:{ name:'Gold', spot:'XAUUSD', okx:'XAU-USDT-SWAP' }, XAGUSDT:{ name:'Silver', spot:'XAGUSD', okx:'XAG-USDT-SWAP' } };
+  var f0 = window.fetch, ST = { binance:0, okx:0, live:0, failed:0, last:null, lastSym:null };
+  var OKX_BAR = { '1m':'1m', '3m':'3m', '5m':'5m', '15m':'15m', '30m':'30m', '1h':'1H', '2h':'2H', '4h':'4H', '6h':'6Hutc', '12h':'12Hutc', '1d':'1Dutc', '1w':'1Wutc', '1M':'1Mutc' };
+  var LIVE_TF = { '1m':1, '5m':1, '15m':1, '1h':1, '4h':1, '1d':1 }, STEP = { '1m':6e4, '3m':18e4, '5m':3e5, '15m':9e5, '30m':18e5, '1h':36e5, '2h':72e5, '4h':144e5, '6h':216e5, '12h':432e5, '1d':864e5, '1w':6048e5, '1M':2592e6 };
+  function parse(u){ try{ var url = new URL(u, location.href); if(!/^(data-api\.binance\.vision|api[0-9]?\.binance\.com|fapi\.binance\.com)$/.test(url.hostname)) return null;
+      var sym = (url.searchParams.get('symbol') || '').toUpperCase(); if(!PERP[sym]) return null;
+      var m = url.pathname.match(/\/(klines|ticker\/price|ticker\/24hr)$/); if(!m) return null;
+      return { sym:sym, kind:m[1], iv:url.searchParams.get('interval') || '1h', limit:Math.max(1, Math.min(1000, +url.searchParams.get('limit') || 500)) }; }catch(e){ return null; } }
+  function bnRow(t, o, h, l, c, v, qv, iv){ return [t, String(o), String(h), String(l), String(c), String(v), t + (STEP[iv] || 36e5) - 1, String(qv), 0, '0', '0', '0']; }
+  function okxGet(path){ return f0.call(window, 'https://www.okx.com' + path).then(function(r){ if(!r.ok) throw new Error('OKX HTTP ' + r.status); return r.json(); })
+    .then(function(j){ if(!j || j.code !== '0' || !Array.isArray(j.data)) throw new Error('OKX: ' + (j && j.msg || 'bad answer')); return j.data; }); }
+  async function viaOkx(q){ var P = PERP[q.sym];
+    if(q.kind === 'klines'){ var bar = OKX_BAR[q.iv]; if(!bar) throw new Error('OKX has no ' + q.iv + ' candles');
+      var d = await okxGet('/api/v5/market/candles?instId=' + P.okx + '&bar=' + bar + '&limit=' + Math.min(300, q.limit));
+      return d.slice().reverse().map(function(k){ return bnRow(+k[0], k[1], k[2], k[3], k[4], k[6], k[7], q.iv); }); }
+    var t = (await okxGet('/api/v5/market/ticker?instId=' + P.okx))[0]; if(!t) throw new Error('OKX: no ticker');
+    if(q.kind === 'ticker/price') return { symbol:q.sym, price:String(t.last) };
+    var o = +t.open24h, l = +t.last; return { symbol:q.sym, lastPrice:String(l), openPrice:String(o), highPrice:String(t.high24h), lowPrice:String(t.low24h),
+      priceChange:String(l - o), priceChangePercent:String(o > 0 ? Math.round((l / o - 1) * 1e5) / 1e3 : 0), volume:String(t.volCcy24h), quoteVolume:String((+t.volCcy24h || 0) * l), closeTime:+t.ts }; }
+  async function viaLive(q){ var LA = window.OMEGA_LAPI; if(!LA || !LA.on()) throw new Error('no Live API token');
+    if(q.kind === 'klines'){ if(!LIVE_TF[q.iv]) throw new Error('the Live API has no ' + q.iv + ' candles');
+      var j = await LA.get('/crypto/klines?symbol=' + q.sym + '&tf=' + q.iv + '&limit=' + q.limit, 45000);
+      return (j && j.candles || []).map(function(c){ return bnRow(c.t, c.o, c.h, c.l, c.c, c.v || 0, c.qv || 0, q.iv); }); }
+    var k = await LA.get('/crypto/klines?symbol=' + q.sym + '&tf=1h&limit=25', 45000), cs = (k && k.candles) || []; if(!cs.length) throw new Error('Live API: no candles');
+    var last = cs[cs.length - 1].c; if(q.kind === 'ticker/price') return { symbol:q.sym, price:String(last) };
+    var op = cs[0].o, hi = Math.max.apply(null, cs.map(function(c){ return c.h; })), lo = Math.min.apply(null, cs.map(function(c){ return c.l; })), vol = cs.reduce(function(a, c){ return a + (+c.v || 0); }, 0);
+    return { symbol:q.sym, lastPrice:String(last), openPrice:String(op), highPrice:String(hi), lowPrice:String(lo), priceChange:String(last - op), priceChangePercent:String(Math.round((last / op - 1) * 1e5) / 1e3), volume:String(vol), quoteVolume:String(vol * last) }; }
+  function answer(body, src){ return new Response(JSON.stringify(body), { status:200, headers:{ 'content-type':'application/json', 'x-omega-source':src } }); }
+  function fb(input, init){ var u = typeof input === 'string' ? input : (input && input.url), q = u ? parse(u) : null;
+    if(!q) return f0.call(this, input, init);
+    var self = this;
+    return f0.call(self, input, init).then(function(r){ if(r && r.ok){ ST.binance++; ST.last = 'binance'; ST.lastSym = q.sym; return r; } throw new Error('Binance HTTP ' + (r && r.status)); })
+      .catch(function(e1){ return viaOkx(q).then(function(b){ if(q.kind === 'klines' && !b.length) throw new Error('OKX: empty'); ST.okx++; ST.last = 'okx'; ST.lastSym = q.sym; return answer(b, 'okx'); })
+        .catch(function(e2){ return viaLive(q).then(function(b){ if(q.kind === 'klines' && !b.length) throw new Error('Live API: empty'); ST.live++; ST.last = 'live'; ST.lastSym = q.sym; return answer(b, 'omega-live-api'); })
+          .catch(function(e3){ ST.failed++; ST.err = [e1, e2, e3].map(function(e){ return String(e && e.message || e).slice(0, 80); }).join(' | '); throw new Error('Gold/silver data: Binance, OKX and the Live API all failed (' + ST.err + ')'); }); }); }); }
+  if(f0 && !f0.__gsfb){ fb.__gsfb = true; fb.__metals = !!f0.__metals; fb.__guard = !!f0.__guard; window.fetch = fb; }
+  window.OMEGA_GSDATA = { PERP:PERP, parse:parse, state:function(){ return ST; }, viaOkx:viaOkx, viaLive:viaLive };
+})();
+</script>
 
 <script>
 window.__omegaLeak = function(txt){ try{ txt = String(txt || '');   // true if an export would carry a stored secret or a credential-named field
@@ -2144,7 +2190,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   <!-- Mobile header (logo + hamburger) -->
   <header class="mobile-header">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.117 · build 2026-11-14 14:44 UTC</small></div>
+    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.119 · build 2026-11-14 16:07 UTC</small></div>
   </header>
 
   <!-- Sidebar -->
@@ -2166,6 +2212,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <li class="sb-tier">Charts &amp; markets</li>
       <li data-page="analysis" onclick="navigate('analysis')"><span class="sb-icon">📊</span> Charts (Analysis)</li>
       <li data-page="forex" onclick="navigate('forex')"><span class="sb-icon">¤</span> Forex board</li>
+      <li data-page="desks" onclick="navigate('desks')"><span class="sb-icon">◆</span> Desks: Bitcoin, Gold, Silver</li>
       <li data-page="mread" onclick="navigate('mread')"><span class="sb-icon">≋</span> Market Read (mark-up) <span class="sb-badge" id="sbBadge-mread"></span></li>
       <li data-page="intel" onclick="navigate('intel')"><span class="sb-icon">◈</span> Market Intelligence <span class="sb-badge" id="sbBadge-intel"></span></li>
       <li data-page="flow" onclick="navigate('flow')"><span class="sb-icon">≋</span> Live Market Data</li>
@@ -2224,6 +2271,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
       <div id="cmdFive" class="cmd-five"></div>
       <div id="pulseCard"></div>
       <div id="selfRunHome" class="sr-host"></div>
+      <div id="homeDesks" class="dk-home"></div>
       <div id="homeBotsFeed" class="om-feed om-feed-sm"></div>
       <section class="lower-grid" style="grid-template-columns:1fr; margin-top:14px;"><div class="card tb-card"><h2 style="color:var(--gold);">Trades OMEGA sees now</h2><p class="hint" style="margin:0 0 8px;">Every live setup the app is watching, strongest evidence first. Each shows where it came from and how well it has been tested.</p><div id="tradeBoard"></div></div></section>
       <div id="opPill" class="op-pill" onclick="navigate('auto')"></div>
@@ -2635,6 +2683,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <p class="hint" style="margin:10px 0 0;">The Autopilot re-scans every 15 minutes while it is on. A score of 60 or more with at least 2:1 reward to risk meets the bar. This is the classic analysis engine, not a tested OMEGA idea: OMEGA\u2019s own signals are on the OMEGA Signals page.</p>
       </details>
       <div class="an-deep" id="anDeep"><div><h2>One market in depth</h2><p class="an-sub">Pick a market here, or press <b>In depth</b> on any card above: chart, structure, liquidity, a trade plan and the reasoning behind it.</p></div><div id="analysisClock" class="omega-clock"></div></div>
+      <div id="gsSpot" class="gs-spot" hidden></div>
       <div class="analysis-controls-bar">
         <div class="controls">
       <div>
@@ -3713,6 +3762,16 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
         <p><b>Prices</b> are Swissquote&rsquo;s live bid and ask, read by your OMEGA Live API every few seconds. <b>Spread</b> is ask minus bid, in pips (0.0001; 0.01 for yen and forint pairs); for metals it is in dollars. When a quote is more than ten minutes old the market is closed (weekends, holidays) or the feed paused, and the row says so.</p>
         <p><b>Candles</b> for the chart come from Twelve Data when this browser has a key; without one they come from the Live API (Twelve Data on the server if it has a key, otherwise Yahoo: 1 hour back 2 years, 15 minutes back 60 days, 5 minutes back 5 days). Metal candles from Yahoo are <b>futures</b> (gold GC, silver SI, platinum PL, palladium PA): a close proxy, not spot. The chart says which source it used.</p>
         <p>The board needs the Live API token (Settings &rsaquo; Data &amp; Keys). Information only: OMEGA places no orders, and forex majors failed every hour-by-hour test OMEGA ran (E15).</p>
+      </div></details>
+    </div>
+    <div id="page-desks" class="page">
+      <header class="om-head"><h2>Desks</h2><p>Bitcoin, gold and silver, each read by its own bot every 15 minutes. A bot calls a trade only when a rule that passed a fair test fires; otherwise it waits, or watches when a big move looks likely without knowing its direction.</p></header>
+      <div id="desksBody"></div>
+      <details class="om-about"><summary>About this page</summary><div class="om-about-body">
+        <p><b>Who reads the markets.</b> Three bots run 24/7 in the cloud (or on the laptop Station): one for Bitcoin, one for gold, one for silver. Every 15 minutes each reads its market on closed candles &mdash; the 24/7 Binance perpetual (BTCUSDT, XAUUSDT, XAGUSDT) and, for the metals, the spot quote &mdash; and writes down what it sees before anyone knows what happens next.</p>
+        <p><b>States.</b> WAIT: nothing qualifies. WATCH: a big move looks likely, direction unknown &mdash; watch only. SETUP: a tested rule&rsquo;s conditions are forming. TRIGGERED: a tested rule fired and a call is out. CONFIRMED: the call&rsquo;s entry filled. INVALIDATED: its stop was hit. EXPIRED: it ended otherwise (target, time, never filled).</p>
+        <p><b>Calls.</b> Only rules in OMEGA&rsquo;s approved list for that asset and horizon (day, swing, hold) with status paper or higher can give a direction. Paper calls are records for the forward test, not orders; OMEGA places no orders from this page.</p>
+        <p><b>Learning.</b> Every reading and call is scored after its horizon passes (the forward record), the gold and silver scouts are retrained monthly, and each bot keeps a notebook built from the research findings and its own record. Its scouts say how likely a big move is, never which way; a scout without proven skill is shown but not used.</p>
       </div></details>
     </div>
     <div id="page-about" class="page">
@@ -12033,7 +12092,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   // surviving a reload, repeats folded into one line), with what to do, and shown with the
   // self-test and storage state under Settings → Diagnostics. Anything that looks like a key or
   // token is blanked before it is stored.
-  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.117 \u00b7 build 2026-11-14 14:44 UTC';   // rewritten by the build stamp on every release
+  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.119 \u00b7 build 2026-11-14 16:07 UTC';   // rewritten by the build stamp on every release
   function redact(s){ return String(s==null?'':s).replace(/((?:api_?key|apikey|key|token|secret|auth|password)=)[^&\s"']+/gi,'$1…').replace(/sk-ant-[A-Za-z0-9_\-]+/g,'sk-ant-…').replace(/Bearer\s+[A-Za-z0-9._\-]+/g,'Bearer …').slice(0,300); }
   function fixFor(msg){ var m = String(msg);
     if(/quota|QuotaExceeded/i.test(m)) return 'Storage full: old simulated journal rows move to the archive automatically; export a backup if this repeats.';
@@ -16402,7 +16461,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   // the market changes so the list can never offer a symbol that market
   // cannot serve.
   var CREED_UNIVERSE = {
-    crypto: ['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','DOGEUSDT','ADAUSDT','TRXUSDT','AVAXUSDT','LINKUSDT','LTCUSDT','DOTUSDT','BCHUSDT','NEARUSDT','ATOMUSDT','UNIUSDT','ETCUSDT','XLMUSDT','FILUSDT','ICPUSDT','APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','INJUSDT','AAVEUSDT','HBARUSDT','TONUSDT','RENDERUSDT','POLUSDT'],
+    crypto: ['BTCUSDT','XAUUSDT','XAGUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','DOGEUSDT','ADAUSDT','TRXUSDT','AVAXUSDT','LINKUSDT','LTCUSDT','DOTUSDT','BCHUSDT','NEARUSDT','ATOMUSDT','UNIUSDT','ETCUSDT','XLMUSDT','FILUSDT','ICPUSDT','APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','INJUSDT','AAVEUSDT','HBARUSDT','TONUSDT','RENDERUSDT','POLUSDT'],   // v6.5.118: gold & silver perpetuals (data list only)
     forex:  ['EUR/USD','GBP/USD','USD/JPY','USD/CHF','AUD/USD','USD/CAD','NZD/USD','EUR/GBP','EUR/JPY','EUR/CHF','EUR/AUD','EUR/CAD','EUR/NZD','GBP/JPY','GBP/CHF','GBP/AUD','GBP/CAD','GBP/NZD','AUD/JPY','AUD/NZD','AUD/CAD','AUD/CHF','CAD/JPY','CHF/JPY','NZD/JPY','CAD/CHF','NZD/CAD','NZD/CHF','XAU/USD','XAG/USD'],
     metals: ['XAU/USD','XAG/USD','XAU/EUR','XAG/EUR','XAU/GBP','XAG/GBP','XAU/JPY','XAG/JPY','XAU/AUD','XAU/CHF']
   };
@@ -18044,7 +18103,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     var lis = document.querySelectorAll('.sidebar-menu li');
     for(var i=0;i<lis.length;i++) lis[i].classList.toggle('active', lis[i].getAttribute('data-page')===page);
   }
-  var EXTRA = ['command','brain','radar','intel','flow','osig','mread','rguard','auto','futures','posdesk','academy','forex','about'];   // v6.5.109: research pages removed     // pages the original navigator's fixed list does not include
+  var EXTRA = ['command','brain','radar','intel','flow','osig','mread','rguard','auto','futures','posdesk','academy','forex','about','desks'];   // v6.5.119: Desks   // v6.5.109: research pages removed     // pages the original navigator's fixed list does not include
   // One panel that cannot be drawn must not blank the page or stop navigation: the failure is recorded in
   // Diagnostics and a single line on the page says so.
   function drawSafe(p, fn){
@@ -18083,6 +18142,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
       drawSafe(p, function(){ if(p === 'analysis' && window.OMEGA_COCKPIT) window.OMEGA_COCKPIT.onShow(); });
       drawSafe(p, function(){ if(p === 'futures' && window.OMEGA_PERP) window.OMEGA_PERP.tick(true); });
       drawSafe(p, function(){ if(p === 'auto' && window.OMEGA_AUTOPILOT) window.OMEGA_AUTOPILOT.render(); });
+      drawSafe(p, function(){ if(p === 'desks' && window.OMEGA_DESKS) window.OMEGA_DESKS.onShow(); });
       syncBottomNav(p);
       return;
     }
@@ -18383,7 +18443,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   // ── command palette ──
   function commands(){
     var c = C(), list = [];
-    var pages = [['command','Home'],['analysis','Charts (Analysis)'],['forex','Forex board'],['about','About OMEGA'],['mread','Market Read (mark-up)'],['intel','Market Intelligence'],['flow','Live Market Data'],['osig','Signals'],['creed','CREED Desk'],['radar','CREED Scanner'],['journal','Journal'],['bot','Bots'],['rguard','Risk Guard & Growth Bot'],['auto','Autopilot'],['posdesk','Positioning Desk'],['futures','Futures'],['growth','Growth & Routine'],['brain','Brain'],['academy','Academy'],['settings','Settings']];
+    var pages = [['command','Home'],['analysis','Charts (Analysis)'],['forex','Forex board'],['desks','Desks (Bitcoin, Gold, Silver)'],['about','About OMEGA'],['mread','Market Read (mark-up)'],['intel','Market Intelligence'],['flow','Live Market Data'],['osig','Signals'],['creed','CREED Desk'],['radar','CREED Scanner'],['journal','Journal'],['bot','Bots'],['rguard','Risk Guard & Growth Bot'],['auto','Autopilot'],['posdesk','Positioning Desk'],['futures','Futures'],['growth','Growth & Routine'],['brain','Brain'],['academy','Academy'],['settings','Settings']];
     pages = pages.filter(function(p){ return document.getElementById('page-'+p[0]); });   // never offer a page that no longer exists
     pages.forEach(function(p){ if(el('page-'+p[0])) list.push({ label:'Go to '+p[1], hint:'page', run:function(){ navigate(p[0]); } }); });
     if(window.OMEGA_RADAR){
@@ -18542,7 +18602,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
       BUD_KEY='omega_radar_td_budget_v1', CFG_KEY='omega_radar_cfg_v1', ALERT_KEY='omega_radar_alerted_v1';
   // 10 crypto + 10 forex pairs, plus gold (CREED's main market, readable keyless via proxy).
   var OLD_CRYPTO_10 = ['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','ADAUSDT','DOGEUSDT','AVAXUSDT','LINKUSDT','LTCUSDT'];
-  var DEFAULT_UNIVERSE = { crypto:['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','ADAUSDT','DOGEUSDT','AVAXUSDT','LINKUSDT','LTCUSDT','TRXUSDT','DOTUSDT','BCHUSDT','NEARUSDT','ATOMUSDT','UNIUSDT','APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','FILUSDT','ICPUSDT','ETCUSDT','XLMUSDT','INJUSDT'],
+  var DEFAULT_UNIVERSE = { crypto:['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','ADAUSDT','DOGEUSDT','AVAXUSDT','LINKUSDT','LTCUSDT','TRXUSDT','DOTUSDT','BCHUSDT','NEARUSDT','ATOMUSDT','UNIUSDT','APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','FILUSDT','ICPUSDT','ETCUSDT','XLMUSDT','INJUSDT','XAUUSDT','XAGUSDT'],
     forex:['EUR/USD','GBP/USD','USD/JPY','USD/CHF','AUD/USD','USD/CAD','NZD/USD','EUR/GBP','EUR/JPY','GBP/JPY','XAU/USD','XAG/USD'] };
   var universe = lsGet(UNI_KEY, null);
   if(!universe || !Array.isArray(universe.crypto) || !Array.isArray(universe.forex)) universe = JSON.parse(JSON.stringify(DEFAULT_UNIVERSE));
@@ -19064,7 +19124,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
 
   var UNI_KEY='omega_intel_universe_v1', ST_KEY='omega_intel_states_v1', MODE_KEY='omega_intel_mode_v1', LOG_KEY='omega_intel_log_v1', TAUGHT_KEY='omega_intel_taught_v1', BUD_KEY='omega_intel_td_v1';
   var DEFAULT_UNIVERSE = {
-    crypto:['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','ADAUSDT','DOGEUSDT','AVAXUSDT','LINKUSDT','LTCUSDT','TRXUSDT','DOTUSDT','BCHUSDT','NEARUSDT','ATOMUSDT','UNIUSDT','APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','FILUSDT','ICPUSDT','ETCUSDT','XLMUSDT','INJUSDT'],
+    crypto:['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','ADAUSDT','DOGEUSDT','AVAXUSDT','LINKUSDT','LTCUSDT','TRXUSDT','DOTUSDT','BCHUSDT','NEARUSDT','ATOMUSDT','UNIUSDT','APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','FILUSDT','ICPUSDT','ETCUSDT','XLMUSDT','INJUSDT','XAUUSDT','XAGUSDT'],
     forex:['EUR/USD','GBP/USD','USD/JPY','USD/CHF','AUD/USD','USD/CAD','NZD/USD','EUR/GBP','EUR/JPY','GBP/JPY','AUD/JPY','EUR/AUD','GBP/CHF','CAD/JPY','XAU/USD','XAG/USD']
   };
   var universe = lsGet(UNI_KEY, null);
@@ -22019,7 +22079,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   // allows, so ten forex pairs cannot eat the day's allowance.
   var WL_KEY = 'omega_analysis_watch_v1', WL_MAX = 10, WL_FX_DAY = 120,   // Twelve Data calls a day this scanner may use on its own schedule
       DEFAULT_WL = ['BTCUSDT','ETHUSDT','SOLUSDT','XRPUSDT','BNBUSDT','EUR/USD','GBP/USD','USD/JPY','AUD/USD','XAU/USD'];
-  var FALLBACK_CAT = { crypto:[{ group:'Crypto', list:['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','DOGEUSDT','ADAUSDT','AVAXUSDT','LINKUSDT','LTCUSDT'] }],
+  var FALLBACK_CAT = { crypto:[{ group:'Crypto', list:['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','DOGEUSDT','ADAUSDT','AVAXUSDT','LINKUSDT','LTCUSDT'] }, { group:'Gold & silver (24/7 perpetuals)', list:['XAUUSDT','XAGUSDT'] }],
                        forex:[{ group:'Forex & metals', list:['EUR/USD','GBP/USD','USD/JPY','USD/CHF','AUD/USD','USD/CAD','NZD/USD','EUR/GBP','EUR/JPY','GBP/JPY','XAU/USD','XAG/USD'] }] };
   function validSym(v){ return typeof v === 'string' && (/^[A-Z0-9]{5,20}$/.test(v) || /^[A-Z]{3}\/[A-Z]{3}$/.test(v)); }
   function cleanList(x){ if(!Array.isArray(x)) return null; var out = []; x.forEach(function(v){ v = String(v||'').trim().toUpperCase(); if(validSym(v) && out.indexOf(v) < 0) out.push(v); }); return out.length ? out.slice(0, WL_MAX) : null; }
@@ -23920,7 +23980,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   var LAST_KEY = 'omega_research_pkg_last_v1';
   function L(){ return window.OMEGA_LAB; }
-  var BUILD = 'v6.5.117 \u00b7 build 2026-11-14 14:44 UTC';   // rewritten by the build stamp on every release
+  var BUILD = 'v6.5.119 \u00b7 build 2026-11-14 16:07 UTC';   // rewritten by the build stamp on every release
   function buildStamp(){ return BUILD; }
   function status(row){
     if(!row) return 'NOT TESTED';
@@ -24626,7 +24686,8 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
     crypto: [
       { group:'Largest', list:['BTCUSDT','ETHUSDT','SOLUSDT','BNBUSDT','XRPUSDT','DOGEUSDT','ADAUSDT','TRXUSDT','AVAXUSDT','LINKUSDT'] },
       { group:'Established', list:['LTCUSDT','DOTUSDT','BCHUSDT','NEARUSDT','ATOMUSDT','UNIUSDT','ETCUSDT','XLMUSDT','FILUSDT','ICPUSDT'] },
-      { group:'Newer large caps', list:['APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','INJUSDT','AAVEUSDT','HBARUSDT','TONUSDT','RENDERUSDT','POLUSDT'] } ],
+      { group:'Newer large caps', list:['APTUSDT','ARBUSDT','OPUSDT','SUIUSDT','INJUSDT','AAVEUSDT','HBARUSDT','TONUSDT','RENDERUSDT','POLUSDT'] },
+      { group:'Gold & silver (Binance perpetuals, no key)', list:['XAUUSDT','XAGUSDT'] } ],   // v6.5.118: 24/7, first-class
     forex: [
       { group:'Majors', list:['EUR/USD','GBP/USD','USD/JPY','USD/CHF','AUD/USD','USD/CAD','NZD/USD'] },
       { group:'EUR & GBP crosses', list:['EUR/GBP','EUR/JPY','EUR/CHF','EUR/AUD','EUR/CAD','EUR/NZD','GBP/JPY','GBP/CHF','GBP/AUD','GBP/CAD','GBP/NZD'] },
@@ -29861,12 +29922,13 @@ button:focus-visible, select:focus-visible, input:focus-visible{ outline:2px sol
         var dot = '<i class="fx-dot' + (!q ? '' : st ? ' off' : ' on') + '" title="' + (!q ? 'no quote' : st ? 'market closed' : 'live') + '"></i>';
         return '<button type="button" class="fx-row' + (st ? ' stale' : '') + '" data-fx="' + s + '"><div class="fx-nm">' + dot + '<div><b>' + nice(s) + '</b><small>' + esc(names(s)) + '</small></div></div>' +
           '<div class="fx-px"><b>' + (p > 0 ? p.toFixed(dec(s, p)) : '\u2014') + '</b><small>' + (st ? '<span class="fx-closed">Market closed</span>' : q && q.bid != null ? esc(spT) : (on() ? '' : 'tap to chart')) + '</small></div></button>'; }).join('') + '</div>';
-    host.innerHTML = tabs + status + list;
+    host.innerHTML = tabs + status + (g === 'metals' && window.OMEGA_GS ? window.OMEGA_GS.boardNote() : '') + list;   // v6.5.118: the 24/7 perpetuals
     Array.prototype.forEach.call(host.querySelectorAll('[data-fxg]'), function(b){ b.onclick = function(){ FX.group = b.getAttribute('data-fxg'); try{ localStorage.setItem('omega_fx_group', FX.group); }catch(e){} renderFx(); loadBoard(false); }; });
     Array.prototype.forEach.call(host.querySelectorAll('[data-fx]'), function(b){ b.onclick = function(){ openOnCharts(b.getAttribute('data-fx')); }; });
     var st = host.querySelector('[data-fxset]'); if(st) st.onclick = openSettings; }
   function openSettings(){ window.navigate('settings'); try{ window.switchSettings && window.switchSettings('data'); }catch(e){} setTimeout(function(){ var i = el('liveTokenInput'); if(i){ i.scrollIntoView({ block:'center' }); try{ i.focus(); }catch(e){} } }, 120); }
-  function openOnCharts(s){ var sym = nice(plain(s)), metal = /^X(AU|AG|PT|PD)/.test(sym); window.navigate('analysis');
+  function openOnCharts(s){ if(window.OMEGA_GS && window.OMEGA_GS.perpFor(s)) return window.OMEGA_GS.openPerp(window.OMEGA_GS.perpFor(s));   // v6.5.118: gold/silver -> the 24/7 perpetual, spot shown beside it
+    var sym = nice(plain(s)), metal = /^X(AU|AG|PT|PD)/.test(sym); window.navigate('analysis');
     var sel = el('symbol'); if(!sel) return;
     if(!Array.prototype.some.call(sel.options, function(o){ return o.value === sym; })){ var grp = Array.prototype.filter.call(sel.querySelectorAll('optgroup'), function(o){ return metal ? /gold|silver/i.test(o.label) : /forex/i.test(o.label); })[0] || sel;
       var o = document.createElement('option'); o.value = sym; o.textContent = sym; grp.appendChild(o); }
@@ -30201,6 +30263,210 @@ html[data-theme="heaven"] .ost-td{font-size:11px}
   window.__omegaAfterNav = function(p){ try{ if(typeof prevAfter === 'function') prevAfter(p); }catch(e){} if(p === 'command' || p === 'auto') setTimeout(draw, 30); };
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(boot, 0); }); else setTimeout(boot, 0);
   window.OMEGA_SELFRUN = { heavyOk:heavyOk, heavyWhy:heavyWhy, connections:connections, draw:draw, problems:problems, checklist:checklist, state:function(){ return S; }, JOBS:JOBS, act:act, stats:stats };
+})();
+</script>
+<style id="gsCss">/* v6.5.118: gold & silver (theme variables only) */
+.gs-spot{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:10px 14px;margin:0 0 12px;font-size:13px;color:var(--text)}
+.gs-spot[hidden]{display:none}.gs-spot b{font-size:15px}.gs-spot .gs-k{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim)}
+.gs-spot .gs-cell{display:flex;flex-direction:column;min-width:0}.gs-spot .gs-sub{font-size:11.5px;color:var(--text-dim)}.gs-spot .gs-closed{color:var(--amber);font-weight:600}
+.gs-spot .gs-acts{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}.gs-spot .btn-ghost,.gs-spot .btn-outline{padding:5px 10px;font-size:12px}
+.gs-note{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:10px 12px;margin:0 0 10px;font-size:12.5px;color:var(--text-dim);line-height:1.5}
+.gs-note b{color:var(--text)}.gs-note .gs-btns{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.gs-note .btn-outline{padding:5px 10px;font-size:12px}
+</style>
+<script>/* ═══ GOLD AND SILVER, FIRST-CLASS (v6.5.118) ═══
+   Charts: the spot quote beside any gold/silver chart; Forex board: the metals open the 24/7 perpetual; the CREED Scanner and
+   Market Intelligence lists get the perpetuals once; the Autopilot job "metals" keeps the strip fresh. Information only. */
+(function(){
+  'use strict';
+  var PERP = { XAUUSDT:{ name:'Gold', spot:'XAUUSD', sym:'XAU/USD' }, XAGUSDT:{ name:'Silver', spot:'XAGUSD', sym:'XAG/USD' } };
+  var ONCE = 'omega_metals_added_v118', S = { spot:{}, perp:{}, at:0, err:null };
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]; }); }
+  function L(){ return window.OMEGA_LAPI; }
+  function plain(x){ return String(x || '').toUpperCase().replace(/[^A-Z0-9]/g, ''); }
+  function perpFor(x){ var p = plain(x); if(PERP[p]) return p; if(p === 'XAUUSD') return 'XAUUSDT'; if(p === 'XAGUSD') return 'XAGUSDT'; return null; }
+  function fmt(x, sym){ x = +x; if(!(x > 0)) return '—'; return x.toFixed(/XAG/.test(sym) ? 3 : 2); }
+  function active(p){ var e = el('page-' + p); return !!(e && e.classList.contains('active')); }
+  function chartSym(){ var e = el('symbol'); return e ? e.value : ''; }
+  // ── open the 24/7 perpetual on Charts ──
+  function openPerp(p){ p = perpFor(p) || 'XAUUSDT'; window.navigate('analysis');
+    var ac = el('assetClass'), sel = el('symbol'); if(!sel) return;
+    if(ac && ac.value !== 'crypto'){ ac.value = 'crypto'; try{ ac.dispatchEvent(new Event('change')); }catch(e){} }
+    if(!Array.prototype.some.call(sel.options, function(o){ return o.value === p; })){ var o = document.createElement('option'); o.value = p; o.textContent = p; sel.appendChild(o); }
+    sel.value = p; try{ sel.dispatchEvent(new Event('change')); }catch(e){}
+    setTimeout(function(){ var d = el('anDeep') || sel; try{ d.scrollIntoView({ block:'start' }); }catch(e){} }, 60);
+    refresh(); if(typeof window.runAnalysis === 'function') setTimeout(function(){ try{ window.runAnalysis(); }catch(e){} }, 150); }
+  // ── prices: perpetual through the fetch chain (Binance -> OKX -> Live API), spot through the Live API ──
+  async function perpPrice(p){ var r = await fetch('https://fapi.binance.com/fapi/v1/ticker/24hr?symbol=' + p), j = await r.json();
+    return { price:+j.lastPrice, chg:+j.priceChangePercent, src:r.headers && r.headers.get('x-omega-source') || 'binance', at:Date.now() }; }
+  async function spotQuote(p){ var LA = L(); if(!LA || !LA.on()) return { none:'needs the Live API token (Settings > Data & Keys)' };
+    var q = await LA.get('/fx/quote?symbol=' + PERP[p].spot, 30000); return { price:+q.price, bid:q.bid, ask:q.ask, stale:!!q.stale, age:q.age_s, src:q.source || 'swissquote', at:Date.now() }; }
+  async function load(p){ var out = {}; try{ S.perp[p] = await perpPrice(p); }catch(e){ S.perp[p] = { err:String(e && e.message || e).slice(0, 140) }; }
+    try{ S.spot[p] = await spotQuote(p); }catch(e){ S.spot[p] = { err:String(e && e.message || e).slice(0, 140) }; } S.at = Date.now(); return out; }
+  function srcName(s){ return s === 'okx' ? 'OKX (Binance did not answer)' : s === 'omega-live-api' ? 'OMEGA Live API (Binance and OKX did not answer)' : 'Binance'; }
+  function strip(){ var host = el('gsSpot'); if(!host) return; var p = perpFor(chartSym()); if(!p){ host.hidden = true; return; } host.hidden = false;
+    var pp = S.perp[p] || {}, sp = S.spot[p] || {}, P = PERP[p];
+    var prem = pp.price > 0 && sp.price > 0 && !sp.stale ? (pp.price / sp.price - 1) * 100 : null;
+    host.innerHTML = '<div class="gs-cell"><span class="gs-k">' + P.name + ' · perpetual ' + p + '</span><b>' + fmt(pp.price, p) + '</b><span class="gs-sub">' + (pp.err ? esc(pp.err) : pp.price ? (isFinite(pp.chg) ? (pp.chg >= 0 ? '+' : '') + pp.chg.toFixed(2) + '% 24h · ' : '') + '24/7 · ' + esc(srcName(pp.src)) : 'loading…') + '</span></div>' +
+      '<div class="gs-cell"><span class="gs-k">Spot ' + P.sym + '</span><b>' + (sp.price ? fmt(sp.price, p) : '—') + '</b><span class="gs-sub">' + (sp.none ? esc(sp.none) : sp.err ? esc(sp.err) : sp.stale ? '<span class="gs-closed">Market closed</span> (weekend or CME break) · last quote' : sp.price ? 'Swissquote live' + (sp.bid != null && sp.ask != null ? ' · spread $' + (+sp.ask - +sp.bid).toFixed(/XAG/.test(p) ? 3 : 2) : '') : 'loading…') + '</span></div>' +
+      '<div class="gs-cell"><span class="gs-k">Perp vs spot</span><b>' + (prem == null ? '—' : (prem >= 0 ? '+' : '') + prem.toFixed(2) + '%') + '</b><span class="gs-sub">' + (prem == null ? (sp.stale ? 'not compared while spot is closed' : 'needs both prices') : 'premium of the perpetual') + '</span></div>' +
+      '<div class="gs-acts">' + (perpFor(chartSym()) !== plain(chartSym()) ? '<button class="btn-outline" type="button" data-gsperp="' + p + '">24/7 perpetual chart</button>' : '') + (el('page-desks') ? '<button class="btn-ghost" type="button" data-gsdesk="' + (p === 'XAUUSDT' ? 'XAU' : 'XAG') + '">' + P.name + ' desk</button>' : '') + '</div>'; }
+  async function refresh(){ var p = perpFor(chartSym()); strip(); if(!p) return 'No gold/silver chart open.'; await load(p); strip(); var pp = S.perp[p] || {}, sp = S.spot[p] || {};
+    if(pp.err && (sp.err || sp.none)) return { error:pp.err };
+    return PERP[p].name + ': perpetual ' + (pp.price ? fmt(pp.price, p) : 'n/a') + ', spot ' + (sp.price ? fmt(sp.price, p) + (sp.stale ? ' (closed)' : '') : 'n/a') + '.'; }
+  function boardNote(){ return '<div class="gs-note"><b>Gold and silver also trade around the clock</b> as Binance perpetuals (XAUUSDT, XAGUSDT). The spot quotes below pause at weekends and in the daily CME break (21:00–22:00 UTC); the perpetuals keep trading, though thinly then. Tapping gold or silver opens the 24/7 perpetual chart with the spot quote beside it.' +
+      '<div class="gs-btns"><button class="btn-outline" type="button" data-gsperp="XAUUSDT">Gold 24/7 chart</button><button class="btn-outline" type="button" data-gsperp="XAGUSDT">Silver 24/7 chart</button>' + (el('page-desks') ? '<button class="btn-ghost" type="button" data-gsdesks="1">Bitcoin, gold &amp; silver desks</button>' : '') + '</div></div>'; }
+  document.addEventListener('click', function(e){ var t = e.target && e.target.closest ? e.target.closest('[data-gsperp],[data-gsdesk],[data-gsdesks]') : null; if(!t) return;
+    if(t.hasAttribute('data-gsperp')) openPerp(t.getAttribute('data-gsperp'));
+    else if(window.OMEGA_DESKS) window.OMEGA_DESKS.open(t.getAttribute('data-gsdesk') || null); });
+  // ── stored market lists: add the perpetuals once (a later removal is respected) ──
+  function addOnce(){ var done = null; try{ done = JSON.parse(localStorage.getItem(ONCE) || 'null'); }catch(e){} done = done || {};
+    [['radar', 'omega_radar_universe_v1'], ['intel', 'omega_intel_universe_v1']].forEach(function(x){ if(done[x[0]]) return;
+      try{ var u = JSON.parse(localStorage.getItem(x[1]) || 'null'); if(u && Array.isArray(u.crypto)){ Object.keys(PERP).forEach(function(p){ if(u.crypto.indexOf(p) < 0 && u.crypto.length < 30) u.crypto.push(p); }); localStorage.setItem(x[1], JSON.stringify(u));
+        var M = x[0] === 'radar' ? window.OMEGA_RADAR : window.OMEGA_INTEL, live = M && M.universe && M.universe(); if(live && Array.isArray(live.crypto)) Object.keys(PERP).forEach(function(p){ if(live.crypto.indexOf(p) < 0 && live.crypto.length < 30) live.crypto.push(p); }); }
+        done[x[0]] = Date.now(); }catch(e){} });
+    try{ localStorage.setItem(ONCE, JSON.stringify(done)); }catch(e){} }
+  // ── the Autopilot job ──
+  var JOB = { id:'metals', lane:'live', prio:2, label:'Gold & silver prices', what:'The 24/7 gold/silver perpetual price beside the spot quote on Charts: every minute while a gold or silver chart is open, every 15 minutes otherwise. Binance, else OKX, else the Live API.',
+    every:function(){ return active('analysis') && perpFor(chartSym()) && !document.hidden ? 60e3 : 15*60e3; }, run:refresh };
+  function register(){ var Op = window.OMEGA_OPERATOR; if(!Op || !Op.jobs) return false; var J = Op.jobs(); if(!J.some(function(x){ return x.id === JOB.id; })) J.push(JOB); return true; }
+  var prevAfter = window.__omegaAfterNav;
+  window.__omegaAfterNav = function(p){ try{ if(typeof prevAfter === 'function') prevAfter(p); }catch(e){} if(p === 'analysis') setTimeout(refresh, 60); };
+  function boot(){ register(); addOnce(); var sel = el('symbol'); if(sel) sel.addEventListener('change', function(){ refresh(); }); strip(); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(boot, 0); }); else setTimeout(boot, 0);
+  window.OMEGA_GS = { PERP:PERP, perpFor:perpFor, openPerp:openPerp, refresh:refresh, strip:strip, boardNote:boardNote, state:function(){ return S; }, job:JOB, addOnce:addOnce };
+})();
+</script>
+<style id="desksCss">/* v6.5.119: Desks (theme variables only) */
+.dk-price{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 22px}.dk-price .dk-big{font-size:28px;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1.1}
+.dk-k{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-dim);display:block;margin-bottom:2px}.dk-sub{font-size:12px;color:var(--text-dim)}
+.dk-up{color:var(--bull)}.dk-dn{color:var(--bear)}.dk-warn{color:var(--amber);font-weight:600}
+.dk-say{font-size:15px;color:var(--text);line-height:1.5;margin:0}.dk-say small{display:block;font-size:12.5px;color:var(--text-dim);margin-top:6px}
+.dk-hz{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 14px}@media(max-width:760px){.dk-hz{grid-template-columns:1fr}}
+.dk-h{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:12px 14px;min-width:0}.dk-h h4{margin:0 0 6px;font-size:13px;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.dk-h h4 small{font-weight:400;color:var(--text-dim);font-size:11px}.dk-h p{margin:6px 0 0;font-size:12.5px;color:var(--text-dim);line-height:1.5}
+.dk-st{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.07em;padding:3px 9px;border-radius:999px;border:1px solid var(--border);color:var(--text-dim);background:var(--panel2)}
+.dk-st.WATCH{color:var(--amber);border-color:var(--amber)}.dk-st.SETUP{color:var(--gold);border-color:var(--gold)}.dk-st.TRIGGERED,.dk-st.CONFIRMED{color:var(--bull);border-color:var(--bull)}.dk-st.INVALIDATED{color:var(--bear);border-color:var(--bear)}
+.dk-h details{margin-top:8px}.dk-h summary{cursor:pointer;font-size:12px;color:var(--text);font-weight:600}.dk-h ul{margin:6px 0 0;padding-left:18px;font-size:12px;color:var(--text-dim);line-height:1.5}
+.dk-call{margin-top:8px;border-top:1px solid var(--border);padding-top:8px;font-size:12.5px;color:var(--text)}.dk-call dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:6px 0 0}.dk-call dt{color:var(--text-dim)}.dk-call dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.dk-fold{background:var(--panel);border:1px solid var(--border);border-radius:14px;margin:0 0 10px}.dk-fold>summary{cursor:pointer;padding:12px 14px;font-size:14px;font-weight:600;color:var(--text);list-style:none;display:flex;justify-content:space-between;gap:8px}
+.dk-fold>summary::-webkit-details-marker{display:none}.dk-fold>summary span{font-weight:400;font-size:12px;color:var(--text-dim)}.dk-fold>div{padding:0 14px 12px;font-size:13px;color:var(--text-dim);line-height:1.55}
+.dk-fold table{width:100%;border-collapse:collapse;font-size:12.5px}.dk-fold td,.dk-fold th{text-align:left;padding:5px 6px;border-top:1px solid var(--border);color:var(--text)}.dk-fold th{color:var(--text-dim);font-weight:600}
+.dk-fold h5{margin:10px 0 4px;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--text-dim)}.dk-fold ul{margin:0;padding-left:18px}
+.dk-acts{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}.dk-note{font-size:12px;color:var(--text-dim);line-height:1.5;margin:0 0 14px}
+.dk-home{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 0 14px}.dk-home:empty{display:none}
+.dk-tile{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:10px 12px;text-align:left;font:inherit;color:var(--text);cursor:pointer;min-width:0}
+.dk-tile b{display:block;font-size:13px}.dk-tile em{display:block;font-style:normal;font-size:15px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.dk-tile small{display:block;font-size:11px;color:var(--text-dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+</style>
+<script>/* ═══ DESKS: BITCOIN, GOLD, SILVER (v6.5.119) ═══
+   Each desk shows its bot's market read, day/swing/hold states, any call (only from tested rules), the forward record and
+   the notebook, from GET /assets/{BTC|XAU|XAG} on the OMEGA Live API. Prices are live in the browser. Information only. */
+(function(){
+  'use strict';
+  var KEY = 'omega_desks_v1', A = ['BTC', 'XAU', 'XAG'];
+  var META = { BTC:{ name:'Bitcoin', perp:'BTCUSDT', spot:null, d:1 }, XAU:{ name:'Gold', perp:'XAUUSDT', spot:'XAU/USD', d:2 }, XAG:{ name:'Silver', perp:'XAGUSDT', spot:'XAG/USD', d:3 } };
+  var HZ = [['day', 'Day trades', 'minutes to hours'], ['swing', 'Swing', '1–20 days'], ['hold', 'Holding', 'weeks to months']];
+  var S = (function(){ try{ return JSON.parse(localStorage.getItem(KEY) || 'null') || {}; }catch(e){ return {}; } })(); S.desks = S.desks || {}; S.cur = A.indexOf(S.cur) > -1 ? S.cur : 'XAU';
+  var LIVE = {}, busy = false, err = null;
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify({ cur:S.cur, desks:S.desks })); }catch(e){} }
+  function el(id){ return document.getElementById(id); }
+  function esc(t){ return String(t == null ? '' : t).replace(/[&<>"']/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]; }); }
+  function L(){ return window.OMEGA_LAPI; }
+  function active(p){ var e = el('page-' + p); return !!(e && e.classList.contains('active')); }
+  function num(x, d){ x = +x; return isFinite(x) && x !== 0 ? x.toLocaleString('en-US', { minimumFractionDigits:d, maximumFractionDigits:d }) : '—'; }
+  function pct(x, d){ x = +x; return isFinite(x) ? (x > 0 ? '+' : '') + x.toFixed(d == null ? 2 : d) + '%' : '—'; }
+  function ago(t){ var d = typeof t === 'number' ? t : Date.parse(t); if(!isFinite(d)) return '—'; var m = Math.round((Date.now() - d) / 6e4); return m < 1 ? 'just now' : m < 90 ? m + ' min ago' : m < 48 * 60 ? Math.round(m / 60) + ' h ago' : Math.round(m / 1440) + ' days ago'; }
+  function when(t){ var d = new Date(t); return isFinite(d) ? d.toLocaleString([], { month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' }) : '—'; }
+  // ── data ──
+  async function loadDesk(a, force){ var LA = L(); if(!LA || !LA.on()) return null; var c = S.desks[a];
+    if(!force && c && Date.now() - c.at < 60e3) return c.j;
+    var j = await LA.get('/assets/' + a, 45000); S.desks[a] = { at:Date.now(), j:j }; save(); return j; }
+  async function loadPrice(a){ var M = META[a];
+    try{ var r = await fetch('https://fapi.binance.com/fapi/v1/ticker/24hr?symbol=' + M.perp), j = await r.json(); if(+j.lastPrice > 0) LIVE[a] = { price:+j.lastPrice, chg:+j.priceChangePercent, src:(r.headers && r.headers.get('x-omega-source')) || 'binance', at:Date.now() }; }catch(e){}
+    if(M.spot && L() && L().on()){ try{ var q = await L().get('/fx/quote?symbol=' + M.spot.replace('/', ''), 30000); (LIVE[a] = LIVE[a] || {}).spot = { price:+q.price, stale:!!q.stale, bid:q.bid, ask:q.ask }; }catch(e){} } }
+  async function refresh(force, which){ if(busy) return 'busy'; busy = true; err = null; var list = which ? [which] : A, got = 0;
+    try{ for(var i = 0; i < list.length; i++){ try{ if(await loadDesk(list[i], force)) got++; }catch(e){ err = String(e && e.message || e).slice(0, 160); } await loadPrice(list[i]); } }
+    finally{ busy = false; } draw(); return got; }
+  // ── words ──
+  function stateOf(j, k){ return ((j && j.horizons) || {})[k] || null; }
+  function sayNow(j){ if(!j || !j.horizons) return null; var hs = HZ.map(function(h){ return [h, stateOf(j, h[0])]; }).filter(function(x){ return x[1]; });
+    var calls = hs.filter(function(x){ return /TRIGGERED|CONFIRMED/.test(x[1].state); }), watch = hs.filter(function(x){ return x[1].state === 'WATCH'; }), setups = hs.filter(function(x){ return x[1].state === 'SETUP'; });
+    if(calls.length) return 'A tested rule has called a trade: ' + calls.map(function(x){ var c = x[1].call || {}; return x[0][1].toLowerCase() + ' — ' + (c.side || '?') + ' (rule ' + (c.rule || '?') + ', grade ' + (c.grade || '?') + ', ' + (x[1].state === 'CONFIRMED' ? 'entry filled' : 'waiting for its entry') + ')'; }).join('; ') + '.';
+    if(setups.length) return 'No trade yet. A tested rule’s conditions are forming on ' + setups.map(function(x){ return x[0][1].toLowerCase(); }).join(' and ') + '.';
+    if(watch.length) return 'No trade. Watching for a big move on ' + watch.map(function(x){ return x[0][1].toLowerCase(); }).join(' and ') + ' — the direction is not known, so there is nothing to act on.';
+    return 'No trade. Nothing qualifies right now, so the bot waits.'; }
+  function hasRules(j){ return HZ.some(function(h){ var x = stateOf(j, h[0]); return x && x.rules && x.rules.length; }); }
+  function callBlock(c, d){ if(!c) return ''; var open = /TRIGGERED|CONFIRMED/.test(c.state);
+    return '<div class="dk-call"><b>' + (open ? 'Call' : 'Last call') + ': ' + esc(c.side) + '</b> · rule ' + esc(c.rule) + ' · <span class="om-tag">Grade ' + esc(c.grade || '?') + '</span>' +
+      '<dl><dt>Entry</dt><dd>' + num(c.fill_price || c.entry, d) + (c.fill_price ? ' (filled ' + esc(when(c.fill_time)) + ')' : c.entry_type === 'limit' ? ' (limit, not filled yet)' : ' (next candle’s open)') + '</dd>' +
+      '<dt>Stop</dt><dd>' + num(c.stop, d) + '</dd><dt>Target</dt><dd>' + (c.target ? num(c.target, d) : 'none (time exit)') + '</dd><dt>Exit by</dt><dd>' + esc(when(c.exit_by)) + '</dd>' +
+      '<dt>Size</dt><dd>' + (c.size ? num(c.size.margin_usdt, 0) + ' USDT margin × ' + num(c.size.leverage, 0) + ' (the rule’s tested maximum)' : '—') + '</dd>' +
+      (c.outcome ? '<dt>Outcome</dt><dd>' + esc(c.outcome) + (c.net_pct != null ? ' · ' + pct(c.net_pct) + ' after costs' : '') + '</dd>' : '') +
+      '<dt>Evidence</dt><dd>' + esc(c.evidence || '—') + '</dd><dt>Status</dt><dd>' + (c.execution_allowed ? 'testnet/live rule: the trading bot may execute it' : 'paper record (research only): not an order') + '</dd></dl></div>'; }
+  function hzTile(j, h, d){ var x = stateOf(j, h[0]); if(!x) return '<div class="dk-h"><h4>' + h[1] + ' <small>' + h[2] + '</small></h4><span class="dk-st">—</span><p>No reading yet.</p></div>';
+    var rs = (x.reasons || []).filter(Boolean), dir = /TRIGGERED|CONFIRMED/.test(x.state) && x.direction ? ' · ' + esc(x.direction) : '';
+    return '<div class="dk-h"><h4>' + h[1] + ' <small>' + h[2] + '</small></h4><span class="dk-st ' + esc(x.state) + '">' + esc(x.state) + dir + '</span><p>' + esc(x.plain || '') + '</p>' +
+      '<p class="dk-sub">Since ' + esc(ago(x.since)) + (x.rules && x.rules.length ? ' · tested rules: ' + x.rules.map(function(r){ return esc(r.id) + ' (' + esc(r.grade) + ', ' + esc(r.status) + ')'; }).join(', ') : ' · no tested rule yet') + '</p>' +
+      (rs.length ? '<details><summary>Why</summary><ul>' + rs.map(function(r){ return '<li>' + esc(r) + '</li>'; }).join('') + '</ul></details>' : '') + callBlock(x.call, d) + '</div>'; }
+  function readFold(j, d){ var r = (j && j.read) || {}, v = r.volatility || {}, t = r.trend || {}, rg = r.ranges || {}, sc = r.scouts || {};
+    var TW = { up:'above its averages, rising', down:'below its averages, falling', flat:'mixed / sideways' };
+    var trend = '<table><tr><th>Candles</th><th>Where price sits</th></tr>' + ['15m', '1h', '4h', '1d'].map(function(k){ var x = t[k]; return '<tr><td>' + k + '</td><td>' + (x ? esc(TW[x.state] || x.state) : '—') + '</td></tr>'; }).join('') + '</table>';
+    var vol = '<p>Volatility is <b>' + esc(v.regime || 'unknown') + '</b>' + (v.atr1h_pct != null ? ' (a typical hour moves ' + esc(v.atr1h_pct) + '% — ' + esc(v.atr1h_pctile) + 'th percentile of the last 3 weeks)' : '') + (v.rv20d_ann_pct != null ? '; daily volatility ' + esc(v.rv20d_ann_pct) + '% a year (' + esc(v.rv20d_pctile) + 'th percentile), regime ' + esc(v.regime_daily) : '') + '.' + (v.day_range_pct_median != null ? ' A typical day ranges ' + esc(v.day_range_pct_median) + '%.' : '') + '</p>';
+    var ses = r.session ? '<p>Session: <b>' + esc(r.session.name) + '</b>' + (r.session.note ? ' — ' + esc(r.session.note) : '') + '.</p>' : '';
+    var rng = '<table><tr><th>Range</th><th>High</th><th>Low</th><th>Where</th></tr>' + ['24h', '7d', '30d'].map(function(k){ var x = rg[k]; return x ? '<tr><td>' + k + '</td><td>' + num(x.high, d) + ' <span class="dk-sub">(' + pct(x.to_high_pct, 1) + ')</span></td><td>' + num(x.low, d) + ' <span class="dk-sub">(−' + (+x.to_low_pct).toFixed(1) + '%)</span></td><td>' + (x.position != null ? Math.round(x.position * 100) + '%' : '—') + '</td></tr>' : ''; }).join('') + '</table>';
+    var fund = r.funding && r.funding.rate != null ? '<p>Funding: ' + (r.funding.rate * 100).toFixed(4) + '% per 8 h (' + (r.funding.rate >= 0 ? 'longs pay shorts' : 'shorts pay longs') + ').</p>' : '';
+    var scouts = sc.missing ? '<p>Scouts: ' + esc(sc.missing) + '.</p>' : ['day', 'swing'].map(function(k){ var x = sc[k]; return x ? '<p>Scout, next ' + esc(x.horizon) + ': <b>' + Math.round(x.p_big_move * 100) + '%</b> chance of a big move either way' + (x.flag ? ' — <span class="dk-warn">flagged</span>' : '') + '. <span class="dk-sub">' + esc(x.label || '') + '</span></p>' : ''; }).join('');
+    return '<details class="dk-fold"><summary>The market read <span>trend, volatility, session, ranges, scouts</span></summary><div><p class="dk-sub">' + esc(r.note || '') + '</p><h5>Trend</h5>' + trend + '<h5>Volatility</h5>' + vol + ses + '<h5>Ranges</h5><p class="dk-sub">Where = how far up the range the price sits (0% at the low, 100% at the high).</p>' + rng + fund + '<h5>Scouts (big-move risk, never a direction)</h5>' + (scouts || '<p>No scout reading.</p>') + '</div></details>'; }
+  function fwdFold(j){ var f = (j && j.forward) || {}, rc = (j && j.recent_calls) || [];
+    var rows = HZ.map(function(h){ var x = f[h[0]] || {}; return '<li><b>' + h[1] + ':</b> ' + esc(x.text || 'no record yet') + '</li>'; }).join('') + '<li><b>Calls:</b> ' + esc((f.calls || {}).text || 'none yet') + '</li>';
+    var past = rc.length ? '<h5>Recent calls</h5><ul>' + rc.slice(0, 8).map(function(c){ return '<li>' + esc(when(c.signal_bar)) + ' · ' + esc(c.horizon) + ' · ' + esc(c.side) + ' (' + esc(c.rule) + ') → ' + esc(c.outcome || c.state) + (c.net_pct != null ? ' ' + pct(c.net_pct) : '') + '</li>'; }).join('') + '</ul>' : '';
+    return '<details class="dk-fold"><summary>Forward record <span>scored after the fact</span></summary><div><p>Every reading and call is written down before its outcome and scored once its horizon has passed.</p><ul>' + rows + '</ul>' + past + '</div></details>'; }
+  function nbFold(j, name){ var nb = (j && j.notebook) || []; if(!nb.length) return '';
+    return '<details class="dk-fold"><summary>What I know about ' + esc(name.toLowerCase()) + ' <span>the bot’s notebook</span></summary><div>' + nb.map(function(sx){ return '<h5>' + esc(sx.title) + '</h5><ul>' + (sx.lines || []).map(function(l){ return '<li>' + esc(l) + '</li>'; }).join('') + '</ul>'; }).join('') + '</div></details>'; }
+  function priceCard(a, j){ var M = META[a], lv = LIVE[a] || {}, r = (j && j.read) || {}, p = lv.price || r.price, chg = lv.price ? lv.chg : r.change_24h_pct, sp = lv.spot || r.spot;
+    var src = lv.price ? (lv.src === 'okx' ? 'OKX (Binance did not answer)' : lv.src === 'omega-live-api' ? 'OMEGA Live API' : 'Binance') + ', live' : r.price ? 'the bot’s last reading' : '';
+    return '<div class="om-card"><div class="dk-price"><div><span class="dk-k">' + M.name + ' · perpetual ' + M.perp + ' · 24/7</span><span class="dk-big">' + num(p, M.d) + '</span><span class="dk-sub"> ' + (isFinite(+chg) && chg != null ? '<span class="' + (+chg >= 0 ? 'dk-up' : 'dk-dn') + '">' + pct(chg) + '</span> 24h · ' : '') + esc(src) + '</span></div>' +
+      (M.spot ? '<div><span class="dk-k">Spot ' + M.spot + '</span><b style="font-size:18px;color:var(--text)">' + (sp && sp.price ? num(sp.price, M.d) : '—') + '</b><span class="dk-sub"> ' + (sp && sp.price ? (sp.stale ? '<span class="dk-warn">market closed</span> (weekend or CME break)' : 'Swissquote, live') : (L() && L().on() ? 'no quote yet' : 'needs the Live API token')) + '</span></div>' : '') + '</div></div>'; }
+  function deskHtml(a){ var M = META[a], c = S.desks[a], j = c && c.j, LA = L(), on = !!(LA && LA.on());
+    var out = priceCard(a, j);
+    if(!on) out += '<div class="om-card om-empty"><b style="color:var(--text)">Connect the OMEGA Live API to see the ' + M.name.toLowerCase() + ' bot’s desk.</b><br>Add the token in Settings &rsaquo; Data &amp; Keys. Prices above still update.<br><button class="btn-outline" type="button" data-dkset="1">Open Settings</button></div>';
+    else if(!j && busy) out += '<div class="om-card"><p class="dk-say">Loading the ' + M.name.toLowerCase() + ' desk…</p></div>';
+    else if(!j) out += '<div class="om-card"><p class="dk-say">The ' + M.name.toLowerCase() + ' desk could not be loaded' + (err ? ': ' + esc(err) : '') + '.</p></div>';
+    else if(!j.available) out += '<div class="om-card"><p class="dk-say">The ' + M.name.toLowerCase() + ' bot has not written a desk yet.<small>' + esc(j.note || 'The asset bots run every 15 minutes once their job is switched on.') + '</small></p></div>';
+    else { var stale = j.age_minutes > 60;
+      out += '<div class="om-card"><span class="dk-k">What the bot says now</span><p class="dk-say">' + esc(sayNow(j)) + '<small>' + (hasRules(j) ? 'Calls come only from rules that passed a fair test.' : 'No rule for ' + M.name.toLowerCase() + ' has passed a fair test yet, so this bot calls no trades: it waits, or watches when a big move looks likely.') +
+        ' Read ' + esc(ago(j.asof)) + ' from the ' + esc(j.source || 'bots') + (stale ? ' · <span class="dk-warn">this reading is old: the bots may be paused</span>' : '') + '.</small></p></div>';
+      out += '<div class="dk-hz">' + HZ.map(function(h){ return hzTile(j, h, M.d); }).join('') + '</div>';
+      out += readFold(j, M.d) + fwdFold(j) + nbFold(j, M.name); }
+    out += '<div class="dk-acts"><button class="btn-outline" type="button" data-gsperp="' + M.perp + '">Open the 24/7 chart</button><button class="btn-ghost" type="button" data-dkref="1">' + (busy ? 'Updating…' : 'Refresh') + '</button></div>';
+    out += '<p class="dk-note">Information only. A call is a paper record from a tested rule, not an order; OMEGA places no orders from this page. WAIT and WATCH mean there is no tested reason to trade.</p>';
+    return out; }
+  function draw(){ var host = el('desksBody'); if(host){ host.innerHTML = '<div class="om-tabs" role="tablist">' + A.map(function(a){ var j = S.desks[a] && S.desks[a].j, w = j && j.horizons ? HZ.map(function(h){ return (j.horizons[h[0]] || {}).state; }).filter(function(x){ return x && x !== 'WAIT'; })[0] : null;
+        return '<button type="button" role="tab" data-dk="' + a + '" class="' + (a === S.cur ? 'on' : '') + '" aria-selected="' + (a === S.cur) + '">' + META[a].name + (w ? '<em>' + esc(w) + '</em>' : '') + '</button>'; }).join('') + '</div>' + deskHtml(S.cur); }
+    home(); }
+  function home(){ var h = el('homeDesks'); if(!h) return;
+    h.innerHTML = A.map(function(a){ var M = META[a], j = S.desks[a] && S.desks[a].j, lv = LIVE[a] || {}, p = lv.price || (j && j.read && j.read.price);
+      var st = j && j.horizons ? HZ.map(function(x){ var s0 = (j.horizons[x[0]] || {}).state; return s0 && s0 !== 'WAIT' ? s0 + ' · ' + x[1].toLowerCase() : null; }).filter(Boolean)[0] || 'WAIT on every horizon' : (L() && L().on() ? 'desk not loaded' : 'open the desk');
+      return '<button type="button" class="dk-tile" data-dkgo="' + a + '"><b>' + M.name + ' desk</b><em>' + num(p, M.d) + '</em><small>' + esc(st) + '</small></button>'; }).join(''); }
+  function open(a){ if(a && META[a]){ S.cur = a; save(); } window.navigate('desks'); }
+  document.addEventListener('click', function(e){ var t = e.target && e.target.closest ? e.target.closest('[data-dk],[data-dkref],[data-dkset],[data-dkgo]') : null; if(!t) return;
+    if(t.hasAttribute('data-dk')){ S.cur = t.getAttribute('data-dk'); save(); draw(); refresh(false, S.cur); }
+    else if(t.hasAttribute('data-dkref')) refresh(true);
+    else if(t.hasAttribute('data-dkgo')) open(t.getAttribute('data-dkgo'));
+    else { window.navigate('settings'); try{ window.switchSettings && window.switchSettings('data'); }catch(x){} } });
+  function onShow(){ draw(); refresh(false); }
+  // ── the Autopilot job ──
+  var JOB = { id:'desks', lane:'live', prio:3, label:'Bitcoin, gold & silver desks', what:'The three asset bots’ desks from the Live API (/assets) and live prices: every 2 minutes while Desks or Home is open, every 15 minutes otherwise. Information only, never an order.',
+    every:function(){ return (active('desks') || active('command')) && !document.hidden ? 120e3 : 15*60e3; },
+    run:async function(){ var LA = L(); if(!LA || !LA.on()){ for(var i = 0; i < A.length; i++) await loadPrice(A[i]); draw(); return { skip:true, text:'no Live API token: prices only', retryIn:30*60e3 }; }
+      var n = await refresh(true); if(!n && err) return { error:err };
+      return A.map(function(a){ var j = S.desks[a] && S.desks[a].j; return META[a].name + ' ' + (j && j.horizons ? HZ.map(function(h){ return (j.horizons[h[0]] || {}).state || '?'; }).join('/') : 'no desk'); }).join('; ') + '.'; } };
+  function register(){ var Op = window.OMEGA_OPERATOR; if(!Op || !Op.jobs) return false; var J = Op.jobs(); if(!J.some(function(x){ return x.id === JOB.id; })) J.push(JOB); return true; }
+  var prevAfter = window.__omegaAfterNav;
+  window.__omegaAfterNav = function(p){ try{ if(typeof prevAfter === 'function') prevAfter(p); }catch(e){} if(p === 'command') setTimeout(function(){ home(); }, 30); };
+  function boot(){ register(); home(); if(active('desks')) onShow(); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(boot, 0); }); else setTimeout(boot, 0);
+  window.OMEGA_DESKS = { open:open, onShow:onShow, refresh:refresh, draw:draw, state:function(){ return { cur:S.cur, desks:S.desks, live:LIVE, err:err }; }, sayNow:sayNow, job:JOB };
 })();
 </script>
 </body>

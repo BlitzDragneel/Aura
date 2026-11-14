@@ -4,9 +4,12 @@ Jobs (UTC clock):
   paper/testnet bot   minutes 07, 22, 37, 52   python -m edges.bots run --mode <mode> --once
   fast scouts         minutes 02, 17, 32, 47   python -m edges.scouts.live <home>/fast_scouts --fast
   hourly scouts       minute 17                python -m edges.scouts.live <home>/scouts
+  asset bots          minutes 04, 19, 34, 49   python -m edges.assetbots run <home>   (BTC, gold, silver desks)
+  asset scouts        2nd of month 03:51       fetch_metals.py + python -m edges.assetbots train all (retrain)
   live data API       always on                http://127.0.0.1:8787  (omega/live_api)
   update              daily 06:41              git pull (only in paper/testnet mode; never while live)
-Records: <home>/  (STATION.md = latest summary; bots/ = paper bot state & log; scouts/, fast_scouts/ = scoreboards)
+Records: <home>/  (STATION.md = latest summary; bots/ = paper bot state & log; scouts/, fast_scouts/ = scoreboards;
+         assets/ = the BTC/XAU/XAG desks, same layout as bot-state/assets/)
 Keeps the computer awake while running (Windows: SetThreadExecutionState; macOS: caffeinate).
 Stop: close the window or Ctrl+C. Kill switch for orders: edges\\bots\\KILL_all.bat (or python -m edges.bots kill).
 Config: <home>/station.json  {"mode": "paper"|"testnet", "auto_update": true, "api": true}
@@ -86,7 +89,10 @@ def summary(c):
     parts = [f"# OMEGA Station — {dt.datetime.now(dt.timezone.utc):%Y-%m-%d %H:%M} UTC", "",
              f"Mode: **{c['mode']}** · computer: {platform.node()} · code: {git_rev()}", ""]
     for title, path in (("Paper bot (positions, orders, recent actions)", HOME / "last_status.txt"), ("Hourly scouts", HOME / "scouts" / "SCOUTS.md"),
-                        ("Fast scouts", HOME / "fast_scouts" / "SCOUTS.md")):
+                        ("Fast scouts", HOME / "fast_scouts" / "SCOUTS.md"),
+                        ("Bitcoin desk", HOME / "assets" / "BTC" / "NOTEBOOK.md"),
+                        ("Gold desk", HOME / "assets" / "XAU" / "NOTEBOOK.md"),
+                        ("Silver desk", HOME / "assets" / "XAG" / "NOTEBOOK.md")):
         if path.exists():
             txt = path.read_text(encoding="utf-8", errors="ignore")
             parts += [f"## {title}", "", txt[:3000], ""]
@@ -131,6 +137,12 @@ def main():
                 jobs.append(("fast_scouts", ["-m", "edges.scouts.live", str(HOME / "fast_scouts"), "--fast"], None))
             if m == 17:
                 jobs.append(("scouts", ["-m", "edges.scouts.live", str(HOME / "scouts")], None))
+            if m in (4, 19, 34, 49):
+                jobs.append(("assets", ["-m", "edges.assetbots", "run", str(HOME)], None))
+            if now.day == 2 and now.hour == 3 and m == 51:
+                jobs.append(("assets_data", ["edges/data/fetch_metals.py"], {"OMEGA_DATA": str(HOME / "data")}))
+                jobs.append(("assets_train", ["-m", "edges.assetbots", "train", "all", "--out", str(HOME / "assets" / "models")],
+                             {"OMEGA_DATA": str(HOME / "data")}))
             if now.hour == 6 and m == 41:
                 jobs.append(("update", None, None))
             for name, args, env in jobs:

@@ -1,0 +1,135 @@
+{
+ "period": "2020-09 -> 2026-10 (perp era; gold leg PAXG)",
+ "rows": [
+  {
+   "leverage": 1,
+   "sharpe": 0.834,
+   "cagr": 0.1644,
+   "maxdd": -0.3229,
+   "worst_day": -0.104,
+   "worst_intraday": -0.1084,
+   "liquidation_days": 0
+  },
+  {
+   "leverage": 2,
+   "sharpe": 0.834,
+   "cagr": 0.2974,
+   "maxdd": -0.5674,
+   "worst_day": -0.2079,
+   "worst_intraday": -0.2167,
+   "liquidation_days": 0
+  },
+  {
+   "leverage": 3,
+   "sharpe": 0.834,
+   "cagr": 0.3823,
+   "maxdd": -0.7402,
+   "worst_day": -0.3119,
+   "worst_intraday": -0.3251,
+   "liquidation_days": 0
+  },
+  {
+   "leverage": 5,
+   "sharpe": 0.834,
+   "cagr": 0.3634,
+   "maxdd": -0.9246,
+   "worst_day": -0.5198,
+   "worst_intraday": -0.5419,
+   "liquidation_days": 0
+  },
+  {
+   "leverage": 10,
+   "sharpe": 0.834,
+   "cagr": NaN,
+   "maxdd": -1.0063,
+   "worst_day": -1.0396,
+   "worst_intraday": -1.0837,
+   "liquidation_days": 1
+  },
+  {
+   "leverage": 20,
+   "sharpe": 0.834,
+   "cagr": -0.9965,
+   "maxdd": -9.8021,
+   "worst_day": -2.0791,
+   "worst_intraday": -2.1674,
+   "liquidation_days": 10
+  },
+  {
+   "leverage": 40,
+   "sharpe": 0.834,
+   "cagr": NaN,
+   "maxdd": -2.0308,
+   "worst_day": -4.1583,
+   "worst_intraday": -4.3348,
+   "liquidation_days": 91
+  }
+ ],
+ "bh_rows": [
+  {
+   "leverage": 1,
+   "sharpe": 0.635,
+   "cagr": 0.2211,
+   "maxdd": -0.7893,
+   "worst_day": -0.1541,
+   "worst_intraday": -0.331,
+   "liquidation_days": 0
+  },
+  {
+   "leverage": 2,
+   "sharpe": 0.635,
+   "cagr": 0.0741,
+   "maxdd": -0.982,
+   "worst_day": -0.3082,
+   "worst_intraday": -0.662,
+   "liquidation_days": 0
+  },
+  {
+   "leverage": 3,
+   "sharpe": 0.635,
+   "cagr": -0.3296,
+   "maxdd": -0.9994,
+   "worst_day": -0.4623,
+   "worst_intraday": -0.993,
+   "liquidation_days": 0
+  },
+  {
+   "leverage": 5,
+   "sharpe": 0.635,
+   "cagr": -0.9222,
+   "maxdd": -1.0,
+   "worst_day": -0.7705,
+   "worst_intraday": -1.655,
+   "liquidation_days": 4
+  },
+  {
+   "leverage": 10,
+   "sharpe": 0.635,
+   "cagr": -1.0,
+   "maxdd": -105.2749,
+   "worst_day": -1.541,
+   "worst_intraday": -3.3101,
+   "liquidation_days": 41
+  },
+  {
+   "leverage": 20,
+   "sharpe": 0.635,
+   "cagr": -1.0,
+   "maxdd": -2.0181,
+   "worst_day": -3.0821,
+   "worst_intraday": -6.6202,
+   "liquidation_days": 221
+  },
+  {
+   "leverage": 40,
+   "sharpe": 0.635,
+   "cagr": -1.0,
+   "maxdd": -57.0402,
+   "worst_day": -6.1641,
+   "worst_intraday": -13.2404,
+   "liquidation_days": 684
+  }
+ ],
+ "note": "Account-level (one cross-margined account holding both legs at L x the weights). liquidation_days = days where the BTC leg at its daily low plus the gold leg at its close would lose >= 99.5% of equity.",
+ "max_leverage_no_liq_dd_lt_35": 1
+}

@@ -1,0 +1,239 @@
+{
+ "plan": "E94",
+ "md5": "862939761a6db9d8a1d58f6a43cb47bd",
+ "stats": {
+  "H1 buy&hold": {
+   "discovery": {
+    "sharpe": 0.699,
+    "cagr": 0.2751,
+    "maxdd": -0.7893,
+    "nw_t": 1.25,
+    "days": 1217,
+    "total_return": 1.2489
+   },
+   "validation": {
+    "sharpe": 1.529,
+    "cagr": 0.9586,
+    "maxdd": -0.2939,
+    "nw_t": 1.6,
+    "days": 366,
+    "total_return": 0.9622
+   },
+   "final": {
+    "sharpe": -0.077,
+    "cagr": -0.1173,
+    "maxdd": -0.5372,
+    "nw_t": -0.11,
+    "days": 669,
+    "total_return": -0.2044
+   }
+  },
+  "H2 E85 controller": {
+   "discovery": {
+    "sharpe": 1.241,
+    "cagr": 0.0863,
+    "maxdd": -0.1128,
+    "nw_t": 2.0,
+    "days": 1217,
+    "total_return": 0.3177
+   },
+   "validation": {
+    "sharpe": 1.546,
+    "cagr": 0.1226,
+    "maxdd": -0.0608,
+    "nw_t": 1.37,
+    "days": 366,
+    "total_return": 0.1229
+   },
+   "final": {
+    "sharpe": -0.005,
+    "cagr": -0.0019,
+    "maxdd": -0.0766,
+    "nw_t": -0.01,
+    "days": 669,
+    "total_return": -0.0034
+   }
+  },
+  "H3 SMA200": {
+   "discovery": {
+    "sharpe": 0.817,
+    "cagr": 0.3173,
+    "maxdd": -0.6805,
+    "nw_t": 1.32,
+    "days": 1217,
+    "total_return": 1.5066
+   },
+   "validation": {
+    "sharpe": 1.252,
+    "cagr": 0.6178,
+    "maxdd": -0.2874,
+    "nw_t": 1.25,
+    "days": 366,
+    "total_return": 0.6199
+   },
+   "final": {
+    "sharpe": -0.028,
+    "cagr": -0.0452,
+    "maxdd": -0.3215,
+    "nw_t": -0.04,
+    "days": 669,
+    "total_return": -0.0812
+   }
+  },
+  "H4 SMA200 x vol40": {
+   "discovery": {
+    "sharpe": 0.866,
+    "cagr": 0.2544,
+    "maxdd": -0.4818,
+    "nw_t": 1.46,
+    "days": 1217,
+    "total_return": 1.1291
+   },
+   "validation": {
+    "sharpe": 1.265,
+    "cagr": 0.5052,
+    "maxdd": -0.2738,
+    "nw_t": 1.15,
+    "days": 366,
+    "total_return": 0.5069
+   },
+   "final": {
+    "sharpe": 0.224,
+    "cagr": 0.025,
+    "maxdd": -0.2379,
+    "nw_t": 0.33,
+    "days": 669,
+    "total_return": 0.0463
+   }
+  },
+  "H5 50/50 BTC/gold": {
+   "discovery": {
+    "sharpe": 0.695,
+    "cagr": 0.1949,
+    "maxdd": -0.5193,
+    "nw_t": 1.24,
+    "days": 1217,
+    "total_return": 0.8106
+   },
+   "validation": {
+    "sharpe": 1.89,
+    "cagr": 0.6507,
+    "maxdd": -0.1383,
+    "nw_t": 2.02,
+    "days": 366,
+    "total_return": 0.653
+   },
+   "final": {
+    "sharpe": 0.387,
+    "cagr": 0.071,
+    "maxdd": -0.3039,
+    "nw_t": 0.59,
+    "days": 669,
+    "total_return": 0.1339
+   }
+  },
+  "H6 inv-vol BTC/gold": {
+   "discovery": {
+    "sharpe": 0.708,
+    "cagr": 0.1218,
+    "maxdd": -0.2802,
+    "nw_t": 1.28,
+    "days": 1217,
+    "total_return": 0.4669
+   },
+   "validation": {
+    "sharpe": 2.13,
+    "cagr": 0.445,
+    "maxdd": -0.0852,
+    "nw_t": 2.33,
+    "days": 366,
+    "total_return": 0.4465
+   },
+   "final": {
+    "sharpe": 0.558,
+    "cagr": 0.1162,
+    "maxdd": -0.3229,
+    "nw_t": 0.86,
+    "days": 669,
+    "total_return": 0.2233
+   }
+  },
+  "H7 H6 + BTC leg->gold below SMA200": {
+   "discovery": {
+    "sharpe": 0.752,
+    "cagr": 0.1242,
+    "maxdd": -0.2731,
+    "nw_t": 1.33,
+    "days": 1217,
+    "total_return": 0.4776
+   },
+   "validation": {
+    "sharpe": 2.138,
+    "cagr": 0.4169,
+    "maxdd": -0.0852,
+    "nw_t": 2.33,
+    "days": 366,
+    "total_return": 0.4182
+   },
+   "final": {
+    "sharpe": 0.917,
+    "cagr": 0.2211,
+    "maxdd": -0.2807,
+    "nw_t": 1.4,
+    "days": 669,
+    "total_return": 0.4421
+   }
+  },
+  "H8 H7 x port-vol20": {
+   "discovery": {
+    "sharpe": 0.69,
+    "cagr": 0.1046,
+    "maxdd": -0.2648,
+    "nw_t": 1.22,
+    "days": 1217,
+    "total_return": 0.3933
+   },
+   "validation": {
+    "sharpe": 2.15,
+    "cagr": 0.4158,
+    "maxdd": -0.0847,
+    "nw_t": 2.34,
+    "days": 366,
+    "total_return": 0.4172
+   },
+   "final": {
+    "sharpe": 1.171,
+    "cagr": 0.2435,
+    "maxdd": -0.2201,
+    "nw_t": 1.77,
+    "days": 669,
+    "total_return": 0.491
+   }
+  }
+ },
+ "eligible": [
+  "H2 E85 controller",
+  "H6 inv-vol BTC/gold",
+  "H7 H6 + BTC leg->gold below SMA200",
+  "H8 H7 x port-vol20"
+ ],
+ "chosen": "H2 E85 controller",
+ "timing_null_p95_sharpe_discovery": {
+  "H3 SMA200": 1.247,
+  "H4 SMA200 x vol40": 1.296,
+  "H7 H6 + BTC leg->gold below SMA200": 0.919,
+  "H8 H7 x port-vol20": 0.861
+ },
+ "timing_luck_pass": {
+  "H3 SMA200": false,
+  "H4 SMA200 x vol40": false,
+  "H7 H6 + BTC leg->gold below SMA200": false,
+  "H8 H7 x port-vol20": false
+ },
+ "checks": {
+  "validation": true,
+  "final": true,
+  "final_positive": false
+ },
+ "verdict": "FAIL: chosen H2 (E85 controller) beat buy-and-hold on Sharpe and drawdown in 2024 and 2025-26 but its FINAL return was negative (CAGR -0.2%); SMA timing (H3/H4/H7/H8) failed the shifted-signal check. H6/H7/H8 (BTC+gold mixes) beat BTC buy-and-hold on Sharpe AND drawdown in both 2024 and 2025-26 but were not the discovery choice; reported as allocation evidence, not a passed rule."
+}
