@@ -168,7 +168,7 @@ def _fill(sig: Signal, bars: list[dict], fill_hours: float):
     return None, None
 
 
-def _walk(sig, bars, i0, px, targets, ladder, max_hold_h):
+def _walk(sig, bars, i0, px, targets, ladder, max_hold_h, skip_tp_first=False):
     """Walks bars from the fill; returns (exit_avg_price_move_in_favour, outcome, exit_ms, mfe, mae)."""
     d = 1 if sig.side == "buy" else -1
     stop = sig.stop
@@ -189,7 +189,9 @@ def _walk(sig, bars, i0, px, targets, ladder, max_hold_h):
             realised += open_parts * d * (stop - px)
             out = "SL" if hit == 0 else (f"TP{hit}+BE" if stop == px else f"TP{hit}+SL")
             return realised / parts, out, b["t"], mfe, mae
-        while hit < len(tg) and ((d == 1 and b["h"] >= tg[hit]) or (d == -1 and b["l"] <= tg[hit])):
+        # a limit filled inside this bar: the bar's extreme in our favour may have come BEFORE the fill, so no target
+        # can be counted on the fill bar (conservative; fixed 15 Nov 2026 after E153 showed the bias on 5-minute bars)
+        while not (skip_tp_first and j == i0) and hit < len(tg) and ((d == 1 and b["h"] >= tg[hit]) or (d == -1 and b["l"] <= tg[hit])):
             realised += d * (tg[hit] - px)
             open_parts -= 1
             hit += 1
@@ -221,7 +223,7 @@ def score(sig: Signal, bars: list[dict], fill_hours: float = 24.0, max_hold_h: f
         risk = None
     res = {}
     for style, ladder in (("tp1", False), ("ladder", True)):
-        move, outcome, t_exit, mfe, mae = _walk(sig, bars, i, px, sig.targets, ladder, max_hold_h)
+        move, outcome, t_exit, mfe, mae = _walk(sig, bars, i, px, sig.targets, ladder, max_hold_h, skip_tp_first=(px != bars[i]["o"]))
         net = move - cost
         res[style] = dict(outcome=outcome, pips=round(net / spec["pip"], 1), R=round(net / risk, 3) if risk else None,
                           exit_ms=t_exit, usd_per_lot=round(net * spec["usd_per_unit_per_lot"], 2))

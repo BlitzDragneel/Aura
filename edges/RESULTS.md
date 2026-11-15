@@ -441,3 +441,14 @@ FINAL (2025–Jan 2026) after costs: gold fade 4h −13.6 bp at the PAXG cost (g
 (fade 4h −45.7 bp). The direction of the surprise does not tell where gold or BTC go after the first minutes.
 What news DOES give: size. Gold's median 1-hour range after a high-impact USD release is 0.42% vs 0.29% at the same clock
 time on other weekdays (+45%, n 664, PAXG 2023–2025). Used as a timing alert ("news in 30 minutes"), not a direction.
+
+## Lead — E153 Smart Money Concepts, causal versions (md5 fd52ca82…): FAIL, plus a scorer bug found and fixed
+The library (joshyattridge/smart-money-concepts) has look-ahead: fvg() uses the next candle and swing_highs_lows() a
+centred window, so its signals cannot be backtested as-is. Causal rules on 15m bars, five markets, lab template.
+Pooled FINAL average R: fair-value-gap retest −0.045 (t −2.2, n 3,038; positive on 1 of 5 markets), with the 1h trend
+−0.036; order-block retest −0.024 / with trend −0.038; liquidity sweep and reclaim −0.074 (t −6.2, n 5,796) / with trend
+−0.069. Silver, ETH and SOL lost on every rule.
+The one positive cell (BTC fair-value-gap retest +0.058R, t 2.7, 76% wins) was an artefact: for a LIMIT entry filled
+inside a bar, the scorer also counted targets touched earlier in that same bar. Fixed in edges/auditor/core.py (no
+target on the fill bar of a limit fill; market fills unchanged, so E148–E152 are unaffected). Re-run: BTC FVG −0.069R
+(t −2.6), gold FVG −0.070R.
