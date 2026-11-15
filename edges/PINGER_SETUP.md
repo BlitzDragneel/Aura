@@ -11,7 +11,7 @@ GitHub's own schedule stays on as a backup; a double run does no harm (the bots 
 4. Generate and copy the token (starts with `github_pat_`). Keep it only in cron-job.org, never in chat or files.
    It can start and stop the Aura workflows and nothing else: no code, no money, no other repos.
 
-## Step 2 — three jobs on cron-job.org
+## Step 2 — the jobs on cron-job.org (start with the asset bots: they send your Telegram alerts)
 Sign up at cron-job.org (free). For each job: **Create cronjob**, then:
 - **URL:** see the table · **Execution schedule:** custom, as in the table, **time zone UTC**
 - **Advanced → Request method: POST**
@@ -26,6 +26,7 @@ Sign up at cron-job.org (free). For each job: **Create cronjob**, then:
 |---|---|---|
 | Fast scouts | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-fast-scouts.yml/dispatches` | minutes 2, 17, 32, 47 of every hour |
 | Hourly scouts | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-scouts.yml/dispatches` | minute 17 of every hour |
+| **Asset bots + Signal Lab + Telegram alerts (most important)** | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-assets.yml/dispatches` | minutes 4, 19, 34, 49 of every hour |
 | Paper bot | `https://api.github.com/repos/BlitzDragneel/Aura/actions/workflows/omega-paper-bot.yml/dispatches` | minutes 7, 22, 37, 52 of every hour |
 
 (Optional, keeps the Live API awake for your phone: a 4th job, method GET, URL
