@@ -29,16 +29,16 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.35%) and the quietest late US (0.16%).
-- At weekends, while spot is closed, the perpetual moves 40% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- Over the last 20 days the busiest session was Asia (average hourly move 0.35%) and the quietest late US (0.15%).
+- At weekends, while spot is closed, the perpetual moves 39% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 2.6% from low to high (last 60 days); 42% of those days closed higher.
 - Over the last 30 days the price moved -17.2% (a fact, not a forecast).
 
 ## Right now
 
-- Price 47.75; volatility regime normal (hourly ATR 0.58% of price, 34.6th percentile).
+- Price 47.78; volatility regime quiet (hourly ATR 0.414% of price, 22.8th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
-- Spot XAGUSD 48.70 (stale: market closed).
+- Spot XAGUSD 48.71 (stale: market closed).
 
 ## My calls so far
 
