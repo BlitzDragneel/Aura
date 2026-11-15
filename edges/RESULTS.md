@@ -414,3 +414,9 @@ Muted on every market (negative on ≥4 of 5): trend-pullback with trend, breako
 session drive against trend, big move against trend; plus the per-asset muted cells. No cell earned BACKTEST+ beyond
 gold's session drive. Pattern: on closed 15-minute bars, joining a move that is already with the trend loses on these
 markets; nothing is reliably positive.
+
+## Lead — E150 after a break: accepted or rejected in the next 15 minutes (md5 7641bece…): FAIL
+Five markets (gold, BTC, silver, ETH, SOL), lab template and scorer. Pooled FINAL average R per trade: follow after
+ACCEPTANCE −0.065 (t −3.0, n 1,310, positive on 0 of 5 markets); fade after REJECTION −0.035 (t −1.7, n 1,625, 1 of 5);
+controls: follow every break −0.068, fade every break −0.034. Waiting 15 minutes to see whether a break holds adds
+nothing: neither side is predictable from the first minutes after the break.
