@@ -9,6 +9,9 @@ Six setups, each can fire at most once per market per UTC day (so several paper 
   S4 fib pullback     50% retracement of a >= 3 ATR impulse leg (the Profit4Life chart method), with the leg
   S5 session drive    first 30 minutes after the London (07:00 UTC) or New York (13:30 UTC) open: follow it
   S6 daily bias       once a day at 07:00 UTC: with the 3-day drift
+  S7 big move         price moved at least twice its normal hourly range within the last hour: follow it
+Alerts go out the moment an event setup fires on a closed 15-minute bar (S1, S2, S4, S5, S7); S3 and S6 are opinions
+about what might happen, so they are only logged until their record earns a grade.
 Template (Profit4Life geometry): entry at market, stop = 1 ATR of 1-hour bars (R), targets every 0.5 R up to 2.5 R.
 Scoring: edges/auditor/core.py rules (1-minute bars, stop first, spread charged, max 24 h): "ladder" = fifths at each
 target with the stop moved to entry after TP1.
@@ -34,7 +37,9 @@ from edges.auditor import core
 from edges.auditor.data import Prices
 
 MARKETS = {"XAUUSD": "Gold", "XAGUSD": "Silver", "BTCUSD": "Bitcoin", "NAS100": "Nasdaq 100", "US30": "Dow 30"}
-SETUPS = {"S1": "trend pullback", "S2": "breakout", "S3": "stretch fade", "S4": "fib pullback", "S5": "session drive", "S6": "daily bias"}
+SETUPS = {"S1": "trend pullback", "S2": "breakout", "S3": "stretch fade", "S4": "fib pullback", "S5": "session drive", "S6": "daily bias",
+          "S7": "big move"}
+LIVE = {"S1": "TREND resuming", "S2": "BREAKOUT", "S4": "PULLBACK in a strong move", "S5": "SESSION DRIVE", "S7": "BIG MOVE under way"}  # alerted as they happen
 H = 3_600_000
 
 
@@ -95,6 +100,9 @@ def detect(f, h1):
     if hm == (6, 45) and t.weekday() < 5:                  # bar closing 07:00 UTC
         mv = c.iloc[i] - c.iloc[0]
         out.append(("S6", int(np.sign(mv)) or 1, "with the 3-day drift"))
+    mv1 = c.iloc[i] - c.iloc[i - 4]
+    if abs(mv1) >= 2 * R:
+        out.append(("S7", int(np.sign(mv1)), f"moved {mv1:+.2f} in the last hour, twice its normal hourly range"))
     return out, dict(price=float(c.iloc[i]), R=R, bar_close_ms=int((t + pd.Timedelta("15min")).timestamp() * 1000))
 
 
@@ -128,7 +136,8 @@ def text(sig, g, rec):
     name = MARKETS[sig["symbol"]]
     tag = {"CONFIDENT": "🟢 CONFIDENT", "PROMISING": "🟡 PROMISING", "PAPER": "🧪 PAPER (untested, do not trade)"}[g]
     r = f"record of this setup here: {rec['n']} closed, avg {rec['avg_R']:+.2f}R, {round(rec['win'] * 100)}% won" if rec["n"] else "no record yet"
-    return (f"{tag}\n{name} {sig['side'].upper()} now ~{sig['ref_price']}\nSL {sig['stop']}\n" + "\n".join(f"TP{k + 1} {t}" for k, t in enumerate(sig["targets"]))
+    head = f"⚡ {name}: {LIVE[sig['setup']]} right now\n" if sig["setup"] in LIVE else ""
+    return (f"{head}{tag}\n{name} {sig['side'].upper()} now ~{sig['ref_price']}\nSL {sig['stop']}\n" + "\n".join(f"TP{k + 1} {t}" for k, t in enumerate(sig["targets"]))
             + f"\nSetup: {SETUPS[sig['setup']]} ({sig['why']})\n{r}")
 
 
@@ -177,10 +186,8 @@ def main(state_dir, prices=None, now_ms=None, client=None):
             rec = stats(by.get((sym, setup), []))
             g = grade(rec)
             sig["grade_at_issue"] = g
-            first_today = S["sent_day"].get(sym) != day
-            if g != "PAPER" or first_today:                              # every confident/promising one + one paper per market per day
+            if g != "PAPER" or setup in LIVE:        # alert when the move/breakout/trend happens; forecasts (S3, S6) only once they earn trust
                 sig["sent"] = True
-                S["sent_day"][sym] = day
                 msgs.append(text(sig, g, rec))
             new.append(sig)
     S["signals"] += new
