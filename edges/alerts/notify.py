@@ -69,6 +69,12 @@ def summary(states: list[dict]) -> str:
 def send(text: str, client: httpx.Client | None = None) -> dict:
     c = client or httpx.Client(timeout=20)
     res = {}
+    box = os.environ.get("OMEGA_OUTBOX")   # every message is also written here; the Live API forwards it (see /alerts/pump)
+    if box:
+        os.makedirs(os.path.dirname(box), exist_ok=True)
+        with open(box, "a", encoding="utf-8") as f:
+            f.write(f"\n## {dt.datetime.now(dt.timezone.utc):%Y-%m-%d %H:%M:%S} UTC\n{text}\n")
+        res["outbox"] = "written"
     tok, chat = os.environ.get("TELEGRAM_BOT_TOKEN"), os.environ.get("TELEGRAM_CHAT_ID")
     if tok and chat:
         try:
@@ -108,8 +114,9 @@ def main(state_dir: str, now: dt.datetime | None = None, client=None):
     if msgs:
         text = "\n\n".join(msgs)
         sent = send(text, client)
-        with open(adir / "outbox.md", "a", encoding="utf-8") as f:
-            f.write(f"\n## {now:%Y-%m-%d %H:%M} UTC  sent={sent or 'no channel configured'}\n{text}\n")
+        if not os.environ.get("OMEGA_OUTBOX"):
+            with open(adir / "outbox.md", "a", encoding="utf-8") as f:
+                f.write(f"\n## {now:%Y-%m-%d %H:%M:%S} UTC\n{text}\n")
     mfile.write_text(json.dumps(memory, indent=1))
     print(f"alerts: {len(msgs)} message(s), channels {sent or 'none configured'}")
     return msgs, sent

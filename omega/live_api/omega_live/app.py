@@ -312,5 +312,7 @@ h1{color:#fff;text-shadow:0 0 8px #22f3ff,0 0 20px #22f3ff}a{color:#22f3ff}code{
     app.include_router(academy_router())
     from .auditor import router as auditor_router
     app.include_router(auditor_router(auth))
+    from .alerts import router as alerts_router
+    app.include_router(alerts_router())
     app.state.recorder, app.state.http = rec, http
     return app

@@ -19,6 +19,7 @@ concurrency:
   cancel-in-progress: false
 env:
   CODE_REF: claude/trading-edge-research-bots-gpkvi1
+  OMEGA_OUTBOX: ${{ github.workspace }}/state/alerts/outbox.md   # every alert is written here; the Live API forwards it
 jobs:
   desks:
     runs-on: ubuntu-latest
@@ -75,3 +76,6 @@ jobs:
           git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
           git add -A assets alerts watch siglab; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
           for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
+      - name: Deliver alerts (the Live API holds the Telegram / WhatsApp details)
+        working-directory: state
+        run: curl -s -m 150 --retry 2 "https://omega-live-api.onrender.com/alerts/pump?sha=$(git rev-parse HEAD)" || true
