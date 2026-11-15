@@ -348,3 +348,13 @@ gold perp Dec 2025–Nov 2026. 24 variants, entries at the next 15m open, 1m/5m 
   54%; control −5.7). 24h hold: FINAL +66.5 bp (t 2.76, n 16), validation +4.1 (t 0.21). Fails the pass mark (validation
   t < 1.5, tiny n, only 11 months of history, and BTC shows nothing for the same rule), so grade C: paper log only.
 Verdict: FAIL. Positioning data adds little direction information on BTC; gold P4 goes to the forward watch list.
+
+## Lead — E144 replication of the gold "OI-confirmed move" lead (md5 b8460baf…): stays grade C (forward paper log started)
+Nothing re-tuned. Silver perp (Jan–Nov 2026), same rule: 4h hold FINAL +6.0 bp after 4 bp/side (n 41, t 0.49, win 54%;
+random control −4.4), VALIDATION −10.3 (n 55); 24h hold VALIDATION +46.9 (t 1.07, n 28), FINAL +88.7 (t 3.59, n 20;
+control +15.9). Gold neighbourhood (z 1.5/2/2.5 × move 1.5/2/3 ATR): FINAL positive in 9 of 9 cells (+3.8 to +14.8 bp),
+VALIDATION positive in 5 of 9 (needed 6). Pooled gold+silver 4h: VALIDATION −3.2 bp (n 103), FINAL +8.2 (t 1.31, n 82).
+Reading: consistent sign on FINAL in both metals and every nearby setting, strongest for 24h holds, but the Jun–Aug
+validation window is flat/negative for 4h holds and samples are small (11 months of these markets exist).
+Not promoted. edges/watch/oi_move.py now logs every signal forward as a paper trade (gold and silver, 4h version as
+tested) and sends it to the alert channels labelled "watch-list, paper only"; ~50 closed trades decide.
