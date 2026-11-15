@@ -427,3 +427,8 @@ planner (stop/target before entry), "time machine" (bootstrap replay of the last
 risk gate, sizing, alerts, paper broker. No edge claim and no test results of its own. Adopted ideas: a per-signal
 history line in the Signal Lab (how this setup did on this market's own recent history, from the E148/E149 replays)
 and, next, a daily risk gate for the paper record. Its code is not vendored (stocks, Yahoo); kept for reference only.
+
+## Lead — E151 stop-and-reverse after a Signal Lab stop-out (md5 7e70e04b…): FAIL
+After every lab trade that hit its stop, trade the other way from the stop price (same R and targets). Pooled FINAL
+average 0.00R (n 1,869, t 0.0), VALIDATION −0.05R; random direction at the same moments −0.01R. Gold: validation +0.12R
+(t 2.1) but FINAL +0.01R; silver −0.06; BTC +0.02; ETH −0.00; SOL −0.03. A stop-out says nothing about the next move.
