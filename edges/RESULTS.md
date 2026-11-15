@@ -335,3 +335,16 @@ Every-bar breakout (control) −16 / −4 / −23. WATCH + direction model: +15 
 sample (overfit). Fading the break: negative. WATCH roughly halves the breakout's losses but the break itself has no
 follow-through after costs.
 Use: WATCH is kept as an alarm ("a big move is likely in the next 4 hours; direction unknown") on the asset desks.
+
+## Lead — E143 direction from positioning: top traders vs crowd, open interest (md5 2a8b2b87…): FAIL, one gold lead (grade C watch)
+New data: Binance futures metrics (5m OI, top-trader and all-account long/short ratios, taker ratio), BTC 2022–Nov 2026,
+gold perp Dec 2025–Nov 2026. 24 variants, entries at the next 15m open, 1m/5m path, random-entry control.
+- BTC: every rule negative on FINAL after 0.07%/side. Before costs: follow-smart-vs-crowd 4h +2.3 bp, fade-crowd 24h
+  +8 bp (train +35, validation +54, final +8: decaying). Model with positioning: AUC 0.537 (4h) / 0.531 (24h) vs
+  price-only 0.533 / 0.506; confident calls right 55.5% (4h), not enough for the costs (−13.6 bp/trade, t −14).
+- Gold: positioning made the model worse (AUC 0.50 vs 0.54; short sample). Rules P1–P3, P5: nothing.
+- **Lead: P4 "OI-confirmed move" on gold** (open interest jumps ≥ 2σ over 4 h while price moved ≥ 2 ATR: follow the
+  move). 4h hold: train −2.3 bp, validation +4.8 bp (t 0.80, n 48), FINAL +10.4 bp after 2 bp/side (t 2.35, n 41, win
+  54%; control −5.7). 24h hold: FINAL +66.5 bp (t 2.76, n 16), validation +4.1 (t 0.21). Fails the pass mark (validation
+  t < 1.5, tiny n, only 11 months of history, and BTC shows nothing for the same rule), so grade C: paper log only.
+Verdict: FAIL. Positioning data adds little direction information on BTC; gold P4 goes to the forward watch list.

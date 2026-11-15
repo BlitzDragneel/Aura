@@ -110,7 +110,7 @@ def week_t(x, idx):
     return float(w.mean() / (w.std() / np.sqrt(len(w)))) if len(w) > 2 and w.std() > 0 else np.nan
 
 
-def simulate(fine, sig_pos, atr, cost_free=True, Hlev=None, Llev=None, dirs=None, fade=False, arm=None, hold=None):
+def simulate(fine, sig_pos, atr, cost_free=True, Hlev=None, Llev=None, dirs=None, fade=False, arm=None, hold=None, stop_k=1.5, tgt_k=3.0):
     """sig_pos: fine index right after each signal bar closes. Break mode (Hlev/Llev) or market mode (dirs)."""
     O, Hh, Ll, idx = fine.o.values, fine.h.values, fine.l.values, fine.index
     out, busy, skipped, n = [], -1, 0, len(O)
@@ -138,7 +138,7 @@ def simulate(fine, sig_pos, atr, cost_free=True, Hlev=None, Llev=None, dirs=None
             if d == 0:
                 continue
             px, first = O[j], -1
-        stop, tgt = px - d * 1.5 * atr[i], px + d * 3 * atr[i]
+        stop, tgt = px - d * stop_k * atr[i], (px + d * tgt_k * atr[i] if tgt_k else d * np.inf)
         ex = None
         for q in range(j, j + hold + 1):
             hi, lo = Hh[q], Ll[q]
@@ -151,9 +151,9 @@ def simulate(fine, sig_pos, atr, cost_free=True, Hlev=None, Llev=None, dirs=None
             if q != first and ((d == 1 and hi >= tgt) or (d == -1 and lo <= tgt)):
                 ex = tgt
                 break
-        out.append((idx[j], d * (ex - px) / px))
+        out.append((idx[j], d * (ex - px) / px, idx[q], d))
         busy = q
-    t = pd.DataFrame(out, columns=["time", "gross"])
+    t = pd.DataFrame(out, columns=["time", "gross", "exit", "d"])
     return t, skipped
 
 
