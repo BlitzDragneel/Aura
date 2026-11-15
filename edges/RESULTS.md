@@ -368,3 +368,13 @@ in 0 of 5 commodity markets for both holds; worse than random entries.
 Verdict: FAIL. The E143/E144 result on gold and silver is most likely a period effect (both metals trended hard in
 Sep–Nov 2026), not a property of open-interest jumps. The forward paper log (edges/watch/oi_move.py) keeps running as
 grade C, now with this evidence against it; it is not to be promoted without ~50 forward trades.
+
+## Lead — E146 weekly gold/silver direction from CFTC positioning (COT, 2006–2026) (md5 41f5fee7…): FAIL
+New data (publicreporting.cftc.gov, managed money and producers, acted on the Monday after publication). Annual return
+after costs, DISCOVERY / VALIDATION / FINAL (Newey–West t on FINAL):
+gold: fade crowded funds −1.2 / +1.8 / −3.6% (t −1.4); follow fund flows −6.1 / +1.8 / −6.9% (t −1.7); follow producers
+−1.1 / +1.3 / −4.7% (t −1.4); "long unless crowded" Sharpe 0.59 vs buy-and-hold 0.79 on FINAL.
+silver: fade −4.1 / −0.4 / +0.9%; flows −1.6 / −2.8 / +1.7%; follow producers −2.4 / +1.3 / +15.5% (t 1.9, validation
+t 0.31: not passed); long-unless-crowded = buy-and-hold. Gold-vs-silver crowding spread: +4.0 / −0.6 / −0.8%.
+Verdict: FAIL. Futures positioning does not time gold or silver week to week. Latest (report acted 9 Nov 2026): gold
+funds neutral (z −0.45), silver funds unusually light (z −1.6), producers unusually un-hedged in both (z +2.3 / +1.8).
