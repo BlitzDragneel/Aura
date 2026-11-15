@@ -391,3 +391,14 @@ A. 20,000 coin-flip entries on gold (07–20 UTC weekdays, Dec 2025–Nov 2026):
    percentile under my capped accounting. Two weeks cannot separate skill from the template.
 B. Fib pullback (limit at the 50% / 61.8% retracement of a ≥3 ATR 15m impulse, same template): 50%: train +0.71 USD
    (t 2.3), validation +0.08, FINAL −0.32 (control −0.29); 61.8%: FINAL −0.85. FAIL.
+
+## Lead — E148 replay of the Signal Lab's seven setups on gold (11 months) and BTC (2024–2026) (md5 ea55b16d…)
+Unchanged live code replayed bar by bar; R = fifths with the stop moved to entry after TP1, after spread.
+Every setup wins 60–70% of the time (the template) and averages about zero: gold −0.15 to +0.32R, BTC −0.07 to +0.09R on
+FINAL. By the rule fixed in the plan:
+MUTED (negative in validation and final): gold trend-pullback with the trend (FINAL −0.15R, t −2.4), gold big-move
+both sides (−0.10 / −0.21R; validation −0.30 / −0.33, t −2.9 / −3.5), BTC trend-pullback with the trend (−0.06R, t −1.9),
+BTC stretch-fade with the trend (validation −0.19, t −2.0). These are still alerted as events and scored, with no trade plan.
+BACKTEST+ (positive in validation and final, t ≥ 2 on final): gold session-drive with the trend (validation +0.17R,
+FINAL +0.32R, t 2.25, n 22; but TRAIN −0.24R, so weak evidence). Nothing on BTC.
+Following a big hourly move in gold loses: by the time it shows on a closed 15m bar, the move is mostly done.

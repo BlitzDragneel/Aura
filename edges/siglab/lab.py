@@ -189,9 +189,34 @@ def grade(s):
     return "PAPER"
 
 
+try:
+    PRIORS = json.loads((Path(__file__).parent / "priors.json").read_text())["priors"]
+except (OSError, ValueError, KeyError):
+    PRIORS = {}
+
+
+def prior(sig):
+    """('muted'|'plus'|None, avg R on the replay's final period) for this setup and trend side (E148)."""
+    k = f"{sig['setup']} {'with' if (sig.get('state') or {}).get('with_trend') else 'against'}"
+    p = PRIORS.get(sig["symbol"]) or {}
+    if k in (p.get("muted") or {}):
+        return "muted", p["muted"][k]
+    if k in (p.get("plus") or {}):
+        return "plus", p["plus"][k]
+    return None, None
+
+
 def text(sig, g, rec):
+    pk, pv = prior(sig)
+    if pk == "muted" and g == "PAPER":
+        st0 = sig.get("state") or {}
+        return (f"⚡ {MARKETS[sig['symbol']]}: {LIVE.get(sig['setup'], SETUPS[sig['setup']])} right now ({sig['why']}), price ~{sig['ref_price']}\n"
+                f"Market now: trend {st0.get('trend')}, volatility {st0.get('vol')}, {st0.get('session')} session\n"
+                f"ℹ️ No trade plan: on past data, trading this kind of move {'with' if st0.get('with_trend') else 'against'} the trend lost money (avg {pv:+.2f}R). Logged and scored anyway.")
     name = MARKETS[sig["symbol"]]
     tag = {"CONFIDENT": "🟢 CONFIDENT", "PROMISING": "🟡 PROMISING", "PAPER": "🧪 PAPER (untested, do not trade)"}[g]
+    if pk == "plus":
+        tag += f"\n📈 BACKTEST+ (made {pv:+.2f}R per signal on past data; live record still needed)"
     r = f"record of this setup here: {rec['n']} closed, avg {rec['avg_R']:+.2f}R, {round(rec['win'] * 100)}% won" if rec["n"] else "no record yet"
     head = f"⚡ {name}: {LIVE[sig['setup']]} right now\n" if sig["setup"] in LIVE else ""
     st_ = sig.get("state") or {}
