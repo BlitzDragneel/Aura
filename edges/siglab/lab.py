@@ -205,6 +205,7 @@ def history_line(sig):
     return f"\n⏪ On this market's recent history: {h['n']} of these, {round((h['win'] or 0) * 100)}% ended positive, average {h['avg_R']:+.2f}R"
 
 
+MUTED_OLD = {"XAGUSD-S4-1794757500000"}   # 15 Nov silver alert sent without a plan before plan_sent existed
 ADAPT: dict = {}   # filled by adapt() from the FORWARD record each run; it overrides the backtest priors
 
 
@@ -351,7 +352,7 @@ def main(state_dir, prices=None, now_ms=None, client=None):
                          pips=r["ladder"]["pips"], closed_ms=r["ladder"]["exit_ms"], source=src)
                 by.setdefault((sym, s["setup"]), []).append(s["R_ladder"])
                 s["review"] = review(s, r, S.get("record_by_context") or {})
-                if s.get("sent"):
+                if s.get("sent") and s.get("plan_sent", s["id"] not in MUTED_OLD):
                     msgs.append(f"{'✅' if s['R_ladder'] > 0 else ('➖' if s['R_ladder'] == 0 else '❌')} {MARKETS[sym]} {s['side'].upper()} ({SETUPS[s['setup']]}) closed: {s['outcome']}, {s['R_ladder']:+.2f}R ({s['pips']:+.0f} pips)\nWhy: {s['review']}")
             elif now_ms - s["logged_ms"] > 80 * H:
                 s.update(status="expired")
@@ -370,6 +371,7 @@ def main(state_dir, prices=None, now_ms=None, client=None):
             sig["grade_at_issue"] = g
             if g != "PAPER" or (setup in LIVE and (sym in CORE or setup in COIN_LIVE)):        # alert when the move/breakout/trend happens; forecasts (S3, S6) only once they earn trust
                 sig["sent"] = True
+                sig["plan_sent"] = not (prior(sig)[0] == "muted" and g == "PAPER")   # muted: event alert only, no trade plan
                 msgs.append(text(sig, g, rec))
             new.append(sig)
     msgs += adapt(S)
