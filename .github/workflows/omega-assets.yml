@@ -1,0 +1,55 @@
+name: OMEGA asset bots (every 15 minutes)
+on:
+  schedule:
+    - cron: "4,19,34,49 * * * *"   # 4 minutes after each 15-minute candle closes
+    - cron: "51 3 2 * *"           # monthly retrain of the metal scouts
+  workflow_dispatch:
+    inputs:
+      retrain: { description: "retrain the metal scouts now", type: boolean, default: false }
+permissions:
+  contents: write
+concurrency:
+  group: omega-assets
+  cancel-in-progress: false
+env:
+  CODE_REF: claude/trading-edge-research-bots-gpkvi1
+jobs:
+  desks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with: { ref: "${{ env.CODE_REF }}", path: code }
+      - uses: actions/checkout@v4
+        with: { ref: bot-state, path: state }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install --quiet httpx pandas numpy pyarrow lightgbm scikit-learn
+      - name: Retrain metal scouts (monthly)
+        if: github.event.schedule == '51 3 2 * *' || inputs.retrain
+        working-directory: code
+        env:
+          OMEGA_DATA: ${{ runner.temp }}/data
+        run: |
+          python edges/data/fetch_metals.py | tail -n 3
+          python -W ignore -m edges.assetbots train all --out ../state/assets/models
+      - name: Read, call, score
+        working-directory: code
+        env:
+          SCOUT_MODELS: ${{ github.workspace }}/state/scouts/models
+          SCOUT_MODELS15: ${{ github.workspace }}/state/fast_scouts/models
+        run: python -W ignore -m edges.assetbots run ../state | tail -n 10
+      - name: Alerts (Telegram / WhatsApp when the secrets are set)
+        working-directory: code
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: python -m edges.alerts.notify ../state || true
+      - name: Save
+        working-directory: state
+        run: |
+          git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
+          git add -A assets alerts; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
+          for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
