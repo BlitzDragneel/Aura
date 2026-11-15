@@ -52,6 +52,34 @@ def changes(state: dict, memory: dict) -> list[str]:
     return out
 
 
+def news_ahead(memory: dict, now: dt.datetime, client=None) -> list[str]:
+    """High-impact USD events starting in the next 15-50 minutes (Forex Factory weekly calendar, faireconomy feed)."""
+    try:
+        c = client or httpx.Client(timeout=15)
+        ev = c.get("https://nfs.faireconomy.media/ff_calendar_thisweek.json").json()
+    except Exception:
+        return []
+    out, seen = [], set(memory.get("news_sent", []))
+    for e in ev:
+        if e.get("country") != "USD" or e.get("impact") != "High":
+            continue
+        try:
+            t = dt.datetime.fromisoformat(e["date"]).astimezone(dt.timezone.utc)
+        except (KeyError, ValueError):
+            continue
+        mins = (t - now).total_seconds() / 60
+        key = f"{e.get('title')}|{t.isoformat()}"
+        if 15 <= mins <= 50 and key not in seen:
+            seen.add(key)
+            local = (t - dt.timedelta(hours=4)).strftime("%I:%M %p")
+            fc = f" (forecast {e['forecast']}, previous {e.get('previous')})" if e.get("forecast") else ""
+            out.append(f"⏰ US news in {round(mins)} min: {e.get('title')}{fc} at {t:%H:%M} UTC / {local} Trinidad.\n"
+                       "Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be "
+                       "predicted in testing (E152). Wider stops or stand aside for the release.")
+    memory["news_sent"] = sorted(seen)[-300:]
+    return out
+
+
 def summary(states: list[dict]) -> str:
     lines = ["🌅 OMEGA morning read"]
     for s in states:
@@ -105,7 +133,8 @@ def main(state_dir: str, now: dt.datetime | None = None, client=None):
     for s in states:
         msgs += changes(s, memory)
     if first_run:
-        msgs = []  # do not flood on the first run; the summary below says where things stand
+        msgs = []
+    msgs += news_ahead(memory, now, client)  # do not flood on the first run; the summary below says where things stand
     today = now.strftime("%Y-%m-%d")
     if states and (first_run or (now.hour >= 11 and memory.get("summary_day") != today)):
         msgs.insert(0, summary(states))

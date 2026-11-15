@@ -432,3 +432,12 @@ and, next, a daily risk gate for the paper record. Its code is not vendored (sto
 After every lab trade that hit its stop, trade the other way from the stop price (same R and targets). Pooled FINAL
 average 0.00R (n 1,869, t 0.0), VALIDATION −0.05R; random direction at the same moments −0.01R. Gold: validation +0.12R
 (t 2.1) but FINAL +0.01R; silver −0.06; BTC +0.02; ETH −0.00; SOL −0.03. A stop-out says nothing about the next move.
+
+## Lead — E152 US news surprises (Forex Factory calendar, 598 events 2020–2026) → gold and BTC direction (md5 c2555513…): FAIL
+Data found via GitHub search: ehsanrs2/forexfactory-scraper (high-impact calendar with actual/forecast; times checked).
+Entry 2 minutes after the release (fade the dollar surprise) or 5 minutes after (follow the first move), held 1h / 4h.
+FINAL (2025–Jan 2026) after costs: gold fade 4h −13.6 bp at the PAXG cost (gross +6.4, right 55.5%, n 119; at a perp's
+2 bp/side ≈ +2.4 bp, too small and validation was −0.0 gross); gold follow-5m −17.7 / −18.1 bp; BTC every variant negative
+(fade 4h −45.7 bp). The direction of the surprise does not tell where gold or BTC go after the first minutes.
+What news DOES give: size. Gold's median 1-hour range after a high-impact USD release is 0.42% vs 0.29% at the same clock
+time on other weekdays (+45%, n 664, PAXG 2023–2025). Used as a timing alert ("news in 30 minutes"), not a direction.
