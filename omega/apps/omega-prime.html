@@ -25,7 +25,7 @@ body{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gr
 .tabs button,.bar button{border:0;background:none;color:var(--text-dim);font:inherit;cursor:pointer;}
 .tabs button{padding:7px 12px;border-radius:999px;font-size:14px;}
 .tabs button.on{background:var(--ink);color:var(--paper);}
-.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--paper);border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(5,1fr);padding-bottom:env(safe-area-inset-bottom,0px);}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--paper);border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(6,1fr);padding-bottom:env(safe-area-inset-bottom,0px);}
 .bar button{padding:8px 2px 9px;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px;}
 .bar button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;}
 .bar button.on{color:var(--ink);font-weight:700;}
@@ -90,6 +90,7 @@ main .hint{font-size:13px;} .bar button{font-size:12px;min-height:56px;} .tag{fo
   <section class="page" id="page-chart"><h2 class="pg">Chart</h2><p class="pg-sub">One coin at a time: candles, who is buying, where the liquidity sits, the book, and today’s plan drawn as zones.</p><div id="cockpitBody"></div><div id="mreadBody"></div></section>
   <section class="page" id="page-signals"><h2 class="pg">Signals</h2><p class="pg-sub">Grade A: passed a fair test (climax). Grade B: passed a fair test, not yet confirmed (panic bounce). Grade C: the Daily Plan, unproven and followed on paper.</p><div id="rulebookBody"></div><div id="climaxBody"></div><div id="panicBody"></div><div id="dplanBody"></div></section>
   <section class="page" id="page-risk"><h2 class="pg">Risk</h2><p class="pg-sub">Risk makes money; managing it decides whether it does.</p><div id="rguardBody"></div><div id="truthRgBody"></div><div id="reviewBody"></div></section>
+  <section class="page" id="page-desks"><h2 class="pg">Desks</h2><p class="pg-sub">One bot each for Bitcoin, gold and silver. They read the market every 15 minutes. A trade is called only by a rule that passed its test; WATCH means a big move is likely, direction unknown.</p><div id="desksBody"><div class="card"><p class="dp-p">Loading the desks…</p></div></div></section>
   <section class="page" id="page-evidence"><h2 class="pg">Evidence</h2><p class="pg-sub">Everything tested, what passed, what failed, and what is still being measured.</p><div id="evidenceBody"></div><div id="truthBody"></div><div id="settingsBody"></div></section>
 </main>
 <nav class="bar" id="bar"></nav>
@@ -857,7 +858,7 @@ window.OMEGA_MARKETCLOCK = { DATA:{ cpi:["2026-11-10T13:30Z","2026-12-10T13:30Z"
 <script>/* ═══ PRIME UI — Today, Evidence, Settings, navigation ═══ */
 (function(){
   'use strict';
-  var H = 3600e3, PAGES = [['today', 'Today', 'M3 12h4l3-8 4 16 3-8h4'], ['chart', 'Chart', 'M4 19V5M4 19h16M8 15l3-4 3 2 5-7'], ['signals', 'Signals', 'M12 3v18M5 9l7-6 7 6'], ['risk', 'Risk', 'M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z'], ['evidence', 'Evidence', 'M6 3h9l3 3v15H6zM9 11h6M9 15h6']];
+  var H = 3600e3, PAGES = [['today', 'Today', 'M3 12h4l3-8 4 16 3-8h4'], ['chart', 'Chart', 'M4 19V5M4 19h16M8 15l3-4 3 2 5-7'], ['signals', 'Signals', 'M12 3v18M5 9l7-6 7 6'], ['desks', 'Desks', 'M4 20V10M10 20V4M16 20v-7M22 20H2'], ['risk', 'Risk', 'M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z'], ['evidence', 'Evidence', 'M6 3h9l3 3v15H6zM9 11h6M9 15h6']];
   var cur = 'today', wake = null;
   function el(id){ return document.getElementById(id); }
   function esc(t){ return String(t).replace(/[&<>"]/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;' }[c]; }); }
@@ -1210,6 +1211,48 @@ window.PRIME_EDGES = [{"id": "climax_a", "grade": "A", "plan": "round 16 (final 
   document.head.appendChild(css);
   window.PRIME_UX = { noData:noData, ordersNote:ordersNote, unchecked:unchecked, checked:checked, rulebook:rulebook, renderRulebook:renderRulebook, evidenceExtras:evidenceExtras, extras:extras };
   if(window.PRIME_UI) window.PRIME_UI.show('today', true);
+})();
+</script>
+
+
+<script>
+/* Prime Desks: reads the asset bots' public records (bot-state branch) and live prices. Information only. */
+(function(){
+  var RAW = 'https://raw.githubusercontent.com/BlitzDragneel/Aura/bot-state/', FAPI = 'https://fapi.binance.com';
+  var A = [['BTC', 'Bitcoin', 'BTCUSDT'], ['XAU', 'Gold', 'XAUUSDT'], ['XAG', 'Silver', 'XAGUSDT']];
+  function esc(x){ return String(x == null ? '' : x).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function num(x, d){ return (typeof x === 'number' && isFinite(x)) ? x.toLocaleString('en-US', {minimumFractionDigits:d, maximumFractionDigits:d}) : '—'; }
+  async function j(u){ var r = await fetch(u + (u.indexOf('?') < 0 ? '?t=' : '&t=') + Math.floor(Date.now() / 60000)); if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }
+  var COL = {WAIT:'#8a93b8', WATCH:'#e0a100', SETUP:'#2a7de1', TRIGGERED:'#2a7de1', CONFIRMED:'#1a9f5a', INVALIDATED:'#c0392b', EXPIRED:'#8a93b8'};
+  function chip(st){ return '<span style="display:inline-block;padding:2px 9px;border-radius:999px;font-weight:700;font-size:12px;color:#fff;background:' + (COL[st] || '#8a93b8') + '">' + esc(st) + '</span>'; }
+  function card(a, S, px){
+    var h = '<div class="card"><h3 class="dp-h">' + a[1] + ' <span style="font-weight:400;opacity:.7">' + (px != null ? num(px, a[0] === 'XAG' ? 3 : 2) : '') + '</span></h3>';
+    if(!S){ return h + '<p class="dp-p">The ' + a[1] + ' bot has not written a record yet. It runs every 15 minutes; check back shortly.</p></div>'; }
+    var r = S.read || {}, v = r.volatility || {}, sc = (r.scouts || {}).day || {}, t = r.trend || {};
+    var age = Math.round((Date.now() - new Date(S.asof).getTime()) / 60000);
+    h += '<p class="dp-p">Trend: 15m <b>' + esc((t['15m'] || {}).state) + '</b> · 1h <b>' + esc((t['1h'] || {}).state) + '</b> · 4h <b>' + esc((t['4h'] || {}).state) + '</b> · day <b>' + esc((t['1d'] || {}).state) + '</b><br>'
+      + 'Volatility: <b>' + esc(v.regime) + '</b> · typical day range ' + esc(v.day_range_pct_median) + '%'
+      + (typeof sc.p_big_move === 'number' ? ' · chance of a big move in 4 h: <b>' + Math.round(sc.p_big_move * 100) + '%</b>' : '') + '</p>';
+    ['day', 'swing', 'hold'].forEach(function(k){ var H = (S.horizons || {})[k]; if(!H) return;
+      h += '<details style="margin:6px 0"><summary style="cursor:pointer">' + ({day:'Day trades', swing:'Swing (days)', hold:'Holding'})[k] + ' ' + chip(H.state) + (H.direction ? ' <b>' + esc(H.direction) + '</b>' : '') + '</summary><p class="dp-p">' + esc(H.plain) + '</p><ul class="dp-p">' + (H.reasons || []).map(function(x){ return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></details>'; });
+    var oc = S.open_calls || [];
+    h += oc.length ? '<p class="dp-p"><b>Open calls:</b></p><ul class="dp-p">' + oc.map(function(c){ return '<li>' + esc(c.rule) + ' (grade ' + esc(c.grade) + ', ' + esc(c.status) + '): ' + esc(String(c.side || '').toUpperCase()) + ' entry ' + esc(c.entry) + ' stop ' + esc(c.stop) + ' target ' + esc(c.target) + '</li>'; }).join('') + '</ul>'
+                   : '<p class="dp-p" style="opacity:.75">No open call. The bot stays quiet until a tested rule fires.</p>';
+    h += '<p class="dp-p" style="opacity:.6;font-size:12px">Bot record ' + (age < 120 ? age + ' min' : Math.round(age / 60) + ' h') + ' old · source ' + esc(S.data_source) + (age > 90 ? ' · <b>stale</b>: the cloud scheduler skipped runs' : '') + '</p></div>';
+    return h;
+  }
+  async function load(){
+    var box = document.getElementById('desksBody'); if(!box) return;
+    var px = {}; try{ (await j(FAPI + '/fapi/v1/ticker/price')).forEach(function(x){ px[x.symbol] = +x.price; }); }catch(e){}
+    var out = '<div class="grid2">';
+    for(var i = 0; i < A.length; i++){ var S = null; try{ S = await j(RAW + 'assets/' + A[i][0] + '.json'); }catch(e){} out += card(A[i], S, px[A[i][2]] != null ? px[A[i][2]] : (S && S.read ? S.read.price : null)); }
+    out += '</div>';
+    try{ var r = await fetch(RAW + 'alerts/outbox.md?t=' + Math.floor(Date.now() / 60000)); if(r.ok){ var tx = await r.text(); var parts = tx.split('\n## ').slice(-4).reverse();
+      out += '<div class="card"><h3 class="dp-h">Latest alerts sent</h3>' + parts.map(function(p){ return '<pre style="white-space:pre-wrap;font:inherit;margin:8px 0;padding:8px;border-radius:8px;background:rgba(127,127,127,.08)">' + esc(p.trim()) + '</pre>'; }).join('') + '</div>'; } }catch(e){}
+    out += '<div class="card"><h3 class="dp-h">How to read this</h3><p class="dp-p"><b>WAIT</b>: nothing to do. <b>WATCH</b>: a big move is likely in the next hours; in tests the 4-hour range roughly doubled in WATCH windows, but the direction could not be predicted. <b>SETUP / TRIGGERED / CONFIRMED</b>: a rule that passed its test is calling a trade (paper first). Evidence for every rule is on the Evidence page.</p></div>';
+    box.innerHTML = out;
+  }
+  window.addEventListener('load', function(){ load(); setInterval(function(){ var s = document.getElementById('page-desks'); if(s && s.classList.contains('on')) load(); }, 120000); });
 })();
 </script>
 
