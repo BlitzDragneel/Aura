@@ -452,3 +452,9 @@ The one positive cell (BTC fair-value-gap retest +0.058R, t 2.7, 76% wins) was a
 inside a bar, the scorer also counted targets touched earlier in that same bar. Fixed in edges/auditor/core.py (no
 target on the fill bar of a limit fill; market fills unchanged, so E148–E152 are unaffected). Re-run: BTC FVG −0.069R
 (t −2.6), gold FVG −0.070R.
+
+## Lead — E154 higher-timeframe filter for the Signal Lab (md5 see registry): FAIL — the bigger trend does not help
+From the 15 Nov BTC loss (a pullback BUY inside a 4h/daily downtrend). Five markets, lab replay. Pooled FINAL average R:
+signals AGREEING with both the 4h and daily trend −0.035 (n 2,820, positive on 0 of 5 markets); MIXED −0.065; against
+both (CONFLICT) −0.036 (n 2,346). Validation: −0.047 / −0.030 / −0.016. Trading with the bigger trend is no better than
+against it for these setups; the BTC loss was not caused by ignoring the bigger trend. No filter added.
