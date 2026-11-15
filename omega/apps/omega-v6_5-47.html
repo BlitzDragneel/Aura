@@ -2190,7 +2190,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   <!-- Mobile header (logo + hamburger) -->
   <header class="mobile-header">
     <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">☰</button>
-    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.120 · build 2026-11-14 20:44 UTC</small></div>
+    <div class="mh-brand"><span class="mh-glyph">Ω</span> OMEGA <small>v6.5.121 · build 2026-11-15 12:44 UTC</small></div>
   </header>
 
   <!-- Sidebar -->
@@ -3769,6 +3769,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
     <div id="page-desks" class="page">
       <header class="om-head"><h2>Desks</h2><p>Bitcoin, gold and silver, each read by its own bot every 15 minutes. A bot calls a trade only when a rule that passed a fair test fires; otherwise it waits, or watches when a big move looks likely without knowing its direction.</p></header>
       <div id="desksBody"></div>
+      <div id="sigLabBody"></div>
       <details class="om-about"><summary>About this page</summary><div class="om-about-body">
         <p><b>Who reads the markets.</b> Three bots run 24/7 in the cloud (or on the laptop Station): one for Bitcoin, one for gold, one for silver. Every 15 minutes each reads its market on closed candles &mdash; the 24/7 Binance perpetual (BTCUSDT, XAUUSDT, XAGUSDT) and, for the metals, the spot quote &mdash; and writes down what it sees before anyone knows what happens next.</p>
         <p><b>States.</b> WAIT: nothing qualifies. WATCH: a big move looks likely, direction unknown &mdash; watch only. SETUP: a tested rule&rsquo;s conditions are forming. TRIGGERED: a tested rule fired and a call is out. CONFIRMED: the call&rsquo;s entry filled. INVALIDATED: its stop was hit. EXPIRED: it ended otherwise (target, time, never filled).</p>
@@ -12105,7 +12106,7 @@ window.__omegaCostShare = function(commPct, plan){ var c = +commPct; if(!(c >= 0
   // surviving a reload, repeats folded into one line), with what to do, and shown with the
   // self-test and storage state under Settings → Diagnostics. Anything that looks like a key or
   // token is blanked before it is stored.
-  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.120 \u00b7 build 2026-11-14 20:44 UTC';   // rewritten by the build stamp on every release
+  var DKEY = 'omega_diag_log_v1', BUILD_STAMP = 'v6.5.121 \u00b7 build 2026-11-15 12:44 UTC';   // rewritten by the build stamp on every release
   function redact(s){ return String(s==null?'':s).replace(/((?:api_?key|apikey|key|token|secret|auth|password)=)[^&\s"']+/gi,'$1…').replace(/sk-ant-[A-Za-z0-9_\-]+/g,'sk-ant-…').replace(/Bearer\s+[A-Za-z0-9._\-]+/g,'Bearer …').slice(0,300); }
   function fixFor(msg){ var m = String(msg);
     if(/quota|QuotaExceeded/i.test(m)) return 'Storage full: old simulated journal rows move to the archive automatically; export a backup if this repeats.';
@@ -18156,6 +18157,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
       drawSafe(p, function(){ if(p === 'futures' && window.OMEGA_PERP) window.OMEGA_PERP.tick(true); });
       drawSafe(p, function(){ if(p === 'auto' && window.OMEGA_AUTOPILOT) window.OMEGA_AUTOPILOT.render(); });
       drawSafe(p, function(){ if(p === 'desks' && window.OMEGA_DESKS) window.OMEGA_DESKS.onShow(); });
+      drawSafe(p, function(){ if(p === 'desks' && window.OMEGA_SIGLAB) window.OMEGA_SIGLAB.onShow(); });
       drawSafe(p, function(){ if(p === 'auditor' && window.OMEGA_AUDITOR) window.OMEGA_AUDITOR.onShow(); });
       syncBottomNav(p);
       return;
@@ -23994,7 +23996,7 @@ body.omega-noanim *, body.omega-noanim *::before, body.omega-noanim *::after{ an
   function lsSet(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
   var LAST_KEY = 'omega_research_pkg_last_v1';
   function L(){ return window.OMEGA_LAB; }
-  var BUILD = 'v6.5.120 \u00b7 build 2026-11-14 20:44 UTC';   // rewritten by the build stamp on every release
+  var BUILD = 'v6.5.121 \u00b7 build 2026-11-15 12:44 UTC';   // rewritten by the build stamp on every release
   function buildStamp(){ return BUILD; }
   function status(row){
     if(!row) return 'NOT TESTED';
@@ -30603,6 +30605,38 @@ html[data-theme="heaven"] .ost-td{font-size:11px}
   function boot(){ home(); if(el('page-auditor') && el('page-auditor').classList.contains('active')) draw(); }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(boot, 0); }); else setTimeout(boot, 0);
   window.OMEGA_AUDITOR = { onShow:onShow, draw:draw, add:add, scoreAll:scoreAll, del:del, canDelete:canDelete, risk:risk, state:function(){ return S; } };
+})();
+</script>
+<script>/* ═══ SIGNAL LAB (v6.5.121) ═══ reads the public record of the cloud Signal Lab; information only */
+(function(){
+  var RAW = 'https://raw.githubusercontent.com/BlitzDragneel/Aura/bot-state/siglab/signals.json';
+  var NM = {S1:'trend pullback', S2:'breakout', S3:'stretch fade', S4:'fib pullback', S5:'session drive', S6:'daily bias', S7:'big move'};
+  var last = 0;
+  function esc(x){ return String(x == null ? '' : x).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function sg(v){ return (v >= 0 ? '+' : '') + v; }
+  function draw(L){
+    var box = document.getElementById('sigLabBody'); if(!box) return;
+    if(!L){ box.innerHTML = '<div class="card"><h3>Signal Lab</h3><p class="sa-msg">The Signal Lab record could not be loaded right now. It is written by the cloud bots every 15 minutes.</p></div>'; return; }
+    var rec = L.record || {}, all = rec.all || {}, T = rec.by_setup_market || {}, C = L.record_by_context || {};
+    var rows = Object.keys(T).filter(function(k){ return T[k].n > 0; }).sort(function(a, b){ return (T[b].avg_R || 0) - (T[a].avg_R || 0); });
+    var sigs = (L.signals || []).slice(-40).reverse();
+    var h = '<div class="card"><h3>Signal Lab</h3><p class="sa-msg">Alerts fire when a breakout, big move, pullback or session drive happens on 15 markets. Every signal is scored in money and gets a written reason when it closes. PAPER = untested, do not trade. A setup earns PROMISING after 15 closed signals with a positive average and CONFIDENT after 30 clearly positive ones. Setups that lost on past data are sent without a trade plan.</p>'
+      + '<div class="sa-stats"><div><b>' + (all.n || 0) + '</b><span>closed</span></div><div><b>' + (all.avg_R != null ? sg(all.avg_R) + 'R' : '—') + '</b><span>average</span></div><div><b>' + (all.win != null ? Math.round(all.win * 100) + '%' : '—') + '</b><span>won</span></div><div><b>' + (rec.open || 0) + '</b><span>open now</span></div></div>';
+    if(rows.length) h += '<details><summary>Scoreboard by setup and market</summary>' + rows.map(function(k){ var v = T[k], q = k.split(' '); return '<div class="sa-sub">' + esc(NM[q[1]] || q[1]) + ' · ' + esc(q[0]) + ': ' + v.n + ' closed, ' + sg(v.avg_R) + 'R, ' + Math.round((v.win || 0) * 100) + '% won · <b>' + esc(v.grade) + '</b></div>'; }).join('') + '</details>';
+    var ck = Object.keys(C).filter(function(k){ return C[k].n >= 3; });
+    if(ck.length) h += '<details><summary>What it has learned (by market state)</summary>' + ck.map(function(k){ var q = k.split(' | '); return '<div class="sa-sub">' + esc(NM[q[0]] || q[0]) + ', ' + esc(q[1]) + ': ' + C[k].n + ' closed, ' + sg(C[k].avg_R) + 'R</div>'; }).join('') + '</details>';
+    h += sigs.map(function(x){ var d = new Date(x.logged_ms), st = x.state || {}, cls = x.status === 'closed' ? 'closed' : 'running';
+      return '<div class="sa-sig"><div class="sa-top"><b>' + esc(x.symbol) + ' ' + esc(String(x.side).toUpperCase()) + ' · ' + esc(NM[x.setup] || x.setup) + '</b><span class="sa-st ' + cls + '">' + esc(x.status) + '</span></div>'
+        + '<div class="sa-sub">' + d.toLocaleString([], {month:'short', day:'numeric', hour:'2-digit', minute:'2-digit'}) + ' · entry ~' + esc(x.ref_price) + ' · stop ' + esc(x.stop) + ' · TP1 ' + esc((x.targets || [])[0]) + ' · TP5 ' + esc((x.targets || [])[4])
+        + (st.trend ? '<br>Market then: trend ' + esc(st.trend) + ', volatility ' + esc(st.vol) + ', ' + esc(st.session) + ' session' : '') + ' · ' + esc(x.grade_at_issue || 'PAPER') + (x.sent ? '' : ' · logged only') + '</div>'
+        + (x.status === 'closed' ? '<div class="sa-res"><span class="' + (x.R_ladder > 0 ? 'sa-win' : (x.R_ladder < 0 ? 'sa-loss' : '')) + '">' + esc(x.outcome) + ' ' + sg(x.R_ladder) + 'R</span>' + (x.review ? ' — ' + esc(x.review) : '') + '</div>' : '') + '</div>'; }).join('')
+      + (sigs.length ? '' : '<p class="sa-msg">No signals yet.</p>') + '</div>';
+    box.innerHTML = h;
+  }
+  function load(){ last = Date.now();
+    fetch(RAW + '?t=' + Math.floor(Date.now() / 60000)).then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).then(draw).catch(function(){ draw(null); }); }
+  function onShow(){ if(Date.now() - last > 60000) load(); }
+  window.OMEGA_SIGLAB = { onShow:onShow, draw:draw, load:load };
 })();
 </script>
 </body>
