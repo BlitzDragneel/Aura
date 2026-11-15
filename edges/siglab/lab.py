@@ -109,7 +109,8 @@ def detect(f, h1):
 def make(sym, setup, d, why, ctx):
     name, spec = core.instrument(sym)
     dec = 2 if spec["pip"] >= 0.1 else 3
-    px, R = ctx["price"], max(ctx["R"], 6 * spec["spread"])       # the stop is never tighter than 6 spreads
+    px = ctx["price"]
+    R = max(ctx["R"], 6 * spec["spread"], 0.002 * px)   # stop never tighter than 6 spreads or 0.2% of price (about 8 USD on gold)
     return dict(id=f"{name}-{setup}-{ctx['bar_close_ms']}", symbol=name, setup=setup, side="buy" if d == 1 else "sell", why=why,
                 logged_ms=ctx["bar_close_ms"], ref_price=round(px, dec), stop=round(px - d * R, dec),
                 targets=[round(px + d * R * 0.5 * k, dec) for k in range(1, 6)], R=round(R, dec + 1), status="open")
