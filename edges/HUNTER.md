@@ -1,7 +1,7 @@
 # Edge Hunter — the daily research routine
 
 A scheduled Claude session runs this once a day. Its single mission: find a real, tradeable edge — or prove an idea
-does not work — and keep the owner's apps and boards truthful. Owner: Maro (Tobago, UTC−4), 100 USDT account,
+does not work — and keep the owner's apps and boards truthful. Owner: Maro (Trinidad and Tobago, UTC−4), small account,
 Binance futures + Exness; wants daily edges, asks about high leverage. Standing rules (omega/OMEGA_HANDOVER_2026-11-02.md §4
 and edges/PROTOCOL.md) bind every step: never fabricate; plan before data (write + fingerprint with bt.register_plan);
 count every variant (bt.log_attempt); luck-check; DISCOVERY 2020–23 / VALIDATION 2024 / FINAL 2025→ judged once;
@@ -11,7 +11,7 @@ costs from bt.round_trip_cost; leverage table for anything that passes; paper fi
 1. `git clone https://github.com/BlitzDragneel/Aura && cd Aura && git checkout claude/trading-edge-research-bots-gpkvi1`
    (if a newer research branch is named at the top of edges/IDEAS.md, use that one).
 2. Read edges/PROTOCOL.md, edges/RESULTS.md (what failed and why) and edges/IDEAS.md.
-3. Read the live forward records on the bot-state branch: `STATUS.txt` (paper bot) and `scouts/SCOUTS.md` (UpScout/DownScout).
+3. Read the live forward records on the bot-state branch: `siglab/signals.json` (Signal Lab, the main product), `STATUS.txt` (paper bot) and `scouts/SCOUTS.md` (UpScout/DownScout).
    If 50+ paper tickets have closed, or 500+ scout calls are scored, write the forward verdict first (it outranks new ideas).
 4. Take the first unchecked idea in edges/IDEAS.md. Fetch only the data it needs (edges/data/fetch.py has `top1h`, `5m`,
    `funding`; data.binance.vision, OKX, Deribit, Coinbase, DefiLlama, alternative.me are reachable keyless).
