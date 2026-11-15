@@ -3,7 +3,7 @@
 "day": {
 "state": "WAIT",
 "since": "2026-11-15T11:44:25.443092+00:00",
-"previous": "WATCH",
+"previous": "WAIT",
 "reasons": [
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
@@ -45,14 +45,6 @@
 {
 "t": "2026-11-15T07:00:00+00:00",
 "price": 47.5,
-"horizon": "day",
-"thr": 0.020120300751879715,
-"watch": true,
-"p": 0.262
-},
-{
-"t": "2026-11-15T07:00:00+00:00",
-"price": 47.5,
 "horizon": "swing",
 "thr": 0.04024060150375943,
 "watch": false,
@@ -61,33 +53,41 @@
 {
 "t": "2026-11-15T10:00:00+00:00",
 "price": 47.82,
-"horizon": "day",
-"thr": 0.017267132700005978,
-"watch": false,
-"p": 0.279
-},
-{
-"t": "2026-11-15T10:00:00+00:00",
-"price": 47.82,
 "horizon": "swing",
 "thr": 0.034534265400011956,
 "watch": false,
 "p": 0.102
+},
+{
+"t": "2026-11-15T14:00:00+00:00",
+"price": 47.67,
+"horizon": "day",
+"thr": 0.011597590578081445,
+"watch": false,
+"p": 0.143
+},
+{
+"t": "2026-11-15T14:00:00+00:00",
+"price": 47.67,
+"horizon": "swing",
+"thr": 0.02319518115616289,
+"watch": false,
+"p": 0.111
 }
 ],
 "forward": {
 "day": {
-"n": 1,
+"n": 3,
 "big": 0,
-"watch_n": 1,
+"watch_n": 2,
 "watch_big": 0,
-"brier": 0.049284,
+"brier": 0.19576900000000003,
 "brier_base": 0.0,
-"scout_n": 1
+"scout_n": 3
 }
 },
 "calls_record": {},
-"runs": 3,
+"runs": 4,
 "created": "2026-11-15T06:42:40",
-"last_run": "2026-11-15T11:44:25.443092+00:00"
+"last_run": "2026-11-15T15:47:28.433249+00:00"
 }

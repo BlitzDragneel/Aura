@@ -15,7 +15,7 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 1 readings scored; big moves followed 0% of them, 0% after a WATCH (1 WATCH readings) - too few to judge yet.
+- My own record: 3 readings scored; big moves followed 0% of them, 0% after a WATCH (2 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
@@ -36,9 +36,9 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 47.8; volatility regime active (hourly ATR 0.863% of price, 83.3th percentile).
+- Price 47.75; volatility regime normal (hourly ATR 0.58% of price, 34.6th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
-- Spot XAGUSD 48.71 (stale: market closed).
+- Spot XAGUSD 48.70 (stale: market closed).
 
 ## My calls so far
 

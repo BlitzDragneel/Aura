@@ -18,3 +18,11 @@ TP4 67573.27
 TP5 68090.29
 Setup: fib pullback (pulled back half of a strong up-leg)
 no record yet
+
+## 2026-11-15 15:47:35 UTC
+⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~47.75
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+❌ Bitcoin BUY (fib pullback) closed: SL, -1.01R (-1023 pips)
+Why: Stopped out after 176 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R).
