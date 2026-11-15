@@ -100,10 +100,16 @@ def detect(f, h1):
     if hm == (6, 45) and t.weekday() < 5:                  # bar closing 07:00 UTC
         mv = c.iloc[i] - c.iloc[0]
         out.append(("S6", int(np.sign(mv)) or 1, "with the 3-day drift"))
+    r4h, r24 = f.h.iloc[-16:].max() - f.l.iloc[-16:].min(), f.h.iloc[-96:].max() - f.l.iloc[-96:].min()
+    am = a.iloc[-288:].median()
+    state = dict(trend="up" if up else ("down" if dn else "flat"),
+                 vol="high" if A > 1.3 * am else ("low" if A < 0.7 * am else "normal"),
+                 shape="compressed" if r4h < 0.35 * r24 else ("expanding" if r4h > 0.7 * r24 else "normal"),
+                 session="Asia" if t.hour < 7 else ("London" if t.hour < 13 else ("New York" if t.hour < 21 else "late")))
     mv1 = c.iloc[i] - c.iloc[i - 4]
     if abs(mv1) >= 2 * R:
         out.append(("S7", int(np.sign(mv1)), f"moved {mv1:+.2f} in the last hour, twice its normal hourly range"))
-    return out, dict(price=float(c.iloc[i]), R=R, bar_close_ms=int((t + pd.Timedelta("15min")).timestamp() * 1000))
+    return out, dict(state=state, price=float(c.iloc[i]), R=R, bar_close_ms=int((t + pd.Timedelta("15min")).timestamp() * 1000))
 
 
 def make(sym, setup, d, why, ctx):
@@ -112,6 +118,7 @@ def make(sym, setup, d, why, ctx):
     px = ctx["price"]
     R = max(ctx["R"], 6 * spec["spread"], 0.002 * px)   # stop never tighter than 6 spreads or 0.2% of price (about 8 USD on gold)
     return dict(id=f"{name}-{setup}-{ctx['bar_close_ms']}", symbol=name, setup=setup, side="buy" if d == 1 else "sell", why=why,
+state=dict(ctx.get("state") or {}, with_trend=(ctx.get("state") or {}).get("trend") == ("up" if d == 1 else "down")),
                 logged_ms=ctx["bar_close_ms"], ref_price=round(px, dec), stop=round(px - d * R, dec),
                 targets=[round(px + d * R * 0.5 * k, dec) for k in range(1, 6)], R=round(R, dec + 1), status="open")
 
@@ -138,6 +145,8 @@ def text(sig, g, rec):
     tag = {"CONFIDENT": "🟢 CONFIDENT", "PROMISING": "🟡 PROMISING", "PAPER": "🧪 PAPER (untested, do not trade)"}[g]
     r = f"record of this setup here: {rec['n']} closed, avg {rec['avg_R']:+.2f}R, {round(rec['win'] * 100)}% won" if rec["n"] else "no record yet"
     head = f"⚡ {name}: {LIVE[sig['setup']]} right now\n" if sig["setup"] in LIVE else ""
+    st_ = sig.get("state") or {}
+    head += (f"Market now: trend {st_.get('trend')}, volatility {st_.get('vol')}, {st_.get('shape')} range, {st_.get('session')} session\n" if st_ else "")
     return (f"{head}{tag}\n{name} {sig['side'].upper()} now ~{sig['ref_price']}\nSL {sig['stop']}\n" + "\n".join(f"TP{k + 1} {t}" for k, t in enumerate(sig["targets"]))
             + f"\nSetup: {SETUPS[sig['setup']]} ({sig['why']})\n{r}")
 
@@ -197,6 +206,14 @@ def main(state_dir, prices=None, now_ms=None, client=None):
     per_setup = {}
     for (sym, st), v in by.items():
         per_setup.setdefault(st, []).extend(v)
+    ctxs = {}
+    for x in S["signals"]:
+        if x["status"] == "closed" and x.get("R_ladder") is not None and x.get("state"):
+            st_ = x["state"]
+            for key in (f"{x['setup']} | {'with' if st_.get('with_trend') else 'against'} trend", f"{x['setup']} | vol {st_.get('vol')}",
+                        f"{x['setup']} | {st_.get('shape')}", f"{x['setup']} | {st_.get('session')}"):
+                ctxs.setdefault(key, []).append(x["R_ladder"])
+    S["record_by_context"] = {k: stats(v) for k, v in sorted(ctxs.items())}   # which response fits which market state
     S["record"] = dict(by_setup_market=table, by_setup={k: stats(v) for k, v in sorted(per_setup.items())},
                        all=stats([r for v in by.values() for r in v]), open=sum(s["status"] == "open" for s in S["signals"]))
     today = time.strftime("%Y-%m-%d", time.gmtime(now_ms / 1000))
