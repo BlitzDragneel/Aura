@@ -26,3 +26,7 @@ Market now: trend down, volatility normal, New York session
 
 ❌ Bitcoin BUY (fib pullback) closed: SL, -1.01R (-1023 pips)
 Why: Stopped out after 176 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R).
+
+## 2026-11-15 20:37:45 UTC
+❌ Silver SELL (fib pullback) closed: SL, -1.11R (-31 pips)
+Why: Stopped out after 258 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first.
