@@ -1,0 +1,256 @@
+{
+ "asset": "XAG",
+ "name": "Silver",
+ "perp": "XAGUSDT",
+ "spot_symbol": "XAGUSD",
+ "asof": "2026-11-15T06:42:40.204914+00:00",
+ "data_source": "okx-swap",
+ "errors": [],
+ "read": {
+  "price": 47.44,
+  "bar": "2026-11-15T06:15:00+00:00",
+  "trend": {
+   "15m": {
+    "state": "flat",
+    "close": 47.44,
+    "ma20": 47.43,
+    "ma50": 47.46860000000001,
+    "slope_atr": 1.35,
+    "bar": "2026-11-15T06:15:00+00:00"
+   },
+   "1h": {
+    "state": "down",
+    "close": 47.5,
+    "ma20": 47.9225,
+    "ma50": 48.784,
+    "slope_atr": -0.74,
+    "bar": "2026-11-15T05:00:00+00:00"
+   },
+   "4h": {
+    "state": "down",
+    "close": 47.58,
+    "ma20": 49.608,
+    "ma50": 51.2684,
+    "slope_atr": -1.58,
+    "bar": "2026-11-15T00:00:00+00:00"
+   },
+   "1d": {
+    "state": "down",
+    "close": 47.39,
+    "ma20": 51.36899999999999,
+    "ma50": 55.977599999999995,
+    "slope_atr": -0.65,
+    "bar": "2026-11-14T00:00:00+00:00"
+   }
+  },
+  "volatility": {
+   "atr1h_pct": 1.039,
+   "atr1h_pctile": 95.1,
+   "atr1h": 0.4935714285714293,
+   "rv20d_ann_pct": 46.0,
+   "rv20d_pctile": 50.6,
+   "day_range_pct_median": 2.59,
+   "regime": "extreme",
+   "regime_daily": "normal"
+  },
+  "session": {
+   "name": "Asia",
+   "utc_hour": 6,
+   "weekday": "Sunday",
+   "weekend": true,
+   "cme_break": false,
+   "spot_open": false,
+   "note": "spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable"
+  },
+  "ranges": {
+   "24h": {
+    "high": 48.97,
+    "low": 46.19,
+    "to_high_pct": 3.09,
+    "to_low_pct": 2.84,
+    "to_high_atr": 3.0,
+    "to_low_atr": 2.7,
+    "position": 0.47
+   },
+   "7d": {
+    "high": 53.82,
+    "low": 46.19,
+    "to_high_pct": 13.31,
+    "to_low_pct": 2.84,
+    "to_high_atr": 12.8,
+    "to_low_atr": 2.7,
+    "position": 0.17
+   },
+   "30d": {
+    "high": 58.69,
+    "low": 46.69,
+    "to_high_pct": 23.56,
+    "to_low_pct": 1.73,
+    "to_high_atr": 22.7,
+    "to_low_atr": 1.6,
+    "position": 0.07
+   }
+  },
+  "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
+  "change_24h_pct": -3.13,
+  "spot": {
+   "price": 48.70505,
+   "bid": 48.678,
+   "ask": 48.7321,
+   "spread": 0.0541,
+   "age_s": 117760,
+   "stale": true,
+   "note": "market closed or feed paused",
+   "source": "swissquote"
+  },
+  "funding": {
+   "rate": 0.0,
+   "next_time": 1794729600000,
+   "source": "okx-swap"
+  },
+  "scouts": {
+   "day": {
+    "horizon": "4 h",
+    "skill_ok": true,
+    "p_big_move": 0.222,
+    "flag": false,
+    "detail": {
+     "p_up_move": 0.081,
+     "p_down_move": 0.14
+    },
+    "trained_to": "2025-12-31",
+    "label": "own scout on SI=F silver futures hourly (CME hours); validation AUC 0.58/0.61 (up/down); UNTESTED as a trading signal",
+    "direction": "none: big-move risk only"
+   },
+   "swing": {
+    "horizon": "24 h",
+    "skill_ok": false,
+    "p_big_move": 0.175,
+    "flag": false,
+    "detail": {
+     "p_up_move": 0.093,
+     "p_down_move": 0.082
+    },
+    "trained_to": "2025-12-31",
+    "label": "own scout on SI=F silver futures hourly (CME hours); validation AUC 0.54/0.49 (up/down); UNTESTED as a trading signal; NO SKILL on validation (AUC < 0.55): not used for WATCH",
+    "direction": "none: big-move risk only"
+   }
+  }
+ },
+ "horizons": {
+  "day": {
+   "state": "WATCH",
+   "since": "2026-11-15T06:42:40.204914+00:00",
+   "previous": "WAIT",
+   "reasons": [
+    "hourly volatility is high (95th percentile of the last 3 weeks)",
+    "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
+   ],
+   "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
+   "direction": null,
+   "rules": []
+  },
+  "swing": {
+   "state": "WAIT",
+   "since": "2026-11-15T06:42:40.204914+00:00",
+   "previous": "WAIT",
+   "reasons": [
+    "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
+   ],
+   "plain": "Nothing to do. No tested rule is calling a trade.",
+   "direction": null,
+   "rules": []
+  },
+  "hold": {
+   "state": "WAIT",
+   "since": "2026-11-15T06:42:40.204914+00:00",
+   "previous": "WAIT",
+   "reasons": [
+    "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
+   ],
+   "plain": "Nothing to do. No tested rule is calling a trade.",
+   "direction": null,
+   "rules": []
+  }
+ },
+ "open_calls": [],
+ "recent_calls": [],
+ "forward": {
+  "day": {
+   "scored": 0,
+   "text": "no readings scored yet (each is scored once its horizon has passed)"
+  },
+  "swing": {
+   "scored": 0,
+   "text": "no readings scored yet (each is scored once its horizon has passed)"
+  },
+  "hold": {
+   "scored": 0,
+   "text": "no readings scored yet (each is scored once its horizon has passed)"
+  },
+  "calls": {
+   "closed": 0,
+   "text": "no calls yet: no tested rule for this asset has fired"
+  }
+ },
+ "notebook": [
+  {
+   "title": "What the research found",
+   "lines": [
+    "Source of truth: the matching section of edges/RESULTS.md; result files in edges/results/."
+   ]
+  },
+  {
+   "title": "Day trades",
+   "lines": [
+    "Common methods plans/E120_common_xag.md (8cb3848d). Code edges/research_xag/, numbers results/E121\u2013E128_result.json.",
+    "197 logged attempts, about 170 distinct variants (E121 was run twice after a bug fix: FOMC window and in-sample model",
+    "selection; both runs are logged). Costs: CFD 0.04%/side for silver and 0.02% for gold + 6.5%/yr financing per night;",
+    "maker variants use perp costs. Hourly data is 1h only (no 15m) and is short, and the bar was not lowered for it.",
+    "BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.",
+    "| Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |",
+    "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
+    "My own record: no readings scored yet (each is scored once its horizon has passed)."
+   ]
+  },
+  {
+   "title": "Swing trades (1-20 days)",
+   "lines": [
+    "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
+    "My own record: no readings scored yet (each is scored once its horizon has passed)."
+   ]
+  },
+  {
+   "title": "Holding (weeks-months)",
+   "lines": [
+    "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
+    "My own record: no readings scored yet (each is scored once its horizon has passed)."
+   ]
+  },
+  {
+   "title": "Habits I measure myself",
+   "lines": [
+    "Over the last 20 days the busiest session was Asia (average hourly move 0.35%) and the quietest late US (0.16%).",
+    "At weekends, while spot is closed, the perpetual moves 39% as much per hour as on weekdays: weekend prices are thin and less reliable.",
+    "A typical day ranges 2.6% from low to high (last 60 days); 42% of those days closed higher.",
+    "Over the last 30 days the price moved -17.2% (a fact, not a forecast)."
+   ]
+  },
+  {
+   "title": "Right now",
+   "lines": [
+    "Price 47.44; volatility regime extreme (hourly ATR 1.039% of price, 95.1th percentile).",
+    "spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.",
+    "Spot XAGUSD 48.71 (stale: market closed)."
+   ]
+  },
+  {
+   "title": "My calls so far",
+   "lines": [
+    "no calls yet: no tested rule for this asset has fired"
+   ]
+  }
+ ],
+ "runs": 1,
+ "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
+}

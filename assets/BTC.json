@@ -1,0 +1,252 @@
+{
+ "asset": "BTC",
+ "name": "Bitcoin",
+ "perp": "BTCUSDT",
+ "spot_symbol": null,
+ "asof": "2026-11-15T06:42:30.842038+00:00",
+ "data_source": "okx-swap",
+ "errors": [],
+ "read": {
+  "price": 64504.9,
+  "bar": "2026-11-15T06:15:00+00:00",
+  "trend": {
+   "15m": {
+    "state": "flat",
+    "close": 64504.9,
+    "ma20": 64493.515,
+    "ma50": 64518.596,
+    "slope_atr": 0.95,
+    "bar": "2026-11-15T06:15:00+00:00"
+   },
+   "1h": {
+    "state": "down",
+    "close": 64478.6,
+    "ma20": 65207.165,
+    "ma50": 67092.134,
+    "slope_atr": -0.68,
+    "bar": "2026-11-15T05:00:00+00:00"
+   },
+   "4h": {
+    "state": "down",
+    "close": 64787.3,
+    "ma20": 69172.445,
+    "ma50": 72636.522,
+    "slope_atr": -1.25,
+    "bar": "2026-11-15T00:00:00+00:00"
+   },
+   "1d": {
+    "state": "down",
+    "close": 64124.8,
+    "ma20": 75876.18000000001,
+    "ma50": 80186.99,
+    "slope_atr": -0.99,
+    "bar": "2026-11-14T00:00:00+00:00"
+   }
+  },
+  "volatility": {
+   "atr1h_pct": 1.648,
+   "atr1h_pctile": 99.2,
+   "atr1h": 1062.6857142857148,
+   "rv20d_ann_pct": 49.2,
+   "rv20d_pctile": 81.8,
+   "day_range_pct_median": 2.47,
+   "regime": "extreme",
+   "regime_daily": "active"
+  },
+  "session": {
+   "name": "Asia",
+   "utc_hour": 6,
+   "weekday": "Sunday",
+   "weekend": true,
+   "note": "Bitcoin trades 24/7; weekend liquidity is thinner"
+  },
+  "ranges": {
+   "24h": {
+    "high": 67487.4,
+    "low": 61931.1,
+    "to_high_pct": 4.67,
+    "to_low_pct": 4.11,
+    "to_high_atr": 2.8,
+    "to_low_atr": 2.4,
+    "position": 0.46
+   },
+   "7d": {
+    "high": 76160.0,
+    "low": 61931.1,
+    "to_high_pct": 18.12,
+    "to_low_pct": 4.11,
+    "to_high_atr": 11.0,
+    "to_low_atr": 2.4,
+    "position": 0.18
+   },
+   "30d": {
+    "high": 84876.0,
+    "low": 63272.2,
+    "to_high_pct": 31.63,
+    "to_low_pct": 1.91,
+    "to_high_atr": 19.2,
+    "to_low_atr": 1.1,
+    "position": 0.06
+   }
+  },
+  "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
+  "change_24h_pct": -6.09,
+  "funding": {
+   "rate": 1.36334674083e-05,
+   "next_time": 1794729600000,
+   "source": "okx-swap"
+  },
+  "scouts": {
+   "day": {
+    "horizon": "4 h",
+    "skill_ok": true,
+    "p_big_move": 0.144,
+    "flag": false,
+    "detail": {
+     "p_up_move": 0.065,
+     "p_down_move": 0.079
+    },
+    "trained_to": "2026-11-03",
+    "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
+    "direction": "none: big-move risk only"
+   },
+   "swing": {
+    "horizon": "24 h",
+    "skill_ok": true,
+    "p_big_move": 0.588,
+    "flag": true,
+    "detail": {
+     "p_up_move": 0.085,
+     "p_down_move": 0.503
+    },
+    "trained_to": "2026-11-03",
+    "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
+    "direction": "none: big-move risk only"
+   }
+  }
+ },
+ "horizons": {
+  "day": {
+   "state": "WATCH",
+   "since": "2026-11-15T06:42:30.842038+00:00",
+   "previous": "WAIT",
+   "reasons": [
+    "hourly volatility is high (99th percentile of the last 3 weeks)",
+    "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
+   ],
+   "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
+   "direction": null,
+   "rules": []
+  },
+  "swing": {
+   "state": "WATCH",
+   "since": "2026-11-15T06:42:30.842038+00:00",
+   "previous": "WAIT",
+   "reasons": [
+    "scout: 59% chance of a big move in 24 h (top of its range; direction unknown)",
+    "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
+   ],
+   "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
+   "direction": null,
+   "rules": []
+  },
+  "hold": {
+   "state": "WAIT",
+   "since": "2026-11-15T06:42:30.842038+00:00",
+   "previous": "WAIT",
+   "reasons": [
+    "the tested rule(s) for this horizon have not fired"
+   ],
+   "plain": "Nothing to do. No tested rule is calling a trade.",
+   "direction": null,
+   "rules": [
+    {
+     "id": "btc_gold_invvol",
+     "grade": "B",
+     "status": "paper",
+     "execution_allowed": false,
+     "research_only": true,
+     "evidence": "edges/results/E94_result.json; edges/results/E97_result.json; edges/results/E97_leverage.json; edges/assets/BTC/FINDINGS.md"
+    }
+   ]
+  }
+ },
+ "open_calls": [],
+ "recent_calls": [],
+ "forward": {
+  "day": {
+   "scored": 0,
+   "text": "no readings scored yet (each is scored once its horizon has passed)"
+  },
+  "swing": {
+   "scored": 0,
+   "text": "no readings scored yet (each is scored once its horizon has passed)"
+  },
+  "hold": {
+   "scored": 0,
+   "text": "no readings scored yet (each is scored once its horizon has passed)"
+  },
+  "calls": {
+   "closed": 0,
+   "text": "no calls yet: no tested rule for this asset has fired"
+  }
+ },
+ "notebook": [
+  {
+   "title": "What the research found",
+   "lines": [
+    "Source of truth: the matching section of edges/RESULTS.md; result files in edges/results/."
+   ]
+  },
+  {
+   "title": "Day trades",
+   "lines": [
+    "Common rules plans/E86_common_btc.md (e0ce60bc). Code edges/research_btc/, results edges/results/E86\u2026E98_result.json.",
+    "166 unique variants (178 rows in attempts.jsonl, validation/final rows included). Costs: taker 0.07% per side, maker 0.02%",
+    "only on trade-through, funding on every settlement. Mean = bp per trade after costs; t = week-clustered (daily: Newey\u2013West).",
+    "FOMC dates come from federalreserve.gov. CPI/NFP not tested (bls.gov 403, FRED connection reset; no dates typed from memory).",
+    "| Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025\u201326 | Verdict |",
+    "| E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | \u221212\u2026\u221217, t \u22123\u2026\u22129 | \u221213\u2026\u221217, t \u22127\u2026\u221211 (n 800\u20133,200); gross \u2248 0 | FAIL |",
+    "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
+    "My own record: no readings scored yet (each is scored once its horizon has passed)."
+   ]
+  },
+  {
+   "title": "Swing trades (1-20 days)",
+   "lines": [
+    "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
+    "My own record: no readings scored yet (each is scored once its horizon has passed)."
+   ]
+  },
+  {
+   "title": "Holding (weeks-months)",
+   "lines": [
+    "Tested rule I can call: btc_gold_invvol (grade B, status paper). Evidence: edges/results/E94_result.json; edges/results/E97_result.json; edges/results/E97_leverage.json; edges/assets/BTC/FINDINGS.md",
+    "My own record: no readings scored yet (each is scored once its horizon has passed)."
+   ]
+  },
+  {
+   "title": "Habits I measure myself",
+   "lines": [
+    "Over the last 20 days the busiest session was New York (average hourly move 0.33%) and the quietest London (0.23%).",
+    "A typical day ranges 2.5% from low to high (last 60 days); 50% of those days closed higher.",
+    "Over the last 30 days the price moved -22.0% (a fact, not a forecast)."
+   ]
+  },
+  {
+   "title": "Right now",
+   "lines": [
+    "Price 64504.9; volatility regime extreme (hourly ATR 1.648% of price, 99.2th percentile).",
+    "Bitcoin trades 24/7; weekend liquidity is thinner."
+   ]
+  },
+  {
+   "title": "My calls so far",
+   "lines": [
+    "no calls yet: no tested rule for this asset has fired"
+   ]
+  }
+ ],
+ "runs": 1,
+ "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
+}
