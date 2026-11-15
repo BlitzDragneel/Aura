@@ -45,9 +45,17 @@ jobs:
           SCOUT_MODELS: ${{ github.workspace }}/state/scouts/models
           SCOUT_MODELS15: ${{ github.workspace }}/state/fast_scouts/models
         run: python -W ignore -m edges.assetbots run ../state | tail -n 10
+      - name: Alerts (Telegram / WhatsApp when the secrets are set)
+        working-directory: code
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+        run: python -m edges.alerts.notify ../state || true
       - name: Save
         working-directory: state
         run: |
           git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
-          git add -A assets; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
+          git add -A assets alerts; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
           for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
