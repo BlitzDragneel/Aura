@@ -36,7 +36,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 47.44; volatility regime extreme (hourly ATR 1.039% of price, 95.1th percentile).
+- Price 47.54; volatility regime active (hourly ATR 1.006% of price, 93.0th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAGUSD 48.71 (stale: market closed).
 

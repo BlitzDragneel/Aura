@@ -3,36 +3,36 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-15T06:42:30.842038+00:00",
+ "asof": "2026-11-15T08:28:05.894953+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 64504.9,
-  "bar": "2026-11-15T06:15:00+00:00",
+  "price": 63865.0,
+  "bar": "2026-11-15T08:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 64504.9,
-    "ma20": 64493.515,
-    "ma50": 64518.596,
-    "slope_atr": 0.95,
-    "bar": "2026-11-15T06:15:00+00:00"
+    "close": 63865.0,
+    "ma20": 64572.165,
+    "ma50": 64307.696,
+    "slope_atr": -0.45,
+    "bar": "2026-11-15T08:00:00+00:00"
    },
    "1h": {
     "state": "down",
-    "close": 64478.6,
-    "ma20": 65207.165,
-    "ma50": 67092.134,
-    "slope_atr": -0.68,
-    "bar": "2026-11-15T05:00:00+00:00"
+    "close": 63977.4,
+    "ma20": 64901.515,
+    "ma50": 66927.326,
+    "slope_atr": -0.66,
+    "bar": "2026-11-15T07:00:00+00:00"
    },
    "4h": {
     "state": "down",
-    "close": 64787.3,
-    "ma20": 69172.445,
-    "ma50": 72636.522,
-    "slope_atr": -1.25,
-    "bar": "2026-11-15T00:00:00+00:00"
+    "close": 63977.4,
+    "ma20": 68672.31999999999,
+    "ma50": 72399.74399999999,
+    "slope_atr": -1.31,
+    "bar": "2026-11-15T04:00:00+00:00"
    },
    "1d": {
     "state": "down",
@@ -44,9 +44,9 @@
    }
   },
   "volatility": {
-   "atr1h_pct": 1.648,
-   "atr1h_pctile": 99.2,
-   "atr1h": 1062.6857142857148,
+   "atr1h_pct": 1.588,
+   "atr1h_pctile": 98.8,
+   "atr1h": 1015.9785714285723,
    "rv20d_ann_pct": 49.2,
    "rv20d_pctile": 81.8,
    "day_range_pct_median": 2.47,
@@ -54,8 +54,8 @@
    "regime_daily": "active"
   },
   "session": {
-   "name": "Asia",
-   "utc_hour": 6,
+   "name": "London",
+   "utc_hour": 8,
    "weekday": "Sunday",
    "weekend": true,
    "note": "Bitcoin trades 24/7; weekend liquidity is thinner"
@@ -64,47 +64,47 @@
    "24h": {
     "high": 67487.4,
     "low": 61931.1,
-    "to_high_pct": 4.67,
-    "to_low_pct": 4.11,
-    "to_high_atr": 2.8,
-    "to_low_atr": 2.4,
-    "position": 0.46
+    "to_high_pct": 5.49,
+    "to_low_pct": 3.3,
+    "to_high_atr": 3.5,
+    "to_low_atr": 2.0,
+    "position": 0.37
    },
    "7d": {
     "high": 76160.0,
     "low": 61931.1,
-    "to_high_pct": 18.12,
-    "to_low_pct": 4.11,
-    "to_high_atr": 11.0,
-    "to_low_atr": 2.4,
-    "position": 0.18
+    "to_high_pct": 19.04,
+    "to_low_pct": 3.3,
+    "to_high_atr": 12.0,
+    "to_low_atr": 2.0,
+    "position": 0.14
    },
    "30d": {
     "high": 84876.0,
     "low": 63272.2,
-    "to_high_pct": 31.63,
-    "to_low_pct": 1.91,
-    "to_high_atr": 19.2,
-    "to_low_atr": 1.1,
-    "position": 0.06
+    "to_high_pct": 32.67,
+    "to_low_pct": 1.11,
+    "to_high_atr": 20.6,
+    "to_low_atr": 0.7,
+    "position": 0.03
    }
   },
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -6.09,
   "funding": {
-   "rate": 1.36334674083e-05,
-   "next_time": 1794729600000,
+   "rate": -1.5062248194e-06,
+   "next_time": 1794758400000,
    "source": "okx-swap"
   },
   "scouts": {
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.144,
+    "p_big_move": 0.161,
     "flag": false,
     "detail": {
-     "p_up_move": 0.065,
-     "p_down_move": 0.079
+     "p_up_move": 0.09,
+     "p_down_move": 0.071
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -113,11 +113,11 @@
    "swing": {
     "horizon": "24 h",
     "skill_ok": true,
-    "p_big_move": 0.588,
+    "p_big_move": 0.564,
     "flag": true,
     "detail": {
      "p_up_move": 0.085,
-     "p_down_move": 0.503
+     "p_down_move": 0.479
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -129,7 +129,7 @@
   "day": {
    "state": "WATCH",
    "since": "2026-11-15T06:42:30.842038+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "hourly volatility is high (99th percentile of the last 3 weeks)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -141,9 +141,10 @@
   "swing": {
    "state": "WATCH",
    "since": "2026-11-15T06:42:30.842038+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
-    "scout: 59% chance of a big move in 24 h (top of its range; direction unknown)",
+    "scout: 56% chance of a big move in 24 h (top of its range; direction unknown)",
+    "price is within 1 hourly ATR of its 30-day low: a break or a rejection is near",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
    ],
    "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -228,7 +229,7 @@
   {
    "title": "Habits I measure myself",
    "lines": [
-    "Over the last 20 days the busiest session was New York (average hourly move 0.33%) and the quietest London (0.23%).",
+    "Over the last 20 days the busiest session was New York (average hourly move 0.33%) and the quietest London (0.24%).",
     "A typical day ranges 2.5% from low to high (last 60 days); 50% of those days closed higher.",
     "Over the last 30 days the price moved -22.0% (a fact, not a forecast)."
    ]
@@ -236,7 +237,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 64504.9; volatility regime extreme (hourly ATR 1.648% of price, 99.2th percentile).",
+    "Price 63865.0; volatility regime extreme (hourly ATR 1.588% of price, 98.8th percentile).",
     "Bitcoin trades 24/7; weekend liquidity is thinner."
    ]
   },
@@ -247,6 +248,6 @@
    ]
   }
  ],
- "runs": 1,
+ "runs": 2,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

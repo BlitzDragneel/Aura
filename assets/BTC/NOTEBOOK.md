@@ -29,13 +29,13 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was New York (average hourly move 0.33%) and the quietest London (0.23%).
+- Over the last 20 days the busiest session was New York (average hourly move 0.33%) and the quietest London (0.24%).
 - A typical day ranges 2.5% from low to high (last 60 days); 50% of those days closed higher.
 - Over the last 30 days the price moved -22.0% (a fact, not a forecast).
 
 ## Right now
 
-- Price 64504.9; volatility regime extreme (hourly ATR 1.648% of price, 99.2th percentile).
+- Price 63865.0; volatility regime extreme (hourly ATR 1.588% of price, 98.8th percentile).
 - Bitcoin trades 24/7; weekend liquidity is thinner.
 
 ## My calls so far
