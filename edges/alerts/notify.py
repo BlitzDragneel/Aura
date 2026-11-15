@@ -77,6 +77,9 @@ def news_ahead(memory: dict, now: dt.datetime, client=None) -> list[str]:
                        "Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be "
                        "predicted in testing (E152). Wider stops or stand aside for the release.")
     memory["news_sent"] = sorted(seen)[-300:]
+    if len(out) > 1:   # several releases at once: one message
+        heads = [o.split("\n")[0] for o in out]
+        out = ["\n".join(heads) + "\n" + out[0].split("\n", 1)[1]]
     return out
 
 
