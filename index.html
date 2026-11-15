@@ -3603,7 +3603,7 @@ function render(){
   updateToTop();
 }
 const TAB_OF={learning:"learning",learn:"learning",path:"learning",vocab:"learning",letters:"learning",plans:"learning",memory:"learning",genealogies:"study",lineage:"study",story:"study",people:"study",places:"study",ask:"study",word:"study",lexicon:"study",topics:"study",chain:"study",concordance:"study",
-  books:"read",search:"read",apparatus:"read",canon:"read",prayer:"plans",
+  books:"read",search:"study",apparatus:"read",canon:"read",prayer:"more",help:"more",prefs:"more",adore:"home",jubguide:"study",
   marks:"more",keeper:"more",settings:"more",restore:"more",verify:"more",support:"more",about:"more",legal:"more"};
 function syncNav(){
   const tv=TAB_OF[currentView]||currentView;
@@ -7557,7 +7557,7 @@ function kSecsBy(list,key){
 const MODES=["Beginner","New Believer","Teen","Adult","Scholar","Pastor"];
 function toggle(path){
   const s=state.settings; const parts=path.split(".");
-  if(parts[0]==="theme"){ const d=THEMES[s.theme]&&THEMES[s.theme].base==="dark"; s.theme=d?"light":"dark"; }
+  if(parts[0]==="theme"){ const d=THEMES[s.theme]&&THEMES[s.theme].base==="dark"; s.themeMode="manual"; s.theme=(typeof themePair==="function")?themePair(!d):(d?"light":"dark"); toast(d?"Light mode":"Dark mode"); }
   else if(parts[0]==="contrast"){ s.contrast=s.contrast==="high"?"normal":"high"; }
   else if(parts[0]==="dys"){ s.dys=s.dys==="on"?"off":"on"; }
   saveSettings(); render();
@@ -7803,7 +7803,7 @@ function filterSettings(q){
   if(none&&!e){ e=document.createElement("div"); e.id="setEmpty"; e.className="set-empty"; e.textContent="No settings match that search."; list.appendChild(e); }
   else if(!none&&e){ e.remove(); }
 }
-function pickTheme(id){ state.settings.theme=id; saveSettings(); $$(".sw").forEach(x=>x.classList.toggle("on",x.dataset.t===id)); }
+function pickTheme(id){ state.settings.themeMode="manual"; state.settings.theme=id; saveSettings(); $$(".sw").forEach(x=>x.classList.toggle("on",x.dataset.t===id)); }
 function pickAccent(id){ state.settings.accent=id; saveSettings(); $$(".acc").forEach(x=>x.classList.toggle("on",x.dataset.a===id)); }
 function setSeg(btn,key,val){ state.settings[key]=val; saveSettings(); [...btn.parentNode.children].forEach(b=>b.classList.remove("on")); btn.classList.add("on"); }
 function setNum(btn,key,val){ state.settings[key]=val; saveSettings(); [...btn.parentNode.children].forEach(b=>b.classList.remove("on")); btn.classList.add("on"); const sl=btn.closest(".set-row").querySelector('input[type=range]'); if(sl) sl.value=val; }
@@ -8929,6 +8929,10 @@ try{
 const APP_VERSION="2026.11.14";
 const CHANGELOG=[
   {v:"2026.11.14", items:[
+    "Easier to get around: the top of every screen says where you are, one search box finds verses, screens and answers, typing a book name jumps to it, and Home has a search bar and your recently read chapters.",
+    "Press and hold any verse for bookmark, highlight, note, share and memorise. First time in the reader, a short card shows the rest.",
+    "Light and dark can now follow your phone automatically, and the moon button keeps your chosen colour.",
+    "Install The Scroll from Home in one tap where your browser allows it.",
     "Your settings stay put: the app asks the browser to keep its storage permanently, and a settings link carries your choices to another browser, the installed app or another device — open it once and setup is skipped.",
     "Help now knows the people and places of the Bible — ask “who is Ruth?” or “where is Bethel?” — and hands Bible questions straight to the Study engine.",
     "Prayer journal: a Lock button, an automatic lock after five minutes in the background, and a proper passphrase check.",
@@ -9433,7 +9437,7 @@ function injectManifest(){
     el.innerHTML=`<div class="cmdk-box">
       <div class="cmdk-in">
         <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-        <input id="cmdkInput" placeholder="Jump to a screen, or type a reference like John 3:16…" autocomplete="off" spellcheck="false">
+        <input id="cmdkInput" placeholder="Search the Bible, or go to a verse or screen…" autocomplete="off" spellcheck="false">
       </div>
       <div class="cmdk-list" id="cmdkList"></div>
       <div class="cmdk-foot"><span>↑↓ to move</span><span>↵ to open</span><span>esc to close</span></div>
@@ -9460,7 +9464,7 @@ function injectManifest(){
     // reference match first
     if(typeof parseRef==="function" && q){
       try{ const r=parseRef(q); if(r && state.corpus && state.corpus[r.id]){
-        out.push({kind:"ref",icon:"§",label:(r.name||r.id)+" "+r.ch+(r.v?":"+r.v:""),sub:"open this passage",act:()=>{ go("read",{id:r.id,ch:r.ch}); }});
+        out.push({kind:"ref",icon:"§",label:(r.name||r.id)+" "+r.ch+(r.v?":"+r.v:""),sub:"open this passage",act:()=>{ go("read",r.v?{id:r.id,ch:r.ch,v:r.v}:{id:r.id,ch:r.ch}); }});
       } }catch(e){}
     }
     const ql=q.toLowerCase();
@@ -9471,12 +9475,17 @@ function injectManifest(){
     // book jump (if a book name is typed)
     if(ql && typeof state!=="undefined" && state.books){
       for(const b of state.books){
-        const nm=(b.name||b.id||"");
-        if(nm.toLowerCase().startsWith(ql) && out.length<12)
-          out.push({kind:"book",icon:"📖",label:nm,sub:"open book",act:()=>go("read",{id:b.id,ch:1})});
+        const bid=Array.isArray(b)?b[0]:b.id, nm=String(Array.isArray(b)?b[1]:(b.name||b.id||""));
+        if(nm && nm.toLowerCase().startsWith(ql) && out.length<12)
+          out.push({kind:"book",icon:"📖",label:nm,sub:"open the book",act:()=>go("read",{id:bid,ch:1})});
       }
     }
-    return out.slice(0,14);
+    if(!q && typeof cmdkRecent==="function"){ try{ out.unshift(...cmdkRecent()); }catch(e){} }
+    if(q.length>=2 && !(out[0]&&out[0].kind==="ref") && typeof searchFor==="function")
+      out.splice(Math.min(out.length,2),0,{kind:"search",icon:"⌕",label:"Search the Bible for \u201c"+q+"\u201d",sub:"every verse, offline",act:()=>searchFor(q)});
+    const res=out.slice(0,13);
+    if(q.length>=3 && typeof helpSend==="function") res.push({kind:"help",icon:"?",label:"Ask Help: \u201c"+q+"\u201d",sub:"how to do anything in the app",act:()=>{ go("help"); setTimeout(()=>helpSend(q),260); }});
+    return res;
   }
   function renderCmdk(q){
     const list=document.getElementById("cmdkList"); if(!list) return;
@@ -9521,7 +9530,7 @@ function injectManifest(){
     const tts=document.getElementById("ttsBtn");
     if(!nav) return;
     const b=document.createElement("button");
-    b.id="jumpBtn"; b.className="iconbtn"; b.type="button"; b.title="Quick jump (Ctrl/⌘K)"; b.setAttribute("aria-label","Quick jump");
+    b.id="jumpBtn"; b.className="iconbtn"; b.type="button"; b.title="Search & go to (Ctrl/⌘K)"; b.setAttribute("aria-label","Search the Bible or go to a verse or screen");
     b.innerHTML=`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>`;
     b.onclick=openCmdk;
     if(tts&&tts.parentNode){ tts.parentNode.insertBefore(b,tts); } else { nav.appendChild(b); }
@@ -9710,6 +9719,21 @@ body:has(#helpLog) #totop{ display:none !important; }
 body[data-base="dark"] #chapterText .vn, body[data-base="dark"] .xrefdot{ color:var(--tx-2) !important; opacity:1 !important; }
 :is(p,.lead,.home-foot,.tiny) > a:not(.btn):not(.chip){ text-decoration:underline; text-underline-offset:2px; }
 button.set-chev{ border:0; background:none; font:inherit; color:var(--tx-3); min-width:36px; min-height:36px; margin-left:auto; cursor:pointer; border-radius:8px; }
+
+/* ---- nav 2026.11.15 ---- */
+#ttl{ overflow:hidden; text-overflow:ellipsis; max-width:52vw; }
+.home-search{ display:flex; align-items:center; gap:10px; width:100%; box-sizing:border-box; margin:0 0 14px; padding:13px 16px; min-height:50px;
+  border:1px solid var(--line-2); border-radius:14px; background:var(--paper); color:var(--tx-2); font:inherit; font-size:15px; text-align:left; cursor:pointer;
+  box-shadow:0 6px 18px -14px rgba(0,0,0,.45); }
+.home-search:hover{ border-color:var(--lapis); }
+.home-search svg{ flex:none; color:var(--lapis); }
+.home-recent{ margin:0 0 14px; } .home-recent .eyebrow{ display:block; margin-bottom:6px; }
+.home-install{ margin:0 0 16px; border-left:3px solid var(--gilt); }
+.home-install .upd-x{ border:0; background:none; color:var(--tx-2); font-size:16px; min-width:36px; min-height:36px; border-radius:8px; cursor:pointer; flex:none; }
+.home-install .upd-x:hover{ background:var(--vellum-2); }
+.rd-tips{ margin:10px 0 14px; border-left:3px solid var(--gilt); }
+.rd-tips ul{ margin:8px 0 12px; padding-left:18px; line-height:1.6; font-size:14px; color:var(--tx-2); }
+#chapterText .verse{ -webkit-touch-callout:none; }
 </style>
 <script>
 /* ============================================================
@@ -9753,7 +9777,7 @@ function setupColour(accent){
   state.settings.theme=(welcomeMode()==="dark")?row[3]:row[2];
   saveSettings(); try{ refreshBanner(); }catch(e){} setupPaint();
 }
-function setupMode(m){ WEL_MODE=m; setupColour(state.settings.accent||"default"); }
+function setupMode(m){ if(m==="auto"){ state.settings.themeMode="auto"; WEL_MODE=sysDark()?"dark":"light"; } else { state.settings.themeMode="manual"; WEL_MODE=m; } setupColour(state.settings.accent||"default"); }
 function setupSize(v){ state.settings.rscale=v; saveSettings(); setupPaint(); }
 function setupFont(f){ state.settings.rfont=f; state.settings.dys=(f==="dys")?"on":"off"; saveSettings(); setupPaint(); }
 function setupMotion(off){ state.settings.motion=off?"off":"auto"; saveSettings(); }
@@ -9775,9 +9799,11 @@ function setupStepHTML(i){
     <h2 class="su-h">Choose your look</h2>
     <p class="su-p">The whole app takes on your colour. Watch it change as you tap.</p>
     <div class="su-seg" role="group" aria-label="Light or dark">
-      <button class="${welcomeMode()==='light'?'on':''}" onclick="setupMode('light')">☀ Light</button>
-      <button class="${welcomeMode()==='dark'?'on':''}" onclick="setupMode('dark')">☾ Dark</button>
+      <button class="${s.themeMode==='auto'?'on':''}" onclick="setupMode('auto')">\u25D0 Auto</button>
+      <button class="${s.themeMode!=='auto'&&welcomeMode()==='light'?'on':''}" onclick="setupMode('light')">\u2600 Light</button>
+      <button class="${s.themeMode!=='auto'&&welcomeMode()==='dark'?'on':''}" onclick="setupMode('dark')">\u263E Dark</button>
     </div>
+    ${s.themeMode==='auto'?'<p class="tiny muted" style="margin:6px 0 0">Light by day, dark at night \u2014 it follows your phone.</p>':''}
     <div class="wel-cols" style="margin-top:12px">
       ${WELCOME_COLOURS.map(c=>`<button class="wel-col ${s.accent===c[1]?'on':''}" aria-pressed="${s.accent===c[1]}" onclick="setupColour('${c[1]}')">
         <i style="background:${c[1]==='default'?'#8c2e28':ACCENTS[c[1]]}"></i><span>${esc(c[0])}</span></button>`).join("")}
@@ -9815,7 +9841,7 @@ function setupStepHTML(i){
     <h2 class="su-h">${readerName()?("You’re all set, "+esc(readerName())):"You’re all set"}</h2>
     <p class="su-p">Here is what you chose. Tap Back to change anything.</p>
     <ul class="su-sum">
-      <li><span>Look</span><b>${esc(colName)} · ${welcomeMode()==="dark"?"Dark":"Light"}</b></li>
+      <li><span>Look</span><b>${esc(colName)} \u00b7 ${s.themeMode==="auto"?"Matches your device":(welcomeMode()==="dark"?"Dark":"Light")}</b></li>
       <li><span>Text</span><b>${esc(sizeName)} · ${esc(fontName)}</b></li>
       <li><span>Motion</span><b>${s.motion==="off"?"Reduced":"On"}</b></li>
       <li><span>Edition</span><b>${esc(transMeta(activeTrans()).label)}</b></li>
@@ -9849,6 +9875,7 @@ function setupGo(d){
 function setupOpen(again){
   if(document.getElementById("setup")) return;
   SETUP.step=0; SETUP.again=!!again;
+  if(!again && !state.settings.themeMode){ state.settings.themeMode="auto"; WEL_MODE=sysDark()?"dark":"light"; try{ setupColour(state.settings.accent||"default"); }catch(e){} }
   try{ closeSheet(); }catch(e){}
   const el=document.createElement("div"); el.id="setup";
   el.setAttribute("role","dialog"); el.setAttribute("aria-modal","true"); el.setAttribute("aria-label","Set up The Scroll");
@@ -10310,6 +10337,7 @@ function cleanStored(name,v){
     case "prayers": return Array.isArray(v)?v.filter(p=>obj(p)&&obj(p.data)&&typeof p.data.iv==="string"&&typeof p.data.ct==="string").map(p=>({id:+p.id||Date.now(),data:{iv:p.data.iv,ct:p.data.ct}})):[];
     case "prayerMeta": return (obj(v)&&typeof v.salt==="string")?{salt:v.salt,check:(obj(v.check)&&typeof v.check.iv==="string"&&typeof v.check.ct==="string")?{iv:v.check.iv,ct:v.check.ct}:undefined}:undefined;
     case "recentPlaces": return Array.isArray(v)?v.filter(x=>typeof x==="string"||typeof x==="number").slice(0,20):[];
+    case "history": return Array.isArray(v)?v.filter(x=>typeof x==="string"&&/^[a-z0-9]{2,6}\.\d{1,3}$/.test(x)).slice(0,12):[];
     case "setOpen": case "pathDone": case "teachDone": return Array.isArray(v)?v.filter(x=>typeof x==="string"&&SAFE_WORD.test(x)).slice(0,500):[];
     default: return v;
   }
@@ -10417,7 +10445,7 @@ function prayerLock(){ prayerKey=null; if(currentView==="prayer") render(); toas
       prayers or keys) to another browser, the installed app, or another
       device: open it once there and setup is skipped.
    ============================================================ */
-const PREF_KEYS=["theme","accent","contrast","dys","fscale","rscale","rfont","lh","ls","measure","justify","vn","motion","trans","glow","bannerStyle","wordtap","nameForm","perf","mode"];
+const PREF_KEYS=["themeMode","theme","accent","contrast","dys","fscale","rscale","rfont","lh","ls","measure","justify","vn","motion","trans","glow","bannerStyle","wordtap","nameForm","perf","mode"];
 function askPersist(){
   try{ if(navigator.storage&&navigator.storage.persist){ navigator.storage.persisted().then(p=>{ if(!p) navigator.storage.persist().catch(()=>{}); }).catch(()=>{}); } }catch(e){}
 }
@@ -10498,6 +10526,165 @@ if(store.get("noticeAccepted",false)) setTimeout(askPersist,4000);
 HELP_KB.push(
  {id:"keep",t:"Why setup keeps coming back / keeping your settings",k:"settings reset forget forgot keep keeps set save saved everytime remember preferences every each time always again asks asking lost login log in account sign in sync other device browser phone computer transfer",
   a:"Your preferences are saved on this device and stay when you close the app — there is no account to log into. Setup only appears again in a <b>different</b> browser, a private window, an app’s built-in browser (opening the link inside Instagram or Messenger), or the installed app on iPhone, because each keeps its own storage. To bring your settings there, use <b>Copy my settings link</b> below and open the link once. Installing the app to your home screen keeps everything safest.",v:null},
+);
+HELP_IDX=null;
+
+
+/* ============================================================
+   NAV 2026.11.15 — knowing where you are, and getting anywhere fast
+   ============================================================ */
+function sysDark(){ try{ return matchMedia("(prefers-color-scheme: dark)").matches; }catch(e){ return false; } }
+function themePair(dark){
+  const row=WELCOME_COLOURS.find(c=>c[1]===(state.settings.accent||"default"))||WELCOME_COLOURS[0];
+  const t=dark?row[3]:row[2]; return THEMES[t]?t:(dark?"dark":"light");
+}
+/* ---- light/dark that follows the device ---- */
+(function(){
+  const _as=applySettings;
+  window.applySettings=applySettings=function(){
+    try{ const s=state.settings; if(s&&s.themeMode==="auto"){ const t=themePair(sysDark()); if(s.theme!==t){ s.theme=t; try{ store.set("settings",s); }catch(e){} } } }catch(e){}
+    return _as.apply(this,arguments);
+  };
+  try{ matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{ if(state.settings.themeMode==="auto"){ applySettings(); try{ refreshBanner(); }catch(e){} } }); }catch(e){}
+})();
+function setThemeAuto(on){ state.settings.themeMode=on?"auto":"manual"; saveSettings(); render(); toast(on?"Light and dark now follow your device.":"Theme stays as you set it."); }
+
+/* ---- where am I: the header names the screen ---- */
+const SCREEN_NAMES={books:"The books",search:"Search",ask:"Ask a question",word:"Word study",lexicon:"Word & meaning",apparatus:"Manuscripts",
+  concordance:"Concordance",chain:"The chain",topics:"Topics",study:"Study",more:"More",places:"Places & maps",people:"People & families",story:"The story",
+  lineage:"Adam to Abraham",genealogies:"Genealogies of Jesus",path:"The path",vocab:"Hebrew & Greek words",letters:"Reading practice",learn:"Stories & teaching",
+  learning:"Learn",marks:"Marks & notes",plans:"Reading plans",memory:"Memorize",adore:"Adore the Father",prayer:"Prayer journal",settings:"Settings",
+  support:"How it stays free",restore:"The restored Name",legal:"Terms & privacy",about:"About",jubguide:"Jubilees guide",canon:"Enoch & Apocrypha",
+  verify:"Verification",keeper:"Your record",help:"Help",prefs:"Settings link"};
+function readTarget(){
+  const p=currentParams||{}; const lr=store.get("lastread",{id:"jhn",ch:1})||{};
+  const id=(p.id&&state.corpus&&state.corpus[p.id])?p.id:((lr.id&&state.corpus&&state.corpus[lr.id])?lr.id:"jhn");
+  let ch=+(p.id?p.ch:lr.ch)||1; try{ ch=Math.min(Math.max(ch,1),chapterCount(id)); }catch(e){}
+  return {id,ch};
+}
+function screenTitle(){
+  if(currentView==="home") return null;
+  if(currentView==="read"){ try{ if(!state.ready) return "Read"; const t=readTarget(); return bookName(t.id)+" "+chLabel(t.id,t.ch); }catch(e){ return "Read"; } }
+  return SCREEN_NAMES[currentView]||null;
+}
+function paintTitle(){
+  try{
+    const t=screenTitle(), tt=document.getElementById("ttl"), sb=document.getElementById("sub");
+    if(tt) tt.textContent=t||"The Scroll";
+    if(sb) sb.textContent=t?"The Scroll":"verified \u00b7 sources shown";
+    document.title=t?(t+" \u00b7 The Scroll"):"The Scroll \u2014 the whole Bible, offline";
+  }catch(e){}
+}
+(function(){ const _r=render; window.render=render=function(){ const r=_r.apply(this,arguments); paintTitle(); return r; }; })();
+
+/* ---- one search box for everything ---- */
+function searchFor(q){
+  q=String(q||"").trim(); go("search");
+  setTimeout(()=>{ const i=document.getElementById("q"); if(i){ i.value=q; i.dispatchEvent(new Event("input",{bubbles:true})); i.focus(); } },180);
+}
+function readHistory(){ const h=store.get("history",[]); return Array.isArray(h)?h:[]; }
+function cmdkRecent(){
+  const out=[]; if(!state.ready) return out;
+  for(const k of readHistory().slice(0,4)){ const [id,ch]=k.split("."); if(!state.corpus[id]) continue;
+    const label=bookName(id)+" "+chLabel(id,+ch);
+    out.push({kind:"ref",icon:"\u21BA",label,sub:"recently read",act:()=>go("read",{id,ch:+ch})}); }
+  return out;
+}
+
+/* ---- remember chapters as they are read ---- */
+(function(){
+  const _ra=VIEWS.read_after;
+  VIEWS.read_after=function(p){
+    const r=_ra.apply(this,arguments);
+    try{ if(state.ready){ const t=readTarget(); const k=t.id+"."+t.ch; const h=readHistory().filter(x=>x!==k); h.unshift(k); store.set("history",h.slice(0,12)); } }catch(e){}
+    try{ readerTips(); }catch(e){}
+    return r;
+  };
+})();
+
+/* ---- first time in the reader: a short card on how it works ---- */
+function readerTips(){
+  if(store.get("tipsRead",false)||document.getElementById("rdTips")) return;
+  const ct=document.getElementById("chapterText"); if(!ct) return;
+  ct.insertAdjacentHTML("beforebegin",`<div class="card rd-tips" id="rdTips" role="note">
+    <div class="eyebrow">Getting around the reader</div>
+    <ul>
+      <li><b>Tap a word</b> to see what it means and where else it appears.</li>
+      <li><b>Press and hold a verse</b> (or tap its number) to bookmark, highlight, add a note, share or memorise it.</li>
+      <li><b>Swipe left or right</b>, or use \u2039 \u203A, for the next or previous chapter.</li>
+      <li><b>#</b> goes to any book, chapter or verse. <b>A\u2212 A+</b> change the text size.</li>
+      <li>The <b>speaker</b> at the top reads the chapter aloud.</li>
+    </ul>
+    <button class="btn pri" onclick="tipsDone()">Got it</button></div>`);
+}
+function tipsDone(){ try{ store.set("tipsRead",Date.now()); }catch(e){} const t=document.getElementById("rdTips"); if(t) t.remove(); }
+
+/* ---- press and hold a verse to open its actions ---- */
+(function(){
+  let tm=0, sx=0, sy=0, fired=false;
+  const cancel=()=>{ clearTimeout(tm); tm=0; };
+  document.addEventListener("touchstart",e=>{
+    const v=e.target&&e.target.closest?e.target.closest("#chapterText .verse"):null; if(!v||e.touches.length!==1) return;
+    fired=false; sx=e.touches[0].clientX; sy=e.touches[0].clientY; cancel();
+    tm=setTimeout(()=>{ tm=0; fired=true; try{ if(navigator.vibrate) navigator.vibrate(12); }catch(_){}
+      try{ const s=window.getSelection(); if(s) s.removeAllRanges(); }catch(_){}
+      openVerse(v.dataset.id,+v.dataset.ch,+v.dataset.v); },520);
+  },{passive:true});
+  document.addEventListener("touchmove",e=>{ if(!tm) return; const t=e.touches[0]; if(Math.abs(t.clientX-sx)>10||Math.abs(t.clientY-sy)>10) cancel(); },{passive:true});
+  document.addEventListener("touchend",e=>{ cancel(); if(fired){ fired=false; e.preventDefault(); } },{passive:false});
+  document.addEventListener("touchcancel",cancel,{passive:true});
+  /* desktop: right-click a verse */
+  document.addEventListener("contextmenu",e=>{ const v=e.target&&e.target.closest?e.target.closest("#chapterText .verse"):null; if(!v) return; e.preventDefault(); openVerse(v.dataset.id,+v.dataset.ch,+v.dataset.v); });
+})();
+
+/* ---- Home: a search bar, recently read, and install in one tap ---- */
+function homeExtrasHTML(){
+  let h=`<button class="home-search" type="button" onclick="openCmdk()" aria-label="Search the Bible, or go to a verse or screen">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    <span>Search the Bible, or type a verse like John 3:16</span></button>`;
+  try{
+    const hist=readHistory().slice(1,5).map(k=>k.split(".")).filter(([id])=>state.corpus&&state.corpus[id]);
+    if(hist.length) h+=`<div class="home-recent"><span class="eyebrow">Recently read</span><div class="chips">${hist.map(([id,ch])=>`<a class="chip" href="#/read?id=${encodeURIComponent(id)}&ch=${+ch}">${esc(bookName(id)+" "+chLabel(id,+ch))}</a>`).join("")}</div></div>`;
+  }catch(e){}
+  try{
+    if(!isStandalone() && isHostedHTTPS() && !store.get("installDismissed",false)){
+      h+=`<div class="card home-install"><div class="row" style="justify-content:space-between;align-items:flex-start;gap:10px">
+        <div><b>Put The Scroll on your home screen</b><p class="tiny muted" style="margin:4px 0 0">It opens like an app and works with no signal.</p></div>
+        <button class="upd-x" aria-label="Not now" onclick="installDismiss()">\u2715</button></div>
+        <div style="margin-top:10px" id="homeInstallBody">${installCardHTML()}</div></div>`;
+    }
+  }catch(e){}
+  return h;
+}
+function installDismiss(){ try{ store.set("installDismissed",Date.now()); }catch(e){} const c=document.querySelector(".home-install"); if(c) c.remove(); }
+(function(){
+  const _h=VIEWS.home;
+  VIEWS.home=function(){ const html=_h.apply(this,arguments); const k='<div class="row" style="margin-bottom:16px">'; const i=html.indexOf(k);
+    return i<0?homeExtrasHTML()+html:html.slice(0,i)+homeExtrasHTML()+html.slice(i); };
+  const _ric=refreshInstallCard;
+  window.refreshInstallCard=refreshInstallCard=function(){ const r=_ric.apply(this,arguments); try{ const el=document.getElementById("homeInstallBody"); if(el) el.innerHTML=installCardHTML(); if(isStandalone()) installDismiss(); }catch(e){} return r; };
+})();
+
+/* ---- Settings: "Match my device" above the theme swatches ---- */
+(function(){
+  const _sa=VIEWS.settings_after;
+  VIEWS.settings_after=function(){
+    const r=_sa.apply(this,arguments);
+    try{ const sw=document.querySelector("#view .sw"); if(sw&&!document.getElementById("autoThemeTog")){
+      const auto=state.settings.themeMode==="auto";
+      sw.parentElement.insertAdjacentHTML("beforebegin",`<label class="su-tog" id="autoThemeTog" style="margin:0 0 10px"><input type="checkbox" ${auto?"checked":""} onchange="setThemeAuto(this.checked)">
+        <span>Match my device<small>Light by day, dark at night \u2014 follows your phone\u2019s setting and keeps your colour.</small></span></label>`); } }catch(e){}
+    return r;
+  };
+})();
+
+HELP_KB.push(
+ {id:"hold",t:"Bookmarking, highlighting or noting a verse",k:"press hold long press verse tap verse number actions bookmark highlight note share memorize copy select",
+  a:"In the reader, <b>press and hold any verse</b> (or tap its small number). A panel opens to bookmark, highlight, add a note, copy, share, memorise or follow cross-references. On a computer, right-click the verse.",v:"read",b:"Open the reader"},
+ {id:"auto",t:"Dark mode that follows your phone",k:"automatic auto dark mode night system device follow schedule sunset match",
+  a:"Turn on <b>Match my device</b> in <b>Settings \u2192 Theme</b>, or choose <b>Auto</b> in setup. The app then goes dark when your phone does and keeps your colour. Tapping the moon switches back to manual.",v:"settings",b:"Open Settings"},
+ {id:"recent",t:"Finding what you read recently",k:"recent recently history last read previous chapters where was i back",
+  a:"<b>Recently read</b> on Home lists your last chapters, and the search box at the top shows them before you type. <b>Continue reading</b> takes you back to the exact verse.",v:"home",b:"Go to Home"}
 );
 HELP_IDX=null;
 
