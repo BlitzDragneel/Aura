@@ -2,7 +2,7 @@
 
 Rule (fixed, as tested): on a closed 15-minute bar, if the 4-hour change of open interest has z >= 2 against the last
 7 days AND price moved >= 2 ATR14 over those 4 hours, follow the move. Paper trade: entry at the next bar's open,
-stop 1.5 ATR, target 3 ATR, closed after 4 hours. NOT a passed rule: it is logged to see whether it holds up.
+stop 1.5 ATR, target 3 ATR, closed after 4 hours. NOT a passed rule; E145 failed to replicate it on nine other markets, so treat it as unproven. Logged to see whether it holds up.
 Open interest: Binance (as tested) when reachable, else OKX's own XAU/XAG swap (a different venue: labelled).
 
 Usage: python -m edges.watch.oi_move <state_dir>
@@ -120,7 +120,7 @@ def step(asset, root: Path, c):
     if sg and sg["dir"] and st.get("open") is None and sg["bar"] > st.get("last_bar", 0):
         st["open"] = dict(bar=sg["bar"], dir=sg["dir"], atr=sg["atr"], z_oi=sg["z_oi"], r4_pct=sg["r4_pct"], oi_source=src, entry=None)
         side = "BUY" if sg["dir"] == 1 else "SELL"
-        msgs.append(f"🧪 {name} WATCH-LIST signal (grade C, paper only, not a passed rule): open interest jumped (z {sg['z_oi']}) while price moved "
+        msgs.append(f"🧪 {name} WATCH-LIST signal (grade C, paper only, NOT a passed rule; failed on other markets): open interest jumped (z {sg['z_oi']}) while price moved "
                     f"{sg['r4_pct']:+.2f}% in 4h → {side} near {sg['close']:,.2f}, stop {sg['close'] - sg['dir'] * 1.5 * sg['atr']:,.2f}, "
                     f"target {sg['close'] + sg['dir'] * 3 * sg['atr']:,.2f}, 4h max.")
     if sg:

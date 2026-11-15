@@ -358,3 +358,13 @@ Reading: consistent sign on FINAL in both metals and every nearby setting, stron
 validation window is flat/negative for 4h holds and samples are small (11 months of these markets exist).
 Not promoted. edges/watch/oi_move.py now logs every signal forward as a paper trade (gold and silver, 4h version as
 tested) and sends it to the alert channels labelled "watch-list, paper only"; ~50 closed trades decide.
+
+## Lead — E145 "OI-confirmed move" on nine markets it had never seen (md5 2b55cb6a…): FAIL — the gold/silver lead is not replicated
+Identical rule, no tuning. After costs, mean per trade (all history since listing):
+platinum −8.4 / −11.0 bp (4h / 24h), palladium −14.4 / −25.2, copper −11.1 / −10.2, natural gas −12.8 / −12.4,
+crude −31.4 / −42.3, QQQ −13.9 / −3.3, SPY −7.7 / −18.4, ETH −10.8 / +13.2 (t 0.5), SOL −22.9 / −29.3.
+Pooled commodities: 4h −13.9 bp (t −5.9, n 820; random control −7.9), 24h −18.1 (t −3.2, n 506; control −2.3). Positive
+in 0 of 5 commodity markets for both holds; worse than random entries.
+Verdict: FAIL. The E143/E144 result on gold and silver is most likely a period effect (both metals trended hard in
+Sep–Nov 2026), not a property of open-interest jumps. The forward paper log (edges/watch/oi_move.py) keeps running as
+grade C, now with this evidence against it; it is not to be promoted without ~50 forward trades.
