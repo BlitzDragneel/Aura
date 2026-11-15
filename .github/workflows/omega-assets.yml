@@ -13,6 +13,7 @@ concurrency:
   cancel-in-progress: false
 env:
   CODE_REF: claude/trading-edge-research-bots-gpkvi1
+  OMEGA_OUTBOX: ${{ github.workspace }}/state/alerts/outbox.md   # every alert is written here; the Live API forwards it
 jobs:
   desks:
     runs-on: ubuntu-latest
@@ -39,29 +40,14 @@ jobs:
           SCOUT_MODELS: ${{ github.workspace }}/state/scouts/models
           SCOUT_MODELS15: ${{ github.workspace }}/state/fast_scouts/models
         run: python -W ignore -m edges.assetbots run ../state | tail -n 10
-      - name: Alerts (Telegram / WhatsApp when the secrets are set)
+      - name: Alerts (morning read, WATCH, tested-rule calls)
         working-directory: code
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
-          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python -m edges.alerts.notify ../state || true
       - name: Watch-list rule (OI-confirmed move on gold and silver, paper log)
         working-directory: code
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
-          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python -W ignore -m edges.watch.oi_move ../state || true
-      - name: Signal Lab (paper signals on five markets, scored; sends the day's signals)
+      - name: Signal Lab (event alerts and paper signals on five markets, scored)
         working-directory: code
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
-          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python -W ignore -m edges.siglab.lab ../state || true
       - name: Save
         working-directory: state
@@ -69,3 +55,6 @@ jobs:
           git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
           git add -A assets alerts watch siglab; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
           for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
+      - name: Deliver alerts (the Live API holds the Telegram / WhatsApp details)
+        working-directory: state
+        run: curl -s -m 150 --retry 2 "https://omega-live-api.onrender.com/alerts/pump?sha=$(git rev-parse HEAD)" || true
