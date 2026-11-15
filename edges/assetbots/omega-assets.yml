@@ -48,27 +48,12 @@ jobs:
         run: python -W ignore -m edges.assetbots run ../state | tail -n 10
       - name: Alerts (Telegram / WhatsApp when the secrets are set)
         working-directory: code
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
-          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python -m edges.alerts.notify ../state || true
       - name: Watch-list rule (OI-confirmed move on gold and silver, paper log)
         working-directory: code
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
-          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python -W ignore -m edges.watch.oi_move ../state || true
       - name: Signal Lab (paper signals on five markets, scored; sends the day's signals)
         working-directory: code
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
-          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
         run: python -W ignore -m edges.siglab.lab ../state || true
       - name: Save
         working-directory: state
