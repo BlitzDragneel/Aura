@@ -36,6 +36,17 @@ class Prices:
                 errors.append(f"{fn.__name__}: {type(e).__name__} {e}"[:160])
         raise RuntimeError("; ".join(errors))
 
+    def candles15(self, symbol: str):
+        """About 3 days of CLOSED 15-minute bars in one call for perpetuals (OKX); None for other instruments."""
+        name, spec = instrument(symbol)
+        if spec["kind"] != "perp":
+            return None
+        r = self.c.get("https://www.okx.com/api/v5/market/candles",
+                       params=dict(instId=spec["data"].replace("USDT", "") + "-USDT-SWAP", bar="15m", limit="300"))
+        r.raise_for_status()
+        d = r.json().get("data") or []
+        return sorted([dict(t=int(k[0]), o=float(k[1]), h=float(k[2]), l=float(k[3]), c=float(k[4])) for k in d if k[8] == "1"], key=lambda x: x["t"])
+
     def _binance(self, sym, a, b):
         out, t = [], a - a % 60_000
         while t < b and len(out) < 20_000:

@@ -36,11 +36,60 @@ from edges.alerts.notify import send
 from edges.auditor import core
 from edges.auditor.data import Prices
 
-MARKETS = {"XAUUSD": "Gold", "XAGUSD": "Silver", "BTCUSD": "Bitcoin", "NAS100": "Nasdaq 100", "US30": "Dow 30"}
+MARKETS = {"XAUUSD": "Gold", "XAGUSD": "Silver", "BTCUSD": "Bitcoin", "NAS100": "Nasdaq 100", "US30": "Dow 30",
+           "ETHUSD": "Ethereum", "SOLUSD": "Solana", "BNBUSD": "BNB", "XRPUSD": "XRP", "DOGEUSD": "Dogecoin", "ADAUSD": "Cardano",
+           "AVAXUSD": "Avalanche", "LINKUSD": "Chainlink", "LTCUSD": "Litecoin", "SUIUSD": "Sui"}
+CORE = {"XAUUSD", "XAGUSD", "BTCUSD", "NAS100", "US30"}     # every event alert is sent for these
+COIN_LIVE = {"S2", "S7"}                                    # other coins: only breakouts and big moves are sent (plus anything graded)
 SETUPS = {"S1": "trend pullback", "S2": "breakout", "S3": "stretch fade", "S4": "fib pullback", "S5": "session drive", "S6": "daily bias",
           "S7": "big move"}
 LIVE = {"S1": "TREND resuming", "S2": "BREAKOUT", "S4": "PULLBACK in a strong move", "S5": "SESSION DRIVE", "S7": "BIG MOVE under way"}  # alerted as they happen
 H = 3_600_000
+
+
+def frames15(rows):
+    f = pd.DataFrame(rows).set_index(pd.to_datetime([b["t"] for b in rows], unit="ms", utc=True))[["o", "h", "l", "c"]]
+    h1 = f.resample("1h").agg(dict(o="first", h="max", l="min", c="last")).dropna()
+    now = pd.Timestamp.now(tz="UTC")
+    return f, h1[h1.index + pd.Timedelta("1h") <= now]
+
+
+def digits(px):
+    return max(0, 5 - len(str(int(px)))) if px >= 1 else 6
+
+
+def review(s, r, ctx_stats):
+    """Plain-language reason for a closed signal: what price did, and how this kind of signal has done in this state."""
+    R = s["R"]
+    spec = core.instrument(s["symbol"])[1]
+    pip = spec["pip"] or s["ref_price"] * 1e-4
+    mfe, mae = r["mfe_pips"] * pip / R, r["mae_pips"] * pip / R
+    mins = round((r["ladder"]["exit_ms"] - r["fill_ms"]) / 60000)
+    o = r["ladder"]["outcome"]
+    st_ = s.get("state") or {}
+    if o == "SL":
+        why = (f"Stopped out after {mins} min. Price never reached TP1 (best was {mfe:.1f}R in favour, TP1 needs 0.5R)." if mfe < 0.5
+               else f"Stopped out after {mins} min.")
+        if st_ and not st_.get("with_trend"):
+            why += " The signal was against the 15-minute trend."
+        if st_.get("vol") == "high":
+            why += " Volatility was high, so a 1R stop was easy to hit."
+        if st_.get("shape") == "compressed":
+            why += " The range was compressed: breaks from tight ranges often fail first."
+    elif o.endswith("+BE"):
+        why = f"Reached {o.split('+')[0]} then came back to the entry (best {mfe:.1f}R). Partial profit kept by moving the stop to entry."
+    elif o.startswith("TP5"):
+        why = f"All five targets hit in {mins} min: the move kept going ({mfe:.1f}R)."
+    elif "timeout" in o:
+        why = f"Closed at the 24-hour limit ({o}); the move stalled (best {mfe:.1f}R, worst -{mae:.1f}R)."
+    else:
+        why = f"{o} after {mins} min (best {mfe:.1f}R, worst -{mae:.1f}R)."
+    if st_:
+        k = f"{s['setup']} | {'with' if st_.get('with_trend') else 'against'} trend"
+        c = ctx_stats.get(k)
+        if c and c["n"] >= 3:
+            why += f" Lesson so far: {SETUPS[s['setup']]} {'with' if st_.get('with_trend') else 'against'} the trend: {c['n']} closed, avg {c['avg_R']:+.2f}R, {round(c['win'] * 100)}% won."
+    return why
 
 
 def frames(bars):
@@ -114,9 +163,9 @@ def detect(f, h1):
 
 def make(sym, setup, d, why, ctx):
     name, spec = core.instrument(sym)
-    dec = 2 if spec["pip"] >= 0.1 else 3
     px = ctx["price"]
-    R = max(ctx["R"], 6 * spec["spread"], 0.002 * px)   # stop never tighter than 6 spreads or 0.2% of price (about 8 USD on gold)
+    dec = (2 if spec["pip"] >= 0.1 else 3) if spec.get("pip") else digits(px)
+    R = max(ctx["R"], 6 * (spec["spread"] if spec.get("spread") is not None else px * spec["spread_frac"]), 0.002 * px)   # stop never tighter than 6 spreads or 0.2% of price (about 8 USD on gold)
     return dict(id=f"{name}-{setup}-{ctx['bar_close_ms']}", symbol=name, setup=setup, side="buy" if d == 1 else "sell", why=why,
 state=dict(ctx.get("state") or {}, with_trend=(ctx.get("state") or {}).get("trend") == ("up" if d == 1 else "down")),
                 logged_ms=ctx["bar_close_ms"], ref_price=round(px, dec), stop=round(px - d * R, dec),
@@ -165,13 +214,21 @@ def main(state_dir, prices=None, now_ms=None, client=None):
             by.setdefault((s["symbol"], s["setup"]), []).append(s["R_ladder"])
     for sym in MARKETS:
         try:
-            bars, src = px.bars(sym, now_ms - 72 * H, 72)
+            rows15 = px.candles15(sym) if hasattr(px, "candles15") else None
+            opens = [s for s in S["signals"] if s["symbol"] == sym and s["status"] == "open"]
+            if rows15 is None:
+                bars, src = px.bars(sym, now_ms - 72 * H, 72)
+            elif opens:
+                t0 = min(s["logged_ms"] for s in opens)
+                bars, src = px.bars(sym, t0, min(30, (now_ms - t0) / H + 0.1))
+            else:
+                bars, src = [], "okx-15m"
         except Exception as e:
             print(sym, "data error", str(e)[:120])
             continue
-        # score open signals of this market on the same bars
+        # score open signals of this market
         for s in S["signals"]:
-            if s["symbol"] != sym or s["status"] != "open":
+            if s["symbol"] != sym or s["status"] != "open" or not bars:
                 continue
             sg = core.Signal(symbol=sym, side=s["side"], logged_ms=s["logged_ms"], stop=s["stop"], targets=s["targets"], id=s["id"])
             r = core.score(sg, bars, fill_hours=1, max_hold_h=24)
@@ -179,11 +236,12 @@ def main(state_dir, prices=None, now_ms=None, client=None):
                 s.update(status="closed", fill=r["fill"], outcome=r["ladder"]["outcome"], R_ladder=r["ladder"]["R"], R_tp1=r["tp1"]["R"],
                          pips=r["ladder"]["pips"], closed_ms=r["ladder"]["exit_ms"], source=src)
                 by.setdefault((sym, s["setup"]), []).append(s["R_ladder"])
+                s["review"] = review(s, r, S.get("record_by_context") or {})
                 if s.get("sent"):
-                    msgs.append(f"{'✅' if s['R_ladder'] > 0 else ('➖' if s['R_ladder'] == 0 else '❌')} {MARKETS[sym]} {s['side'].upper()} ({SETUPS[s['setup']]}) closed: {s['outcome']}, {s['R_ladder']:+.2f}R ({s['pips']:+.0f} pips)")
+                    msgs.append(f"{'✅' if s['R_ladder'] > 0 else ('➖' if s['R_ladder'] == 0 else '❌')} {MARKETS[sym]} {s['side'].upper()} ({SETUPS[s['setup']]}) closed: {s['outcome']}, {s['R_ladder']:+.2f}R ({s['pips']:+.0f} pips)\nWhy: {s['review']}")
             elif now_ms - s["logged_ms"] > 80 * H:
                 s.update(status="expired")
-        f, h1 = frames(bars)
+        f, h1 = frames15(rows15) if rows15 else frames(bars)
         found, ctx = detect(f, h1)
         if not ctx or now_ms - ctx["bar_close_ms"] > 20 * 60_000:      # stale data (market closed): no new signals
             continue
@@ -196,7 +254,7 @@ def main(state_dir, prices=None, now_ms=None, client=None):
             rec = stats(by.get((sym, setup), []))
             g = grade(rec)
             sig["grade_at_issue"] = g
-            if g != "PAPER" or setup in LIVE:        # alert when the move/breakout/trend happens; forecasts (S3, S6) only once they earn trust
+            if g != "PAPER" or (setup in LIVE and (sym in CORE or setup in COIN_LIVE)):        # alert when the move/breakout/trend happens; forecasts (S3, S6) only once they earn trust
                 sig["sent"] = True
                 msgs.append(text(sig, g, rec))
             new.append(sig)
@@ -231,7 +289,7 @@ def main(state_dir, prices=None, now_ms=None, client=None):
           "| setup · market | closed | avg R | t | won | grade |", "|---|---|---|---|---|---|"]
     md += [f"| {k} | {v['n']} | {v['avg_R']} | {v['t']} | {v['win']} | {v['grade']} |" for k, v in table.items()]
     md += ["", "## Latest signals", ""] + [f"- {time.strftime('%d %b %H:%M', time.gmtime(s['logged_ms'] / 1000))} {s['symbol']} {s['side']} {s['setup']} @ {s['ref_price']} SL {s['stop']} → {s['status']}"
-                                           + (f" {s.get('outcome')} {s.get('R_ladder'):+.2f}R" if s["status"] == "closed" else "") for s in S["signals"][-40:][::-1]]
+                                           + (f" {s.get('outcome')} {s.get('R_ladder'):+.2f}R. {s.get('review', '')}" if s["status"] == "closed" else "") for s in S["signals"][-60:][::-1]]
     (root / "SIGNALS.md").write_text("\n".join(md))
     res = send("\n\n".join(msgs), client) if msgs else {}
     print(f"siglab: {len(new)} new, {len(msgs)} messages, channels {res or 'none'}; record {S['record']['all']}")

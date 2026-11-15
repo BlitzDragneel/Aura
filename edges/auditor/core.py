@@ -52,6 +52,9 @@ def instrument(sym: str) -> tuple[str, dict]:
         jpy = s.endswith("JPY")
         return s, dict(pip=0.01 if jpy else 0.0001, usd_per_unit_per_lot=100_000.0, spread=0.015 if jpy else 0.00015,
                        data=f"{s}=X", kind="yahoo", quote=s[3:])
+    m = re.fullmatch(r"([A-Z0-9]{2,12}?)(USDT|USD)", s)
+    if m:   # any other crypto perpetual: costs and "pips" as fractions of price (1 pip = 0.01%)
+        return m.group(1) + "USD", dict(pip=None, usd_per_unit_per_lot=1.0, spread=None, spread_frac=0.0006, data=m.group(1) + "USDT", kind="perp")
     raise ValueError(f"unknown instrument {sym!r}")
 
 
@@ -211,7 +214,8 @@ def score(sig: Signal, bars: list[dict], fill_hours: float = 24.0, max_hold_h: f
     if i is None:
         waited = (bars[-1]["t"] - bars[0]["t"]) / 3_600_000
         return {**out, "status": "not filled" if waited >= fill_hours else "waiting for entry"}
-    cost = spec["spread"]
+    cost = spec["spread"] if spec.get("spread") is not None else px * spec["spread_frac"]
+    spec = dict(spec, pip=spec["pip"] or px * 1e-4)
     risk = abs(px - sig.stop) if sig.stop is not None else None
     if risk is not None and risk == 0:
         risk = None
