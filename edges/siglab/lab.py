@@ -205,9 +205,50 @@ def history_line(sig):
     return f"\n⏪ On this market's recent history: {h['n']} of these, {round((h['win'] or 0) * 100)}% ended positive, average {h['avg_R']:+.2f}R"
 
 
+ADAPT: dict = {}   # filled by adapt() from the FORWARD record each run; it overrides the backtest priors
+
+
+def side_key(sig):
+    return f"{sig['setup']} {'with' if (sig.get('state') or {}).get('with_trend') else 'against'}"
+
+
+def adapt(S: dict) -> list[str]:
+    """Self-learning without anyone present: every setup x trend-side cell (pooled over all markets) is judged on its own
+    forward record. 30+ closed with average < 0 and t <= -1.5 -> muted; a cell muted by the backtest that earns 30+ closed
+    with average > 0 and t >= 1.5 -> unmuted. Changes are logged in S["adapt_log"] and announced."""
+    cells = {}
+    for x in S["signals"]:
+        if x["status"] == "closed" and x.get("R_ladder") is not None and x.get("state"):
+            cells.setdefault(side_key(x), []).append(x["R_ladder"])
+    new = {}
+    for k, v in cells.items():
+        st = stats(v)
+        if st["n"] >= 30 and (st["avg_R"] or 0) < 0 and (st["t"] or 0) <= -1.5:
+            new[k] = dict(state="muted", **st)
+        elif st["n"] >= 30 and (st["avg_R"] or 0) > 0 and (st["t"] or 0) >= 1.5:
+            new[k] = dict(state="earned", **st)
+    old = S.get("adapt") or {}
+    msgs = []
+    for k in sorted(set(new) | set(old)):
+        a, b = (old.get(k) or {}).get("state"), (new.get(k) or {}).get("state")
+        if a != b:
+            setup, side = k.split()
+            v = new.get(k) or {}
+            line = (f"🔁 Learning: {SETUPS[setup]} {side} the trend is now {'MUTED (no trade plans)' if b == 'muted' else ('EARNED (trade plans sent again, tagged)' if b == 'earned' else 'back to normal')}"
+                    + (f" after {v['n']} live signals averaging {v['avg_R']:+.2f}R." if v else "."))
+            msgs.append(line)
+            S.setdefault("adapt_log", []).append(dict(ms=int(time.time() * 1000), cell=k, frm=a, to=b, **({k2: v[k2] for k2 in ('n', 'avg_R', 't')} if v else {})))
+    S["adapt"] = new
+    ADAPT.clear(); ADAPT.update(new)
+    return msgs
+
+
 def prior(sig):
-    """('muted'|'plus'|None, avg R on the replay's final period) for this setup and trend side (E148)."""
-    k = f"{sig['setup']} {'with' if (sig.get('state') or {}).get('with_trend') else 'against'}"
+    """('muted'|'plus'|None, avg R) for this setup and trend side: the forward record first, then the backtests (E148/E149)."""
+    k = side_key(sig)
+    if k in ADAPT:
+        a = ADAPT[k]
+        return ("muted" if a["state"] == "muted" else "earned"), a["avg_R"]
     p = PRIORS.get(sig["symbol"]) or {}
     if k in (p.get("muted") or {}):
         return "muted", p["muted"][k]
@@ -222,11 +263,14 @@ def text(sig, g, rec):
     pk, pv = prior(sig)
     if pk == "muted" and g == "PAPER":
         st0 = sig.get("state") or {}
+        src = "its live record" if ADAPT.get(side_key(sig)) else "past data"
         return (f"⚡ {MARKETS[sig['symbol']]}: {LIVE.get(sig['setup'], SETUPS[sig['setup']])} right now ({sig['why']}), price ~{sig['ref_price']}\n"
                 f"Market now: trend {st0.get('trend')}, volatility {st0.get('vol')}, {st0.get('session')} session\n"
-                f"ℹ️ No trade plan: on past data, trading this kind of move {'with' if st0.get('with_trend') else 'against'} the trend lost money (avg {pv:+.2f}R). Logged and scored anyway.")
+                f"ℹ️ No trade plan: on {src}, trading this kind of move {'with' if st0.get('with_trend') else 'against'} the trend lost money (avg {pv:+.2f}R). Logged and scored anyway.")
     name = MARKETS[sig["symbol"]]
     tag = {"CONFIDENT": "🟢 CONFIDENT", "PROMISING": "🟡 PROMISING", "PAPER": "🧪 PAPER (untested, do not trade)"}[g]
+    if pk == "earned":
+        tag += f"\n✅ EARNED LIVE (this setup averaged {pv:+.2f}R over its live signals)"
     if pk == "plus":
         tag += f"\n📈 BACKTEST+ (made {pv:+.2f}R per signal on past data; live record still needed)"
     tag += history_line(sig)
@@ -277,7 +321,7 @@ def main(state_dir, prices=None, now_ms=None, client=None):
     S = json.loads(sf.read_text()) if sf.exists() else dict(signals=[], sent_day={}, digest_day="")
     px = prices or Prices()
     now_ms = now_ms or int(time.time() * 1000)
-    msgs, new = [], []
+    msgs, new = adapt(S), []
     by = {}
     for s in S["signals"]:
         if s["status"] == "closed" and s.get("R_ladder") is not None:
@@ -328,6 +372,7 @@ def main(state_dir, prices=None, now_ms=None, client=None):
                 sig["sent"] = True
                 msgs.append(text(sig, g, rec))
             new.append(sig)
+    msgs += adapt(S)
     msgs += scout_flags(Path(state_dir), S)
     S["signals"] += new
     S["signals"] = S["signals"][-5000:]
