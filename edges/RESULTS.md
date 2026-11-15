@@ -378,3 +378,16 @@ silver: fade −4.1 / −0.4 / +0.9%; flows −1.6 / −2.8 / +1.7%; follow prod
 t 0.31: not passed); long-unless-crowded = buy-and-hold. Gold-vs-silver crowding spread: +4.0 / −0.6 / −0.8%.
 Verdict: FAIL. Futures positioning does not time gold or silver week to week. Latest (report acted 9 Nov 2026): gold
 funds neutral (z −0.45), silver funds unusually light (z −1.6), producers unusually un-hedged in both (z +2.3 / +1.8).
+
+## Lead — E147 the Profit4Life gold template on random entries, and a fib-pullback entry (md5 bf144f09…): fib FAIL; template explains most of the recap
+Template from the owner's screenshots: stop 10 USD, targets every 5 USD to +25, recap ticks a win when TP1 is reached
+and books the furthest target reached (×10 pips), a loss is −100.
+A. 20,000 coin-flip entries on gold (07–20 UTC weekdays, Dec 2025–Nov 2026): TP1 reached before the stop 66.2% of the
+   time; recap +42 "pips" per trade; a week of 13 such signals: median +550 recap pips, 10th–90th percentile 0 to
+   +1,100, positive in 89% of weeks, 69% ticks. Money result of the same coin flips: −0.22 USD/oz per trade (all out at
+   TP1) and −0.23 (fifths, stop to entry after TP1): the 20-cent spread, nothing else.
+   Their recaps: week 7 gold 11 rows, 64% ticks, +920; week 8 gold about 12 rows, +2,210 (rows of 340–720 pips are
+   beyond TP5, so they book past the last target). Week 7 is inside the coin-flip range; week 8 is above its 90th
+   percentile under my capped accounting. Two weeks cannot separate skill from the template.
+B. Fib pullback (limit at the 50% / 61.8% retracement of a ≥3 ATR 15m impulse, same template): 50%: train +0.71 USD
+   (t 2.3), validation +0.08, FINAL −0.32 (control −0.29); 61.8%: FINAL −0.85. FAIL.
