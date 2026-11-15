@@ -191,9 +191,18 @@ def grade(s):
 
 try:
     _P = json.loads((Path(__file__).parent / "priors.json").read_text())
-    PRIORS, EVERYWHERE = _P["priors"], _P.get("everywhere") or {}
+    PRIORS, EVERYWHERE, HISTORY = _P["priors"], _P.get("everywhere") or {}, _P.get("history") or {}
 except (OSError, ValueError, KeyError):
-    PRIORS, EVERYWHERE = {}, {}
+    PRIORS, EVERYWHERE, HISTORY = {}, {}, {}
+
+
+def history_line(sig):
+    """'Time machine' line: how this exact setup did on this market's own recent history (E148/E149 replay, final period)."""
+    k = f"{sig['setup']} {'with' if (sig.get('state') or {}).get('with_trend') else 'against'}"
+    h = (HISTORY.get(sig["symbol"]) or {}).get(k)
+    if not h or not h.get("n"):
+        return ""
+    return f"\n⏪ On this market's recent history: {h['n']} of these, {round((h['win'] or 0) * 100)}% ended positive, average {h['avg_R']:+.2f}R"
 
 
 def prior(sig):
@@ -220,12 +229,45 @@ def text(sig, g, rec):
     tag = {"CONFIDENT": "🟢 CONFIDENT", "PROMISING": "🟡 PROMISING", "PAPER": "🧪 PAPER (untested, do not trade)"}[g]
     if pk == "plus":
         tag += f"\n📈 BACKTEST+ (made {pv:+.2f}R per signal on past data; live record still needed)"
+    tag += history_line(sig)
     r = f"record of this setup here: {rec['n']} closed, avg {rec['avg_R']:+.2f}R, {round(rec['win'] * 100)}% won" if rec["n"] else "no record yet"
     head = f"⚡ {name}: {LIVE[sig['setup']]} right now\n" if sig["setup"] in LIVE else ""
     st_ = sig.get("state") or {}
     head += (f"Market now: trend {st_.get('trend')}, volatility {st_.get('vol')}, {st_.get('shape')} range, {st_.get('session')} session\n" if st_ else "")
     return (f"{head}{tag}\n{name} {sig['side'].upper()} now ~{sig['ref_price']}\nSL {sig['stop']}\n" + "\n".join(f"TP{k + 1} {t}" for k, t in enumerate(sig["targets"]))
             + f"\nSetup: {SETUPS[sig['setup']]} ({sig['why']})\n{r}")
+
+
+def scout_flags(state_root: Path, S: dict) -> list[str]:
+    """UpScout / DownScout: send each NEW top-2% call (hourly scouts, 24h horizon) once, with the scouts' forward record."""
+    f = state_root / "scouts" / "predictions.csv"
+    if not f.exists():
+        return []
+    try:
+        d = pd.read_csv(f)
+    except Exception:
+        return []
+    d["t"] = pd.to_datetime(d.time, utc=True)
+    rec = {}
+    for k, lab_ in (("up_move", "y_up_move"), ("down_move", "y_down_move")):
+        sc = d[(d[f"flag_{k}"] == 1) & d[lab_].notna()]
+        rec[k] = (len(sc), float(sc[lab_].mean()) if len(sc) else None, float(d[lab_].dropna().mean()) if d[lab_].notna().any() else None)
+    last = pd.Timestamp(S.get("scout_last") or "2000-01-01", tz="UTC") if not str(S.get("scout_last", "")).endswith("+00:00") else pd.Timestamp(S["scout_last"])
+    new = d[(d.t > last) & ((d.flag_up_move == 1) | (d.flag_down_move == 1) | (d.flag_turn_up == 1) | (d.flag_turn_down == 1))]
+    if len(d):
+        S["scout_last"] = d.t.max().isoformat()
+    if not len(new) or last.year == 2000:          # first run: remember the point, do not flood
+        return []
+    lines = []
+    for _, r in new.sort_values("t").tail(8).iterrows():
+        kinds = [n for n, c in (("big UP move likely", "flag_up_move"), ("big DOWN move likely", "flag_down_move"),
+                                ("trend turning UP", "flag_turn_up"), ("trend turning DOWN", "flag_turn_down")) if r[c] == 1]
+        lines.append(f"{r.sym.replace('USDT', '')} {r.close:g}: " + ", ".join(kinds) + f" (up {r.p_up_move:.0%} / down {r.p_down_move:.0%} in 24h)")
+    def fr(k):
+        n, h, b = rec[k]
+        return f"{n} scored, {h:.0%} came true vs {b:.0%} normally" if n and h is not None and b is not None else "no scored calls yet"
+    return ["🔭 Scouts (24-hour forecasts, information only, not trade signals):\n" + "\n".join(lines)
+            + f"\nUpScout record: {fr('up_move')}. DownScout record: {fr('down_move')}."]
 
 
 def main(state_dir, prices=None, now_ms=None, client=None):
@@ -286,6 +328,7 @@ def main(state_dir, prices=None, now_ms=None, client=None):
                 sig["sent"] = True
                 msgs.append(text(sig, g, rec))
             new.append(sig)
+    msgs += scout_flags(Path(state_dir), S)
     S["signals"] += new
     S["signals"] = S["signals"][-5000:]
     table = {f"{k[0]} {k[1]}": dict(stats(v), grade=grade(stats(v))) for k, v in sorted(by.items())}

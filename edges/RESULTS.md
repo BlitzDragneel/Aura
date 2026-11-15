@@ -420,3 +420,10 @@ Five markets (gold, BTC, silver, ETH, SOL), lab template and scorer. Pooled FINA
 ACCEPTANCE −0.065 (t −3.0, n 1,310, positive on 0 of 5 markets); fade after REJECTION −0.035 (t −1.7, n 1,625, 1 of 5);
 controls: follow every break −0.068, fade every break −0.034. Waiting 15 minutes to see whether a break holds adds
 nothing: neither side is predictable from the first minutes after the break.
+
+## Note — external repo Jakeschincariol/day-trader-skill (reviewed 15 Nov 2026)
+MIT, 11 Claude skills for US stocks (Yahoo/SEC/House data): scanner, news, entry timer (closed-bar breakouts), exit
+planner (stop/target before entry), "time machine" (bootstrap replay of the last 60 days of 5m bars + every past firing),
+risk gate, sizing, alerts, paper broker. No edge claim and no test results of its own. Adopted ideas: a per-signal
+history line in the Signal Lab (how this setup did on this market's own recent history, from the E148/E149 replays)
+and, next, a daily risk gate for the paper record. Its code is not vendored (stocks, Yahoo); kept for reference only.
