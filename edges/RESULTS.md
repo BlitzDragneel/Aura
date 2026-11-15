@@ -402,3 +402,15 @@ BTC stretch-fade with the trend (validation −0.19, t −2.0). These are still 
 BACKTEST+ (positive in validation and final, t ≥ 2 on final): gold session-drive with the trend (validation +0.17R,
 FINAL +0.32R, t 2.25, n 22; but TRAIN −0.24R, so weak evidence). Nothing on BTC.
 Following a big hourly move in gold loses: by the time it shows on a closed 15m bar, the move is mostly done.
+
+## Lead — E149 Signal Lab replay on silver, ETH and SOL + cross-market view (md5 f763f098…)
+Same code and rule as E148. FINAL average R per signal (gold / BTC / silver / ETH / SOL):
+trend-pullback with trend −0.15 / −0.06 / −0.26 / −0.14 / −0.04 (negative on all five) · breakout with trend
+0.00 / −0.03 / −0.27 / −0.15 / −0.19 · breakout against trend +0.12 / +0.01 / +0.07 / −0.03 / −0.01 · fib pullback with
+−0.00 / −0.01 / −0.18 / +0.04 / −0.01, against +0.06 / −0.03 / +0.08 / +0.01 / −0.07 · session drive with
++0.32 / +0.03 / −0.05 / +0.06 / −0.06, against negative on all five · daily bias with trend +0.01 / +0.09 / −0.03 /
++0.01 / +0.05 (positive on 4 of 5 but tiny) · big move against −0.21 / +0.01 / −0.44 / −0.10 / −0.17.
+Muted on every market (negative on ≥4 of 5): trend-pullback with trend, breakout with trend, fib pullback with trend,
+session drive against trend, big move against trend; plus the per-asset muted cells. No cell earned BACKTEST+ beyond
+gold's session drive. Pattern: on closed 15-minute bars, joining a move that is already with the trend loses on these
+markets; nothing is reliably positive.

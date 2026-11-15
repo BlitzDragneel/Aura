@@ -190,9 +190,10 @@ def grade(s):
 
 
 try:
-    PRIORS = json.loads((Path(__file__).parent / "priors.json").read_text())["priors"]
+    _P = json.loads((Path(__file__).parent / "priors.json").read_text())
+    PRIORS, EVERYWHERE = _P["priors"], _P.get("everywhere") or {}
 except (OSError, ValueError, KeyError):
-    PRIORS = {}
+    PRIORS, EVERYWHERE = {}, {}
 
 
 def prior(sig):
@@ -203,6 +204,8 @@ def prior(sig):
         return "muted", p["muted"][k]
     if k in (p.get("plus") or {}):
         return "plus", p["plus"][k]
+    if k in (EVERYWHERE.get("muted") or {}):     # lost on at least 4 of the 5 replayed markets (E149)
+        return "muted", EVERYWHERE["muted"][k]
     return None, None
 
 
