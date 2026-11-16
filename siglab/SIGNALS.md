@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 03:01 UTC
+Updated 2026-11-16 03:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -19,6 +19,7 @@ Updated 2026-11-16 03:01 UTC
 | XAGUSD S3 | 1 | 0.172 | None | 1.0 | PAPER |
 | XAGUSD S4 | 1 | -1.109 | None | 0.0 | PAPER |
 | XAGUSD S7 | 1 | 0.526 | None | 1.0 | PAPER |
+| XAUUSD S1 | 1 | -1.014 | None | 0.0 | PAPER |
 | XAUUSD S3 | 1 | 0.085 | None | 1.0 | PAPER |
 | XAUUSD S4 | 1 | 0.31 | None | 1.0 | PAPER |
 | XRPUSD S4 | 1 | -1.054 | None | 0.0 | PAPER |
@@ -32,7 +33,7 @@ Updated 2026-11-16 03:01 UTC
 - 16 Nov 02:30 DOGEUSD sell S4 @ 0.05942 SL 0.060059 → open
 - 16 Nov 02:15 ADAUSD sell S4 @ 0.1533 SL 0.155186 → open
 - 16 Nov 02:15 SOLUSD sell S4 @ 71.94 SL 72.853 → open
-- 16 Nov 02:15 XAUUSD buy S1 @ 3889.5 SL 3875.14 → open
+- 16 Nov 02:15 XAUUSD buy S1 @ 3889.5 SL 3875.14 → closed SL -1.01R. Stopped out after 50 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: trend pullback with the trend: 5 closed, avg +0.18R, 100% won.
 - 16 Nov 01:45 BNBUSD sell S2 @ 590.47 SL 594.93 → closed SL -1.08R. Stopped out after 32 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first.
 - 16 Nov 01:45 XAGUSD sell S7 @ 47.88 SL 48.14 → closed TP2+BE +0.53R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry.
 - 16 Nov 01:45 XAUUSD buy S4 @ 3880.7 SL 3868.09 → closed TP2+BE +0.31R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 4 closed, avg -0.52R, 50% won.
