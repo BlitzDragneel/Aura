@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 03:30 UTC
+Updated 2026-11-16 03:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -26,6 +26,7 @@ Updated 2026-11-16 03:30 UTC
 
 ## Latest signals
 
+- 16 Nov 03:45 XRPUSD sell S1 @ 0.9623 SL 0.973807 → open
 - 16 Nov 03:30 DOGEUSD sell S1 @ 0.05916 SL 0.059829 → open
 - 16 Nov 03:30 BNBUSD sell S1 @ 593.35 SL 598.23 → open
 - 16 Nov 02:45 XAGUSD sell S2 @ 47.49 SL 47.836 → open
