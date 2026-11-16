@@ -24,3 +24,13 @@ def test_pump(monkeypatch):
     assert c.get("/alerts/pump", params=dict(sha="a" * 40)).json()["forwarded"] == 1 and f.posts == ["fresh one\nline2"]
     assert c.get("/alerts/pump", params=dict(sha="a" * 40)).json()["forwarded"] == 0      # not sent twice
     assert c.get("/alerts/pump", params=dict(sha="zz")).status_code == 422
+
+
+def test_kind():
+    from omega_live.alerts import kind
+    assert kind("⚡ Gold: BREAKOUT\n🧪 PAPER\nGold SELL now ~1\nSL 2\nTP1 0") == "signal"
+    assert kind("❌ Silver SELL (fib pullback) closed: SL, -1.11R") == "signal"
+    assert kind("🔁 Learning: breakout with the trend is now MUTED") == "signal"
+    assert kind("⏰ US news in 30 min: CPI") == "info"
+    assert kind("🌅 OMEGA morning read") == "info"
+    assert kind("⚡ Silver: PULLBACK\nℹ️ No trade plan: on past data ...") == "info"

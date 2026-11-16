@@ -29,6 +29,14 @@ def parse(md: str):
     return out
 
 
+def kind(body: str) -> str:
+    """'signal' = a trade plan, its result, or a learning change; everything else is 'info' (news, reads, scouts, alerts
+    without a plan, digests)."""
+    if "\nSL " in body or " closed: " in body or body.startswith("🔁") or "CALL (" in body:
+        return "signal"
+    return "info"
+
+
 def router(client: httpx.Client | None = None) -> APIRouter:
     r = APIRouter(prefix="/alerts")
     c = client or httpx.Client(timeout=20)
@@ -44,6 +52,7 @@ def router(client: httpx.Client | None = None) -> APIRouter:
         if g.status_code != 200:
             raise HTTPException(404, "no outbox at that commit")
         now = dt.datetime.now(dt.timezone.utc)
+        info_chat = os.environ.get("TELEGRAM_INFO_CHAT_ID")   # optional second group for news and information
         res = dict(forwarded=0, telegram=None, whatsapp=None)
         for ts, body in parse(g.text):
             k = (ts.isoformat(), hash(body))
@@ -51,8 +60,9 @@ def router(client: httpx.Client | None = None) -> APIRouter:
                 continue
             sent.add(k)
             if tok and chat:
+                to = info_chat if (info_chat and kind(body) == "info") else chat
                 for i in range(0, len(body), 3900):
-                    res["telegram"] = c.post(f"https://api.telegram.org/bot{tok}/sendMessage", json=dict(chat_id=chat, text=body[i:i + 3900])).status_code
+                    res["telegram"] = c.post(f"https://api.telegram.org/bot{tok}/sendMessage", json=dict(chat_id=to, text=body[i:i + 3900])).status_code
             if phone and key:
                 res["whatsapp"] = c.get("https://api.callmebot.com/whatsapp.php", params=dict(phone=phone, text=body[:1500], apikey=key)).status_code
             res["forwarded"] += 1
