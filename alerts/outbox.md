@@ -116,3 +116,7 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Sui: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~0.7161
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-16 06:31:02 UTC
+❌ Gold SELL (breakout) closed: SL, -1.01R (-191 pips)
+Why: Stopped out after 16 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit.

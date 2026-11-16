@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 06:15 UTC
+Updated 2026-11-16 06:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -21,6 +21,7 @@ Updated 2026-11-16 06:15 UTC
 | XAGUSD S4 | 1 | -1.109 | None | 0.0 | PAPER |
 | XAGUSD S7 | 1 | 0.526 | None | 1.0 | PAPER |
 | XAUUSD S1 | 1 | -1.014 | None | 0.0 | PAPER |
+| XAUUSD S2 | 1 | -1.011 | None | 0.0 | PAPER |
 | XAUUSD S3 | 1 | 0.085 | None | 1.0 | PAPER |
 | XAUUSD S4 | 1 | 0.31 | None | 1.0 | PAPER |
 | XRPUSD S4 | 1 | -1.054 | None | 0.0 | PAPER |
@@ -32,7 +33,7 @@ Updated 2026-11-16 06:15 UTC
 - 16 Nov 06:15 SOLUSD sell S2 @ 70.9 SL 71.805 → open
 - 16 Nov 06:15 XAGUSD sell S4 @ 47.49 SL 47.914 → open
 - 16 Nov 06:00 BTCUSD sell S2 @ 64452.9 SL 64988.52 → open
-- 16 Nov 06:00 XAUUSD sell S2 @ 3842.1 SL 3860.96 → open
+- 16 Nov 06:00 XAUUSD sell S2 @ 3842.1 SL 3860.96 → closed SL -1.01R. Stopped out after 16 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit.
 - 16 Nov 05:45 XRPUSD sell S2 @ 0.9537 SL 0.964279 → open
 - 16 Nov 04:45 ADAUSD sell S1 @ 0.1534 SL 0.15535 → open
 - 16 Nov 04:15 SUIUSD sell S1 @ 0.727 SL 0.736779 → open
