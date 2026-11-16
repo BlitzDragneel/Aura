@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 05:31 UTC
+Updated 2026-11-16 05:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -27,6 +27,7 @@ Updated 2026-11-16 05:31 UTC
 
 ## Latest signals
 
+- 16 Nov 05:45 XRPUSD sell S2 @ 0.9537 SL 0.964279 → open
 - 16 Nov 04:45 ADAUSD sell S1 @ 0.1534 SL 0.15535 → open
 - 16 Nov 04:15 SUIUSD sell S1 @ 0.727 SL 0.736779 → open
 - 16 Nov 04:15 SOLUSD sell S1 @ 71.8 SL 72.748 → open
