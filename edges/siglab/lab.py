@@ -158,7 +158,35 @@ def detect(f, h1):
     mv1 = c.iloc[i] - c.iloc[i - 4]
     if abs(mv1) >= 2 * R:
         out.append(("S7", int(np.sign(mv1)), f"moved {mv1:+.2f} in the last hour, twice its normal hourly range"))
-    return out, dict(state=state, price=float(c.iloc[i]), R=R, bar_close_ms=int((t + pd.Timedelta("15min")).timestamp() * 1000))
+    R_eff = max(R, 0.002 * float(c.iloc[i]))
+    return out, dict(state=state, price=float(c.iloc[i]), R=R, bar_close_ms=int((t + pd.Timedelta("15min")).timestamp() * 1000),
+                     exc=excursions(f, R_eff) if out else {})
+
+
+def excursions(f, R, horizon=16):
+    """What this market has actually been doing: for every 15m bar of the last ~3 days, how far price went in favour of a
+    long (and of a short) within the next 4 hours BEFORE going 1R against. Returns for each side the levels reached in
+    60%, 40% and 20% of those windows (as multiples of R). This is the bot's "what I believe will happen" for targets."""
+    H, L, C = f.h.values[-300:], f.l.values[-300:], f.c.values[-300:]
+    n = len(C) - horizon - 1
+    if n < 50:
+        return {}
+    idx = np.arange(n)[:, None] + np.arange(1, horizon + 1)[None, :]
+    Hm, Lm, C0 = H[idx], L[idx], C[:n, None]
+    res = {}
+    for d in (1, -1):
+        fav = (Hm - C0) if d == 1 else (C0 - Lm)
+        adv = (C0 - Lm) if d == 1 else (Hm - C0)
+        hit = adv >= R
+        first = np.where(hit.any(axis=1), hit.argmax(axis=1), horizon)          # stop bar (stop first inside it)
+        mask = np.arange(horizon)[None, :] < first[:, None]
+        best = np.where(mask, fav, 0).max(axis=1) / R
+        q = np.quantile(best, [0.4, 0.6, 0.8])
+        res[d] = [round(float(x), 3) for x in q]
+    return res
+
+
+ADAPTIVE_TP = True
 
 
 def make(sym, setup, d, why, ctx):
@@ -169,7 +197,20 @@ def make(sym, setup, d, why, ctx):
     return dict(id=f"{name}-{setup}-{ctx['bar_close_ms']}", symbol=name, setup=setup, side="buy" if d == 1 else "sell", why=why,
 state=dict(ctx.get("state") or {}, with_trend=(ctx.get("state") or {}).get("trend") == ("up" if d == 1 else "down")),
                 logged_ms=ctx["bar_close_ms"], ref_price=round(px, dec), stop=round(px - d * R, dec),
-                targets=[round(px + d * R * 0.5 * k, dec) for k in range(1, 6)], R=round(R, dec + 1), status="open")
+                targets=targets_for(px, d, R, ctx, spec, dec), R=round(R, dec + 1), status="open",
+                target_odds=[60, 40, 20] if (ADAPTIVE_TP and (ctx.get("exc") or {}).get(d)) else None)
+
+
+def targets_for(px, d, R, ctx, spec, dec):
+    q = (ctx.get("exc") or {}).get(d) if ADAPTIVE_TP else None
+    if not q:
+        return [round(px + d * R * 0.5 * k, dec) for k in range(1, 6)]
+    cost = spec["spread"] if spec.get("spread") is not None else px * spec["spread_frac"]
+    lv, last = [], 0.0
+    for m in q:
+        m = max(m, last + 0.15, 0.25, 3 * cost / R)       # at least 0.25R, 3 spreads, and spaced 0.15R apart
+        lv.append(m); last = m
+    return [round(px + d * R * m, dec) for m in lv]
 
 
 def stats(rs):
@@ -279,7 +320,7 @@ def text(sig, g, rec):
     head = f"⚡ {name}: {LIVE[sig['setup']]} right now\n" if sig["setup"] in LIVE else ""
     st_ = sig.get("state") or {}
     head += (f"Market now: trend {st_.get('trend')}, volatility {st_.get('vol')}, {st_.get('shape')} range, {st_.get('session')} session\n" if st_ else "")
-    return (f"{head}{tag}\n{name} {sig['side'].upper()} now ~{sig['ref_price']}\nSL {sig['stop']}\n" + "\n".join(f"TP{k + 1} {t}" for k, t in enumerate(sig["targets"]))
+    return (f"{head}{tag}\n{name} {sig['side'].upper()} now ~{sig['ref_price']}\nSL {sig['stop']}\n" + "\n".join(f"TP{k + 1} {t}" + (f" (reached in {sig['target_odds'][k]}% of similar moments in the last 3 days)" if sig.get("target_odds") else "") for k, t in enumerate(sig["targets"]))
             + f"\nSetup: {SETUPS[sig['setup']]} ({sig['why']})\n{r}")
 
 

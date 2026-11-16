@@ -458,3 +458,9 @@ From the 15 Nov BTC loss (a pullback BUY inside a 4h/daily downtrend). Five mark
 signals AGREEING with both the 4h and daily trend −0.035 (n 2,820, positive on 0 of 5 markets); MIXED −0.065; against
 both (CONFLICT) −0.036 (n 2,346). Validation: −0.047 / −0.030 / −0.016. Trading with the bigger trend is no better than
 against it for these setups; the BTC loss was not caused by ignoring the bigger trend. No filter added.
+
+## Lead — E155 targets from what the market has been doing (owner's request) — ADOPTED (realism, not an edge)
+TP1/TP2/TP3 = the move reached before a 1R adverse move in 60% / 40% / 20% of the 4-hour windows of the previous 3 days.
+Same signals, gold + BTC + ETH. Pooled FINAL: adaptive −0.031R vs fixed ladder −0.022R (n 4,271), TP1 reached 65.9% vs
+65.8%; VALIDATION −0.020 vs −0.015. Within the plan's 0.02R tolerance, so the lab now sends targets sized to the
+market's recent behaviour, each with how often it was reached. Neither version has an edge.
