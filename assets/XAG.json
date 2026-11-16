@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-16T15:16:07.601051+00:00",
+ "asof": "2026-11-16T15:30:52.292523+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 46.93,
-  "bar": "2026-11-16T15:00:00+00:00",
+  "price": 46.7,
+  "bar": "2026-11-16T15:15:00+00:00",
   "trend": {
    "15m": {
-    "state": "flat",
-    "close": 46.93,
-    "ma20": 47.5635,
-    "ma50": 47.558,
-    "slope_atr": -0.36,
-    "bar": "2026-11-16T15:00:00+00:00"
+    "state": "down",
+    "close": 46.7,
+    "ma20": 47.513,
+    "ma50": 47.53940000000001,
+    "slope_atr": -0.46,
+    "bar": "2026-11-16T15:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 3.55,
   "spot": {
-   "price": 46.79105,
-   "bid": 46.77,
-   "ask": 46.8121,
-   "spread": 0.0421,
+   "price": 46.6335,
+   "bid": 46.6117,
+   "ask": 46.6553,
+   "spread": 0.0436,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.297
+   "perp_premium_pct": 0.143
   },
   "funding": {
-   "rate": 0.0001693091616804,
+   "rate": 0.0001680947876385,
    "next_time": 1794844800000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 46.93; volatility regime active (hourly ATR 0.964% of price, 89.1th percentile).",
-    "Spot XAGUSD 46.79; the perpetual trades +0.30% from spot."
+    "Price 46.7; volatility regime active (hourly ATR 0.964% of price, 89.1th percentile).",
+    "Spot XAGUSD 46.63; the perpetual trades +0.14% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 64,
+ "runs": 65,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

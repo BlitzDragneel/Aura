@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 15:16 UTC
+Updated 2026-11-16 15:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -29,6 +29,7 @@ Updated 2026-11-16 15:16 UTC
 | DOGEUSD S6 | 1 | 0.181 | None | 1.0 | PAPER |
 | ETHUSD S1 | 2 | 0.137 | 1.69 | 1.0 | PAPER |
 | ETHUSD S2 | 1 | -1.054 | None | 0.0 | PAPER |
+| ETHUSD S3 | 1 | 1.709 | None | 1.0 | PAPER |
 | ETHUSD S4 | 2 | -0.498 | -0.9 | 0.5 | PAPER |
 | ETHUSD S6 | 1 | 0.73 | None | 1.0 | PAPER |
 | ETHUSD S7 | 1 | -1.058 | None | 0.0 | PAPER |
@@ -39,6 +40,7 @@ Updated 2026-11-16 15:16 UTC
 | LINKUSD S6 | 1 | 0.165 | None | 1.0 | PAPER |
 | LTCUSD S1 | 2 | 0.739 | 1.06 | 1.0 | PAPER |
 | LTCUSD S2 | 1 | -1.058 | None | 0.0 | PAPER |
+| LTCUSD S3 | 1 | 1.543 | None | 1.0 | PAPER |
 | LTCUSD S4 | 1 | 0.042 | None | 1.0 | PAPER |
 | LTCUSD S5 | 1 | 0.781 | None | 1.0 | PAPER |
 | LTCUSD S6 | 1 | 0.775 | None | 1.0 | PAPER |
@@ -71,7 +73,7 @@ Updated 2026-11-16 15:16 UTC
 
 ## Latest signals
 
-- 16 Nov 14:45 LTCUSD sell S3 @ 45.05 SL 45.529 → open
+- 16 Nov 14:45 LTCUSD sell S3 @ 45.05 SL 45.529 → closed TP3 +1.54R. TP3 after 40 min (best 2.4R, worst -0.0R).
 - 16 Nov 14:45 LINKUSD buy S2 @ 9.292 SL 9.1893 → closed SL -1.05R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 14:45 AVAXUSD sell S3 @ 7.266 SL 7.3557 → open
 - 16 Nov 14:45 ADAUSD sell S3 @ 0.155 SL 0.156971 → open
@@ -80,7 +82,7 @@ Updated 2026-11-16 15:16 UTC
 - 16 Nov 14:45 XRPUSD buy S7 @ 0.9725 SL 0.961914 → closed SL -1.06R. Stopped out after 15 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 14:45 XRPUSD sell S3 @ 0.9725 SL 0.983086 → closed TP3 +1.55R. TP3 after 27 min (best 2.5R, worst -0.0R).
 - 16 Nov 14:45 ETHUSD buy S7 @ 1851.62 SL 1834.3 → closed SL -1.06R. Stopped out after 15 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
-- 16 Nov 14:45 ETHUSD sell S3 @ 1851.62 SL 1868.94 → open
+- 16 Nov 14:45 ETHUSD sell S3 @ 1851.62 SL 1868.94 → closed TP3 +1.71R. TP3 after 31 min (best 2.8R, worst -0.2R).
 - 16 Nov 14:00 LTCUSD buy S5 @ 44.4 SL 43.921 → closed TP3 +0.78R. TP3 after 37 min (best 1.5R, worst -0.5R).
 - 16 Nov 14:00 LINKUSD buy S5 @ 9.114 SL 9.0113 → closed TP3 +0.77R. TP3 after 33 min (best 1.6R, worst -0.3R).
 - 16 Nov 14:00 ADAUSD buy S5 @ 0.1517 SL 0.149729 → closed TP3 +0.67R. TP3 after 32 min (best 1.1R, worst -0.2R).
