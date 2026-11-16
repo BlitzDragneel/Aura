@@ -3,28 +3,28 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-16T22:45:50.208745+00:00",
+ "asof": "2026-11-16T23:00:51.925669+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3864.6,
-  "bar": "2026-11-16T22:30:00+00:00",
+  "price": 3865.0,
+  "bar": "2026-11-16T22:45:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3864.6,
-    "ma20": 3862.565,
-    "ma50": 3869.132,
-    "slope_atr": -0.31,
-    "bar": "2026-11-16T22:30:00+00:00"
+    "close": 3865.0,
+    "ma20": 3862.6800000000003,
+    "ma50": 3869.1259999999997,
+    "slope_atr": -0.32,
+    "bar": "2026-11-16T22:45:00+00:00"
    },
    "1h": {
     "state": "flat",
-    "close": 3862.7,
-    "ma20": 3867.9550000000004,
-    "ma50": 3853.2560000000003,
-    "slope_atr": -0.27,
-    "bar": "2026-11-16T21:00:00+00:00"
+    "close": 3865.0,
+    "ma20": 3867.225,
+    "ma50": 3854.34,
+    "slope_atr": -0.35,
+    "bar": "2026-11-16T22:00:00+00:00"
    },
    "4h": {
     "state": "flat",
@@ -44,9 +44,9 @@
    }
   },
   "volatility": {
-   "atr1h_pct": 0.376,
-   "atr1h_pctile": 58.2,
-   "atr1h": 14.521428571428617,
+   "atr1h_pct": 0.365,
+   "atr1h_pctile": 54.5,
+   "atr1h": 14.10000000000007,
    "rv20d_ann_pct": 31.2,
    "rv20d_pctile": 76.8,
    "day_range_pct_median": 1.42,
@@ -55,7 +55,7 @@
   },
   "session": {
    "name": "late US",
-   "utc_hour": 22,
+   "utc_hour": 23,
    "weekday": "Monday",
    "weekend": false,
    "cme_break": false,
@@ -65,45 +65,45 @@
    "24h": {
     "high": 3904.8,
     "low": 3836.7,
-    "to_high_pct": 1.09,
-    "to_low_pct": 0.68,
-    "to_high_atr": 2.9,
-    "to_low_atr": 1.8,
-    "position": 0.38
+    "to_high_pct": 1.03,
+    "to_low_pct": 0.74,
+    "to_high_atr": 2.8,
+    "to_low_atr": 2.0,
+    "position": 0.42
    },
    "7d": {
     "high": 4153.6,
     "low": 3776.1,
-    "to_high_pct": 7.53,
-    "to_low_pct": 2.29,
-    "to_high_atr": 20.0,
-    "to_low_atr": 6.0,
-    "position": 0.23
+    "to_high_pct": 7.47,
+    "to_low_pct": 2.35,
+    "to_high_atr": 20.5,
+    "to_low_atr": 6.3,
+    "position": 0.24
    },
    "30d": {
     "high": 4196.5,
     "low": 3776.1,
-    "to_high_pct": 8.64,
-    "to_low_pct": 2.29,
-    "to_high_atr": 23.0,
-    "to_low_atr": 6.0,
+    "to_high_pct": 8.58,
+    "to_low_pct": 2.35,
+    "to_high_atr": 23.5,
+    "to_low_atr": 6.3,
     "position": 0.21
    }
   },
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 2.23,
   "spot": {
-   "price": 3854.72,
-   "bid": 3854.403,
-   "ask": 3855.037,
-   "spread": 0.634,
-   "age_s": 2750,
+   "price": 3854.7200000000003,
+   "bid": 3854.401,
+   "ask": 3855.039,
+   "spread": 0.638,
+   "age_s": 3652,
    "stale": true,
    "note": "market closed or feed paused",
    "source": "swissquote"
   },
   "funding": {
-   "rate": 0.0001584589483617,
+   "rate": 0.0001557383869143,
    "next_time": 1794873600000,
    "source": "okx-swap"
   },
@@ -111,11 +111,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.045,
+    "p_big_move": 0.044,
     "flag": false,
     "detail": {
-     "p_up_move": 0.02,
-     "p_down_move": 0.026
+     "p_up_move": 0.016,
+     "p_down_move": 0.028
     },
     "trained_to": "2024-12-31",
     "label": "own scout on PAXG/USDT spot hourly (24/7 gold-backed token, a proxy); validation AUC 0.67/0.71 (up/down); UNTESTED as a trading signal",
@@ -124,11 +124,11 @@
    "swing": {
     "horizon": "24 h",
     "skill_ok": true,
-    "p_big_move": 0.038,
+    "p_big_move": 0.036,
     "flag": false,
     "detail": {
-     "p_up_move": 0.015,
-     "p_down_move": 0.023
+     "p_up_move": 0.014,
+     "p_down_move": 0.022
     },
     "trained_to": "2024-12-31",
     "label": "own scout on PAXG/USDT spot hourly (24/7 gold-backed token, a proxy); validation AUC 0.61/0.64 (up/down); UNTESTED as a trading signal",
@@ -175,14 +175,14 @@
  "recent_calls": [],
  "forward": {
   "day": {
-   "scored": 25,
-   "big_move_rate": 0.12,
+   "scored": 26,
+   "big_move_rate": 0.115,
    "watch_readings": 10,
    "big_move_rate_when_watch": 0.1,
-   "big_move_rate_otherwise": 0.133,
-   "scout_brier": 0.102,
+   "big_move_rate_otherwise": 0.125,
+   "scout_brier": 0.0982,
    "enough": false,
-   "text": "25 readings scored; big moves followed 12% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet"
+   "text": "26 readings scored; big moves followed 12% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet"
   },
   "swing": {
    "scored": 6,
@@ -220,7 +220,7 @@
     "brief. Day rules were searched on PAXG 2020\u201323 (hourly correlation with GC 0.984) and checked on GC 1h 2026.",
     "Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from",
     "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
-    "My own record: 25 readings scored; big moves followed 12% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet."
+    "My own record: 26 readings scored; big moves followed 12% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet."
    ]
   },
   {
@@ -249,7 +249,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3864.6; volatility regime normal (hourly ATR 0.376% of price, 58.2th percentile).",
+    "Price 3865.0; volatility regime normal (hourly ATR 0.365% of price, 54.5th percentile).",
     "Spot XAUUSD 3854.72 (stale: market closed)."
    ]
   },
@@ -260,6 +260,6 @@
    ]
   }
  ],
- "runs": 95,
+ "runs": 96,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
