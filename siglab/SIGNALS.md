@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 06:45 UTC
+Updated 2026-11-16 07:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -28,6 +28,21 @@ Updated 2026-11-16 06:45 UTC
 
 ## Latest signals
 
+- 16 Nov 07:00 SUIUSD sell S6 @ 0.7216 SL 0.730714 → open
+- 16 Nov 07:00 LTCUSD sell S6 @ 44.73 SL 45.177 → open
+- 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → open
+- 16 Nov 07:00 AVAXUSD sell S6 @ 7.134 SL 7.2284 → open
+- 16 Nov 07:00 ADAUSD sell S6 @ 0.1526 SL 0.1544 → open
+- 16 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.05951 → open
+- 16 Nov 07:00 XRPUSD sell S6 @ 0.9548 SL 0.965293 → open
+- 16 Nov 07:00 BNBUSD sell S6 @ 591.39 SL 595.92 → open
+- 16 Nov 07:00 BNBUSD sell S4 @ 591.39 SL 595.92 → open
+- 16 Nov 07:00 SOLUSD sell S6 @ 71.21 SL 72.096 → open
+- 16 Nov 07:00 ETHUSD sell S6 @ 1816.36 SL 1833.95 → open
+- 16 Nov 07:00 BTCUSD sell S6 @ 64680.1 SL 65199.03 → open
+- 16 Nov 07:00 BTCUSD sell S4 @ 64680.1 SL 65199.03 → open
+- 16 Nov 07:00 XAGUSD sell S6 @ 47.57 SL 48.018 → open
+- 16 Nov 07:00 XAUUSD sell S6 @ 3856.6 SL 3877.07 → open
 - 16 Nov 06:15 SUIUSD sell S2 @ 0.7161 SL 0.725379 → open
 - 16 Nov 06:15 AVAXUSD sell S2 @ 7.083 SL 7.1781 → open
 - 16 Nov 06:15 SOLUSD sell S2 @ 70.9 SL 71.805 → open

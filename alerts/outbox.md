@@ -120,3 +120,11 @@ Market now: trend down, volatility normal, Asia session
 ## 2026-11-16 06:31:02 UTC
 ❌ Gold SELL (breakout) closed: SL, -1.01R (-191 pips)
 Why: Stopped out after 16 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit.
+
+## 2026-11-16 07:00:58 UTC
+👀 Gold day: WATCH at 3,856.60. Big move likely, direction unknown. hourly volatility is high (93th percentile of the last 3 weeks)
+
+## 2026-11-16 07:01:10 UTC
+⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~64680.1
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
