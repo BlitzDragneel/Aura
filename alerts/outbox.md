@@ -155,3 +155,14 @@ Why: Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by
 ⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~47.44
 Market now: trend down, volatility high, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+## 2026-11-16 10:00:55 UTC
+👀 Silver day: WATCH at 47.48. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+## 2026-11-16 10:01:11 UTC
+🔭 Scouts (24-hour forecasts, information only, not trade signals):
+SOL 70.81: trend turning UP (up 16% / down 7% in 24h)
+TRX 0.30293: big UP move likely, trend turning UP (up 29% / down 13% in 24h)
+FIL 0.595: trend turning UP (up 23% / down 9% in 24h)
+OP 0.08006: trend turning UP (up 14% / down 7% in 24h)
+UpScout record: 12 scored, 33% came true vs 6% normally. DownScout record: 65 scored, 9% came true vs 35% normally.
