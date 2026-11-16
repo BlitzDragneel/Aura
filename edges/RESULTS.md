@@ -464,3 +464,12 @@ TP1/TP2/TP3 = the move reached before a 1R adverse move in 60% / 40% / 20% of th
 Same signals, gold + BTC + ETH. Pooled FINAL: adaptive −0.031R vs fixed ladder −0.022R (n 4,271), TP1 reached 65.9% vs
 65.8%; VALIDATION −0.020 vs −0.015. Within the plan's 0.02R tolerance, so the lab now sends targets sized to the
 market's recent behaviour, each with how often it was reached. Neither version has an edge.
+
+## Lead — E156 trading the movement forecast with BTC option straddles (indicative pricing) : FAIL
+WATCH (E142 BTC model) entries, 1-day ATM straddle priced at DVOL x m, held 4h, 3% round-trip cost. FINAL (2025–Nov
+2026, n 1,527): −1.3% of premium per trade at m 1.0 (t −1.9), −4.2% at 1.2, −6.1% at 1.4 (the realistic short-dated
+level); validation −3.9 / −6.1 / −7.5%. Controls (every 4h): −4.5 / −6.6 / −7.9%.
+Realised 4h volatility / implied: 0.86 in WATCH windows vs 0.70 in ordinary ones (FINAL). The movement forecast is real,
+but the options market already prices more movement than arrives even in WATCH windows, so buying it loses.
+The mirror image (selling options in ordinary windows, realised 0.70 of implied) is the textbook volatility premium;
+it carries rare, very large losses and needs margin — not suitable for the owner's account; not pursued.
