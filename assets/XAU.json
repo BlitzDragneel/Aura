@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-16T16:30:54.017493+00:00",
+ "asof": "2026-11-16T16:45:52.098683+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3864.9,
-  "bar": "2026-11-16T16:15:00+00:00",
+  "price": 3864.2,
+  "bar": "2026-11-16T16:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3864.9,
-    "ma20": 3874.2050000000004,
-    "ma50": 3869.2460000000005,
-    "slope_atr": -0.18,
-    "bar": "2026-11-16T16:15:00+00:00"
+    "close": 3864.2,
+    "ma20": 3873.535,
+    "ma50": 3868.994,
+    "slope_atr": -0.3,
+    "bar": "2026-11-16T16:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,15 +93,15 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 2.23,
   "spot": {
-   "price": 3858.745,
-   "bid": 3858.428,
-   "ask": 3859.062,
-   "spread": 0.634,
+   "price": 3858.4555,
+   "bid": 3858.138,
+   "ask": 3858.773,
+   "spread": 0.635,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.16
+   "perp_premium_pct": 0.149
   },
   "funding": {
    "rate": 0.0,
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3864.9; volatility regime active (hourly ATR 0.488% of price, 86.6th percentile).",
-    "Spot XAUUSD 3858.74; the perpetual trades +0.16% from spot."
+    "Price 3864.2; volatility regime active (hourly ATR 0.488% of price, 86.6th percentile).",
+    "Spot XAUUSD 3858.46; the perpetual trades +0.15% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 69,
+ "runs": 70,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
