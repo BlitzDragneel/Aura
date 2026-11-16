@@ -48,3 +48,16 @@ ATOM 1.305: trend turning DOWN (up 8% / down 18% in 24h)
 TIA 0.3568: trend turning DOWN (up 7% / down 18% in 24h)
 HBAR 0.05873: trend turning DOWN (up 9% / down 20% in 24h)
 UpScout record: 11 scored, 36% came true vs 5% normally. DownScout record: 8 scored, 50% came true vs 38% normally.
+
+## 2026-11-16 01:59:55 UTC
+⚡ Gold: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~3880.7
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+⚡ Silver: BIG MOVE under way right now (moved -0.77 in the last hour, twice its normal hourly range), price ~47.88
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
+
+⚡ BNB: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~590.47
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
