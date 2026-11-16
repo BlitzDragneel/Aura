@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 05:15 UTC
+Updated 2026-11-16 05:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -16,6 +16,7 @@ Updated 2026-11-16 05:15 UTC
 | LINKUSD S4 | 1 | -1.057 | None | 0.0 | PAPER |
 | LTCUSD S1 | 1 | 0.042 | None | 1.0 | PAPER |
 | LTCUSD S4 | 1 | 0.042 | None | 1.0 | PAPER |
+| XAGUSD S2 | 1 | -1.084 | None | 0.0 | PAPER |
 | XAGUSD S3 | 1 | 0.172 | None | 1.0 | PAPER |
 | XAGUSD S4 | 1 | -1.109 | None | 0.0 | PAPER |
 | XAGUSD S7 | 1 | 0.526 | None | 1.0 | PAPER |
@@ -33,7 +34,7 @@ Updated 2026-11-16 05:15 UTC
 - 16 Nov 03:45 XRPUSD sell S1 @ 0.9623 SL 0.973807 → open
 - 16 Nov 03:30 DOGEUSD sell S1 @ 0.05916 SL 0.059829 → open
 - 16 Nov 03:30 BNBUSD sell S1 @ 593.35 SL 598.23 → open
-- 16 Nov 02:45 XAGUSD sell S2 @ 47.49 SL 47.836 → open
+- 16 Nov 02:45 XAGUSD sell S2 @ 47.49 SL 47.836 → closed SL -1.08R. Stopped out after 156 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit.
 - 16 Nov 02:30 SUIUSD sell S4 @ 0.7323 SL 0.7416 → open
 - 16 Nov 02:30 LTCUSD sell S4 @ 45.17 SL 45.638 → open
 - 16 Nov 02:30 AVAXUSD sell S4 @ 7.262 SL 7.3594 → open

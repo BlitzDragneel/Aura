@@ -973,7 +973,7 @@
     46.67
    ],
    "R": 0.3457,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -982,7 +982,15 @@
    "day": "2026-11-16",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 47.48,
+   "outcome": "SL",
+   "R_ladder": -1.084,
+   "R_tp1": -1.084,
+   "pips": -38.6,
+   "closed_ms": 1794806460000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 156 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit."
   },
   {
    "id": "BNBUSD-S1-1794799800000",
@@ -1302,6 +1310,14 @@
     "total_R": 0.04,
     "grade": "PAPER"
    },
+   "XAGUSD S2": {
+    "n": 1,
+    "avg_R": -1.084,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.08,
+    "grade": "PAPER"
+   },
    "XAGUSD S3": {
     "n": 1,
     "avg_R": 0.172,
@@ -1368,11 +1384,11 @@
     "total_R": -0.13
    },
    "S2": {
-    "n": 1,
-    "avg_R": -1.08,
-    "t": null,
+    "n": 2,
+    "avg_R": -1.082,
+    "t": -541.0,
     "win": 0.0,
-    "total_R": -1.08
+    "total_R": -2.16
    },
    "S3": {
     "n": 2,
@@ -1397,13 +1413,13 @@
    }
   },
   "all": {
-   "n": 20,
-   "avg_R": -0.316,
-   "t": -2.24,
-   "win": 0.6,
-   "total_R": -6.31
+   "n": 21,
+   "avg_R": -0.352,
+   "t": -2.53,
+   "win": 0.571,
+   "total_R": -7.4
   },
-  "open": 15
+  "open": 14
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -1456,15 +1472,29 @@
    "total_R": -0.13
   },
   "S2 | Asia": {
+   "n": 2,
+   "avg_R": -1.082,
+   "t": -541.0,
+   "win": 0.0,
+   "total_R": -2.16
+  },
+  "S2 | compressed": {
    "n": 1,
    "avg_R": -1.08,
    "t": null,
    "win": 0.0,
    "total_R": -1.08
   },
-  "S2 | compressed": {
+  "S2 | expanding": {
    "n": 1,
-   "avg_R": -1.08,
+   "avg_R": -1.084,
+   "t": null,
+   "win": 0.0,
+   "total_R": -1.08
+  },
+  "S2 | vol high": {
+   "n": 1,
+   "avg_R": -1.084,
    "t": null,
    "win": 0.0,
    "total_R": -1.08
@@ -1477,11 +1507,11 @@
    "total_R": -1.08
   },
   "S2 | with trend": {
-   "n": 1,
-   "avg_R": -1.08,
-   "t": null,
+   "n": 2,
+   "avg_R": -1.082,
+   "t": -541.0,
    "win": 0.0,
-   "total_R": -1.08
+   "total_R": -2.16
   },
   "S3 | Asia": {
    "n": 2,
