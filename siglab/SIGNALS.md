@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 14:01 UTC
+Updated 2026-11-16 14:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -10,6 +10,7 @@ Updated 2026-11-16 14:01 UTC
 | AVAXUSD S1 | 1 | 0.26 | None | 1.0 | PAPER |
 | AVAXUSD S2 | 1 | -1.044 | None | 0.0 | PAPER |
 | AVAXUSD S5 | 1 | -1.046 | None | 0.0 | PAPER |
+| AVAXUSD S6 | 1 | 0.235 | None | 1.0 | PAPER |
 | BNBUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
 | BNBUSD S2 | 1 | -1.08 | None | 0.0 | PAPER |
 | BNBUSD S4 | 2 | -0.42 | -0.65 | 0.5 | PAPER |
@@ -23,6 +24,7 @@ Updated 2026-11-16 14:01 UTC
 | ETHUSD S1 | 2 | 0.137 | 1.69 | 1.0 | PAPER |
 | ETHUSD S2 | 1 | -1.054 | None | 0.0 | PAPER |
 | ETHUSD S4 | 2 | -0.498 | -0.9 | 0.5 | PAPER |
+| ETHUSD S6 | 1 | 0.73 | None | 1.0 | PAPER |
 | LINKUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
 | LINKUSD S4 | 1 | -1.057 | None | 0.0 | PAPER |
 | LINKUSD S6 | 1 | 0.165 | None | 1.0 | PAPER |
@@ -65,14 +67,14 @@ Updated 2026-11-16 14:01 UTC
 - 16 Nov 07:00 SUIUSD sell S6 @ 0.7216 SL 0.730714 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 4 closed, avg +0.16R, 100% won.
 - 16 Nov 07:00 LTCUSD sell S6 @ 44.73 SL 45.177 → open
 - 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
-- 16 Nov 07:00 AVAXUSD sell S6 @ 7.134 SL 7.2284 → open
+- 16 Nov 07:00 AVAXUSD sell S6 @ 7.134 SL 7.2284 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 9 closed, avg +0.20R, 100% won.
 - 16 Nov 07:00 ADAUSD sell S6 @ 0.1526 SL 0.1544 → closed TP1+BE +0.24R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 6 closed, avg +0.17R, 100% won.
 - 16 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.05951 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 XRPUSD sell S6 @ 0.9548 SL 0.965293 → closed TP1+BE +0.25R. Reached TP1 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 6 closed, avg +0.17R, 100% won.
 - 16 Nov 07:00 BNBUSD sell S6 @ 591.39 SL 595.92 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 4 closed, avg +0.16R, 100% won.
 - 16 Nov 07:00 BNBUSD sell S4 @ 591.39 SL 595.92 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 6 closed, avg -0.26R, 67% won.
 - 16 Nov 07:00 SOLUSD sell S6 @ 71.21 SL 72.096 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
-- 16 Nov 07:00 ETHUSD sell S6 @ 1816.36 SL 1833.95 → open
+- 16 Nov 07:00 ETHUSD sell S6 @ 1816.36 SL 1833.95 → closed TP2+BE +0.73R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 9 closed, avg +0.20R, 100% won.
 - 16 Nov 07:00 BTCUSD sell S6 @ 64680.1 SL 65199.03 → closed TP1+BE +0.26R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 8 closed, avg +0.19R, 100% won.
 - 16 Nov 07:00 BTCUSD sell S4 @ 64680.1 SL 65199.03 → closed TP1+BE +0.26R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 7 closed, avg -0.19R, 71% won.
 - 16 Nov 07:00 XAGUSD sell S6 @ 47.57 SL 48.018 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 3 closed, avg +0.18R, 100% won.
