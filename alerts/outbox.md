@@ -220,3 +220,13 @@ TP2 9.3756 (reached in 40% of similar moments in the last 3 days)
 TP3 9.418 (reached in 20% of similar moments in the last 3 days)
 Setup: breakout (closed above the last 4 hours' high on a wide bar)
 no record yet
+
+## 2026-11-16 15:16:14 UTC
+❌ Dogecoin BUY (breakout) closed: SL, -1.05R (-117 pips)
+Why: Stopped out after 18 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
+
+❌ Cardano BUY (breakout) closed: SL, -1.05R (-133 pips)
+Why: Stopped out after 16 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
+
+❌ Chainlink BUY (breakout) closed: SL, -1.05R (-116 pips)
+Why: Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.

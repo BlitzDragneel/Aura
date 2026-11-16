@@ -1,10 +1,11 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 15:01 UTC
+Updated 2026-11-16 15:16 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 1 | 0.226 | None | 1.0 | PAPER |
+| ADAUSD S2 | 1 | -1.047 | None | 0.0 | PAPER |
 | ADAUSD S4 | 2 | 0.121 | 1.8 | 1.0 | PAPER |
 | ADAUSD S5 | 1 | 0.674 | None | 1.0 | PAPER |
 | ADAUSD S6 | 1 | 0.24 | None | 1.0 | PAPER |
@@ -23,6 +24,7 @@ Updated 2026-11-16 15:01 UTC
 | BTCUSD S4 | 2 | -0.378 | -0.6 | 0.5 | PAPER |
 | BTCUSD S6 | 1 | 0.255 | None | 1.0 | PAPER |
 | DOGEUSD S1 | 1 | 0.717 | None | 1.0 | PAPER |
+| DOGEUSD S2 | 1 | -1.054 | None | 0.0 | PAPER |
 | DOGEUSD S4 | 1 | 0.766 | None | 1.0 | PAPER |
 | DOGEUSD S6 | 1 | 0.181 | None | 1.0 | PAPER |
 | ETHUSD S1 | 2 | 0.137 | 1.69 | 1.0 | PAPER |
@@ -31,6 +33,7 @@ Updated 2026-11-16 15:01 UTC
 | ETHUSD S6 | 1 | 0.73 | None | 1.0 | PAPER |
 | ETHUSD S7 | 1 | -1.058 | None | 0.0 | PAPER |
 | LINKUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
+| LINKUSD S2 | 1 | -1.054 | None | 0.0 | PAPER |
 | LINKUSD S4 | 1 | -1.057 | None | 0.0 | PAPER |
 | LINKUSD S5 | 1 | 0.771 | None | 1.0 | PAPER |
 | LINKUSD S6 | 1 | 0.165 | None | 1.0 | PAPER |
@@ -61,6 +64,7 @@ Updated 2026-11-16 15:01 UTC
 | XAUUSD S6 | 1 | -1.01 | None | 0.0 | PAPER |
 | XRPUSD S1 | 1 | 0.756 | None | 1.0 | PAPER |
 | XRPUSD S2 | 1 | 0.239 | None | 1.0 | PAPER |
+| XRPUSD S3 | 1 | 1.555 | None | 1.0 | PAPER |
 | XRPUSD S4 | 1 | -1.054 | None | 0.0 | PAPER |
 | XRPUSD S6 | 1 | 0.252 | None | 1.0 | PAPER |
 | XRPUSD S7 | 1 | -1.056 | None | 0.0 | PAPER |
@@ -68,13 +72,13 @@ Updated 2026-11-16 15:01 UTC
 ## Latest signals
 
 - 16 Nov 14:45 LTCUSD sell S3 @ 45.05 SL 45.529 → open
-- 16 Nov 14:45 LINKUSD buy S2 @ 9.292 SL 9.1893 → open
+- 16 Nov 14:45 LINKUSD buy S2 @ 9.292 SL 9.1893 → closed SL -1.05R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 14:45 AVAXUSD sell S3 @ 7.266 SL 7.3557 → open
 - 16 Nov 14:45 ADAUSD sell S3 @ 0.155 SL 0.156971 → open
-- 16 Nov 14:45 ADAUSD buy S2 @ 0.155 SL 0.153029 → open
-- 16 Nov 14:45 DOGEUSD buy S2 @ 0.05964 SL 0.058966 → open
+- 16 Nov 14:45 ADAUSD buy S2 @ 0.155 SL 0.153029 → closed SL -1.05R. Stopped out after 16 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
+- 16 Nov 14:45 DOGEUSD buy S2 @ 0.05964 SL 0.058966 → closed SL -1.05R. Stopped out after 18 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 14:45 XRPUSD buy S7 @ 0.9725 SL 0.961914 → closed SL -1.06R. Stopped out after 15 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
-- 16 Nov 14:45 XRPUSD sell S3 @ 0.9725 SL 0.983086 → open
+- 16 Nov 14:45 XRPUSD sell S3 @ 0.9725 SL 0.983086 → closed TP3 +1.55R. TP3 after 27 min (best 2.5R, worst -0.0R).
 - 16 Nov 14:45 ETHUSD buy S7 @ 1851.62 SL 1834.3 → closed SL -1.06R. Stopped out after 15 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 14:45 ETHUSD sell S3 @ 1851.62 SL 1868.94 → open
 - 16 Nov 14:00 LTCUSD buy S5 @ 44.4 SL 43.921 → closed TP3 +0.78R. TP3 after 37 min (best 1.5R, worst -0.5R).
