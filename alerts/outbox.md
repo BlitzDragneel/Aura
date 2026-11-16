@@ -30,3 +30,21 @@ Why: Stopped out after 176 min. Price never reached TP1 (best was 0.3R in favour
 ## 2026-11-15 20:37:45 UTC
 ❌ Silver SELL (fib pullback) closed: SL, -1.11R (-31 pips)
 Why: Stopped out after 258 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first.
+
+## 2026-11-16 00:24:13 UTC
+👀 Bitcoin swing: WATCH at 65,043.00. Big move likely, direction unknown. daily volatility is high (86th percentile)
+
+👀 Gold day: WATCH at 3,895.40. Big move likely, direction unknown. scout: 37% chance of a big move in 4 h (top of its range; direction unknown)
+
+## 2026-11-16 00:24:19 UTC
+⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~65043.0
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+🔭 Scouts (24-hour forecasts, information only, not trade signals):
+BTC 65102.4: trend turning DOWN (up 8% / down 20% in 24h)
+AVAX 7.264: trend turning DOWN (up 8% / down 21% in 24h)
+ATOM 1.305: trend turning DOWN (up 8% / down 18% in 24h)
+TIA 0.3568: trend turning DOWN (up 7% / down 18% in 24h)
+HBAR 0.05873: trend turning DOWN (up 9% / down 20% in 24h)
+UpScout record: 11 scored, 36% came true vs 5% normally. DownScout record: 8 scored, 50% came true vs 38% normally.
