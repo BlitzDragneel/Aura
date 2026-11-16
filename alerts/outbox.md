@@ -246,3 +246,7 @@ TP2 6.913 (reached in 40% of similar moments in the last 3 days)
 TP3 6.7912 (reached in 20% of similar moments in the last 3 days)
 Setup: big move (moved -0.19 in the last hour, twice its normal hourly range)
 no record yet
+
+## 2026-11-16 16:15:54 UTC
+⏰ US news in 44 min: Fed Chairman Warsh Speaks at 17:00 UTC / 01:00 PM Trinidad.
+Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be predicted in testing (E152). Wider stops or stand aside for the release.
