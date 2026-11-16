@@ -34,3 +34,13 @@ def test_kind():
     assert kind("⏰ US news in 30 min: CPI") == "info"
     assert kind("🌅 OMEGA morning read") == "info"
     assert kind("⚡ Silver: PULLBACK\nℹ️ No trade plan: on past data ...") == "info"
+
+
+def test_info_off(monkeypatch):
+    import datetime as dt
+    now = dt.datetime.now(dt.timezone.utc)
+    md = f"\n## {now:%Y-%m-%d %H:%M:%S} UTC\n⏰ US news in 30 min: CPI\n\n## {now:%Y-%m-%d %H:%M:%S} UTC\nGold SELL now ~1\nSL 2\n"
+    monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "x"); monkeypatch.setenv("TELEGRAM_CHAT_ID", "-100"); monkeypatch.setenv("TELEGRAM_INFO_CHAT_ID", "off")
+    f = Fake(md); app = FastAPI(); app.include_router(router(f)); c = TestClient(app)
+    c.get("/alerts/pump", params=dict(sha="b" * 40))
+    assert f.posts == ["Gold SELL now ~1\nSL 2"]

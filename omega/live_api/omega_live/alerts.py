@@ -61,6 +61,9 @@ def router(client: httpx.Client | None = None) -> APIRouter:
             sent.add(k)
             if tok and chat:
                 to = info_chat if (info_chat and kind(body) == "info") else chat
+                if to == "off":          # news/info channel not set up yet: hold those messages back
+                    res["forwarded"] += 1
+                    continue
                 for i in range(0, len(body), 3900):
                     res["telegram"] = c.post(f"https://api.telegram.org/bot{tok}/sendMessage", json=dict(chat_id=to, text=body[i:i + 3900])).status_code
             if phone and key:
