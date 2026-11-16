@@ -2952,7 +2952,7 @@
     68.09
    ],
    "R": 0.9443,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -2961,7 +2961,15 @@
    "day": "2026-11-16",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 70.47,
+   "outcome": "SL",
+   "R_ladder": -1.044,
+   "R_tp1": -1.044,
+   "pips": -141.4,
+   "closed_ms": 1794848280000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 73 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit."
   },
   {
    "id": "AVAXUSD-S7-1794843900000",
@@ -2985,7 +2993,7 @@
     6.7912
    ],
    "R": 0.09529,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -2994,7 +3002,15 @@
    "day": "2026-11-16",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": true
+   "plan_sent": true,
+   "fill": 7.073,
+   "outcome": "SL",
+   "R_ladder": -1.045,
+   "R_tp1": -1.045,
+   "pips": -140.7,
+   "closed_ms": 1794848220000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 72 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R)."
   }
  ],
  "sent_day": {},
@@ -3079,6 +3095,14 @@
     "t": null,
     "win": 1.0,
     "total_R": 0.23,
+    "grade": "PAPER"
+   },
+   "AVAXUSD S7": {
+    "n": 1,
+    "avg_R": -1.045,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.04,
     "grade": "PAPER"
    },
    "BNBUSD S1": {
@@ -3353,6 +3377,14 @@
     "total_R": 0.19,
     "grade": "PAPER"
    },
+   "SOLUSD S7": {
+    "n": 1,
+    "avg_R": -1.044,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.04,
+    "grade": "PAPER"
+   },
    "SUIUSD S1": {
     "n": 1,
     "avg_R": 0.199,
@@ -3574,21 +3606,21 @@
     "total_R": 2.51
    },
    "S7": {
-    "n": 3,
-    "avg_R": -0.529,
-    "t": -1.0,
-    "win": 0.333,
-    "total_R": -1.59
+    "n": 5,
+    "avg_R": -0.735,
+    "t": -2.33,
+    "win": 0.2,
+    "total_R": -3.68
    }
   },
   "all": {
-   "n": 73,
-   "avg_R": -0.097,
-   "t": -1.05,
-   "win": 0.644,
-   "total_R": -7.11
+   "n": 75,
+   "avg_R": -0.123,
+   "t": -1.33,
+   "win": 0.627,
+   "total_R": -9.2
   },
-  "open": 5
+  "open": 3
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -3949,11 +3981,11 @@
    "total_R": 0.53
   },
   "S7 | New York": {
-   "n": 2,
-   "avg_R": -1.057,
-   "t": -1057.0,
+   "n": 4,
+   "avg_R": -1.051,
+   "t": -288.89,
    "win": 0.0,
-   "total_R": -2.11
+   "total_R": -4.2
   },
   "S7 | against trend": {
    "n": 2,
@@ -3963,11 +3995,11 @@
    "total_R": -2.11
   },
   "S7 | expanding": {
-   "n": 2,
-   "avg_R": -1.057,
-   "t": -1057.0,
+   "n": 4,
+   "avg_R": -1.051,
+   "t": -288.89,
    "win": 0.0,
-   "total_R": -2.11
+   "total_R": -4.2
   },
   "S7 | normal": {
    "n": 1,
@@ -3977,25 +4009,25 @@
    "total_R": 0.53
   },
   "S7 | vol high": {
-   "n": 1,
-   "avg_R": 0.526,
-   "t": null,
-   "win": 1.0,
-   "total_R": 0.53
+   "n": 2,
+   "avg_R": -0.259,
+   "t": -0.33,
+   "win": 0.5,
+   "total_R": -0.52
   },
   "S7 | vol normal": {
-   "n": 2,
-   "avg_R": -1.057,
-   "t": -1057.0,
+   "n": 3,
+   "avg_R": -1.053,
+   "t": -260.55,
    "win": 0.0,
-   "total_R": -2.11
+   "total_R": -3.16
   },
   "S7 | with trend": {
-   "n": 1,
-   "avg_R": 0.526,
-   "t": null,
-   "win": 1.0,
-   "total_R": 0.53
+   "n": 3,
+   "avg_R": -0.521,
+   "t": -1.0,
+   "win": 0.333,
+   "total_R": -1.56
   }
  },
  "scout_last": "2026-11-16T08:00:00+00:00",

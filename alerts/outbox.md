@@ -250,3 +250,7 @@ no record yet
 ## 2026-11-16 16:15:54 UTC
 ⏰ US news in 44 min: Fed Chairman Warsh Speaks at 17:00 UTC / 01:00 PM Trinidad.
 Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be predicted in testing (E152). Wider stops or stand aside for the release.
+
+## 2026-11-16 17:01:14 UTC
+❌ Avalanche SELL (big move) closed: SL, -1.04R (-141 pips)
+Why: Stopped out after 72 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R).

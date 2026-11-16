@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 16:45 UTC
+Updated 2026-11-16 17:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -14,6 +14,7 @@ Updated 2026-11-16 16:45 UTC
 | AVAXUSD S4 | 1 | 0.865 | None | 1.0 | PAPER |
 | AVAXUSD S5 | 1 | -1.046 | None | 0.0 | PAPER |
 | AVAXUSD S6 | 1 | 0.235 | None | 1.0 | PAPER |
+| AVAXUSD S7 | 1 | -1.045 | None | 0.0 | PAPER |
 | BNBUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
 | BNBUSD S2 | 1 | -1.08 | None | 0.0 | PAPER |
 | BNBUSD S4 | 2 | -0.42 | -0.65 | 0.5 | PAPER |
@@ -48,6 +49,7 @@ Updated 2026-11-16 16:45 UTC
 | SOLUSD S2 | 1 | -1.047 | None | 0.0 | PAPER |
 | SOLUSD S4 | 1 | 0.183 | None | 1.0 | PAPER |
 | SOLUSD S6 | 1 | 0.187 | None | 1.0 | PAPER |
+| SOLUSD S7 | 1 | -1.044 | None | 0.0 | PAPER |
 | SUIUSD S1 | 1 | 0.199 | None | 1.0 | PAPER |
 | SUIUSD S2 | 1 | -1.046 | None | 0.0 | PAPER |
 | SUIUSD S4 | 1 | 0.762 | None | 1.0 | PAPER |
@@ -73,8 +75,8 @@ Updated 2026-11-16 16:45 UTC
 
 ## Latest signals
 
-- 16 Nov 15:45 AVAXUSD sell S7 @ 7.073 SL 7.1683 → open
-- 16 Nov 15:45 SOLUSD sell S7 @ 70.48 SL 71.424 → open
+- 16 Nov 15:45 AVAXUSD sell S7 @ 7.073 SL 7.1683 → closed SL -1.04R. Stopped out after 72 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R).
+- 16 Nov 15:45 SOLUSD sell S7 @ 70.48 SL 71.424 → closed SL -1.04R. Stopped out after 73 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit.
 - 16 Nov 14:45 LTCUSD sell S3 @ 45.05 SL 45.529 → closed TP3 +1.54R. TP3 after 40 min (best 2.4R, worst -0.0R).
 - 16 Nov 14:45 LINKUSD buy S2 @ 9.292 SL 9.1893 → closed SL -1.05R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 14:45 AVAXUSD sell S3 @ 7.266 SL 7.3557 → open
