@@ -142,3 +142,8 @@ TP2 3873.59 (reached in 40% of similar moments in the last 3 days)
 TP3 3882.59 (reached in 20% of similar moments in the last 3 days)
 Setup: session drive (London open drive)
 no record yet
+
+## 2026-11-16 09:16:05 UTC
+⚡ Ethereum: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~1793.52
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.

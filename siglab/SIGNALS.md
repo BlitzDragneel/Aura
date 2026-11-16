@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 09:00 UTC
+Updated 2026-11-16 09:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -11,6 +11,7 @@ Updated 2026-11-16 09:00 UTC
 | BNBUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
 | BNBUSD S2 | 1 | -1.08 | None | 0.0 | PAPER |
 | BNBUSD S4 | 1 | -1.07 | None | 0.0 | PAPER |
+| BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
 | BTCUSD S1 | 1 | 0.281 | None | 1.0 | PAPER |
 | BTCUSD S2 | 1 | -1.019 | None | 0.0 | PAPER |
 | BTCUSD S4 | 1 | -1.01 | None | 0.0 | PAPER |
@@ -20,7 +21,7 @@ Updated 2026-11-16 09:00 UTC
 | LINKUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
 | LINKUSD S4 | 1 | -1.057 | None | 0.0 | PAPER |
 | LINKUSD S6 | 1 | 0.165 | None | 1.0 | PAPER |
-| LTCUSD S1 | 1 | 0.042 | None | 1.0 | PAPER |
+| LTCUSD S1 | 2 | 0.739 | 1.06 | 1.0 | PAPER |
 | LTCUSD S4 | 1 | 0.042 | None | 1.0 | PAPER |
 | SOLUSD S6 | 1 | 0.187 | None | 1.0 | PAPER |
 | SUIUSD S2 | 1 | -1.046 | None | 0.0 | PAPER |
@@ -36,8 +37,9 @@ Updated 2026-11-16 09:00 UTC
 
 ## Latest signals
 
+- 16 Nov 09:15 ETHUSD sell S2 @ 1793.52 SL 1812.02 → open
 - 16 Nov 07:30 AVAXUSD buy S5 @ 7.161 SL 7.0666 → open
-- 16 Nov 07:30 BNBUSD buy S5 @ 592.9 SL 588.37 → open
+- 16 Nov 07:30 BNBUSD buy S5 @ 592.9 SL 588.37 → closed SL -1.08R. Stopped out after 91 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 07:30 XAUUSD buy S5 @ 3864.6 SL 3844.13 → open
 - 16 Nov 07:00 SUIUSD sell S6 @ 0.7216 SL 0.730714 → open
 - 16 Nov 07:00 LTCUSD sell S6 @ 44.73 SL 45.177 → open
@@ -79,7 +81,7 @@ Updated 2026-11-16 09:00 UTC
 - 16 Nov 01:45 BNBUSD sell S2 @ 590.47 SL 594.93 → closed SL -1.08R. Stopped out after 32 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first.
 - 16 Nov 01:45 XAGUSD sell S7 @ 47.88 SL 48.14 → closed TP2+BE +0.53R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry.
 - 16 Nov 01:45 XAUUSD buy S4 @ 3880.7 SL 3868.09 → closed TP2+BE +0.31R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 4 closed, avg -0.52R, 50% won.
-- 16 Nov 00:15 LTCUSD sell S1 @ 45.28 SL 45.714 → open
+- 16 Nov 00:15 LTCUSD sell S1 @ 45.28 SL 45.714 → closed TP5 +1.44R. All five targets hit in 540 min: the move kept going (2.6R). Lesson so far: trend pullback with the trend: 9 closed, avg +0.06R, 89% won.
 - 16 Nov 00:15 LINKUSD buy S4 @ 9.244 SL 9.1475 → closed SL -1.06R. Stopped out after 28 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first.
 - 16 Nov 00:15 LINKUSD sell S1 @ 9.244 SL 9.3405 → closed TP2+BE +0.25R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry.
 - 16 Nov 00:15 AVAXUSD sell S1 @ 7.247 SL 7.3396 → closed TP2+BE +0.26R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry.
@@ -95,4 +97,3 @@ Updated 2026-11-16 09:00 UTC
 - 15 Nov 17:00 ETHUSD sell S4 @ 1814.35 SL 1837.07 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry.
 - 15 Nov 17:00 ETHUSD sell S1 @ 1814.35 SL 1837.07 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry.
 - 15 Nov 15:45 XAGUSD sell S4 @ 47.75 SL 48.026 → closed SL -1.11R. Stopped out after 258 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first.
-- 15 Nov 11:45 BTCUSD buy S4 @ 65505.2 SL 64471.16 → closed SL -1.01R. Stopped out after 176 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R).

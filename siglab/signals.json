@@ -597,9 +597,17 @@
     44.196
    ],
    "R": 0.4336,
-   "status": "open",
+   "status": "closed",
    "day": "2026-11-16",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 45.28,
+   "outcome": "TP5",
+   "R_ladder": 1.436,
+   "R_tp1": 0.437,
+   "pips": 137.6,
+   "closed_ms": 1794820500000,
+   "source": "okx-perp-1m",
+   "review": "All five targets hit in 540 min: the move kept going (2.6R). Lesson so far: trend pullback with the trend: 9 closed, avg +0.06R, 89% won."
   },
   {
    "id": "XAUUSD-S4-1794793500000",
@@ -2050,14 +2058,22 @@
     599.83
    ],
    "R": 4.533,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-16",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 592.88,
+   "outcome": "SL",
+   "R_ladder": -1.079,
+   "R_tp1": -1.079,
+   "pips": -82.1,
+   "closed_ms": 1794819660000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 91 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend."
   },
   {
    "id": "AVAXUSD-S5-1794814200000",
@@ -2089,6 +2105,39 @@
    ],
    "day": "2026-11-16",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "ETHUSD-S2-1794820500000",
+   "symbol": "ETHUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "London",
+    "with_trend": true
+   },
+   "logged_ms": 1794820500000,
+   "ref_price": 1793.52,
+   "stop": 1812.02,
+   "targets": [
+    1778.83,
+    1767.75,
+    1745.42
+   ],
+   "R": 18.5,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-16",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
   }
  ],
  "sent_day": {},
@@ -2149,6 +2198,14 @@
     "t": null,
     "win": 0.0,
     "total_R": -1.07,
+    "grade": "PAPER"
+   },
+   "BNBUSD S5": {
+    "n": 1,
+    "avg_R": -1.079,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.08,
     "grade": "PAPER"
    },
    "BTCUSD S1": {
@@ -2224,11 +2281,11 @@
     "grade": "PAPER"
    },
    "LTCUSD S1": {
-    "n": 1,
-    "avg_R": 0.042,
-    "t": null,
+    "n": 2,
+    "avg_R": 0.739,
+    "t": 1.06,
     "win": 1.0,
-    "total_R": 0.04,
+    "total_R": 1.48,
     "grade": "PAPER"
    },
    "LTCUSD S4": {
@@ -2330,11 +2387,11 @@
   },
   "by_setup": {
    "S1": {
-    "n": 9,
-    "avg_R": 0.063,
-    "t": 0.46,
-    "win": 0.889,
-    "total_R": 0.57
+    "n": 10,
+    "avg_R": 0.2,
+    "t": 1.09,
+    "win": 0.9,
+    "total_R": 2.0
    },
    "S2": {
     "n": 6,
@@ -2357,6 +2414,13 @@
     "win": 0.455,
     "total_R": -5.7
    },
+   "S5": {
+    "n": 1,
+    "avg_R": -1.079,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.08
+   },
    "S6": {
     "n": 3,
     "avg_R": 0.178,
@@ -2373,21 +2437,21 @@
    }
   },
   "all": {
-   "n": 32,
-   "avg_R": -0.316,
-   "t": -2.86,
-   "win": 0.594,
-   "total_R": -10.1
+   "n": 34,
+   "avg_R": -0.287,
+   "t": -2.42,
+   "win": 0.588,
+   "total_R": -9.75
   },
-  "open": 28
+  "open": 27
  },
  "record_by_context": {
   "S1 | Asia": {
-   "n": 7,
-   "avg_R": 0.067,
-   "t": 0.37,
-   "win": 0.857,
-   "total_R": 0.47
+   "n": 8,
+   "avg_R": 0.238,
+   "t": 1.03,
+   "win": 0.875,
+   "total_R": 1.91
   },
   "S1 | New York": {
    "n": 2,
@@ -2397,11 +2461,11 @@
    "total_R": 0.1
   },
   "S1 | compressed": {
-   "n": 5,
-   "avg_R": 0.178,
-   "t": 3.36,
+   "n": 6,
+   "avg_R": 0.387,
+   "t": 1.81,
    "win": 1.0,
-   "total_R": 0.89
+   "total_R": 2.32
   },
   "S1 | normal": {
    "n": 4,
@@ -2417,6 +2481,13 @@
    "win": 0.0,
    "total_R": -1.01
   },
+  "S1 | vol low": {
+   "n": 1,
+   "avg_R": 1.436,
+   "t": null,
+   "win": 1.0,
+   "total_R": 1.44
+  },
   "S1 | vol normal": {
    "n": 8,
    "avg_R": 0.198,
@@ -2425,11 +2496,11 @@
    "total_R": 1.58
   },
   "S1 | with trend": {
-   "n": 9,
-   "avg_R": 0.063,
-   "t": 0.46,
-   "win": 0.889,
-   "total_R": 0.57
+   "n": 10,
+   "avg_R": 0.2,
+   "t": 1.09,
+   "win": 0.9,
+   "total_R": 2.0
   },
   "S2 | Asia": {
    "n": 6,
@@ -2577,6 +2648,34 @@
    "t": -1.0,
    "win": 0.667,
    "total_R": -1.58
+  },
+  "S5 | London": {
+   "n": 1,
+   "avg_R": -1.079,
+   "t": null,
+   "win": 0.0,
+   "total_R": -1.08
+  },
+  "S5 | against trend": {
+   "n": 1,
+   "avg_R": -1.079,
+   "t": null,
+   "win": 0.0,
+   "total_R": -1.08
+  },
+  "S5 | normal": {
+   "n": 1,
+   "avg_R": -1.079,
+   "t": null,
+   "win": 0.0,
+   "total_R": -1.08
+  },
+  "S5 | vol normal": {
+   "n": 1,
+   "avg_R": -1.079,
+   "t": null,
+   "win": 0.0,
+   "total_R": -1.08
   },
   "S6 | Asia": {
    "n": 3,
