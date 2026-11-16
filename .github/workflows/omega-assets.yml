@@ -46,14 +46,17 @@ jobs:
       - name: Watch-list rule (OI-confirmed move on gold and silver, paper log)
         working-directory: code
         run: python -W ignore -m edges.watch.oi_move ../state || true
-      - name: Signal Lab (event alerts and paper signals on five markets, scored)
+      - name: Signal Lab (event alerts and paper signals on 15 markets, scored)
         working-directory: code
         run: python -W ignore -m edges.siglab.lab ../state || true
+      - name: Observer (daily market journal for the research session)
+        working-directory: code
+        run: python -W ignore -m edges.observer.journal ../state || true
       - name: Save
         working-directory: state
         run: |
           git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
-          git add -A assets alerts watch siglab; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
+          git add -A assets alerts watch siglab journal; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
           for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
       - name: Deliver alerts (the Live API holds the Telegram / WhatsApp details)
         working-directory: state
