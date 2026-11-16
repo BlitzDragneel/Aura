@@ -254,3 +254,14 @@ Gold usually moves about 45% more in the hour after high-impact US news; the dir
 ## 2026-11-16 17:01:14 UTC
 ❌ Avalanche SELL (big move) closed: SL, -1.04R (-141 pips)
 Why: Stopped out after 72 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R).
+
+## 2026-11-16 21:01:07 UTC
+📊 Signal Lab, end of day: 75 paper signals closed so far, avg -0.12R, 3 open.
+trend pullback: 15 closed, avg +0.19R, 87% won
+breakout: 13 closed, avg -0.95R, 8% won
+stretch fade: 5 closed, avg +1.01R, 100% won
+fib pullback: 18 closed, avg -0.21R, 61% won
+session drive: 6 closed, avg +0.03R, 67% won
+daily bias: 13 closed, avg +0.19R, 92% won
+big move: 5 closed, avg -0.73R, 20% won
+Earning trust: none yet (needs 15+ closed and a positive average)
