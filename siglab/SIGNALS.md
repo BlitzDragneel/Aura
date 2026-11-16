@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 09:15 UTC
+Updated 2026-11-16 09:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -33,14 +33,16 @@ Updated 2026-11-16 09:15 UTC
 | XAUUSD S2 | 1 | -1.011 | None | 0.0 | PAPER |
 | XAUUSD S3 | 1 | 0.085 | None | 1.0 | PAPER |
 | XAUUSD S4 | 1 | 0.31 | None | 1.0 | PAPER |
+| XAUUSD S5 | 1 | 0.072 | None | 1.0 | PAPER |
 | XRPUSD S4 | 1 | -1.054 | None | 0.0 | PAPER |
 
 ## Latest signals
 
+- 16 Nov 09:30 XAGUSD sell S1 @ 47.44 SL 47.893 → open
 - 16 Nov 09:15 ETHUSD sell S2 @ 1793.52 SL 1812.02 → open
 - 16 Nov 07:30 AVAXUSD buy S5 @ 7.161 SL 7.0666 → open
 - 16 Nov 07:30 BNBUSD buy S5 @ 592.9 SL 588.37 → closed SL -1.08R. Stopped out after 91 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
-- 16 Nov 07:30 XAUUSD buy S5 @ 3864.6 SL 3844.13 → open
+- 16 Nov 07:30 XAUUSD buy S5 @ 3864.6 SL 3844.13 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 SUIUSD sell S6 @ 0.7216 SL 0.730714 → open
 - 16 Nov 07:00 LTCUSD sell S6 @ 44.73 SL 45.177 → open
 - 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
@@ -96,4 +98,3 @@ Updated 2026-11-16 09:15 UTC
 - 15 Nov 17:00 BNBUSD sell S4 @ 591.41 SL 596.58 → closed SL -1.07R. Stopped out after 360 min. Lesson so far: fib pullback with the trend: 3 closed, avg -0.34R, 67% won.
 - 15 Nov 17:00 ETHUSD sell S4 @ 1814.35 SL 1837.07 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry.
 - 15 Nov 17:00 ETHUSD sell S1 @ 1814.35 SL 1837.07 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry.
-- 15 Nov 15:45 XAGUSD sell S4 @ 47.75 SL 48.026 → closed SL -1.11R. Stopped out after 258 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first.

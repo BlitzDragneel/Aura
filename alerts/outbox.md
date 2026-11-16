@@ -147,3 +147,11 @@ no record yet
 ⚡ Ethereum: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~1793.52
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-16 09:31:07 UTC
+✅ Gold BUY (session drive) closed: TP1+BE, +0.07R (+15 pips)
+Why: Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry.
+
+⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~47.44
+Market now: trend down, volatility high, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.

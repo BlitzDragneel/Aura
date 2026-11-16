@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-16T09:15:53.047867+00:00",
+ "asof": "2026-11-16T09:30:54.235108+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 47.6,
-  "bar": "2026-11-16T09:00:00+00:00",
+  "price": 47.44,
+  "bar": "2026-11-16T09:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 47.6,
-    "ma20": 47.5455,
-    "ma50": 47.909800000000004,
-    "slope_atr": -0.11,
-    "bar": "2026-11-16T09:00:00+00:00"
+    "close": 47.44,
+    "ma20": 47.533500000000004,
+    "ma50": 47.897000000000006,
+    "slope_atr": -0.16,
+    "bar": "2026-11-16T09:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 3.55,
   "spot": {
-   "price": 47.51049999999999,
-   "bid": 47.4907,
-   "ask": 47.5303,
-   "spread": 0.0396,
+   "price": 47.39105,
+   "bid": 47.371,
+   "ask": 47.4111,
+   "spread": 0.0401,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.188
+   "perp_premium_pct": 0.103
   },
   "funding": {
-   "rate": 0.0001315512017055,
+   "rate": 0.0001317211761996,
    "next_time": 1794844800000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 47.6; volatility regime active (hourly ATR 0.952% of price, 89.1th percentile).",
-    "Spot XAGUSD 47.51; the perpetual trades +0.19% from spot."
+    "Price 47.44; volatility regime active (hourly ATR 0.952% of price, 89.1th percentile).",
+    "Spot XAGUSD 47.39; the perpetual trades +0.10% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 40,
+ "runs": 41,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
