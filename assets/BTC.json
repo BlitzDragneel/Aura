@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-16T09:30:44.520472+00:00",
+ "asof": "2026-11-16T09:45:39.586604+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 64302.6,
-  "bar": "2026-11-16T09:15:00+00:00",
+  "price": 64383.2,
+  "bar": "2026-11-16T09:30:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 64302.6,
-    "ma20": 64594.525,
-    "ma50": 64847.712,
+    "close": 64383.2,
+    "ma20": 64571.865000000005,
+    "ma50": 64835.74,
     "slope_atr": -0.56,
-    "bar": "2026-11-16T09:15:00+00:00"
+    "bar": "2026-11-16T09:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.85,
   "funding": {
-   "rate": -5.4251148458e-06,
+   "rate": -4.148983195e-06,
    "next_time": 1794844800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.258,
+    "p_big_move": 0.234,
     "flag": false,
     "detail": {
-     "p_up_move": 0.124,
-     "p_down_move": 0.134
+     "p_up_move": 0.107,
+     "p_down_move": 0.127
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -247,7 +247,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 64302.6; volatility regime active (hourly ATR 0.846% of price, 76.5th percentile).",
+    "Price 64383.2; volatility regime active (hourly ATR 0.846% of price, 76.5th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -258,6 +258,6 @@
    ]
   }
  ],
- "runs": 41,
+ "runs": 42,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
