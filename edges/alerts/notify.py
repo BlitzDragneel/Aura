@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import datetime as dt
 import json
+import time
 import os
 import sys
 from pathlib import Path
@@ -52,12 +53,35 @@ def changes(state: dict, memory: dict) -> list[str]:
     return out
 
 
-def news_ahead(memory: dict, now: dt.datetime, client=None) -> list[str]:
-    """High-impact USD events starting in the next 15-50 minutes (Forex Factory weekly calendar, faireconomy feed)."""
+def calendar(state_dir, client=None, max_age_s=3 * 3600):
+    """This week's economic calendar (Forex Factory feed), cached in <state>/alerts/calendar.json: the free feed blocks
+    callers that ask too often, so it is fetched at most every 3 hours."""
+    f = Path(state_dir) / "alerts" / "calendar.json" if state_dir else None
+    if f and f.exists() and time.time() - f.stat().st_mtime < max_age_s:
+        try:
+            return json.loads(f.read_text())
+        except ValueError:
+            pass
     try:
         c = client or httpx.Client(timeout=15)
         ev = c.get("https://nfs.faireconomy.media/ff_calendar_thisweek.json").json()
+        if isinstance(ev, list) and f:
+            f.parent.mkdir(parents=True, exist_ok=True)
+            f.write_text(json.dumps(ev))
+        return ev if isinstance(ev, list) else []
     except Exception:
+        if f and f.exists():
+            try:
+                return json.loads(f.read_text())     # stale copy beats nothing
+            except ValueError:
+                pass
+        return []
+
+
+def news_ahead(memory: dict, now: dt.datetime, client=None) -> list[str]:
+    """High-impact USD events starting in the next 15-50 minutes (Forex Factory weekly calendar, faireconomy feed)."""
+    ev = calendar(memory.get("_state_dir"), client)
+    if not ev:
         return []
     out, seen = [], set(memory.get("news_sent", []))
     for e in ev:
@@ -137,7 +161,9 @@ def main(state_dir: str, now: dt.datetime | None = None, client=None):
         msgs += changes(s, memory)
     if first_run:
         msgs = []
-    msgs += news_ahead(memory, now, client)  # do not flood on the first run; the summary below says where things stand
+    memory["_state_dir"] = str(root)
+    msgs += news_ahead(memory, now, client)
+    memory.pop("_state_dir", None)  # do not flood on the first run; the summary below says where things stand
     today = now.strftime("%Y-%m-%d")
     if states and (first_run or (now.hour >= 11 and memory.get("summary_day") != today)):
         msgs.insert(0, summary(states))

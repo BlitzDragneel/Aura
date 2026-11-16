@@ -8,6 +8,12 @@ count every variant (bt.log_attempt); luck-check; DISCOVERY 2020–23 / VALIDATI
 costs from bt.round_trip_cost; leverage table for anything that passes; paper first.
 
 ## Each run (one idea per day; stop early if the usage limit is near and push what exists)
+0. FIRST read what the bots observed: `git fetch origin bot-state` then `git show origin/bot-state:journal/<yesterday>.md`
+   (and the last 7 days in journal/journal.jsonl). Fix every item under "Issues for the researcher" before anything else
+   (data errors, stale feeds, scoring problems), with a test, and say what you fixed. Then look at what the markets did
+   (which sessions moved, range vs norm, news) and at the Signal Lab's closed signals and their reasons: if a pattern
+   repeats (e.g. one setup losing in one session or state), register a plan to test it on history before changing
+   anything live. Never change live rules on fewer than 30 forward signals; the lab's own adapt() handles muting.
 1. `git clone https://github.com/BlitzDragneel/Aura && cd Aura && git checkout claude/trading-edge-research-bots-gpkvi1`
    (if a newer research branch is named at the top of edges/IDEAS.md, use that one).
 2. Read edges/PROTOCOL.md, edges/RESULTS.md (what failed and why) and edges/IDEAS.md.

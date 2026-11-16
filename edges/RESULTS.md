@@ -473,3 +473,16 @@ Realised 4h volatility / implied: 0.86 in WATCH windows vs 0.70 in ordinary ones
 but the options market already prices more movement than arrives even in WATCH windows, so buying it loses.
 The mirror image (selling options in ordinary windows, realised 0.70 of implied) is the textbook volatility premium;
 it carries rare, very large losses and needs margin — not suitable for the owner's account; not pursued.
+
+## Lead — E157 does order-book liquidity control movement? (Binance bookDepth archives, BTC 2023–2026, gold 2025–26)
+New tool: edges/data/fetch_depth.py (free 30-second depth within ±0.2–5% of price, stored as 5-minute rows).
+SIZE: a thin book does mean bigger moves on BTC: median next-4h range 1.25% when depth within ±1% is in its thinnest
+fifth vs 0.99% in the middle and 0.95% in the thickest fifth (FINAL, n 64k bars). On gold the reverse (0.39% vs 0.60%),
+because gold's book is thinnest in quiet hours.
+DIRECTION: on BTC, more bids than asks within 1% predicts the next hour slightly in all three periods (rank IC 0.058 /
+0.033 / 0.035 train / validation / final) — the first direction feature consistent everywhere. But most of it is
+short-term mean reversion seen through the book (imbalance vs the past hour's return: correlation −0.39 to −0.48); net of
+past 15m/1h/4h returns the IC is 0.018 / 0.011 / 0.020. As trades: "follow the book" made +2 to +9 bp gross per trade
+(right 53–58%), −5 to −12 bp after 0.07%/side taker costs (FAIL); the opposite ("liquidity magnet") lost. Gold: no
+consistent sign (final IC −0.02). Verdict: FAIL as a rule; BTC book imbalance kept as a candidate feature, and as a
+maker-only rule for a future test (needs a registered plan: gross 5–9 bp vs 4 bp maker round trip).
