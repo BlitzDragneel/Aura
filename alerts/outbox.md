@@ -166,3 +166,10 @@ TRX 0.30293: big UP move likely, trend turning UP (up 29% / down 13% in 24h)
 FIL 0.595: trend turning UP (up 23% / down 9% in 24h)
 OP 0.08006: trend turning UP (up 14% / down 7% in 24h)
 UpScout record: 12 scored, 33% came true vs 6% normally. DownScout record: 65 scored, 9% came true vs 35% normally.
+
+## 2026-11-16 11:00:59 UTC
+🌅 OMEGA morning read
+Bitcoin 64,545.50 | 1h trend down | vol normal | typical day range 2.49% | big 4h move chance 25% | day WAIT · swing WATCH · hold WAIT
+Gold 3,878.00 | 1h trend up | vol active | typical day range 1.42% | big 4h move chance 24% | day WATCH · swing WAIT · hold WAIT
+Silver 47.85 | 1h trend flat | vol active | typical day range 2.59% | big 4h move chance 33% | day WATCH · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.

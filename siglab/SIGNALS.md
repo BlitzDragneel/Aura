@@ -1,11 +1,12 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 10:51 UTC
+Updated 2026-11-16 11:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 1 | 0.226 | None | 1.0 | PAPER |
 | ADAUSD S4 | 2 | 0.121 | 1.8 | 1.0 | PAPER |
+| ADAUSD S6 | 1 | 0.24 | None | 1.0 | PAPER |
 | AVAXUSD S1 | 1 | 0.26 | None | 1.0 | PAPER |
 | AVAXUSD S2 | 1 | -1.044 | None | 0.0 | PAPER |
 | BNBUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
@@ -38,7 +39,10 @@ Updated 2026-11-16 10:51 UTC
 | XAUUSD S3 | 1 | 0.085 | None | 1.0 | PAPER |
 | XAUUSD S4 | 1 | 0.31 | None | 1.0 | PAPER |
 | XAUUSD S5 | 1 | 0.072 | None | 1.0 | PAPER |
+| XAUUSD S6 | 1 | -1.01 | None | 0.0 | PAPER |
+| XRPUSD S2 | 1 | 0.239 | None | 1.0 | PAPER |
 | XRPUSD S4 | 1 | -1.054 | None | 0.0 | PAPER |
+| XRPUSD S6 | 1 | 0.252 | None | 1.0 | PAPER |
 
 ## Latest signals
 
@@ -51,9 +55,9 @@ Updated 2026-11-16 10:51 UTC
 - 16 Nov 07:00 LTCUSD sell S6 @ 44.73 SL 45.177 → open
 - 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 AVAXUSD sell S6 @ 7.134 SL 7.2284 → open
-- 16 Nov 07:00 ADAUSD sell S6 @ 0.1526 SL 0.1544 → open
+- 16 Nov 07:00 ADAUSD sell S6 @ 0.1526 SL 0.1544 → closed TP1+BE +0.24R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 6 closed, avg +0.17R, 100% won.
 - 16 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.05951 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry.
-- 16 Nov 07:00 XRPUSD sell S6 @ 0.9548 SL 0.965293 → open
+- 16 Nov 07:00 XRPUSD sell S6 @ 0.9548 SL 0.965293 → closed TP1+BE +0.25R. Reached TP1 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 6 closed, avg +0.17R, 100% won.
 - 16 Nov 07:00 BNBUSD sell S6 @ 591.39 SL 595.92 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 4 closed, avg +0.16R, 100% won.
 - 16 Nov 07:00 BNBUSD sell S4 @ 591.39 SL 595.92 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 6 closed, avg -0.26R, 67% won.
 - 16 Nov 07:00 SOLUSD sell S6 @ 71.21 SL 72.096 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
@@ -61,14 +65,14 @@ Updated 2026-11-16 10:51 UTC
 - 16 Nov 07:00 BTCUSD sell S6 @ 64680.1 SL 65199.03 → open
 - 16 Nov 07:00 BTCUSD sell S4 @ 64680.1 SL 65199.03 → open
 - 16 Nov 07:00 XAGUSD sell S6 @ 47.57 SL 48.018 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 3 closed, avg +0.18R, 100% won.
-- 16 Nov 07:00 XAUUSD sell S6 @ 3856.6 SL 3877.07 → open
+- 16 Nov 07:00 XAUUSD sell S6 @ 3856.6 SL 3877.07 → closed SL -1.01R. Stopped out after 234 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit.
 - 16 Nov 06:15 SUIUSD sell S2 @ 0.7161 SL 0.725379 → closed SL -1.05R. Stopped out after 78 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R).
 - 16 Nov 06:15 AVAXUSD sell S2 @ 7.083 SL 7.1781 → closed SL -1.04R. Stopped out after 77 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R).
 - 16 Nov 06:15 SOLUSD sell S2 @ 70.9 SL 71.805 → open
 - 16 Nov 06:15 XAGUSD sell S4 @ 47.49 SL 47.914 → open
 - 16 Nov 06:00 BTCUSD sell S2 @ 64452.9 SL 64988.52 → closed SL -1.02R. Stopped out after 101 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R).
 - 16 Nov 06:00 XAUUSD sell S2 @ 3842.1 SL 3860.96 → closed SL -1.01R. Stopped out after 16 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit.
-- 16 Nov 05:45 XRPUSD sell S2 @ 0.9537 SL 0.964279 → open
+- 16 Nov 05:45 XRPUSD sell S2 @ 0.9537 SL 0.964279 → closed TP1+BE +0.24R. Reached TP1 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 5 closed, avg -1.05R, 0% won.
 - 16 Nov 04:45 ADAUSD sell S1 @ 0.1534 SL 0.15535 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 6 closed, avg -0.02R, 83% won.
 - 16 Nov 04:15 SUIUSD sell S1 @ 0.727 SL 0.736779 → open
 - 16 Nov 04:15 SOLUSD sell S1 @ 71.8 SL 72.748 → open
