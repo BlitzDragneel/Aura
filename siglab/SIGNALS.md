@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 02:12 UTC
+Updated 2026-11-16 02:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -20,6 +20,9 @@ Updated 2026-11-16 02:12 UTC
 
 ## Latest signals
 
+- 16 Nov 02:15 ADAUSD sell S4 @ 0.1533 SL 0.155186 → open
+- 16 Nov 02:15 SOLUSD sell S4 @ 71.94 SL 72.853 → open
+- 16 Nov 02:15 XAUUSD buy S1 @ 3889.5 SL 3875.14 → open
 - 16 Nov 01:45 BNBUSD sell S2 @ 590.47 SL 594.93 → open
 - 16 Nov 01:45 XAGUSD sell S7 @ 47.88 SL 48.14 → closed TP2+BE +0.53R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry.
 - 16 Nov 01:45 XAUUSD buy S4 @ 3880.7 SL 3868.09 → open

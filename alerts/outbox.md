@@ -67,3 +67,8 @@ Market now: trend down, volatility normal, Asia session
 TRX 0.30312: trend turning UP (up 21% / down 23% in 24h)
 FIL 0.5997: trend turning UP (up 15% / down 14% in 24h)
 UpScout record: 12 scored, 33% came true vs 6% normally. DownScout record: 37 scored, 14% came true vs 36% normally.
+
+## 2026-11-16 02:15:59 UTC
+⚡ Gold: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~3889.5
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
