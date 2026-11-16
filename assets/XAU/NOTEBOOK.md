@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 8 readings scored; big moves followed 25% of them, 33% after a WATCH (3 WATCH readings) - too few to judge yet.
+- My own record: 9 readings scored; big moves followed 33% of them, 33% after a WATCH (3 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: no readings scored yet (each is scored once its horizon has passed).
+- My own record: 1 readings scored; big moves followed 0% of them - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -30,14 +30,14 @@ Built automatically from the research findings, the approved rules and my own fo
 ## Habits I measure myself
 
 - Over the last 20 days the busiest session was New York (average hourly move 0.20%) and the quietest late US (0.12%).
-- At weekends, while spot is closed, the perpetual moves 38% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- At weekends, while spot is closed, the perpetual moves 37% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 1.4% from low to high (last 60 days); 38% of those days closed higher.
 - Over the last 30 days the price moved -6.4% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3872.4; volatility regime normal (hourly ATR 0.411% of price, 71.6th percentile).
-- Spot XAUUSD 3863.44; the perpetual trades +0.23% from spot.
+- Price 3842.1; volatility regime active (hourly ATR 0.491% of price, 88.9th percentile).
+- Spot XAUUSD 3836.53; the perpetual trades +0.14% from spot.
 
 ## My calls so far
 

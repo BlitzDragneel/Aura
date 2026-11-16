@@ -82,3 +82,20 @@ Market now: trend down, volatility high, Asia session
 ⚡ XRP: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~0.9537
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-16 06:01:10 UTC
+⚡ Gold: BREAKOUT right now
+Market now: trend up, volatility high, normal range, Asia session
+🧪 PAPER (untested, do not trade)
+⏪ On this market's recent history: 35 of these, 66% ended positive, average +0.12R
+Gold SELL now ~3842.1
+SL 3860.96
+TP1 3833.95 (reached in 60% of similar moments in the last 3 days)
+TP2 3829.94 (reached in 40% of similar moments in the last 3 days)
+TP3 3819.72 (reached in 20% of similar moments in the last 3 days)
+Setup: breakout (closed below the last 4 hours' low on a wide bar)
+no record yet
+
+⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~64452.9
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
