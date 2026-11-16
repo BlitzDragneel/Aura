@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-16T22:00:49.305694+00:00",
+ "asof": "2026-11-16T22:15:36.694648+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 65271.2,
-  "bar": "2026-11-16T21:45:00+00:00",
+  "price": 65420.1,
+  "bar": "2026-11-16T22:00:00+00:00",
   "trend": {
    "15m": {
     "state": "up",
-    "close": 65271.2,
-    "ma20": 64987.05500000001,
-    "ma50": 64664.126,
-    "slope_atr": 0.61,
-    "bar": "2026-11-16T21:45:00+00:00"
+    "close": 65420.1,
+    "ma20": 65011.475,
+    "ma50": 64684.863999999994,
+    "slope_atr": 0.6,
+    "bar": "2026-11-16T22:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.85,
   "funding": {
-   "rate": 6.14253802635e-05,
+   "rate": 5.69575138656e-05,
    "next_time": 1794873600000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.186,
+    "p_big_move": 0.178,
     "flag": false,
     "detail": {
-     "p_up_move": 0.089,
-     "p_down_move": 0.098
+     "p_up_move": 0.088,
+     "p_down_move": 0.09
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -247,7 +247,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 65271.2; volatility regime active (hourly ATR 0.893% of price, 80.7th percentile).",
+    "Price 65420.1; volatility regime active (hourly ATR 0.893% of price, 80.7th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -258,6 +258,6 @@
    ]
   }
  ],
- "runs": 92,
+ "runs": 93,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
