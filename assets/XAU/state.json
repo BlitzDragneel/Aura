@@ -5,7 +5,7 @@
 "since": "2026-11-16T07:00:55.855483+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (92th percentile of the last 3 weeks)",
+"hourly volatility is high (91th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -198,14 +198,6 @@
 {
 "t": "2026-11-16T08:00:00+00:00",
 "price": 3865.8,
-"horizon": "day",
-"thr": 0.010435836603770766,
-"watch": true,
-"p": 0.144
-},
-{
-"t": "2026-11-16T08:00:00+00:00",
-"price": 3865.8,
 "horizon": "swing",
 "thr": 0.020871673207541533,
 "watch": false,
@@ -290,17 +282,41 @@
 "thr": 0.052548626812688286,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-16T12:00:00+00:00",
+"price": 3875.2,
+"horizon": "day",
+"thr": 0.010462132830010623,
+"watch": true,
+"p": 0.2
+},
+{
+"t": "2026-11-16T12:00:00+00:00",
+"price": 3875.2,
+"horizon": "swing",
+"thr": 0.020924265660021247,
+"watch": false,
+"p": 0.057
+},
+{
+"t": "2026-11-16T12:00:00+00:00",
+"price": 3875.2,
+"horizon": "hold",
+"thr": 0.052310664150053116,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 15,
+"n": 16,
 "big": 3,
-"watch_n": 5,
+"watch_n": 6,
 "watch_big": 1,
-"brier": 2.17073,
+"brier": 2.1914659999999997,
 "brier_base": 0.0,
-"scout_n": 15
+"scout_n": 16
 },
 "swing": {
 "n": 3,
@@ -313,7 +329,7 @@
 }
 },
 "calls_record": {},
-"runs": 54,
+"runs": 55,
 "created": "2026-11-15T06:42:38",
-"last_run": "2026-11-16T12:46:01.842792+00:00"
+"last_run": "2026-11-16T13:00:53.878994+00:00"
 }
