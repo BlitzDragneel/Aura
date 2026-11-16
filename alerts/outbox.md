@@ -99,3 +99,20 @@ no record yet
 ⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~64452.9
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-16 06:16:02 UTC
+⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~47.49
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+⚡ Solana: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~70.9
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.19R). Logged and scored anyway.
+
+⚡ Avalanche: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~7.083
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Sui: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~0.7161
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
