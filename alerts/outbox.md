@@ -61,3 +61,9 @@ Market now: trend down, volatility high, Asia session
 ⚡ BNB: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~590.47
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-16 02:12:43 UTC
+🔭 Scouts (24-hour forecasts, information only, not trade signals):
+TRX 0.30312: trend turning UP (up 21% / down 23% in 24h)
+FIL 0.5997: trend turning UP (up 15% / down 14% in 24h)
+UpScout record: 12 scored, 33% came true vs 6% normally. DownScout record: 37 scored, 14% came true vs 36% normally.
