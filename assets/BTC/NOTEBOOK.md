@@ -35,7 +35,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 64408.4; volatility regime active (hourly ATR 0.834% of price, 75.5th percentile).
+- Price 64517.4; volatility regime active (hourly ATR 0.834% of price, 75.5th percentile).
 - Bitcoin trades 24/7.
 
 ## My calls so far
