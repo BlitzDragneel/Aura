@@ -230,3 +230,19 @@ Why: Stopped out after 16 min. Price never reached TP1 (best was 0.1R in favour,
 
 ❌ Chainlink BUY (breakout) closed: SL, -1.05R (-116 pips)
 Why: Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
+
+## 2026-11-16 15:46:01 UTC
+⚡ Solana: BIG MOVE under way right now (moved -1.90 in the last hour, twice its normal hourly range), price ~70.48
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.22R). Logged and scored anyway.
+
+⚡ Avalanche: BIG MOVE under way right now
+Market now: trend down, volatility normal, expanding range, New York session
+🧪 PAPER (untested, do not trade)
+Avalanche SELL now ~7.073
+SL 7.1683
+TP1 6.9732 (reached in 60% of similar moments in the last 3 days)
+TP2 6.913 (reached in 40% of similar moments in the last 3 days)
+TP3 6.7912 (reached in 20% of similar moments in the last 3 days)
+Setup: big move (moved -0.19 in the last hour, twice its normal hourly range)
+no record yet
