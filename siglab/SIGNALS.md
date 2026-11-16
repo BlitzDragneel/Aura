@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 10:00 UTC
+Updated 2026-11-16 10:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -28,6 +28,7 @@ Updated 2026-11-16 10:00 UTC
 | XAGUSD S2 | 1 | -1.084 | None | 0.0 | PAPER |
 | XAGUSD S3 | 1 | 0.172 | None | 1.0 | PAPER |
 | XAGUSD S4 | 1 | -1.109 | None | 0.0 | PAPER |
+| XAGUSD S6 | 1 | 0.097 | None | 1.0 | PAPER |
 | XAGUSD S7 | 1 | 0.526 | None | 1.0 | PAPER |
 | XAUUSD S1 | 1 | -1.014 | None | 0.0 | PAPER |
 | XAUUSD S2 | 1 | -1.011 | None | 0.0 | PAPER |
@@ -56,7 +57,7 @@ Updated 2026-11-16 10:00 UTC
 - 16 Nov 07:00 ETHUSD sell S6 @ 1816.36 SL 1833.95 → open
 - 16 Nov 07:00 BTCUSD sell S6 @ 64680.1 SL 65199.03 → open
 - 16 Nov 07:00 BTCUSD sell S4 @ 64680.1 SL 65199.03 → open
-- 16 Nov 07:00 XAGUSD sell S6 @ 47.57 SL 48.018 → open
+- 16 Nov 07:00 XAGUSD sell S6 @ 47.57 SL 48.018 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 3 closed, avg +0.18R, 100% won.
 - 16 Nov 07:00 XAUUSD sell S6 @ 3856.6 SL 3877.07 → open
 - 16 Nov 06:15 SUIUSD sell S2 @ 0.7161 SL 0.725379 → closed SL -1.05R. Stopped out after 78 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R).
 - 16 Nov 06:15 AVAXUSD sell S2 @ 7.083 SL 7.1781 → closed SL -1.04R. Stopped out after 77 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R).
