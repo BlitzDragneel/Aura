@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-16T07:05:47.025721+00:00",
+ "asof": "2026-11-16T07:15:50.087601+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 47.57,
-  "bar": "2026-11-16T06:45:00+00:00",
+  "price": 47.5,
+  "bar": "2026-11-16T07:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 47.57,
-    "ma20": 47.609,
-    "ma50": 47.989,
-    "slope_atr": -0.68,
-    "bar": "2026-11-16T06:45:00+00:00"
+    "close": 47.5,
+    "ma20": 47.588,
+    "ma50": 47.98,
+    "slope_atr": -0.45,
+    "bar": "2026-11-16T07:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 3.55,
   "spot": {
-   "price": 47.54105,
-   "bid": 47.5155,
-   "ask": 47.5666,
-   "spread": 0.0511,
+   "price": 47.43705,
+   "bid": 47.415,
+   "ask": 47.4591,
+   "spread": 0.0441,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.061
+   "perp_premium_pct": 0.133
   },
   "funding": {
-   "rate": 0.0001114144413323,
+   "rate": 0.0001121668475535,
    "next_time": 1794816000000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 47.57; volatility regime active (hourly ATR 0.941% of price, 88.9th percentile).",
-    "Spot XAGUSD 47.54; the perpetual trades +0.06% from spot."
+    "Price 47.5; volatility regime active (hourly ATR 0.941% of price, 88.9th percentile).",
+    "Spot XAGUSD 47.44; the perpetual trades +0.13% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 31,
+ "runs": 32,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
