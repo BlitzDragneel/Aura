@@ -173,3 +173,8 @@ Bitcoin 64,545.50 | 1h trend down | vol normal | typical day range 2.49% | big 4
 Gold 3,878.00 | 1h trend up | vol active | typical day range 1.42% | big 4h move chance 24% | day WATCH · swing WAIT · hold WAIT
 Silver 47.85 | 1h trend flat | vol active | typical day range 2.59% | big 4h move chance 33% | day WATCH · swing WAIT · hold WAIT
 Calls come only from tested rules. WATCH = move likely, direction unknown.
+
+## 2026-11-16 12:31:16 UTC
+⚡ Litecoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~43.95
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
