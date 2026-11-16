@@ -72,3 +72,8 @@ UpScout record: 12 scored, 33% came true vs 6% normally. DownScout record: 37 sc
 ⚡ Gold: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~3889.5
 Market now: trend up, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-16 02:45:56 UTC
+⚡ Silver: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~47.49
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.

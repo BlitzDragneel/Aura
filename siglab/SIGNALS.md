@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 02:30 UTC
+Updated 2026-11-16 02:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -24,6 +24,7 @@ Updated 2026-11-16 02:30 UTC
 
 ## Latest signals
 
+- 16 Nov 02:45 XAGUSD sell S2 @ 47.49 SL 47.836 → open
 - 16 Nov 02:30 SUIUSD sell S4 @ 0.7323 SL 0.7416 → open
 - 16 Nov 02:30 LTCUSD sell S4 @ 45.17 SL 45.638 → open
 - 16 Nov 02:30 AVAXUSD sell S4 @ 7.262 SL 7.3594 → open
