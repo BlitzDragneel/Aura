@@ -36,9 +36,9 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 47.04; volatility regime normal (hourly ATR 0.765% of price, 65.8th percentile).
+- Price 47.08; volatility regime normal (hourly ATR 0.765% of price, 65.8th percentile).
 - CME daily break (21-22 UTC): spot quotes pause.
-- Spot XAGUSD 46.97; the perpetual trades +0.15% from spot.
+- Spot XAGUSD 47.00; the perpetual trades +0.17% from spot.
 
 ## My calls so far
 
