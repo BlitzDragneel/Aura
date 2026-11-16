@@ -178,3 +178,45 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 ⚡ Litecoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~43.95
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-16 14:46:12 UTC
+⚡ Ethereum: BIG MOVE under way right now (moved +47.51 in the last hour, twice its normal hourly range), price ~1851.62
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+⚡ XRP: BIG MOVE under way right now (moved +0.02 in the last hour, twice its normal hourly range), price ~0.9725
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+⚡ Dogecoin: BREAKOUT right now
+Market now: trend down, volatility normal, expanding range, New York session
+🧪 PAPER (untested, do not trade)
+Dogecoin BUY now ~0.05964
+SL 0.058966
+TP1 0.059924 (reached in 60% of similar moments in the last 3 days)
+TP2 0.06014 (reached in 40% of similar moments in the last 3 days)
+TP3 0.060458 (reached in 20% of similar moments in the last 3 days)
+Setup: breakout (closed above the last 4 hours' high on a wide bar)
+no record yet
+
+⚡ Cardano: BREAKOUT right now
+Market now: trend down, volatility normal, expanding range, New York session
+🧪 PAPER (untested, do not trade)
+Cardano BUY now ~0.155
+SL 0.153029
+TP1 0.1557 (reached in 60% of similar moments in the last 3 days)
+TP2 0.15636 (reached in 40% of similar moments in the last 3 days)
+TP3 0.15718 (reached in 20% of similar moments in the last 3 days)
+Setup: breakout (closed above the last 4 hours' high on a wide bar)
+no record yet
+
+⚡ Chainlink: BREAKOUT right now
+Market now: trend down, volatility normal, expanding range, New York session
+🧪 PAPER (untested, do not trade)
+Chainlink BUY now ~9.292
+SL 9.1893
+TP1 9.3354 (reached in 60% of similar moments in the last 3 days)
+TP2 9.3756 (reached in 40% of similar moments in the last 3 days)
+TP3 9.418 (reached in 20% of similar moments in the last 3 days)
+Setup: breakout (closed above the last 4 hours' high on a wide bar)
+no record yet
