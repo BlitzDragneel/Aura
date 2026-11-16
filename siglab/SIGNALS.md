@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 12:01 UTC
+Updated 2026-11-16 12:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -9,6 +9,7 @@ Updated 2026-11-16 12:01 UTC
 | ADAUSD S6 | 1 | 0.24 | None | 1.0 | PAPER |
 | AVAXUSD S1 | 1 | 0.26 | None | 1.0 | PAPER |
 | AVAXUSD S2 | 1 | -1.044 | None | 0.0 | PAPER |
+| AVAXUSD S5 | 1 | -1.046 | None | 0.0 | PAPER |
 | BNBUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
 | BNBUSD S2 | 1 | -1.08 | None | 0.0 | PAPER |
 | BNBUSD S4 | 2 | -0.42 | -0.65 | 0.5 | PAPER |
@@ -53,7 +54,7 @@ Updated 2026-11-16 12:01 UTC
 
 - 16 Nov 09:30 XAGUSD sell S1 @ 47.44 SL 47.893 → closed SL -1.07R. Stopped out after 70 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 10 closed, avg +0.20R, 90% won.
 - 16 Nov 09:15 ETHUSD sell S2 @ 1793.52 SL 1812.02 → closed SL -1.05R. Stopped out after 113 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Lesson so far: breakout with the trend: 6 closed, avg -0.84R, 17% won.
-- 16 Nov 07:30 AVAXUSD buy S5 @ 7.161 SL 7.0666 → open
+- 16 Nov 07:30 AVAXUSD buy S5 @ 7.161 SL 7.0666 → closed SL -1.05R. Stopped out after 283 min. Price never reached TP1 (best was 0.4R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 07:30 BNBUSD buy S5 @ 592.9 SL 588.37 → closed SL -1.08R. Stopped out after 91 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend.
 - 16 Nov 07:30 XAUUSD buy S5 @ 3864.6 SL 3844.13 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 SUIUSD sell S6 @ 0.7216 SL 0.730714 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 4 closed, avg +0.16R, 100% won.
