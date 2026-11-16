@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-16 07:15 UTC
+Updated 2026-11-16 07:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -10,12 +10,15 @@ Updated 2026-11-16 07:15 UTC
 | BNBUSD S4 | 1 | -1.07 | None | 0.0 | PAPER |
 | BTCUSD S1 | 1 | 0.281 | None | 1.0 | PAPER |
 | BTCUSD S4 | 1 | -1.01 | None | 0.0 | PAPER |
+| DOGEUSD S6 | 1 | 0.181 | None | 1.0 | PAPER |
 | ETHUSD S1 | 1 | 0.056 | None | 1.0 | PAPER |
 | ETHUSD S4 | 2 | -0.498 | -0.9 | 0.5 | PAPER |
 | LINKUSD S1 | 1 | 0.249 | None | 1.0 | PAPER |
 | LINKUSD S4 | 1 | -1.057 | None | 0.0 | PAPER |
+| LINKUSD S6 | 1 | 0.165 | None | 1.0 | PAPER |
 | LTCUSD S1 | 1 | 0.042 | None | 1.0 | PAPER |
 | LTCUSD S4 | 1 | 0.042 | None | 1.0 | PAPER |
+| SOLUSD S6 | 1 | 0.187 | None | 1.0 | PAPER |
 | XAGUSD S2 | 1 | -1.084 | None | 0.0 | PAPER |
 | XAGUSD S3 | 1 | 0.172 | None | 1.0 | PAPER |
 | XAGUSD S4 | 1 | -1.109 | None | 0.0 | PAPER |
@@ -28,16 +31,19 @@ Updated 2026-11-16 07:15 UTC
 
 ## Latest signals
 
+- 16 Nov 07:30 AVAXUSD buy S5 @ 7.161 SL 7.0666 → open
+- 16 Nov 07:30 BNBUSD buy S5 @ 592.9 SL 588.37 → open
+- 16 Nov 07:30 XAUUSD buy S5 @ 3864.6 SL 3844.13 → open
 - 16 Nov 07:00 SUIUSD sell S6 @ 0.7216 SL 0.730714 → open
 - 16 Nov 07:00 LTCUSD sell S6 @ 44.73 SL 45.177 → open
-- 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → open
+- 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 AVAXUSD sell S6 @ 7.134 SL 7.2284 → open
 - 16 Nov 07:00 ADAUSD sell S6 @ 0.1526 SL 0.1544 → open
-- 16 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.05951 → open
+- 16 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.05951 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 XRPUSD sell S6 @ 0.9548 SL 0.965293 → open
 - 16 Nov 07:00 BNBUSD sell S6 @ 591.39 SL 595.92 → open
 - 16 Nov 07:00 BNBUSD sell S4 @ 591.39 SL 595.92 → open
-- 16 Nov 07:00 SOLUSD sell S6 @ 71.21 SL 72.096 → open
+- 16 Nov 07:00 SOLUSD sell S6 @ 71.21 SL 72.096 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 ETHUSD sell S6 @ 1816.36 SL 1833.95 → open
 - 16 Nov 07:00 BTCUSD sell S6 @ 64680.1 SL 65199.03 → open
 - 16 Nov 07:00 BTCUSD sell S4 @ 64680.1 SL 65199.03 → open

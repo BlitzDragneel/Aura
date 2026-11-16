@@ -128,3 +128,17 @@ Why: Stopped out after 16 min. Price never reached TP1 (best was 0.2R in favour,
 ⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~64680.1
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-16 07:31:09 UTC
+⚡ Gold: SESSION DRIVE right now
+Market now: trend up, volatility high, normal range, London session
+🧪 PAPER (untested, do not trade)
+📈 BACKTEST+ (made +0.32R per signal on past data; live record still needed)
+⏪ On this market's recent history: 22 of these, 82% ended positive, average +0.32R
+Gold BUY now ~3864.6
+SL 3844.13
+TP1 3869.72 (reached in 60% of similar moments in the last 3 days)
+TP2 3873.59 (reached in 40% of similar moments in the last 3 days)
+TP3 3882.59 (reached in 20% of similar moments in the last 3 days)
+Setup: session drive (London open drive)
+no record yet
