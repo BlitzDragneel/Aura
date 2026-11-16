@@ -3,28 +3,28 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-16T14:45:52.942707+00:00",
+ "asof": "2026-11-16T15:01:03.989657+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 47.4,
-  "bar": "2026-11-16T14:30:00+00:00",
+  "price": 47.13,
+  "bar": "2026-11-16T14:45:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 47.4,
-    "ma20": 47.6125,
-    "ma50": 47.583800000000004,
-    "slope_atr": -0.29,
-    "bar": "2026-11-16T14:30:00+00:00"
+    "close": 47.13,
+    "ma20": 47.595,
+    "ma50": 47.5692,
+    "slope_atr": -0.3,
+    "bar": "2026-11-16T14:45:00+00:00"
    },
    "1h": {
     "state": "flat",
-    "close": 47.35,
-    "ma20": 47.841,
-    "ma50": 47.8074,
-    "slope_atr": -0.09,
-    "bar": "2026-11-16T13:00:00+00:00"
+    "close": 47.13,
+    "ma20": 47.803999999999995,
+    "ma50": 47.772400000000005,
+    "slope_atr": -0.13,
+    "bar": "2026-11-16T14:00:00+00:00"
    },
    "4h": {
     "state": "down",
@@ -44,9 +44,9 @@
    }
   },
   "volatility": {
-   "atr1h_pct": 0.941,
-   "atr1h_pctile": 87.4,
-   "atr1h": 0.44571428571428434,
+   "atr1h_pct": 0.964,
+   "atr1h_pctile": 89.1,
+   "atr1h": 0.45428571428571324,
    "rv20d_ann_pct": 49.3,
    "rv20d_pctile": 59.2,
    "day_range_pct_median": 2.59,
@@ -55,7 +55,7 @@
   },
   "session": {
    "name": "New York",
-   "utc_hour": 14,
+   "utc_hour": 15,
    "weekday": "Monday",
    "weekend": false,
    "cme_break": false,
@@ -64,47 +64,47 @@
   "ranges": {
    "24h": {
     "high": 49.11,
-    "low": 47.22,
-    "to_high_pct": 3.72,
-    "to_low_pct": 0.28,
-    "to_high_atr": 3.9,
-    "to_low_atr": 0.3,
-    "position": 0.07
+    "low": 47.05,
+    "to_high_pct": 4.2,
+    "to_low_pct": 0.17,
+    "to_high_atr": 4.4,
+    "to_low_atr": 0.2,
+    "position": 0.04
    },
    "7d": {
     "high": 53.82,
     "low": 46.19,
-    "to_high_pct": 13.66,
-    "to_low_pct": 2.51,
-    "to_high_atr": 14.5,
-    "to_low_atr": 2.6,
-    "position": 0.15
+    "to_high_pct": 14.19,
+    "to_low_pct": 2.04,
+    "to_high_atr": 14.7,
+    "to_low_atr": 2.1,
+    "position": 0.12
    },
    "30d": {
     "high": 58.69,
     "low": 46.19,
-    "to_high_pct": 23.95,
-    "to_low_pct": 2.51,
+    "to_high_pct": 24.53,
+    "to_low_pct": 2.04,
     "to_high_atr": 25.4,
-    "to_low_atr": 2.6,
-    "position": 0.09
+    "to_low_atr": 2.1,
+    "position": 0.08
    }
   },
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 3.55,
   "spot": {
-   "price": 47.3495,
-   "bid": 47.3287,
-   "ask": 47.3703,
-   "spread": 0.0416,
+   "price": 47.04005,
+   "bid": 47.019,
+   "ask": 47.0611,
+   "spread": 0.0421,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.107
+   "perp_premium_pct": 0.191
   },
   "funding": {
-   "rate": 0.0001635479751816,
+   "rate": 0.0001711867484543,
    "next_time": 1794844800000,
    "source": "okx-swap"
   },
@@ -112,11 +112,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.317,
+    "p_big_move": 0.306,
     "flag": false,
     "detail": {
-     "p_up_move": 0.138,
-     "p_down_move": 0.178
+     "p_up_move": 0.18,
+     "p_down_move": 0.126
     },
     "trained_to": "2025-12-31",
     "label": "own scout on SI=F silver futures hourly (CME hours); validation AUC 0.58/0.61 (up/down); UNTESTED as a trading signal",
@@ -125,11 +125,11 @@
    "swing": {
     "horizon": "24 h",
     "skill_ok": false,
-    "p_big_move": 0.275,
+    "p_big_move": 0.284,
     "flag": false,
     "detail": {
-     "p_up_move": 0.216,
-     "p_down_move": 0.059
+     "p_up_move": 0.238,
+     "p_down_move": 0.046
     },
     "trained_to": "2025-12-31",
     "label": "own scout on SI=F silver futures hourly (CME hours); validation AUC 0.54/0.49 (up/down); UNTESTED as a trading signal; NO SKILL on validation (AUC < 0.55): not used for WATCH",
@@ -176,24 +176,24 @@
  "recent_calls": [],
  "forward": {
   "day": {
-   "scored": 17,
-   "big_move_rate": 0.176,
-   "watch_readings": 3,
+   "scored": 18,
+   "big_move_rate": 0.167,
+   "watch_readings": 4,
    "big_move_rate_when_watch": 0.0,
    "big_move_rate_otherwise": 0.214,
-   "scout_brier": 0.1891,
+   "scout_brier": 0.1847,
    "enough": false,
-   "text": "17 readings scored; big moves followed 18% of them, 0% after a WATCH (3 WATCH readings) - too few to judge yet"
+   "text": "18 readings scored; big moves followed 17% of them, 0% after a WATCH (4 WATCH readings) - too few to judge yet"
   },
   "swing": {
-   "scored": 3,
+   "scored": 4,
    "big_move_rate": 0.0,
    "watch_readings": 0,
    "big_move_rate_when_watch": null,
    "big_move_rate_otherwise": 0.0,
-   "scout_brier": 0.0262,
+   "scout_brier": 0.0227,
    "enough": false,
-   "text": "3 readings scored; big moves followed 0% of them - too few to judge yet"
+   "text": "4 readings scored; big moves followed 0% of them - too few to judge yet"
   },
   "hold": {
    "scored": 0,
@@ -221,14 +221,14 @@
     "BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.",
     "| Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |",
     "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
-    "My own record: 17 readings scored; big moves followed 18% of them, 0% after a WATCH (3 WATCH readings) - too few to judge yet."
+    "My own record: 18 readings scored; big moves followed 17% of them, 0% after a WATCH (4 WATCH readings) - too few to judge yet."
    ]
   },
   {
    "title": "Swing trades (1-20 days)",
    "lines": [
     "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
-    "My own record: 3 readings scored; big moves followed 0% of them - too few to judge yet."
+    "My own record: 4 readings scored; big moves followed 0% of them - too few to judge yet."
    ]
   },
   {
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 47.4; volatility regime active (hourly ATR 0.941% of price, 87.4th percentile).",
-    "Spot XAGUSD 47.35; the perpetual trades +0.11% from spot."
+    "Price 47.13; volatility regime active (hourly ATR 0.964% of price, 89.1th percentile).",
+    "Spot XAGUSD 47.04; the perpetual trades +0.19% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 62,
+ "runs": 63,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

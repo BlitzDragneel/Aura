@@ -2599,7 +2599,7 @@
     1873.74
    ],
    "R": 17.32,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -2608,7 +2608,15 @@
    "day": "2026-11-16",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 1851.63,
+   "outcome": "SL",
+   "R_ladder": -1.058,
+   "R_tp1": -1.058,
+   "pips": -183.3,
+   "closed_ms": 1794841200000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 15 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend."
   },
   {
    "id": "XRPUSD-S3-1794840300000",
@@ -2663,7 +2671,7 @@
     0.9875
    ],
    "R": 0.0105857,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -2672,7 +2680,15 @@
    "day": "2026-11-16",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 0.9724,
+   "outcome": "SL",
+   "R_ladder": -1.056,
+   "R_tp1": -1.056,
+   "pips": -113.8,
+   "closed_ms": 1794841200000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 15 min. Price never reached TP1 (best was 0.0R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend."
   },
   {
    "id": "DOGEUSD-S2-1794840300000",
@@ -3071,6 +3087,14 @@
     "total_R": 0.73,
     "grade": "PAPER"
    },
+   "ETHUSD S7": {
+    "n": 1,
+    "avg_R": -1.058,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.06,
+    "grade": "PAPER"
+   },
    "LINKUSD S1": {
     "n": 1,
     "avg_R": 0.249,
@@ -3334,6 +3358,14 @@
     "win": 1.0,
     "total_R": 0.25,
     "grade": "PAPER"
+   },
+   "XRPUSD S7": {
+    "n": 1,
+    "avg_R": -1.056,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.06,
+    "grade": "PAPER"
    }
   },
   "by_setup": {
@@ -3380,21 +3412,21 @@
     "total_R": 2.51
    },
    "S7": {
-    "n": 1,
-    "avg_R": 0.526,
-    "t": null,
-    "win": 1.0,
-    "total_R": 0.53
+    "n": 3,
+    "avg_R": -0.529,
+    "t": -1.0,
+    "win": 0.333,
+    "total_R": -1.59
    }
   },
   "all": {
-   "n": 65,
-   "avg_R": -0.102,
-   "t": -1.17,
-   "win": 0.677,
-   "total_R": -6.65
+   "n": 67,
+   "avg_R": -0.131,
+   "t": -1.5,
+   "win": 0.657,
+   "total_R": -8.77
   },
-  "open": 11
+  "open": 9
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -3726,6 +3758,27 @@
    "win": 1.0,
    "total_R": 0.53
   },
+  "S7 | New York": {
+   "n": 2,
+   "avg_R": -1.057,
+   "t": -1057.0,
+   "win": 0.0,
+   "total_R": -2.11
+  },
+  "S7 | against trend": {
+   "n": 2,
+   "avg_R": -1.057,
+   "t": -1057.0,
+   "win": 0.0,
+   "total_R": -2.11
+  },
+  "S7 | expanding": {
+   "n": 2,
+   "avg_R": -1.057,
+   "t": -1057.0,
+   "win": 0.0,
+   "total_R": -2.11
+  },
   "S7 | normal": {
    "n": 1,
    "avg_R": 0.526,
@@ -3739,6 +3792,13 @@
    "t": null,
    "win": 1.0,
    "total_R": 0.53
+  },
+  "S7 | vol normal": {
+   "n": 2,
+   "avg_R": -1.057,
+   "t": -1057.0,
+   "win": 0.0,
+   "total_R": -2.11
   },
   "S7 | with trend": {
    "n": 1,
