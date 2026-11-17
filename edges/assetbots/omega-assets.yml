@@ -52,7 +52,7 @@ jobs:
       - name: Watch-list rule (OI-confirmed move on gold and silver, paper log)
         working-directory: code
         run: python -W ignore -m edges.watch.oi_move ../state || true
-      - name: Signal Lab (paper signals on five markets, scored; sends the day's signals)
+      - name: Signal Lab (event alerts and paper signals, scored)
         working-directory: code
         run: python -W ignore -m edges.siglab.lab ../state || true
       - name: Recorder (saves what nobody archives - depth, liquidations, spreads, OI, funding)
