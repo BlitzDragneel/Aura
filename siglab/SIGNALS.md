@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 10:01 UTC
+Updated 2026-11-17 10:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -81,6 +81,7 @@ Updated 2026-11-17 10:01 UTC
 
 ## Latest signals
 
+- 17 Nov 10:15 ETHUSD buy S3 @ 1799.8 SL 1785.61 → open
 - 17 Nov 07:30 SUIUSD buy S5 @ 0.7252 SL 0.717614 → closed SL -1.06R. Stopped out after 111 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 8 closed, avg -0.38R, 38% won.
 - 17 Nov 07:30 LTCUSD buy S5 @ 44.7 SL 44.331 → closed SL -1.07R. Stopped out after 111 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 8 closed, avg -0.38R, 38% won.
 - 17 Nov 07:30 LINKUSD buy S5 @ 9.192 SL 9.1044 → closed SL -1.06R. Stopped out after 105 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 7 closed, avg -0.28R, 43% won.
@@ -140,4 +141,3 @@ Updated 2026-11-17 10:01 UTC
 - 17 Nov 00:15 LINKUSD sell S4 @ 9.118 SL 9.2359 → closed SL -1.05R. Stopped out after 306 min. Lesson so far: fib pullback with the trend: 17 closed, avg +0.05R, 76% won.
 - 17 Nov 00:15 SOLUSD sell S4 @ 71.53 SL 72.487 → closed SL -1.04R. Stopped out after 193 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). Lesson so far: fib pullback with the trend: 14 closed, avg +0.12R, 79% won.
 - 17 Nov 00:15 XAGUSD buy S4 @ 47.22 SL 46.876 → closed TP2+BE +0.28R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 4 closed, avg -0.78R, 25% won.
-- 17 Nov 00:00 ADAUSD sell S4 @ 0.153 SL 0.154964 → closed SL -1.05R. Stopped out after 215 min. Lesson so far: fib pullback with the trend: 17 closed, avg +0.05R, 76% won.
