@@ -364,3 +364,8 @@ Bitcoin 64,086.70 | 1h trend flat | vol normal | typical day range 2.5% | big 4h
 Gold 3,860.80 | 1h trend flat | vol normal | typical day range 1.42% | big 4h move chance 19% | day WAIT · swing WAIT · hold WAIT
 Silver 47.53 | 1h trend flat | vol normal | typical day range 2.59% | big 4h move chance 25% | day WAIT · swing WAIT · hold WAIT
 Calls come only from tested rules. WATCH = move likely, direction unknown.
+
+## 2026-11-17 12:46:00 UTC
+⏰ US news in 44 min: Core Retail Sales m/m (forecast 0.4%, previous 0.9%) at 13:30 UTC / 09:30 AM Trinidad.
+⏰ US news in 44 min: Retail Sales m/m (forecast 0.2%, previous 0.8%) at 13:30 UTC / 09:30 AM Trinidad.
+Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be predicted in testing (E152). Wider stops or stand aside for the release.
