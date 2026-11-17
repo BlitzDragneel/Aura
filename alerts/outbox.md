@@ -265,3 +265,20 @@ session drive: 6 closed, avg +0.03R, 67% won
 daily bias: 13 closed, avg +0.19R, 92% won
 big move: 5 closed, avg -0.73R, 20% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-17 00:01:13 UTC
+⚡ Gold: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~3868.5
+Market now: trend up, volatility normal, late session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+⚡ Silver: BREAKOUT right now
+Market now: trend down, volatility normal, compressed range, late session
+🧪 PAPER (untested, do not trade)
+⏪ On this market's recent history: 35 of these, 57% ended positive, average +0.07R
+Silver BUY now ~47.27
+SL 46.926
+TP1 47.39 (reached in 60% of similar moments in the last 3 days)
+TP2 47.5 (reached in 40% of similar moments in the last 3 days)
+TP3 47.658 (reached in 20% of similar moments in the last 3 days)
+Setup: breakout (closed above the last 4 hours' high on a wide bar)
+record of this setup here: 1 closed, avg -1.08R, 0% won

@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 26 readings scored; big moves followed 12% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet.
+- My own record: 27 readings scored; big moves followed 11% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 6 readings scored; big moves followed 0% of them - too few to judge yet.
+- My own record: 7 readings scored; big moves followed 0% of them - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -31,13 +31,13 @@ Built automatically from the research findings, the approved rules and my own fo
 
 - Over the last 20 days the busiest session was New York (average hourly move 0.20%) and the quietest late US (0.12%).
 - At weekends, while spot is closed, the perpetual moves 37% as much per hour as on weekdays: weekend prices are thin and less reliable.
-- A typical day ranges 1.4% from low to high (last 60 days); 38% of those days closed higher.
-- Over the last 30 days the price moved -6.4% (a fact, not a forecast).
+- A typical day ranges 1.4% from low to high (last 60 days); 37% of those days closed higher.
+- Over the last 30 days the price moved -7.1% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3858.6; volatility regime normal (hourly ATR 0.365% of price, 54.5th percentile).
-- Spot XAUUSD 3854.58; the perpetual trades +0.10% from spot.
+- Price 3868.5; volatility regime normal (hourly ATR 0.361% of price, 53.5th percentile).
+- Spot XAUUSD 3860.07; the perpetual trades +0.22% from spot.
 
 ## My calls so far
 
