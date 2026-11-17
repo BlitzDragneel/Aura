@@ -304,3 +304,7 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~64589.5
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-17 01:16:04 UTC
+❌ Silver BUY (breakout) closed: SL, -1.09R (-37 pips)
+Why: Stopped out after 67 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 4 closed, avg -1.04R, 0% won.
