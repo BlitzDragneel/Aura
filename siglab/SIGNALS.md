@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 04:31 UTC
+Updated 2026-11-17 04:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -76,6 +76,7 @@ Updated 2026-11-17 04:31 UTC
 
 ## Latest signals
 
+- 17 Nov 04:45 DOGEUSD buy S4 @ 0.05918 SL 0.058445 → open
 - 17 Nov 03:30 SUIUSD buy S2 @ 0.7268 SL 0.717093 → open
 - 17 Nov 03:30 LTCUSD buy S2 @ 44.98 SL 44.507 → open
 - 17 Nov 03:30 LINKUSD buy S2 @ 9.192 SL 9.0781 → open
@@ -135,4 +136,3 @@ Updated 2026-11-17 04:31 UTC
 - 16 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.05951 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 XRPUSD sell S6 @ 0.9548 SL 0.965293 → closed TP1+BE +0.25R. Reached TP1 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 6 closed, avg +0.17R, 100% won.
 - 16 Nov 07:00 BNBUSD sell S6 @ 591.39 SL 595.92 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 4 closed, avg +0.16R, 100% won.
-- 16 Nov 07:00 BNBUSD sell S4 @ 591.39 SL 595.92 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 6 closed, avg -0.26R, 67% won.
