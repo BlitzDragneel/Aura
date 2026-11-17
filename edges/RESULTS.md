@@ -509,3 +509,10 @@ moment, not evidence. All other lab setups on this untouched data: −0.13R (bre
 (breakout with), −0.10R (session drive against), −0.08 / −0.07R (pullbacks), −0.05R (trend pullback, stretch fade);
 only big-move-with-trend was mildly positive (+0.063R, t 1.2). This independently confirms the 17 Nov change: trade plans
 only with positive evidence, and breakouts against the trend are not one.
+
+## Lead — E160 gold session drive with the trend on 5 years of PAXG (2021–2025): BACKTEST+ REMOVED
+The only cell with a BACKTEST+ tag: −0.033R per signal (n 523, t −0.96; years −0.22 / −0.04 / +0.08 / −0.00 / +0.05).
+Its +0.32R on the gold perp's last 11 months was a short-sample effect. Tag removed: no setup now has positive evidence,
+so the lab sends no trade plans until a setup earns them in its live record (PROMISING after 15+ closed with a positive
+average; EARNED via the hour-clustered learning). Other setups on PAXG: stretch fade with the trend +0.077R, with the
+others between −0.19 and +0.02R.
