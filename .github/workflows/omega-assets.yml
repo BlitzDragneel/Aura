@@ -52,9 +52,12 @@ jobs:
       - name: Recorder (saves what nobody archives - depth, liquidations, spreads, OI, funding)
         working-directory: code
         run: python -W ignore -m edges.observer.recorder ../state || true
-      - name: Candle memory (predicts what follows each 15m candle from look-alikes; learns every run; info only)
+      - name: Candle memory (predicts each 15m candle, scores itself, explains every wrong call, retrains every run; info only)
         working-directory: code
         run: python -W ignore -m edges.memory.live ../state || true
+      - name: Candle memory self-review (daily; re-tunes itself only when the change holds on fresh data)
+        working-directory: code
+        run: python -W ignore -m edges.memory.review ../state || true
       - name: Weekly review (Mondays)
         working-directory: code
         run: python -W ignore -m edges.observer.weekly ../state || true
