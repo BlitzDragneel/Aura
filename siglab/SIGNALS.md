@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 05:46 UTC
+Updated 2026-11-17 06:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -70,7 +70,7 @@ Updated 2026-11-17 05:46 UTC
 | XRPUSD S1 | 2 | -0.147 | -0.16 | 0.5 | PAPER |
 | XRPUSD S2 | 1 | 0.239 | None | 1.0 | PAPER |
 | XRPUSD S3 | 1 | 1.555 | None | 1.0 | PAPER |
-| XRPUSD S4 | 1 | -1.054 | None | 0.0 | PAPER |
+| XRPUSD S4 | 2 | -0.465 | -0.79 | 0.5 | PAPER |
 | XRPUSD S6 | 1 | 0.252 | None | 1.0 | PAPER |
 | XRPUSD S7 | 1 | -1.056 | None | 0.0 | PAPER |
 
@@ -79,7 +79,7 @@ Updated 2026-11-17 05:46 UTC
 - 17 Nov 05:30 DOGEUSD buy S1 @ 0.05919 SL 0.058552 → open
 - 17 Nov 05:30 ETHUSD buy S2 @ 1839.4 SL 1822.2 → open
 - 17 Nov 05:15 LTCUSD sell S1 @ 44.67 SL 45.101 → open
-- 17 Nov 05:15 XRPUSD buy S4 @ 0.9616 SL 0.951614 → open
+- 17 Nov 05:15 XRPUSD buy S4 @ 0.9616 SL 0.951614 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 16 closed, avg +0.05R, 75% won.
 - 17 Nov 05:15 BTCUSD sell S1 @ 64800.0 SL 65291.49 → open
 - 17 Nov 04:45 DOGEUSD buy S4 @ 0.05918 SL 0.058445 → open
 - 17 Nov 03:30 SUIUSD buy S2 @ 0.7268 SL 0.717093 → open
