@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 03:00 UTC
+Updated 2026-11-17 03:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -76,6 +76,7 @@ Updated 2026-11-17 03:00 UTC
 
 ## Latest signals
 
+- 17 Nov 03:15 SOLUSD buy S2 @ 72.08 SL 71.194 → open
 - 17 Nov 02:30 BNBUSD sell S1 @ 589.87 SL 594.36 → open
 - 17 Nov 02:15 XRPUSD sell S1 @ 0.955 SL 0.966429 → open
 - 17 Nov 02:15 SOLUSD sell S1 @ 71.56 SL 72.484 → open
@@ -135,4 +136,3 @@ Updated 2026-11-17 03:00 UTC
 - 16 Nov 07:00 XAGUSD sell S6 @ 47.57 SL 48.018 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 3 closed, avg +0.18R, 100% won.
 - 16 Nov 07:00 XAUUSD sell S6 @ 3856.6 SL 3877.07 → closed SL -1.01R. Stopped out after 234 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit.
 - 16 Nov 06:15 SUIUSD sell S2 @ 0.7161 SL 0.725379 → closed SL -1.05R. Stopped out after 78 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R).
-- 16 Nov 06:15 AVAXUSD sell S2 @ 7.083 SL 7.1781 → closed SL -1.04R. Stopped out after 77 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R).
