@@ -1,0 +1,231 @@
+{
+ "plan": "edges/plans/E161_mass_search.md",
+ "md5": "038725c0741e2d8def6a9a5ff29d3219",
+ "real": {
+  "BTC": {
+   "rules_tested": 20061,
+   "eligible": 10105,
+   "top_disc_t": [
+    6.36,
+    6.08,
+    5.9,
+    5.81,
+    5.65
+   ],
+   "pass_validation": 25,
+   "final_checked": 25,
+   "pass_final": 0,
+   "survivors": [],
+   "best_final": [
+    {
+     "rule": "r1_low & r24_low & r72_low | LONG 12h",
+     "disc_t": 4.76,
+     "val_mean_bp": 5.8,
+     "final_n": 174,
+     "final_mean_bp": 18.6,
+     "final_t": 1.1,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "below_sma200 & r1_low & r24_low | LONG 12h",
+     "disc_t": 5.23,
+     "val_mean_bp": 5.3,
+     "final_n": 303,
+     "final_mean_bp": 9.3,
+     "final_t": 0.78,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "below_sma200 & r1_low & r4_low | LONG 12h",
+     "disc_t": 5.34,
+     "val_mean_bp": 1.9,
+     "final_n": 463,
+     "final_mean_bp": 5.8,
+     "final_t": 0.69,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "below_sma50 & r1_low & r24_low | LONG 24h",
+     "disc_t": 4.52,
+     "val_mean_bp": 43.2,
+     "final_n": 251,
+     "final_mean_bp": 11.6,
+     "final_t": 0.67,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "below_sma20 & r24_low & r4_low | LONG 24h",
+     "disc_t": 5.65,
+     "val_mean_bp": 21.4,
+     "final_n": 249,
+     "final_mean_bp": 10.1,
+     "final_t": 0.59,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    }
+   ]
+  },
+  "GOLD(PAXG)": {
+   "rules_tested": 19232,
+   "eligible": 9592,
+   "top_disc_t": [
+    6.21,
+    5.88,
+    5.85,
+    5.56,
+    5.55
+   ],
+   "pass_validation": 16,
+   "final_checked": 16,
+   "pass_final": 0,
+   "survivors": [],
+   "best_final": [
+    {
+     "rule": "above_sma20 & r1_high | SHORT 4h",
+     "disc_t": 4.27,
+     "val_mean_bp": 4.7,
+     "final_n": 404,
+     "final_mean_bp": 6.1,
+     "final_t": 1.1,
+     "years_pos": 1,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "above_sma20 & r1_high & weekend | SHORT 4h",
+     "disc_t": 4.27,
+     "val_mean_bp": 4.7,
+     "final_n": 404,
+     "final_mean_bp": 6.1,
+     "final_t": 1.1,
+     "years_pos": 1,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "r1_high & r4_high | SHORT 4h",
+     "disc_t": 4.21,
+     "val_mean_bp": 9.3,
+     "final_n": 211,
+     "final_mean_bp": 0.2,
+     "final_t": 0.09,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "below_sma20 & below_sma200 & r1_low | LONG 12h",
+     "disc_t": 4.32,
+     "val_mean_bp": 3.0,
+     "final_n": 606,
+     "final_mean_bp": -0.2,
+     "final_t": -0.05,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "below_sma20 & r168_low & r1_low | LONG 12h",
+     "disc_t": 4.65,
+     "val_mean_bp": 4.3,
+     "final_n": 274,
+     "final_mean_bp": -0.4,
+     "final_t": -0.06,
+     "years_pos": 2,
+     "years": 3,
+     "trades": null
+    }
+   ]
+  }
+ },
+ "null": {
+  "BTC": {
+   "rules_tested": 19969,
+   "eligible": 10141,
+   "top_disc_t": [
+    3.03,
+    2.58,
+    2.32,
+    2.25,
+    2.22
+   ],
+   "pass_validation": 3,
+   "final_checked": 2,
+   "pass_final": 0,
+   "survivors": [],
+   "best_final": [
+    {
+     "rule": "above_sma200 & r1_high & volz_low | LONG 24h",
+     "disc_t": 1.51,
+     "val_mean_bp": 242.3,
+     "final_n": 25,
+     "final_mean_bp": 14.6,
+     "final_t": 0.34,
+     "years_pos": 1,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "above_sma20 & friday & r72_low | LONG 12h",
+     "disc_t": 1.88,
+     "val_mean_bp": 73.5,
+     "final_n": 30,
+     "final_mean_bp": -17.0,
+     "final_t": -0.6,
+     "years_pos": 1,
+     "years": 3,
+     "trades": null
+    }
+   ]
+  },
+  "GOLD(PAXG)": {
+   "rules_tested": 19209,
+   "eligible": 9474,
+   "top_disc_t": [
+    2.94,
+    2.82,
+    2.82,
+    2.67,
+    2.54
+   ],
+   "pass_validation": 2,
+   "final_checked": 2,
+   "pass_final": 0,
+   "survivors": [],
+   "best_final": [
+    {
+     "rule": "bb_below & r168_low & r24_low | SHORT 24h",
+     "disc_t": 1.72,
+     "val_mean_bp": 31.0,
+     "final_n": 86,
+     "final_mean_bp": -19.9,
+     "final_t": -1.32,
+     "years_pos": 0,
+     "years": 3,
+     "trades": null
+    },
+    {
+     "rule": "above_sma50 & r1_low | LONG 24h",
+     "disc_t": 1.98,
+     "val_mean_bp": 10.5,
+     "final_n": 123,
+     "final_mean_bp": -19.9,
+     "final_t": -2.55,
+     "years_pos": 0,
+     "years": 3,
+     "trades": null
+    }
+   ]
+  }
+ },
+ "verdict": "real survivors 0 vs null survivors 0: NOTHING beyond luck"
+}

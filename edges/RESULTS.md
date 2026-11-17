@@ -516,3 +516,19 @@ Its +0.32R on the gold perp's last 11 months was a short-sample effect. Tag remo
 so the lab sends no trade plans until a setup earns them in its live record (PROMISING after 15+ closed with a positive
 average; EARNED via the hour-clustered learning). Other setups on PAXG: stretch fade with the trend +0.077R, with the
 others between −0.19 and +0.02R.
+
+## Lead — E161 mass search: 100,000 rule backtests + 100,000-rule null (md5 038725c0…): NOTHING beyond luck
+50,000 random rule draws per asset (1–3 of ~60 conditions × long/short × hold 1/4/12/24 h); after merging duplicates
+20,061 distinct rules on BTC and 19,232 on gold (PAXG) — essentially the whole space of 1–3-condition rules — plus the
+same 100,000 draws on sign-scrambled returns (the luck baseline). Costs: BTC 0.14%, gold 0.04% round trip.
+| | best DISCOVERY t | pass VALIDATION (of top 100) | pass FINAL |
+|---|---|---|---|
+| BTC real | 6.4 | 25 | 0 |
+| BTC null | 3.0 | 3 | 0 |
+| Gold real | 6.2 | 16 | 0 |
+| Gold null | 2.9 | 2 | 0 |
+Reading: 2020–2022 had real structure (discovery t 6 vs 3 for luck; far more rules survive 2023 than the null) — it was
+mean reversion: BTC "fell over 1h and 24h (and 72h) → long for 12–24h", gold "rose over 1h above its 20-hour average →
+short 4h". On 2024–2026 (FINAL, non-overlapping trades) the best BTC dip-buys are still positive after costs (+9 to +19 bp
+per trade, n 174–463) but t ≤ 1.1, and gold's +6 bp (t 1.1); none passes t ≥ 2 with every year positive. The effect has
+weakened to below what can be distinguished from noise. No survivors, so no Monte Carlo was run.
