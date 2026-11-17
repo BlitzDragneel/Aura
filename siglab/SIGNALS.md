@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 23:01 UTC
+Updated 2026-11-17 23:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -96,6 +96,9 @@ Updated 2026-11-17 23:01 UTC
 
 ## Latest signals
 
+- 17 Nov 23:15 AVAXUSD sell S3 @ 7.293 SL 7.4011 → open
+- 17 Nov 23:15 DOGEUSD sell S3 @ 0.06023 SL 0.060991 → open
+- 17 Nov 23:15 SOLUSD sell S3 @ 75.39 SL 76.491 → open
 - 17 Nov 20:00 XAUUSD buy S3 @ 3854.2 SL 3838.74 → open
 - 17 Nov 15:45 LINKUSD sell S7 @ 9.093 SL 9.1771 → closed TP3 +1.23R. TP3 after 6 min (best 1.9R, worst -0.1R). Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
 - 17 Nov 15:45 AVAXUSD sell S7 @ 7.077 SL 7.1542 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
@@ -153,6 +156,3 @@ Updated 2026-11-17 23:01 UTC
 - 17 Nov 03:30 LTCUSD buy S2 @ 44.98 SL 44.507 → closed SL -1.06R. Stopped out after 182 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.
 - 17 Nov 03:30 LINKUSD buy S2 @ 9.192 SL 9.0781 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.
 - 17 Nov 03:30 AVAXUSD buy S2 @ 7.174 SL 7.0765 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 5 closed, avg -1.05R, 0% won.
-- 17 Nov 03:30 ADAUSD buy S2 @ 0.1543 SL 0.152407 → closed SL -1.05R. Stopped out after 186 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.
-- 17 Nov 03:30 DOGEUSD buy S2 @ 0.05929 SL 0.058581 → closed SL -1.05R. Stopped out after 185 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.
-- 17 Nov 03:30 XRPUSD buy S2 @ 0.9639 SL 0.952836 → closed SL -1.05R. Stopped out after 349 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 12 closed, avg -0.70R, 25% won.

@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-17T23:01:01.295804+00:00",
+ "asof": "2026-11-17T23:15:53.248443+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 47.59,
-  "bar": "2026-11-17T22:45:00+00:00",
+  "price": 47.58,
+  "bar": "2026-11-17T23:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 47.59,
-    "ma20": 47.467,
-    "ma50": 47.6146,
-    "slope_atr": -0.27,
-    "bar": "2026-11-17T22:45:00+00:00"
+    "close": 47.58,
+    "ma20": 47.4705,
+    "ma50": 47.6152,
+    "slope_atr": -0.17,
+    "bar": "2026-11-17T23:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,17 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -3.67,
   "spot": {
-   "price": 47.391000000000005,
-   "bid": 47.3652,
-   "ask": 47.4168,
-   "spread": 0.0516,
-   "age_s": 3661,
-   "stale": true,
-   "note": "market closed or feed paused",
-   "source": "swissquote"
+   "price": 47.477050000000006,
+   "bid": 47.4515,
+   "ask": 47.5026,
+   "spread": 0.0511,
+   "age_s": 4,
+   "stale": false,
+   "note": null,
+   "source": "swissquote",
+   "perp_premium_pct": 0.217
   },
   "funding": {
-   "rate": 0.0002400855743358,
+   "rate": 0.0002496939937549,
    "next_time": 1794960000000,
    "source": "okx-swap"
   },
@@ -249,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 47.59; volatility regime normal (hourly ATR 0.72% of price, 56.8th percentile).",
-    "Spot XAGUSD 47.39 (stale: market closed)."
+    "Price 47.58; volatility regime normal (hourly ATR 0.72% of price, 56.8th percentile).",
+    "Spot XAGUSD 47.48; the perpetual trades +0.22% from spot."
    ]
   },
   {
@@ -260,6 +261,6 @@
    ]
   }
  ],
- "runs": 198,
+ "runs": 199,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
