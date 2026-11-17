@@ -1,11 +1,12 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 12:15 UTC
+Updated 2026-11-17 12:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 2 | -0.41 | -0.64 | 0.5 | PAPER |
 | ADAUSD S2 | 2 | -1.046 | -2093.0 | 0.0 | PAPER |
+| ADAUSD S3 | 1 | 0.748 | None | 1.0 | PAPER |
 | ADAUSD S4 | 3 | -0.268 | -0.68 | 0.667 | PAPER |
 | ADAUSD S5 | 1 | 0.674 | None | 1.0 | PAPER |
 | ADAUSD S6 | 2 | 0.246 | 41.0 | 1.0 | PAPER |
@@ -44,10 +45,10 @@ Updated 2026-11-17 12:15 UTC
 | LINKUSD S4 | 2 | -1.052 | -210.4 | 0.0 | PAPER |
 | LINKUSD S5 | 2 | -0.146 | -0.16 | 0.5 | PAPER |
 | LINKUSD S6 | 2 | 0.178 | 13.22 | 1.0 | PAPER |
-| LTCUSD S1 | 2 | 0.739 | 1.06 | 1.0 | PAPER |
+| LTCUSD S1 | 3 | 0.139 | 0.19 | 0.667 | PAPER |
 | LTCUSD S2 | 2 | -1.058 | None | 0.0 | PAPER |
 | LTCUSD S3 | 1 | 1.543 | None | 1.0 | PAPER |
-| LTCUSD S4 | 2 | 0.647 | 1.07 | 1.0 | PAPER |
+| LTCUSD S4 | 3 | 0.079 | 0.12 | 0.667 | PAPER |
 | LTCUSD S5 | 2 | -0.146 | -0.16 | 0.5 | PAPER |
 | LTCUSD S6 | 2 | -0.149 | -0.16 | 0.5 | PAPER |
 | SOLUSD S1 | 2 | -0.431 | -0.7 | 0.5 | PAPER |
@@ -121,7 +122,7 @@ Updated 2026-11-17 12:15 UTC
 - 17 Nov 06:15 XAUUSD buy S4 @ 3880.7 SL 3867.79 → closed SL -1.01R. Stopped out after 181 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 21 closed, avg -0.10R, 67% won.
 - 17 Nov 05:30 DOGEUSD buy S1 @ 0.05919 SL 0.058552 → closed SL -1.06R. Stopped out after 211 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 24 closed, avg -0.23R, 58% won.
 - 17 Nov 05:30 ETHUSD buy S2 @ 1839.4 SL 1822.2 → closed SL -1.06R. Stopped out after 62 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R). Lesson so far: breakout with the trend: 11 closed, avg -0.83R, 18% won.
-- 17 Nov 05:15 LTCUSD sell S1 @ 44.67 SL 45.101 → open
+- 17 Nov 05:15 LTCUSD sell S1 @ 44.67 SL 45.101 → closed SL -1.06R. Stopped out after 429 min. Price never reached TP1 (best was 0.8R in favour, TP1 needed 0.9R). Lesson so far: trend pullback with the trend: 27 closed, avg -0.26R, 56% won.
 - 17 Nov 05:15 XRPUSD buy S4 @ 0.9616 SL 0.951614 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 16 closed, avg +0.05R, 75% won.
 - 17 Nov 05:15 BTCUSD sell S1 @ 64800.0 SL 65291.49 → closed TP2+BE +0.70R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 25 closed, avg -0.26R, 56% won.
 - 17 Nov 04:45 DOGEUSD buy S4 @ 0.05918 SL 0.058445 → closed SL -1.05R. Stopped out after 274 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). Lesson so far: fib pullback with the trend: 22 closed, avg -0.14R, 64% won.
@@ -141,4 +142,4 @@ Updated 2026-11-17 12:15 UTC
 - 17 Nov 02:00 ADAUSD sell S1 @ 0.1526 SL 0.154593 → closed SL -1.05R. Stopped out after 88 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Lesson so far: trend pullback with the trend: 17 closed, avg +0.11R, 82% won.
 - 17 Nov 02:00 ETHUSD sell S1 @ 1819.52 SL 1840.26 → closed SL -1.05R. Stopped out after 200 min. Price never reached TP1 (best was 0.5R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 22 closed, avg -0.16R, 64% won.
 - 17 Nov 02:00 BTCUSD sell S4 @ 64712.8 SL 65291.05 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 20 closed, avg -0.11R, 65% won.
-- 17 Nov 01:45 LTCUSD sell S4 @ 44.68 SL 45.159 → open
+- 17 Nov 01:45 LTCUSD sell S4 @ 44.68 SL 45.159 → closed SL -1.06R. Stopped out after 641 min. Price never reached TP1 (best was 0.8R in favour, TP1 needed 0.9R). Lesson so far: fib pullback with the trend: 24 closed, avg -0.16R, 62% won.
