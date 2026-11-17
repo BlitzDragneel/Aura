@@ -35,7 +35,7 @@ def j(c, url, **p):
 def okx_row(c, sym, now_ms):
     inst, fam, ctv, sq = MK[sym]
     row = dict(market=sym)
-    b = j(c, f"{OKX}/market/books", instId=inst, sz="400")
+    b = j(c, f"{OKX}/market/books-full", instId=inst, sz="5000") or j(c, f"{OKX}/market/books", instId=inst, sz="400")
     if b and b.get("data"):
         bk = b["data"][0]
         bids = [(float(p), float(q) * ctv) for p, q, *_ in bk["bids"]]
@@ -43,11 +43,15 @@ def okx_row(c, sym, now_ms):
         if bids and asks:
             mid = (bids[0][0] + asks[0][0]) / 2
             row["price"] = round(mid, 4)
+            span = min(1 - bids[-1][0] / mid, asks[-1][0] / mid - 1)       # how far the returned book reaches
             for pct, k in ((0.0025, "025"), (0.005, "05"), (0.01, "1")):
+                if span < pct:          # the book does not reach this band: leave it blank rather than under-count it
+                    continue
                 row[f"bid_{k}"] = round(sum(p * q for p, q in bids if p >= mid * (1 - pct)))
                 row[f"ask_{k}"] = round(sum(p * q for p, q in asks if p <= mid * (1 + pct)))
-            s = row["bid_05"] + row["ask_05"]
-            row["imb_05"] = round((row["bid_05"] - row["ask_05"]) / s, 4) if s else ""
+            if "bid_05" in row:
+                s = row["bid_05"] + row["ask_05"]
+                row["imb_05"] = round((row["bid_05"] - row["ask_05"]) / s, 4) if s else ""
     o = j(c, f"{OKX}/public/open-interest", instType="SWAP", instId=inst)
     if o and o.get("data"):
         row["oi_usd"] = round(float(o["data"][0].get("oiUsd") or 0))
