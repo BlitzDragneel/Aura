@@ -58,6 +58,9 @@ jobs:
       - name: Candle memory self-review (daily; re-tunes itself only when the change holds on fresh data)
         working-directory: code
         run: python -W ignore -m edges.memory.review ../state || true
+      - name: Big picture (daily; week/month trend, phase, money flow in/out of crypto, dollar, yields)
+        working-directory: code
+        run: python -W ignore -m edges.observer.bigpicture ../state || true
       - name: Weekly review (Mondays)
         working-directory: code
         run: python -W ignore -m edges.observer.weekly ../state || true
@@ -68,7 +71,7 @@ jobs:
         working-directory: state
         run: |
           git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
-          git add -A assets alerts watch siglab journal recorder memory; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
+          git add -A assets alerts watch siglab journal recorder memory bigpicture; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
           for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
       - name: Deliver alerts (the Live API holds the Telegram / WhatsApp details)
         working-directory: state
