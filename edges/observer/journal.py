@@ -151,12 +151,22 @@ def main(state_dir, day=None):
     mr = Path(state_dir) / "memory" / "RECORD.json"
     if mr.exists():
         J["memory"] = json.loads(mr.read_text())
-        L += ["", "**Candle memory (predicts what follows each 15m candle from its 200 closest look-alikes; information only):**"]
+        L += ["", "**Candle memory (predicts the next hour from look-alike candles + boosting; a mistake model learned from its own wrong calls decides when to make a CALL; information only):**"]
         for sym, r in J["memory"].items():
             x = r.get("latest", {})
-            fw = (f"next-hour calls right {r['next_hour_right']:.0%} of {r['scored']}, confident {r.get('confident_right', 0):.0%} of {r.get('confident_calls', 0)}"
-                  if "next_hour_right" in r else f"{r.get('scored', 0)} scored so far")
-            L.append(f"- {MARKETS.get(sym, sym)}: now P(up next hour) {x.get('p_up1h')}, P(big move 4h) {x.get('p_big4h')}; record: {fw}")
+            fw = f"{r.get('scored', 0)} scored" + (f", right {r['all_right']:.0%}" if "all_right" in r else "") + \
+                 (f"; its CALLS right {r['calls_right']:.0%} of {r['calls_scored']}" if "calls_right" in r else f"; {r.get('calls_scored', 0)} calls scored")
+            L.append(f"- {MARKETS.get(sym, sym)}: now {x.get('call')} (P up next hour {x.get('p_up1h')}, P right {x.get('p_right')}); record: {fw}")
+        mf = Path(state_dir) / "memory" / "mistakes.csv"
+        if mf.exists():
+            M = pd.read_csv(mf); M = M[M.bar.astype(str).str[:10] == str(day)]
+            if len(M):
+                rs = M.why.str.split("; ").explode().str.replace(r"news: .*", "news", regex=True).str.replace(r"shock move .*", "shock move", regex=True)
+                L.append(f"- wrong predictions today: {len(M)}; why: " + ", ".join(f"{k} {v}" for k, v in rs.value_counts().head(6).items()))
+        uf = Path(state_dir) / "memory" / "UPGRADES.md"
+        if uf.exists():
+            last = uf.read_text().strip().split("## Self-review")[-1]
+            L.append("- latest self-review:" + " ".join(l.strip() for l in last.splitlines()[1:] if l.strip())[:900])
     L += ["", "**Issues for the researcher:** " + ("; ".join(J["issues"]) if J["issues"] else "none")]
     (jd / f"{day}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))

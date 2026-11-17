@@ -43,3 +43,34 @@ def outcomes(f: pd.DataFrame) -> pd.DataFrame:
     Y["big4h"] = (((hi4 - lo4) / atr) > 4).astype(float)
     Y.loc[Y.ret1h.isna(), ["up1", "up1h", "up4h", "big4h"]] = np.nan
     return Y
+
+
+RICH = FEATS + [f"{k}_{w}" for w in ("1h", "4h") for k in ("body", "uw", "lw", "rng")] + ["dpdh", "dpdl", "dopen", "streak", "wd_s", "wd_c"]
+
+
+def describe_rich(f: pd.DataFrame) -> pd.DataFrame:
+    """E163: the E162 numbers + the 1h and 4h candle, yesterday's high/low, today's open, colour streak, weekday."""
+    X = describe(f)
+    o, h, l, c = f.o, f.h, f.l, f.c
+    tr = pd.concat([h - l, (h - c.shift()).abs(), (l - c.shift()).abs()], axis=1).max(axis=1)
+    atr = tr.rolling(14).mean()
+    for w, n in (("1h", 4), ("4h", 16)):
+        oo, hh, ll = o.shift(n - 1), h.rolling(n).max(), l.rolling(n).min()
+        a = atr * np.sqrt(n)
+        X[f"body_{w}"] = (c - oo) / a
+        X[f"uw_{w}"] = (hh - np.maximum(oo, c)) / a
+        X[f"lw_{w}"] = (np.minimum(oo, c) - ll) / a
+        X[f"rng_{w}"] = (hh - ll) / a
+    day = f.index.floor("D")
+    g = f.groupby(day)
+    dh, dl, do = g.h.max(), g.l.min(), g.o.first()
+    pdh = pd.Series(dh.shift(1).reindex(day).values, index=f.index)
+    pdl = pd.Series(dl.shift(1).reindex(day).values, index=f.index)
+    dop = pd.Series(do.reindex(day).values, index=f.index)
+    X["dpdh"], X["dpdl"], X["dopen"] = (c - pdh) / atr, (c - pdl) / atr, (c - dop) / atr
+    sgn = np.sign(c - o)
+    grp = (sgn != sgn.shift()).cumsum()
+    X["streak"] = (sgn.groupby(grp).cumcount() + 1) * sgn
+    wd = f.index.weekday + (f.index.hour / 24)
+    X["wd_s"], X["wd_c"] = np.sin(2 * np.pi * wd / 7), np.cos(2 * np.pi * wd / 7)
+    return X.replace([np.inf, -np.inf], np.nan)

@@ -549,3 +549,29 @@ move it gets right is smaller than the cost of trading it, so taking its confide
 an information bot (edges/memory/live.py): predicts every candle on the five markets, scores itself, and adds every
 finished candle to its memory. It becomes a candidate filter for lab signals only after 500+ scored predictions per
 market show ≥ 52% (registered test).
+
+## Lead — E163 candle memory that learns from its mistakes (md5 3d56d65d…): BETTER PREDICTIONS ON 4/4, STILL NO TRADE
+Variants walk-forward on E162's data and periods. D = look-alike candles on a richer description (adds the 1h and 4h
+candle, yesterday's high/low, today's open, colour streak, weekday) averaged with gradient boosting retrained monthly.
+E = a MISTAKE MODEL trained only on D's own earlier out-of-sample rights and wrongs, deciding when D makes a call.
+| FINAL | E162 AUC | D AUC | D right | E calls right | share of candles called | best trade net (any variant) |
+|---|---|---|---|---|---|---|
+| BTC 2025-26 | 0.530 | 0.541 | 52.9% | 55.9% | 32% | −9.6 bp |
+| Gold PAXG 2025 | 0.552 | 0.560 | 53.2% | 55.9% | 45% | −2.4 bp |
+| Gold perp Sep–Nov | 0.524 | 0.541 | 52.2% | 54.9% | 29% | +2.3 bp (B, n 72, not significant) |
+| Silver perp Sep–Nov | 0.516 | 0.527 | 52.4% | 56.0% | 34% | −2.9 bp |
+D was chosen on VALIDATION (best or tied on all four) and beats E162 on FINAL on all four. The mistake model adds
++2.5 to +3.7 points of accuracy on the calls it approves (its own AUC 0.52–0.54: it can partly tell when it will be
+wrong). Where it is wrong most (BTC, VAL+FINAL, ~99k candles): close votes 51.6% vs 55.7% otherwise; calls WITH the
+24h move 51.6% vs AGAINST it 54.2% (it is best at fading); late session (20–24 UTC) and weekends best (56%). Every
+trade test is negative after costs: being right 56% of the time on 1-hour moves does not pay the spread.
+Deployed: edges/memory/live.py (retrains every 15 min on all memory, explains every wrong call in mistakes.csv,
+mistake model retrained every run on the replay + every live result) and edges/memory/review.py (daily self-review:
+re-tunes its call threshold and blocks situations where it is reliably wrong, only if the change holds on newer data).
+
+## Lead — E164 direction call only when a big move is expected (md5 71570a3e…): FAIL
+Same predictions; trade only when the mistake model approves AND P(big move in 4h) is in the top 20% (fixed from the
+warm-up). Exits 1h and 4h, no overlapping trades. Every market and exit is negative on FINAL (BTC −13.6 / −15.4 bp,
+PAXG −3.0 / −5.1, gold perp −4.8 / −8.2, silver −2.4 / −1.5) and no better than the coin-flip control. Why: "big move"
+is measured relative to recent volatility, so those candles do not move more in price (BTC 31 vs 30 bp average 1h
+move), and the direction accuracy on non-overlapping trades falls to 50–56%.
