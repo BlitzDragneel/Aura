@@ -374,3 +374,14 @@ Gold usually moves about 45% more in the hour after high-impact US news; the dir
 ⚡ Bitcoin: BIG MOVE under way right now (moved -941.80 in the last hour, twice its normal hourly range), price ~64162.0
 Market now: trend down, volatility normal, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-17 21:01:06 UTC
+📊 Signal Lab, end of day: 160 paper signals closed so far, avg -0.24R, 1 open.
+trend pullback: 28 closed, avg -0.29R, 54% won
+breakout: 26 closed, avg -0.80R, 19% won
+stretch fade: 16 closed, avg +0.18R, 69% won
+fib pullback: 32 closed, avg -0.26R, 56% won
+session drive: 17 closed, avg -0.48R, 35% won
+daily bias: 26 closed, avg +0.16R, 88% won
+big move: 15 closed, avg +0.02R, 67% won
+Earning trust: none yet (needs 15+ closed and a positive average)
