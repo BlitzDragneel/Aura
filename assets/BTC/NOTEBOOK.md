@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - | Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025–26 | Verdict |
 - | E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | −12…−17, t −3…−9 | −13…−17, t −7…−11 (n 800–3,200); gross ≈ 0 | FAIL |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 39 readings scored; big moves followed 0% of them, 0% after a WATCH (4 WATCH readings) - too few to judge yet.
+- My own record: 40 readings scored; big moves followed 0% of them, 0% after a WATCH (4 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 19 readings scored; big moves followed 0% of them, 0% after a WATCH (18 WATCH readings) - too few to judge yet.
+- My own record: 20 readings scored; big moves followed 0% of them, 0% after a WATCH (19 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -35,7 +35,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 64925.0; volatility regime normal (hourly ATR 0.678% of price, 54.3th percentile).
+- Price 65033.2; volatility regime normal (hourly ATR 0.686% of price, 55.1th percentile).
 - Bitcoin trades 24/7.
 
 ## My calls so far
