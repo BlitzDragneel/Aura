@@ -502,3 +502,10 @@ Limit entry at the signal close, filled only if traded through within 15 minutes
 trade, VALIDATION / FINAL: z1 follow 1h +1.8 / −2.4 bp (t 0.7 / −1.4); z1 follow 4h +4.0 / +0.6 bp (t 0.8 / 0.2);
 z5 follow 1h −3.5 / −3.9; z5 follow 4h +1.6 / +2.3 bp (t 0.2 / 0.5; random direction with the same fills +1.9).
 Cheaper execution brings the book signal to about zero, not into profit; fills through a limit select worse trades.
+
+## Lead — E159 daily bias with the trend on BTC 2022–2023 (never-examined data): FAIL
+S6 with the trend: 411 signals, −0.033R (t −1.0; 2022 −0.02, 2023 −0.05). The 12/12 live win on 16 Nov was one market
+moment, not evidence. All other lab setups on this untouched data: −0.13R (breakout against the trend, t −3.1), −0.11R
+(breakout with), −0.10R (session drive against), −0.08 / −0.07R (pullbacks), −0.05R (trend pullback, stretch fade);
+only big-move-with-trend was mildly positive (+0.063R, t 1.2). This independently confirms the 17 Nov change: trade plans
+only with positive evidence, and breakouts against the trend are not one.
