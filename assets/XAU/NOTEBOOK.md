@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 31 readings scored; big moves followed 10% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet.
+- My own record: 32 readings scored; big moves followed 9% of them, 10% after a WATCH (10 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 11 readings scored; big moves followed 0% of them - too few to judge yet.
+- My own record: 12 readings scored; big moves followed 0% of them - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -36,8 +36,8 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 3878.1; volatility regime normal (hourly ATR 0.387% of price, 60.7th percentile).
-- Spot XAUUSD 3873.03; the perpetual trades +0.13% from spot.
+- Price 3881.8; volatility regime normal (hourly ATR 0.358% of price, 51.2th percentile).
+- Spot XAUUSD 3875.11; the perpetual trades +0.17% from spot.
 
 ## My calls so far
 
