@@ -357,3 +357,10 @@ Market now: trend down, volatility low, London session
 ## 2026-11-17 09:18:33 UTC
 ❌ Gold BUY (session drive) closed: SL, -1.01R (-132 pips)
 Why: Stopped out after 105 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: session drive with the trend: 4 closed, avg -0.78R, 25% won.
+
+## 2026-11-17 11:01:01 UTC
+🌅 OMEGA morning read
+Bitcoin 64,086.70 | 1h trend flat | vol normal | typical day range 2.5% | big 4h move chance 26% | day WAIT · swing WAIT · hold WAIT
+Gold 3,860.80 | 1h trend flat | vol normal | typical day range 1.42% | big 4h move chance 19% | day WAIT · swing WAIT · hold WAIT
+Silver 47.53 | 1h trend flat | vol normal | typical day range 2.59% | big 4h move chance 25% | day WAIT · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.

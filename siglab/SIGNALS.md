@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 10:45 UTC
+Updated 2026-11-17 11:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -33,10 +33,10 @@ Updated 2026-11-17 10:45 UTC
 | DOGEUSD S6 | 2 | 0.172 | 19.11 | 1.0 | PAPER |
 | ETHUSD S1 | 3 | -0.258 | -0.65 | 0.667 | PAPER |
 | ETHUSD S2 | 2 | -1.056 | -528.0 | 0.0 | PAPER |
-| ETHUSD S3 | 1 | 1.709 | None | 1.0 | PAPER |
+| ETHUSD S3 | 2 | 0.319 | 0.23 | 0.5 | PAPER |
 | ETHUSD S4 | 2 | -0.498 | -0.9 | 0.5 | PAPER |
 | ETHUSD S5 | 1 | -1.067 | None | 0.0 | PAPER |
-| ETHUSD S6 | 1 | 0.73 | None | 1.0 | PAPER |
+| ETHUSD S6 | 2 | 1.106 | 2.94 | 1.0 | PAPER |
 | ETHUSD S7 | 1 | -1.058 | None | 0.0 | PAPER |
 | LINKUSD S1 | 2 | -0.399 | -0.62 | 0.5 | PAPER |
 | LINKUSD S2 | 2 | -0.485 | -0.85 | 0.5 | PAPER |
@@ -81,8 +81,9 @@ Updated 2026-11-17 10:45 UTC
 
 ## Latest signals
 
+- 17 Nov 11:00 BNBUSD buy S3 @ 586.9 SL 583.64 → open
 - 17 Nov 10:30 BNBUSD sell S2 @ 588.05 SL 591.16 → open
-- 17 Nov 10:15 ETHUSD buy S3 @ 1799.8 SL 1785.61 → open
+- 17 Nov 10:15 ETHUSD buy S3 @ 1799.8 SL 1785.61 → closed SL -1.07R. Stopped out after 41 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: stretch fade with the trend: 5 closed, avg +1.01R, 100% won.
 - 17 Nov 07:30 SUIUSD buy S5 @ 0.7252 SL 0.717614 → closed SL -1.06R. Stopped out after 111 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 8 closed, avg -0.38R, 38% won.
 - 17 Nov 07:30 LTCUSD buy S5 @ 44.7 SL 44.331 → closed SL -1.07R. Stopped out after 111 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 8 closed, avg -0.38R, 38% won.
 - 17 Nov 07:30 LINKUSD buy S5 @ 9.192 SL 9.1044 → closed SL -1.06R. Stopped out after 105 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 7 closed, avg -0.28R, 43% won.
@@ -104,7 +105,7 @@ Updated 2026-11-17 10:45 UTC
 - 17 Nov 07:00 XRPUSD sell S6 @ 0.9584 SL 0.967043 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
 - 17 Nov 07:00 BNBUSD sell S6 @ 592.33 SL 595.59 → open
 - 17 Nov 07:00 SOLUSD sell S6 @ 72.61 SL 73.278 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry.
-- 17 Nov 07:00 ETHUSD sell S6 @ 1825.2 SL 1840.14 → open
+- 17 Nov 07:00 ETHUSD sell S6 @ 1825.2 SL 1840.14 → closed TP3 +1.48R. TP3 after 231 min (best 2.6R, worst -0.5R). Lesson so far: daily bias against the trend: 6 closed, avg -0.03R, 83% won.
 - 17 Nov 07:00 BTCUSD sell S6 @ 64520.3 SL 64939.31 → open
 - 17 Nov 07:00 XAGUSD sell S6 @ 47.59 SL 47.902 → open
 - 17 Nov 07:00 XAUUSD sell S6 @ 3877.1 SL 3890.17 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry.
@@ -140,4 +141,3 @@ Updated 2026-11-17 10:45 UTC
 - 17 Nov 00:30 BTCUSD sell S2 @ 64589.5 SL 65159.51 → closed SL -1.02R. Stopped out after 185 min. Price never reached TP1 (best was 0.4R in favour, TP1 needs 0.5R). Lesson so far: breakout with the trend: 9 closed, avg -0.91R, 11% won.
 - 17 Nov 00:30 XAGUSD sell S1 @ 47.12 SL 47.464 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 15 closed, avg +0.19R, 87% won.
 - 17 Nov 00:15 LINKUSD sell S4 @ 9.118 SL 9.2359 → closed SL -1.05R. Stopped out after 306 min. Lesson so far: fib pullback with the trend: 17 closed, avg +0.05R, 76% won.
-- 17 Nov 00:15 SOLUSD sell S4 @ 71.53 SL 72.487 → closed SL -1.04R. Stopped out after 193 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R). Lesson so far: fib pullback with the trend: 14 closed, avg +0.12R, 79% won.

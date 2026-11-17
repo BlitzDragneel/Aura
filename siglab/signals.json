@@ -4603,14 +4603,22 @@
     1786.84
    ],
    "R": 14.944,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-17",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 1825.21,
+   "outcome": "TP3",
+   "R_ladder": 1.482,
+   "R_tp1": 0.671,
+   "pips": 221.3,
+   "closed_ms": 1794912660000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 231 min (best 2.6R, worst -0.5R). Lesson so far: daily bias against the trend: 6 closed, avg -0.03R, 83% won."
   },
   {
    "id": "SOLUSD-S6-1794898800000",
@@ -5419,14 +5427,22 @@
     1822.81
    ],
    "R": 14.194,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-17",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 1799.79,
+   "outcome": "SL",
+   "R_ladder": -1.071,
+   "R_tp1": -1.071,
+   "pips": -151.8,
+   "closed_ms": 1794912960000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 41 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: stretch fade with the trend: 5 closed, avg +1.01R, 100% won."
   },
   {
    "id": "BNBUSD-S2-1794911400000",
@@ -5450,6 +5466,37 @@
     577.12
    ],
    "R": 3.114,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-17",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "BNBUSD-S3-1794913200000",
+   "symbol": "BNBUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "low",
+    "shape": "normal",
+    "session": "London",
+    "with_trend": false
+   },
+   "logged_ms": 1794913200000,
+   "ref_price": 586.9,
+   "stop": 583.64,
+   "targets": [
+    588.53,
+    590.26,
+    592.12
+   ],
+   "R": 3.257,
    "status": "open",
    "target_odds": [
     60,
@@ -5697,11 +5744,11 @@
     "grade": "PAPER"
    },
    "ETHUSD S3": {
-    "n": 1,
-    "avg_R": 1.709,
-    "t": null,
-    "win": 1.0,
-    "total_R": 1.71,
+    "n": 2,
+    "avg_R": 0.319,
+    "t": 0.23,
+    "win": 0.5,
+    "total_R": 0.64,
     "grade": "PAPER"
    },
    "ETHUSD S4": {
@@ -5721,11 +5768,11 @@
     "grade": "PAPER"
    },
    "ETHUSD S6": {
-    "n": 1,
-    "avg_R": 0.73,
-    "t": null,
+    "n": 2,
+    "avg_R": 1.106,
+    "t": 2.94,
     "win": 1.0,
-    "total_R": 0.73,
+    "total_R": 2.21,
     "grade": "PAPER"
    },
    "ETHUSD S7": {
@@ -6073,11 +6120,11 @@
     "total_R": -19.64
    },
    "S3": {
-    "n": 6,
-    "avg_R": 0.859,
-    "t": 2.58,
-    "win": 1.0,
-    "total_R": 5.16
+    "n": 7,
+    "avg_R": 0.583,
+    "t": 1.48,
+    "win": 0.857,
+    "total_R": 4.08
    },
    "S4": {
     "n": 30,
@@ -6094,11 +6141,11 @@
     "total_R": -9.32
    },
    "S6": {
-    "n": 20,
-    "avg_R": 0.189,
-    "t": 2.53,
-    "win": 0.95,
-    "total_R": 3.77
+    "n": 21,
+    "avg_R": 0.25,
+    "t": 2.67,
+    "win": 0.952,
+    "total_R": 5.26
    },
    "S7": {
     "n": 5,
@@ -6109,13 +6156,13 @@
    }
   },
   "all": {
-   "n": 126,
-   "avg_R": -0.302,
-   "t": -4.39,
-   "win": 0.524,
-   "total_R": -38.04
+   "n": 128,
+   "avg_R": -0.294,
+   "t": -4.23,
+   "win": 0.523,
+   "total_R": -37.62
   },
-  "open": 17
+  "open": 16
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -6272,6 +6319,13 @@
    "win": 1.0,
    "total_R": 0.26
   },
+  "S3 | London": {
+   "n": 1,
+   "avg_R": -1.071,
+   "t": null,
+   "win": 0.0,
+   "total_R": -1.07
+  },
   "S3 | New York": {
    "n": 3,
    "avg_R": 1.602,
@@ -6301,11 +6355,11 @@
    "total_R": 0.09
   },
   "S3 | normal": {
-   "n": 4,
-   "avg_R": 0.473,
-   "t": 1.32,
-   "win": 1.0,
-   "total_R": 1.89
+   "n": 5,
+   "avg_R": 0.164,
+   "t": 0.4,
+   "win": 0.8,
+   "total_R": 0.82
   },
   "S3 | vol high": {
    "n": 2,
@@ -6322,18 +6376,18 @@
    "total_R": 0.09
   },
   "S3 | vol normal": {
-   "n": 3,
-   "avg_R": 1.602,
-   "t": 29.98,
-   "win": 1.0,
-   "total_R": 4.81
+   "n": 4,
+   "avg_R": 0.934,
+   "t": 1.4,
+   "win": 0.75,
+   "total_R": 3.74
   },
   "S3 | with trend": {
-   "n": 5,
-   "avg_R": 1.014,
-   "t": 2.8,
-   "win": 1.0,
-   "total_R": 5.07
+   "n": 6,
+   "avg_R": 0.666,
+   "t": 1.46,
+   "win": 0.833,
+   "total_R": 4.0
   },
   "S4 | Asia": {
    "n": 22,
@@ -6476,18 +6530,18 @@
    "total_R": -4.14
   },
   "S6 | Asia": {
-   "n": 20,
-   "avg_R": 0.189,
-   "t": 2.53,
-   "win": 0.95,
-   "total_R": 3.77
+   "n": 21,
+   "avg_R": 0.25,
+   "t": 2.67,
+   "win": 0.952,
+   "total_R": 5.26
   },
   "S6 | against trend": {
-   "n": 6,
-   "avg_R": -0.029,
-   "t": -0.15,
-   "win": 0.833,
-   "total_R": -0.17
+   "n": 7,
+   "avg_R": 0.187,
+   "t": 0.69,
+   "win": 0.857,
+   "total_R": 1.31
   },
   "S6 | compressed": {
    "n": 2,
@@ -6504,11 +6558,11 @@
    "total_R": 0.23
   },
   "S6 | normal": {
-   "n": 17,
-   "avg_R": 0.155,
-   "t": 1.9,
-   "win": 0.941,
-   "total_R": 2.63
+   "n": 18,
+   "avg_R": 0.228,
+   "t": 2.15,
+   "win": 0.944,
+   "total_R": 4.11
   },
   "S6 | vol high": {
    "n": 2,
@@ -6518,11 +6572,11 @@
    "total_R": -0.91
   },
   "S6 | vol normal": {
-   "n": 18,
-   "avg_R": 0.26,
-   "t": 6.02,
+   "n": 19,
+   "avg_R": 0.325,
+   "t": 4.26,
    "win": 1.0,
-   "total_R": 4.69
+   "total_R": 6.17
   },
   "S6 | with trend": {
    "n": 14,
