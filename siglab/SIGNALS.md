@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 06:01 UTC
+Updated 2026-11-17 06:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -76,6 +76,7 @@ Updated 2026-11-17 06:01 UTC
 
 ## Latest signals
 
+- 17 Nov 06:15 XAUUSD buy S4 @ 3880.7 SL 3867.79 → open
 - 17 Nov 05:30 DOGEUSD buy S1 @ 0.05919 SL 0.058552 → open
 - 17 Nov 05:30 ETHUSD buy S2 @ 1839.4 SL 1822.2 → open
 - 17 Nov 05:15 LTCUSD sell S1 @ 44.67 SL 45.101 → open
@@ -135,4 +136,3 @@ Updated 2026-11-17 06:01 UTC
 - 16 Nov 07:30 XAUUSD buy S5 @ 3864.6 SL 3844.13 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 SUIUSD sell S6 @ 0.7216 SL 0.730714 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 4 closed, avg +0.16R, 100% won.
 - 16 Nov 07:00 LTCUSD sell S6 @ 44.73 SL 45.177 → closed TP2+BE +0.78R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 11 closed, avg +0.25R, 100% won.
-- 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
