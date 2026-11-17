@@ -496,3 +496,9 @@ self-learning counts signals that fire in the same hour on several markets as on
 07:00 daily-bias signals were 12 signals but 1 moment), and needs 15 separate hours before muting/earning; (3) reasons
 quote the real TP1 distance (targets are adaptive now); (4) the journal covers the owner's five markets in detail, other
 coins as a summary, a live scoreboard by setup, and the record of signals actually sent.
+
+## Lead — E158 BTC order-book pressure with limit (maker) orders: FAIL
+Limit entry at the signal close, filled only if traded through within 15 minutes; limit exit (else market). Net per
+trade, VALIDATION / FINAL: z1 follow 1h +1.8 / −2.4 bp (t 0.7 / −1.4); z1 follow 4h +4.0 / +0.6 bp (t 0.8 / 0.2);
+z5 follow 1h −3.5 / −3.9; z5 follow 4h +1.6 / +2.3 bp (t 0.2 / 0.5; random direction with the same fills +1.9).
+Cheaper execution brings the book signal to about zero, not into profit; fills through a limit select worse trades.
