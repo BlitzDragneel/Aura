@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-17T14:30:56.498630+00:00",
+ "asof": "2026-11-17T14:45:43.725838+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3867.5,
-  "bar": "2026-11-17T14:15:00+00:00",
+  "price": 3872.7,
+  "bar": "2026-11-17T14:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3867.5,
-    "ma20": 3865.975,
-    "ma50": 3873.08,
-    "slope_atr": -0.41,
-    "bar": "2026-11-17T14:15:00+00:00"
+    "close": 3872.7,
+    "ma20": 3865.94,
+    "ma50": 3873.052,
+    "slope_atr": -0.32,
+    "bar": "2026-11-17T14:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.91,
   "spot": {
-   "price": 3863.4804999999997,
-   "bid": 3863.163,
-   "ask": 3863.798,
+   "price": 3867.7655,
+   "bid": 3867.448,
+   "ask": 3868.083,
    "spread": 0.635,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.104
+   "perp_premium_pct": 0.128
   },
   "funding": {
-   "rate": 0.0001344832967337,
+   "rate": 0.0001228323778939,
    "next_time": 1794931200000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3867.5; volatility regime normal (hourly ATR 0.372% of price, 56.8th percentile).",
-    "Spot XAUUSD 3863.48; the perpetual trades +0.10% from spot."
+    "Price 3872.7; volatility regime normal (hourly ATR 0.372% of price, 56.8th percentile).",
+    "Spot XAUUSD 3867.77; the perpetual trades +0.13% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 163,
+ "runs": 164,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 14:31 UTC
+Updated 2026-11-17 14:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -23,8 +23,10 @@ Updated 2026-11-17 14:31 UTC
 | BNBUSD S4 | 3 | -0.229 | -0.54 | 0.667 | PAPER |
 | BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
 | BNBUSD S6 | 2 | 0.453 | 2.03 | 1.0 | PAPER |
+| BNBUSD S7 | 1 | -1.1 | None | 0.0 | PAPER |
 | BTCUSD S1 | 2 | 0.491 | 2.33 | 1.0 | PAPER |
 | BTCUSD S2 | 2 | -1.018 | -2037.0 | 0.0 | PAPER |
+| BTCUSD S3 | 1 | -1.023 | None | 0.0 | PAPER |
 | BTCUSD S4 | 3 | -0.176 | -0.42 | 0.667 | PAPER |
 | BTCUSD S5 | 1 | -1.024 | None | 0.0 | PAPER |
 | BTCUSD S6 | 2 | 0.251 | 62.75 | 1.0 | PAPER |
@@ -95,8 +97,8 @@ Updated 2026-11-17 14:31 UTC
 - 17 Nov 12:00 SUIUSD buy S7 @ 0.7355 SL 0.727929 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 3 closed, avg -0.52R, 33% won.
 - 17 Nov 12:00 LTCUSD buy S7 @ 45.06 SL 44.705 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry.
 - 17 Nov 12:00 LINKUSD sell S3 @ 9.259 SL 9.341 → closed SL -1.07R. Stopped out after 65 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.9R). The signal was against the 15-minute trend.
-- 17 Nov 12:00 BNBUSD buy S7 @ 594.39 SL 590.84 → open
-- 17 Nov 12:00 BTCUSD sell S3 @ 64957.1 SL 65397.38 → open
+- 17 Nov 12:00 BNBUSD buy S7 @ 594.39 SL 590.84 → closed SL -1.10R. Stopped out after 151 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: big move against the trend: 3 closed, avg -0.69R, 33% won.
+- 17 Nov 12:00 BTCUSD sell S3 @ 64957.1 SL 65397.38 → closed SL -1.02R. Stopped out after 158 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.9R). Lesson so far: stretch fade with the trend: 9 closed, avg +0.50R, 78% won.
 - 17 Nov 11:45 SUIUSD sell S3 @ 0.7346 SL 0.741579 → closed SL -1.06R. Stopped out after 84 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend.
 - 17 Nov 11:45 LTCUSD sell S3 @ 45.03 SL 45.356 → closed SL -1.08R. Stopped out after 80 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 1.1R). Lesson so far: stretch fade with the trend: 7 closed, avg +0.68R, 86% won.
 - 17 Nov 11:00 BNBUSD buy S3 @ 586.9 SL 583.64 → closed TP3 +0.94R. TP3 after 37 min (best 1.7R, worst -0.1R).
