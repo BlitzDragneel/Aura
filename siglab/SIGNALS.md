@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 09:15 UTC
+Updated 2026-11-17 09:18 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -68,8 +68,8 @@ Updated 2026-11-17 09:15 UTC
 | XAUUSD S1 | 2 | -1.014 | None | 0.0 | PAPER |
 | XAUUSD S2 | 2 | -0.454 | -0.82 | 0.5 | PAPER |
 | XAUUSD S3 | 1 | 0.085 | None | 1.0 | PAPER |
-| XAUUSD S4 | 1 | 0.31 | None | 1.0 | PAPER |
-| XAUUSD S5 | 1 | 0.072 | None | 1.0 | PAPER |
+| XAUUSD S4 | 2 | -0.352 | -0.53 | 0.5 | PAPER |
+| XAUUSD S5 | 2 | -0.471 | -0.87 | 0.5 | PAPER |
 | XAUUSD S6 | 2 | -0.438 | -0.76 | 0.5 | PAPER |
 | XRPUSD S1 | 2 | -0.147 | -0.16 | 0.5 | PAPER |
 | XRPUSD S2 | 1 | 0.239 | None | 1.0 | PAPER |
@@ -90,7 +90,7 @@ Updated 2026-11-17 09:15 UTC
 - 17 Nov 07:30 ETHUSD buy S5 @ 1830.7 SL 1815.76 → closed SL -1.07R. Stopped out after 91 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R).
 - 17 Nov 07:30 BTCUSD buy S5 @ 64671.3 SL 64252.29 → closed SL -1.02R. Stopped out after 90 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 6 closed, avg -0.16R, 50% won.
 - 17 Nov 07:30 XAGUSD buy S5 @ 47.67 SL 47.358 → open
-- 17 Nov 07:30 XAUUSD buy S5 @ 3881.8 SL 3868.73 → open
+- 17 Nov 07:30 XAUUSD buy S5 @ 3881.8 SL 3868.73 → closed SL -1.01R. Stopped out after 105 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: session drive with the trend: 4 closed, avg -0.78R, 25% won.
 - 17 Nov 07:15 SUIUSD sell S4 @ 0.7232 SL 0.730786 → open
 - 17 Nov 07:00 SUIUSD sell S6 @ 0.7221 SL 0.729686 → open
 - 17 Nov 07:00 LTCUSD sell S6 @ 44.59 SL 44.959 → open
@@ -106,7 +106,7 @@ Updated 2026-11-17 09:15 UTC
 - 17 Nov 07:00 XAGUSD sell S6 @ 47.59 SL 47.902 → open
 - 17 Nov 07:00 XAUUSD sell S6 @ 3877.1 SL 3890.17 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry.
 - 17 Nov 06:30 SUIUSD sell S1 @ 0.7224 SL 0.730321 → open
-- 17 Nov 06:15 XAUUSD buy S4 @ 3880.7 SL 3867.79 → open
+- 17 Nov 06:15 XAUUSD buy S4 @ 3880.7 SL 3867.79 → closed SL -1.01R. Stopped out after 181 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 21 closed, avg -0.10R, 67% won.
 - 17 Nov 05:30 DOGEUSD buy S1 @ 0.05919 SL 0.058552 → closed SL -1.06R. Stopped out after 211 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 24 closed, avg -0.23R, 58% won.
 - 17 Nov 05:30 ETHUSD buy S2 @ 1839.4 SL 1822.2 → closed SL -1.06R. Stopped out after 62 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R). Lesson so far: breakout with the trend: 11 closed, avg -0.83R, 18% won.
 - 17 Nov 05:15 LTCUSD sell S1 @ 44.67 SL 45.101 → open

@@ -353,3 +353,7 @@ Market now: trend down, volatility normal, London session
 ⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~64671.3
 Market now: trend down, volatility low, London session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+## 2026-11-17 09:18:33 UTC
+❌ Gold BUY (session drive) closed: SL, -1.01R (-132 pips)
+Why: Stopped out after 105 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: session drive with the trend: 4 closed, avg -0.78R, 25% won.
