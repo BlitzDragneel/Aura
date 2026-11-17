@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-17T14:00:58.463602+00:00",
+ "asof": "2026-11-17T14:15:52.183666+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3857.5,
-  "bar": "2026-11-17T13:45:00+00:00",
+  "price": 3864.8,
+  "bar": "2026-11-17T14:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3857.5,
-    "ma20": 3866.425,
-    "ma50": 3873.3460000000005,
-    "slope_atr": -0.48,
-    "bar": "2026-11-17T13:45:00+00:00"
+    "close": 3864.8,
+    "ma20": 3866.05,
+    "ma50": 3873.164,
+    "slope_atr": -0.44,
+    "bar": "2026-11-17T14:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.91,
   "spot": {
-   "price": 3852.32,
-   "bid": 3852.001,
-   "ask": 3852.639,
-   "spread": 0.638,
+   "price": 3860.905,
+   "bid": 3860.588,
+   "ask": 3861.222,
+   "spread": 0.634,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.134
+   "perp_premium_pct": 0.101
   },
   "funding": {
-   "rate": 0.000149721747159,
+   "rate": 0.000143173915437,
    "next_time": 1794931200000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3857.5; volatility regime normal (hourly ATR 0.372% of price, 56.8th percentile).",
-    "Spot XAUUSD 3852.32; the perpetual trades +0.13% from spot."
+    "Price 3864.8; volatility regime normal (hourly ATR 0.372% of price, 56.8th percentile).",
+    "Spot XAUUSD 3860.91; the perpetual trades +0.10% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 161,
+ "runs": 162,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
