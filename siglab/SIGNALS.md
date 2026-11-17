@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 08:45 UTC
+Updated 2026-11-17 09:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -23,6 +23,7 @@ Updated 2026-11-17 08:45 UTC
 | BTCUSD S1 | 1 | 0.281 | None | 1.0 | PAPER |
 | BTCUSD S2 | 2 | -1.018 | -2037.0 | 0.0 | PAPER |
 | BTCUSD S4 | 3 | -0.176 | -0.42 | 0.667 | PAPER |
+| BTCUSD S5 | 1 | -1.024 | None | 0.0 | PAPER |
 | BTCUSD S6 | 1 | 0.255 | None | 1.0 | PAPER |
 | DOGEUSD S1 | 1 | 0.717 | None | 1.0 | PAPER |
 | DOGEUSD S2 | 2 | -1.051 | -420.6 | 0.0 | PAPER |
@@ -67,7 +68,7 @@ Updated 2026-11-17 08:45 UTC
 | XAUUSD S3 | 1 | 0.085 | None | 1.0 | PAPER |
 | XAUUSD S4 | 1 | 0.31 | None | 1.0 | PAPER |
 | XAUUSD S5 | 1 | 0.072 | None | 1.0 | PAPER |
-| XAUUSD S6 | 1 | -1.01 | None | 0.0 | PAPER |
+| XAUUSD S6 | 2 | -0.438 | -0.76 | 0.5 | PAPER |
 | XRPUSD S1 | 2 | -0.147 | -0.16 | 0.5 | PAPER |
 | XRPUSD S2 | 1 | 0.239 | None | 1.0 | PAPER |
 | XRPUSD S3 | 1 | 1.555 | None | 1.0 | PAPER |
@@ -85,7 +86,7 @@ Updated 2026-11-17 08:45 UTC
 - 17 Nov 07:30 XRPUSD buy S5 @ 0.9606 SL 0.951957 → open
 - 17 Nov 07:30 SOLUSD buy S5 @ 72.93 SL 72.262 → closed SL -1.07R. Stopped out after 67 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R).
 - 17 Nov 07:30 ETHUSD buy S5 @ 1830.7 SL 1815.76 → open
-- 17 Nov 07:30 BTCUSD buy S5 @ 64671.3 SL 64252.29 → open
+- 17 Nov 07:30 BTCUSD buy S5 @ 64671.3 SL 64252.29 → closed SL -1.02R. Stopped out after 90 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 6 closed, avg -0.16R, 50% won.
 - 17 Nov 07:30 XAGUSD buy S5 @ 47.67 SL 47.358 → open
 - 17 Nov 07:30 XAUUSD buy S5 @ 3881.8 SL 3868.73 → open
 - 17 Nov 07:15 SUIUSD sell S4 @ 0.7232 SL 0.730786 → open
@@ -101,7 +102,7 @@ Updated 2026-11-17 08:45 UTC
 - 17 Nov 07:00 ETHUSD sell S6 @ 1825.2 SL 1840.14 → open
 - 17 Nov 07:00 BTCUSD sell S6 @ 64520.3 SL 64939.31 → open
 - 17 Nov 07:00 XAGUSD sell S6 @ 47.59 SL 47.902 → open
-- 17 Nov 07:00 XAUUSD sell S6 @ 3877.1 SL 3890.17 → open
+- 17 Nov 07:00 XAUUSD sell S6 @ 3877.1 SL 3890.17 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry.
 - 17 Nov 06:30 SUIUSD sell S1 @ 0.7224 SL 0.730321 → open
 - 17 Nov 06:15 XAUUSD buy S4 @ 3880.7 SL 3867.79 → open
 - 17 Nov 05:30 DOGEUSD buy S1 @ 0.05919 SL 0.058552 → open
