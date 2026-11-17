@@ -295,3 +295,12 @@ TP2 47.45 (reached in 40% of similar moments in the last 3 days)
 TP3 47.608 (reached in 20% of similar moments in the last 3 days)
 Setup: fib pullback (pulled back half of a strong up-leg)
 record of this setup here: 2 closed, avg -1.09R, 0% won
+
+## 2026-11-17 00:31:17 UTC
+⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~47.12
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~64589.5
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
