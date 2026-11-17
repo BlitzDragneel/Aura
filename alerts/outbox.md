@@ -313,3 +313,11 @@ Why: Stopped out after 67 min. Price never reached TP1 (best was 0.1R in favour,
 ⚡ Gold: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~3873.9
 Market now: trend up, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-17 02:01:12 UTC
+✅ Silver BUY (fib pullback) closed: TP2+BE, +0.28R (+9 pips)
+Why: Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 4 closed, avg -0.78R, 25% won.
+
+⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~64712.8
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
