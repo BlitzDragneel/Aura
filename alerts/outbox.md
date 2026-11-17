@@ -331,3 +331,25 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Gold: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~3880.7
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-17 07:31:11 UTC
+⚡ Gold: SESSION DRIVE right now
+Market now: trend up, volatility normal, normal range, London session
+🧪 PAPER (untested, do not trade)
+📈 BACKTEST+ (made +0.32R per signal on past data; live record still needed)
+⏪ On this market's recent history: 22 of these, 82% ended positive, average +0.32R
+Gold BUY now ~3881.8
+SL 3868.73
+TP1 3887.84 (reached in 60% of similar moments in the last 3 days)
+TP2 3895.76 (reached in 40% of similar moments in the last 3 days)
+TP3 3902.78 (reached in 20% of similar moments in the last 3 days)
+Setup: session drive (London open drive)
+record of this setup here: 1 closed, avg +0.07R, 100% won
+
+⚡ Silver: SESSION DRIVE right now (London open drive), price ~47.67
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~64671.3
+Market now: trend down, volatility low, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
