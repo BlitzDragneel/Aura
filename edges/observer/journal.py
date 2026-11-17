@@ -14,8 +14,9 @@ import httpx
 import numpy as np
 import pandas as pd
 
-MARKETS = {"XAUUSD": "Gold", "XAGUSD": "Silver", "BTCUSD": "Bitcoin", "ETHUSD": "Ethereum", "SOLUSD": "Solana"}
-OKX = {"XAUUSD": "XAU-USDT-SWAP", "XAGUSD": "XAG-USDT-SWAP", "BTCUSD": "BTC-USDT-SWAP", "ETHUSD": "ETH-USDT-SWAP", "SOLUSD": "SOL-USDT-SWAP"}
+MARKETS = {"XAUUSD": "Gold", "XAGUSD": "Silver", "BTCUSD": "Bitcoin", "NAS100": "Nasdaq 100", "US30": "Dow 30"}   # the owner's five
+OKX = {"XAUUSD": "XAU-USDT-SWAP", "XAGUSD": "XAG-USDT-SWAP", "BTCUSD": "BTC-USDT-SWAP"}
+YAHOO = {"NAS100": "NQ=F", "US30": "YM=F"}
 
 
 def hourly(c, inst, day):
@@ -31,6 +32,13 @@ def hourly(c, inst, day):
             break
     h = pd.DataFrame(rows, columns=["t", "o", "h", "l", "c"]).drop_duplicates("t").sort_values("t")
     h.index = pd.to_datetime(h.t, unit="ms", utc=True)
+    return h
+
+
+def yahoo_hourly(c, ticker):
+    r = c.get(f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}", params=dict(range="60d", interval="1h"), headers={"User-Agent": "Mozilla/5.0"})
+    j = r.json()["chart"]["result"][0]; q = j["indicators"]["quote"][0]
+    h = pd.DataFrame(dict(o=q["open"], h=q["high"], l=q["low"], c=q["close"]), index=pd.to_datetime(j["timestamp"], unit="s", utc=True)).dropna()
     return h
 
 
@@ -61,16 +69,17 @@ def main(state_dir, day=None):
         print("journal exists for", day); return
     c = httpx.Client(timeout=20)
     J = dict(day=day, markets={}, issues=[])
-    for sym, inst in OKX.items():
+    for sym in MARKETS:
         try:
-            J["markets"][sym] = market_day(hourly(c, inst, day), day)
+            h = hourly(c, OKX[sym], day) if sym in OKX else yahoo_hourly(c, YAHOO[sym])
+            J["markets"][sym] = market_day(h, day)
         except Exception as e:
             J["issues"].append(f"data: {sym} hourly candles failed ({type(e).__name__})")
     try:
         from edges.alerts.notify import calendar
         ev = calendar(root, c)
-        J["news"] = [f"{e['date'][11:16]} ET {e['country']} {e['title']} (actual n/a in feed; forecast {e.get('forecast') or '-'})"
-                     for e in ev if e.get("impact") == "High" and e.get("date", "")[:10] == day]
+        J["news"] = [f"{e['date'][11:16]} ET {e['title']} (forecast {e.get('forecast') or '-'})"
+                     for e in ev if e.get("impact") == "High" and e.get("country") == "USD" and e.get("date", "")[:10] == day]
     except Exception:
         J["news"] = []; J["issues"].append("data: news calendar unreachable")
     lab = root / "siglab" / "signals.json"
@@ -79,10 +88,22 @@ def main(state_dir, day=None):
         d0 = int(pd.Timestamp(day, tz="UTC").timestamp() * 1000); d1 = d0 + 86_400_000
         issued = [s for s in S["signals"] if d0 <= s["logged_ms"] < d1]
         closed = [s for s in S["signals"] if s.get("closed_ms") and d0 <= s["closed_ms"] < d1]
+        core_ = [s for s in closed if s["symbol"] in MARKETS]
+        other = [s for s in closed if s["symbol"] not in MARKETS and s.get("R_ladder") is not None]
         J["signals"] = dict(issued=len(issued), with_plan=sum(bool(s.get("plan_sent")) for s in issued),
-                            closed=[dict(m=s["symbol"], setup=s["setup"], side=s["side"], outcome=s.get("outcome"), R=s.get("R_ladder"), why=s.get("review")) for s in closed])
+                            closed=[dict(m=s["symbol"], setup=s["setup"], side=s["side"], outcome=s.get("outcome"), R=s.get("R_ladder"), why=s.get("review")) for s in core_],
+                            others=dict(n=len(other), avg_R=round(float(np.mean([s["R_ladder"] for s in other])), 3) if other else None))
+        board = {}
+        for s in S["signals"]:
+            if s.get("status") == "closed" and s.get("R_ladder") is not None and s.get("state"):
+                k = f"{s['setup']} {'with' if s['state'].get('with_trend') else 'against'}"
+                board.setdefault(k, {}).setdefault(s["logged_ms"] // 3_600_000, []).append(s["R_ladder"])
+        J["scoreboard"] = {k: dict(signals=sum(len(v) for v in h.values()), moments=len(h),
+                                   avg_R=round(float(np.mean([np.mean(v) for v in h.values()])), 3)) for k, h in sorted(board.items())}
         J["learning"] = [x for x in S.get("adapt_log", []) if d0 <= x.get("ms", 0) < d1]
         J["record"] = S.get("record", {}).get("all")
+        sent = [s["R_ladder"] for s in S["signals"] if s.get("plan_sent") and s.get("status") == "closed" and s.get("R_ladder") is not None]
+        J["record_sent"] = dict(n=len(sent), avg_R=round(float(np.mean(sent)), 3) if sent else None, won=sum(r > 0 for r in sent))
         Rs = [s["R_ladder"] for s in sorted(S["signals"], key=lambda s: s.get("closed_ms") or 0) if s.get("status") == "closed" and s.get("R_ladder") is not None]
         streak = 0
         for r in reversed(Rs):
@@ -115,10 +136,18 @@ def main(state_dir, day=None):
     if sg:
         L += ["", f"**Signal Lab:** {sg['issued']} signals ({sg['with_plan']} with a trade plan); {len(sg['closed'])} closed:"]
         L += [f"- {x['m']} {x['side']} {x['setup']}: {x['outcome']} {x['R']:+.2f}R. {x['why']}" for x in sg["closed"] if x["R"] is not None]
+        if sg["others"]["n"]:
+            L.append(f"- other coins (logged, not sent): {sg['others']['n']} closed, avg {sg['others']['avg_R']:+.2f}R")
+        if J.get("scoreboard"):
+            L += ["", "**Live scoreboard by setup (all markets; 'moments' = separate hours, the real sample size):**"]
+            L += [f"- {k}: {v['signals']} signals / {v['moments']} moments, avg {v['avg_R']:+.2f}R" for k, v in J["scoreboard"].items()]
         if J.get("learning"):
             L.append("**Learned:** " + "; ".join(f"{x['cell']} {x.get('frm')}->{x.get('to')}" for x in J["learning"]))
         if J.get("record"):
-            L.append(f"**Record so far:** {J['record']}")
+            L.append(f"**Record so far (all signals, mostly logged only):** {J['record']}")
+        rs = J.get("record_sent") or {}
+        if rs.get("n"):
+            L.append(f"**Signals the owner received with a trade plan:** {rs['n']} closed, {rs['won']} positive, average {rs['avg_R']:+.2f}R")
     L += ["", "**Issues for the researcher:** " + ("; ".join(J["issues"]) if J["issues"] else "none")]
     (jd / f"{day}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))

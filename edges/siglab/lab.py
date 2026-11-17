@@ -67,8 +67,9 @@ def review(s, r, ctx_stats):
     mins = round((r["ladder"]["exit_ms"] - r["fill_ms"]) / 60000)
     o = r["ladder"]["outcome"]
     st_ = s.get("state") or {}
+    tp1 = abs(s["targets"][0] - s["ref_price"]) / R if s.get("targets") else 0.5
     if o == "SL":
-        why = (f"Stopped out after {mins} min. Price never reached TP1 (best was {mfe:.1f}R in favour, TP1 needs 0.5R)." if mfe < 0.5
+        why = (f"Stopped out after {mins} min. Price never reached TP1 (best was {mfe:.1f}R in favour, TP1 needed {tp1:.1f}R)." if mfe < tp1
                else f"Stopped out after {mins} min.")
         if st_ and not st_.get("with_trend"):
             why += " The signal was against the 15-minute trend."
@@ -258,16 +259,20 @@ def adapt(S: dict) -> list[str]:
     """Self-learning without anyone present: every setup x trend-side cell (pooled over all markets) is judged on its own
     forward record. 30+ closed with average < 0 and t <= -1.5 -> muted; a cell muted by the backtest that earns 30+ closed
     with average > 0 and t >= 1.5 -> unmuted. Changes are logged in S["adapt_log"] and announced."""
+    # Signals of one cell that fire in the same hour on several markets are one bet, not many (they move together):
+    # results are first averaged per cell per hour, and the cell is judged on those clusters (at least 15 of them).
     cells = {}
     for x in S["signals"]:
         if x["status"] == "closed" and x.get("R_ladder") is not None and x.get("state"):
-            cells.setdefault(side_key(x), []).append(x["R_ladder"])
+            cells.setdefault(side_key(x), {}).setdefault(x["logged_ms"] // 3_600_000, []).append(x["R_ladder"])
     new = {}
-    for k, v in cells.items():
-        st = stats(v)
-        if st["n"] >= 30 and (st["avg_R"] or 0) < 0 and (st["t"] or 0) <= -1.5:
+    for k, hours in cells.items():
+        cl = [sum(v) / len(v) for v in hours.values()]
+        st = stats(cl)
+        st["signals"] = sum(len(v) for v in hours.values())
+        if st["n"] >= 15 and st["signals"] >= 30 and (st["avg_R"] or 0) < 0 and (st["t"] or 0) <= -1.5:
             new[k] = dict(state="muted", **st)
-        elif st["n"] >= 30 and (st["avg_R"] or 0) > 0 and (st["t"] or 0) >= 1.5:
+        elif st["n"] >= 15 and st["signals"] >= 30 and (st["avg_R"] or 0) > 0 and (st["t"] or 0) >= 1.5:
             new[k] = dict(state="earned", **st)
     old = S.get("adapt") or {}
     msgs = []
@@ -277,7 +282,7 @@ def adapt(S: dict) -> list[str]:
             setup, side = k.split()
             v = new.get(k) or {}
             line = (f"🔁 Learning: {SETUPS[setup]} {side} the trend is now {'MUTED (no trade plans)' if b == 'muted' else ('EARNED (trade plans sent again, tagged)' if b == 'earned' else 'back to normal')}"
-                    + (f" after {v['n']} live signals averaging {v['avg_R']:+.2f}R." if v else "."))
+                    + (f" after {v['signals']} live signals ({v['n']} separate moments) averaging {v['avg_R']:+.2f}R." if v else "."))
             msgs.append(line)
             S.setdefault("adapt_log", []).append(dict(ms=int(time.time() * 1000), cell=k, frm=a, to=b, **({k2: v[k2] for k2 in ('n', 'avg_R', 't')} if v else {})))
     S["adapt"] = new
@@ -303,9 +308,14 @@ def prior(sig):
 
 def text(sig, g, rec):
     pk, pv = prior(sig)
-    if pk == "muted" and g == "PAPER":
+    if g == "PAPER" and pk not in ("plus", "earned"):
         st0 = sig.get("state") or {}
         src = "its live record" if ADAPT.get(side_key(sig)) else "past data"
+        if pk != "muted":
+            st0 = sig.get("state") or {}
+            return (f"⚡ {MARKETS[sig['symbol']]}: {LIVE.get(sig['setup'], SETUPS[sig['setup']])} right now ({sig['why']}), price ~{sig['ref_price']}\n"
+                    f"Market now: trend {st0.get('trend')}, volatility {st0.get('vol')}, {st0.get('session')} session\n"
+                    "ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).")
         return (f"⚡ {MARKETS[sig['symbol']]}: {LIVE.get(sig['setup'], SETUPS[sig['setup']])} right now ({sig['why']}), price ~{sig['ref_price']}\n"
                 f"Market now: trend {st0.get('trend')}, volatility {st0.get('vol')}, {st0.get('session')} session\n"
                 f"ℹ️ No trade plan: on {src}, trading this kind of move {'with' if st0.get('with_trend') else 'against'} the trend lost money (avg {pv:+.2f}R). Logged and scored anyway.")
@@ -412,7 +422,9 @@ def main(state_dir, prices=None, now_ms=None, client=None):
             sig["grade_at_issue"] = g
             if sym in CORE and (g != "PAPER" or setup in LIVE):   # owner trades only gold, silver, BTC, NAS100, US30; other coins are logged, never sent        # alert when the move/breakout/trend happens; forecasts (S3, S6) only once they earn trust
                 sig["sent"] = True
-                sig["plan_sent"] = not (prior(sig)[0] == "muted" and g == "PAPER")   # muted: event alert only, no trade plan
+                # Trade plans only with POSITIVE evidence: a BACKTEST+ cell, a cell that EARNED it live, or a live grade
+                # (PROMISING/CONFIDENT). "Not proven bad" is not enough (15-16 Nov: such plans lost 0.74R on average).
+                sig["plan_sent"] = prior(sig)[0] in ("plus", "earned") or g != "PAPER"
                 msgs.append(text(sig, g, rec))
             new.append(sig)
     msgs += adapt(S)

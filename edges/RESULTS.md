@@ -486,3 +486,13 @@ past 15m/1h/4h returns the IC is 0.018 / 0.011 / 0.020. As trades: "follow the b
 (right 53–58%), −5 to −12 bp after 0.07%/side taker costs (FAIL); the opposite ("liquidity magnet") lost. Gold: no
 consistent sign (final IC −0.02). Verdict: FAIL as a rule; BTC book imbalance kept as a candidate feature, and as a
 maker-only rule for a future test (needs a registered plan: gross 5–9 bp vs 4 bp maker round trip).
+
+## Live review, 17 Nov 2026 (first 2 days of the 15-minute Signal Lab, read from the Observer's journals)
+104 signals closed, average −0.25R (t −3.2) — all markets, mostly logged only. Signals SENT with a trade plan: 8, average
+−0.74R (6 stopped out): mainly breakouts against the 15m trend, which the backtests had rated "not proven bad" (≈0R)
+rather than good; live 12 signals / 4 separate hours at −0.90R. Changes: (1) trade plans now need POSITIVE evidence
+(BACKTEST+, EARNED live, or a live PROMISING/CONFIDENT grade); everything else is an alert without a plan; (2) the
+self-learning counts signals that fire in the same hour on several markets as one result (they move together; the
+07:00 daily-bias signals were 12 signals but 1 moment), and needs 15 separate hours before muting/earning; (3) reasons
+quote the real TP1 distance (targets are adaptive now); (4) the journal covers the owner's five markets in detail, other
+coins as a summary, a live scoreboard by setup, and the record of signals actually sent.
