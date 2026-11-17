@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 08:32 UTC
+Updated 2026-11-17 08:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -49,6 +49,7 @@ Updated 2026-11-17 08:32 UTC
 | SOLUSD S1 | 2 | -0.431 | -0.7 | 0.5 | PAPER |
 | SOLUSD S2 | 2 | -0.094 | -0.1 | 0.5 | PAPER |
 | SOLUSD S4 | 2 | -0.431 | -0.7 | 0.5 | PAPER |
+| SOLUSD S5 | 1 | -1.066 | None | 0.0 | PAPER |
 | SOLUSD S6 | 1 | 0.187 | None | 1.0 | PAPER |
 | SOLUSD S7 | 1 | -1.044 | None | 0.0 | PAPER |
 | SUIUSD S1 | 1 | 0.199 | None | 1.0 | PAPER |
@@ -82,7 +83,7 @@ Updated 2026-11-17 08:32 UTC
 - 17 Nov 07:30 AVAXUSD buy S5 @ 7.222 SL 7.1462 → closed SL -1.06R. Stopped out after 61 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 5 closed, avg +0.02R, 60% won.
 - 17 Nov 07:30 DOGEUSD buy S5 @ 0.05903 SL 0.058511 → open
 - 17 Nov 07:30 XRPUSD buy S5 @ 0.9606 SL 0.951957 → open
-- 17 Nov 07:30 SOLUSD buy S5 @ 72.93 SL 72.262 → open
+- 17 Nov 07:30 SOLUSD buy S5 @ 72.93 SL 72.262 → closed SL -1.07R. Stopped out after 67 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R).
 - 17 Nov 07:30 ETHUSD buy S5 @ 1830.7 SL 1815.76 → open
 - 17 Nov 07:30 BTCUSD buy S5 @ 64671.3 SL 64252.29 → open
 - 17 Nov 07:30 XAGUSD buy S5 @ 47.67 SL 47.358 → open
