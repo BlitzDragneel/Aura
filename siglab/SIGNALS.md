@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 16:00 UTC
+Updated 2026-11-17 16:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -31,6 +31,7 @@ Updated 2026-11-17 16:00 UTC
 | BTCUSD S4 | 3 | -0.176 | -0.42 | 0.667 | PAPER |
 | BTCUSD S5 | 1 | -1.024 | None | 0.0 | PAPER |
 | BTCUSD S6 | 2 | 0.251 | 62.75 | 1.0 | PAPER |
+| BTCUSD S7 | 1 | 0.726 | None | 1.0 | PAPER |
 | DOGEUSD S1 | 2 | -0.17 | -0.19 | 0.5 | PAPER |
 | DOGEUSD S2 | 2 | -1.051 | -420.6 | 0.0 | PAPER |
 | DOGEUSD S3 | 1 | 0.091 | None | 1.0 | PAPER |
@@ -101,7 +102,7 @@ Updated 2026-11-17 16:00 UTC
 - 17 Nov 15:45 DOGEUSD sell S7 @ 0.05837 SL 0.058879 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
 - 17 Nov 15:45 SOLUSD sell S7 @ 72.2 SL 72.982 → closed TP2+BE +0.50R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
 - 17 Nov 15:45 ETHUSD sell S7 @ 1778.69 SL 1796.57 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 4 closed, avg -0.36R, 50% won.
-- 17 Nov 15:45 BTCUSD sell S7 @ 64162.0 SL 64602.78 → open
+- 17 Nov 15:45 BTCUSD sell S7 @ 64162.0 SL 64602.78 → closed TP2+BE +0.73R. Reached TP2 then came back to the entry (best 2.0R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 5 closed, avg -0.17R, 60% won.
 - 17 Nov 13:30 XRPUSD sell S3 @ 0.9775 SL 0.986 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 4 closed, avg -0.28R, 50% won.
 - 17 Nov 12:45 XAGUSD sell S3 @ 47.96 SL 48.249 → closed TP2+BE +0.38R. Reached TP2 then came back to the entry (best 2.2R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 10 closed, avg +0.35R, 70% won.
 - 17 Nov 12:00 SUIUSD buy S7 @ 0.7355 SL 0.727929 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 3 closed, avg -0.52R, 33% won.
