@@ -103,6 +103,14 @@ def main(state_dir, force=False):
             W["recorder"][m] = info
             L.append(f"- {m}: {info}")
         W["questions"].append("Recorder effects are descriptive until 4+ weeks exist; then register a test (liquidation bursts, imbalance).")
+    mr = root / "memory" / "RECORD.json"
+    if mr.exists():
+        M = json.loads(mr.read_text()); W["memory"] = M
+        L += ["", "## Candle memory forward record (all time; 50% = coin flip, backtest said 52-55%)", "",
+              "| market | scored | next hour right | confident right (n) | big-move calls came / base rate |", "|---|---|---|---|---|"]
+        for sym, r in M.items():
+            L.append(f"| {sym} | {r.get('scored')} | {r.get('next_hour_right', '-')} | {r.get('confident_right', '-')} ({r.get('confident_calls', 0)}) | {r.get('big_move_came', '-')} / {r.get('big_move_base', '-')} |")
+        W["questions"].append("Candle memory: is forward next-hour accuracy above 52% with 500+ scored per market? Only then test it as a filter on lab signals (registered plan).")
     L += ["", "## Questions for the research session", ""] + [f"- {q}" for q in W["questions"]]
     out.write_text("\n".join(L) + "\n")
     (jd / "weekly.jsonl").open("a").write(json.dumps(W, default=str) + "\n")

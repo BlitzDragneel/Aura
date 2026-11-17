@@ -532,3 +532,20 @@ mean reversion: BTC "fell over 1h and 24h (and 72h) → long for 12–24h", gold
 short 4h". On 2024–2026 (FINAL, non-overlapping trades) the best BTC dip-buys are still positive after costs (+9 to +19 bp
 per trade, n 174–463) but t ≤ 1.1, and gold's +6 bp (t 1.1); none passes t ≥ 2 with every year positive. The effect has
 weakened to below what can be distinguished from noise. No survivors, so no Monte Carlo was run.
+
+## Lead — E162 candle memory: "what came next after candles like this one" (md5 ae889ac7…): REAL INFORMATION, NO TRADE
+Each closed 15m candle is described by 26 numbers (shape of the last 4 candles in ATR units, 1h/4h/24h move, place in the
+day's range, distance to 20/50 averages, volatility rank, session, weekend). The 200 most similar past candles (memory
+refreshed monthly, never containing the future) vote on what follows. FINAL period (data it never saw):
+| | next candle AUC | next hour AUC | next 4h AUC | big move in 4h AUC | confident 10%: right | shuffled memory | trade net per trade |
+|---|---|---|---|---|---|---|---|
+| BTC (2025-26) | 0.533 | 0.530 | 0.533 | 0.740 | 56.7% | 0.501 | −13.2 bp (t −11) |
+| Gold PAXG (2025) | 0.534 | 0.552 | 0.547 | 0.702 | 60.6% | 0.501 | −3.7 bp (t −10) |
+| Gold perp (Sep–Nov 26) | 0.521 | 0.524 | 0.547 | 0.751 | 58.0% | 0.498 | −0.5 bp |
+| Silver perp | 0.537 | 0.516 | 0.526 | 0.749 | 54.0% | 0.500 | −3.0 bp |
+Reading: candle patterns DO carry direction information (AUC 0.52–0.55 against 0.50 for a shuffled memory, holding up
+across validation and final), and they predict WHEN a big move comes very well (0.70–0.75). But the typical next-hour
+move it gets right is smaller than the cost of trading it, so taking its confident calls loses after costs. Deployed as
+an information bot (edges/memory/live.py): predicts every candle on the five markets, scores itself, and adds every
+finished candle to its memory. It becomes a candidate filter for lab signals only after 500+ scored predictions per
+market show ≥ 52% (registered test).

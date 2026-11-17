@@ -148,6 +148,15 @@ def main(state_dir, day=None):
         rs = J.get("record_sent") or {}
         if rs.get("n"):
             L.append(f"**Signals the owner received with a trade plan:** {rs['n']} closed, {rs['won']} positive, average {rs['avg_R']:+.2f}R")
+    mr = Path(state_dir) / "memory" / "RECORD.json"
+    if mr.exists():
+        J["memory"] = json.loads(mr.read_text())
+        L += ["", "**Candle memory (predicts what follows each 15m candle from its 200 closest look-alikes; information only):**"]
+        for sym, r in J["memory"].items():
+            x = r.get("latest", {})
+            fw = (f"next-hour calls right {r['next_hour_right']:.0%} of {r['scored']}, confident {r.get('confident_right', 0):.0%} of {r.get('confident_calls', 0)}"
+                  if "next_hour_right" in r else f"{r.get('scored', 0)} scored so far")
+            L.append(f"- {MARKETS.get(sym, sym)}: now P(up next hour) {x.get('p_up1h')}, P(big move 4h) {x.get('p_big4h')}; record: {fw}")
     L += ["", "**Issues for the researcher:** " + ("; ".join(J["issues"]) if J["issues"] else "none")]
     (jd / f"{day}.md").write_text("\n".join(L) + "\n")
     print("\n".join(L))
