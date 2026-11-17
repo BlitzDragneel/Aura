@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 02:00 UTC
+Updated 2026-11-17 02:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -75,6 +75,8 @@ Updated 2026-11-17 02:00 UTC
 
 ## Latest signals
 
+- 17 Nov 02:15 XRPUSD sell S1 @ 0.955 SL 0.966429 → open
+- 17 Nov 02:15 SOLUSD sell S1 @ 71.56 SL 72.484 → open
 - 17 Nov 02:00 LINKUSD sell S1 @ 9.116 SL 9.2334 → open
 - 17 Nov 02:00 AVAXUSD sell S1 @ 7.098 SL 7.197 → open
 - 17 Nov 02:00 ADAUSD sell S1 @ 0.1526 SL 0.154593 → open
@@ -133,5 +135,3 @@ Updated 2026-11-17 02:00 UTC
 - 16 Nov 06:15 SUIUSD sell S2 @ 0.7161 SL 0.725379 → closed SL -1.05R. Stopped out after 78 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R).
 - 16 Nov 06:15 AVAXUSD sell S2 @ 7.083 SL 7.1781 → closed SL -1.04R. Stopped out after 77 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R).
 - 16 Nov 06:15 SOLUSD sell S2 @ 70.9 SL 71.805 → closed SL -1.05R. Stopped out after 287 min. Lesson so far: breakout with the trend: 6 closed, avg -0.84R, 17% won.
-- 16 Nov 06:15 XAGUSD sell S4 @ 47.49 SL 47.914 → closed SL -1.07R. Stopped out after 300 min. Price never reached TP1 (best was 0.4R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: fib pullback with the trend: 7 closed, avg -0.19R, 71% won.
-- 16 Nov 06:00 BTCUSD sell S2 @ 64452.9 SL 64988.52 → closed SL -1.02R. Stopped out after 101 min. Price never reached TP1 (best was 0.3R in favour, TP1 needs 0.5R).
