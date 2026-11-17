@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-17T07:30:55.338329+00:00",
+ "asof": "2026-11-17T07:45:48.626849+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3881.8,
-  "bar": "2026-11-17T07:15:00+00:00",
+  "price": 3878.2,
+  "bar": "2026-11-17T07:30:00+00:00",
   "trend": {
    "15m": {
-    "state": "up",
-    "close": 3881.8,
-    "ma20": 3879.79,
-    "ma50": 3870.58,
-    "slope_atr": 0.51,
-    "bar": "2026-11-17T07:15:00+00:00"
+    "state": "flat",
+    "close": 3878.2,
+    "ma20": 3880.275,
+    "ma50": 3870.874,
+    "slope_atr": 0.36,
+    "bar": "2026-11-17T07:30:00+00:00"
    },
    "1h": {
     "state": "up",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.91,
   "spot": {
-   "price": 3876.675,
-   "bid": 3876.358,
-   "ask": 3876.992,
-   "spread": 0.634,
-   "age_s": 0,
+   "price": 3872.4455,
+   "bid": 3872.128,
+   "ask": 3872.763,
+   "spread": 0.635,
+   "age_s": 1,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.132
+   "perp_premium_pct": 0.149
   },
   "funding": {
-   "rate": 2.5220497546e-06,
+   "rate": 5.6124102244e-06,
    "next_time": 1794902400000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3881.8; volatility regime normal (hourly ATR 0.337% of price, 44.7th percentile).",
-    "Spot XAUUSD 3876.68; the perpetual trades +0.13% from spot."
+    "Price 3878.2; volatility regime normal (hourly ATR 0.337% of price, 44.7th percentile).",
+    "Spot XAUUSD 3872.45; the perpetual trades +0.15% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 131,
+ "runs": 132,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
