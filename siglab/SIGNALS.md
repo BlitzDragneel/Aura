@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 00:01 UTC
+Updated 2026-11-17 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -75,6 +75,9 @@ Updated 2026-11-17 00:01 UTC
 
 ## Latest signals
 
+- 17 Nov 00:15 LINKUSD sell S4 @ 9.118 SL 9.2359 → open
+- 17 Nov 00:15 SOLUSD sell S4 @ 71.53 SL 72.487 → open
+- 17 Nov 00:15 XAGUSD buy S4 @ 47.22 SL 46.876 → open
 - 17 Nov 00:00 ADAUSD sell S4 @ 0.153 SL 0.154964 → open
 - 17 Nov 00:00 XAGUSD buy S2 @ 47.27 SL 46.926 → open
 - 17 Nov 00:00 XAUUSD buy S1 @ 3868.5 SL 3854.52 → open
@@ -132,6 +135,3 @@ Updated 2026-11-17 00:01 UTC
 - 16 Nov 02:45 XAGUSD sell S2 @ 47.49 SL 47.836 → closed SL -1.08R. Stopped out after 156 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Volatility was high, so a 1R stop was easy to hit.
 - 16 Nov 02:30 SUIUSD sell S4 @ 0.7323 SL 0.7416 → closed TP2+BE +0.76R. Reached TP2 then came back to the entry (best 2.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 9 closed, avg -0.24R, 67% won.
 - 16 Nov 02:30 LTCUSD sell S4 @ 45.17 SL 45.638 → open
-- 16 Nov 02:30 AVAXUSD sell S4 @ 7.262 SL 7.3594 → closed TP2+BE +0.86R. Reached TP2 then came back to the entry (best 2.2R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 9 closed, avg -0.24R, 67% won.
-- 16 Nov 02:30 DOGEUSD sell S4 @ 0.05942 SL 0.060059 → closed TP2+BE +0.77R. Reached TP2 then came back to the entry (best 2.3R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 9 closed, avg -0.24R, 67% won.
-- 16 Nov 02:15 ADAUSD sell S4 @ 0.1533 SL 0.155186 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 5 closed, avg -0.35R, 60% won.

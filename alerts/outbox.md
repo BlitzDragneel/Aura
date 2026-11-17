@@ -282,3 +282,16 @@ TP2 47.5 (reached in 40% of similar moments in the last 3 days)
 TP3 47.658 (reached in 20% of similar moments in the last 3 days)
 Setup: breakout (closed above the last 4 hours' high on a wide bar)
 record of this setup here: 1 closed, avg -1.08R, 0% won
+
+## 2026-11-17 00:16:01 UTC
+⚡ Silver: PULLBACK in a strong move right now
+Market now: trend down, volatility normal, compressed range, Asia session
+🧪 PAPER (untested, do not trade)
+⏪ On this market's recent history: 29 of these, 52% ended positive, average +0.08R
+Silver BUY now ~47.22
+SL 46.876
+TP1 47.34 (reached in 60% of similar moments in the last 3 days)
+TP2 47.45 (reached in 40% of similar moments in the last 3 days)
+TP3 47.608 (reached in 20% of similar moments in the last 3 days)
+Setup: fib pullback (pulled back half of a strong up-leg)
+record of this setup here: 2 closed, avg -1.09R, 0% won
