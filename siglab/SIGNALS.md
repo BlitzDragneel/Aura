@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 07:45 UTC
+Updated 2026-11-17 08:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -22,7 +22,7 @@ Updated 2026-11-17 07:45 UTC
 | BNBUSD S6 | 1 | 0.23 | None | 1.0 | PAPER |
 | BTCUSD S1 | 1 | 0.281 | None | 1.0 | PAPER |
 | BTCUSD S2 | 2 | -1.018 | -2037.0 | 0.0 | PAPER |
-| BTCUSD S4 | 2 | -0.378 | -0.6 | 0.5 | PAPER |
+| BTCUSD S4 | 3 | -0.176 | -0.42 | 0.667 | PAPER |
 | BTCUSD S6 | 1 | 0.255 | None | 1.0 | PAPER |
 | DOGEUSD S1 | 1 | 0.717 | None | 1.0 | PAPER |
 | DOGEUSD S2 | 2 | -1.051 | -420.6 | 0.0 | PAPER |
@@ -124,7 +124,7 @@ Updated 2026-11-17 07:45 UTC
 - 17 Nov 02:00 AVAXUSD sell S1 @ 7.098 SL 7.197 → closed SL -1.04R. Stopped out after 95 min. Price never reached TP1 (best was 0.4R in favour, TP1 needs 0.5R). Lesson so far: trend pullback with the trend: 19 closed, avg -0.01R, 74% won.
 - 17 Nov 02:00 ADAUSD sell S1 @ 0.1526 SL 0.154593 → closed SL -1.05R. Stopped out after 88 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). Lesson so far: trend pullback with the trend: 17 closed, avg +0.11R, 82% won.
 - 17 Nov 02:00 ETHUSD sell S1 @ 1819.52 SL 1840.26 → closed SL -1.05R. Stopped out after 200 min. Price never reached TP1 (best was 0.5R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 22 closed, avg -0.16R, 64% won.
-- 17 Nov 02:00 BTCUSD sell S4 @ 64712.8 SL 65291.05 → open
+- 17 Nov 02:00 BTCUSD sell S4 @ 64712.8 SL 65291.05 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 20 closed, avg -0.11R, 65% won.
 - 17 Nov 01:45 LTCUSD sell S4 @ 44.68 SL 45.159 → open
 - 17 Nov 01:45 AVAXUSD sell S4 @ 7.126 SL 7.2229 → closed SL -1.04R. Stopped out after 317 min. Lesson so far: fib pullback with the trend: 19 closed, avg -0.06R, 68% won.
 - 17 Nov 01:45 BNBUSD sell S4 @ 593.17 SL 597.56 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 14 closed, avg +0.12R, 79% won.
