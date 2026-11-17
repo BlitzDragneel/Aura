@@ -308,7 +308,7 @@ def prior(sig):
 
 def text(sig, g, rec):
     pk, pv = prior(sig)
-    if g == "PAPER" and pk not in ("plus", "earned"):
+    if g != "CONFIDENT" and pk not in ("plus", "earned"):
         st0 = sig.get("state") or {}
         src = "its live record" if ADAPT.get(side_key(sig)) else "past data"
         if pk != "muted":
@@ -424,7 +424,9 @@ def main(state_dir, prices=None, now_ms=None, client=None):
                 sig["sent"] = True
                 # Trade plans only with POSITIVE evidence: a BACKTEST+ cell, a cell that EARNED it live, or a live grade
                 # (PROMISING/CONFIDENT). "Not proven bad" is not enough (15-16 Nov: such plans lost 0.74R on average).
-                sig["plan_sent"] = prior(sig)[0] in ("plus", "earned") or g != "PAPER"
+                # PROMISING (15+ closed, positive average) is too easy to reach by luck across 100+ setup x market cells,
+                # so only CONFIDENT (30+ closed, t >= 2) or a cell EARNED by the hour-clustered learning gets a plan.
+                sig["plan_sent"] = prior(sig)[0] in ("plus", "earned") or g == "CONFIDENT"
                 msgs.append(text(sig, g, rec))
             new.append(sig)
     msgs += adapt(S)
