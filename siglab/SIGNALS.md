@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 05:00 UTC
+Updated 2026-11-17 05:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -10,7 +10,7 @@ Updated 2026-11-17 05:00 UTC
 | ADAUSD S5 | 1 | 0.674 | None | 1.0 | PAPER |
 | ADAUSD S6 | 1 | 0.24 | None | 1.0 | PAPER |
 | AVAXUSD S1 | 2 | -0.391 | -0.6 | 0.5 | PAPER |
-| AVAXUSD S2 | 1 | -1.044 | None | 0.0 | PAPER |
+| AVAXUSD S2 | 2 | -0.478 | -0.84 | 0.5 | PAPER |
 | AVAXUSD S4 | 1 | 0.865 | None | 1.0 | PAPER |
 | AVAXUSD S5 | 1 | -1.046 | None | 0.0 | PAPER |
 | AVAXUSD S6 | 1 | 0.235 | None | 1.0 | PAPER |
@@ -76,11 +76,14 @@ Updated 2026-11-17 05:00 UTC
 
 ## Latest signals
 
+- 17 Nov 05:15 LTCUSD sell S1 @ 44.67 SL 45.101 → open
+- 17 Nov 05:15 XRPUSD buy S4 @ 0.9616 SL 0.951614 → open
+- 17 Nov 05:15 BTCUSD sell S1 @ 64800.0 SL 65291.49 → open
 - 17 Nov 04:45 DOGEUSD buy S4 @ 0.05918 SL 0.058445 → open
 - 17 Nov 03:30 SUIUSD buy S2 @ 0.7268 SL 0.717093 → open
 - 17 Nov 03:30 LTCUSD buy S2 @ 44.98 SL 44.507 → open
 - 17 Nov 03:30 LINKUSD buy S2 @ 9.192 SL 9.0781 → open
-- 17 Nov 03:30 AVAXUSD buy S2 @ 7.174 SL 7.0765 → open
+- 17 Nov 03:30 AVAXUSD buy S2 @ 7.174 SL 7.0765 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 5 closed, avg -1.05R, 0% won.
 - 17 Nov 03:30 ADAUSD buy S2 @ 0.1543 SL 0.152407 → open
 - 17 Nov 03:30 DOGEUSD buy S2 @ 0.05929 SL 0.058581 → open
 - 17 Nov 03:30 XRPUSD buy S2 @ 0.9639 SL 0.952836 → open
@@ -133,6 +136,3 @@ Updated 2026-11-17 05:00 UTC
 - 16 Nov 07:00 LINKUSD sell S6 @ 9.13 SL 9.2292 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
 - 16 Nov 07:00 AVAXUSD sell S6 @ 7.134 SL 7.2284 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 9 closed, avg +0.20R, 100% won.
 - 16 Nov 07:00 ADAUSD sell S6 @ 0.1526 SL 0.1544 → closed TP1+BE +0.24R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 6 closed, avg +0.17R, 100% won.
-- 16 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.05951 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry.
-- 16 Nov 07:00 XRPUSD sell S6 @ 0.9548 SL 0.965293 → closed TP1+BE +0.25R. Reached TP1 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 6 closed, avg +0.17R, 100% won.
-- 16 Nov 07:00 BNBUSD sell S6 @ 591.39 SL 595.92 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 4 closed, avg +0.16R, 100% won.

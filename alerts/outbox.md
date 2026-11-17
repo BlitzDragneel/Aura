@@ -321,3 +321,8 @@ Why: Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by
 ⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~64712.8
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-17 05:16:03 UTC
+⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~64800.0
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.

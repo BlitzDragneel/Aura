@@ -3974,14 +3974,22 @@
     7.285
    ],
    "R": 0.0975,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-17",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 7.173,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.088,
+   "R_tp1": 0.353,
+   "pips": 11.8,
+   "closed_ms": 1794892200000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 5 closed, avg -1.05R, 0% won."
   },
   {
    "id": "LINKUSD-S2-1794886200000",
@@ -4106,6 +4114,101 @@
    ],
    "day": "2026-11-17",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "BTCUSD-S1-1794892500000",
+   "symbol": "BTCUSD",
+   "setup": "S1",
+   "side": "sell",
+   "why": "downtrend, price closed back below its short average after a bounce",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794892500000,
+   "ref_price": 64800.0,
+   "stop": 65291.49,
+   "targets": [
+    64408.77,
+    64125.18,
+    63702.0
+   ],
+   "R": 491.493,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-17",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "XRPUSD-S4-1794892500000",
+   "symbol": "XRPUSD",
+   "setup": "S4",
+   "side": "buy",
+   "why": "pulled back half of a strong up-leg",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794892500000,
+   "ref_price": 0.9616,
+   "stop": 0.951614,
+   "targets": [
+    0.967082,
+    0.970997,
+    0.977377
+   ],
+   "R": 0.0099857,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-17",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "LTCUSD-S1-1794892500000",
+   "symbol": "LTCUSD",
+   "setup": "S1",
+   "side": "sell",
+   "why": "downtrend, price closed back below its short average after a bounce",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794892500000,
+   "ref_price": 44.67,
+   "stop": 45.101,
+   "targets": [
+    44.276,
+    44.02,
+    43.704
+   ],
+   "R": 0.4314,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-17",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -4161,11 +4264,11 @@
     "grade": "PAPER"
    },
    "AVAXUSD S2": {
-    "n": 1,
-    "avg_R": -1.044,
-    "t": null,
-    "win": 0.0,
-    "total_R": -1.04,
+    "n": 2,
+    "avg_R": -0.478,
+    "t": -0.84,
+    "win": 0.5,
+    "total_R": -0.96,
     "grade": "PAPER"
    },
    "AVAXUSD S4": {
@@ -4674,11 +4777,11 @@
     "total_R": -3.44
    },
    "S2": {
-    "n": 16,
-    "avg_R": -0.898,
-    "t": -8.58,
-    "win": 0.125,
-    "total_R": -14.36
+    "n": 17,
+    "avg_R": -0.84,
+    "t": -7.36,
+    "win": 0.176,
+    "total_R": -14.27
    },
    "S3": {
     "n": 6,
@@ -4717,13 +4820,13 @@
    }
   },
   "all": {
-   "n": 90,
-   "avg_R": -0.186,
-   "t": -2.21,
-   "win": 0.589,
-   "total_R": -16.71
+   "n": 91,
+   "avg_R": -0.183,
+   "t": -2.2,
+   "win": 0.593,
+   "total_R": -16.62
   },
-  "open": 19
+  "open": 21
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -4797,11 +4900,11 @@
    "total_R": -3.44
   },
   "S2 | Asia": {
-   "n": 10,
-   "avg_R": -0.801,
-   "t": -4.93,
-   "win": 0.2,
-   "total_R": -8.01
+   "n": 11,
+   "avg_R": -0.72,
+   "t": -4.29,
+   "win": 0.273,
+   "total_R": -7.92
   },
   "S2 | London": {
    "n": 2,
@@ -4818,11 +4921,11 @@
    "total_R": -3.16
   },
   "S2 | against trend": {
-   "n": 5,
-   "avg_R": -1.051,
-   "t": -86.81,
-   "win": 0.0,
-   "total_R": -5.25
+   "n": 6,
+   "avg_R": -0.861,
+   "t": -4.53,
+   "win": 0.167,
+   "total_R": -5.17
   },
   "S2 | compressed": {
    "n": 2,
@@ -4846,11 +4949,11 @@
    "total_R": -1.09
   },
   "S2 | normal": {
-   "n": 9,
-   "avg_R": -0.768,
-   "t": -4.32,
-   "win": 0.222,
-   "total_R": -6.91
+   "n": 10,
+   "avg_R": -0.682,
+   "t": -3.78,
+   "win": 0.3,
+   "total_R": -6.82
   },
   "S2 | vol high": {
    "n": 3,
@@ -4860,11 +4963,11 @@
    "total_R": -1.99
   },
   "S2 | vol normal": {
-   "n": 13,
-   "avg_R": -0.951,
-   "t": -9.58,
-   "win": 0.077,
-   "total_R": -12.37
+   "n": 14,
+   "avg_R": -0.877,
+   "t": -7.42,
+   "win": 0.143,
+   "total_R": -12.28
   },
   "S2 | with trend": {
    "n": 11,
