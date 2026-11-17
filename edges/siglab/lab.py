@@ -410,13 +410,13 @@ def main(state_dir, prices=None, now_ms=None, client=None):
             rec = stats(by.get((sym, setup), []))
             g = grade(rec)
             sig["grade_at_issue"] = g
-            if g != "PAPER" or (setup in LIVE and (sym in CORE or setup in COIN_LIVE)):        # alert when the move/breakout/trend happens; forecasts (S3, S6) only once they earn trust
+            if sym in CORE and (g != "PAPER" or setup in LIVE):   # owner trades only gold, silver, BTC, NAS100, US30; other coins are logged, never sent        # alert when the move/breakout/trend happens; forecasts (S3, S6) only once they earn trust
                 sig["sent"] = True
                 sig["plan_sent"] = not (prior(sig)[0] == "muted" and g == "PAPER")   # muted: event alert only, no trade plan
                 msgs.append(text(sig, g, rec))
             new.append(sig)
     msgs += adapt(S)
-    msgs += scout_flags(Path(state_dir), S)
+    # Scouts cover 30 coins the owner does not trade: logged on the bot-state branch, not sent
     S["signals"] += new
     S["signals"] = S["signals"][-5000:]
     table = {f"{k[0]} {k[1]}": dict(stats(v), grade=grade(stats(v))) for k, v in sorted(by.items())}
