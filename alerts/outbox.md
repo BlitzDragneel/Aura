@@ -369,3 +369,8 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 ⏰ US news in 44 min: Core Retail Sales m/m (forecast 0.4%, previous 0.9%) at 13:30 UTC / 09:30 AM Trinidad.
 ⏰ US news in 44 min: Retail Sales m/m (forecast 0.2%, previous 0.8%) at 13:30 UTC / 09:30 AM Trinidad.
 Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be predicted in testing (E152). Wider stops or stand aside for the release.
+
+## 2026-11-17 15:45:59 UTC
+⚡ Bitcoin: BIG MOVE under way right now (moved -941.80 in the last hour, twice its normal hourly range), price ~64162.0
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
