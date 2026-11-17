@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 11:45 UTC
+Updated 2026-11-17 12:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -82,6 +82,11 @@ Updated 2026-11-17 11:45 UTC
 
 ## Latest signals
 
+- 17 Nov 12:00 SUIUSD buy S7 @ 0.7355 SL 0.727929 → open
+- 17 Nov 12:00 LTCUSD buy S7 @ 45.06 SL 44.705 → open
+- 17 Nov 12:00 LINKUSD sell S3 @ 9.259 SL 9.341 → open
+- 17 Nov 12:00 BNBUSD buy S7 @ 594.39 SL 590.84 → open
+- 17 Nov 12:00 BTCUSD sell S3 @ 64957.1 SL 65397.38 → open
 - 17 Nov 11:45 SUIUSD sell S3 @ 0.7346 SL 0.741579 → open
 - 17 Nov 11:45 LTCUSD sell S3 @ 45.03 SL 45.356 → open
 - 17 Nov 11:00 BNBUSD buy S3 @ 586.9 SL 583.64 → closed TP3 +0.94R. TP3 after 37 min (best 1.7R, worst -0.1R).
@@ -137,8 +142,3 @@ Updated 2026-11-17 11:45 UTC
 - 17 Nov 02:00 ETHUSD sell S1 @ 1819.52 SL 1840.26 → closed SL -1.05R. Stopped out after 200 min. Price never reached TP1 (best was 0.5R in favour, TP1 needs 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 22 closed, avg -0.16R, 64% won.
 - 17 Nov 02:00 BTCUSD sell S4 @ 64712.8 SL 65291.05 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 20 closed, avg -0.11R, 65% won.
 - 17 Nov 01:45 LTCUSD sell S4 @ 44.68 SL 45.159 → open
-- 17 Nov 01:45 AVAXUSD sell S4 @ 7.126 SL 7.2229 → closed SL -1.04R. Stopped out after 317 min. Lesson so far: fib pullback with the trend: 19 closed, avg -0.06R, 68% won.
-- 17 Nov 01:45 BNBUSD sell S4 @ 593.17 SL 597.56 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 14 closed, avg +0.12R, 79% won.
-- 17 Nov 01:45 ETHUSD sell S4 @ 1824.05 SL 1844.46 → open
-- 17 Nov 01:45 XAUUSD buy S2 @ 3873.9 SL 3860.34 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 10 closed, avg -0.92R, 10% won.
-- 17 Nov 00:30 BTCUSD sell S2 @ 64589.5 SL 65159.51 → closed SL -1.02R. Stopped out after 185 min. Price never reached TP1 (best was 0.4R in favour, TP1 needs 0.5R). Lesson so far: breakout with the trend: 9 closed, avg -0.91R, 11% won.
