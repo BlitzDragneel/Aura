@@ -575,3 +575,29 @@ warm-up). Exits 1h and 4h, no overlapping trades. Every market and exit is negat
 PAXG −3.0 / −5.1, gold perp −4.8 / −8.2, silver −2.4 / −1.5) and no better than the coin-flip control. Why: "big move"
 is measured relative to recent volatility, so those candles do not move more in price (BTC 31 vs 30 bp average 1h
 move), and the direction accuracy on non-overlapping trades falls to 50–56%.
+
+## Lead — E165 follow or fade by market phase (md5 5216aad5…): FAIL — at the lab's trigger points direction is a coin flip
+Owner's observation: the 9 plans sent lost −0.77R as called and would have made +0.44R flipped (all 105 live: −0.23R vs
+−0.18R). Replay of the seven setups on gold, silver, BTC, ETH, SOL (19,809 signals), each scored as called AND mirrored:
+| pooled FINAL | follow (as called) | fade (flipped) | R1 phase switch (learned on discovery) | R2 online flip (last 20) | R3 R2 + skip | R2 shuffled |
+|---|---|---|---|---|---|---|
+| avg R (t) | −0.041 (−2.8) | −0.041 (−2.9) | −0.035 (−1.5); discovery +0.068 | −0.059 (−4.9) | −0.061 (−4.5) | −0.034 |
+Following and fading lose the SAME amount: the loss is the trade template (spread, stop and target placement), not the
+direction. Signals against both the week and the 20-day trend: as called −0.042R, flipped −0.038R (n 5,414); with both:
+−0.042 / −0.038. Learning the side from recent results is worse than chance (results do not persist). The live flip
+win is 9 signals in one strong sell-off; history says flipping is not a rule.
+
+## Lead — E166 big picture: week/month regime and money flow → next week (md5 ea697f90…): FAIL (one near miss)
+Weekly, hold one week, costs BTC 0.14% / gold 0.04%. FINAL = 2024-01..2026-11 (150 weeks).
+| | 2019–22 | 2023 | 2024–26 | 2024–26 total |
+|---|---|---|---|---|
+| BTC always long | +0.99%/wk | +1.93 | +0.31 (t 0.6) | +46% |
+| BTC money flow (stablecoin supply 4w up → long, down → short) | +1.15 | −0.48 | +0.90 (t 1.8) | +135% |
+| BTC momentum 12w + money flow agree | +1.17 | −0.28 | +0.45 (t 1.1) | +67% |
+| BTC logistic (all) | +1.63 | −1.24 | +0.01 | +1% |
+| Gold always long | +0.15 | +0.20 | +0.42 (t 1.9) | +63% |
+| Gold momentum + dollar agree | −0.06 | −0.00 | +0.35 (t 2.4) | +52% |
+The owner's idea (money leaving crypto drives prices down) is the best of the BTC rules over 2019–26 but lost in 2023,
+so it does not pass. Shown daily as information in the big-picture report (edges/observer/bigpicture.py) with its record.
+Now (17 Nov): stablecoin supply −5.0% in 4 weeks (−$15bn), BTC −20% in 4 weeks, Fear & Greed 12; all five markets in
+a down trend.

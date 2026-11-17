@@ -148,6 +148,12 @@ def main(state_dir, day=None):
         rs = J.get("record_sent") or {}
         if rs.get("n"):
             L.append(f"**Signals the owner received with a trade plan:** {rs['n']} closed, {rs['won']} positive, average {rs['avg_R']:+.2f}R")
+    bp = Path(state_dir) / "bigpicture" / "latest.json"
+    if bp.exists():
+        J["bigpicture"] = json.loads(bp.read_text())
+        md = Path(state_dir) / "bigpicture" / f"{J['bigpicture']['day']}.md"
+        if md.exists():
+            L += ["", "**Big picture (week/month play, money flow):**"] + [l for l in md.read_text().splitlines()[2:] if l.strip()]
     mr = Path(state_dir) / "memory" / "RECORD.json"
     if mr.exists():
         J["memory"] = json.loads(mr.read_text())
