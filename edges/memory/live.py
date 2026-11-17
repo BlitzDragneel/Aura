@@ -76,6 +76,10 @@ def main(state_dir):
     c = httpx.Client(timeout=20, headers={"User-Agent": "omega-memory/2.0"})
     news = news_now(state)
     pf, mf = root / "predictions.csv", root / "mistakes.csv"
+    if pf.exists() and ",call," not in pf.open().readline():
+        pf.rename(root / "predictions_v1.csv")          # the first version's log (different columns) is kept aside
+    for old in root.glob("*_learned.csv"):              # v1 memory files; v2 keeps raw candles in <SYM>_bars.csv
+        old.unlink()
     record = {}
     for sym in list(OKX) + list(YF):
         try:
