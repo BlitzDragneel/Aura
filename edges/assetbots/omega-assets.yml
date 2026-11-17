@@ -55,6 +55,12 @@ jobs:
       - name: Signal Lab (paper signals on five markets, scored; sends the day's signals)
         working-directory: code
         run: python -W ignore -m edges.siglab.lab ../state || true
+      - name: Recorder (saves what nobody archives - depth, liquidations, spreads, OI, funding)
+        working-directory: code
+        run: python -W ignore -m edges.observer.recorder ../state || true
+      - name: Weekly review (Mondays)
+        working-directory: code
+        run: python -W ignore -m edges.observer.weekly ../state || true
       - name: Observer (daily market journal for the research session)
         working-directory: code
         run: python -W ignore -m edges.observer.journal ../state || true
@@ -62,7 +68,7 @@ jobs:
         working-directory: state
         run: |
           git config user.name "omega-assets"; git config user.email "omega-assets@users.noreply.github.com"
-          git add -A assets alerts watch siglab journal; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
+          git add -A assets alerts watch siglab journal recorder; git diff --cached --quiet || git commit -q -m "asset desks $(date -u '+%Y-%m-%d %H:%M')"
           for i in 1 2 3; do git push -q origin HEAD:bot-state && break; git pull -q --rebase origin bot-state; done
       - name: Deliver alerts (the Live API holds the Telegram / WhatsApp details)
         working-directory: state

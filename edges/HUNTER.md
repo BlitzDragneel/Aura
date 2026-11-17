@@ -8,6 +8,10 @@ count every variant (bt.log_attempt); luck-check; DISCOVERY 2020–23 / VALIDATI
 costs from bt.round_trip_cost; leverage table for anything that passes; paper first.
 
 ## Each run (one idea per day; stop early if the usage limit is near and push what exists)
+0a. On MONDAYS read `journal/weekly-<year>-W<week>.md` first: the live record per setup vs its backtest, the sent-signal
+   record, and the Recorder studies. Answer its "Questions for the research session" (register a test for any that has
+   the data; the Recorder's raw CSVs are in `recorder/` on bot-state: depth, liquidations, OI, funding, spreads, every
+   15 minutes since 17 Nov 2026 — data no free archive keeps; after 4+ weeks they support real tests).
 0. FIRST read what the bots observed: `git fetch origin bot-state` then `git show origin/bot-state:journal/<yesterday>.md`
    (and the last 7 days in journal/journal.jsonl). Fix every item under "Issues for the researcher" before anything else
    (data errors, stale feeds, scoring problems), with a test, and say what you fixed. Then look at what the markets did
