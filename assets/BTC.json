@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-17T20:15:39.372732+00:00",
+ "asof": "2026-11-17T20:30:48.275954+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 63790.2,
-  "bar": "2026-11-17T20:00:00+00:00",
+  "price": 63958.2,
+  "bar": "2026-11-17T20:15:00+00:00",
   "trend": {
    "15m": {
-    "state": "down",
-    "close": 63790.2,
-    "ma20": 63894.935,
-    "ma50": 64347.43,
-    "slope_atr": -1.05,
-    "bar": "2026-11-17T20:00:00+00:00"
+    "state": "flat",
+    "close": 63958.2,
+    "ma20": 63843.575,
+    "ma50": 64332.644,
+    "slope_atr": -1.08,
+    "bar": "2026-11-17T20:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.71,
   "funding": {
-   "rate": 2.62964852224e-05,
+   "rate": 2.34639127981e-05,
    "next_time": 1794960000000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.185,
+    "p_big_move": 0.178,
     "flag": false,
     "detail": {
-     "p_up_move": 0.097,
-     "p_down_move": 0.088
+     "p_up_move": 0.089,
+     "p_down_move": 0.089
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -246,7 +246,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 63790.2; volatility regime active (hourly ATR 0.928% of price, 84.2th percentile).",
+    "Price 63958.2; volatility regime active (hourly ATR 0.928% of price, 84.2th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -257,6 +257,6 @@
    ]
   }
  ],
- "runs": 187,
+ "runs": 188,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
