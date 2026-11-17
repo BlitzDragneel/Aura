@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 09:20 UTC
+Updated 2026-11-17 09:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -47,7 +47,7 @@ Updated 2026-11-17 09:20 UTC
 | LTCUSD S2 | 2 | -1.058 | None | 0.0 | PAPER |
 | LTCUSD S3 | 1 | 1.543 | None | 1.0 | PAPER |
 | LTCUSD S4 | 2 | 0.647 | 1.07 | 1.0 | PAPER |
-| LTCUSD S5 | 1 | 0.781 | None | 1.0 | PAPER |
+| LTCUSD S5 | 2 | -0.146 | -0.16 | 0.5 | PAPER |
 | LTCUSD S6 | 1 | 0.775 | None | 1.0 | PAPER |
 | SOLUSD S1 | 2 | -0.431 | -0.7 | 0.5 | PAPER |
 | SOLUSD S2 | 2 | -0.094 | -0.1 | 0.5 | PAPER |
@@ -58,6 +58,7 @@ Updated 2026-11-17 09:20 UTC
 | SUIUSD S1 | 1 | 0.199 | None | 1.0 | PAPER |
 | SUIUSD S2 | 2 | -1.046 | -2091.0 | 0.0 | PAPER |
 | SUIUSD S4 | 1 | 0.762 | None | 1.0 | PAPER |
+| SUIUSD S5 | 1 | -1.057 | None | 0.0 | PAPER |
 | SUIUSD S6 | 1 | 0.177 | None | 1.0 | PAPER |
 | XAGUSD S1 | 2 | -0.51 | -0.92 | 0.5 | PAPER |
 | XAGUSD S2 | 2 | -1.086 | -723.67 | 0.0 | PAPER |
@@ -80,8 +81,8 @@ Updated 2026-11-17 09:20 UTC
 
 ## Latest signals
 
-- 17 Nov 07:30 SUIUSD buy S5 @ 0.7252 SL 0.717614 → open
-- 17 Nov 07:30 LTCUSD buy S5 @ 44.7 SL 44.331 → open
+- 17 Nov 07:30 SUIUSD buy S5 @ 0.7252 SL 0.717614 → closed SL -1.06R. Stopped out after 111 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 8 closed, avg -0.38R, 38% won.
+- 17 Nov 07:30 LTCUSD buy S5 @ 44.7 SL 44.331 → closed SL -1.07R. Stopped out after 111 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 8 closed, avg -0.38R, 38% won.
 - 17 Nov 07:30 LINKUSD buy S5 @ 9.192 SL 9.1044 → closed SL -1.06R. Stopped out after 105 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 7 closed, avg -0.28R, 43% won.
 - 17 Nov 07:30 AVAXUSD buy S5 @ 7.222 SL 7.1462 → closed SL -1.06R. Stopped out after 61 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 5 closed, avg +0.02R, 60% won.
 - 17 Nov 07:30 DOGEUSD buy S5 @ 0.05903 SL 0.058511 → closed SL -1.07R. Stopped out after 95 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R).

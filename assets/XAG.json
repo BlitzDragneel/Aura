@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-17T09:19:59.539339+00:00",
+ "asof": "2026-11-17T09:30:58.660966+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 47.46,
-  "bar": "2026-11-17T09:00:00+00:00",
+  "price": 47.45,
+  "bar": "2026-11-17T09:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 47.46,
-    "ma20": 47.625,
-    "ma50": 47.407,
-    "slope_atr": -0.03,
-    "bar": "2026-11-17T09:00:00+00:00"
+    "close": 47.45,
+    "ma20": 47.6255,
+    "ma50": 47.415,
+    "slope_atr": 0.0,
+    "bar": "2026-11-17T09:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -3.67,
   "spot": {
-   "price": 47.38205,
-   "bid": 47.362,
-   "ask": 47.4021,
-   "spread": 0.0401,
+   "price": 47.36150000000001,
+   "bid": 47.3417,
+   "ask": 47.3813,
+   "spread": 0.0396,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.165
+   "perp_premium_pct": 0.187
   },
   "funding": {
-   "rate": 6.52144562443e-05,
+   "rate": 6.09142677304e-05,
    "next_time": 1794931200000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 47.46; volatility regime normal (hourly ATR 0.609% of price, 36.0th percentile).",
-    "Spot XAGUSD 47.38; the perpetual trades +0.17% from spot."
+    "Price 47.45; volatility regime normal (hourly ATR 0.609% of price, 36.0th percentile).",
+    "Spot XAGUSD 47.36; the perpetual trades +0.19% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 141,
+ "runs": 142,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
