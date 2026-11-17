@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 13:01 UTC
+Updated 2026-11-17 13:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -12,6 +12,7 @@ Updated 2026-11-17 13:01 UTC
 | ADAUSD S6 | 2 | 0.246 | 41.0 | 1.0 | PAPER |
 | AVAXUSD S1 | 2 | -0.391 | -0.6 | 0.5 | PAPER |
 | AVAXUSD S2 | 2 | -0.478 | -0.84 | 0.5 | PAPER |
+| AVAXUSD S3 | 1 | 0.846 | None | 1.0 | PAPER |
 | AVAXUSD S4 | 2 | -0.09 | -0.09 | 0.5 | PAPER |
 | AVAXUSD S5 | 2 | -1.051 | -191.18 | 0.0 | PAPER |
 | AVAXUSD S6 | 2 | 0.233 | 116.5 | 1.0 | PAPER |
@@ -42,12 +43,13 @@ Updated 2026-11-17 13:01 UTC
 | ETHUSD S7 | 1 | -1.058 | None | 0.0 | PAPER |
 | LINKUSD S1 | 2 | -0.399 | -0.62 | 0.5 | PAPER |
 | LINKUSD S2 | 2 | -0.485 | -0.85 | 0.5 | PAPER |
+| LINKUSD S3 | 1 | -1.068 | None | 0.0 | PAPER |
 | LINKUSD S4 | 2 | -1.052 | -210.4 | 0.0 | PAPER |
 | LINKUSD S5 | 2 | -0.146 | -0.16 | 0.5 | PAPER |
 | LINKUSD S6 | 2 | 0.178 | 13.22 | 1.0 | PAPER |
 | LTCUSD S1 | 3 | 0.139 | 0.19 | 0.667 | PAPER |
 | LTCUSD S2 | 2 | -1.058 | None | 0.0 | PAPER |
-| LTCUSD S3 | 1 | 1.543 | None | 1.0 | PAPER |
+| LTCUSD S3 | 2 | 0.231 | 0.18 | 0.5 | PAPER |
 | LTCUSD S4 | 3 | 0.079 | 0.12 | 0.667 | PAPER |
 | LTCUSD S5 | 2 | -0.146 | -0.16 | 0.5 | PAPER |
 | LTCUSD S6 | 2 | -0.149 | -0.16 | 0.5 | PAPER |
@@ -60,6 +62,7 @@ Updated 2026-11-17 13:01 UTC
 | SOLUSD S7 | 1 | -1.044 | None | 0.0 | PAPER |
 | SUIUSD S1 | 2 | -0.428 | -0.68 | 0.5 | PAPER |
 | SUIUSD S2 | 2 | -1.046 | -2091.0 | 0.0 | PAPER |
+| SUIUSD S3 | 1 | -1.062 | None | 0.0 | PAPER |
 | SUIUSD S4 | 2 | 0.47 | 1.61 | 1.0 | PAPER |
 | SUIUSD S5 | 1 | -1.057 | None | 0.0 | PAPER |
 | SUIUSD S6 | 2 | -0.44 | -0.71 | 0.5 | PAPER |
@@ -80,6 +83,7 @@ Updated 2026-11-17 13:01 UTC
 | XRPUSD S2 | 2 | -0.407 | -0.63 | 0.5 | PAPER |
 | XRPUSD S3 | 1 | 1.555 | None | 1.0 | PAPER |
 | XRPUSD S4 | 2 | -0.465 | -0.79 | 0.5 | PAPER |
+| XRPUSD S5 | 1 | 1.104 | None | 1.0 | PAPER |
 | XRPUSD S6 | 2 | 0.194 | 3.34 | 1.0 | PAPER |
 | XRPUSD S7 | 1 | -1.056 | None | 0.0 | PAPER |
 
@@ -88,11 +92,11 @@ Updated 2026-11-17 13:01 UTC
 - 17 Nov 12:45 XAGUSD sell S3 @ 47.96 SL 48.249 → open
 - 17 Nov 12:00 SUIUSD buy S7 @ 0.7355 SL 0.727929 → open
 - 17 Nov 12:00 LTCUSD buy S7 @ 45.06 SL 44.705 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry.
-- 17 Nov 12:00 LINKUSD sell S3 @ 9.259 SL 9.341 → open
+- 17 Nov 12:00 LINKUSD sell S3 @ 9.259 SL 9.341 → closed SL -1.07R. Stopped out after 65 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.9R). The signal was against the 15-minute trend.
 - 17 Nov 12:00 BNBUSD buy S7 @ 594.39 SL 590.84 → open
 - 17 Nov 12:00 BTCUSD sell S3 @ 64957.1 SL 65397.38 → open
-- 17 Nov 11:45 SUIUSD sell S3 @ 0.7346 SL 0.741579 → open
-- 17 Nov 11:45 LTCUSD sell S3 @ 45.03 SL 45.356 → open
+- 17 Nov 11:45 SUIUSD sell S3 @ 0.7346 SL 0.741579 → closed SL -1.06R. Stopped out after 84 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend.
+- 17 Nov 11:45 LTCUSD sell S3 @ 45.03 SL 45.356 → closed SL -1.08R. Stopped out after 80 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 1.1R). Lesson so far: stretch fade with the trend: 7 closed, avg +0.68R, 86% won.
 - 17 Nov 11:00 BNBUSD buy S3 @ 586.9 SL 583.64 → closed TP3 +0.94R. TP3 after 37 min (best 1.7R, worst -0.1R).
 - 17 Nov 10:30 BNBUSD sell S2 @ 588.05 SL 591.16 → closed SL -1.11R. Stopped out after 61 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 13 closed, avg -0.73R, 23% won.
 - 17 Nov 10:15 ETHUSD buy S3 @ 1799.8 SL 1785.61 → closed SL -1.07R. Stopped out after 41 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: stretch fade with the trend: 5 closed, avg +1.01R, 100% won.
@@ -101,7 +105,7 @@ Updated 2026-11-17 13:01 UTC
 - 17 Nov 07:30 LINKUSD buy S5 @ 9.192 SL 9.1044 → closed SL -1.06R. Stopped out after 105 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 7 closed, avg -0.28R, 43% won.
 - 17 Nov 07:30 AVAXUSD buy S5 @ 7.222 SL 7.1462 → closed SL -1.06R. Stopped out after 61 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 5 closed, avg +0.02R, 60% won.
 - 17 Nov 07:30 DOGEUSD buy S5 @ 0.05903 SL 0.058511 → closed SL -1.07R. Stopped out after 95 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R).
-- 17 Nov 07:30 XRPUSD buy S5 @ 0.9606 SL 0.951957 → open
+- 17 Nov 07:30 XRPUSD buy S5 @ 0.9606 SL 0.951957 → closed TP3 +1.10R. TP3 after 340 min (best 1.9R, worst -1.0R). Lesson so far: session drive with the trend: 5 closed, avg -0.83R, 20% won.
 - 17 Nov 07:30 SOLUSD buy S5 @ 72.93 SL 72.262 → closed SL -1.07R. Stopped out after 67 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R).
 - 17 Nov 07:30 ETHUSD buy S5 @ 1830.7 SL 1815.76 → closed SL -1.07R. Stopped out after 91 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R).
 - 17 Nov 07:30 BTCUSD buy S5 @ 64671.3 SL 64252.29 → closed SL -1.02R. Stopped out after 90 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 6 closed, avg -0.16R, 50% won.
