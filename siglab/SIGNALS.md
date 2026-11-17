@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 08:30 UTC
+Updated 2026-11-17 08:32 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Updated 2026-11-17 08:30 UTC
 | AVAXUSD S1 | 2 | -0.391 | -0.6 | 0.5 | PAPER |
 | AVAXUSD S2 | 2 | -0.478 | -0.84 | 0.5 | PAPER |
 | AVAXUSD S4 | 2 | -0.09 | -0.09 | 0.5 | PAPER |
-| AVAXUSD S5 | 1 | -1.046 | None | 0.0 | PAPER |
+| AVAXUSD S5 | 2 | -1.051 | -191.18 | 0.0 | PAPER |
 | AVAXUSD S6 | 1 | 0.235 | None | 1.0 | PAPER |
 | AVAXUSD S7 | 1 | -1.045 | None | 0.0 | PAPER |
 | BNBUSD S1 | 2 | -0.415 | -0.62 | 0.5 | PAPER |
@@ -79,7 +79,7 @@ Updated 2026-11-17 08:30 UTC
 - 17 Nov 07:30 SUIUSD buy S5 @ 0.7252 SL 0.717614 → open
 - 17 Nov 07:30 LTCUSD buy S5 @ 44.7 SL 44.331 → open
 - 17 Nov 07:30 LINKUSD buy S5 @ 9.192 SL 9.1044 → open
-- 17 Nov 07:30 AVAXUSD buy S5 @ 7.222 SL 7.1462 → open
+- 17 Nov 07:30 AVAXUSD buy S5 @ 7.222 SL 7.1462 → closed SL -1.06R. Stopped out after 61 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 5 closed, avg +0.02R, 60% won.
 - 17 Nov 07:30 DOGEUSD buy S5 @ 0.05903 SL 0.058511 → open
 - 17 Nov 07:30 XRPUSD buy S5 @ 0.9606 SL 0.951957 → open
 - 17 Nov 07:30 SOLUSD buy S5 @ 72.93 SL 72.262 → open
