@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 12:01 UTC
+Updated 2026-11-18 12:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -28,7 +28,7 @@ Updated 2026-11-18 12:01 UTC
 | BTCUSD S1 | 3 | 0.386 | 2.39 | 1.0 | PAPER |
 | BTCUSD S2 | 2 | -1.018 | -2037.0 | 0.0 | PAPER |
 | BTCUSD S3 | 1 | -1.023 | None | 0.0 | PAPER |
-| BTCUSD S4 | 3 | -0.176 | -0.42 | 0.667 | PAPER |
+| BTCUSD S4 | 4 | -0.385 | -1.06 | 0.5 | PAPER |
 | BTCUSD S5 | 2 | -1.023 | -1023.0 | 0.0 | PAPER |
 | BTCUSD S6 | 2 | 0.251 | 62.75 | 1.0 | PAPER |
 | BTCUSD S7 | 1 | 0.726 | None | 1.0 | PAPER |
