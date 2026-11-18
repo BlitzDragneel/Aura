@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 06:30 UTC
+Updated 2026-11-18 06:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -63,7 +63,7 @@ Updated 2026-11-18 06:30 UTC
 | SOLUSD S1 | 2 | -0.431 | -0.7 | 0.5 | PAPER |
 | SOLUSD S2 | 2 | -0.094 | -0.1 | 0.5 | PAPER |
 | SOLUSD S3 | 1 | 0.106 | None | 1.0 | PAPER |
-| SOLUSD S4 | 2 | -0.431 | -0.7 | 0.5 | PAPER |
+| SOLUSD S4 | 3 | -0.234 | -0.58 | 0.667 | PAPER |
 | SOLUSD S5 | 1 | -1.066 | None | 0.0 | PAPER |
 | SOLUSD S6 | 2 | 0.169 | 9.39 | 1.0 | PAPER |
 | SOLUSD S7 | 2 | -0.271 | -0.35 | 0.5 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-18 06:30 UTC
 - 18 Nov 01:30 BTCUSD sell S1 @ 64563.3 SL 65211.87 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won.
 - 18 Nov 01:15 AVAXUSD buy S4 @ 7.216 SL 7.1072 → open
 - 18 Nov 01:15 BNBUSD buy S4 @ 594.54 SL 589.53 → open
-- 18 Nov 01:15 SOLUSD buy S4 @ 74.7 SL 73.541 → open
+- 18 Nov 01:15 SOLUSD buy S4 @ 74.7 SL 73.541 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 31 closed, avg -0.31R, 52% won.
 - 18 Nov 01:00 SUIUSD buy S4 @ 0.7337 SL 0.72195 → open
 - 18 Nov 01:00 XRPUSD buy S4 @ 0.9777 SL 0.965257 → open
 - 18 Nov 01:00 ETHUSD buy S4 @ 1819.86 SL 1795.95 → open

@@ -429,3 +429,6 @@ Market now: trend down, volatility high, Asia session
 ⚡ Nasdaq 100: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~27126.21
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-18 06:46:07 UTC
+🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 32 live signals (15 separate moments) averaging -0.34R.
