@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 12:15 UTC
+Updated 2026-11-18 12:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -26,7 +26,7 @@ Updated 2026-11-18 12:15 UTC
 | BNBUSD S6 | 2 | 0.453 | 2.03 | 1.0 | PAPER |
 | BNBUSD S7 | 1 | -1.1 | None | 0.0 | PAPER |
 | BTCUSD S1 | 3 | 0.386 | 2.39 | 1.0 | PAPER |
-| BTCUSD S2 | 2 | -1.018 | -2037.0 | 0.0 | PAPER |
+| BTCUSD S2 | 3 | -0.631 | -1.63 | 0.333 | PAPER |
 | BTCUSD S3 | 1 | -1.023 | None | 0.0 | PAPER |
 | BTCUSD S4 | 4 | -0.385 | -1.06 | 0.5 | PAPER |
 | BTCUSD S5 | 2 | -1.023 | -1023.0 | 0.0 | PAPER |
@@ -40,7 +40,7 @@ Updated 2026-11-18 12:15 UTC
 | DOGEUSD S6 | 3 | 0.16 | 12.24 | 1.0 | PAPER |
 | DOGEUSD S7 | 1 | 0.61 | None | 1.0 | PAPER |
 | ETHUSD S1 | 4 | -0.161 | -0.54 | 0.75 | PAPER |
-| ETHUSD S2 | 2 | -1.056 | -528.0 | 0.0 | PAPER |
+| ETHUSD S2 | 3 | -0.663 | -1.68 | 0.333 | PAPER |
 | ETHUSD S3 | 2 | 0.319 | 0.23 | 0.5 | PAPER |
 | ETHUSD S4 | 4 | -0.36 | -0.87 | 0.5 | PAPER |
 | ETHUSD S5 | 2 | -1.064 | -354.67 | 0.0 | PAPER |
@@ -107,9 +107,9 @@ Updated 2026-11-18 12:15 UTC
 - 18 Nov 11:15 LINKUSD sell S2 @ 9.127 SL 9.2166 → open
 - 18 Nov 11:15 AVAXUSD sell S2 @ 7.061 SL 7.1348 → open
 - 18 Nov 11:15 DOGEUSD sell S2 @ 0.05914 SL 0.059644 → open
-- 18 Nov 10:45 ETHUSD sell S2 @ 1803.02 SL 1817.69 → open
+- 18 Nov 10:45 ETHUSD sell S2 @ 1803.02 SL 1817.69 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
 - 18 Nov 10:30 BNBUSD sell S2 @ 589.43 SL 592.61 → open
-- 18 Nov 10:30 BTCUSD sell S2 @ 64309.9 SL 64748.26 → open
+- 18 Nov 10:30 BTCUSD sell S2 @ 64309.9 SL 64748.26 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
 - 18 Nov 10:00 XAUUSD sell S1 @ 3786.1 SL 3802.16 → open
 - 18 Nov 08:30 NAS100 buy S4 @ 27205.15 SL 27006.72 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 5 closed, avg -0.57R, 40% won.
 - 18 Nov 08:15 LTCUSD sell S1 @ 44.6 SL 45.004 → open
