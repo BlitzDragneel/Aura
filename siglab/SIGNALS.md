@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 01:15 UTC
+Updated 2026-11-18 01:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,6 +98,8 @@ Updated 2026-11-18 01:15 UTC
 
 ## Latest signals
 
+- 18 Nov 01:30 ETHUSD sell S1 @ 1810.62 SL 1834.53 → open
+- 18 Nov 01:30 BTCUSD sell S1 @ 64563.3 SL 65211.87 → open
 - 18 Nov 01:15 AVAXUSD buy S4 @ 7.216 SL 7.1072 → open
 - 18 Nov 01:15 BNBUSD buy S4 @ 594.54 SL 589.53 → open
 - 18 Nov 01:15 SOLUSD buy S4 @ 74.7 SL 73.541 → open
@@ -156,5 +158,3 @@ Updated 2026-11-18 01:15 UTC
 - 17 Nov 07:00 AVAXUSD sell S6 @ 7.186 SL 7.2618 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 12 closed, avg +0.29R, 100% won.
 - 17 Nov 07:00 ADAUSD sell S6 @ 0.153 SL 0.154507 → closed TP1+BE +0.25R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry.
 - 17 Nov 07:00 DOGEUSD sell S6 @ 0.05887 SL 0.059389 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry.
-- 17 Nov 07:00 XRPUSD sell S6 @ 0.9584 SL 0.967043 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry.
-- 17 Nov 07:00 BNBUSD sell S6 @ 592.33 SL 595.59 → closed TP2+BE +0.68R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 7 closed, avg +0.19R, 86% won.

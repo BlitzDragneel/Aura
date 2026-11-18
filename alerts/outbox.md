@@ -408,3 +408,8 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Silver: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~47.04
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-18 01:31:00 UTC
+⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~64563.3
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
