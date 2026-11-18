@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 13:00 UTC
+Updated 2026-11-18 13:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -19,7 +19,7 @@ Updated 2026-11-18 13:00 UTC
 | AVAXUSD S6 | 2 | 0.233 | 116.5 | 1.0 | PAPER |
 | AVAXUSD S7 | 2 | -0.217 | -0.26 | 0.5 | PAPER |
 | BNBUSD S1 | 3 | -0.635 | -1.44 | 0.333 | PAPER |
-| BNBUSD S2 | 2 | -1.098 | -62.71 | 0.0 | PAPER |
+| BNBUSD S2 | 3 | -0.703 | -1.78 | 0.333 | PAPER |
 | BNBUSD S3 | 1 | 0.936 | None | 1.0 | PAPER |
 | BNBUSD S4 | 4 | -0.44 | -1.21 | 0.5 | PAPER |
 | BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
@@ -109,7 +109,7 @@ Updated 2026-11-18 13:00 UTC
 - 18 Nov 11:15 AVAXUSD sell S2 @ 7.061 SL 7.1348 → open
 - 18 Nov 11:15 DOGEUSD sell S2 @ 0.05914 SL 0.059644 → open
 - 18 Nov 10:45 ETHUSD sell S2 @ 1803.02 SL 1817.69 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
-- 18 Nov 10:30 BNBUSD sell S2 @ 589.43 SL 592.61 → open
+- 18 Nov 10:30 BNBUSD sell S2 @ 589.43 SL 592.61 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 16 closed, avg -0.73R, 19% won.
 - 18 Nov 10:30 BTCUSD sell S2 @ 64309.9 SL 64748.26 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
 - 18 Nov 10:00 XAUUSD sell S1 @ 3786.1 SL 3802.16 → closed TP3 +1.09R. TP3 after 162 min (best 1.8R, worst -0.0R). Lesson so far: trend pullback with the trend: 37 closed, avg -0.18R, 62% won.
 - 18 Nov 08:30 NAS100 buy S4 @ 27205.15 SL 27006.72 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 5 closed, avg -0.57R, 40% won.
