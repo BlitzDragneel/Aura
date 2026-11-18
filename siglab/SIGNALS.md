@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 02:30 UTC
+Updated 2026-11-18 02:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,6 +98,7 @@ Updated 2026-11-18 02:30 UTC
 
 ## Latest signals
 
+- 18 Nov 02:45 AVAXUSD buy S3 @ 7.141 SL 7.0352 → open
 - 18 Nov 02:30 XRPUSD buy S1 @ 0.9768 SL 0.965114 → open
 - 18 Nov 02:15 SOLUSD buy S1 @ 74.51 SL 73.404 → open
 - 18 Nov 01:30 ETHUSD sell S1 @ 1810.62 SL 1834.53 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won.
@@ -157,4 +158,3 @@ Updated 2026-11-18 02:30 UTC
 - 17 Nov 07:00 SUIUSD sell S6 @ 0.7221 SL 0.729686 → closed SL -1.06R. Stopped out after 271 min. Price never reached TP1 (best was 0.6R in favour, TP1 needed 0.7R). Lesson so far: daily bias with the trend: 15 closed, avg +0.27R, 100% won.
 - 17 Nov 07:00 LTCUSD sell S6 @ 44.59 SL 44.959 → closed SL -1.07R. Stopped out after 283 min. Price never reached TP1 (best was 0.7R in favour, TP1 needed 1.0R). Lesson so far: daily bias with the trend: 15 closed, avg +0.27R, 100% won.
 - 17 Nov 07:00 LINKUSD sell S6 @ 9.158 SL 9.2456 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 12 closed, avg +0.29R, 100% won.
-- 17 Nov 07:00 AVAXUSD sell S6 @ 7.186 SL 7.2618 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 12 closed, avg +0.29R, 100% won.
