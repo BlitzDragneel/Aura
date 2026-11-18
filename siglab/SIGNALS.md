@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 00:01 UTC
+Updated 2026-11-18 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -96,6 +96,9 @@ Updated 2026-11-18 00:01 UTC
 
 ## Latest signals
 
+- 18 Nov 00:15 ADAUSD buy S4 @ 0.1546 SL 0.152307 → open
+- 18 Nov 00:15 XAGUSD buy S4 @ 47.4 SL 47.054 → open
+- 18 Nov 00:15 XAUUSD sell S2 @ 3847.6 SL 3863.06 → open
 - 17 Nov 23:15 AVAXUSD sell S3 @ 7.293 SL 7.4011 → open
 - 17 Nov 23:15 DOGEUSD sell S3 @ 0.06023 SL 0.060991 → open
 - 17 Nov 23:15 SOLUSD sell S3 @ 75.39 SL 76.491 → open
@@ -153,6 +156,3 @@ Updated 2026-11-18 00:01 UTC
 - 17 Nov 05:15 BTCUSD sell S1 @ 64800.0 SL 65291.49 → closed TP2+BE +0.70R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 25 closed, avg -0.26R, 56% won.
 - 17 Nov 04:45 DOGEUSD buy S4 @ 0.05918 SL 0.058445 → closed SL -1.05R. Stopped out after 274 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). Lesson so far: fib pullback with the trend: 22 closed, avg -0.14R, 64% won.
 - 17 Nov 03:30 SUIUSD buy S2 @ 0.7268 SL 0.717093 → closed SL -1.04R. Stopped out after 185 min. Price never reached TP1 (best was 0.4R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.
-- 17 Nov 03:30 LTCUSD buy S2 @ 44.98 SL 44.507 → closed SL -1.06R. Stopped out after 182 min. Price never reached TP1 (best was 0.2R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.
-- 17 Nov 03:30 LINKUSD buy S2 @ 9.192 SL 9.0781 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.
-- 17 Nov 03:30 AVAXUSD buy S2 @ 7.174 SL 7.0765 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 5 closed, avg -1.05R, 0% won.

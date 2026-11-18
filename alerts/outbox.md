@@ -385,3 +385,12 @@ session drive: 17 closed, avg -0.48R, 35% won
 daily bias: 26 closed, avg +0.16R, 88% won
 big move: 15 closed, avg +0.02R, 67% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-18 00:15:55 UTC
+⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3847.6
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~47.4
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
