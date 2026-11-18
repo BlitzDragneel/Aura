@@ -7715,14 +7715,22 @@
     50445.38
    ],
    "R": 152.0,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-18",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 50781.3203125,
+   "outcome": "SL",
+   "R_ladder": -1.014,
+   "R_tp1": -1.014,
+   "pips": -140.0,
+   "closed_ms": 1794994200000,
+   "source": "yahoo-YM=F-1m minus basis 69.7",
+   "review": "Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.9R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 23 closed, avg +0.19R, 91% won."
   },
   {
    "id": "ETHUSD-S6-1794985200000",
@@ -8191,7 +8199,7 @@
     45.496
    ],
    "R": 0.3836,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -8200,7 +8208,15 @@
    "day": "2026-11-18",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 46.04,
+   "outcome": "TP2+BE",
+   "R_ladder": 0.362,
+   "R_tp1": 0.428,
+   "pips": 13.5,
+   "closed_ms": 1794994260000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 8 closed, avg -0.49R, 38% won."
   },
   {
    "id": "BTCUSD-S5-1794987000000",
@@ -9327,6 +9343,14 @@
     "total_R": 0.11,
     "grade": "PAPER"
    },
+   "US30 S6": {
+    "n": 1,
+    "avg_R": -1.014,
+    "t": null,
+    "win": 0.0,
+    "total_R": -1.01,
+    "grade": "PAPER"
+   },
    "XAGUSD S1": {
     "n": 2,
     "avg_R": -0.51,
@@ -9360,11 +9384,11 @@
     "grade": "PAPER"
    },
    "XAGUSD S5": {
-    "n": 1,
-    "avg_R": 0.064,
-    "t": null,
+    "n": 2,
+    "avg_R": 0.213,
+    "t": 1.43,
     "win": 1.0,
-    "total_R": 0.06,
+    "total_R": 0.43,
     "grade": "PAPER"
    },
    "XAGUSD S6": {
@@ -9526,18 +9550,18 @@
     "total_R": -11.31
    },
    "S5": {
-    "n": 20,
-    "avg_R": -0.441,
-    "t": -2.44,
-    "win": 0.4,
-    "total_R": -8.82
+    "n": 21,
+    "avg_R": -0.403,
+    "t": -2.28,
+    "win": 0.429,
+    "total_R": -8.46
    },
    "S6": {
-    "n": 31,
-    "avg_R": 0.203,
-    "t": 2.12,
-    "win": 0.903,
-    "total_R": 6.3
+    "n": 32,
+    "avg_R": 0.165,
+    "t": 1.65,
+    "win": 0.875,
+    "total_R": 5.29
    },
    "S7": {
     "n": 16,
@@ -9548,13 +9572,13 @@
    }
   },
   "all": {
-   "n": 195,
-   "avg_R": -0.184,
-   "t": -3.21,
+   "n": 197,
+   "avg_R": -0.185,
+   "t": -3.26,
    "win": 0.574,
-   "total_R": -35.82
+   "total_R": -36.47
   },
-  "open": 35
+  "open": 33
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -9873,11 +9897,11 @@
    "total_R": -7.44
   },
   "S5 | London": {
-   "n": 17,
-   "avg_R": -0.65,
-   "t": -3.91,
-   "win": 0.294,
-   "total_R": -11.05
+   "n": 18,
+   "avg_R": -0.594,
+   "t": -3.57,
+   "win": 0.333,
+   "total_R": -10.69
   },
   "S5 | New York": {
    "n": 3,
@@ -9894,11 +9918,11 @@
    "total_R": -4.92
   },
   "S5 | compressed": {
-   "n": 3,
-   "avg_R": -0.225,
-   "t": -0.54,
-   "win": 0.667,
-   "total_R": -0.67
+   "n": 4,
+   "avg_R": -0.078,
+   "t": -0.24,
+   "win": 0.75,
+   "total_R": -0.31
   },
   "S5 | normal": {
    "n": 17,
@@ -9922,25 +9946,25 @@
    "total_R": -3.15
   },
   "S5 | vol normal": {
-   "n": 16,
-   "avg_R": -0.359,
-   "t": -1.68,
-   "win": 0.438,
-   "total_R": -5.74
+   "n": 17,
+   "avg_R": -0.317,
+   "t": -1.54,
+   "win": 0.471,
+   "total_R": -5.38
   },
   "S5 | with trend": {
-   "n": 8,
-   "avg_R": -0.489,
-   "t": -1.65,
-   "win": 0.375,
-   "total_R": -3.91
+   "n": 9,
+   "avg_R": -0.394,
+   "t": -1.42,
+   "win": 0.444,
+   "total_R": -3.55
   },
   "S6 | Asia": {
-   "n": 31,
-   "avg_R": 0.203,
-   "t": 2.12,
-   "win": 0.903,
-   "total_R": 6.3
+   "n": 32,
+   "avg_R": 0.165,
+   "t": 1.65,
+   "win": 0.875,
+   "total_R": 5.29
   },
   "S6 | against trend": {
    "n": 8,
@@ -9950,11 +9974,11 @@
    "total_R": 1.99
   },
   "S6 | compressed": {
-   "n": 7,
-   "avg_R": 0.444,
-   "t": 2.65,
-   "win": 1.0,
-   "total_R": 3.11
+   "n": 8,
+   "avg_R": 0.262,
+   "t": 1.12,
+   "win": 0.875,
+   "total_R": 2.09
   },
   "S6 | expanding": {
    "n": 1,
@@ -9978,11 +10002,11 @@
    "total_R": -0.91
   },
   "S6 | vol low": {
-   "n": 5,
-   "avg_R": 0.034,
-   "t": 0.12,
-   "win": 0.8,
-   "total_R": 0.17
+   "n": 6,
+   "avg_R": -0.14,
+   "t": -0.47,
+   "win": 0.667,
+   "total_R": -0.84
   },
   "S6 | vol normal": {
    "n": 24,
@@ -9992,11 +10016,11 @@
    "total_R": 7.04
   },
   "S6 | with trend": {
-   "n": 23,
-   "avg_R": 0.188,
-   "t": 1.86,
-   "win": 0.913,
-   "total_R": 4.31
+   "n": 24,
+   "avg_R": 0.137,
+   "t": 1.26,
+   "win": 0.875,
+   "total_R": 3.3
   },
   "S7 | Asia": {
    "n": 2,

@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-18T09:30:47.876755+00:00",
+ "asof": "2026-11-18T09:45:52.257276+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3785.2,
-  "bar": "2026-11-18T09:15:00+00:00",
+  "price": 3789.1,
+  "bar": "2026-11-18T09:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3785.2,
-    "ma20": 3784.75,
-    "ma50": 3812.982,
-    "slope_atr": -0.6,
-    "bar": "2026-11-18T09:15:00+00:00"
+    "close": 3789.1,
+    "ma20": 3784.59,
+    "ma50": 3811.618,
+    "slope_atr": -0.45,
+    "bar": "2026-11-18T09:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.35,
   "spot": {
-   "price": 3778.765,
-   "bid": 3778.446,
-   "ask": 3779.084,
+   "price": 3781.215,
+   "bid": 3780.896,
+   "ask": 3781.534,
    "spread": 0.638,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.17
+   "perp_premium_pct": 0.209
   },
   "funding": {
-   "rate": 0.0002628522730085,
+   "rate": 0.0002514773820318,
    "next_time": 1795017600000,
    "source": "okx-swap"
   },
@@ -251,8 +251,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3785.2; volatility regime normal (hourly ATR 0.409% of price, 67.1th percentile).",
-    "Spot XAUUSD 3778.76; the perpetual trades +0.17% from spot."
+    "Price 3789.1; volatility regime normal (hourly ATR 0.409% of price, 67.1th percentile).",
+    "Spot XAUUSD 3781.22; the perpetual trades +0.21% from spot."
    ]
   },
   {
@@ -262,6 +262,6 @@
    ]
   }
  ],
- "runs": 242,
+ "runs": 243,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
