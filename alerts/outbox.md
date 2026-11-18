@@ -506,3 +506,8 @@ Market now: trend down, volatility high, New York session
 ⚡ Dow 30: SESSION DRIVE right now (New York open drive), price ~50792.5
 Market now: trend down, volatility normal, New York session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+## 2026-11-18 14:16:01 UTC
+⚡ Dow 30: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~50736.5
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on its live record, trading this kind of move with the trend lost money (avg -0.29R). Logged and scored anyway.

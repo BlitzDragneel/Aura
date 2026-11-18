@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 14:00 UTC
+Updated 2026-11-18 14:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -103,6 +103,7 @@ Updated 2026-11-18 14:00 UTC
 
 ## Latest signals
 
+- 18 Nov 14:15 US30 sell S4 @ 50736.5 SL 50853.57 → open
 - 18 Nov 14:00 US30 buy S5 @ 50792.5 SL 50675.86 → open
 - 18 Nov 13:30 XAGUSD sell S1 @ 45.77 SL 46.195 → open
 - 18 Nov 13:00 US30 buy S3 @ 50632.5 SL 50516.43 → closed TP3 +0.33R. TP3 after 41 min (best 0.9R, worst -0.6R). Lesson so far: stretch fade against the trend: 10 closed, avg -0.31R, 50% won.
@@ -162,4 +163,3 @@ Updated 2026-11-18 14:00 UTC
 - 18 Nov 02:45 AVAXUSD buy S3 @ 7.141 SL 7.0352 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 13 closed, avg +0.38R, 77% won.
 - 18 Nov 02:30 XRPUSD buy S1 @ 0.9768 SL 0.965114 → closed TP3 +1.07R. TP3 after 317 min (best 2.3R, worst -0.5R). Lesson so far: trend pullback with the trend: 31 closed, avg -0.24R, 58% won.
 - 18 Nov 02:15 SOLUSD buy S1 @ 74.51 SL 73.404 → closed TP2+BE +0.50R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 34 closed, avg -0.18R, 62% won.
-- 18 Nov 01:30 ETHUSD sell S1 @ 1810.62 SL 1834.53 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won.
