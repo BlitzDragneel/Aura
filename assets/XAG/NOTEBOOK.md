@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 55 readings scored; big moves followed 13% of them, 20% after a WATCH (5 WATCH readings) - too few to judge yet.
+- My own record: 56 readings scored; big moves followed 14% of them, 20% after a WATCH (5 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 35 readings scored; big moves followed 14% of them - too few to judge yet.
+- My own record: 36 readings scored; big moves followed 17% of them - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,15 +29,15 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.40%) and the quietest late US (0.19%).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.39%) and the quietest late US (0.19%).
 - At weekends, while spot is closed, the perpetual moves 40% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 2.5% from low to high (last 60 days); 42% of those days closed higher.
 - Over the last 30 days the price moved -17.3% (a fact, not a forecast).
 
 ## Right now
 
-- Price 45.98; volatility regime active (hourly ATR 0.873% of price, 81.9th percentile).
-- Spot XAGUSD 45.85; the perpetual trades +0.28% from spot.
+- Price 45.98; volatility regime normal (hourly ATR 0.823% of price, 74.9th percentile).
+- Spot XAGUSD 45.85; the perpetual trades +0.29% from spot.
 
 ## My calls so far
 
