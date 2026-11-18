@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 16:45 UTC
+Updated 2026-11-18 17:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -24,14 +24,14 @@ Updated 2026-11-18 16:45 UTC
 | BNBUSD S4 | 4 | -0.44 | -1.21 | 0.5 | PAPER |
 | BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
 | BNBUSD S6 | 3 | 0.692 | 2.55 | 1.0 | PAPER |
-| BNBUSD S7 | 1 | -1.1 | None | 0.0 | PAPER |
+| BNBUSD S7 | 2 | -0.502 | -0.84 | 0.5 | PAPER |
 | BTCUSD S1 | 3 | 0.386 | 2.39 | 1.0 | PAPER |
 | BTCUSD S2 | 3 | -0.631 | -1.63 | 0.333 | PAPER |
 | BTCUSD S3 | 2 | -0.183 | -0.22 | 0.5 | PAPER |
 | BTCUSD S4 | 4 | -0.385 | -1.06 | 0.5 | PAPER |
 | BTCUSD S5 | 2 | -1.023 | -1023.0 | 0.0 | PAPER |
 | BTCUSD S6 | 3 | 0.534 | 1.89 | 1.0 | PAPER |
-| BTCUSD S7 | 1 | 0.726 | None | 1.0 | PAPER |
+| BTCUSD S7 | 2 | 0.442 | 1.55 | 1.0 | PAPER |
 | DOGEUSD S1 | 3 | -0.068 | -0.13 | 0.667 | PAPER |
 | DOGEUSD S2 | 3 | -1.058 | -167.0 | 0.0 | PAPER |
 | DOGEUSD S3 | 2 | 0.497 | 1.22 | 1.0 | PAPER |
@@ -111,8 +111,8 @@ Updated 2026-11-18 16:45 UTC
 ## Latest signals
 
 - 18 Nov 16:45 DOGEUSD buy S3 @ 0.05788 SL 0.057374 → open
-- 18 Nov 16:30 BNBUSD sell S7 @ 578.38 SL 581.62 → open
-- 18 Nov 16:30 BTCUSD sell S7 @ 62517.1 SL 62968.94 → open
+- 18 Nov 16:30 BNBUSD sell S7 @ 578.38 SL 581.62 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 9 closed, avg +0.13R, 78% won.
+- 18 Nov 16:30 BTCUSD sell S7 @ 62517.1 SL 62968.94 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 9 closed, avg +0.13R, 78% won.
 - 18 Nov 16:15 BNBUSD buy S3 @ 580.09 SL 576.85 → closed SL -1.11R. Stopped out after 5 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 15 closed, avg -0.12R, 60% won.
 - 18 Nov 15:00 US30 sell S7 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 8 closed, avg +0.02R, 75% won.
 - 18 Nov 15:00 US30 sell S2 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: breakout with the trend: 20 closed, avg -0.52R, 35% won.
