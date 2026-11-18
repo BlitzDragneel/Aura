@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 10:45 UTC
+Updated 2026-11-18 11:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -44,7 +44,7 @@ Updated 2026-11-18 10:45 UTC
 | ETHUSD S3 | 2 | 0.319 | 0.23 | 0.5 | PAPER |
 | ETHUSD S4 | 3 | -0.133 | -0.27 | 0.667 | PAPER |
 | ETHUSD S5 | 2 | -1.064 | -354.67 | 0.0 | PAPER |
-| ETHUSD S6 | 2 | 1.106 | 2.94 | 1.0 | PAPER |
+| ETHUSD S6 | 3 | 0.79 | 2.06 | 1.0 | PAPER |
 | ETHUSD S7 | 2 | -0.225 | -0.27 | 0.5 | PAPER |
 | LINKUSD S1 | 3 | -0.216 | -0.52 | 0.667 | PAPER |
 | LINKUSD S2 | 2 | -0.485 | -0.85 | 0.5 | PAPER |
@@ -135,7 +135,7 @@ Updated 2026-11-18 10:45 UTC
 - 18 Nov 07:00 XRPUSD buy S6 @ 0.9853 SL 0.976129 → closed TP3 +1.29R. TP3 after 47 min (best 2.0R, worst -0.1R). Lesson so far: daily bias with the trend: 19 closed, avg +0.12R, 90% won.
 - 18 Nov 07:00 BNBUSD sell S6 @ 592.09 SL 595.62 → open
 - 18 Nov 07:00 SOLUSD buy S6 @ 74.61 SL 73.751 → open
-- 18 Nov 07:00 ETHUSD sell S6 @ 1808.37 SL 1824.78 → open
+- 18 Nov 07:00 ETHUSD sell S6 @ 1808.37 SL 1824.78 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 26 closed, avg +0.14R, 88% won.
 - 18 Nov 07:00 US30 sell S6 @ 50767.32 SL 50919.32 → closed SL -1.01R. Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.9R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 23 closed, avg +0.19R, 91% won.
 - 18 Nov 07:00 NAS100 sell S6 @ 27133.65 SL 27338.96 → open
 - 18 Nov 07:00 BTCUSD sell S6 @ 64579.1 SL 65034.95 → open

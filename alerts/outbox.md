@@ -483,3 +483,10 @@ Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
 
 🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 36 live signals (16 separate moments) averaging -0.28R.
+
+## 2026-11-18 11:01:01 UTC
+🌅 OMEGA morning read
+Bitcoin 64,336.70 | 1h trend flat | vol normal | typical day range 2.5% | big 4h move chance 33% | day WAIT · swing WAIT · hold WAIT
+Gold 3,780.90 | 1h trend down | vol normal | typical day range 1.4% | big 4h move chance 32% | day WAIT · swing WATCH · hold WAIT
+Silver 45.95 | 1h trend down | vol active | typical day range 2.54% | big 4h move chance 47% | day WAIT · swing WATCH · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
