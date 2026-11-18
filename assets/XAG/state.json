@@ -1,13 +1,14 @@
 {
 "horizons": {
 "day": {
-"state": "WAIT",
-"since": "2026-11-18T11:01:00.734508+00:00",
+"state": "WATCH",
+"since": "2026-11-18T14:00:57.250583+00:00",
 "previous": "WAIT",
 "reasons": [
+"hourly volatility is high (95th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
-"plain": "Nothing to do. No tested rule is calling a trade.",
+"plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
 "direction": null
 },
 "swing": {
@@ -334,14 +335,6 @@
 {
 "t": "2026-11-17T13:00:00+00:00",
 "price": 47.45,
-"horizon": "swing",
-"thr": 0.02805961162125548,
-"watch": false,
-"p": 0.237
-},
-{
-"t": "2026-11-17T13:00:00+00:00",
-"price": 47.45,
 "horizon": "hold",
 "thr": 0.0701490290531387,
 "watch": false,
@@ -654,14 +647,6 @@
 {
 "t": "2026-11-18T09:00:00+00:00",
 "price": 45.98,
-"horizon": "day",
-"thr": 0.017305660846330728,
-"watch": true,
-"p": 0.544
-},
-{
-"t": "2026-11-18T09:00:00+00:00",
-"price": 45.98,
 "horizon": "swing",
 "thr": 0.034611321692661456,
 "watch": true,
@@ -746,30 +731,54 @@
 "thr": 0.0938604240282686,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-18T13:00:00+00:00",
+"price": 45.91,
+"horizon": "day",
+"thr": 0.02050595886361516,
+"watch": true,
+"p": 0.386
+},
+{
+"t": "2026-11-18T13:00:00+00:00",
+"price": 45.91,
+"horizon": "swing",
+"thr": 0.04101191772723032,
+"watch": true,
+"p": 0.268
+},
+{
+"t": "2026-11-18T13:00:00+00:00",
+"price": 45.91,
+"horizon": "hold",
+"thr": 0.1025297943180758,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 64,
+"n": 65,
 "big": 8,
-"watch_n": 5,
+"watch_n": 6,
 "watch_big": 1,
-"brier": 9.063541,
+"brier": 9.359477,
 "brier_base": 0.0,
-"scout_n": 64
+"scout_n": 65
 },
 "swing": {
-"n": 44,
-"big": 14,
+"n": 45,
+"big": 15,
 "watch_n": 0,
 "watch_big": 0,
-"brier": 11.248403999999999,
+"brier": 11.830573,
 "brier_base": 0.0,
-"scout_n": 44
+"scout_n": 45
 }
 },
 "calls_record": {},
-"runs": 259,
+"runs": 260,
 "created": "2026-11-15T06:42:40",
-"last_run": "2026-11-18T13:45:51.516788+00:00"
+"last_run": "2026-11-18T14:00:57.250583+00:00"
 }

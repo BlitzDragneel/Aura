@@ -9307,14 +9307,22 @@
     50759.13
    ],
    "R": 116.071,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-18",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 50661.5,
+   "outcome": "TP3",
+   "R_ladder": 0.327,
+   "R_tp1": 0.047,
+   "pips": 47.5,
+   "closed_ms": 1795009260000,
+   "source": "yahoo-YM=F-1m minus basis 69.5",
+   "review": "TP3 after 41 min (best 0.9R, worst -0.6R). Lesson so far: stretch fade against the trend: 10 closed, avg -0.31R, 50% won."
   },
   {
    "id": "XAGUSD-S1-1795008600000",
@@ -9338,6 +9346,39 @@
     45.22
    ],
    "R": 0.425,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "US30-S5-1795010400000",
+   "symbol": "US30",
+   "setup": "S5",
+   "side": "buy",
+   "why": "New York open drive",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "New York",
+    "with_trend": false
+   },
+   "logged_ms": 1795010400000,
+   "ref_price": 50792.5,
+   "stop": 50675.86,
+   "targets": [
+    50829.94,
+    50861.09,
+    50918.36
+   ],
+   "R": 116.643,
    "status": "open",
    "target_odds": [
     60,
@@ -9938,6 +9979,14 @@
     "total_R": 0.11,
     "grade": "PAPER"
    },
+   "US30 S3": {
+    "n": 1,
+    "avg_R": 0.327,
+    "t": null,
+    "win": 1.0,
+    "total_R": 0.33,
+    "grade": "PAPER"
+   },
    "US30 S6": {
     "n": 1,
     "avg_R": -1.014,
@@ -10131,11 +10180,11 @@
     "total_R": -22.0
    },
    "S3": {
-    "n": 25,
-    "avg_R": 0.087,
-    "t": 0.47,
-    "win": 0.68,
-    "total_R": 2.18
+    "n": 26,
+    "avg_R": 0.096,
+    "t": 0.54,
+    "win": 0.692,
+    "total_R": 2.51
    },
    "S4": {
     "n": 46,
@@ -10167,11 +10216,11 @@
    }
   },
   "all": {
-   "n": 228,
-   "avg_R": -0.222,
-   "t": -4.22,
-   "win": 0.553,
-   "total_R": -50.64
+   "n": 229,
+   "avg_R": -0.22,
+   "t": -4.18,
+   "win": 0.555,
+   "total_R": -50.31
   },
   "open": 13
  },
@@ -10338,11 +10387,11 @@
    "total_R": -1.71
   },
   "S3 | London": {
-   "n": 9,
-   "avg_R": -0.54,
-   "t": -2.01,
-   "win": 0.333,
-   "total_R": -4.86
+   "n": 10,
+   "avg_R": -0.453,
+   "t": -1.77,
+   "win": 0.4,
+   "total_R": -4.53
   },
   "S3 | New York": {
    "n": 7,
@@ -10352,11 +10401,18 @@
    "total_R": 6.72
   },
   "S3 | against trend": {
-   "n": 10,
-   "avg_R": -0.311,
-   "t": -1.17,
-   "win": 0.5,
-   "total_R": -3.11
+   "n": 11,
+   "avg_R": -0.253,
+   "t": -1.02,
+   "win": 0.545,
+   "total_R": -2.79
+  },
+  "S3 | compressed": {
+   "n": 1,
+   "avg_R": 0.327,
+   "t": null,
+   "win": 1.0,
+   "total_R": 0.33
   },
   "S3 | expanding": {
    "n": 7,
@@ -10394,11 +10450,11 @@
    "total_R": 1.16
   },
   "S3 | vol normal": {
-   "n": 20,
-   "avg_R": 0.038,
-   "t": 0.17,
-   "win": 0.6,
-   "total_R": 0.76
+   "n": 21,
+   "avg_R": 0.052,
+   "t": 0.24,
+   "win": 0.619,
+   "total_R": 1.09
   },
   "S3 | with trend": {
    "n": 15,

@@ -498,3 +498,11 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 ⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~45.77
 Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+## 2026-11-18 14:00:57 UTC
+👀 Silver day: WATCH at 45.91. Big move likely, direction unknown. hourly volatility is high (95th percentile of the last 3 weeks)
+
+## 2026-11-18 14:01:12 UTC
+⚡ Dow 30: SESSION DRIVE right now (New York open drive), price ~50792.5
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
