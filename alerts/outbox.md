@@ -511,3 +511,14 @@ Market now: trend down, volatility normal, New York session
 ⚡ Dow 30: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~50736.5
 Market now: trend down, volatility normal, New York session
 ℹ️ No trade plan: on its live record, trading this kind of move with the trend lost money (avg -0.29R). Logged and scored anyway.
+
+## 2026-11-18 15:01:06 UTC
+⚡ Dow 30: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~50275.69
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Dow 30: BIG MOVE under way right now (moved -473.00 in the last hour, twice its normal hourly range), price ~50275.69
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+🔁 Learning: fib pullback with the trend is now back to normal.
