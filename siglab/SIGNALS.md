@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 15:01 UTC
+Updated 2026-11-18 15:16 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -60,9 +60,12 @@ Updated 2026-11-18 15:01 UTC
 | LTCUSD S5 | 3 | -0.452 | -0.73 | 0.333 | PAPER |
 | LTCUSD S6 | 3 | 0.071 | 0.12 | 0.667 | PAPER |
 | LTCUSD S7 | 1 | 0.054 | None | 1.0 | PAPER |
+| NAS100 S1 | 1 | 0.593 | None | 1.0 | PAPER |
 | NAS100 S2 | 1 | -0.013 | None | 0.0 | PAPER |
+| NAS100 S3 | 1 | -0.354 | None | 0.0 | PAPER |
 | NAS100 S4 | 1 | -0.028 | None | 0.0 | PAPER |
 | NAS100 S5 | 1 | 0.194 | None | 1.0 | PAPER |
+| NAS100 S6 | 1 | 0.671 | None | 1.0 | PAPER |
 | SOLUSD S1 | 3 | -0.121 | -0.26 | 0.667 | PAPER |
 | SOLUSD S2 | 3 | -0.419 | -0.66 | 0.333 | PAPER |
 | SOLUSD S3 | 1 | 0.106 | None | 1.0 | PAPER |
@@ -77,10 +80,12 @@ Updated 2026-11-18 15:01 UTC
 | SUIUSD S5 | 2 | -1.055 | -703.67 | 0.0 | PAPER |
 | SUIUSD S6 | 3 | -0.244 | -0.6 | 0.667 | PAPER |
 | SUIUSD S7 | 1 | 0.106 | None | 1.0 | PAPER |
+| US30 S2 | 1 | 0.973 | None | 1.0 | PAPER |
 | US30 S3 | 1 | 0.327 | None | 1.0 | PAPER |
 | US30 S4 | 1 | 0.781 | None | 1.0 | PAPER |
 | US30 S5 | 1 | -1.026 | None | 0.0 | PAPER |
 | US30 S6 | 1 | -1.014 | None | 0.0 | PAPER |
+| US30 S7 | 1 | 0.973 | None | 1.0 | PAPER |
 | XAGUSD S1 | 3 | -0.084 | -0.16 | 0.667 | PAPER |
 | XAGUSD S2 | 3 | -0.49 | -0.82 | 0.333 | PAPER |
 | XAGUSD S3 | 3 | -0.181 | -0.39 | 0.667 | PAPER |
@@ -105,9 +110,9 @@ Updated 2026-11-18 15:01 UTC
 
 ## Latest signals
 
-- 18 Nov 15:00 US30 sell S7 @ 50275.69 SL 50426.91 → open
-- 18 Nov 15:00 US30 sell S2 @ 50275.69 SL 50426.91 → open
-- 18 Nov 15:00 NAS100 buy S3 @ 26900.59 SL 26743.2 → open
+- 18 Nov 15:00 US30 sell S7 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 8 closed, avg +0.02R, 75% won.
+- 18 Nov 15:00 US30 sell S2 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: breakout with the trend: 20 closed, avg -0.52R, 35% won.
+- 18 Nov 15:00 NAS100 buy S3 @ 26900.59 SL 26743.2 → closed TP3 -0.35R. TP3 after 0 min (best 0.5R, worst -0.0R). Lesson so far: stretch fade against the trend: 12 closed, avg -0.22R, 58% won.
 - 18 Nov 14:45 SOLUSD sell S2 @ 73.73 SL 74.362 → closed SL -1.07R. Stopped out after 15 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 18 closed, avg -0.70R, 22% won.
 - 18 Nov 14:45 ETHUSD sell S7 @ 1765.43 SL 1778.17 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 7 closed, avg +0.01R, 71% won.
 - 18 Nov 14:45 ETHUSD buy S3 @ 1765.43 SL 1752.69 → open
@@ -156,11 +161,11 @@ Updated 2026-11-18 15:01 UTC
 - 18 Nov 07:00 SOLUSD buy S6 @ 74.61 SL 73.751 → closed SL -1.05R. Stopped out after 458 min. Price never reached TP1 (best was 0.8R in favour, TP1 needed 0.8R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 28 closed, avg +0.15R, 89% won.
 - 18 Nov 07:00 ETHUSD sell S6 @ 1808.37 SL 1824.78 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 26 closed, avg +0.14R, 88% won.
 - 18 Nov 07:00 US30 sell S6 @ 50767.32 SL 50919.32 → closed SL -1.01R. Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.9R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 23 closed, avg +0.19R, 91% won.
-- 18 Nov 07:00 NAS100 sell S6 @ 27133.65 SL 27338.96 → open
+- 18 Nov 07:00 NAS100 sell S6 @ 27133.65 SL 27338.96 → closed TP2+BE +0.67R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 30 closed, avg +0.15R, 87% won.
 - 18 Nov 07:00 BTCUSD sell S6 @ 64579.1 SL 65034.95 → closed TP3 +1.10R. TP3 after 452 min (best 1.7R, worst -0.8R). Lesson so far: daily bias with the trend: 28 closed, avg +0.15R, 89% won.
 - 18 Nov 07:00 XAGUSD sell S6 @ 46.14 SL 46.524 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 19 closed, avg +0.12R, 90% won.
 - 18 Nov 07:00 XAUUSD sell S6 @ 3785.5 SL 3800.12 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 22 closed, avg +0.17R, 91% won.
-- 18 Nov 05:45 NAS100 sell S1 @ 27126.21 SL 27379.43 → open
+- 18 Nov 05:45 NAS100 sell S1 @ 27126.21 SL 27379.43 → closed TP2+BE +0.59R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 41 closed, avg -0.11R, 63% won.
 - 18 Nov 05:30 SUIUSD buy S1 @ 0.7301 SL 0.719543 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 32 closed, avg -0.20R, 59% won.
 - 18 Nov 05:30 AVAXUSD buy S1 @ 7.179 SL 7.0774 → closed SL -1.04R. Stopped out after 301 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 36 closed, avg -0.15R, 64% won.
 - 18 Nov 05:30 ADAUSD buy S1 @ 0.1537 SL 0.151657 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 33 closed, avg -0.19R, 61% won.
