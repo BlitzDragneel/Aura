@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-18T17:00:59.699311+00:00",
+ "asof": "2026-11-18T17:15:59.763052+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3752.8,
-  "bar": "2026-11-18T16:45:00+00:00",
+  "price": 3749.7,
+  "bar": "2026-11-18T17:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3752.8,
-    "ma20": 3768.9550000000004,
-    "ma50": 3777.0879999999997,
-    "slope_atr": -0.48,
-    "bar": "2026-11-18T16:45:00+00:00"
+    "close": 3749.7,
+    "ma20": 3767.5099999999998,
+    "ma50": 3776.236,
+    "slope_atr": -0.56,
+    "bar": "2026-11-18T17:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.35,
   "spot": {
-   "price": 3746.27,
-   "bid": 3745.951,
-   "ask": 3746.589,
-   "spread": 0.638,
+   "price": 3741.925,
+   "bid": 3741.608,
+   "ask": 3742.242,
+   "spread": 0.634,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.174
+   "perp_premium_pct": 0.208
   },
   "funding": {
-   "rate": 0.000170979035991,
+   "rate": 0.0001805495340389,
    "next_time": 1795046400000,
    "source": "okx-swap"
   },
@@ -141,7 +141,7 @@
   "day": {
    "state": "WATCH",
    "since": "2026-11-18T17:00:59.699311+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "hourly volatility is high (90th percentile of the last 3 weeks)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -252,8 +252,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3752.8; volatility regime active (hourly ATR 0.52% of price, 90.5th percentile).",
-    "Spot XAUUSD 3746.27; the perpetual trades +0.17% from spot."
+    "Price 3749.7; volatility regime active (hourly ATR 0.52% of price, 90.5th percentile).",
+    "Spot XAUUSD 3741.93; the perpetual trades +0.21% from spot."
    ]
   },
   {
@@ -263,6 +263,6 @@
    ]
   }
  ],
- "runs": 273,
+ "runs": 274,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
