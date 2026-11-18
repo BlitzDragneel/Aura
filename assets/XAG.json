@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-18T13:15:57.470264+00:00",
+ "asof": "2026-11-18T13:31:00.755751+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 45.9,
-  "bar": "2026-11-18T13:00:00+00:00",
+  "price": 45.77,
+  "bar": "2026-11-18T13:15:00+00:00",
   "trend": {
    "15m": {
-    "state": "flat",
-    "close": 45.9,
-    "ma20": 45.825,
-    "ma50": 46.06,
-    "slope_atr": -0.35,
-    "bar": "2026-11-18T13:00:00+00:00"
+    "state": "down",
+    "close": 45.77,
+    "ma20": 45.814499999999995,
+    "ma50": 46.038000000000004,
+    "slope_atr": -0.36,
+    "bar": "2026-11-18T13:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.61,
   "spot": {
-   "price": 45.76355,
-   "bid": 45.743,
-   "ask": 45.7841,
-   "spread": 0.0411,
+   "price": 45.649,
+   "bid": 45.6277,
+   "ask": 45.6703,
+   "spread": 0.0426,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.298
+   "perp_premium_pct": 0.265
   },
   "funding": {
-   "rate": 9.21974525701e-05,
+   "rate": 8.85516673041e-05,
    "next_time": 1795017600000,
    "source": "okx-swap"
   },
@@ -251,8 +251,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 45.9; volatility regime active (hourly ATR 0.939% of price, 88.3th percentile).",
-    "Spot XAGUSD 45.76; the perpetual trades +0.30% from spot."
+    "Price 45.77; volatility regime active (hourly ATR 0.939% of price, 88.3th percentile).",
+    "Spot XAGUSD 45.65; the perpetual trades +0.27% from spot."
    ]
   },
   {
@@ -262,6 +262,6 @@
    ]
   }
  ],
- "runs": 257,
+ "runs": 258,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

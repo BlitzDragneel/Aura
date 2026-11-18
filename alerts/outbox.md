@@ -493,3 +493,8 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 
 ## 2026-11-18 13:00:51 UTC
 👀 Gold day: WATCH at 3,751.10. Big move likely, direction unknown. scout: 50% chance of a big move in 4 h (top of its range; direction unknown)
+
+## 2026-11-18 13:31:09 UTC
+⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~45.77
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
