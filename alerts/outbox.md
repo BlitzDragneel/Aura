@@ -468,3 +468,11 @@ Market now: trend down, volatility normal, London session
 ⚡ Nasdaq 100: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~27205.15
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-18 10:00:54 UTC
+👀 Silver day: WATCH at 45.98. Big move likely, direction unknown. scout: 54% chance of a big move in 4 h (top of its range; direction unknown)
+
+## 2026-11-18 10:01:09 UTC
+⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3786.1
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
