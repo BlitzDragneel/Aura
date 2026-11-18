@@ -460,3 +460,11 @@ Market now: trend down, volatility normal, London session
 ⚡ Nasdaq 100: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~27244.96
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-18 08:30:57 UTC
+🧪 Gold watch-list paper trade closed (time): +0.61% after costs
+
+## 2026-11-18 08:31:08 UTC
+⚡ Nasdaq 100: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~27205.15
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
