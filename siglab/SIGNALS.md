@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 01:45 UTC
+Updated 2026-11-18 02:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@ Updated 2026-11-18 01:45 UTC
 | BTCUSD S7 | 1 | 0.726 | None | 1.0 | PAPER |
 | DOGEUSD S1 | 2 | -0.17 | -0.19 | 0.5 | PAPER |
 | DOGEUSD S2 | 2 | -1.051 | -420.6 | 0.0 | PAPER |
-| DOGEUSD S3 | 1 | 0.091 | None | 1.0 | PAPER |
+| DOGEUSD S3 | 2 | 0.497 | 1.22 | 1.0 | PAPER |
 | DOGEUSD S4 | 2 | -0.141 | -0.16 | 0.5 | PAPER |
 | DOGEUSD S5 | 1 | -1.068 | None | 0.0 | PAPER |
 | DOGEUSD S6 | 2 | 0.172 | 19.11 | 1.0 | PAPER |
@@ -118,7 +118,7 @@ Updated 2026-11-18 01:45 UTC
 - 18 Nov 00:15 XAGUSD buy S4 @ 47.4 SL 47.054 → closed SL -1.09R. Stopped out after 19 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). Lesson so far: fib pullback with the trend: 26 closed, avg -0.17R, 62% won.
 - 18 Nov 00:15 XAUUSD sell S2 @ 3847.6 SL 3863.06 → closed TP3 +0.90R. TP3 after 19 min (best 1.4R, worst -0.1R). Lesson so far: breakout with the trend: 12 closed, avg -0.85R, 17% won.
 - 17 Nov 23:15 AVAXUSD sell S3 @ 7.293 SL 7.4011 → open
-- 17 Nov 23:15 DOGEUSD sell S3 @ 0.06023 SL 0.060991 → open
+- 17 Nov 23:15 DOGEUSD sell S3 @ 0.06023 SL 0.060991 → closed TP3 +0.90R. TP3 after 161 min (best 1.4R, worst -0.0R). Lesson so far: stretch fade against the trend: 8 closed, avg -0.37R, 50% won.
 - 17 Nov 23:15 SOLUSD sell S3 @ 75.39 SL 76.491 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 5 closed, avg -0.19R, 60% won.
 - 17 Nov 20:00 XAUUSD buy S3 @ 3854.2 SL 3838.74 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 11 closed, avg +0.35R, 73% won.
 - 17 Nov 15:45 LINKUSD sell S7 @ 9.093 SL 9.1771 → closed TP3 +1.23R. TP3 after 6 min (best 1.9R, worst -0.1R). Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
