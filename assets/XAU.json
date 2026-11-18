@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-18T14:15:44.730203+00:00",
+ "asof": "2026-11-18T14:30:54.301889+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3783.3,
-  "bar": "2026-11-18T14:00:00+00:00",
+  "price": 3785.8,
+  "bar": "2026-11-18T14:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3783.3,
-    "ma20": 3777.285,
-    "ma50": 3786.006,
-    "slope_atr": 0.22,
-    "bar": "2026-11-18T14:00:00+00:00"
+    "close": 3785.8,
+    "ma20": 3777.315,
+    "ma50": 3785.382,
+    "slope_atr": 0.18,
+    "bar": "2026-11-18T14:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.35,
   "spot": {
-   "price": 3776.375,
-   "bid": 3776.056,
-   "ask": 3776.694,
+   "price": 3775.675,
+   "bid": 3775.356,
+   "ask": 3775.994,
    "spread": 0.638,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.183
+   "perp_premium_pct": 0.268
   },
   "funding": {
-   "rate": 0.0001594098633878,
+   "rate": 0.0001459958939421,
    "next_time": 1795017600000,
    "source": "okx-swap"
   },
@@ -253,8 +253,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3783.3; volatility regime active (hourly ATR 0.536% of price, 93.6th percentile).",
-    "Spot XAUUSD 3776.38; the perpetual trades +0.18% from spot."
+    "Price 3785.8; volatility regime active (hourly ATR 0.536% of price, 93.6th percentile).",
+    "Spot XAUUSD 3775.68; the perpetual trades +0.27% from spot."
    ]
   },
   {
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 261,
+ "runs": 262,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
