@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 05:31 UTC
+Updated 2026-11-18 05:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,6 +98,7 @@ Updated 2026-11-18 05:31 UTC
 
 ## Latest signals
 
+- 18 Nov 05:45 NAS100 sell S1 @ 27126.21 SL 27379.43 → open
 - 18 Nov 05:30 SUIUSD buy S1 @ 0.7301 SL 0.719543 → open
 - 18 Nov 05:30 AVAXUSD buy S1 @ 7.179 SL 7.0774 → open
 - 18 Nov 05:30 ADAUSD buy S1 @ 0.1537 SL 0.151657 → open
@@ -157,4 +158,3 @@ Updated 2026-11-18 05:31 UTC
 - 17 Nov 07:30 AVAXUSD buy S5 @ 7.222 SL 7.1462 → closed SL -1.06R. Stopped out after 61 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 5 closed, avg +0.02R, 60% won.
 - 17 Nov 07:30 DOGEUSD buy S5 @ 0.05903 SL 0.058511 → closed SL -1.07R. Stopped out after 95 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R).
 - 17 Nov 07:30 XRPUSD buy S5 @ 0.9606 SL 0.951957 → closed TP3 +1.10R. TP3 after 340 min (best 1.9R, worst -1.0R). Lesson so far: session drive with the trend: 5 closed, avg -0.83R, 20% won.
-- 17 Nov 07:30 SOLUSD buy S5 @ 72.93 SL 72.262 → closed SL -1.07R. Stopped out after 67 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R).

@@ -424,3 +424,8 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3797.2
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-18 05:46:05 UTC
+⚡ Nasdaq 100: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~27126.21
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
