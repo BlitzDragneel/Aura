@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 17:45 UTC
+Updated 2026-11-18 18:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -52,7 +52,7 @@ Updated 2026-11-18 17:45 UTC
 | LINKUSD S4 | 3 | -1.049 | -237.82 | 0.0 | PAPER |
 | LINKUSD S5 | 3 | -0.45 | -0.74 | 0.333 | PAPER |
 | LINKUSD S6 | 3 | 0.177 | 22.06 | 1.0 | PAPER |
-| LINKUSD S7 | 1 | 1.225 | None | 1.0 | PAPER |
+| LINKUSD S7 | 2 | 0.081 | 0.07 | 0.5 | PAPER |
 | LTCUSD S1 | 4 | 0.399 | 0.7 | 0.75 | PAPER |
 | LTCUSD S2 | 3 | -1.061 | -318.4 | 0.0 | PAPER |
 | LTCUSD S3 | 3 | 0.196 | 0.26 | 0.667 | PAPER |
@@ -110,7 +110,7 @@ Updated 2026-11-18 17:45 UTC
 
 ## Latest signals
 
-- 18 Nov 17:30 LINKUSD buy S7 @ 9.131 SL 9.0464 → open
+- 18 Nov 17:30 LINKUSD buy S7 @ 9.131 SL 9.0464 → closed SL -1.06R. Stopped out after 23 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 9 closed, avg +0.05R, 67% won.
 - 18 Nov 16:45 DOGEUSD buy S3 @ 0.05788 SL 0.057374 → closed TP3 +1.12R. TP3 after 35 min (best 2.0R, worst -0.2R). Lesson so far: stretch fade with the trend: 15 closed, avg +0.35R, 80% won.
 - 18 Nov 16:30 BNBUSD sell S7 @ 578.38 SL 581.62 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 9 closed, avg +0.13R, 78% won.
 - 18 Nov 16:30 BTCUSD sell S7 @ 62517.1 SL 62968.94 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 9 closed, avg +0.13R, 78% won.

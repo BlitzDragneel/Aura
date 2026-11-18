@@ -5,7 +5,7 @@
 "since": "2026-11-18T14:00:57.250583+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (92th percentile of the last 3 weeks)",
+"hourly volatility is high (91th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -367,14 +367,6 @@
 {
 "t": "2026-11-17T17:00:00+00:00",
 "price": 47.59,
-"horizon": "swing",
-"thr": 0.028817578723020938,
-"watch": false,
-"p": 0.243
-},
-{
-"t": "2026-11-17T17:00:00+00:00",
-"price": 47.59,
 "horizon": "hold",
 "thr": 0.07204394680755234,
 "watch": false,
@@ -687,14 +679,6 @@
 {
 "t": "2026-11-18T13:00:00+00:00",
 "price": 45.91,
-"horizon": "day",
-"thr": 0.02050595886361516,
-"watch": true,
-"p": 0.386
-},
-{
-"t": "2026-11-18T13:00:00+00:00",
-"price": 45.91,
 "horizon": "swing",
 "thr": 0.04101191772723032,
 "watch": true,
@@ -779,30 +763,54 @@
 "thr": 0.09982597690238912,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-18T17:00:00+00:00",
+"price": 45.12,
+"horizon": "day",
+"thr": 0.019693515704154067,
+"watch": true,
+"p": 0.186
+},
+{
+"t": "2026-11-18T17:00:00+00:00",
+"price": 45.12,
+"horizon": "swing",
+"thr": 0.03938703140830813,
+"watch": true,
+"p": 0.411
+},
+{
+"t": "2026-11-18T17:00:00+00:00",
+"price": 45.12,
+"horizon": "hold",
+"thr": 0.09846757852077033,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 68,
+"n": 69,
 "big": 8,
-"watch_n": 6,
+"watch_n": 7,
 "watch_big": 1,
-"brier": 10.059069000000001,
+"brier": 10.208065000000001,
 "brier_base": 0.0,
-"scout_n": 68
+"scout_n": 69
 },
 "swing": {
-"n": 48,
-"big": 18,
+"n": 49,
+"big": 19,
 "watch_n": 0,
 "watch_big": 0,
-"brier": 13.714302,
+"brier": 14.287351,
 "brier_base": 0.0,
-"scout_n": 48
+"scout_n": 49
 }
 },
 "calls_record": {},
-"runs": 276,
+"runs": 277,
 "created": "2026-11-15T06:42:40",
-"last_run": "2026-11-18T17:45:45.253763+00:00"
+"last_run": "2026-11-18T18:01:01.105138+00:00"
 }
