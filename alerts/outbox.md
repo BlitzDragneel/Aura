@@ -435,3 +435,20 @@ Market now: trend down, volatility normal, Asia session
 
 ## 2026-11-18 07:01:02 UTC
 👀 Gold swing: WATCH at 3,785.50. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-18 07:31:10 UTC
+⚡ Gold: SESSION DRIVE right now (London open drive), price ~3778.3
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Silver: SESSION DRIVE right now (London open drive), price ~46.03
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~64707.7
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+⚡ Nasdaq 100: SESSION DRIVE right now (London open drive), price ~27174.4
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.

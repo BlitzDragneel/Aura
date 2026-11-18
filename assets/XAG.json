@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-18T07:15:50.869914+00:00",
+ "asof": "2026-11-18T07:30:57.628831+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
   "price": 46.03,
-  "bar": "2026-11-18T07:00:00+00:00",
+  "bar": "2026-11-18T07:15:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
     "close": 46.03,
-    "ma20": 46.1115,
-    "ma50": 46.82679999999999,
-    "slope_atr": -0.8,
-    "bar": "2026-11-18T07:00:00+00:00"
+    "ma20": 46.0975,
+    "ma50": 46.7976,
+    "slope_atr": -0.73,
+    "bar": "2026-11-18T07:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.61,
   "spot": {
-   "price": 45.92755,
-   "bid": 45.904,
-   "ask": 45.9511,
-   "spread": 0.0471,
-   "age_s": 0,
+   "price": 45.92725,
+   "bid": 45.9022,
+   "ask": 45.9523,
+   "spread": 0.0501,
+   "age_s": 1,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.223
+   "perp_premium_pct": 0.224
   },
   "funding": {
-   "rate": 0.0003994603492683,
+   "rate": 0.0003854058179323,
    "next_time": 1794988800000,
    "source": "okx-swap"
   },
@@ -262,6 +262,6 @@
    ]
   }
  ],
- "runs": 233,
+ "runs": 234,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

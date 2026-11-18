@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 07:15 UTC
+Updated 2026-11-18 07:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,6 +98,19 @@ Updated 2026-11-18 07:15 UTC
 
 ## Latest signals
 
+- 18 Nov 07:30 SUIUSD buy S5 @ 0.7337 SL 0.725421 → open
+- 18 Nov 07:30 LTCUSD buy S5 @ 44.65 SL 44.247 → open
+- 18 Nov 07:30 LINKUSD buy S5 @ 9.274 SL 9.1767 → open
+- 18 Nov 07:30 AVAXUSD buy S5 @ 7.198 SL 7.1179 → open
+- 18 Nov 07:30 ADAUSD buy S5 @ 0.1543 SL 0.1527 → open
+- 18 Nov 07:30 DOGEUSD buy S5 @ 0.05955 SL 0.058979 → open
+- 18 Nov 07:30 XRPUSD buy S5 @ 0.9942 SL 0.985029 → open
+- 18 Nov 07:30 SOLUSD buy S5 @ 75.07 SL 74.211 → open
+- 18 Nov 07:30 ETHUSD buy S5 @ 1814.17 SL 1797.76 → open
+- 18 Nov 07:30 NAS100 buy S5 @ 27174.4 SL 26969.1 → open
+- 18 Nov 07:30 BTCUSD buy S5 @ 64707.7 SL 64251.85 → open
+- 18 Nov 07:30 XAGUSD sell S5 @ 46.03 SL 46.414 → open
+- 18 Nov 07:30 XAUUSD sell S5 @ 3778.3 SL 3792.92 → open
 - 18 Nov 07:15 SUIUSD buy S2 @ 0.7334 SL 0.725121 → open
 - 18 Nov 07:15 XRPUSD sell S3 @ 0.9931 SL 1.002271 → open
 - 18 Nov 07:00 SUIUSD buy S6 @ 0.7295 SL 0.721221 → open
@@ -145,16 +158,3 @@ Updated 2026-11-18 07:15 UTC
 - 18 Nov 00:30 XAUUSD buy S3 @ 3838.3 SL 3822.84 → closed SL -1.01R. Stopped out after 25 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 6 closed, avg -0.14R, 67% won.
 - 18 Nov 00:15 ADAUSD buy S4 @ 0.1546 SL 0.152307 → closed SL -1.04R. Stopped out after 106 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 27 closed, avg -0.20R, 59% won.
 - 18 Nov 00:15 XAGUSD buy S4 @ 47.4 SL 47.054 → closed SL -1.09R. Stopped out after 19 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). Lesson so far: fib pullback with the trend: 26 closed, avg -0.17R, 62% won.
-- 18 Nov 00:15 XAUUSD sell S2 @ 3847.6 SL 3863.06 → closed TP3 +0.90R. TP3 after 19 min (best 1.4R, worst -0.1R). Lesson so far: breakout with the trend: 12 closed, avg -0.85R, 17% won.
-- 17 Nov 23:15 AVAXUSD sell S3 @ 7.293 SL 7.4011 → closed TP3 +0.92R. TP3 after 210 min (best 1.5R, worst -0.0R). Lesson so far: stretch fade with the trend: 12 closed, avg +0.34R, 75% won.
-- 17 Nov 23:15 DOGEUSD sell S3 @ 0.06023 SL 0.060991 → closed TP3 +0.90R. TP3 after 161 min (best 1.4R, worst -0.0R). Lesson so far: stretch fade against the trend: 8 closed, avg -0.37R, 50% won.
-- 17 Nov 23:15 SOLUSD sell S3 @ 75.39 SL 76.491 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 5 closed, avg -0.19R, 60% won.
-- 17 Nov 20:00 XAUUSD buy S3 @ 3854.2 SL 3838.74 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 11 closed, avg +0.35R, 73% won.
-- 17 Nov 15:45 LINKUSD sell S7 @ 9.093 SL 9.1771 → closed TP3 +1.23R. TP3 after 6 min (best 1.9R, worst -0.1R). Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
-- 17 Nov 15:45 AVAXUSD sell S7 @ 7.077 SL 7.1542 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
-- 17 Nov 15:45 ADAUSD sell S7 @ 0.1517 SL 0.153286 → closed TP2+BE +0.68R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
-- 17 Nov 15:45 DOGEUSD sell S7 @ 0.05837 SL 0.058879 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
-- 17 Nov 15:45 SOLUSD sell S7 @ 72.2 SL 72.982 → closed TP2+BE +0.50R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
-- 17 Nov 15:45 ETHUSD sell S7 @ 1778.69 SL 1796.57 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 4 closed, avg -0.36R, 50% won.
-- 17 Nov 15:45 BTCUSD sell S7 @ 64162.0 SL 64602.78 → closed TP2+BE +0.73R. Reached TP2 then came back to the entry (best 2.0R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 5 closed, avg -0.17R, 60% won.
-- 17 Nov 13:30 XRPUSD sell S3 @ 0.9775 SL 0.986 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 4 closed, avg -0.28R, 50% won.
