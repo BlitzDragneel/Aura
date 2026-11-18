@@ -5,7 +5,7 @@
 "since": "2026-11-18T14:00:57.250583+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (90th percentile of the last 3 weeks)",
+"hourly volatility is high (92th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -391,14 +391,6 @@
 {
 "t": "2026-11-17T20:00:00+00:00",
 "price": 47.35,
-"horizon": "swing",
-"thr": 0.027515462362347188,
-"watch": false,
-"p": 0.292
-},
-{
-"t": "2026-11-17T20:00:00+00:00",
-"price": 47.35,
 "horizon": "hold",
 "thr": 0.06878865590586797,
 "watch": false,
@@ -711,14 +703,6 @@
 {
 "t": "2026-11-18T16:00:00+00:00",
 "price": 45.15,
-"horizon": "day",
-"thr": 0.019965195380477824,
-"watch": true,
-"p": 0.252
-},
-{
-"t": "2026-11-18T16:00:00+00:00",
-"price": 45.15,
 "horizon": "swing",
 "thr": 0.03993039076095565,
 "watch": true,
@@ -803,30 +787,54 @@
 "thr": 0.09673115410273544,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-18T20:00:00+00:00",
+"price": 45.16,
+"horizon": "day",
+"thr": 0.01973933949133246,
+"watch": true,
+"p": 0.216
+},
+{
+"t": "2026-11-18T20:00:00+00:00",
+"price": 45.16,
+"horizon": "swing",
+"thr": 0.03947867898266492,
+"watch": true,
+"p": 0.316
+},
+{
+"t": "2026-11-18T20:00:00+00:00",
+"price": 45.16,
+"horizon": "hold",
+"thr": 0.09869669745666229,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 71,
+"n": 72,
 "big": 8,
-"watch_n": 9,
+"watch_n": 10,
 "watch_big": 1,
-"brier": 10.427882000000002,
+"brier": 10.491386000000002,
 "brier_base": 0.0,
-"scout_n": 71
+"scout_n": 72
 },
 "swing": {
-"n": 51,
-"big": 21,
+"n": 52,
+"big": 22,
 "watch_n": 0,
 "watch_big": 0,
-"brier": 15.365663,
+"brier": 15.866927,
 "brier_base": 0.0,
-"scout_n": 51
+"scout_n": 52
 }
 },
 "calls_record": {},
-"runs": 288,
+"runs": 289,
 "created": "2026-11-15T06:42:40",
-"last_run": "2026-11-18T20:45:52.609942+00:00"
+"last_run": "2026-11-18T21:01:03.880657+00:00"
 }

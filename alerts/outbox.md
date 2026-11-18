@@ -534,3 +534,14 @@ Market now: trend down, volatility high, New York session
 ## 2026-11-18 18:15:58 UTC
 ⏰ US news in 44 min: FOMC Meeting Minutes at 19:00 UTC / 03:00 PM Trinidad.
 Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be predicted in testing (E152). Wider stops or stand aside for the release.
+
+## 2026-11-18 21:01:07 UTC
+📊 Signal Lab, end of day: 255 paper signals closed so far, avg -0.18R, 0 open.
+trend pullback: 42 closed, avg -0.10R, 64% won
+breakout: 41 closed, avg -0.55R, 32% won
+stretch fade: 32 closed, avg +0.11R, 69% won
+fib pullback: 47 closed, avg -0.34R, 47% won
+session drive: 31 closed, avg -0.56R, 32% won
+daily bias: 41 closed, avg +0.23R, 88% won
+big move: 21 closed, avg +0.04R, 71% won
+Earning trust: none yet (needs 15+ closed and a positive average)
