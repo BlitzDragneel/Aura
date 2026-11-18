@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-18T09:15:52.418477+00:00",
+ "asof": "2026-11-18T09:30:40.789941+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 64676.6,
-  "bar": "2026-11-18T09:00:00+00:00",
+  "price": 64657.4,
+  "bar": "2026-11-18T09:15:00+00:00",
   "trend": {
    "15m": {
     "state": "up",
-    "close": 64676.6,
-    "ma20": 64630.05,
-    "ma50": 64574.636,
+    "close": 64657.4,
+    "ma20": 64635.735,
+    "ma50": 64588.45199999999,
     "slope_atr": 0.31,
-    "bar": "2026-11-18T09:00:00+00:00"
+    "bar": "2026-11-18T09:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.11,
   "funding": {
-   "rate": 1.32266989123e-05,
+   "rate": 1.03290181164e-05,
    "next_time": 1795017600000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.24,
+    "p_big_move": 0.233,
     "flag": false,
     "detail": {
-     "p_up_move": 0.106,
-     "p_down_move": 0.134
+     "p_up_move": 0.102,
+     "p_down_move": 0.132
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -246,7 +246,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 64676.6; volatility regime normal (hourly ATR 0.681% of price, 50.8th percentile).",
+    "Price 64657.4; volatility regime normal (hourly ATR 0.681% of price, 50.8th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -257,6 +257,6 @@
    ]
   }
  ],
- "runs": 241,
+ "runs": 242,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
