@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 15:45 UTC
+Updated 2026-11-18 15:54 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
