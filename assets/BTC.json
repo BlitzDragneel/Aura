@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-18T01:00:48.990579+00:00",
+ "asof": "2026-11-18T01:15:36.029993+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 64766.4,
-  "bar": "2026-11-18T00:45:00+00:00",
+  "price": 64602.9,
+  "bar": "2026-11-18T01:00:00+00:00",
   "trend": {
    "15m": {
     "state": "up",
-    "close": 64766.4,
-    "ma20": 64512.840000000004,
-    "ma50": 64379.486,
-    "slope_atr": 1.07,
-    "bar": "2026-11-18T00:45:00+00:00"
+    "close": 64602.9,
+    "ma20": 64553.475,
+    "ma50": 64373.044,
+    "slope_atr": 1.02,
+    "bar": "2026-11-18T01:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.11,
   "funding": {
-   "rate": -7.1999927572e-06,
+   "rate": -3.2436537868e-06,
    "next_time": 1794988800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.18,
+    "p_big_move": 0.178,
     "flag": false,
     "detail": {
-     "p_up_move": 0.089,
-     "p_down_move": 0.092
+     "p_up_move": 0.091,
+     "p_down_move": 0.087
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -246,7 +246,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 64766.4; volatility regime active (hourly ATR 1.001% of price, 88.1th percentile).",
+    "Price 64602.9; volatility regime active (hourly ATR 1.001% of price, 88.1th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -257,6 +257,6 @@
    ]
   }
  ],
- "runs": 207,
+ "runs": 208,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
