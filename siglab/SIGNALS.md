@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 07:30 UTC
+Updated 2026-11-18 07:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -46,12 +46,12 @@ Updated 2026-11-18 07:30 UTC
 | ETHUSD S5 | 1 | -1.067 | None | 0.0 | PAPER |
 | ETHUSD S6 | 2 | 1.106 | 2.94 | 1.0 | PAPER |
 | ETHUSD S7 | 2 | -0.225 | -0.27 | 0.5 | PAPER |
-| LINKUSD S1 | 2 | -0.399 | -0.62 | 0.5 | PAPER |
+| LINKUSD S1 | 3 | -0.216 | -0.52 | 0.667 | PAPER |
 | LINKUSD S2 | 2 | -0.485 | -0.85 | 0.5 | PAPER |
 | LINKUSD S3 | 1 | -1.068 | None | 0.0 | PAPER |
 | LINKUSD S4 | 3 | -1.049 | -237.82 | 0.0 | PAPER |
 | LINKUSD S5 | 2 | -0.146 | -0.16 | 0.5 | PAPER |
-| LINKUSD S6 | 2 | 0.178 | 13.22 | 1.0 | PAPER |
+| LINKUSD S6 | 3 | 0.177 | 22.06 | 1.0 | PAPER |
 | LINKUSD S7 | 1 | 1.225 | None | 1.0 | PAPER |
 | LTCUSD S1 | 3 | 0.139 | 0.19 | 0.667 | PAPER |
 | LTCUSD S2 | 2 | -1.058 | None | 0.0 | PAPER |
@@ -84,7 +84,7 @@ Updated 2026-11-18 07:30 UTC
 | XAUUSD S1 | 2 | -1.014 | None | 0.0 | PAPER |
 | XAUUSD S2 | 3 | -0.004 | -0.01 | 0.667 | PAPER |
 | XAUUSD S3 | 3 | -0.253 | -0.67 | 0.667 | PAPER |
-| XAUUSD S4 | 2 | -0.352 | -0.53 | 0.5 | PAPER |
+| XAUUSD S4 | 3 | 0.097 | 0.16 | 0.667 | PAPER |
 | XAUUSD S5 | 2 | -0.471 | -0.87 | 0.5 | PAPER |
 | XAUUSD S6 | 2 | -0.438 | -0.76 | 0.5 | PAPER |
 | XAUUSD S7 | 1 | 0.167 | None | 1.0 | PAPER |
@@ -115,7 +115,7 @@ Updated 2026-11-18 07:30 UTC
 - 18 Nov 07:15 XRPUSD sell S3 @ 0.9931 SL 1.002271 → open
 - 18 Nov 07:00 SUIUSD buy S6 @ 0.7295 SL 0.721221 → open
 - 18 Nov 07:00 LTCUSD sell S6 @ 44.47 SL 44.873 → open
-- 18 Nov 07:00 LINKUSD buy S6 @ 9.222 SL 9.1247 → open
+- 18 Nov 07:00 LINKUSD buy S6 @ 9.222 SL 9.1247 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 18 closed, avg +0.12R, 89% won.
 - 18 Nov 07:00 AVAXUSD sell S6 @ 7.15 SL 7.2301 → open
 - 18 Nov 07:00 ADAUSD buy S6 @ 0.1536 SL 0.152 → open
 - 18 Nov 07:00 DOGEUSD buy S6 @ 0.0593 SL 0.058729 → open
@@ -133,10 +133,10 @@ Updated 2026-11-18 07:30 UTC
 - 18 Nov 05:30 AVAXUSD buy S1 @ 7.179 SL 7.0774 → open
 - 18 Nov 05:30 ADAUSD buy S1 @ 0.1537 SL 0.151657 → open
 - 18 Nov 05:30 XRPUSD buy S2 @ 0.986 SL 0.974836 → open
-- 18 Nov 05:30 XAUUSD sell S4 @ 3797.2 SL 3813.15 → open
+- 18 Nov 05:30 XAUUSD sell S4 @ 3797.2 SL 3813.15 → closed TP3 +1.00R. TP3 after 127 min (best 1.6R, worst -0.5R). Lesson so far: fib pullback with the trend: 32 closed, avg -0.30R, 53% won.
 - 18 Nov 05:15 BNBUSD buy S1 @ 592.52 SL 587.89 → open
 - 18 Nov 04:30 DOGEUSD buy S1 @ 0.05942 SL 0.058686 → open
-- 18 Nov 03:15 LINKUSD buy S1 @ 9.215 SL 9.0887 → open
+- 18 Nov 03:15 LINKUSD buy S1 @ 9.215 SL 9.0887 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 30 closed, avg -0.26R, 57% won.
 - 18 Nov 02:45 AVAXUSD buy S3 @ 7.141 SL 7.0352 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 13 closed, avg +0.38R, 77% won.
 - 18 Nov 02:30 XRPUSD buy S1 @ 0.9768 SL 0.965114 → open
 - 18 Nov 02:15 SOLUSD buy S1 @ 74.51 SL 73.404 → open

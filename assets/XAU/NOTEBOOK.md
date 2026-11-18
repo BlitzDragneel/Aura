@@ -36,8 +36,8 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 3778.3; volatility regime normal (hourly ATR 0.386% of price, 57.4th percentile).
-- Spot XAUUSD 3771.41; the perpetual trades +0.18% from spot.
+- Price 3775.1; volatility regime normal (hourly ATR 0.386% of price, 57.4th percentile).
+- Spot XAUUSD 3766.32; the perpetual trades +0.23% from spot.
 
 ## My calls so far
 

@@ -452,3 +452,6 @@ Market now: trend down, volatility normal, London session
 ⚡ Nasdaq 100: SESSION DRIVE right now (London open drive), price ~27174.4
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+## 2026-11-18 07:46:03 UTC
+🔁 Learning: fib pullback with the trend is now back to normal.
