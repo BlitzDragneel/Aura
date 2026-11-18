@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 15:30 UTC
+Updated 2026-11-18 15:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -27,7 +27,7 @@ Updated 2026-11-18 15:30 UTC
 | BNBUSD S7 | 1 | -1.1 | None | 0.0 | PAPER |
 | BTCUSD S1 | 3 | 0.386 | 2.39 | 1.0 | PAPER |
 | BTCUSD S2 | 3 | -0.631 | -1.63 | 0.333 | PAPER |
-| BTCUSD S3 | 1 | -1.023 | None | 0.0 | PAPER |
+| BTCUSD S3 | 2 | -0.183 | -0.22 | 0.5 | PAPER |
 | BTCUSD S4 | 4 | -0.385 | -1.06 | 0.5 | PAPER |
 | BTCUSD S5 | 2 | -1.023 | -1023.0 | 0.0 | PAPER |
 | BTCUSD S6 | 3 | 0.534 | 1.89 | 1.0 | PAPER |
@@ -41,7 +41,7 @@ Updated 2026-11-18 15:30 UTC
 | DOGEUSD S7 | 1 | 0.61 | None | 1.0 | PAPER |
 | ETHUSD S1 | 4 | -0.161 | -0.54 | 0.75 | PAPER |
 | ETHUSD S2 | 3 | -0.663 | -1.68 | 0.333 | PAPER |
-| ETHUSD S3 | 2 | 0.319 | 0.23 | 0.5 | PAPER |
+| ETHUSD S3 | 3 | 0.402 | 0.5 | 0.667 | PAPER |
 | ETHUSD S4 | 4 | -0.36 | -0.87 | 0.5 | PAPER |
 | ETHUSD S5 | 2 | -1.064 | -354.67 | 0.0 | PAPER |
 | ETHUSD S6 | 3 | 0.79 | 2.06 | 1.0 | PAPER |
@@ -115,8 +115,8 @@ Updated 2026-11-18 15:30 UTC
 - 18 Nov 15:00 NAS100 buy S3 @ 26900.59 SL 26743.2 → closed TP3 -0.35R. TP3 after 0 min (best 0.5R, worst -0.0R). Lesson so far: stretch fade against the trend: 12 closed, avg -0.22R, 58% won.
 - 18 Nov 14:45 SOLUSD sell S2 @ 73.73 SL 74.362 → closed SL -1.07R. Stopped out after 15 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 18 closed, avg -0.70R, 22% won.
 - 18 Nov 14:45 ETHUSD sell S7 @ 1765.43 SL 1778.17 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 7 closed, avg +0.01R, 71% won.
-- 18 Nov 14:45 ETHUSD buy S3 @ 1765.43 SL 1752.69 → open
-- 18 Nov 14:45 BTCUSD buy S3 @ 63294.1 SL 62921.37 → open
+- 18 Nov 14:45 ETHUSD buy S3 @ 1765.43 SL 1752.69 → closed TP2+BE +0.57R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 13 closed, avg -0.23R, 54% won.
+- 18 Nov 14:45 BTCUSD buy S3 @ 63294.1 SL 62921.37 → closed TP2+BE +0.66R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 13 closed, avg -0.23R, 54% won.
 - 18 Nov 14:15 US30 sell S4 @ 50736.5 SL 50853.57 → closed TP3 +0.78R. TP3 after 25 min (best 2.3R, worst -0.1R). Lesson so far: fib pullback with the trend: 37 closed, avg -0.29R, 51% won.
 - 18 Nov 14:00 US30 buy S5 @ 50792.5 SL 50675.86 → closed SL -1.03R. Stopped out after 16 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 15 closed, avg -0.54R, 33% won.
 - 18 Nov 13:30 XAGUSD sell S1 @ 45.77 SL 46.195 → closed TP3 +0.77R. TP3 after 66 min (best 1.4R, worst -0.7R). Lesson so far: trend pullback with the trend: 40 closed, avg -0.14R, 62% won.
