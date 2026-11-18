@@ -5,7 +5,7 @@
 "since": "2026-11-18T17:00:59.699311+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (92th percentile of the last 3 weeks)",
+"hourly volatility is high (93th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -383,14 +383,6 @@
 {
 "t": "2026-11-17T19:00:00+00:00",
 "price": 3854.2,
-"horizon": "swing",
-"thr": 0.016049282044819483,
-"watch": false,
-"p": 0.042
-},
-{
-"t": "2026-11-17T19:00:00+00:00",
-"price": 3854.2,
 "horizon": "hold",
 "thr": 0.040123205112048706,
 "watch": false,
@@ -703,14 +695,6 @@
 {
 "t": "2026-11-18T15:00:00+00:00",
 "price": 3761.1,
-"horizon": "day",
-"thr": 0.010240165301184715,
-"watch": false,
-"p": 0.234
-},
-{
-"t": "2026-11-18T15:00:00+00:00",
-"price": 3761.1,
 "horizon": "swing",
 "thr": 0.02048033060236943,
 "watch": true,
@@ -795,30 +779,54 @@
 "thr": 0.052659284321990504,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-18T19:00:00+00:00",
+"price": 3729.9,
+"horizon": "day",
+"thr": 0.010659037201303793,
+"watch": true,
+"p": 0.243
+},
+{
+"t": "2026-11-18T19:00:00+00:00",
+"price": 3729.9,
+"horizon": "swing",
+"thr": 0.021318074402607586,
+"watch": true,
+"p": 0.114
+},
+{
+"t": "2026-11-18T19:00:00+00:00",
+"price": 3729.9,
+"horizon": "hold",
+"thr": 0.05329518600651896,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 70,
+"n": 71,
 "big": 8,
 "watch_n": 13,
 "watch_big": 2,
-"brier": 7.872861999999997,
+"brier": 7.927617999999997,
 "brier_base": 0.0,
-"scout_n": 70
+"scout_n": 71
 },
 "swing": {
-"n": 50,
-"big": 17,
+"n": 51,
+"big": 18,
 "watch_n": 0,
 "watch_big": 0,
-"brier": 15.744853999999998,
+"brier": 16.662618,
 "brier_base": 0.0,
-"scout_n": 50
+"scout_n": 51
 }
 },
 "calls_record": {},
-"runs": 284,
+"runs": 285,
 "created": "2026-11-15T06:42:38",
-"last_run": "2026-11-18T19:45:53.964724+00:00"
+"last_run": "2026-11-18T20:01:03.502966+00:00"
 }
