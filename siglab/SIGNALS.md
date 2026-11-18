@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-17 23:45 UTC
+Updated 2026-11-18 00:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -82,7 +82,7 @@ Updated 2026-11-17 23:45 UTC
 | XAGUSD S7 | 1 | 0.526 | None | 1.0 | PAPER |
 | XAUUSD S1 | 2 | -1.014 | None | 0.0 | PAPER |
 | XAUUSD S2 | 2 | -0.454 | -0.82 | 0.5 | PAPER |
-| XAUUSD S3 | 1 | 0.085 | None | 1.0 | PAPER |
+| XAUUSD S3 | 2 | 0.127 | 3.05 | 1.0 | PAPER |
 | XAUUSD S4 | 2 | -0.352 | -0.53 | 0.5 | PAPER |
 | XAUUSD S5 | 2 | -0.471 | -0.87 | 0.5 | PAPER |
 | XAUUSD S6 | 2 | -0.438 | -0.76 | 0.5 | PAPER |
@@ -99,7 +99,7 @@ Updated 2026-11-17 23:45 UTC
 - 17 Nov 23:15 AVAXUSD sell S3 @ 7.293 SL 7.4011 → open
 - 17 Nov 23:15 DOGEUSD sell S3 @ 0.06023 SL 0.060991 → open
 - 17 Nov 23:15 SOLUSD sell S3 @ 75.39 SL 76.491 → open
-- 17 Nov 20:00 XAUUSD buy S3 @ 3854.2 SL 3838.74 → open
+- 17 Nov 20:00 XAUUSD buy S3 @ 3854.2 SL 3838.74 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 11 closed, avg +0.35R, 73% won.
 - 17 Nov 15:45 LINKUSD sell S7 @ 9.093 SL 9.1771 → closed TP3 +1.23R. TP3 after 6 min (best 1.9R, worst -0.1R). Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
 - 17 Nov 15:45 AVAXUSD sell S7 @ 7.077 SL 7.1542 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.
 - 17 Nov 15:45 ADAUSD sell S7 @ 0.1517 SL 0.153286 → closed TP2+BE +0.68R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 4 closed, avg -0.79R, 25% won.

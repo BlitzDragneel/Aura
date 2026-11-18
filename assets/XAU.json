@@ -3,7 +3,7 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-17T23:45:46.703545+00:00",
+ "asof": "2026-11-18T00:00:03.283003+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
@@ -36,11 +36,11 @@
    },
    "1d": {
     "state": "down",
-    "close": 3868.5,
-    "ma20": 3980.5099999999998,
-    "ma50": 4070.8,
-    "slope_atr": -0.41,
-    "bar": "2026-11-16T00:00:00+00:00"
+    "close": 3855.1,
+    "ma20": 3970.1799999999994,
+    "ma50": 4065.2439999999997,
+    "slope_atr": -0.47,
+    "bar": "2026-11-17T00:00:00+00:00"
    }
   },
   "volatility": {
@@ -48,15 +48,15 @@
    "atr1h_pctile": 62.6,
    "atr1h": 15.378571428571474,
    "rv20d_ann_pct": 30.6,
-   "rv20d_pctile": 74.1,
-   "day_range_pct_median": 1.42,
+   "rv20d_pctile": 74.4,
+   "day_range_pct_median": 1.4,
    "regime": "normal",
    "regime_daily": "normal"
   },
   "session": {
-   "name": "late US",
-   "utc_hour": 23,
-   "weekday": "Tuesday",
+   "name": "Asia",
+   "utc_hour": 0,
+   "weekday": "Wednesday",
    "weekend": false,
    "cme_break": false,
    "spot_open": true
@@ -91,11 +91,11 @@
    }
   },
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
-  "change_24h_pct": -0.91,
+  "change_24h_pct": -0.35,
   "spot": {
-   "price": 3847.9404999999997,
-   "bid": 3847.623,
-   "ask": 3848.258,
+   "price": 3847.9305,
+   "bid": 3847.613,
+   "ask": 3848.248,
    "spread": 0.635,
    "age_s": 0,
    "stale": false,
@@ -104,7 +104,7 @@
    "perp_premium_pct": 0.212
   },
   "funding": {
-   "rate": 0.0002074263703231,
+   "rate": 0.000202520348194,
    "next_time": 1794960000000,
    "source": "okx-swap"
   },
@@ -243,15 +243,15 @@
    "lines": [
     "Over the last 20 days the busiest session was New York (average hourly move 0.20%) and the quietest late US (0.12%).",
     "At weekends, while spot is closed, the perpetual moves 37% as much per hour as on weekdays: weekend prices are thin and less reliable.",
-    "A typical day ranges 1.4% from low to high (last 60 days); 37% of those days closed higher.",
-    "Over the last 30 days the price moved -7.1% (a fact, not a forecast)."
+    "A typical day ranges 1.4% from low to high (last 60 days); 35% of those days closed higher.",
+    "Over the last 30 days the price moved -8.0% (a fact, not a forecast)."
    ]
   },
   {
    "title": "Right now",
    "lines": [
     "Price 3856.1; volatility regime normal (hourly ATR 0.398% of price, 62.6th percentile).",
-    "Spot XAUUSD 3847.94; the perpetual trades +0.21% from spot."
+    "Spot XAUUSD 3847.93; the perpetual trades +0.21% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 201,
+ "runs": 202,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
