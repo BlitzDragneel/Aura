@@ -6321,14 +6321,22 @@
     74.01
    ],
    "R": 1.1007,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-17",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 75.38,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.106,
+   "R_tp1": 0.4,
+   "pips": 15.7,
+   "closed_ms": 1794961860000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 5 closed, avg -0.19R, 60% won."
   },
   {
    "id": "DOGEUSD-S3-1794957300000",
@@ -6414,7 +6422,7 @@
     3826.18
    ],
    "R": 15.464,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -6423,7 +6431,15 @@
    "day": "2026-11-18",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3847.6,
+   "outcome": "TP3",
+   "R_ladder": 0.896,
+   "R_tp1": 0.527,
+   "pips": 138.5,
+   "closed_ms": 1794962040000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 19 min (best 1.4R, worst -0.1R). Lesson so far: breakout with the trend: 12 closed, avg -0.85R, 17% won."
   },
   {
    "id": "XAGUSD-S4-1794960900000",
@@ -6447,7 +6463,7 @@
     47.89
    ],
    "R": 0.3464,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -6456,7 +6472,15 @@
    "day": "2026-11-18",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 47.39,
+   "outcome": "SL",
+   "R_ladder": -1.089,
+   "R_tp1": -1.089,
+   "pips": -36.6,
+   "closed_ms": 1794962040000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 19 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). Lesson so far: fib pullback with the trend: 26 closed, avg -0.17R, 62% won."
   },
   {
    "id": "ADAUSD-S4-1794960900000",
@@ -6575,6 +6599,165 @@
     9.4428
    ],
    "R": 0.13186,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XAUUSD-S7-1794962700000",
+   "symbol": "XAUUSD",
+   "setup": "S7",
+   "side": "sell",
+   "why": "moved -31.10 in the last hour, twice its normal hourly range",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794962700000,
+   "ref_price": 3825.0,
+   "stop": 3840.46,
+   "targets": [
+    3816.66,
+    3812.67,
+    3803.58
+   ],
+   "R": 15.464,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "XAGUSD-S2-1794962700000",
+   "symbol": "XAGUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794962700000,
+   "ref_price": 47.04,
+   "stop": 47.386,
+   "targets": [
+    46.89,
+    46.79,
+    46.57
+   ],
+   "R": 0.3464,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "XAGUSD-S3-1794962700000",
+   "symbol": "XAGUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1794962700000,
+   "ref_price": 47.04,
+   "stop": 46.694,
+   "targets": [
+    47.27,
+    47.39,
+    47.53
+   ],
+   "R": 0.3464,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "DOGEUSD-S4-1794962700000",
+   "symbol": "DOGEUSD",
+   "setup": "S4",
+   "side": "buy",
+   "why": "pulled back half of a strong up-leg",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794962700000,
+   "ref_price": 0.05977,
+   "stop": 0.058985,
+   "targets": [
+    0.060184,
+    0.060466,
+    0.060898
+   ],
+   "R": 0.000785,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "LTCUSD-S4-1794962700000",
+   "symbol": "LTCUSD",
+   "setup": "S4",
+   "side": "buy",
+   "why": "pulled back half of a strong up-leg",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794962700000,
+   "ref_price": 44.97,
+   "stop": 44.452,
+   "targets": [
+    45.22,
+    45.42,
+    45.74
+   ],
+   "R": 0.5179,
    "status": "open",
    "target_odds": [
     60,
@@ -7053,6 +7236,14 @@
     "total_R": -0.19,
     "grade": "PAPER"
    },
+   "SOLUSD S3": {
+    "n": 1,
+    "avg_R": 0.106,
+    "t": null,
+    "win": 1.0,
+    "total_R": 0.11,
+    "grade": "PAPER"
+   },
    "SOLUSD S4": {
     "n": 2,
     "avg_R": -0.431,
@@ -7166,11 +7357,11 @@
     "grade": "PAPER"
    },
    "XAGUSD S4": {
-    "n": 3,
-    "avg_R": -0.633,
-    "t": -1.39,
-    "win": 0.333,
-    "total_R": -1.9,
+    "n": 4,
+    "avg_R": -0.747,
+    "t": -2.18,
+    "win": 0.25,
+    "total_R": -2.99,
     "grade": "PAPER"
    },
    "XAGUSD S5": {
@@ -7206,11 +7397,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S2": {
-    "n": 2,
-    "avg_R": -0.454,
-    "t": -0.82,
-    "win": 0.5,
-    "total_R": -0.91,
+    "n": 3,
+    "avg_R": -0.004,
+    "t": -0.01,
+    "win": 0.667,
+    "total_R": -0.01,
     "grade": "PAPER"
    },
    "XAUUSD S3": {
@@ -7311,25 +7502,25 @@
     "total_R": -8.0
    },
    "S2": {
-    "n": 26,
-    "avg_R": -0.798,
-    "t": -7.39,
-    "win": 0.192,
-    "total_R": -20.75
+    "n": 27,
+    "avg_R": -0.735,
+    "t": -6.06,
+    "win": 0.222,
+    "total_R": -19.86
    },
    "S3": {
-    "n": 17,
-    "avg_R": 0.181,
-    "t": 0.77,
-    "win": 0.706,
-    "total_R": 3.08
+    "n": 18,
+    "avg_R": 0.177,
+    "t": 0.79,
+    "win": 0.722,
+    "total_R": 3.19
    },
    "S4": {
-    "n": 32,
-    "avg_R": -0.256,
-    "t": -1.92,
-    "win": 0.562,
-    "total_R": -8.2
+    "n": 33,
+    "avg_R": -0.281,
+    "t": -2.13,
+    "win": 0.545,
+    "total_R": -9.29
    },
    "S5": {
     "n": 17,
@@ -7354,13 +7545,13 @@
    }
   },
   "all": {
-   "n": 161,
-   "avg_R": -0.233,
-   "t": -3.71,
-   "win": 0.553,
-   "total_R": -37.58
+   "n": 164,
+   "avg_R": -0.23,
+   "t": -3.68,
+   "win": 0.555,
+   "total_R": -37.67
   },
-  "open": 9
+  "open": 11
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -7434,11 +7625,11 @@
    "total_R": -8.0
   },
   "S2 | Asia": {
-   "n": 19,
-   "avg_R": -0.699,
-   "t": -4.93,
-   "win": 0.263,
-   "total_R": -13.29
+   "n": 20,
+   "avg_R": -0.619,
+   "t": -3.96,
+   "win": 0.3,
+   "total_R": -12.39
   },
   "S2 | London": {
    "n": 3,
@@ -7462,11 +7653,11 @@
    "total_R": -10.59
   },
   "S2 | compressed": {
-   "n": 2,
-   "avg_R": -1.083,
-   "t": -309.57,
-   "win": 0.0,
-   "total_R": -2.17
+   "n": 3,
+   "avg_R": -0.424,
+   "t": -0.64,
+   "win": 0.333,
+   "total_R": -1.27
   },
   "S2 | expanding": {
    "n": 5,
@@ -7504,18 +7695,18 @@
    "total_R": -1.11
   },
   "S2 | vol normal": {
-   "n": 22,
-   "avg_R": -0.802,
-   "t": -6.74,
-   "win": 0.182,
-   "total_R": -17.65
+   "n": 23,
+   "avg_R": -0.728,
+   "t": -5.37,
+   "win": 0.217,
+   "total_R": -16.75
   },
   "S2 | with trend": {
-   "n": 12,
-   "avg_R": -0.847,
-   "t": -6.16,
-   "win": 0.167,
-   "total_R": -10.17
+   "n": 13,
+   "avg_R": -0.713,
+   "t": -3.87,
+   "win": 0.231,
+   "total_R": -9.27
   },
   "S3 | Asia": {
    "n": 2,
@@ -7539,25 +7730,25 @@
    "total_R": 6.72
   },
   "S3 | against trend": {
-   "n": 5,
-   "avg_R": -0.191,
-   "t": -0.49,
-   "win": 0.6,
-   "total_R": -0.95
+   "n": 6,
+   "avg_R": -0.141,
+   "t": -0.44,
+   "win": 0.667,
+   "total_R": -0.85
   },
   "S3 | expanding": {
-   "n": 5,
-   "avg_R": 1.003,
-   "t": 3.53,
+   "n": 6,
+   "avg_R": 0.853,
+   "t": 3.09,
    "win": 1.0,
-   "total_R": 5.01
+   "total_R": 5.12
   },
   "S3 | late": {
-   "n": 1,
-   "avg_R": 0.091,
-   "t": null,
+   "n": 2,
+   "avg_R": 0.099,
+   "t": 13.13,
    "win": 1.0,
-   "total_R": 0.09
+   "total_R": 0.2
   },
   "S3 | normal": {
    "n": 12,
@@ -7581,11 +7772,11 @@
    "total_R": 1.03
   },
   "S3 | vol normal": {
-   "n": 13,
-   "avg_R": 0.138,
-   "t": 0.45,
-   "win": 0.615,
-   "total_R": 1.79
+   "n": 14,
+   "avg_R": 0.136,
+   "t": 0.48,
+   "win": 0.643,
+   "total_R": 1.9
   },
   "S3 | with trend": {
    "n": 12,
@@ -7595,11 +7786,11 @@
    "total_R": 4.03
   },
   "S4 | Asia": {
-   "n": 24,
-   "avg_R": -0.179,
-   "t": -1.1,
-   "win": 0.583,
-   "total_R": -4.29
+   "n": 25,
+   "avg_R": -0.215,
+   "t": -1.35,
+   "win": 0.56,
+   "total_R": -5.38
   },
   "S4 | London": {
    "n": 1,
@@ -7644,11 +7835,11 @@
    "total_R": -1.05
   },
   "S4 | normal": {
-   "n": 21,
-   "avg_R": -0.248,
-   "t": -1.53,
-   "win": 0.571,
-   "total_R": -5.2
+   "n": 22,
+   "avg_R": -0.286,
+   "t": -1.8,
+   "win": 0.545,
+   "total_R": -6.29
   },
   "S4 | vol high": {
    "n": 2,
@@ -7665,18 +7856,18 @@
    "total_R": -2.39
   },
   "S4 | vol normal": {
-   "n": 24,
-   "avg_R": -0.168,
-   "t": -1.09,
-   "win": 0.625,
-   "total_R": -4.04
+   "n": 25,
+   "avg_R": -0.205,
+   "t": -1.34,
+   "win": 0.6,
+   "total_R": -5.13
   },
   "S4 | with trend": {
-   "n": 26,
-   "avg_R": -0.168,
-   "t": -1.12,
-   "win": 0.615,
-   "total_R": -4.36
+   "n": 27,
+   "avg_R": -0.202,
+   "t": -1.36,
+   "win": 0.593,
+   "total_R": -5.45
   },
   "S5 | London": {
    "n": 14,

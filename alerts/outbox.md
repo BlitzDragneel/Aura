@@ -399,3 +399,12 @@ Market now: trend up, volatility normal, Asia session
 ⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~64727.9
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-18 00:45:56 UTC
+⚡ Gold: BIG MOVE under way right now (moved -31.10 in the last hour, twice its normal hourly range), price ~3825.0
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.10R). Logged and scored anyway.
+
+⚡ Silver: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~47.04
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
