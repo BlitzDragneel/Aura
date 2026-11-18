@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 00:15 UTC
+Updated 2026-11-18 00:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -96,6 +96,9 @@ Updated 2026-11-18 00:15 UTC
 
 ## Latest signals
 
+- 18 Nov 00:30 LINKUSD buy S4 @ 9.272 SL 9.1401 → open
+- 18 Nov 00:30 BTCUSD buy S4 @ 64727.9 SL 64074.32 → open
+- 18 Nov 00:30 XAUUSD buy S3 @ 3838.3 SL 3822.84 → open
 - 18 Nov 00:15 ADAUSD buy S4 @ 0.1546 SL 0.152307 → open
 - 18 Nov 00:15 XAGUSD buy S4 @ 47.4 SL 47.054 → open
 - 18 Nov 00:15 XAUUSD sell S2 @ 3847.6 SL 3863.06 → open
@@ -153,6 +156,3 @@ Updated 2026-11-18 00:15 UTC
 - 17 Nov 05:30 ETHUSD buy S2 @ 1839.4 SL 1822.2 → closed SL -1.06R. Stopped out after 62 min. Price never reached TP1 (best was 0.1R in favour, TP1 needs 0.5R). Lesson so far: breakout with the trend: 11 closed, avg -0.83R, 18% won.
 - 17 Nov 05:15 LTCUSD sell S1 @ 44.67 SL 45.101 → closed SL -1.06R. Stopped out after 429 min. Price never reached TP1 (best was 0.8R in favour, TP1 needed 0.9R). Lesson so far: trend pullback with the trend: 27 closed, avg -0.26R, 56% won.
 - 17 Nov 05:15 XRPUSD buy S4 @ 0.9616 SL 0.951614 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 16 closed, avg +0.05R, 75% won.
-- 17 Nov 05:15 BTCUSD sell S1 @ 64800.0 SL 65291.49 → closed TP2+BE +0.70R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 25 closed, avg -0.26R, 56% won.
-- 17 Nov 04:45 DOGEUSD buy S4 @ 0.05918 SL 0.058445 → closed SL -1.05R. Stopped out after 274 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). Lesson so far: fib pullback with the trend: 22 closed, avg -0.14R, 64% won.
-- 17 Nov 03:30 SUIUSD buy S2 @ 0.7268 SL 0.717093 → closed SL -1.04R. Stopped out after 185 min. Price never reached TP1 (best was 0.4R in favour, TP1 needs 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 7 closed, avg -0.61R, 29% won.

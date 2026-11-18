@@ -394,3 +394,8 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~47.4
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-18 00:31:10 UTC
+⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~64727.9
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).

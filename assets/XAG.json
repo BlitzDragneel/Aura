@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-18T00:15:50.089751+00:00",
+ "asof": "2026-11-18T00:31:04.810070+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 47.4,
-  "bar": "2026-11-18T00:00:00+00:00",
+  "price": 47.23,
+  "bar": "2026-11-18T00:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 47.4,
-    "ma20": 47.471,
-    "ma50": 47.6086,
-    "slope_atr": 0.04,
-    "bar": "2026-11-18T00:00:00+00:00"
+    "close": 47.23,
+    "ma20": 47.459,
+    "ma50": 47.5974,
+    "slope_atr": -0.1,
+    "bar": "2026-11-18T00:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.61,
   "spot": {
-   "price": 47.318,
-   "bid": 47.2957,
-   "ask": 47.3403,
-   "spread": 0.0446,
+   "price": 47.1595,
+   "bid": 47.1357,
+   "ask": 47.1833,
+   "spread": 0.0476,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.173
+   "perp_premium_pct": 0.149
   },
   "funding": {
-   "rate": 0.0002719586379505,
+   "rate": 0.0002775243410587,
    "next_time": 1794988800000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 47.4; volatility regime normal (hourly ATR 0.728% of price, 58.6th percentile).",
-    "Spot XAGUSD 47.32; the perpetual trades +0.17% from spot."
+    "Price 47.23; volatility regime normal (hourly ATR 0.728% of price, 58.6th percentile).",
+    "Spot XAGUSD 47.16; the perpetual trades +0.15% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 204,
+ "runs": 205,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
