@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 11:01 UTC
+Updated 2026-11-18 11:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -42,7 +42,7 @@ Updated 2026-11-18 11:01 UTC
 | ETHUSD S1 | 4 | -0.161 | -0.54 | 0.75 | PAPER |
 | ETHUSD S2 | 2 | -1.056 | -528.0 | 0.0 | PAPER |
 | ETHUSD S3 | 2 | 0.319 | 0.23 | 0.5 | PAPER |
-| ETHUSD S4 | 3 | -0.133 | -0.27 | 0.667 | PAPER |
+| ETHUSD S4 | 4 | -0.36 | -0.87 | 0.5 | PAPER |
 | ETHUSD S5 | 2 | -1.064 | -354.67 | 0.0 | PAPER |
 | ETHUSD S6 | 3 | 0.79 | 2.06 | 1.0 | PAPER |
 | ETHUSD S7 | 2 | -0.225 | -0.27 | 0.5 | PAPER |
@@ -73,7 +73,7 @@ Updated 2026-11-18 11:01 UTC
 | SUIUSD S1 | 3 | -0.245 | -0.61 | 0.667 | PAPER |
 | SUIUSD S2 | 3 | -1.048 | -479.3 | 0.0 | PAPER |
 | SUIUSD S3 | 1 | -1.062 | None | 0.0 | PAPER |
-| SUIUSD S4 | 2 | 0.47 | 1.61 | 1.0 | PAPER |
+| SUIUSD S4 | 3 | -0.033 | -0.06 | 0.667 | PAPER |
 | SUIUSD S5 | 2 | -1.055 | -703.67 | 0.0 | PAPER |
 | SUIUSD S6 | 3 | -0.244 | -0.6 | 0.667 | PAPER |
 | SUIUSD S7 | 1 | 0.106 | None | 1.0 | PAPER |
@@ -102,6 +102,11 @@ Updated 2026-11-18 11:01 UTC
 
 ## Latest signals
 
+- 18 Nov 11:15 SUIUSD buy S3 @ 0.7218 SL 0.714414 → open
+- 18 Nov 11:15 LTCUSD buy S3 @ 44.1 SL 43.724 → open
+- 18 Nov 11:15 LINKUSD sell S2 @ 9.127 SL 9.2166 → open
+- 18 Nov 11:15 AVAXUSD sell S2 @ 7.061 SL 7.1348 → open
+- 18 Nov 11:15 DOGEUSD sell S2 @ 0.05914 SL 0.059644 → open
 - 18 Nov 10:45 ETHUSD sell S2 @ 1803.02 SL 1817.69 → open
 - 18 Nov 10:30 BNBUSD sell S2 @ 589.43 SL 592.61 → open
 - 18 Nov 10:30 BTCUSD sell S2 @ 64309.9 SL 64748.26 → open
@@ -157,8 +162,3 @@ Updated 2026-11-18 11:01 UTC
 - 18 Nov 01:30 BTCUSD sell S1 @ 64563.3 SL 65211.87 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won.
 - 18 Nov 01:15 AVAXUSD buy S4 @ 7.216 SL 7.1072 → closed SL -1.04R. Stopped out after 551 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 34 closed, avg -0.22R, 56% won.
 - 18 Nov 01:15 BNBUSD buy S4 @ 594.54 SL 589.53 → closed SL -1.07R. Stopped out after 551 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 34 closed, avg -0.22R, 56% won.
-- 18 Nov 01:15 SOLUSD buy S4 @ 74.7 SL 73.541 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 31 closed, avg -0.31R, 52% won.
-- 18 Nov 01:00 SUIUSD buy S4 @ 0.7337 SL 0.72195 → open
-- 18 Nov 01:00 XRPUSD buy S4 @ 0.9777 SL 0.965257 → closed TP3 +1.03R. TP3 after 407 min (best 2.1R, worst -0.7R). Lesson so far: fib pullback with the trend: 33 closed, avg -0.26R, 55% won.
-- 18 Nov 01:00 ETHUSD buy S4 @ 1819.86 SL 1795.95 → open
-- 18 Nov 00:45 LTCUSD buy S4 @ 44.97 SL 44.452 → closed SL -1.05R. Stopped out after 76 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 27 closed, avg -0.20R, 59% won.
