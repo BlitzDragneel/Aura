@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 13:31 UTC
+Updated 2026-11-18 13:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Updated 2026-11-18 13:31 UTC
 | ADAUSD S6 | 3 | 0.24 | 33.2 | 1.0 | PAPER |
 | ADAUSD S7 | 1 | 0.679 | None | 1.0 | PAPER |
 | AVAXUSD S1 | 3 | -0.608 | -1.4 | 0.333 | PAPER |
-| AVAXUSD S2 | 2 | -0.478 | -0.84 | 0.5 | PAPER |
+| AVAXUSD S2 | 3 | -0.671 | -1.77 | 0.333 | PAPER |
 | AVAXUSD S3 | 3 | 0.634 | 2.54 | 1.0 | PAPER |
 | AVAXUSD S4 | 3 | -0.406 | -0.64 | 0.333 | PAPER |
 | AVAXUSD S5 | 3 | -1.053 | -311.17 | 0.0 | PAPER |
@@ -107,7 +107,7 @@ Updated 2026-11-18 13:31 UTC
 - 18 Nov 11:15 SUIUSD buy S3 @ 0.7218 SL 0.714414 → closed TP1+BE +0.20R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 14 closed, avg +0.36R, 79% won.
 - 18 Nov 11:15 LTCUSD buy S3 @ 44.1 SL 43.724 → open
 - 18 Nov 11:15 LINKUSD sell S2 @ 9.127 SL 9.2166 → open
-- 18 Nov 11:15 AVAXUSD sell S2 @ 7.061 SL 7.1348 → open
+- 18 Nov 11:15 AVAXUSD sell S2 @ 7.061 SL 7.1348 → closed SL -1.06R. Stopped out after 136 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.7R). Lesson so far: breakout with the trend: 19 closed, avg -0.49R, 37% won.
 - 18 Nov 11:15 DOGEUSD sell S2 @ 0.05914 SL 0.059644 → open
 - 18 Nov 10:45 ETHUSD sell S2 @ 1803.02 SL 1817.69 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
 - 18 Nov 10:30 BNBUSD sell S2 @ 589.43 SL 592.61 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 16 closed, avg -0.73R, 19% won.
