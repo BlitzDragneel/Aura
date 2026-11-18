@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 02:15 UTC
+Updated 2026-11-18 02:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -25,7 +25,7 @@ Updated 2026-11-18 02:15 UTC
 | BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
 | BNBUSD S6 | 2 | 0.453 | 2.03 | 1.0 | PAPER |
 | BNBUSD S7 | 1 | -1.1 | None | 0.0 | PAPER |
-| BTCUSD S1 | 2 | 0.491 | 2.33 | 1.0 | PAPER |
+| BTCUSD S1 | 3 | 0.386 | 2.39 | 1.0 | PAPER |
 | BTCUSD S2 | 2 | -1.018 | -2037.0 | 0.0 | PAPER |
 | BTCUSD S3 | 1 | -1.023 | None | 0.0 | PAPER |
 | BTCUSD S4 | 3 | -0.176 | -0.42 | 0.667 | PAPER |
@@ -39,7 +39,7 @@ Updated 2026-11-18 02:15 UTC
 | DOGEUSD S5 | 1 | -1.068 | None | 0.0 | PAPER |
 | DOGEUSD S6 | 2 | 0.172 | 19.11 | 1.0 | PAPER |
 | DOGEUSD S7 | 1 | 0.61 | None | 1.0 | PAPER |
-| ETHUSD S1 | 3 | -0.258 | -0.65 | 0.667 | PAPER |
+| ETHUSD S1 | 4 | -0.161 | -0.54 | 0.75 | PAPER |
 | ETHUSD S2 | 2 | -1.056 | -528.0 | 0.0 | PAPER |
 | ETHUSD S3 | 2 | 0.319 | 0.23 | 0.5 | PAPER |
 | ETHUSD S4 | 3 | -0.133 | -0.27 | 0.667 | PAPER |
@@ -98,9 +98,10 @@ Updated 2026-11-18 02:15 UTC
 
 ## Latest signals
 
+- 18 Nov 02:30 XRPUSD buy S1 @ 0.9768 SL 0.965114 → open
 - 18 Nov 02:15 SOLUSD buy S1 @ 74.51 SL 73.404 → open
-- 18 Nov 01:30 ETHUSD sell S1 @ 1810.62 SL 1834.53 → open
-- 18 Nov 01:30 BTCUSD sell S1 @ 64563.3 SL 65211.87 → open
+- 18 Nov 01:30 ETHUSD sell S1 @ 1810.62 SL 1834.53 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won.
+- 18 Nov 01:30 BTCUSD sell S1 @ 64563.3 SL 65211.87 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won.
 - 18 Nov 01:15 AVAXUSD buy S4 @ 7.216 SL 7.1072 → open
 - 18 Nov 01:15 BNBUSD buy S4 @ 594.54 SL 589.53 → open
 - 18 Nov 01:15 SOLUSD buy S4 @ 74.7 SL 73.541 → open
@@ -157,4 +158,3 @@ Updated 2026-11-18 02:15 UTC
 - 17 Nov 07:00 LTCUSD sell S6 @ 44.59 SL 44.959 → closed SL -1.07R. Stopped out after 283 min. Price never reached TP1 (best was 0.7R in favour, TP1 needed 1.0R). Lesson so far: daily bias with the trend: 15 closed, avg +0.27R, 100% won.
 - 17 Nov 07:00 LINKUSD sell S6 @ 9.158 SL 9.2456 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 12 closed, avg +0.29R, 100% won.
 - 17 Nov 07:00 AVAXUSD sell S6 @ 7.186 SL 7.2618 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 12 closed, avg +0.29R, 100% won.
-- 17 Nov 07:00 ADAUSD sell S6 @ 0.153 SL 0.154507 → closed TP1+BE +0.25R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry.

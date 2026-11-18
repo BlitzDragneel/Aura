@@ -7031,7 +7031,7 @@
     63698.75
    ],
    "R": 648.571,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -7040,7 +7040,15 @@
    "day": "2026-11-18",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 64563.3,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.174,
+   "R_tp1": 0.552,
+   "pips": 112.6,
+   "closed_ms": 1794968880000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won."
   },
   {
    "id": "ETHUSD-S1-1794965400000",
@@ -7064,14 +7072,22 @@
     1776.5
    ],
    "R": 23.907,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-18",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 1810.61,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.129,
+   "R_tp1": 0.469,
+   "pips": 30.8,
+   "closed_ms": 1794968880000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 28 closed, avg -0.29R, 54% won."
   },
   {
    "id": "SOLUSD-S1-1794968100000",
@@ -7095,6 +7111,37 @@
     76.078
    ],
    "R": 1.1064,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XRPUSD-S1-1794969000000",
+   "symbol": "XRPUSD",
+   "setup": "S1",
+   "side": "buy",
+   "why": "uptrend, price closed back above its short average after a dip",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794969000000,
+   "ref_price": 0.9768,
+   "stop": 0.965114,
+   "targets": [
+    0.984396,
+    0.989759,
+    0.995544
+   ],
+   "R": 0.0116857,
    "status": "open",
    "target_odds": [
     60,
@@ -7278,11 +7325,11 @@
     "grade": "PAPER"
    },
    "BTCUSD S1": {
-    "n": 2,
-    "avg_R": 0.491,
-    "t": 2.33,
+    "n": 3,
+    "avg_R": 0.386,
+    "t": 2.39,
     "win": 1.0,
-    "total_R": 0.98,
+    "total_R": 1.16,
     "grade": "PAPER"
    },
    "BTCUSD S2": {
@@ -7390,11 +7437,11 @@
     "grade": "PAPER"
    },
    "ETHUSD S1": {
-    "n": 3,
-    "avg_R": -0.258,
-    "t": -0.65,
-    "win": 0.667,
-    "total_R": -0.77,
+    "n": 4,
+    "avg_R": -0.161,
+    "t": -0.54,
+    "win": 0.75,
+    "total_R": -0.65,
     "grade": "PAPER"
    },
    "ETHUSD S2": {
@@ -7840,11 +7887,11 @@
   },
   "by_setup": {
    "S1": {
-    "n": 28,
-    "avg_R": -0.286,
-    "t": -1.96,
-    "win": 0.536,
-    "total_R": -8.0
+    "n": 30,
+    "avg_R": -0.257,
+    "t": -1.87,
+    "win": 0.567,
+    "total_R": -7.7
    },
    "S2": {
     "n": 28,
@@ -7890,21 +7937,21 @@
    }
   },
   "all": {
-   "n": 171,
-   "avg_R": -0.234,
-   "t": -3.83,
-   "win": 0.55,
-   "total_R": -40.09
+   "n": 173,
+   "avg_R": -0.23,
+   "t": -3.79,
+   "win": 0.555,
+   "total_R": -39.78
   },
-  "open": 13
+  "open": 12
  },
  "record_by_context": {
   "S1 | Asia": {
-   "n": 24,
-   "avg_R": -0.251,
-   "t": -1.54,
-   "win": 0.542,
-   "total_R": -6.02
+   "n": 26,
+   "avg_R": -0.22,
+   "t": -1.45,
+   "win": 0.577,
+   "total_R": -5.72
   },
   "S1 | London": {
    "n": 1,
@@ -7935,11 +7982,11 @@
    "total_R": -1.01
   },
   "S1 | normal": {
-   "n": 18,
-   "avg_R": -0.403,
-   "t": -2.24,
-   "win": 0.444,
-   "total_R": -7.25
+   "n": 20,
+   "avg_R": -0.347,
+   "t": -2.09,
+   "win": 0.5,
+   "total_R": -6.94
   },
   "S1 | vol high": {
    "n": 2,
@@ -7956,18 +8003,18 @@
    "total_R": 0.39
   },
   "S1 | vol normal": {
-   "n": 24,
-   "avg_R": -0.263,
-   "t": -1.83,
-   "win": 0.583,
-   "total_R": -6.31
+   "n": 26,
+   "avg_R": -0.231,
+   "t": -1.72,
+   "win": 0.615,
+   "total_R": -6.01
   },
   "S1 | with trend": {
-   "n": 28,
-   "avg_R": -0.286,
-   "t": -1.96,
-   "win": 0.536,
-   "total_R": -8.0
+   "n": 30,
+   "avg_R": -0.257,
+   "t": -1.87,
+   "win": 0.567,
+   "total_R": -7.7
   },
   "S2 | Asia": {
    "n": 21,

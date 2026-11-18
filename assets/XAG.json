@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-18T02:15:52.481909+00:00",
+ "asof": "2026-11-18T02:30:57.380633+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 46.35,
-  "bar": "2026-11-18T02:00:00+00:00",
+  "price": 46.31,
+  "bar": "2026-11-18T02:15:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 46.35,
-    "ma20": 47.257,
-    "ma50": 47.4634,
-    "slope_atr": -0.72,
-    "bar": "2026-11-18T02:00:00+00:00"
+    "close": 46.31,
+    "ma20": 47.197500000000005,
+    "ma50": 47.4406,
+    "slope_atr": -0.83,
+    "bar": "2026-11-18T02:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.61,
   "spot": {
-   "price": 46.1445,
-   "bid": 46.1192,
-   "ask": 46.1698,
-   "spread": 0.0506,
+   "price": 46.27105,
+   "bid": 46.2455,
+   "ask": 46.2966,
+   "spread": 0.0511,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.445
+   "perp_premium_pct": 0.084
   },
   "funding": {
-   "rate": 0.0002911280007138,
+   "rate": 0.0003082886735919,
    "next_time": 1794988800000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 46.35; volatility regime active (hourly ATR 0.859% of price, 80.0th percentile).",
-    "Spot XAGUSD 46.14; the perpetual trades +0.45% from spot."
+    "Price 46.31; volatility regime active (hourly ATR 0.859% of price, 80.0th percentile).",
+    "Spot XAGUSD 46.27; the perpetual trades +0.08% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 212,
+ "runs": 213,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
