@@ -36,9 +36,9 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 3734.3; volatility regime active (hourly ATR 0.532% of price, 92.8th percentile).
+- Price 3732.6; volatility regime active (hourly ATR 0.532% of price, 92.8th percentile).
 - CME daily break (21-22 UTC): spot quotes pause.
-- Spot XAUUSD 3727.35; the perpetual trades +0.19% from spot.
+- Spot XAUUSD 3724.09; the perpetual trades +0.23% from spot.
 
 ## My calls so far
 
