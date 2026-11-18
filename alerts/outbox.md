@@ -413,3 +413,6 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~64563.3
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-18 03:01:03 UTC
+👀 Silver swing: WATCH at 46.11. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
