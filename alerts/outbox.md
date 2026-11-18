@@ -545,3 +545,6 @@ session drive: 31 closed, avg -0.56R, 32% won
 daily bias: 41 closed, avg +0.23R, 88% won
 big move: 21 closed, avg +0.04R, 71% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-18 22:01:07 UTC
+👀 Bitcoin swing: WATCH at 62,315.20. Big move likely, direction unknown. scout: 54% chance of a big move in 24 h (top of its range; direction unknown)
