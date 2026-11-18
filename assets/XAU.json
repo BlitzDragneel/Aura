@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-18T05:00:58.352224+00:00",
+ "asof": "2026-11-18T05:15:45.101442+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3793.9,
-  "bar": "2026-11-18T04:45:00+00:00",
+  "price": 3792.5,
+  "bar": "2026-11-18T05:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3793.9,
-    "ma20": 3811.565,
-    "ma50": 3842.0180000000005,
-    "slope_atr": -1.8,
-    "bar": "2026-11-18T04:45:00+00:00"
+    "close": 3792.5,
+    "ma20": 3808.81,
+    "ma50": 3840.4040000000005,
+    "slope_atr": -1.83,
+    "bar": "2026-11-18T05:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -0.35,
   "spot": {
-   "price": 3784.99,
-   "bid": 3784.671,
-   "ask": 3785.309,
-   "spread": 0.638,
-   "age_s": 0,
+   "price": 3786.57,
+   "bid": 3786.253,
+   "ask": 3786.887,
+   "spread": 0.634,
+   "age_s": 1,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.235
+   "perp_premium_pct": 0.157
   },
   "funding": {
-   "rate": 0.0002892021201454,
+   "rate": 0.0002867735636856,
    "next_time": 1794988800000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3793.9; volatility regime normal (hourly ATR 0.42% of price, 71.0th percentile).",
-    "Spot XAUUSD 3784.99; the perpetual trades +0.23% from spot."
+    "Price 3792.5; volatility regime normal (hourly ATR 0.42% of price, 71.0th percentile).",
+    "Spot XAUUSD 3786.57; the perpetual trades +0.16% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 223,
+ "runs": 224,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

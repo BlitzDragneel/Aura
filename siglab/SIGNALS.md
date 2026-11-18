@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 05:01 UTC
+Updated 2026-11-18 05:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,6 +98,7 @@ Updated 2026-11-18 05:01 UTC
 
 ## Latest signals
 
+- 18 Nov 05:15 BNBUSD buy S1 @ 592.52 SL 587.89 → open
 - 18 Nov 04:30 DOGEUSD buy S1 @ 0.05942 SL 0.058686 → open
 - 18 Nov 03:15 LINKUSD buy S1 @ 9.215 SL 9.0887 → open
 - 18 Nov 02:45 AVAXUSD buy S3 @ 7.141 SL 7.0352 → open
@@ -157,4 +158,3 @@ Updated 2026-11-18 05:01 UTC
 - 17 Nov 07:30 XAGUSD buy S5 @ 47.67 SL 47.358 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 10 closed, avg -0.52R, 30% won.
 - 17 Nov 07:30 XAUUSD buy S5 @ 3881.8 SL 3868.73 → closed SL -1.01R. Stopped out after 105 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: session drive with the trend: 4 closed, avg -0.78R, 25% won.
 - 17 Nov 07:15 SUIUSD sell S4 @ 0.7232 SL 0.730786 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 23 closed, avg -0.18R, 61% won.
-- 17 Nov 07:00 SUIUSD sell S6 @ 0.7221 SL 0.729686 → closed SL -1.06R. Stopped out after 271 min. Price never reached TP1 (best was 0.6R in favour, TP1 needed 0.7R). Lesson so far: daily bias with the trend: 15 closed, avg +0.27R, 100% won.
