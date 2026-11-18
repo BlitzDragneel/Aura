@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 69 readings scored; big moves followed 12% of them, 17% after a WATCH (12 WATCH readings) - too few to judge yet.
+- My own record: 70 readings scored; big moves followed 11% of them, 15% after a WATCH (13 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 49 readings scored; big moves followed 33% of them - too few to judge yet.
+- My own record: 50 readings scored; big moves followed 34% of them - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -30,14 +30,14 @@ Built automatically from the research findings, the approved rules and my own fo
 ## Habits I measure myself
 
 - Over the last 20 days the busiest session was New York (average hourly move 0.20%) and the quietest late US (0.12%).
-- At weekends, while spot is closed, the perpetual moves 35% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- At weekends, while spot is closed, the perpetual moves 36% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 1.4% from low to high (last 60 days); 35% of those days closed higher.
 - Over the last 30 days the price moved -8.0% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3747.2; volatility regime active (hourly ATR 0.529% of price, 92.2th percentile).
-- Spot XAUUSD 3739.08; the perpetual trades +0.22% from spot.
+- Price 3745.1; volatility regime active (hourly ATR 0.527% of price, 91.8th percentile).
+- Spot XAUUSD 3732.74; the perpetual trades +0.33% from spot.
 
 ## My calls so far
 
