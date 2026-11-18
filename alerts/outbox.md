@@ -432,3 +432,6 @@ Market now: trend down, volatility normal, Asia session
 
 ## 2026-11-18 06:46:07 UTC
 🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 32 live signals (15 separate moments) averaging -0.34R.
+
+## 2026-11-18 07:01:02 UTC
+👀 Gold swing: WATCH at 3,785.50. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
