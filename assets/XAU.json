@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-18T22:01:04.796953+00:00",
+ "asof": "2026-11-18T22:15:51.582566+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3734.3,
-  "bar": "2026-11-18T21:45:00+00:00",
+  "price": 3733.0,
+  "bar": "2026-11-18T22:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3734.3,
-    "ma20": 3739.0150000000003,
-    "ma50": 3758.794,
-    "slope_atr": -0.82,
-    "bar": "2026-11-18T21:45:00+00:00"
+    "close": 3733.0,
+    "ma20": 3738.1800000000003,
+    "ma50": 3757.672,
+    "slope_atr": -0.74,
+    "bar": "2026-11-18T22:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -97,14 +97,13 @@
    "bid": 3723.553,
    "ask": 3724.187,
    "spread": 0.634,
-   "age_s": 64,
-   "stale": false,
-   "note": null,
-   "source": "swissquote",
-   "perp_premium_pct": 0.28
+   "age_s": 951,
+   "stale": true,
+   "note": "market closed or feed paused",
+   "source": "swissquote"
   },
   "funding": {
-   "rate": 0.0002704926242796,
+   "rate": 0.0002807951217941,
    "next_time": 1795046400000,
    "source": "okx-swap"
   },
@@ -141,7 +140,7 @@
   "day": {
    "state": "WAIT",
    "since": "2026-11-18T22:01:04.796953+00:00",
-   "previous": "WATCH",
+   "previous": "WAIT",
    "reasons": [
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
    ],
@@ -251,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3734.3; volatility regime active (hourly ATR 0.518% of price, 89.3th percentile).",
-    "Spot XAUUSD 3723.87; the perpetual trades +0.28% from spot."
+    "Price 3733.0; volatility regime active (hourly ATR 0.518% of price, 89.3th percentile).",
+    "Spot XAUUSD 3723.87 (stale: market closed)."
    ]
   },
   {
@@ -262,6 +261,6 @@
    ]
   }
  ],
- "runs": 293,
+ "runs": 294,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
