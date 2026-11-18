@@ -490,3 +490,6 @@ Bitcoin 64,336.70 | 1h trend flat | vol normal | typical day range 2.5% | big 4h
 Gold 3,780.90 | 1h trend down | vol normal | typical day range 1.4% | big 4h move chance 32% | day WAIT · swing WATCH · hold WAIT
 Silver 45.95 | 1h trend down | vol active | typical day range 2.54% | big 4h move chance 47% | day WAIT · swing WATCH · hold WAIT
 Calls come only from tested rules. WATCH = move likely, direction unknown.
+
+## 2026-11-18 13:00:51 UTC
+👀 Gold day: WATCH at 3,751.10. Big move likely, direction unknown. scout: 50% chance of a big move in 4 h (top of its range; direction unknown)
