@@ -455,3 +455,8 @@ Market now: trend down, volatility normal, London session
 
 ## 2026-11-18 07:46:03 UTC
 🔁 Learning: fib pullback with the trend is now back to normal.
+
+## 2026-11-18 08:01:19 UTC
+⚡ Nasdaq 100: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~27244.96
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
