@@ -419,3 +419,8 @@ Market now: trend down, volatility normal, Asia session
 
 ## 2026-11-18 04:15:53 UTC
 🧪 Gold WATCH-LIST signal (grade C, paper only, NOT a passed rule; failed on other markets): open interest jumped (z 2.01) while price moved -1.39% in 4h → SELL near 3,794.00, stop 3,810.33, target 3,761.34, 4h max.
+
+## 2026-11-18 05:31:13 UTC
+⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3797.2
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.

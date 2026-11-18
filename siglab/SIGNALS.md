@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 05:15 UTC
+Updated 2026-11-18 05:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,6 +98,11 @@ Updated 2026-11-18 05:15 UTC
 
 ## Latest signals
 
+- 18 Nov 05:30 SUIUSD buy S1 @ 0.7301 SL 0.719543 → open
+- 18 Nov 05:30 AVAXUSD buy S1 @ 7.179 SL 7.0774 → open
+- 18 Nov 05:30 ADAUSD buy S1 @ 0.1537 SL 0.151657 → open
+- 18 Nov 05:30 XRPUSD buy S2 @ 0.986 SL 0.974836 → open
+- 18 Nov 05:30 XAUUSD sell S4 @ 3797.2 SL 3813.15 → open
 - 18 Nov 05:15 BNBUSD buy S1 @ 592.52 SL 587.89 → open
 - 18 Nov 04:30 DOGEUSD buy S1 @ 0.05942 SL 0.058686 → open
 - 18 Nov 03:15 LINKUSD buy S1 @ 9.215 SL 9.0887 → open
@@ -153,8 +158,3 @@ Updated 2026-11-18 05:15 UTC
 - 17 Nov 07:30 DOGEUSD buy S5 @ 0.05903 SL 0.058511 → closed SL -1.07R. Stopped out after 95 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R).
 - 17 Nov 07:30 XRPUSD buy S5 @ 0.9606 SL 0.951957 → closed TP3 +1.10R. TP3 after 340 min (best 1.9R, worst -1.0R). Lesson so far: session drive with the trend: 5 closed, avg -0.83R, 20% won.
 - 17 Nov 07:30 SOLUSD buy S5 @ 72.93 SL 72.262 → closed SL -1.07R. Stopped out after 67 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R).
-- 17 Nov 07:30 ETHUSD buy S5 @ 1830.7 SL 1815.76 → closed SL -1.07R. Stopped out after 91 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R).
-- 17 Nov 07:30 BTCUSD buy S5 @ 64671.3 SL 64252.29 → closed SL -1.02R. Stopped out after 90 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: session drive against the trend: 6 closed, avg -0.16R, 50% won.
-- 17 Nov 07:30 XAGUSD buy S5 @ 47.67 SL 47.358 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 10 closed, avg -0.52R, 30% won.
-- 17 Nov 07:30 XAUUSD buy S5 @ 3881.8 SL 3868.73 → closed SL -1.01R. Stopped out after 105 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: session drive with the trend: 4 closed, avg -0.78R, 25% won.
-- 17 Nov 07:15 SUIUSD sell S4 @ 0.7232 SL 0.730786 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 23 closed, avg -0.18R, 61% won.
