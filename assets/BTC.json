@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-18T10:00:45.061408+00:00",
+ "asof": "2026-11-18T10:15:41.587773+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 64618.6,
-  "bar": "2026-11-18T09:45:00+00:00",
+  "price": 64552.1,
+  "bar": "2026-11-18T10:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 64618.6,
-    "ma20": 64661.45,
-    "ma50": 64604.65,
-    "slope_atr": 0.32,
-    "bar": "2026-11-18T09:45:00+00:00"
+    "close": 64552.1,
+    "ma20": 64660.31,
+    "ma50": 64608.69,
+    "slope_atr": 0.25,
+    "bar": "2026-11-18T10:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.11,
   "funding": {
-   "rate": 1.7382081378e-06,
+   "rate": -5.0279583862e-06,
    "next_time": 1795017600000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.217,
+    "p_big_move": 0.283,
     "flag": false,
     "detail": {
-     "p_up_move": 0.103,
-     "p_down_move": 0.115
+     "p_up_move": 0.131,
+     "p_down_move": 0.152
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -246,7 +246,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 64618.6; volatility regime normal (hourly ATR 0.678% of price, 50.4th percentile).",
+    "Price 64552.1; volatility regime normal (hourly ATR 0.678% of price, 50.4th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -257,6 +257,6 @@
    ]
   }
  ],
- "runs": 244,
+ "runs": 245,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
