@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 17:16 UTC
+Updated 2026-11-18 17:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@ Updated 2026-11-18 17:16 UTC
 | BTCUSD S7 | 2 | 0.442 | 1.55 | 1.0 | PAPER |
 | DOGEUSD S1 | 3 | -0.068 | -0.13 | 0.667 | PAPER |
 | DOGEUSD S2 | 3 | -1.058 | -167.0 | 0.0 | PAPER |
-| DOGEUSD S3 | 2 | 0.497 | 1.22 | 1.0 | PAPER |
+| DOGEUSD S3 | 3 | 0.705 | 2.25 | 1.0 | PAPER |
 | DOGEUSD S4 | 3 | -0.443 | -0.73 | 0.333 | PAPER |
 | DOGEUSD S5 | 2 | -1.065 | -355.0 | 0.0 | PAPER |
 | DOGEUSD S6 | 3 | 0.16 | 12.24 | 1.0 | PAPER |
@@ -110,7 +110,8 @@ Updated 2026-11-18 17:16 UTC
 
 ## Latest signals
 
-- 18 Nov 16:45 DOGEUSD buy S3 @ 0.05788 SL 0.057374 → open
+- 18 Nov 17:30 LINKUSD buy S7 @ 9.131 SL 9.0464 → open
+- 18 Nov 16:45 DOGEUSD buy S3 @ 0.05788 SL 0.057374 → closed TP3 +1.12R. TP3 after 35 min (best 2.0R, worst -0.2R). Lesson so far: stretch fade with the trend: 15 closed, avg +0.35R, 80% won.
 - 18 Nov 16:30 BNBUSD sell S7 @ 578.38 SL 581.62 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 9 closed, avg +0.13R, 78% won.
 - 18 Nov 16:30 BTCUSD sell S7 @ 62517.1 SL 62968.94 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 9 closed, avg +0.13R, 78% won.
 - 18 Nov 16:15 BNBUSD buy S3 @ 580.09 SL 576.85 → closed SL -1.11R. Stopped out after 5 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 15 closed, avg -0.12R, 60% won.
@@ -169,4 +170,3 @@ Updated 2026-11-18 17:16 UTC
 - 18 Nov 07:00 BTCUSD sell S6 @ 64579.1 SL 65034.95 → closed TP3 +1.10R. TP3 after 452 min (best 1.7R, worst -0.8R). Lesson so far: daily bias with the trend: 28 closed, avg +0.15R, 89% won.
 - 18 Nov 07:00 XAGUSD sell S6 @ 46.14 SL 46.524 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 19 closed, avg +0.12R, 90% won.
 - 18 Nov 07:00 XAUUSD sell S6 @ 3785.5 SL 3800.12 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 22 closed, avg +0.17R, 91% won.
-- 18 Nov 05:45 NAS100 sell S1 @ 27126.21 SL 27379.43 → closed TP2+BE +0.59R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 41 closed, avg -0.11R, 63% won.
