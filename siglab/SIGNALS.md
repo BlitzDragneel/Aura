@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 03:01 UTC
+Updated 2026-11-18 03:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,6 +98,7 @@ Updated 2026-11-18 03:01 UTC
 
 ## Latest signals
 
+- 18 Nov 03:15 LINKUSD buy S1 @ 9.215 SL 9.0887 → open
 - 18 Nov 02:45 AVAXUSD buy S3 @ 7.141 SL 7.0352 → open
 - 18 Nov 02:30 XRPUSD buy S1 @ 0.9768 SL 0.965114 → open
 - 18 Nov 02:15 SOLUSD buy S1 @ 74.51 SL 73.404 → open
@@ -157,4 +158,3 @@ Updated 2026-11-18 03:01 UTC
 - 17 Nov 07:15 SUIUSD sell S4 @ 0.7232 SL 0.730786 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 23 closed, avg -0.18R, 61% won.
 - 17 Nov 07:00 SUIUSD sell S6 @ 0.7221 SL 0.729686 → closed SL -1.06R. Stopped out after 271 min. Price never reached TP1 (best was 0.6R in favour, TP1 needed 0.7R). Lesson so far: daily bias with the trend: 15 closed, avg +0.27R, 100% won.
 - 17 Nov 07:00 LTCUSD sell S6 @ 44.59 SL 44.959 → closed SL -1.07R. Stopped out after 283 min. Price never reached TP1 (best was 0.7R in favour, TP1 needed 1.0R). Lesson so far: daily bias with the trend: 15 closed, avg +0.27R, 100% won.
-- 17 Nov 07:00 LINKUSD sell S6 @ 9.158 SL 9.2456 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 12 closed, avg +0.29R, 100% won.
