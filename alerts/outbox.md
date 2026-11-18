@@ -476,3 +476,10 @@ Market now: trend down, volatility normal, London session
 ⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3786.1
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-18 10:31:13 UTC
+⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~64309.9
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 36 live signals (16 separate moments) averaging -0.28R.
