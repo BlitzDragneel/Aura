@@ -6535,14 +6535,22 @@
     3860.26
    ],
    "R": 15.464,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-18",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 3838.3,
+   "outcome": "SL",
+   "R_ladder": -1.013,
+   "R_tp1": -1.013,
+   "pips": -156.6,
+   "closed_ms": 1794963300000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 25 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 6 closed, avg -0.14R, 67% won."
   },
   {
    "id": "BTCUSD-S4-1794961800000",
@@ -6758,6 +6766,99 @@
     45.74
    ],
    "R": 0.5179,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "ETHUSD-S4-1794963600000",
+   "symbol": "ETHUSD",
+   "setup": "S4",
+   "side": "buy",
+   "why": "pulled back half of a strong up-leg",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1794963600000,
+   "ref_price": 1819.86,
+   "stop": 1795.95,
+   "targets": [
+    1831.96,
+    1839.22,
+    1848.98
+   ],
+   "R": 23.907,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XRPUSD-S4-1794963600000",
+   "symbol": "XRPUSD",
+   "setup": "S4",
+   "side": "buy",
+   "why": "pulled back half of a strong up-leg",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794963600000,
+   "ref_price": 0.9777,
+   "stop": 0.965257,
+   "targets": [
+    0.985539,
+    0.991014,
+    0.996874
+   ],
+   "R": 0.0124429,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-18",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "SUIUSD-S4-1794963600000",
+   "symbol": "SUIUSD",
+   "setup": "S4",
+   "side": "buy",
+   "why": "pulled back half of a strong up-leg",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1794963600000,
+   "ref_price": 0.7337,
+   "stop": 0.72195,
+   "targets": [
+    0.73954,
+    0.743899,
+    0.749504
+   ],
+   "R": 0.01175,
    "status": "open",
    "target_odds": [
     60,
@@ -7405,11 +7506,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S3": {
-    "n": 2,
-    "avg_R": 0.127,
-    "t": 3.05,
-    "win": 1.0,
-    "total_R": 0.25,
+    "n": 3,
+    "avg_R": -0.253,
+    "t": -0.67,
+    "win": 0.667,
+    "total_R": -0.76,
     "grade": "PAPER"
    },
    "XAUUSD S4": {
@@ -7509,11 +7610,11 @@
     "total_R": -19.86
    },
    "S3": {
-    "n": 18,
-    "avg_R": 0.177,
-    "t": 0.79,
-    "win": 0.722,
-    "total_R": 3.19
+    "n": 19,
+    "avg_R": 0.114,
+    "t": 0.52,
+    "win": 0.684,
+    "total_R": 2.17
    },
    "S4": {
     "n": 33,
@@ -7545,13 +7646,13 @@
    }
   },
   "all": {
-   "n": 164,
-   "avg_R": -0.23,
-   "t": -3.68,
-   "win": 0.555,
-   "total_R": -37.67
+   "n": 165,
+   "avg_R": -0.234,
+   "t": -3.77,
+   "win": 0.552,
+   "total_R": -38.68
   },
-  "open": 11
+  "open": 13
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -7709,11 +7810,11 @@
    "total_R": -9.27
   },
   "S3 | Asia": {
-   "n": 2,
-   "avg_R": 0.129,
-   "t": 2.95,
-   "win": 1.0,
-   "total_R": 0.26
+   "n": 3,
+   "avg_R": -0.252,
+   "t": -0.66,
+   "win": 0.667,
+   "total_R": -0.76
   },
   "S3 | London": {
    "n": 7,
@@ -7730,11 +7831,11 @@
    "total_R": 6.72
   },
   "S3 | against trend": {
-   "n": 6,
-   "avg_R": -0.141,
-   "t": -0.44,
-   "win": 0.667,
-   "total_R": -0.85
+   "n": 7,
+   "avg_R": -0.266,
+   "t": -0.89,
+   "win": 0.571,
+   "total_R": -1.86
   },
   "S3 | expanding": {
    "n": 6,
@@ -7751,11 +7852,11 @@
    "total_R": 0.2
   },
   "S3 | normal": {
-   "n": 12,
-   "avg_R": -0.161,
-   "t": -0.62,
-   "win": 0.583,
-   "total_R": -1.93
+   "n": 13,
+   "avg_R": -0.227,
+   "t": -0.92,
+   "win": 0.538,
+   "total_R": -2.95
   },
   "S3 | vol high": {
    "n": 2,
@@ -7772,11 +7873,11 @@
    "total_R": 1.03
   },
   "S3 | vol normal": {
-   "n": 14,
-   "avg_R": 0.136,
-   "t": 0.48,
-   "win": 0.643,
-   "total_R": 1.9
+   "n": 15,
+   "avg_R": 0.059,
+   "t": 0.22,
+   "win": 0.6,
+   "total_R": 0.89
   },
   "S3 | with trend": {
    "n": 12,
