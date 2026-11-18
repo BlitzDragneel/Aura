@@ -530,3 +530,7 @@ Market now: trend down, volatility high, New York session
 
 ## 2026-11-18 17:01:02 UTC
 👀 Gold day: WATCH at 3,752.80. Big move likely, direction unknown. hourly volatility is high (90th percentile of the last 3 weeks)
+
+## 2026-11-18 18:15:58 UTC
+⏰ US news in 44 min: FOMC Meeting Minutes at 19:00 UTC / 03:00 PM Trinidad.
+Gold usually moves about 45% more in the hour after high-impact US news; the direction could not be predicted in testing (E152). Wider stops or stand aside for the release.
