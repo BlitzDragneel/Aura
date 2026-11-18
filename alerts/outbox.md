@@ -522,3 +522,8 @@ Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
 
 🔁 Learning: fib pullback with the trend is now back to normal.
+
+## 2026-11-18 16:31:07 UTC
+⚡ Bitcoin: BIG MOVE under way right now (moved -1048.80 in the last hour, twice its normal hourly range), price ~62517.1
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).

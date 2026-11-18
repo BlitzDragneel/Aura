@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 16:15 UTC
+Updated 2026-11-18 16:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -20,7 +20,7 @@ Updated 2026-11-18 16:15 UTC
 | AVAXUSD S7 | 2 | -0.217 | -0.26 | 0.5 | PAPER |
 | BNBUSD S1 | 3 | -0.635 | -1.44 | 0.333 | PAPER |
 | BNBUSD S2 | 3 | -0.703 | -1.78 | 0.333 | PAPER |
-| BNBUSD S3 | 1 | 0.936 | None | 1.0 | PAPER |
+| BNBUSD S3 | 2 | -0.085 | -0.08 | 0.5 | PAPER |
 | BNBUSD S4 | 4 | -0.44 | -1.21 | 0.5 | PAPER |
 | BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
 | BNBUSD S6 | 3 | 0.692 | 2.55 | 1.0 | PAPER |
@@ -110,7 +110,9 @@ Updated 2026-11-18 16:15 UTC
 
 ## Latest signals
 
-- 18 Nov 16:15 BNBUSD buy S3 @ 580.09 SL 576.85 → open
+- 18 Nov 16:30 BNBUSD sell S7 @ 578.38 SL 581.62 → open
+- 18 Nov 16:30 BTCUSD sell S7 @ 62517.1 SL 62968.94 → open
+- 18 Nov 16:15 BNBUSD buy S3 @ 580.09 SL 576.85 → closed SL -1.11R. Stopped out after 5 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 15 closed, avg -0.12R, 60% won.
 - 18 Nov 15:00 US30 sell S7 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 8 closed, avg +0.02R, 75% won.
 - 18 Nov 15:00 US30 sell S2 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: breakout with the trend: 20 closed, avg -0.52R, 35% won.
 - 18 Nov 15:00 NAS100 buy S3 @ 26900.59 SL 26743.2 → closed TP3 -0.35R. TP3 after 0 min (best 0.5R, worst -0.0R). Lesson so far: stretch fade against the trend: 12 closed, avg -0.22R, 58% won.
@@ -168,5 +170,3 @@ Updated 2026-11-18 16:15 UTC
 - 18 Nov 07:00 XAUUSD sell S6 @ 3785.5 SL 3800.12 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 22 closed, avg +0.17R, 91% won.
 - 18 Nov 05:45 NAS100 sell S1 @ 27126.21 SL 27379.43 → closed TP2+BE +0.59R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 41 closed, avg -0.11R, 63% won.
 - 18 Nov 05:30 SUIUSD buy S1 @ 0.7301 SL 0.719543 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 32 closed, avg -0.20R, 59% won.
-- 18 Nov 05:30 AVAXUSD buy S1 @ 7.179 SL 7.0774 → closed SL -1.04R. Stopped out after 301 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 36 closed, avg -0.15R, 64% won.
-- 18 Nov 05:30 ADAUSD buy S1 @ 0.1537 SL 0.151657 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 33 closed, avg -0.19R, 61% won.
