@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 16:00 UTC
+Updated 2026-11-18 16:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -110,6 +110,7 @@ Updated 2026-11-18 16:00 UTC
 
 ## Latest signals
 
+- 18 Nov 16:15 BNBUSD buy S3 @ 580.09 SL 576.85 → open
 - 18 Nov 15:00 US30 sell S7 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 8 closed, avg +0.02R, 75% won.
 - 18 Nov 15:00 US30 sell S2 @ 50275.69 SL 50426.91 → closed SL +0.97R. Stopped out after 0 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: breakout with the trend: 20 closed, avg -0.52R, 35% won.
 - 18 Nov 15:00 NAS100 buy S3 @ 26900.59 SL 26743.2 → closed TP3 -0.35R. TP3 after 0 min (best 0.5R, worst -0.0R). Lesson so far: stretch fade against the trend: 12 closed, avg -0.22R, 58% won.
@@ -169,4 +170,3 @@ Updated 2026-11-18 16:00 UTC
 - 18 Nov 05:30 SUIUSD buy S1 @ 0.7301 SL 0.719543 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 32 closed, avg -0.20R, 59% won.
 - 18 Nov 05:30 AVAXUSD buy S1 @ 7.179 SL 7.0774 → closed SL -1.04R. Stopped out after 301 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 36 closed, avg -0.15R, 64% won.
 - 18 Nov 05:30 ADAUSD buy S1 @ 0.1537 SL 0.151657 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 33 closed, avg -0.19R, 61% won.
-- 18 Nov 05:30 XRPUSD buy S2 @ 0.986 SL 0.974836 → closed TP3 +1.05R. TP3 after 139 min (best 1.6R, worst -0.4R). Lesson so far: breakout with the trend: 14 closed, avg -0.61R, 29% won.
