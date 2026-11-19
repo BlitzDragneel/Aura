@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 00:31 UTC
+Updated 2026-11-19 00:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -110,6 +110,11 @@ Updated 2026-11-19 00:31 UTC
 
 ## Latest signals
 
+- 19 Nov 00:45 LTCUSD buy S2 @ 44.23 SL 43.762 → open
+- 19 Nov 00:45 US30 sell S3 @ 50441.16 SL 50652.16 → open
+- 19 Nov 00:45 NAS100 sell S3 @ 27439.45 SL 27637.84 → open
+- 19 Nov 00:45 XAUUSD sell S3 @ 3761.0 SL 3779.46 → open
+- 19 Nov 00:45 XAUUSD buy S2 @ 3761.0 SL 3742.54 → open
 - 19 Nov 00:30 BTCUSD buy S4 @ 62847.2 SL 62242.72 → open
 - 19 Nov 00:30 XAGUSD buy S2 @ 45.68 SL 45.259 → open
 - 19 Nov 00:15 XRPUSD buy S4 @ 0.9648 SL 0.952993 → open
@@ -165,8 +170,3 @@ Updated 2026-11-19 00:31 UTC
 - 18 Nov 07:00 AVAXUSD sell S6 @ 7.15 SL 7.2301 → closed TP3 +1.05R. TP3 after 458 min (best 1.8R, worst -0.8R). Lesson so far: daily bias against the trend: 8 closed, avg +0.25R, 88% won.
 - 18 Nov 07:00 ADAUSD buy S6 @ 0.1536 SL 0.152 → closed TP1+BE +0.23R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 24 closed, avg +0.14R, 88% won.
 - 18 Nov 07:00 DOGEUSD buy S6 @ 0.0593 SL 0.058729 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 24 closed, avg +0.14R, 88% won.
-- 18 Nov 07:00 XRPUSD buy S6 @ 0.9853 SL 0.976129 → closed TP3 +1.29R. TP3 after 47 min (best 2.0R, worst -0.1R). Lesson so far: daily bias with the trend: 19 closed, avg +0.12R, 90% won.
-- 18 Nov 07:00 BNBUSD sell S6 @ 592.09 SL 595.62 → closed TP3 +1.17R. TP3 after 457 min (best 1.8R, worst -0.6R). Lesson so far: daily bias against the trend: 8 closed, avg +0.25R, 88% won.
-- 18 Nov 07:00 SOLUSD buy S6 @ 74.61 SL 73.751 → closed SL -1.05R. Stopped out after 458 min. Price never reached TP1 (best was 0.8R in favour, TP1 needed 0.8R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 28 closed, avg +0.15R, 89% won.
-- 18 Nov 07:00 ETHUSD sell S6 @ 1808.37 SL 1824.78 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 26 closed, avg +0.14R, 88% won.
-- 18 Nov 07:00 US30 sell S6 @ 50767.32 SL 50919.32 → closed SL -1.01R. Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.9R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 23 closed, avg +0.19R, 91% won.
