@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 10:15 UTC
+Updated 2026-11-19 10:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -92,7 +92,7 @@ Updated 2026-11-19 10:15 UTC
 | XAGUSD S3 | 4 | 0.138 | 0.3 | 0.75 | PAPER |
 | XAGUSD S4 | 5 | -0.577 | -1.83 | 0.4 | PAPER |
 | XAGUSD S5 | 2 | 0.213 | 1.43 | 1.0 | PAPER |
-| XAGUSD S6 | 3 | 0.073 | 5.63 | 1.0 | PAPER |
+| XAGUSD S6 | 4 | 0.08 | 6.76 | 1.0 | PAPER |
 | XAGUSD S7 | 2 | -0.268 | -0.34 | 0.5 | PAPER |
 | XAUUSD S1 | 4 | 0.059 | 0.09 | 0.5 | PAPER |
 | XAUUSD S2 | 4 | -0.256 | -0.55 | 0.5 | PAPER |
@@ -140,7 +140,7 @@ Updated 2026-11-19 10:15 UTC
 - 19 Nov 07:00 US30 sell S6 @ 50467.29 SL 50608.5 → open
 - 19 Nov 07:00 NAS100 sell S6 @ 27534.14 SL 27720.6 → open
 - 19 Nov 07:00 BTCUSD sell S6 @ 63721.3 SL 64315.06 → open
-- 19 Nov 07:00 XAGUSD sell S6 @ 45.51 SL 45.922 → open
+- 19 Nov 07:00 XAGUSD sell S6 @ 45.51 SL 45.922 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 32 closed, avg +0.12R, 84% won.
 - 19 Nov 07:00 XAUUSD sell S6 @ 3739.4 SL 3757.84 → open
 - 19 Nov 06:45 NAS100 buy S2 @ 27547.2 SL 27348.06 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 21 closed, avg -0.45R, 38% won.
 - 19 Nov 04:15 XRPUSD buy S2 @ 0.9717 SL 0.959786 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 23 closed, avg -0.66R, 26% won.
