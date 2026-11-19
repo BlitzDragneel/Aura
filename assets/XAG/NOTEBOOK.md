@@ -36,8 +36,8 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 42.98; volatility regime extreme (hourly ATR 1.127% of price, 98.8th percentile).
-- Spot XAGUSD 42.85; the perpetual trades +0.30% from spot.
+- Price 42.64; volatility regime extreme (hourly ATR 1.127% of price, 98.8th percentile).
+- Spot XAGUSD 42.56; the perpetual trades +0.19% from spot.
 
 ## My calls so far
 
