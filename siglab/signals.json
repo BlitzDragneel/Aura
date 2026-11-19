@@ -12244,14 +12244,22 @@
     9.0336
    ],
    "R": 0.09943,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-19",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 9.166,
+   "outcome": "SL",
+   "R_ladder": -1.055,
+   "R_tp1": -1.055,
+   "pips": -114.4,
+   "closed_ms": 1795096800000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 420 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). Lesson so far: daily bias with the trend: 36 closed, avg +0.06R, 81% won."
   },
   {
    "id": "LTCUSD-S6-1795071600000",
@@ -12863,6 +12871,136 @@
    "closed_ms": 1795091460000,
    "source": "yahoo-YM=F-1m minus basis 68.7",
    "review": "Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 20 closed, avg +0.01R, 65% won."
+  },
+  {
+   "id": "XAUUSD-S5-1795096800000",
+   "symbol": "XAUUSD",
+   "setup": "S5",
+   "side": "sell",
+   "why": "New York open drive",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "New York",
+    "with_trend": true
+   },
+   "logged_ms": 1795096800000,
+   "ref_price": 3721.2,
+   "stop": 3739.5,
+   "targets": [
+    3705.74,
+    3699.08,
+    3691.21
+   ],
+   "R": 18.3,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "NAS100-S5-1795096800000",
+   "symbol": "NAS100",
+   "setup": "S5",
+   "side": "sell",
+   "why": "New York open drive",
+   "state": {
+    "trend": "up",
+    "vol": "low",
+    "shape": "compressed",
+    "session": "New York",
+    "with_trend": false
+   },
+   "logged_ms": 1795096800000,
+   "ref_price": 27582.45,
+   "stop": 27720.75,
+   "targets": [
+    27489.23,
+    27415.1,
+    27304.18
+   ],
+   "R": 138.304,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "US30-S5-1795096800000",
+   "symbol": "US30",
+   "setup": "S5",
+   "side": "sell",
+   "why": "New York open drive",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "New York",
+    "with_trend": true
+   },
+   "logged_ms": 1795096800000,
+   "ref_price": 50462.16,
+   "stop": 50566.8,
+   "targets": [
+    50371.75,
+    50312.73,
+    50195.01
+   ],
+   "R": 104.643,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "DOGEUSD-S5-1795096800000",
+   "symbol": "DOGEUSD",
+   "setup": "S5",
+   "side": "buy",
+   "why": "New York open drive",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "New York",
+    "with_trend": true
+   },
+   "logged_ms": 1795096800000,
+   "ref_price": 0.05974,
+   "stop": 0.059273,
+   "targets": [
+    0.05999,
+    0.06017,
+    0.060578
+   ],
+   "R": 0.0004671,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -13246,11 +13384,11 @@
     "grade": "PAPER"
    },
    "LINKUSD S6": {
-    "n": 3,
-    "avg_R": 0.177,
-    "t": 22.06,
-    "win": 1.0,
-    "total_R": 0.53,
+    "n": 4,
+    "avg_R": -0.131,
+    "t": -0.43,
+    "win": 0.75,
+    "total_R": -0.52,
     "grade": "PAPER"
    },
    "LINKUSD S7": {
@@ -13739,11 +13877,11 @@
     "total_R": -20.88
    },
    "S6": {
-    "n": 49,
-    "avg_R": 0.114,
-    "t": 1.23,
-    "win": 0.816,
-    "total_R": 5.6
+    "n": 50,
+    "avg_R": 0.091,
+    "t": 0.97,
+    "win": 0.8,
+    "total_R": 4.54
    },
    "S7": {
     "n": 23,
@@ -13754,13 +13892,13 @@
    }
   },
   "all": {
-   "n": 317,
-   "avg_R": -0.162,
-   "t": -3.61,
-   "win": 0.584,
-   "total_R": -51.2
+   "n": 318,
+   "avg_R": -0.164,
+   "t": -3.68,
+   "win": 0.582,
+   "total_R": -52.26
   },
-  "open": 13
+  "open": 16
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -14149,11 +14287,11 @@
    "total_R": -11.92
   },
   "S6 | Asia": {
-   "n": 49,
-   "avg_R": 0.114,
-   "t": 1.23,
-   "win": 0.816,
-   "total_R": 5.6
+   "n": 50,
+   "avg_R": 0.091,
+   "t": 0.97,
+   "win": 0.8,
+   "total_R": 4.54
   },
   "S6 | against trend": {
    "n": 13,
@@ -14177,11 +14315,11 @@
    "total_R": -0.72
   },
   "S6 | normal": {
-   "n": 29,
-   "avg_R": 0.008,
-   "t": 0.07,
-   "win": 0.793,
-   "total_R": 0.25
+   "n": 30,
+   "avg_R": -0.027,
+   "t": -0.23,
+   "win": 0.767,
+   "total_R": -0.81
   },
   "S6 | vol high": {
    "n": 2,
@@ -14191,11 +14329,11 @@
    "total_R": -0.91
   },
   "S6 | vol low": {
-   "n": 16,
-   "avg_R": 0.023,
-   "t": 0.11,
-   "win": 0.688,
-   "total_R": 0.36
+   "n": 17,
+   "avg_R": -0.041,
+   "t": -0.2,
+   "win": 0.647,
+   "total_R": -0.69
   },
   "S6 | vol normal": {
    "n": 31,
@@ -14205,11 +14343,11 @@
    "total_R": 6.15
   },
   "S6 | with trend": {
-   "n": 36,
-   "avg_R": 0.06,
-   "t": 0.58,
-   "win": 0.806,
-   "total_R": 2.16
+   "n": 37,
+   "avg_R": 0.03,
+   "t": 0.29,
+   "win": 0.784,
+   "total_R": 1.11
   },
   "S7 | Asia": {
    "n": 4,

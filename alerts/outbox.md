@@ -661,3 +661,16 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 ⚡ Dow 30: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~50481.29
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-19 14:01:16 UTC
+⚡ Gold: SESSION DRIVE right now (New York open drive), price ~3721.2
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Nasdaq 100: SESSION DRIVE right now (New York open drive), price ~27582.45
+Market now: trend up, volatility low, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+⚡ Dow 30: SESSION DRIVE right now (New York open drive), price ~50462.16
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).

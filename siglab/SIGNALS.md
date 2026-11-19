@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 13:45 UTC
+Updated 2026-11-19 14:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -51,7 +51,7 @@ Updated 2026-11-19 13:45 UTC
 | LINKUSD S3 | 1 | -1.068 | None | 0.0 | PAPER |
 | LINKUSD S4 | 4 | -0.592 | -1.3 | 0.25 | PAPER |
 | LINKUSD S5 | 4 | -0.601 | -1.31 | 0.25 | PAPER |
-| LINKUSD S6 | 3 | 0.177 | 22.06 | 1.0 | PAPER |
+| LINKUSD S6 | 4 | -0.131 | -0.43 | 0.75 | PAPER |
 | LINKUSD S7 | 2 | 0.081 | 0.07 | 0.5 | PAPER |
 | LTCUSD S1 | 5 | 0.108 | 0.2 | 0.6 | PAPER |
 | LTCUSD S2 | 4 | -1.06 | -408.72 | 0.0 | PAPER |
@@ -111,6 +111,10 @@ Updated 2026-11-19 13:45 UTC
 
 ## Latest signals
 
+- 19 Nov 14:00 DOGEUSD buy S5 @ 0.05974 SL 0.059273 → open
+- 19 Nov 14:00 US30 sell S5 @ 50462.16 SL 50566.8 → open
+- 19 Nov 14:00 NAS100 sell S5 @ 27582.45 SL 27720.75 → open
+- 19 Nov 14:00 XAUUSD sell S5 @ 3721.2 SL 3739.5 → open
 - 19 Nov 12:30 US30 buy S4 @ 50481.29 SL 50374.57 → closed TP1+BE +0.02R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 20 closed, avg +0.01R, 65% won.
 - 19 Nov 09:45 AVAXUSD buy S2 @ 7.112 SL 7.0367 → open
 - 19 Nov 09:45 ADAUSD buy S2 @ 0.1544 SL 0.152871 → closed SL -1.06R. Stopped out after 160 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 22 closed, avg -0.42R, 41% won.
@@ -128,7 +132,7 @@ Updated 2026-11-19 13:45 UTC
 - 19 Nov 07:30 BTCUSD sell S5 @ 63547.8 SL 64141.56 → open
 - 19 Nov 07:00 SUIUSD sell S6 @ 0.727 SL 0.735914 → open
 - 19 Nov 07:00 LTCUSD sell S6 @ 44.68 SL 45.091 → open
-- 19 Nov 07:00 LINKUSD sell S6 @ 9.166 SL 9.2654 → open
+- 19 Nov 07:00 LINKUSD sell S6 @ 9.166 SL 9.2654 → closed SL -1.05R. Stopped out after 420 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). Lesson so far: daily bias with the trend: 36 closed, avg +0.06R, 81% won.
 - 19 Nov 07:00 AVAXUSD sell S6 @ 7.063 SL 7.1456 → closed SL -1.05R. Stopped out after 360 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.8R). Lesson so far: daily bias with the trend: 33 closed, avg +0.12R, 85% won.
 - 19 Nov 07:00 ADAUSD sell S6 @ 0.1537 SL 0.155393 → closed SL -1.05R. Stopped out after 367 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). Lesson so far: daily bias with the trend: 35 closed, avg +0.09R, 83% won.
 - 19 Nov 07:00 DOGEUSD buy S6 @ 0.05941 SL 0.058788 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 11 closed, avg +0.29R, 82% won.
@@ -167,7 +171,3 @@ Updated 2026-11-19 13:45 UTC
 - 19 Nov 01:30 SUIUSD buy S4 @ 0.7144 SL 0.704507 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 10 closed, avg -0.47R, 40% won.
 - 19 Nov 01:30 SUIUSD sell S1 @ 0.7144 SL 0.724293 → closed SL -1.04R. Stopped out after 137 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 46 closed, avg -0.04R, 67% won.
 - 19 Nov 01:30 LINKUSD buy S4 @ 9.024 SL 8.9186 → closed TP3 +0.78R. TP3 after 196 min (best 1.3R, worst -0.6R). Lesson so far: fib pullback against the trend: 13 closed, avg -0.38R, 46% won.
-- 19 Nov 01:30 LINKUSD sell S1 @ 9.024 SL 9.1294 → closed SL -1.05R. Stopped out after 151 min. Price never reached TP1 (best was 0.6R in favour, TP1 needed 0.7R). Lesson so far: trend pullback with the trend: 53 closed, avg -0.14R, 60% won.
-- 19 Nov 01:30 AVAXUSD sell S1 @ 6.979 SL 7.0746 → closed SL -1.04R. Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.7R). Lesson so far: trend pullback with the trend: 50 closed, avg -0.09R, 64% won.
-- 19 Nov 01:30 ADAUSD sell S1 @ 0.1506 SL 0.152464 → closed SL -1.05R. Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 50 closed, avg -0.09R, 64% won.
-- 19 Nov 01:30 DOGEUSD sell S1 @ 0.05854 SL 0.059235 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 44 closed, avg -0.04R, 66% won.
