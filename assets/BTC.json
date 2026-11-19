@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-19T19:15:37.159813+00:00",
+ "asof": "2026-11-19T19:30:49.794174+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 62692.1,
-  "bar": "2026-11-19T19:00:00+00:00",
+  "price": 62795.3,
+  "bar": "2026-11-19T19:15:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 62692.1,
-    "ma20": 63088.344999999994,
-    "ma50": 63487.93,
-    "slope_atr": -0.58,
-    "bar": "2026-11-19T19:00:00+00:00"
+    "close": 62795.3,
+    "ma20": 63033.06999999999,
+    "ma50": 63469.41,
+    "slope_atr": -0.6,
+    "bar": "2026-11-19T19:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.9,
   "funding": {
-   "rate": 7.16205749936e-05,
+   "rate": 7.47086137243e-05,
    "next_time": 1795132800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.254,
+    "p_big_move": 0.237,
     "flag": false,
     "detail": {
-     "p_up_move": 0.138,
-     "p_down_move": 0.116
+     "p_up_move": 0.126,
+     "p_down_move": 0.111
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -246,7 +246,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 62692.1; volatility regime normal (hourly ATR 0.839% of price, 70.6th percentile).",
+    "Price 62795.3; volatility regime normal (hourly ATR 0.839% of price, 70.6th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -257,6 +257,6 @@
    ]
   }
  ],
- "runs": 381,
+ "runs": 382,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
