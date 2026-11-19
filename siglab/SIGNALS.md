@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 08:31 UTC
+Updated 2026-11-19 08:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -71,7 +71,7 @@ Updated 2026-11-19 08:31 UTC
 | SOLUSD S3 | 1 | 0.106 | None | 1.0 | PAPER |
 | SOLUSD S4 | 4 | 0.073 | 0.17 | 0.75 | PAPER |
 | SOLUSD S5 | 2 | -1.059 | -151.29 | 0.0 | PAPER |
-| SOLUSD S6 | 3 | -0.238 | -0.58 | 0.667 | PAPER |
+| SOLUSD S6 | 4 | -0.443 | -1.25 | 0.5 | PAPER |
 | SOLUSD S7 | 2 | -0.271 | -0.35 | 0.5 | PAPER |
 | SUIUSD S1 | 4 | -0.445 | -1.27 | 0.5 | PAPER |
 | SUIUSD S2 | 3 | -1.048 | -479.3 | 0.0 | PAPER |
@@ -131,7 +131,7 @@ Updated 2026-11-19 08:31 UTC
 - 19 Nov 07:00 XRPUSD sell S3 @ 0.9837 SL 0.993893 → open
 - 19 Nov 07:00 BNBUSD sell S6 @ 589.76 SL 594.3 → open
 - 19 Nov 07:00 BNBUSD sell S3 @ 589.76 SL 594.3 → open
-- 19 Nov 07:00 SOLUSD buy S6 @ 75.1 SL 74.305 → open
+- 19 Nov 07:00 SOLUSD buy S6 @ 75.1 SL 74.305 → closed SL -1.06R. Stopped out after 104 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.6R). Lesson so far: daily bias with the trend: 31 closed, avg +0.16R, 87% won.
 - 19 Nov 07:00 ETHUSD sell S6 @ 1807.14 SL 1825.01 → open
 - 19 Nov 07:00 US30 sell S6 @ 50467.29 SL 50608.5 → open
 - 19 Nov 07:00 NAS100 sell S6 @ 27534.14 SL 27720.6 → open
