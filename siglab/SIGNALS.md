@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 02:01 UTC
+Updated 2026-11-19 02:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ Updated 2026-11-19 02:01 UTC
 | XAGUSD S1 | 3 | -0.084 | -0.16 | 0.667 | PAPER |
 | XAGUSD S2 | 4 | -0.344 | -0.77 | 0.5 | PAPER |
 | XAGUSD S3 | 3 | -0.181 | -0.39 | 0.667 | PAPER |
-| XAGUSD S4 | 4 | -0.747 | -2.18 | 0.25 | PAPER |
+| XAGUSD S4 | 5 | -0.577 | -1.83 | 0.4 | PAPER |
 | XAGUSD S5 | 2 | 0.213 | 1.43 | 1.0 | PAPER |
 | XAGUSD S6 | 3 | 0.073 | 5.63 | 1.0 | PAPER |
 | XAGUSD S7 | 1 | 0.526 | None | 1.0 | PAPER |
@@ -110,6 +110,7 @@ Updated 2026-11-19 02:01 UTC
 
 ## Latest signals
 
+- 19 Nov 02:15 US30 sell S1 @ 50333.29 SL 50551.15 → open
 - 19 Nov 01:45 AVAXUSD buy S4 @ 7.001 SL 6.9054 → open
 - 19 Nov 01:45 ADAUSD buy S4 @ 0.1509 SL 0.149036 → open
 - 19 Nov 01:45 DOGEUSD buy S4 @ 0.05864 SL 0.057945 → open
@@ -128,7 +129,7 @@ Updated 2026-11-19 02:01 UTC
 - 19 Nov 01:30 BNBUSD sell S1 @ 580.98 SL 585.72 → open
 - 19 Nov 01:30 SOLUSD buy S4 @ 73.22 SL 72.321 → open
 - 19 Nov 01:30 BTCUSD sell S1 @ 62640.0 SL 63256.29 → open
-- 19 Nov 01:30 XAGUSD buy S4 @ 45.48 SL 45.045 → open
+- 19 Nov 01:30 XAGUSD buy S4 @ 45.48 SL 45.045 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 9 closed, avg -0.53R, 33% won.
 - 19 Nov 01:30 XAGUSD sell S1 @ 45.48 SL 45.915 → open
 - 19 Nov 01:00 XRPUSD sell S1 @ 0.9675 SL 0.979164 → open
 - 19 Nov 00:45 LTCUSD buy S2 @ 44.23 SL 43.762 → open
@@ -169,4 +170,3 @@ Updated 2026-11-19 02:01 UTC
 - 18 Nov 08:15 LTCUSD sell S1 @ 44.6 SL 45.004 → closed TP3 +1.18R. TP3 after 267 min (best 1.9R, worst -0.3R). Lesson so far: trend pullback with the trend: 37 closed, avg -0.18R, 62% won.
 - 18 Nov 08:00 LTCUSD buy S2 @ 44.8 SL 44.396 → closed SL -1.07R. Stopped out after 131 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 15 closed, avg -0.71R, 20% won.
 - 18 Nov 08:00 ADAUSD buy S2 @ 0.1546 SL 0.153036 → closed SL -1.06R. Stopped out after 155 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.8R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 15 closed, avg -0.50R, 33% won.
-- 18 Nov 08:00 NAS100 buy S2 @ 27244.96 SL 27049.96 → closed TP1+BE -0.01R. Reached TP1 then came back to the entry (best 0.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 14 closed, avg -0.76R, 21% won.

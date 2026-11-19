@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-19T02:00:52.476480+00:00",
+ "asof": "2026-11-19T02:15:42.735617+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 62819.4,
-  "bar": "2026-11-19T01:45:00+00:00",
+  "price": 62851.9,
+  "bar": "2026-11-19T02:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 62819.4,
-    "ma20": 62681.39,
-    "ma50": 62932.475999999995,
-    "slope_atr": 0.2,
-    "bar": "2026-11-19T01:45:00+00:00"
+    "close": 62851.9,
+    "ma20": 62701.69499999999,
+    "ma50": 62909.672,
+    "slope_atr": 0.19,
+    "bar": "2026-11-19T02:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.9,
   "funding": {
-   "rate": -2.90999352773e-05,
+   "rate": -2.82309390566e-05,
    "next_time": 1795075200000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.208,
+    "p_big_move": 0.205,
     "flag": false,
     "detail": {
-     "p_up_move": 0.088,
-     "p_down_move": 0.12
+     "p_up_move": 0.087,
+     "p_down_move": 0.118
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -129,7 +129,7 @@
   "day": {
    "state": "WATCH",
    "since": "2026-11-19T02:00:52.476480+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "hourly volatility is high (90th percentile of the last 3 weeks)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -141,7 +141,7 @@
   "swing": {
    "state": "WATCH",
    "since": "2026-11-19T02:00:52.476480+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "scout: 46% chance of a big move in 24 h (top of its range; direction unknown)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -248,7 +248,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 62819.4; volatility regime active (hourly ATR 1.051% of price, 90.5th percentile).",
+    "Price 62851.9; volatility regime active (hourly ATR 1.051% of price, 90.5th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -259,6 +259,6 @@
    ]
   }
  ],
- "runs": 310,
+ "runs": 311,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
