@@ -548,3 +548,12 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 
 ## 2026-11-18 22:01:07 UTC
 👀 Bitcoin swing: WATCH at 62,315.20. Big move likely, direction unknown. scout: 54% chance of a big move in 24 h (top of its range; direction unknown)
+
+## 2026-11-19 00:31:14 UTC
+⚡ Silver: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~45.68
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~62847.2
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).

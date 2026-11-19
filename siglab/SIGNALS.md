@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 00:15 UTC
+Updated 2026-11-19 00:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -110,6 +110,8 @@ Updated 2026-11-19 00:15 UTC
 
 ## Latest signals
 
+- 19 Nov 00:30 BTCUSD buy S4 @ 62847.2 SL 62242.72 → open
+- 19 Nov 00:30 XAGUSD buy S2 @ 45.68 SL 45.259 → open
 - 19 Nov 00:15 XRPUSD buy S4 @ 0.9648 SL 0.952993 → open
 - 19 Nov 00:00 XAGUSD sell S3 @ 45.57 SL 45.991 → open
 - 18 Nov 17:30 LINKUSD buy S7 @ 9.131 SL 9.0464 → closed SL -1.06R. Stopped out after 23 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 9 closed, avg +0.05R, 67% won.
@@ -168,5 +170,3 @@ Updated 2026-11-19 00:15 UTC
 - 18 Nov 07:00 SOLUSD buy S6 @ 74.61 SL 73.751 → closed SL -1.05R. Stopped out after 458 min. Price never reached TP1 (best was 0.8R in favour, TP1 needed 0.8R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 28 closed, avg +0.15R, 89% won.
 - 18 Nov 07:00 ETHUSD sell S6 @ 1808.37 SL 1824.78 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 26 closed, avg +0.14R, 88% won.
 - 18 Nov 07:00 US30 sell S6 @ 50767.32 SL 50919.32 → closed SL -1.01R. Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.9R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 23 closed, avg +0.19R, 91% won.
-- 18 Nov 07:00 NAS100 sell S6 @ 27133.65 SL 27338.96 → closed TP2+BE +0.67R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 30 closed, avg +0.15R, 87% won.
-- 18 Nov 07:00 BTCUSD sell S6 @ 64579.1 SL 65034.95 → closed TP3 +1.10R. TP3 after 452 min (best 1.7R, worst -0.8R). Lesson so far: daily bias with the trend: 28 closed, avg +0.15R, 89% won.
