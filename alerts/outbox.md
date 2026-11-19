@@ -703,3 +703,14 @@ Market now: trend up, volatility high, New York session
 
 ## 2026-11-19 20:01:03 UTC
 👀 Bitcoin swing: WATCH at 62,341.00. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-19 21:01:36 UTC
+📊 Signal Lab, end of day: 357 paper signals closed so far, avg -0.12R, 0 open.
+trend pullback: 57 closed, avg -0.14R, 60% won
+breakout: 56 closed, avg -0.43R, 43% won
+stretch fade: 46 closed, avg +0.17R, 74% won
+fib pullback: 62 closed, avg -0.16R, 56% won
+session drive: 44 closed, avg -0.37R, 39% won
+daily bias: 56 closed, avg +0.24R, 82% won
+big move: 36 closed, avg -0.12R, 61% won
+Earning trust: none yet (needs 15+ closed and a positive average)
