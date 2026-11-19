@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 04:31 UTC
+Updated 2026-11-19 04:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -21,7 +21,7 @@ Updated 2026-11-19 04:31 UTC
 | BNBUSD S1 | 4 | -0.445 | -1.21 | 0.5 | PAPER |
 | BNBUSD S2 | 3 | -0.703 | -1.78 | 0.333 | PAPER |
 | BNBUSD S3 | 2 | -0.085 | -0.08 | 0.5 | PAPER |
-| BNBUSD S4 | 4 | -0.44 | -1.21 | 0.5 | PAPER |
+| BNBUSD S4 | 5 | -0.218 | -0.61 | 0.6 | PAPER |
 | BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
 | BNBUSD S6 | 3 | 0.692 | 2.55 | 1.0 | PAPER |
 | BNBUSD S7 | 2 | -0.502 | -0.84 | 0.5 | PAPER |
@@ -69,7 +69,7 @@ Updated 2026-11-19 04:31 UTC
 | SOLUSD S1 | 3 | -0.121 | -0.26 | 0.667 | PAPER |
 | SOLUSD S2 | 3 | -0.419 | -0.66 | 0.333 | PAPER |
 | SOLUSD S3 | 1 | 0.106 | None | 1.0 | PAPER |
-| SOLUSD S4 | 3 | -0.234 | -0.58 | 0.667 | PAPER |
+| SOLUSD S4 | 4 | 0.073 | 0.17 | 0.75 | PAPER |
 | SOLUSD S5 | 2 | -1.059 | -151.29 | 0.0 | PAPER |
 | SOLUSD S6 | 3 | -0.238 | -0.58 | 0.667 | PAPER |
 | SOLUSD S7 | 2 | -0.271 | -0.35 | 0.5 | PAPER |
@@ -125,7 +125,7 @@ Updated 2026-11-19 04:31 UTC
 - 19 Nov 01:45 AVAXUSD buy S4 @ 7.001 SL 6.9054 → open
 - 19 Nov 01:45 ADAUSD buy S4 @ 0.1509 SL 0.149036 → open
 - 19 Nov 01:45 DOGEUSD buy S4 @ 0.05864 SL 0.057945 → open
-- 19 Nov 01:45 BNBUSD buy S4 @ 581.45 SL 576.71 → open
+- 19 Nov 01:45 BNBUSD buy S4 @ 581.45 SL 576.71 → closed TP3 +0.67R. TP3 after 179 min (best 1.2R, worst -0.9R). Lesson so far: fib pullback against the trend: 12 closed, avg -0.47R, 42% won.
 - 19 Nov 01:45 SOLUSD buy S1 @ 73.41 SL 72.511 → open
 - 19 Nov 01:45 ETHUSD buy S4 @ 1777.3 SL 1756.11 → open
 - 19 Nov 01:45 NAS100 buy S4 @ 27249.14 SL 27046.32 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 38 closed, avg -0.26R, 53% won.
@@ -138,7 +138,7 @@ Updated 2026-11-19 04:31 UTC
 - 19 Nov 01:30 ADAUSD sell S1 @ 0.1506 SL 0.152464 → closed SL -1.05R. Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 50 closed, avg -0.09R, 64% won.
 - 19 Nov 01:30 DOGEUSD sell S1 @ 0.05854 SL 0.059235 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 44 closed, avg -0.04R, 66% won.
 - 19 Nov 01:30 BNBUSD sell S1 @ 580.98 SL 585.72 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 44 closed, avg -0.04R, 66% won.
-- 19 Nov 01:30 SOLUSD buy S4 @ 73.22 SL 72.321 → open
+- 19 Nov 01:30 SOLUSD buy S4 @ 73.22 SL 72.321 → closed TP3 +0.99R. TP3 after 187 min (best 1.6R, worst -0.4R). Lesson so far: fib pullback with the trend: 39 closed, avg -0.25R, 51% won.
 - 19 Nov 01:30 BTCUSD sell S1 @ 62640.0 SL 63256.29 → closed SL -1.02R. Stopped out after 148 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: trend pullback with the trend: 46 closed, avg -0.04R, 67% won.
 - 19 Nov 01:30 XAGUSD buy S4 @ 45.48 SL 45.045 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 9 closed, avg -0.53R, 33% won.
 - 19 Nov 01:30 XAGUSD sell S1 @ 45.48 SL 45.915 → closed TP3 +0.96R. TP3 after 95 min (best 1.7R, worst -0.6R). Lesson so far: trend pullback with the trend: 42 closed, avg -0.10R, 64% won.
