@@ -628,3 +628,6 @@ Market now: trend up, volatility normal, Asia session
 ⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~63322.8
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-19 06:01:05 UTC
+👀 Gold day: WATCH at 3,746.40. Big move likely, direction unknown. scout: 34% chance of a big move in 4 h (top of its range; direction unknown)
