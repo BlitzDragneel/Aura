@@ -1,44 +1,44 @@
 # Fast scouts (15-minute candles, 4-hour horizon) — forward record
 
-Updated 2026-11-19 02:28 UTC. Predictions so far: 1189; scored (horizon passed): 1160. Models trained to 2026-11-03. Every prediction is written before its outcome is known. Information only: no bot trades these.
+Updated 2026-11-19 10:43 UTC. Predictions so far: 1218; scored (horizon passed): 1189. Models trained to 2026-11-03. Every prediction is written before its outcome is known. Information only: no bot trades these.
 
 | Scout | forward AUC | flagged calls | hit rate when flagged | base rate | paper P&L of flags after costs |
 |---|---|---|---|---|---|
-| UpScout | 0.789 | 34 | 82.4% | 9.2% | +242 bp/trade |
-| DownScout | 0.631 | 16 | 50.0% | 22.7% | +27 bp/trade |
+| UpScout | 0.778 | 34 | 82.4% | 9.4% | +242 bp/trade |
+| DownScout | 0.631 | 16 | 50.0% | 22.1% | +27 bp/trade |
 
 Skill is real only if forward AUC stays above 0.55 and flagged hit rates stay above the base rate over hundreds of scored calls (history: UpScout AUC 0.61, DownScout 0.57 in 2025–26).
 
-## Latest call (2026-11-19T02:00 UTC)
+## Latest call (2026-11-19T10:15 UTC)
 
 | coin | P(up move 4h) | P(down move 4h) | P(trend turns up) | P(trend turns down) | flags |
 |---|---|---|---|---|---|
-| TRXUSDT | 16% | 14% | 0% | 30% |  |
-| NEARUSDT | 14% | 12% | 0% | 30% |  |
-| BCHUSDT | 12% | 13% | 0% | 27% |  |
-| WIFUSDT | 12% | 11% | 0% | 26% |  |
-| ETCUSDT | 11% | 12% | 0% | 28% |  |
-| BNBUSDT | 11% | 13% | 0% | 28% |  |
-| ATOMUSDT | 11% | 12% | 0% | 28% |  |
-| DOGEUSDT | 11% | 11% | 0% | 26% |  |
-| LTCUSDT | 10% | 11% | 0% | 26% |  |
-| AAVEUSDT | 10% | 12% | 0% | 30% |  |
-| ARBUSDT | 10% | 11% | 0% | 25% |  |
-| UNIUSDT | 10% | 11% | 0% | 28% |  |
-| SEIUSDT | 10% | 11% | 0% | 26% |  |
-| OPUSDT | 9% | 10% | 0% | 24% |  |
-| SOLUSDT | 9% | 12% | 0% | 35% |  |
-| SUIUSDT | 9% | 11% | 0% | 26% |  |
-| TIAUSDT | 9% | 11% | 0% | 25% |  |
-| ETHUSDT | 9% | 11% | 0% | 27% |  |
-| DOTUSDT | 9% | 12% | 0% | 25% |  |
-| BTCUSDT | 9% | 12% | 0% | 27% |  |
-| INJUSDT | 9% | 10% | 0% | 21% |  |
-| APTUSDT | 9% | 11% | 0% | 25% |  |
-| LINKUSDT | 9% | 12% | 0% | 24% |  |
-| AVAXUSDT | 9% | 11% | 0% | 27% |  |
-| ADAUSDT | 8% | 11% | 0% | 26% |  |
-| XLMUSDT | 8% | 11% | 27% | 0% |  |
-| XRPUSDT | 8% | 11% | 0% | 19% |  |
-| FILUSDT | 8% | 10% | 0% | 23% |  |
-| HBARUSDT | 8% | 12% | 0% | 26% |  |
+| TRXUSDT | 18% | 17% | 28% | 0% |  |
+| SOLUSDT | 16% | 16% | 25% | 0% |  |
+| ETCUSDT | 15% | 18% | 24% | 0% |  |
+| ETHUSDT | 14% | 13% | 0% | 31% |  |
+| XRPUSDT | 14% | 16% | 0% | 32% |  |
+| ATOMUSDT | 14% | 16% | 24% | 0% |  |
+| WIFUSDT | 14% | 15% | 0% | 32% |  |
+| SUIUSDT | 14% | 14% | 0% | 29% |  |
+| LINKUSDT | 14% | 16% | 0% | 30% |  |
+| HBARUSDT | 14% | 17% | 25% | 0% |  |
+| BTCUSDT | 14% | 13% | 0% | 28% |  |
+| AVAXUSDT | 14% | 17% | 0% | 33% |  |
+| ARBUSDT | 14% | 15% | 26% | 0% |  |
+| LTCUSDT | 14% | 13% | 21% | 0% |  |
+| BNBUSDT | 14% | 14% | 0% | 28% |  |
+| INJUSDT | 14% | 18% | 0% | 34% |  |
+| BCHUSDT | 13% | 13% | 0% | 27% |  |
+| DOGEUSDT | 13% | 14% | 0% | 30% |  |
+| AAVEUSDT | 13% | 12% | 0% | 31% |  |
+| APTUSDT | 13% | 13% | 0% | 29% |  |
+| TIAUSDT | 13% | 13% | 0% | 33% |  |
+| UNIUSDT | 13% | 13% | 0% | 32% |  |
+| ADAUSDT | 12% | 14% | 0% | 29% |  |
+| XLMUSDT | 12% | 14% | 0% | 30% |  |
+| NEARUSDT | 12% | 11% | 0% | 29% |  |
+| DOTUSDT | 12% | 13% | 23% | 0% |  |
+| FILUSDT | 11% | 13% | 0% | 29% |  |
+| OPUSDT | 11% | 13% | 0% | 31% |  |
+| SEIUSDT | 11% | 12% | 20% | 0% |  |
