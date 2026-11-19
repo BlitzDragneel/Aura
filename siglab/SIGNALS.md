@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 12:35 UTC
+Updated 2026-11-19 12:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -83,7 +83,7 @@ Updated 2026-11-19 12:35 UTC
 | US30 S1 | 1 | -1.012 | None | 0.0 | PAPER |
 | US30 S2 | 1 | 0.973 | None | 1.0 | PAPER |
 | US30 S3 | 2 | 0.247 | 3.09 | 1.0 | PAPER |
-| US30 S4 | 1 | 0.781 | None | 1.0 | PAPER |
+| US30 S4 | 2 | 0.399 | 1.04 | 1.0 | PAPER |
 | US30 S5 | 1 | -1.026 | None | 0.0 | PAPER |
 | US30 S6 | 1 | -1.014 | None | 0.0 | PAPER |
 | US30 S7 | 1 | 0.973 | None | 1.0 | PAPER |
@@ -111,7 +111,7 @@ Updated 2026-11-19 12:35 UTC
 
 ## Latest signals
 
-- 19 Nov 12:30 US30 buy S4 @ 50481.29 SL 50374.57 → open
+- 19 Nov 12:30 US30 buy S4 @ 50481.29 SL 50374.57 → closed TP1+BE +0.02R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 20 closed, avg +0.01R, 65% won.
 - 19 Nov 09:45 AVAXUSD buy S2 @ 7.112 SL 7.0367 → open
 - 19 Nov 09:45 ADAUSD buy S2 @ 0.1544 SL 0.152871 → closed SL -1.06R. Stopped out after 160 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 22 closed, avg -0.42R, 41% won.
 - 19 Nov 09:15 LINKUSD buy S2 @ 9.197 SL 9.1103 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 25 closed, avg -0.60R, 32% won.
