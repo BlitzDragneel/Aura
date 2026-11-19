@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 10:45 UTC
+Updated 2026-11-19 11:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -19,7 +19,7 @@ Updated 2026-11-19 10:45 UTC
 | AVAXUSD S6 | 3 | 0.506 | 1.85 | 1.0 | PAPER |
 | AVAXUSD S7 | 2 | -0.217 | -0.26 | 0.5 | PAPER |
 | BNBUSD S1 | 4 | -0.445 | -1.21 | 0.5 | PAPER |
-| BNBUSD S2 | 3 | -0.703 | -1.78 | 0.333 | PAPER |
+| BNBUSD S2 | 4 | -0.374 | -0.87 | 0.5 | PAPER |
 | BNBUSD S3 | 2 | -0.085 | -0.08 | 0.5 | PAPER |
 | BNBUSD S4 | 5 | -0.218 | -0.61 | 0.6 | PAPER |
 | BNBUSD S5 | 1 | -1.079 | None | 0.0 | PAPER |
@@ -144,7 +144,7 @@ Updated 2026-11-19 10:45 UTC
 - 19 Nov 07:00 XAUUSD sell S6 @ 3739.4 SL 3757.84 → open
 - 19 Nov 06:45 NAS100 buy S2 @ 27547.2 SL 27348.06 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 21 closed, avg -0.45R, 38% won.
 - 19 Nov 04:15 XRPUSD buy S2 @ 0.9717 SL 0.959786 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 23 closed, avg -0.66R, 26% won.
-- 19 Nov 04:15 BNBUSD buy S2 @ 585.43 SL 580.02 → open
+- 19 Nov 04:15 BNBUSD buy S2 @ 585.43 SL 580.02 → closed TP3 +0.61R. TP3 after 392 min (best 1.1R, worst -0.1R). Lesson so far: breakout against the trend: 26 closed, avg -0.57R, 35% won.
 - 19 Nov 04:15 BTCUSD buy S2 @ 63322.8 SL 62621.26 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 24 closed, avg -0.63R, 29% won.
 - 19 Nov 04:00 SOLUSD buy S2 @ 74.19 SL 73.192 → open
 - 19 Nov 04:00 ETHUSD buy S2 @ 1792.92 SL 1769.79 → open
