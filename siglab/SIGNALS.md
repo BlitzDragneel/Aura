@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 06:01 UTC
+Updated 2026-11-19 06:16 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -66,7 +66,7 @@ Updated 2026-11-19 06:01 UTC
 | NAS100 S4 | 2 | -0.027 | -17.67 | 0.0 | PAPER |
 | NAS100 S5 | 1 | 0.194 | None | 1.0 | PAPER |
 | NAS100 S6 | 1 | 0.671 | None | 1.0 | PAPER |
-| SOLUSD S1 | 3 | -0.121 | -0.26 | 0.667 | PAPER |
+| SOLUSD S1 | 4 | 0.164 | 0.37 | 0.75 | PAPER |
 | SOLUSD S2 | 3 | -0.419 | -0.66 | 0.333 | PAPER |
 | SOLUSD S3 | 1 | 0.106 | None | 1.0 | PAPER |
 | SOLUSD S4 | 4 | 0.073 | 0.17 | 0.75 | PAPER |
@@ -126,7 +126,7 @@ Updated 2026-11-19 06:01 UTC
 - 19 Nov 01:45 ADAUSD buy S4 @ 0.1509 SL 0.149036 → closed TP3 +0.93R. TP3 after 181 min (best 1.4R, worst -0.6R). Lesson so far: fib pullback against the trend: 13 closed, avg -0.38R, 46% won.
 - 19 Nov 01:45 DOGEUSD buy S4 @ 0.05864 SL 0.057945 → open
 - 19 Nov 01:45 BNBUSD buy S4 @ 581.45 SL 576.71 → closed TP3 +0.67R. TP3 after 179 min (best 1.2R, worst -0.9R). Lesson so far: fib pullback against the trend: 12 closed, avg -0.47R, 42% won.
-- 19 Nov 01:45 SOLUSD buy S1 @ 73.41 SL 72.511 → open
+- 19 Nov 01:45 SOLUSD buy S1 @ 73.41 SL 72.511 → closed TP3 +1.02R. TP3 after 257 min (best 1.7R, worst -0.6R). Lesson so far: trend pullback with the trend: 55 closed, avg -0.15R, 60% won.
 - 19 Nov 01:45 ETHUSD buy S4 @ 1777.3 SL 1756.11 → closed TP3 +0.74R. TP3 after 181 min (best 1.4R, worst -0.7R). Lesson so far: fib pullback against the trend: 13 closed, avg -0.38R, 46% won.
 - 19 Nov 01:45 NAS100 buy S4 @ 27249.14 SL 27046.32 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 38 closed, avg -0.26R, 53% won.
 - 19 Nov 01:45 XAUUSD buy S4 @ 3759.9 SL 3740.71 → closed SL -1.01R. Stopped out after 59 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Lesson so far: fib pullback against the trend: 10 closed, avg -0.47R, 40% won.
