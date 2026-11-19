@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-18 23:45 UTC
+Updated 2026-11-19 00:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -110,6 +110,7 @@ Updated 2026-11-18 23:45 UTC
 
 ## Latest signals
 
+- 19 Nov 00:00 XAGUSD sell S3 @ 45.57 SL 45.991 → open
 - 18 Nov 17:30 LINKUSD buy S7 @ 9.131 SL 9.0464 → closed SL -1.06R. Stopped out after 23 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 9 closed, avg +0.05R, 67% won.
 - 18 Nov 16:45 DOGEUSD buy S3 @ 0.05788 SL 0.057374 → closed TP3 +1.12R. TP3 after 35 min (best 2.0R, worst -0.2R). Lesson so far: stretch fade with the trend: 15 closed, avg +0.35R, 80% won.
 - 18 Nov 16:30 BNBUSD sell S7 @ 578.38 SL 581.62 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 9 closed, avg +0.13R, 78% won.
@@ -169,4 +170,3 @@ Updated 2026-11-18 23:45 UTC
 - 18 Nov 07:00 NAS100 sell S6 @ 27133.65 SL 27338.96 → closed TP2+BE +0.67R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 30 closed, avg +0.15R, 87% won.
 - 18 Nov 07:00 BTCUSD sell S6 @ 64579.1 SL 65034.95 → closed TP3 +1.10R. TP3 after 452 min (best 1.7R, worst -0.8R). Lesson so far: daily bias with the trend: 28 closed, avg +0.15R, 89% won.
 - 18 Nov 07:00 XAGUSD sell S6 @ 46.14 SL 46.524 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 19 closed, avg +0.12R, 90% won.
-- 18 Nov 07:00 XAUUSD sell S6 @ 3785.5 SL 3800.12 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 22 closed, avg +0.17R, 91% won.
