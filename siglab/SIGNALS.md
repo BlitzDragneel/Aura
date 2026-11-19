@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 17:31 UTC
+Updated 2026-11-19 17:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -41,7 +41,7 @@ Updated 2026-11-19 17:31 UTC
 | DOGEUSD S7 | 2 | -0.233 | -0.28 | 0.5 | PAPER |
 | ETHUSD S1 | 5 | -0.338 | -1.16 | 0.6 | PAPER |
 | ETHUSD S2 | 4 | -0.417 | -1.12 | 0.5 | PAPER |
-| ETHUSD S3 | 3 | 0.402 | 0.5 | 0.667 | PAPER |
+| ETHUSD S3 | 4 | 0.534 | 0.91 | 0.75 | PAPER |
 | ETHUSD S4 | 5 | -0.141 | -0.36 | 0.6 | PAPER |
 | ETHUSD S5 | 3 | -0.349 | -0.49 | 0.333 | PAPER |
 | ETHUSD S6 | 4 | 0.634 | 2.03 | 1.0 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-19 17:31 UTC
 
 ## Latest signals
 
-- 19 Nov 17:15 ETHUSD buy S3 @ 1754.73 SL 1737.39 → open
+- 19 Nov 17:15 ETHUSD buy S3 @ 1754.73 SL 1737.39 → closed TP3 +0.93R. TP3 after 17 min (best 1.8R, worst -0.3R). Lesson so far: stretch fade against the trend: 18 closed, avg -0.11R, 61% won.
 - 19 Nov 16:00 SOLUSD buy S3 @ 73.51 SL 72.751 → closed SL -1.06R. Stopped out after 63 min. Price never reached TP1 (best was 0.7R in favour, TP1 needed 0.7R). Lesson so far: stretch fade with the trend: 26 closed, avg +0.38R, 85% won.
 - 19 Nov 15:45 SUIUSD sell S7 @ 0.7114 SL 0.718221 → closed SL -1.06R. Stopped out after 55 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: big move against the trend: 12 closed, avg -0.13R, 58% won.
 - 19 Nov 15:45 SUIUSD buy S3 @ 0.7114 SL 0.704579 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 22 closed, avg +0.35R, 82% won.
