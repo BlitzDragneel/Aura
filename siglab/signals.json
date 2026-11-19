@@ -12927,7 +12927,7 @@
     27304.18
    ],
    "R": 138.304,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -12936,7 +12936,15 @@
    "day": "2026-11-19",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 27601.9375,
+   "outcome": "SL",
+   "R_ladder": -1.013,
+   "R_tp1": -1.013,
+   "pips": -120.3,
+   "closed_ms": 1795098840000,
+   "source": "yahoo-NQ=F-1m minus basis 85.1",
+   "review": "Stopped out after 34 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: session drive against the trend: 17 closed, avg -0.53R, 35% won."
   },
   {
    "id": "US30-S5-1795096800000",
@@ -13001,6 +13009,39 @@
    ],
    "day": "2026-11-19",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "US30-S2-1795099500000",
+   "symbol": "US30",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "New York",
+    "with_trend": true
+   },
+   "logged_ms": 1795099500000,
+   "ref_price": 50353.14,
+   "stop": 50457.78,
+   "targets": [
+    50264.09,
+    50208.11,
+    50093.73
+   ],
+   "R": 104.643,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
   }
  ],
  "sent_day": {},
@@ -13488,11 +13529,11 @@
     "grade": "PAPER"
    },
    "NAS100 S5": {
-    "n": 1,
-    "avg_R": 0.194,
-    "t": null,
-    "win": 1.0,
-    "total_R": 0.19,
+    "n": 2,
+    "avg_R": -0.409,
+    "t": -0.68,
+    "win": 0.5,
+    "total_R": -0.82,
     "grade": "PAPER"
    },
    "NAS100 S6": {
@@ -13870,11 +13911,11 @@
     "total_R": -9.68
    },
    "S5": {
-    "n": 37,
-    "avg_R": -0.564,
-    "t": -4.63,
-    "win": 0.324,
-    "total_R": -20.88
+    "n": 38,
+    "avg_R": -0.576,
+    "t": -4.83,
+    "win": 0.316,
+    "total_R": -21.89
    },
    "S6": {
     "n": 50,
@@ -13892,11 +13933,11 @@
    }
   },
   "all": {
-   "n": 318,
-   "avg_R": -0.164,
-   "t": -3.68,
-   "win": 0.582,
-   "total_R": -52.26
+   "n": 319,
+   "avg_R": -0.167,
+   "t": -3.74,
+   "win": 0.58,
+   "total_R": -53.27
   },
   "open": 16
  },
@@ -14231,25 +14272,25 @@
    "total_R": -22.08
   },
   "S5 | New York": {
-   "n": 4,
-   "avg_R": 0.3,
-   "t": 0.68,
-   "win": 0.75,
-   "total_R": 1.2
+   "n": 5,
+   "avg_R": 0.037,
+   "t": 0.09,
+   "win": 0.6,
+   "total_R": 0.19
   },
   "S5 | against trend": {
-   "n": 17,
-   "avg_R": -0.527,
-   "t": -2.87,
-   "win": 0.353,
-   "total_R": -8.96
+   "n": 18,
+   "avg_R": -0.554,
+   "t": -3.16,
+   "win": 0.333,
+   "total_R": -9.98
   },
   "S5 | compressed": {
-   "n": 15,
-   "avg_R": -0.689,
-   "t": -4.24,
-   "win": 0.267,
-   "total_R": -10.34
+   "n": 16,
+   "avg_R": -0.71,
+   "t": -4.62,
+   "win": 0.25,
+   "total_R": -11.35
   },
   "S5 | normal": {
    "n": 22,
@@ -14266,11 +14307,11 @@
    "total_R": 0.07
   },
   "S5 | vol low": {
-   "n": 10,
-   "avg_R": -0.899,
-   "t": -5.74,
-   "win": 0.1,
-   "total_R": -8.99
+   "n": 11,
+   "avg_R": -0.909,
+   "t": -6.4,
+   "win": 0.091,
+   "total_R": -10.0
   },
   "S5 | vol normal": {
    "n": 26,

@@ -674,3 +674,8 @@ Market now: trend up, volatility low, New York session
 ⚡ Dow 30: SESSION DRIVE right now (New York open drive), price ~50462.16
 Market now: trend down, volatility normal, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-19 14:46:09 UTC
+⚡ Dow 30: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~50353.14
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
