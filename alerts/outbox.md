@@ -562,3 +562,16 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Gold: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~3761.0
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-19 01:31:10 UTC
+⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~45.48
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~45.48
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~62640.0
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
