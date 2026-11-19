@@ -575,3 +575,12 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~62640.0
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-19 01:45:58 UTC
+⚡ Gold: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~3759.9
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Nasdaq 100: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~27249.14
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
