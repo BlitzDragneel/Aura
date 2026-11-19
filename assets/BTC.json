@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-19T20:30:48.733796+00:00",
+ "asof": "2026-11-19T20:45:44.826632+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 61852.2,
-  "bar": "2026-11-19T20:15:00+00:00",
+  "price": 62094.7,
+  "bar": "2026-11-19T20:30:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 61852.2,
-    "ma20": 62765.625,
-    "ma50": 63359.348,
-    "slope_atr": -0.82,
-    "bar": "2026-11-19T20:15:00+00:00"
+    "close": 62094.7,
+    "ma20": 62727.61,
+    "ma50": 63325.977999999996,
+    "slope_atr": -0.79,
+    "bar": "2026-11-19T20:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.9,
   "funding": {
-   "rate": 7.07924010483e-05,
+   "rate": 6.38372962694e-05,
    "next_time": 1795132800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.413,
+    "p_big_move": 0.329,
     "flag": false,
     "detail": {
-     "p_up_move": 0.208,
-     "p_down_move": 0.205
+     "p_up_move": 0.172,
+     "p_down_move": 0.157
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -247,7 +247,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 61852.2; volatility regime active (hourly ATR 0.883% of price, 77.0th percentile).",
+    "Price 62094.7; volatility regime active (hourly ATR 0.883% of price, 77.0th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -258,6 +258,6 @@
    ]
   }
  ],
- "runs": 386,
+ "runs": 387,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
