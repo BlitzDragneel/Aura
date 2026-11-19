@@ -656,3 +656,8 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 👀 Gold day: WATCH at 3,726.40. Big move likely, direction unknown. scout: 56% chance of a big move in 4 h (top of its range; direction unknown)
 
 👀 Silver swing: WATCH at 45.11. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-19 12:31:17 UTC
+⚡ Dow 30: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~50481.29
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
