@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-19T01:00:59.661022+00:00",
+ "asof": "2026-11-19T01:15:45.510452+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3760.1,
-  "bar": "2026-11-19T00:45:00+00:00",
+  "price": 3760.9,
+  "bar": "2026-11-19T01:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3760.1,
-    "ma20": 3740.6100000000006,
-    "ma50": 3750.9640000000004,
-    "slope_atr": 0.68,
-    "bar": "2026-11-19T00:45:00+00:00"
+    "close": 3760.9,
+    "ma20": 3742.06,
+    "ma50": 3751.0,
+    "slope_atr": 0.82,
+    "bar": "2026-11-19T01:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.8,
   "spot": {
-   "price": 3751.16,
-   "bid": 3750.841,
-   "ask": 3751.479,
+   "price": 3752.575,
+   "bid": 3752.256,
+   "ask": 3752.894,
    "spread": 0.638,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.238
+   "perp_premium_pct": 0.222
   },
   "funding": {
-   "rate": 0.0001215910788521,
+   "rate": 0.0001130348737517,
    "next_time": 1795075200000,
    "source": "okx-swap"
   },
@@ -250,8 +250,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3760.1; volatility regime active (hourly ATR 0.51% of price, 87.9th percentile).",
-    "Spot XAUUSD 3751.16; the perpetual trades +0.24% from spot."
+    "Price 3760.9; volatility regime active (hourly ATR 0.51% of price, 87.9th percentile).",
+    "Spot XAUUSD 3752.57; the perpetual trades +0.22% from spot."
    ]
   },
   {
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 306,
+ "runs": 307,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
