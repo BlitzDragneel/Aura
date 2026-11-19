@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-19T14:00:55.988967+00:00",
+ "asof": "2026-11-19T14:15:40.683690+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 64003.4,
-  "bar": "2026-11-19T13:45:00+00:00",
+  "price": 63905.6,
+  "bar": "2026-11-19T14:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 64003.4,
-    "ma20": 63793.025,
-    "ma50": 63481.10400000001,
+    "close": 63905.6,
+    "ma20": 63801.425,
+    "ma50": 63504.15,
     "slope_atr": 0.16,
-    "bar": "2026-11-19T13:45:00+00:00"
+    "bar": "2026-11-19T14:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.9,
   "funding": {
-   "rate": -3.38594974079e-05,
+   "rate": -3.79391621564e-05,
    "next_time": 1795104000000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.357,
+    "p_big_move": 0.278,
     "flag": false,
     "detail": {
-     "p_up_move": 0.18,
-     "p_down_move": 0.178
+     "p_up_move": 0.147,
+     "p_down_move": 0.131
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -246,7 +246,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 64003.4; volatility regime normal (hourly ATR 0.716% of price, 53.3th percentile).",
+    "Price 63905.6; volatility regime normal (hourly ATR 0.716% of price, 53.3th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -257,6 +257,6 @@
    ]
   }
  ],
- "runs": 360,
+ "runs": 361,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
