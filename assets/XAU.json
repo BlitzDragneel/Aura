@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-19T03:15:49.032492+00:00",
+ "asof": "2026-11-19T03:30:55.381844+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3707.5,
-  "bar": "2026-11-19T03:00:00+00:00",
+  "price": 3720.3,
+  "bar": "2026-11-19T03:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3707.5,
-    "ma20": 3745.7549999999997,
-    "ma50": 3745.27,
-    "slope_atr": 0.03,
-    "bar": "2026-11-19T03:00:00+00:00"
+    "close": 3720.3,
+    "ma20": 3745.0200000000004,
+    "ma50": 3744.1859999999997,
+    "slope_atr": -0.12,
+    "bar": "2026-11-19T03:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.8,
   "spot": {
-   "price": 3700.415,
-   "bid": 3700.098,
-   "ask": 3700.732,
-   "spread": 0.634,
+   "price": 3711.455,
+   "bid": 3711.136,
+   "ask": 3711.774,
+   "spread": 0.638,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.191
+   "perp_premium_pct": 0.238
   },
   "funding": {
-   "rate": 6.87274935938e-05,
+   "rate": 7.8243505367e-05,
    "next_time": 1795075200000,
    "source": "okx-swap"
   },
@@ -252,8 +252,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3707.5; volatility regime extreme (hourly ATR 0.564% of price, 96.3th percentile).",
-    "Spot XAUUSD 3700.41; the perpetual trades +0.19% from spot."
+    "Price 3720.3; volatility regime extreme (hourly ATR 0.564% of price, 96.3th percentile).",
+    "Spot XAUUSD 3711.45; the perpetual trades +0.24% from spot."
    ]
   },
   {
@@ -263,6 +263,6 @@
    ]
   }
  ],
- "runs": 315,
+ "runs": 316,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
