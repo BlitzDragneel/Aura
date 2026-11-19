@@ -719,3 +719,6 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 👀 Gold day: WATCH at 3,633.00. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
 
 👀 Silver day: WATCH at 42.98. Big move likely, direction unknown. hourly volatility is high (99th percentile of the last 3 weeks)
+
+## 2026-11-19 23:01:02 UTC
+👀 Bitcoin day: WATCH at 62,134.60. Big move likely, direction unknown. hourly volatility is high (90th percentile of the last 3 weeks)
