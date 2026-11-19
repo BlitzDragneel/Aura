@@ -618,3 +618,8 @@ Market now: trend down, volatility high, Asia session
 ⚡ Silver: BIG MOVE under way right now (moved -0.97 in the last hour, twice its normal hourly range), price ~44.66
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
+
+## 2026-11-19 03:45:58 UTC
+⚡ Nasdaq 100: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~27339.7
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.

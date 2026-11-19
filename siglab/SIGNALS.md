@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 03:30 UTC
+Updated 2026-11-19 03:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -110,6 +110,7 @@ Updated 2026-11-19 03:30 UTC
 
 ## Latest signals
 
+- 19 Nov 03:45 NAS100 buy S1 @ 27339.7 SL 27123.02 → open
 - 19 Nov 03:15 XAGUSD sell S7 @ 44.66 SL 45.131 → open
 - 19 Nov 03:00 XAUUSD sell S7 @ 3717.1 SL 3738.08 → closed TP1+BE +0.24R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 11 closed, avg +0.13R, 82% won.
 - 19 Nov 02:45 LTCUSD sell S1 @ 43.95 SL 44.437 → open
@@ -169,4 +170,3 @@ Updated 2026-11-19 03:30 UTC
 - 18 Nov 11:15 DOGEUSD sell S2 @ 0.05914 SL 0.059644 → closed SL -1.07R. Stopped out after 195 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 17 closed, avg -0.68R, 24% won.
 - 18 Nov 10:45 ETHUSD sell S2 @ 1803.02 SL 1817.69 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
 - 18 Nov 10:30 BNBUSD sell S2 @ 589.43 SL 592.61 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 16 closed, avg -0.73R, 19% won.
-- 18 Nov 10:30 BTCUSD sell S2 @ 64309.9 SL 64748.26 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
