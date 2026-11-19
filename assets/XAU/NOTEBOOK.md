@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 96 readings scored; big moves followed 10% of them, 17% after a WATCH (24 WATCH readings) - too few to judge yet.
+- My own record: 97 readings scored; big moves followed 11% of them, 17% after a WATCH (24 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 76 readings scored; big moves followed 33% of them, 7% after a WATCH (15 WATCH readings) - too few to judge yet.
+- My own record: 77 readings scored; big moves followed 34% of them, 12% after a WATCH (16 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,16 +29,15 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was New York (average hourly move 0.21%) and the quietest late US (0.12%).
-- At weekends, while spot is closed, the perpetual moves 35% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- Over the last 20 days the busiest session was New York (average hourly move 0.21%) and the quietest late US (0.13%).
+- At weekends, while spot is closed, the perpetual moves 34% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 1.4% from low to high (last 60 days); 35% of those days closed higher.
 - Over the last 30 days the price moved -9.5% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3632.5; volatility regime active (hourly ATR 0.459% of price, 75.9th percentile).
-- CME daily break (21-22 UTC): spot quotes pause.
-- Spot XAUUSD 3627.11; the perpetual trades +0.15% from spot.
+- Price 3633.0; volatility regime active (hourly ATR 0.528% of price, 90.9th percentile).
+- Spot XAUUSD 3623.17; the perpetual trades +0.27% from spot.
 
 ## My calls so far
 

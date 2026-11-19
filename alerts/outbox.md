@@ -714,3 +714,8 @@ session drive: 44 closed, avg -0.37R, 39% won
 daily bias: 56 closed, avg +0.24R, 82% won
 big move: 36 closed, avg -0.12R, 61% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-19 22:01:01 UTC
+👀 Gold day: WATCH at 3,633.00. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+👀 Silver day: WATCH at 42.98. Big move likely, direction unknown. hourly volatility is high (99th percentile of the last 3 weeks)
