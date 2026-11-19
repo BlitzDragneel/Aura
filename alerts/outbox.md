@@ -631,3 +631,8 @@ Market now: trend down, volatility normal, Asia session
 
 ## 2026-11-19 06:01:05 UTC
 👀 Gold day: WATCH at 3,746.40. Big move likely, direction unknown. scout: 34% chance of a big move in 4 h (top of its range; direction unknown)
+
+## 2026-11-19 06:46:00 UTC
+⚡ Nasdaq 100: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~27547.2
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.

@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 06:30 UTC
+Updated 2026-11-19 06:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -103,13 +103,14 @@ Updated 2026-11-19 06:30 UTC
 | XRPUSD S1 | 4 | 0.295 | 0.63 | 0.75 | PAPER |
 | XRPUSD S2 | 4 | 0.094 | 0.22 | 0.75 | PAPER |
 | XRPUSD S3 | 3 | 0.215 | 0.28 | 0.667 | PAPER |
-| XRPUSD S4 | 3 | 0.035 | 0.06 | 0.667 | PAPER |
+| XRPUSD S4 | 4 | 0.278 | 0.57 | 0.75 | PAPER |
 | XRPUSD S5 | 2 | 0.876 | 3.83 | 1.0 | PAPER |
 | XRPUSD S6 | 3 | 0.561 | 1.52 | 1.0 | PAPER |
 | XRPUSD S7 | 1 | -1.056 | None | 0.0 | PAPER |
 
 ## Latest signals
 
+- 19 Nov 06:45 NAS100 buy S2 @ 27547.2 SL 27348.06 → open
 - 19 Nov 04:15 XRPUSD buy S2 @ 0.9717 SL 0.959786 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 23 closed, avg -0.66R, 26% won.
 - 19 Nov 04:15 BNBUSD buy S2 @ 585.43 SL 580.02 → open
 - 19 Nov 04:15 BTCUSD buy S2 @ 63322.8 SL 62621.26 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 24 closed, avg -0.63R, 29% won.
@@ -150,7 +151,7 @@ Updated 2026-11-19 06:30 UTC
 - 19 Nov 00:45 XAUUSD buy S2 @ 3761.0 SL 3742.54 → closed SL -1.01R. Stopped out after 118 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 21 closed, avg -0.63R, 29% won.
 - 19 Nov 00:30 BTCUSD buy S4 @ 62847.2 SL 62242.72 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 8 closed, avg -0.61R, 25% won.
 - 19 Nov 00:30 XAGUSD buy S2 @ 45.68 SL 45.259 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 20 closed, avg -0.67R, 25% won.
-- 19 Nov 00:15 XRPUSD buy S4 @ 0.9648 SL 0.952993 → open
+- 19 Nov 00:15 XRPUSD buy S4 @ 0.9648 SL 0.952993 → closed TP3 +1.01R. TP3 after 380 min (best 1.6R, worst -0.9R). Lesson so far: fib pullback against the trend: 16 closed, avg -0.16R, 56% won.
 - 19 Nov 00:00 XAGUSD sell S3 @ 45.57 SL 45.991 → closed TP3 +1.09R. TP3 after 177 min (best 1.9R, worst -0.9R). Lesson so far: stretch fade with the trend: 17 closed, avg +0.39R, 82% won.
 - 18 Nov 17:30 LINKUSD buy S7 @ 9.131 SL 9.0464 → closed SL -1.06R. Stopped out after 23 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 9 closed, avg +0.05R, 67% won.
 - 18 Nov 16:45 DOGEUSD buy S3 @ 0.05788 SL 0.057374 → closed TP3 +1.12R. TP3 after 35 min (best 2.0R, worst -0.2R). Lesson so far: stretch fade with the trend: 15 closed, avg +0.35R, 80% won.
@@ -169,4 +170,3 @@ Updated 2026-11-19 06:30 UTC
 - 18 Nov 13:30 XAGUSD sell S1 @ 45.77 SL 46.195 → closed TP3 +0.77R. TP3 after 66 min (best 1.4R, worst -0.7R). Lesson so far: trend pullback with the trend: 40 closed, avg -0.14R, 62% won.
 - 18 Nov 13:00 US30 buy S3 @ 50632.5 SL 50516.43 → closed TP3 +0.33R. TP3 after 41 min (best 0.9R, worst -0.6R). Lesson so far: stretch fade against the trend: 10 closed, avg -0.31R, 50% won.
 - 18 Nov 11:15 SUIUSD buy S3 @ 0.7218 SL 0.714414 → closed TP1+BE +0.20R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 14 closed, avg +0.36R, 79% won.
-- 18 Nov 11:15 LTCUSD buy S3 @ 44.1 SL 43.724 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 11 closed, avg -0.25R, 55% won.
