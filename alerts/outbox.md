@@ -679,3 +679,8 @@ Market now: trend down, volatility normal, New York session
 ⚡ Dow 30: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~50353.14
 Market now: trend down, volatility normal, New York session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-19 15:31:14 UTC
+⚡ Dow 30: BIG MOVE under way right now (moved -447.00 in the last hour, twice its normal hourly range), price ~49966.29
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
