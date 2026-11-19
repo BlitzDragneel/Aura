@@ -613,3 +613,8 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Gold: BIG MOVE under way right now (moved -44.00 in the last hour, twice its normal hourly range), price ~3717.1
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.10R). Logged and scored anyway.
+
+## 2026-11-19 03:16:02 UTC
+⚡ Silver: BIG MOVE under way right now (moved -0.97 in the last hour, twice its normal hourly range), price ~44.66
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
