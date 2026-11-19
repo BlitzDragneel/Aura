@@ -684,3 +684,12 @@ Market now: trend down, volatility normal, New York session
 ⚡ Dow 30: BIG MOVE under way right now (moved -447.00 in the last hour, twice its normal hourly range), price ~49966.29
 Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-19 15:46:05 UTC
+⚡ Bitcoin: BIG MOVE under way right now (moved -1062.30 in the last hour, twice its normal hourly range), price ~62855.0
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Nasdaq 100: BIG MOVE under way right now (moved -606.00 in the last hour, twice its normal hourly range), price ~27096.66
+Market now: trend up, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
