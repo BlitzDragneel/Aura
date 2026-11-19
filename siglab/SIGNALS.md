@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 01:45 UTC
+Updated 2026-11-19 02:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -63,7 +63,7 @@ Updated 2026-11-19 01:45 UTC
 | NAS100 S1 | 1 | 0.593 | None | 1.0 | PAPER |
 | NAS100 S2 | 1 | -0.013 | None | 0.0 | PAPER |
 | NAS100 S3 | 1 | -0.354 | None | 0.0 | PAPER |
-| NAS100 S4 | 1 | -0.028 | None | 0.0 | PAPER |
+| NAS100 S4 | 2 | -0.027 | -17.67 | 0.0 | PAPER |
 | NAS100 S5 | 1 | 0.194 | None | 1.0 | PAPER |
 | NAS100 S6 | 1 | 0.671 | None | 1.0 | PAPER |
 | SOLUSD S1 | 3 | -0.121 | -0.26 | 0.667 | PAPER |
@@ -116,7 +116,7 @@ Updated 2026-11-19 01:45 UTC
 - 19 Nov 01:45 BNBUSD buy S4 @ 581.45 SL 576.71 → open
 - 19 Nov 01:45 SOLUSD buy S1 @ 73.41 SL 72.511 → open
 - 19 Nov 01:45 ETHUSD buy S4 @ 1777.3 SL 1756.11 → open
-- 19 Nov 01:45 NAS100 buy S4 @ 27249.14 SL 27046.32 → open
+- 19 Nov 01:45 NAS100 buy S4 @ 27249.14 SL 27046.32 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 38 closed, avg -0.26R, 53% won.
 - 19 Nov 01:45 XAUUSD buy S4 @ 3759.9 SL 3740.71 → open
 - 19 Nov 01:30 SUIUSD buy S4 @ 0.7144 SL 0.704507 → open
 - 19 Nov 01:30 SUIUSD sell S1 @ 0.7144 SL 0.724293 → open

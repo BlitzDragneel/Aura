@@ -584,3 +584,10 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Nasdaq 100: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~27249.14
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-19 02:01:01 UTC
+👀 Bitcoin day: WATCH at 62,819.40. Big move likely, direction unknown. hourly volatility is high (90th percentile of the last 3 weeks)
+
+👀 Bitcoin swing: WATCH at 62,819.40. Big move likely, direction unknown. scout: 46% chance of a big move in 24 h (top of its range; direction unknown)
+
+👀 Silver day: WATCH at 45.63. Big move likely, direction unknown. hourly volatility is high (93th percentile of the last 3 weeks)
