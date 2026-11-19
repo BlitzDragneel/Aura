@@ -601,3 +601,15 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3740.6
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-19 03:00:51 UTC
+👀 Gold day: WATCH at 3,717.10. Big move likely, direction unknown. hourly volatility is high (96th percentile of the last 3 weeks)
+
+👀 Gold swing: WATCH at 3,717.10. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+👀 Silver swing: WATCH at 44.86. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-19 03:01:00 UTC
+⚡ Gold: BIG MOVE under way right now (moved -44.00 in the last hour, twice its normal hourly range), price ~3717.1
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.10R). Logged and scored anyway.
