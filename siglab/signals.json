@@ -10635,14 +10635,22 @@
     0.147919
    ],
    "R": 0.0018643,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-19",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 0.1506,
+   "outcome": "SL",
+   "R_ladder": -1.048,
+   "R_tp1": -1.048,
+   "pips": -129.8,
+   "closed_ms": 1795060800000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 50 closed, avg -0.09R, 64% won."
   },
   {
    "id": "AVAXUSD-S1-1795051800000",
@@ -10666,14 +10674,22 @@
     6.8434
    ],
    "R": 0.09564,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-19",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 6.98,
+   "outcome": "SL",
+   "R_ladder": -1.044,
+   "R_tp1": -1.044,
+   "pips": -141.5,
+   "closed_ms": 1795060800000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 150 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.7R). Lesson so far: trend pullback with the trend: 50 closed, avg -0.09R, 64% won."
   },
   {
    "id": "LINKUSD-S1-1795051800000",
@@ -11138,14 +11154,22 @@
     1741.75
    ],
    "R": 22.151,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-19",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 1772.82,
+   "outcome": "SL",
+   "R_ladder": -1.045,
+   "R_tp1": -1.045,
+   "pips": -231.6,
+   "closed_ms": 1795060800000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 90 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 50 closed, avg -0.09R, 64% won."
   },
   {
    "id": "XAUUSD-S1-1795056300000",
@@ -11341,6 +11365,68 @@
    "grade_at_issue": "PAPER",
    "sent": true,
    "plan_sent": false
+  },
+  {
+   "id": "ETHUSD-S2-1795060800000",
+   "symbol": "ETHUSD",
+   "setup": "S2",
+   "side": "buy",
+   "why": "closed above the last 4 hours' high on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795060800000,
+   "ref_price": 1792.92,
+   "stop": 1769.79,
+   "targets": [
+    1801.64,
+    1809.53,
+    1820.24
+   ],
+   "R": 23.134,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "SOLUSD-S2-1795060800000",
+   "symbol": "SOLUSD",
+   "setup": "S2",
+   "side": "buy",
+   "why": "closed above the last 4 hours' high on a wide bar",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795060800000,
+   "ref_price": 74.19,
+   "stop": 73.192,
+   "targets": [
+    74.77,
+    75.086,
+    75.638
+   ],
+   "R": 0.9979,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -11348,11 +11434,11 @@
  "record": {
   "by_setup_market": {
    "ADAUSD S1": {
-    "n": 3,
-    "avg_R": -0.231,
-    "t": -0.56,
-    "win": 0.667,
-    "total_R": -0.69,
+    "n": 4,
+    "avg_R": -0.435,
+    "t": -1.23,
+    "win": 0.5,
+    "total_R": -1.74,
     "grade": "PAPER"
    },
    "ADAUSD S2": {
@@ -11404,11 +11490,11 @@
     "grade": "PAPER"
    },
    "AVAXUSD S1": {
-    "n": 3,
-    "avg_R": -0.608,
-    "t": -1.4,
-    "win": 0.333,
-    "total_R": -1.82,
+    "n": 4,
+    "avg_R": -0.717,
+    "t": -2.2,
+    "win": 0.25,
+    "total_R": -2.87,
     "grade": "PAPER"
    },
    "AVAXUSD S2": {
@@ -11628,11 +11714,11 @@
     "grade": "PAPER"
    },
    "ETHUSD S1": {
-    "n": 4,
-    "avg_R": -0.161,
-    "t": -0.54,
-    "win": 0.75,
-    "total_R": -0.65,
+    "n": 5,
+    "avg_R": -0.338,
+    "t": -1.16,
+    "win": 0.6,
+    "total_R": -1.69,
     "grade": "PAPER"
    },
    "ETHUSD S2": {
@@ -12174,11 +12260,11 @@
   },
   "by_setup": {
    "S1": {
-    "n": 50,
-    "avg_R": -0.088,
-    "t": -0.78,
-    "win": 0.64,
-    "total_R": -4.38
+    "n": 53,
+    "avg_R": -0.142,
+    "t": -1.28,
+    "win": 0.604,
+    "total_R": -7.52
    },
    "S2": {
     "n": 44,
@@ -12224,21 +12310,21 @@
    }
   },
   "all": {
-   "n": 275,
-   "avg_R": -0.177,
-   "t": -3.66,
-   "win": 0.571,
-   "total_R": -48.68
+   "n": 278,
+   "avg_R": -0.186,
+   "t": -3.88,
+   "win": 0.565,
+   "total_R": -51.82
   },
-  "open": 17
+  "open": 16
  },
  "record_by_context": {
   "S1 | Asia": {
-   "n": 43,
-   "avg_R": -0.126,
-   "t": -1.07,
-   "win": 0.628,
-   "total_R": -5.43
+   "n": 46,
+   "avg_R": -0.186,
+   "t": -1.61,
+   "win": 0.587,
+   "total_R": -8.57
   },
   "S1 | London": {
    "n": 3,
@@ -12269,11 +12355,11 @@
    "total_R": -1.01
   },
   "S1 | normal": {
-   "n": 31,
-   "avg_R": -0.178,
-   "t": -1.24,
-   "win": 0.581,
-   "total_R": -5.52
+   "n": 34,
+   "avg_R": -0.255,
+   "t": -1.86,
+   "win": 0.529,
+   "total_R": -8.65
   },
   "S1 | vol high": {
    "n": 4,
@@ -12290,18 +12376,18 @@
    "total_R": 1.56
   },
   "S1 | vol normal": {
-   "n": 43,
-   "avg_R": -0.084,
-   "t": -0.75,
-   "win": 0.674,
-   "total_R": -3.61
+   "n": 46,
+   "avg_R": -0.147,
+   "t": -1.33,
+   "win": 0.63,
+   "total_R": -6.75
   },
   "S1 | with trend": {
-   "n": 50,
-   "avg_R": -0.088,
-   "t": -0.78,
-   "win": 0.64,
-   "total_R": -4.38
+   "n": 53,
+   "avg_R": -0.142,
+   "t": -1.28,
+   "win": 0.604,
+   "total_R": -7.52
   },
   "S2 | Asia": {
    "n": 25,
