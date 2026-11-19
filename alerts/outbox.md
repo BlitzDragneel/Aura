@@ -639,3 +639,8 @@ Market now: trend up, volatility normal, Asia session
 
 ## 2026-11-19 07:01:02 UTC
 👀 Gold swing: WATCH at 3,739.40. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-19 07:31:01 UTC
+⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~63547.8
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
