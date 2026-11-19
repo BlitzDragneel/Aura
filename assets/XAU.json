@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-19T21:01:29.288427+00:00",
+ "asof": "2026-11-19T21:15:57.096238+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3667.1,
-  "bar": "2026-11-19T20:45:00+00:00",
+  "price": 3667.8,
+  "bar": "2026-11-19T21:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3667.1,
-    "ma20": 3683.29,
-    "ma50": 3708.538,
-    "slope_atr": -0.9,
-    "bar": "2026-11-19T20:45:00+00:00"
+    "close": 3667.8,
+    "ma20": 3682.3949999999995,
+    "ma50": 3707.1220000000003,
+    "slope_atr": -0.78,
+    "bar": "2026-11-19T21:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -94,18 +94,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.8,
   "spot": {
-   "price": 3658.17,
-   "bid": 3657.851,
-   "ask": 3658.489,
-   "spread": 0.638,
+   "price": 3660.395,
+   "bid": 3660.078,
+   "ask": 3660.712,
+   "spread": 0.634,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.244
+   "perp_premium_pct": 0.202
   },
   "funding": {
-   "rate": 0.0001698122972104,
+   "rate": 0.000169293054822,
    "next_time": 1795132800000,
    "source": "okx-swap"
   },
@@ -252,9 +252,9 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3667.1; volatility regime active (hourly ATR 0.459% of price, 75.9th percentile).",
+    "Price 3667.8; volatility regime active (hourly ATR 0.459% of price, 75.9th percentile).",
     "CME daily break (21-22 UTC): spot quotes pause.",
-    "Spot XAUUSD 3658.17; the perpetual trades +0.24% from spot."
+    "Spot XAUUSD 3660.39; the perpetual trades +0.20% from spot."
    ]
   },
   {
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 389,
+ "runs": 390,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
