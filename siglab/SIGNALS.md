@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 15:45 UTC
+Updated 2026-11-19 16:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -86,7 +86,7 @@ Updated 2026-11-19 15:45 UTC
 | US30 S4 | 2 | 0.399 | 1.04 | 1.0 | PAPER |
 | US30 S5 | 2 | 0.763 | 0.43 | 0.5 | PAPER |
 | US30 S6 | 2 | 1.268 | 0.56 | 0.5 | PAPER |
-| US30 S7 | 1 | 0.973 | None | 1.0 | PAPER |
+| US30 S7 | 2 | 0.73 | 3.01 | 1.0 | PAPER |
 | XAGUSD S1 | 4 | 0.177 | 0.39 | 0.75 | PAPER |
 | XAGUSD S2 | 4 | -0.344 | -0.77 | 0.5 | PAPER |
 | XAGUSD S3 | 4 | 0.138 | 0.3 | 0.75 | PAPER |
@@ -107,10 +107,11 @@ Updated 2026-11-19 15:45 UTC
 | XRPUSD S4 | 4 | 0.278 | 0.57 | 0.75 | PAPER |
 | XRPUSD S5 | 3 | 0.231 | 0.35 | 0.667 | PAPER |
 | XRPUSD S6 | 4 | 0.454 | 1.61 | 1.0 | PAPER |
-| XRPUSD S7 | 1 | -1.056 | None | 0.0 | PAPER |
+| XRPUSD S7 | 2 | -0.48 | -0.83 | 0.5 | PAPER |
 
 ## Latest signals
 
+- 19 Nov 16:00 SOLUSD buy S3 @ 73.51 SL 72.751 → open
 - 19 Nov 15:45 SUIUSD sell S7 @ 0.7114 SL 0.718221 → open
 - 19 Nov 15:45 SUIUSD buy S3 @ 0.7114 SL 0.704579 → open
 - 19 Nov 15:45 LTCUSD sell S7 @ 43.37 SL 43.696 → open
@@ -121,7 +122,7 @@ Updated 2026-11-19 15:45 UTC
 - 19 Nov 15:45 ADAUSD sell S7 @ 0.1518 SL 0.153157 → open
 - 19 Nov 15:45 DOGEUSD sell S7 @ 0.05833 SL 0.058801 → open
 - 19 Nov 15:45 DOGEUSD buy S3 @ 0.05833 SL 0.057859 → open
-- 19 Nov 15:45 XRPUSD sell S7 @ 0.9688 SL 0.978243 → open
+- 19 Nov 15:45 XRPUSD sell S7 @ 0.9688 SL 0.978243 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 10 closed, avg -0.06R, 60% won.
 - 19 Nov 15:45 BNBUSD sell S7 @ 584.92 SL 588.38 → open
 - 19 Nov 15:45 SOLUSD sell S7 @ 73.6 SL 74.286 → open
 - 19 Nov 15:45 ETHUSD sell S7 @ 1774.96 SL 1789.55 → open
@@ -130,7 +131,7 @@ Updated 2026-11-19 15:45 UTC
 - 19 Nov 15:45 BTCUSD buy S3 @ 62855.0 SL 62399.9 → open
 - 19 Nov 15:30 LTCUSD buy S3 @ 43.76 SL 43.434 → closed SL -1.08R. Stopped out after 8 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: stretch fade with the trend: 21 closed, avg +0.42R, 86% won.
 - 19 Nov 15:30 DOGEUSD sell S2 @ 0.05896 SL 0.059431 → open
-- 19 Nov 15:30 US30 sell S7 @ 49966.29 SL 50085.15 → open
+- 19 Nov 15:30 US30 sell S7 @ 49966.29 SL 50085.15 → closed TP3 +0.49R. TP3 after 9 min (best 2.0R, worst -0.0R). Lesson so far: big move with the trend: 13 closed, avg +0.04R, 77% won.
 - 19 Nov 14:45 US30 sell S2 @ 50353.14 SL 50457.78 → closed TP2+BE +0.09R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 24 closed, avg -0.41R, 42% won.
 - 19 Nov 14:00 DOGEUSD buy S5 @ 0.05974 SL 0.059273 → closed SL -1.08R. Stopped out after 57 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: session drive with the trend: 20 closed, avg -0.60R, 30% won.
 - 19 Nov 14:00 US30 sell S5 @ 50462.16 SL 50566.8 → closed TP3 +2.55R. TP3 after 39 min (best 2.8R, worst -0.0R). Lesson so far: session drive with the trend: 20 closed, avg -0.60R, 30% won.
@@ -170,4 +171,3 @@ Updated 2026-11-19 15:45 UTC
 - 19 Nov 07:00 XAUUSD sell S6 @ 3739.4 SL 3757.84 → closed TP3 +1.22R. TP3 after 495 min (best 1.7R, worst -0.5R). Lesson so far: daily bias with the trend: 38 closed, avg +0.06R, 79% won.
 - 19 Nov 06:45 NAS100 buy S2 @ 27547.2 SL 27348.06 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 21 closed, avg -0.45R, 38% won.
 - 19 Nov 04:15 XRPUSD buy S2 @ 0.9717 SL 0.959786 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 23 closed, avg -0.66R, 26% won.
-- 19 Nov 04:15 BNBUSD buy S2 @ 585.43 SL 580.02 → closed TP3 +0.61R. TP3 after 392 min (best 1.1R, worst -0.1R). Lesson so far: breakout against the trend: 26 closed, avg -0.57R, 35% won.

@@ -693,3 +693,10 @@ Market now: trend down, volatility normal, New York session
 ⚡ Nasdaq 100: BIG MOVE under way right now (moved -606.00 in the last hour, twice its normal hourly range), price ~27096.66
 Market now: trend up, volatility high, New York session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+## 2026-11-19 16:01:05 UTC
+👀 Gold day: WATCH at 3,680.60. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+👀 Silver day: WATCH at 44.61. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
+
+👀 Silver swing: WATCH at 44.61. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
