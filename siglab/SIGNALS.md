@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 02:15 UTC
+Updated 2026-11-19 02:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -110,6 +110,7 @@ Updated 2026-11-19 02:15 UTC
 
 ## Latest signals
 
+- 19 Nov 02:30 ETHUSD sell S1 @ 1772.83 SL 1794.98 → open
 - 19 Nov 02:15 US30 sell S1 @ 50333.29 SL 50551.15 → open
 - 19 Nov 01:45 AVAXUSD buy S4 @ 7.001 SL 6.9054 → open
 - 19 Nov 01:45 ADAUSD buy S4 @ 0.1509 SL 0.149036 → open
@@ -169,4 +170,3 @@ Updated 2026-11-19 02:15 UTC
 - 18 Nov 08:30 NAS100 buy S4 @ 27205.15 SL 27006.72 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 5 closed, avg -0.57R, 40% won.
 - 18 Nov 08:15 LTCUSD sell S1 @ 44.6 SL 45.004 → closed TP3 +1.18R. TP3 after 267 min (best 1.9R, worst -0.3R). Lesson so far: trend pullback with the trend: 37 closed, avg -0.18R, 62% won.
 - 18 Nov 08:00 LTCUSD buy S2 @ 44.8 SL 44.396 → closed SL -1.07R. Stopped out after 131 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 15 closed, avg -0.71R, 20% won.
-- 18 Nov 08:00 ADAUSD buy S2 @ 0.1546 SL 0.153036 → closed SL -1.06R. Stopped out after 155 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.8R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 15 closed, avg -0.50R, 33% won.
