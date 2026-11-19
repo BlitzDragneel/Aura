@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-19T07:01:00.268996+00:00",
+ "asof": "2026-11-19T07:15:51.366090+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3739.4,
-  "bar": "2026-11-19T06:45:00+00:00",
+  "price": 3740.5,
+  "bar": "2026-11-19T07:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3739.4,
-    "ma20": 3734.835,
-    "ma50": 3739.282,
-    "slope_atr": -0.47,
-    "bar": "2026-11-19T06:45:00+00:00"
+    "close": 3740.5,
+    "ma20": 3733.975,
+    "ma50": 3739.1479999999997,
+    "slope_atr": -0.48,
+    "bar": "2026-11-19T07:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.8,
   "spot": {
-   "price": 3734.59,
-   "bid": 3734.273,
-   "ask": 3734.907,
-   "spread": 0.634,
+   "price": 3734.86,
+   "bid": 3734.541,
+   "ask": 3735.179,
+   "spread": 0.638,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.129
+   "perp_premium_pct": 0.151
   },
   "funding": {
-   "rate": 9.77983688e-06,
+   "rate": 2.2216796052e-06,
    "next_time": 1795075200000,
    "source": "okx-swap"
   },
@@ -141,7 +141,7 @@
   "day": {
    "state": "WAIT",
    "since": "2026-11-19T07:01:00.268996+00:00",
-   "previous": "WATCH",
+   "previous": "WAIT",
    "reasons": [
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
    ],
@@ -152,7 +152,7 @@
   "swing": {
    "state": "WATCH",
    "since": "2026-11-19T07:01:00.268996+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "price is within 1 hourly ATR of its 30-day low: a break or a rejection is near",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -251,8 +251,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3739.4; volatility regime active (hourly ATR 0.493% of price, 84.2th percentile).",
-    "Spot XAUUSD 3734.59; the perpetual trades +0.13% from spot."
+    "Price 3740.5; volatility regime active (hourly ATR 0.493% of price, 84.2th percentile).",
+    "Spot XAUUSD 3734.86; the perpetual trades +0.15% from spot."
    ]
   },
   {
@@ -262,6 +262,6 @@
    ]
   }
  ],
- "runs": 331,
+ "runs": 332,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

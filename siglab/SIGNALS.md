@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 07:01 UTC
+Updated 2026-11-19 07:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -80,6 +80,7 @@ Updated 2026-11-19 07:01 UTC
 | SUIUSD S5 | 2 | -1.055 | -703.67 | 0.0 | PAPER |
 | SUIUSD S6 | 3 | -0.244 | -0.6 | 0.667 | PAPER |
 | SUIUSD S7 | 1 | 0.106 | None | 1.0 | PAPER |
+| US30 S1 | 1 | -1.012 | None | 0.0 | PAPER |
 | US30 S2 | 1 | 0.973 | None | 1.0 | PAPER |
 | US30 S3 | 2 | 0.247 | 3.09 | 1.0 | PAPER |
 | US30 S4 | 1 | 0.781 | None | 1.0 | PAPER |
@@ -139,7 +140,7 @@ Updated 2026-11-19 07:01 UTC
 - 19 Nov 02:45 LTCUSD sell S1 @ 43.95 SL 44.437 → closed SL -1.05R. Stopped out after 73 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 46 closed, avg -0.04R, 67% won.
 - 19 Nov 02:45 XAUUSD sell S1 @ 3740.6 SL 3760.17 → closed TP3 +1.17R. TP3 after 22 min (best 1.6R, worst -0.1R). Lesson so far: trend pullback with the trend: 42 closed, avg -0.10R, 64% won.
 - 19 Nov 02:30 ETHUSD sell S1 @ 1772.83 SL 1794.98 → closed SL -1.04R. Stopped out after 90 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 50 closed, avg -0.09R, 64% won.
-- 19 Nov 02:15 US30 sell S1 @ 50333.29 SL 50551.15 → open
+- 19 Nov 02:15 US30 sell S1 @ 50333.29 SL 50551.15 → closed SL -1.01R. Stopped out after 285 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 56 closed, avg -0.13R, 61% won.
 - 19 Nov 01:45 AVAXUSD buy S4 @ 7.001 SL 6.9054 → open
 - 19 Nov 01:45 ADAUSD buy S4 @ 0.1509 SL 0.149036 → closed TP3 +0.93R. TP3 after 181 min (best 1.4R, worst -0.6R). Lesson so far: fib pullback against the trend: 13 closed, avg -0.38R, 46% won.
 - 19 Nov 01:45 DOGEUSD buy S4 @ 0.05864 SL 0.057945 → closed TP3 +0.77R. TP3 after 315 min (best 1.3R, worst -0.7R). Lesson so far: fib pullback against the trend: 17 closed, avg -0.09R, 59% won.
