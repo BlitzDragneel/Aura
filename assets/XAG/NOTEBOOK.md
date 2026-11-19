@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 79 readings scored; big moves followed 10% of them, 7% after a WATCH (15 WATCH readings) - too few to judge yet.
+- My own record: 80 readings scored; big moves followed 10% of them, 7% after a WATCH (15 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 59 readings scored; big moves followed 42% of them, 0% after a WATCH (2 WATCH readings) - too few to judge yet.
+- My own record: 60 readings scored; big moves followed 42% of them, 0% after a WATCH (3 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -30,14 +30,14 @@ Built automatically from the research findings, the approved rules and my own fo
 ## Habits I measure myself
 
 - Over the last 20 days the busiest session was Asia (average hourly move 0.40%) and the quietest late US (0.19%).
-- At weekends, while spot is closed, the perpetual moves 39% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- At weekends, while spot is closed, the perpetual moves 40% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 2.6% from low to high (last 60 days); 40% of those days closed higher.
 - Over the last 30 days the price moved -20.0% (a fact, not a forecast).
 
 ## Right now
 
-- Price 45.28; volatility regime active (hourly ATR 1.02% of price, 94.7th percentile).
-- Spot XAGUSD 45.24; the perpetual trades +0.09% from spot.
+- Price 45.35; volatility regime active (hourly ATR 0.915% of price, 85.0th percentile).
+- Spot XAGUSD 45.25; the perpetual trades +0.23% from spot.
 
 ## My calls so far
 
