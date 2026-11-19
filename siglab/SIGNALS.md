@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 16:01 UTC
+Updated 2026-11-19 16:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -17,7 +17,7 @@ Updated 2026-11-19 16:01 UTC
 | AVAXUSD S4 | 4 | -0.113 | -0.21 | 0.5 | PAPER |
 | AVAXUSD S5 | 4 | -1.052 | -433.36 | 0.0 | PAPER |
 | AVAXUSD S6 | 4 | 0.117 | 0.27 | 0.75 | PAPER |
-| AVAXUSD S7 | 2 | -0.217 | -0.26 | 0.5 | PAPER |
+| AVAXUSD S7 | 3 | -0.499 | -0.9 | 0.333 | PAPER |
 | BNBUSD S1 | 4 | -0.445 | -1.21 | 0.5 | PAPER |
 | BNBUSD S2 | 4 | -0.374 | -0.87 | 0.5 | PAPER |
 | BNBUSD S3 | 2 | -0.085 | -0.08 | 0.5 | PAPER |
@@ -117,7 +117,7 @@ Updated 2026-11-19 16:01 UTC
 - 19 Nov 15:45 LTCUSD sell S7 @ 43.37 SL 43.696 → open
 - 19 Nov 15:45 LINKUSD sell S7 @ 8.987 SL 9.0635 → open
 - 19 Nov 15:45 LINKUSD buy S3 @ 8.987 SL 8.9105 → open
-- 19 Nov 15:45 AVAXUSD sell S7 @ 6.935 SL 7.0024 → open
+- 19 Nov 15:45 AVAXUSD sell S7 @ 6.935 SL 7.0024 → closed SL -1.06R. Stopped out after 25 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). Lesson so far: big move with the trend: 14 closed, avg +0.08R, 79% won.
 - 19 Nov 15:45 AVAXUSD buy S3 @ 6.935 SL 6.8676 → open
 - 19 Nov 15:45 ADAUSD sell S7 @ 0.1518 SL 0.153157 → open
 - 19 Nov 15:45 DOGEUSD sell S7 @ 0.05833 SL 0.058801 → open
