@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-19T22:00:59.157500+00:00",
+ "asof": "2026-11-19T22:15:49.374344+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3633.0,
-  "bar": "2026-11-19T21:45:00+00:00",
+  "price": 3638.0,
+  "bar": "2026-11-19T22:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3633.0,
-    "ma20": 3674.125,
-    "ma50": 3700.9319999999993,
-    "slope_atr": -1.03,
-    "bar": "2026-11-19T21:45:00+00:00"
+    "close": 3638.0,
+    "ma20": 3672.0100000000007,
+    "ma50": 3698.9179999999997,
+    "slope_atr": -1.2,
+    "bar": "2026-11-19T22:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -97,14 +97,13 @@
    "bid": 3622.853,
    "ask": 3623.487,
    "spread": 0.634,
-   "age_s": 59,
-   "stale": false,
-   "note": null,
-   "source": "swissquote",
-   "perp_premium_pct": 0.271
+   "age_s": 949,
+   "stale": true,
+   "note": "market closed or feed paused",
+   "source": "swissquote"
   },
   "funding": {
-   "rate": 0.0001424197798584,
+   "rate": 0.0001970437805119,
    "next_time": 1795132800000,
    "source": "okx-swap"
   },
@@ -141,7 +140,7 @@
   "day": {
    "state": "WATCH",
    "since": "2026-11-19T22:00:59.157500+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "hourly volatility is high (91th percentile of the last 3 weeks)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -252,8 +251,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3633.0; volatility regime active (hourly ATR 0.528% of price, 90.9th percentile).",
-    "Spot XAUUSD 3623.17; the perpetual trades +0.27% from spot."
+    "Price 3638.0; volatility regime active (hourly ATR 0.528% of price, 90.9th percentile).",
+    "Spot XAUUSD 3623.17 (stale: market closed)."
    ]
   },
   {
@@ -263,6 +262,6 @@
    ]
   }
  ],
- "runs": 393,
+ "runs": 394,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

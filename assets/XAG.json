@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-19T22:01:01.219004+00:00",
+ "asof": "2026-11-19T22:15:51.392409+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 42.98,
-  "bar": "2026-11-19T21:45:00+00:00",
+  "price": 43.12,
+  "bar": "2026-11-19T22:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 42.98,
-    "ma20": 44.192,
-    "ma50": 44.778600000000004,
-    "slope_atr": -1.26,
-    "bar": "2026-11-19T21:45:00+00:00"
+    "close": 43.12,
+    "ma20": 44.1325,
+    "ma50": 44.73400000000001,
+    "slope_atr": -1.41,
+    "bar": "2026-11-19T22:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -97,14 +97,13 @@
    "bid": 42.8052,
    "ask": 42.8628,
    "spread": 0.0576,
-   "age_s": 61,
-   "stale": false,
-   "note": null,
-   "source": "swissquote",
-   "perp_premium_pct": 0.341
+   "age_s": 951,
+   "stale": true,
+   "note": "market closed or feed paused",
+   "source": "swissquote"
   },
   "funding": {
-   "rate": 0.0001514746467527,
+   "rate": 0.0002457838939985,
    "next_time": 1795132800000,
    "source": "okx-swap"
   },
@@ -141,7 +140,7 @@
   "day": {
    "state": "WATCH",
    "since": "2026-11-19T22:01:01.219004+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "hourly volatility is high (99th percentile of the last 3 weeks)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -252,8 +251,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 42.98; volatility regime extreme (hourly ATR 1.13% of price, 99.0th percentile).",
-    "Spot XAGUSD 42.83; the perpetual trades +0.34% from spot."
+    "Price 43.12; volatility regime extreme (hourly ATR 1.13% of price, 99.0th percentile).",
+    "Spot XAGUSD 42.83 (stale: market closed)."
    ]
   },
   {
@@ -263,6 +262,6 @@
    ]
   }
  ],
- "runs": 393,
+ "runs": 394,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
