@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 13:01 UTC
+Updated 2026-11-19 13:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -9,7 +9,7 @@ Updated 2026-11-19 13:01 UTC
 | ADAUSD S3 | 1 | 0.748 | None | 1.0 | PAPER |
 | ADAUSD S4 | 5 | -0.182 | -0.48 | 0.6 | PAPER |
 | ADAUSD S5 | 2 | -0.192 | -0.22 | 0.5 | PAPER |
-| ADAUSD S6 | 3 | 0.24 | 33.2 | 1.0 | PAPER |
+| ADAUSD S6 | 4 | -0.083 | -0.26 | 0.75 | PAPER |
 | ADAUSD S7 | 1 | 0.679 | None | 1.0 | PAPER |
 | AVAXUSD S1 | 4 | -0.717 | -2.2 | 0.25 | PAPER |
 | AVAXUSD S2 | 3 | -0.671 | -1.77 | 0.333 | PAPER |
@@ -130,7 +130,7 @@ Updated 2026-11-19 13:01 UTC
 - 19 Nov 07:00 LTCUSD sell S6 @ 44.68 SL 45.091 → open
 - 19 Nov 07:00 LINKUSD sell S6 @ 9.166 SL 9.2654 → open
 - 19 Nov 07:00 AVAXUSD sell S6 @ 7.063 SL 7.1456 → closed SL -1.05R. Stopped out after 360 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.8R). Lesson so far: daily bias with the trend: 33 closed, avg +0.12R, 85% won.
-- 19 Nov 07:00 ADAUSD sell S6 @ 0.1537 SL 0.155393 → open
+- 19 Nov 07:00 ADAUSD sell S6 @ 0.1537 SL 0.155393 → closed SL -1.05R. Stopped out after 367 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). Lesson so far: daily bias with the trend: 35 closed, avg +0.09R, 83% won.
 - 19 Nov 07:00 DOGEUSD buy S6 @ 0.05941 SL 0.058788 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 11 closed, avg +0.29R, 82% won.
 - 19 Nov 07:00 XRPUSD buy S6 @ 0.9837 SL 0.973507 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 11 closed, avg +0.29R, 82% won.
 - 19 Nov 07:00 XRPUSD sell S3 @ 0.9837 SL 0.993893 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 20 closed, avg +0.44R, 85% won.
