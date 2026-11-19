@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 05:30 UTC
+Updated 2026-11-19 05:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -26,7 +26,7 @@ Updated 2026-11-19 05:30 UTC
 | BNBUSD S6 | 3 | 0.692 | 2.55 | 1.0 | PAPER |
 | BNBUSD S7 | 2 | -0.502 | -0.84 | 0.5 | PAPER |
 | BTCUSD S1 | 4 | 0.035 | 0.1 | 0.75 | PAPER |
-| BTCUSD S2 | 3 | -0.631 | -1.63 | 0.333 | PAPER |
+| BTCUSD S2 | 4 | -0.446 | -1.35 | 0.5 | PAPER |
 | BTCUSD S3 | 2 | -0.183 | -0.22 | 0.5 | PAPER |
 | BTCUSD S4 | 5 | -0.284 | -0.95 | 0.6 | PAPER |
 | BTCUSD S5 | 2 | -1.023 | -1023.0 | 0.0 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-19 05:30 UTC
 
 - 19 Nov 04:15 XRPUSD buy S2 @ 0.9717 SL 0.959786 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 23 closed, avg -0.66R, 26% won.
 - 19 Nov 04:15 BNBUSD buy S2 @ 585.43 SL 580.02 → open
-- 19 Nov 04:15 BTCUSD buy S2 @ 63322.8 SL 62621.26 → open
+- 19 Nov 04:15 BTCUSD buy S2 @ 63322.8 SL 62621.26 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 24 closed, avg -0.63R, 29% won.
 - 19 Nov 04:00 SOLUSD buy S2 @ 74.19 SL 73.192 → open
 - 19 Nov 04:00 ETHUSD buy S2 @ 1792.92 SL 1769.79 → open
 - 19 Nov 03:45 NAS100 buy S1 @ 27339.7 SL 27123.02 → closed TP2+BE +0.27R. Reached TP2 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 54 closed, avg -0.16R, 59% won.
