@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 16:15 UTC
+Updated 2026-11-19 16:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -38,7 +38,7 @@ Updated 2026-11-19 16:15 UTC
 | DOGEUSD S4 | 4 | -0.139 | -0.26 | 0.5 | PAPER |
 | DOGEUSD S5 | 3 | -1.069 | -245.25 | 0.0 | PAPER |
 | DOGEUSD S6 | 4 | 0.146 | 8.95 | 1.0 | PAPER |
-| DOGEUSD S7 | 1 | 0.61 | None | 1.0 | PAPER |
+| DOGEUSD S7 | 2 | -0.233 | -0.28 | 0.5 | PAPER |
 | ETHUSD S1 | 5 | -0.338 | -1.16 | 0.6 | PAPER |
 | ETHUSD S2 | 4 | -0.417 | -1.12 | 0.5 | PAPER |
 | ETHUSD S3 | 3 | 0.402 | 0.5 | 0.667 | PAPER |
@@ -120,7 +120,7 @@ Updated 2026-11-19 16:15 UTC
 - 19 Nov 15:45 AVAXUSD sell S7 @ 6.935 SL 7.0024 → closed SL -1.06R. Stopped out after 25 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). Lesson so far: big move with the trend: 14 closed, avg +0.08R, 79% won.
 - 19 Nov 15:45 AVAXUSD buy S3 @ 6.935 SL 6.8676 → open
 - 19 Nov 15:45 ADAUSD sell S7 @ 0.1518 SL 0.153157 → open
-- 19 Nov 15:45 DOGEUSD sell S7 @ 0.05833 SL 0.058801 → open
+- 19 Nov 15:45 DOGEUSD sell S7 @ 0.05833 SL 0.058801 → closed SL -1.08R. Stopped out after 34 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: big move against the trend: 11 closed, avg -0.04R, 64% won.
 - 19 Nov 15:45 DOGEUSD buy S3 @ 0.05833 SL 0.057859 → open
 - 19 Nov 15:45 XRPUSD sell S7 @ 0.9688 SL 0.978243 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 10 closed, avg -0.06R, 60% won.
 - 19 Nov 15:45 BNBUSD sell S7 @ 584.92 SL 588.38 → open
