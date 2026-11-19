@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 09:15 UTC
+Updated 2026-11-19 09:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -56,7 +56,7 @@ Updated 2026-11-19 09:15 UTC
 | LTCUSD S1 | 5 | 0.108 | 0.2 | 0.6 | PAPER |
 | LTCUSD S2 | 4 | -1.06 | -408.72 | 0.0 | PAPER |
 | LTCUSD S3 | 3 | 0.196 | 0.26 | 0.667 | PAPER |
-| LTCUSD S4 | 4 | -0.204 | -0.37 | 0.5 | PAPER |
+| LTCUSD S4 | 5 | -0.144 | -0.33 | 0.6 | PAPER |
 | LTCUSD S5 | 3 | -0.452 | -0.73 | 0.333 | PAPER |
 | LTCUSD S6 | 3 | 0.071 | 0.12 | 0.667 | PAPER |
 | LTCUSD S7 | 1 | 0.054 | None | 1.0 | PAPER |
@@ -113,7 +113,7 @@ Updated 2026-11-19 09:15 UTC
 
 - 19 Nov 09:15 LINKUSD buy S2 @ 9.197 SL 9.1103 → open
 - 19 Nov 09:00 SUIUSD buy S2 @ 0.7302 SL 0.7225 → open
-- 19 Nov 07:45 LTCUSD buy S4 @ 44.53 SL 44.119 → open
+- 19 Nov 07:45 LTCUSD buy S4 @ 44.53 SL 44.119 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 18 closed, avg -0.04R, 61% won.
 - 19 Nov 07:30 SUIUSD sell S5 @ 0.7256 SL 0.734514 → open
 - 19 Nov 07:30 LTCUSD sell S5 @ 44.58 SL 44.991 → open
 - 19 Nov 07:30 LINKUSD sell S5 @ 9.147 SL 9.2464 → open
