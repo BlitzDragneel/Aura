@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 05:15 UTC
+Updated 2026-11-19 05:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -101,7 +101,7 @@ Updated 2026-11-19 05:15 UTC
 | XAUUSD S6 | 3 | -0.121 | -0.26 | 0.667 | PAPER |
 | XAUUSD S7 | 2 | 0.202 | 5.84 | 1.0 | PAPER |
 | XRPUSD S1 | 4 | 0.295 | 0.63 | 0.75 | PAPER |
-| XRPUSD S2 | 3 | 0.08 | 0.13 | 0.667 | PAPER |
+| XRPUSD S2 | 4 | 0.094 | 0.22 | 0.75 | PAPER |
 | XRPUSD S3 | 3 | 0.215 | 0.28 | 0.667 | PAPER |
 | XRPUSD S4 | 3 | 0.035 | 0.06 | 0.667 | PAPER |
 | XRPUSD S5 | 2 | 0.876 | 3.83 | 1.0 | PAPER |
@@ -110,7 +110,7 @@ Updated 2026-11-19 05:15 UTC
 
 ## Latest signals
 
-- 19 Nov 04:15 XRPUSD buy S2 @ 0.9717 SL 0.959786 → open
+- 19 Nov 04:15 XRPUSD buy S2 @ 0.9717 SL 0.959786 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 23 closed, avg -0.66R, 26% won.
 - 19 Nov 04:15 BNBUSD buy S2 @ 585.43 SL 580.02 → open
 - 19 Nov 04:15 BTCUSD buy S2 @ 63322.8 SL 62621.26 → open
 - 19 Nov 04:00 SOLUSD buy S2 @ 74.19 SL 73.192 → open
