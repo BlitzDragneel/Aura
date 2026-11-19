@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 02:31 UTC
+Updated 2026-11-19 02:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -76,7 +76,7 @@ Updated 2026-11-19 02:31 UTC
 | SUIUSD S1 | 3 | -0.245 | -0.61 | 0.667 | PAPER |
 | SUIUSD S2 | 3 | -1.048 | -479.3 | 0.0 | PAPER |
 | SUIUSD S3 | 2 | -0.43 | -0.68 | 0.5 | PAPER |
-| SUIUSD S4 | 3 | -0.033 | -0.06 | 0.667 | PAPER |
+| SUIUSD S4 | 4 | -0.0 | -0.0 | 0.75 | PAPER |
 | SUIUSD S5 | 2 | -1.055 | -703.67 | 0.0 | PAPER |
 | SUIUSD S6 | 3 | -0.244 | -0.6 | 0.667 | PAPER |
 | SUIUSD S7 | 1 | 0.106 | None | 1.0 | PAPER |
@@ -94,9 +94,9 @@ Updated 2026-11-19 02:31 UTC
 | XAGUSD S6 | 3 | 0.073 | 5.63 | 1.0 | PAPER |
 | XAGUSD S7 | 1 | 0.526 | None | 1.0 | PAPER |
 | XAUUSD S1 | 3 | -0.311 | -0.44 | 0.333 | PAPER |
-| XAUUSD S2 | 3 | -0.004 | -0.01 | 0.667 | PAPER |
+| XAUUSD S2 | 4 | -0.256 | -0.55 | 0.5 | PAPER |
 | XAUUSD S3 | 4 | -0.123 | -0.41 | 0.75 | PAPER |
-| XAUUSD S4 | 3 | 0.097 | 0.16 | 0.667 | PAPER |
+| XAUUSD S4 | 4 | -0.18 | -0.36 | 0.5 | PAPER |
 | XAUUSD S5 | 3 | -0.252 | -0.66 | 0.667 | PAPER |
 | XAUUSD S6 | 3 | -0.121 | -0.26 | 0.667 | PAPER |
 | XAUUSD S7 | 1 | 0.167 | None | 1.0 | PAPER |
@@ -110,6 +110,8 @@ Updated 2026-11-19 02:31 UTC
 
 ## Latest signals
 
+- 19 Nov 02:45 LTCUSD sell S1 @ 43.95 SL 44.437 → open
+- 19 Nov 02:45 XAUUSD sell S1 @ 3740.6 SL 3760.17 → open
 - 19 Nov 02:30 ETHUSD sell S1 @ 1772.83 SL 1794.98 → open
 - 19 Nov 02:15 US30 sell S1 @ 50333.29 SL 50551.15 → open
 - 19 Nov 01:45 AVAXUSD buy S4 @ 7.001 SL 6.9054 → open
@@ -119,8 +121,8 @@ Updated 2026-11-19 02:31 UTC
 - 19 Nov 01:45 SOLUSD buy S1 @ 73.41 SL 72.511 → open
 - 19 Nov 01:45 ETHUSD buy S4 @ 1777.3 SL 1756.11 → open
 - 19 Nov 01:45 NAS100 buy S4 @ 27249.14 SL 27046.32 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 38 closed, avg -0.26R, 53% won.
-- 19 Nov 01:45 XAUUSD buy S4 @ 3759.9 SL 3740.71 → open
-- 19 Nov 01:30 SUIUSD buy S4 @ 0.7144 SL 0.704507 → open
+- 19 Nov 01:45 XAUUSD buy S4 @ 3759.9 SL 3740.71 → closed SL -1.01R. Stopped out after 59 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Lesson so far: fib pullback against the trend: 10 closed, avg -0.47R, 40% won.
+- 19 Nov 01:30 SUIUSD buy S4 @ 0.7144 SL 0.704507 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 10 closed, avg -0.47R, 40% won.
 - 19 Nov 01:30 SUIUSD sell S1 @ 0.7144 SL 0.724293 → open
 - 19 Nov 01:30 LINKUSD buy S4 @ 9.024 SL 8.9186 → open
 - 19 Nov 01:30 LINKUSD sell S1 @ 9.024 SL 9.1294 → open
@@ -137,7 +139,7 @@ Updated 2026-11-19 02:31 UTC
 - 19 Nov 00:45 US30 sell S3 @ 50441.16 SL 50652.16 → open
 - 19 Nov 00:45 NAS100 sell S3 @ 27439.45 SL 27637.84 → open
 - 19 Nov 00:45 XAUUSD sell S3 @ 3761.0 SL 3779.46 → closed TP1+BE +0.27R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 16 closed, avg +0.40R, 81% won.
-- 19 Nov 00:45 XAUUSD buy S2 @ 3761.0 SL 3742.54 → open
+- 19 Nov 00:45 XAUUSD buy S2 @ 3761.0 SL 3742.54 → closed SL -1.01R. Stopped out after 118 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 21 closed, avg -0.63R, 29% won.
 - 19 Nov 00:30 BTCUSD buy S4 @ 62847.2 SL 62242.72 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 8 closed, avg -0.61R, 25% won.
 - 19 Nov 00:30 XAGUSD buy S2 @ 45.68 SL 45.259 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 20 closed, avg -0.67R, 25% won.
 - 19 Nov 00:15 XRPUSD buy S4 @ 0.9648 SL 0.952993 → open
@@ -168,5 +170,3 @@ Updated 2026-11-19 02:31 UTC
 - 18 Nov 10:30 BTCUSD sell S2 @ 64309.9 SL 64748.26 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 17 closed, avg -0.57R, 29% won.
 - 18 Nov 10:00 XAUUSD sell S1 @ 3786.1 SL 3802.16 → closed TP3 +1.09R. TP3 after 162 min (best 1.8R, worst -0.0R). Lesson so far: trend pullback with the trend: 37 closed, avg -0.18R, 62% won.
 - 18 Nov 08:30 NAS100 buy S4 @ 27205.15 SL 27006.72 → closed TP1+BE -0.03R. Reached TP1 then came back to the entry (best 0.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 5 closed, avg -0.57R, 40% won.
-- 18 Nov 08:15 LTCUSD sell S1 @ 44.6 SL 45.004 → closed TP3 +1.18R. TP3 after 267 min (best 1.9R, worst -0.3R). Lesson so far: trend pullback with the trend: 37 closed, avg -0.18R, 62% won.
-- 18 Nov 08:00 LTCUSD buy S2 @ 44.8 SL 44.396 → closed SL -1.07R. Stopped out after 131 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 15 closed, avg -0.71R, 20% won.

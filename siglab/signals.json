@@ -10175,7 +10175,7 @@
     3779.84
    ],
    "R": 18.457,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -10184,7 +10184,15 @@
    "day": "2026-11-19",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3761.0,
+   "outcome": "SL",
+   "R_ladder": -1.011,
+   "R_tp1": -1.011,
+   "pips": -186.6,
+   "closed_ms": 1795056180000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 118 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 21 closed, avg -0.63R, 29% won."
   },
   {
    "id": "XAUUSD-S3-1795049100000",
@@ -10726,14 +10734,22 @@
     0.727805
    ],
    "R": 0.0098929,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-19",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 0.7145,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.099,
+   "R_tp1": 0.382,
+   "pips": 13.8,
+   "closed_ms": 1795055760000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 10 closed, avg -0.47R, 40% won."
   },
   {
    "id": "XAUUSD-S4-1795052700000",
@@ -10757,7 +10773,7 @@
     3778.74
    ],
    "R": 19.186,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -10766,7 +10782,15 @@
    "day": "2026-11-19",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3759.9,
+   "outcome": "SL",
+   "R_ladder": -1.01,
+   "R_tp1": -1.01,
+   "pips": -193.9,
+   "closed_ms": 1795056240000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 59 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Lesson so far: fib pullback against the trend: 10 closed, avg -0.47R, 40% won."
   },
   {
    "id": "NAS100-S4-1795052700000",
@@ -11050,6 +11074,70 @@
     1741.75
    ],
    "R": 22.151,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XAUUSD-S1-1795056300000",
+   "symbol": "XAUUSD",
+   "setup": "S1",
+   "side": "sell",
+   "why": "downtrend, price closed back below its short average after a bounce",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795056300000,
+   "ref_price": 3740.6,
+   "stop": 3760.17,
+   "targets": [
+    3725.14,
+    3718.09,
+    3709.31
+   ],
+   "R": 19.571,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-19",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "LTCUSD-S1-1795056300000",
+   "symbol": "LTCUSD",
+   "setup": "S1",
+   "side": "sell",
+   "why": "downtrend, price closed back below its short average after a bounce",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795056300000,
+   "ref_price": 43.95,
+   "stop": 44.437,
+   "targets": [
+    43.646,
+    43.44,
+    43.252
+   ],
+   "R": 0.4871,
    "status": "open",
    "target_odds": [
     60,
@@ -11641,11 +11729,11 @@
     "grade": "PAPER"
    },
    "SUIUSD S4": {
-    "n": 3,
-    "avg_R": -0.033,
-    "t": -0.06,
-    "win": 0.667,
-    "total_R": -0.1,
+    "n": 4,
+    "avg_R": -0.0,
+    "t": -0.0,
+    "win": 0.75,
+    "total_R": -0.0,
     "grade": "PAPER"
    },
    "SUIUSD S5": {
@@ -11785,11 +11873,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S2": {
-    "n": 3,
-    "avg_R": -0.004,
-    "t": -0.01,
-    "win": 0.667,
-    "total_R": -0.01,
+    "n": 4,
+    "avg_R": -0.256,
+    "t": -0.55,
+    "win": 0.5,
+    "total_R": -1.02,
     "grade": "PAPER"
    },
    "XAUUSD S3": {
@@ -11801,11 +11889,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S4": {
-    "n": 3,
-    "avg_R": 0.097,
-    "t": 0.16,
-    "win": 0.667,
-    "total_R": 0.29,
+    "n": 4,
+    "avg_R": -0.18,
+    "t": -0.36,
+    "win": 0.5,
+    "total_R": -0.72,
     "grade": "PAPER"
    },
    "XAUUSD S5": {
@@ -11898,11 +11986,11 @@
     "total_R": -4.09
    },
    "S2": {
-    "n": 42,
-    "avg_R": -0.539,
-    "t": -4.74,
-    "win": 0.333,
-    "total_R": -22.64
+    "n": 43,
+    "avg_R": -0.55,
+    "t": -4.93,
+    "win": 0.326,
+    "total_R": -23.65
    },
    "S3": {
     "n": 33,
@@ -11912,11 +12000,11 @@
     "total_R": 3.78
    },
    "S4": {
-    "n": 50,
-    "avg_R": -0.311,
-    "t": -2.87,
-    "win": 0.48,
-    "total_R": -15.53
+    "n": 52,
+    "avg_R": -0.316,
+    "t": -3.01,
+    "win": 0.481,
+    "total_R": -16.45
    },
    "S5": {
     "n": 31,
@@ -11941,13 +12029,13 @@
    }
   },
   "all": {
-   "n": 260,
-   "avg_R": -0.176,
-   "t": -3.55,
-   "win": 0.573,
-   "total_R": -45.67
+   "n": 263,
+   "avg_R": -0.181,
+   "t": -3.68,
+   "win": 0.57,
+   "total_R": -47.6
   },
-  "open": 27
+  "open": 26
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -12021,11 +12109,11 @@
    "total_R": -4.09
   },
   "S2 | Asia": {
-   "n": 23,
-   "avg_R": -0.458,
-   "t": -2.78,
-   "win": 0.391,
-   "total_R": -10.54
+   "n": 24,
+   "avg_R": -0.481,
+   "t": -3.02,
+   "win": 0.375,
+   "total_R": -11.55
   },
   "S2 | London": {
    "n": 13,
@@ -12042,18 +12130,18 @@
    "total_R": -3.25
   },
   "S2 | against trend": {
-   "n": 21,
-   "avg_R": -0.628,
-   "t": -4.45,
-   "win": 0.286,
-   "total_R": -13.2
+   "n": 22,
+   "avg_R": -0.646,
+   "t": -4.76,
+   "win": 0.273,
+   "total_R": -14.21
   },
   "S2 | compressed": {
-   "n": 13,
-   "avg_R": -0.473,
-   "t": -2.42,
-   "win": 0.385,
-   "total_R": -6.15
+   "n": 14,
+   "avg_R": -0.511,
+   "t": -2.77,
+   "win": 0.357,
+   "total_R": -7.16
   },
   "S2 | expanding": {
    "n": 5,
@@ -12091,11 +12179,11 @@
    "total_R": -3.99
   },
   "S2 | vol normal": {
-   "n": 31,
-   "avg_R": -0.569,
-   "t": -4.25,
-   "win": 0.29,
-   "total_R": -17.63
+   "n": 32,
+   "avg_R": -0.583,
+   "t": -4.47,
+   "win": 0.281,
+   "total_R": -18.64
   },
   "S2 | with trend": {
    "n": 21,
@@ -12189,11 +12277,11 @@
    "total_R": 6.68
   },
   "S4 | Asia": {
-   "n": 40,
-   "avg_R": -0.309,
-   "t": -2.47,
-   "win": 0.475,
-   "total_R": -12.38
+   "n": 42,
+   "avg_R": -0.316,
+   "t": -2.62,
+   "win": 0.476,
+   "total_R": -13.29
   },
   "S4 | London": {
    "n": 2,
@@ -12210,11 +12298,11 @@
    "total_R": -1.25
   },
   "S4 | against trend": {
-   "n": 10,
-   "avg_R": -0.469,
-   "t": -2.43,
-   "win": 0.4,
-   "total_R": -4.69
+   "n": 12,
+   "avg_R": -0.467,
+   "t": -2.69,
+   "win": 0.417,
+   "total_R": -5.6
   },
   "S4 | compressed": {
    "n": 11,
@@ -12238,11 +12326,11 @@
    "total_R": -1.05
   },
   "S4 | normal": {
-   "n": 37,
-   "avg_R": -0.359,
-   "t": -2.89,
-   "win": 0.459,
-   "total_R": -13.29
+   "n": 39,
+   "avg_R": -0.364,
+   "t": -3.05,
+   "win": 0.462,
+   "total_R": -14.2
   },
   "S4 | vol high": {
    "n": 3,
@@ -12259,11 +12347,11 @@
    "total_R": -2.39
   },
   "S4 | vol normal": {
-   "n": 41,
-   "avg_R": -0.302,
-   "t": -2.55,
+   "n": 43,
+   "avg_R": -0.309,
+   "t": -2.71,
    "win": 0.488,
-   "total_R": -12.37
+   "total_R": -13.28
   },
   "S4 | with trend": {
    "n": 39,

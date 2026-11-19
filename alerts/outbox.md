@@ -596,3 +596,8 @@ Market now: trend up, volatility normal, Asia session
 ⚡ Dow 30: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~50333.29
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-19 02:46:02 UTC
+⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3740.6
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
