@@ -636,3 +636,6 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Nasdaq 100: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~27547.2
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-19 07:01:02 UTC
+👀 Gold swing: WATCH at 3,739.40. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
