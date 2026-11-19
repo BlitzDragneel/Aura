@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-19T20:00:52.792505+00:00",
+ "asof": "2026-11-19T20:15:44.026131+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 62341.0,
-  "bar": "2026-11-19T19:45:00+00:00",
+  "price": 62191.9,
+  "bar": "2026-11-19T20:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 62341.0,
-    "ma20": 62906.525,
-    "ma50": 63424.584,
-    "slope_atr": -0.75,
-    "bar": "2026-11-19T19:45:00+00:00"
+    "close": 62191.9,
+    "ma20": 62840.770000000004,
+    "ma50": 63396.59,
+    "slope_atr": -0.79,
+    "bar": "2026-11-19T20:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.9,
   "funding": {
-   "rate": 7.94214070133e-05,
+   "rate": 7.62632035198e-05,
    "next_time": 1795132800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.306,
+    "p_big_move": 0.331,
     "flag": false,
     "detail": {
-     "p_up_move": 0.174,
-     "p_down_move": 0.132
+     "p_up_move": 0.181,
+     "p_down_move": 0.15
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -140,7 +140,7 @@
   "swing": {
    "state": "WATCH",
    "since": "2026-11-19T20:00:52.792505+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "price is within 1 hourly ATR of its 30-day low: a break or a rejection is near",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -247,7 +247,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 62341.0; volatility regime active (hourly ATR 0.883% of price, 77.0th percentile).",
+    "Price 62191.9; volatility regime active (hourly ATR 0.883% of price, 77.0th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -258,6 +258,6 @@
    ]
   }
  ],
- "runs": 384,
+ "runs": 385,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
