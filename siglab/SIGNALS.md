@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 05:01 UTC
+Updated 2026-11-19 05:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -60,7 +60,7 @@ Updated 2026-11-19 05:01 UTC
 | LTCUSD S5 | 3 | -0.452 | -0.73 | 0.333 | PAPER |
 | LTCUSD S6 | 3 | 0.071 | 0.12 | 0.667 | PAPER |
 | LTCUSD S7 | 1 | 0.054 | None | 1.0 | PAPER |
-| NAS100 S1 | 1 | 0.593 | None | 1.0 | PAPER |
+| NAS100 S1 | 2 | 0.43 | 2.65 | 1.0 | PAPER |
 | NAS100 S2 | 1 | -0.013 | None | 0.0 | PAPER |
 | NAS100 S3 | 2 | 0.237 | 0.4 | 0.5 | PAPER |
 | NAS100 S4 | 2 | -0.027 | -17.67 | 0.0 | PAPER |
@@ -115,7 +115,7 @@ Updated 2026-11-19 05:01 UTC
 - 19 Nov 04:15 BTCUSD buy S2 @ 63322.8 SL 62621.26 → open
 - 19 Nov 04:00 SOLUSD buy S2 @ 74.19 SL 73.192 → open
 - 19 Nov 04:00 ETHUSD buy S2 @ 1792.92 SL 1769.79 → open
-- 19 Nov 03:45 NAS100 buy S1 @ 27339.7 SL 27123.02 → open
+- 19 Nov 03:45 NAS100 buy S1 @ 27339.7 SL 27123.02 → closed TP2+BE +0.27R. Reached TP2 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 54 closed, avg -0.16R, 59% won.
 - 19 Nov 03:15 XAGUSD sell S7 @ 44.66 SL 45.131 → closed SL -1.06R. Stopped out after 33 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 12 closed, avg +0.14R, 83% won.
 - 19 Nov 03:00 XAUUSD sell S7 @ 3717.1 SL 3738.08 → closed TP1+BE +0.24R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 11 closed, avg +0.13R, 82% won.
 - 19 Nov 02:45 LTCUSD sell S1 @ 43.95 SL 44.437 → closed SL -1.05R. Stopped out after 73 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). Lesson so far: trend pullback with the trend: 46 closed, avg -0.04R, 67% won.
