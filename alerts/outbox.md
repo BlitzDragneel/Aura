@@ -623,3 +623,8 @@ Market now: trend down, volatility high, Asia session
 ⚡ Nasdaq 100: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~27339.7
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-19 04:15:58 UTC
+⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~63322.8
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
