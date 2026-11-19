@@ -12283,14 +12283,22 @@
     44.022
    ],
    "R": 0.4114,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-19",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 44.68,
+   "outcome": "TP3",
+   "R_ladder": 1.052,
+   "R_tp1": 0.601,
+   "pips": 96.8,
+   "closed_ms": 1795101240000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 494 min (best 1.7R, worst -0.2R). Lesson so far: daily bias with the trend: 37 closed, avg +0.03R, 78% won."
   },
   {
    "id": "SUIUSD-S6-1795071600000",
@@ -12713,14 +12721,22 @@
     0.743883
    ],
    "R": 0.0077,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-19",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 0.7302,
+   "outcome": "SL",
+   "R_ladder": -1.057,
+   "R_tp1": -1.057,
+   "pips": -111.5,
+   "closed_ms": 1795101300000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 375 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 29 closed, avg -0.48R, 41% won."
   },
   {
    "id": "LINKUSD-S2-1795079700000",
@@ -13513,11 +13529,11 @@
     "grade": "PAPER"
    },
    "LTCUSD S6": {
-    "n": 3,
-    "avg_R": 0.071,
-    "t": 0.12,
-    "win": 0.667,
-    "total_R": 0.21,
+    "n": 4,
+    "avg_R": 0.317,
+    "t": 0.66,
+    "win": 0.75,
+    "total_R": 1.27,
     "grade": "PAPER"
    },
    "LTCUSD S7": {
@@ -13641,11 +13657,11 @@
     "grade": "PAPER"
    },
    "SUIUSD S2": {
-    "n": 3,
-    "avg_R": -1.048,
-    "t": -479.3,
+    "n": 4,
+    "avg_R": -1.05,
+    "t": -375.16,
     "win": 0.0,
-    "total_R": -3.14,
+    "total_R": -4.2,
     "grade": "PAPER"
    },
    "SUIUSD S3": {
@@ -13922,11 +13938,11 @@
     "total_R": -8.29
    },
    "S2": {
-    "n": 54,
-    "avg_R": -0.44,
-    "t": -4.44,
-    "win": 0.426,
-    "total_R": -23.73
+    "n": 55,
+    "avg_R": -0.451,
+    "t": -4.6,
+    "win": 0.418,
+    "total_R": -24.79
    },
    "S3": {
     "n": 37,
@@ -13950,11 +13966,11 @@
     "total_R": -20.42
    },
    "S6": {
-    "n": 50,
-    "avg_R": 0.091,
-    "t": 0.97,
-    "win": 0.8,
-    "total_R": 4.54
+    "n": 51,
+    "avg_R": 0.11,
+    "t": 1.17,
+    "win": 0.804,
+    "total_R": 5.59
    },
    "S7": {
     "n": 23,
@@ -13965,13 +13981,13 @@
    }
   },
   "all": {
-   "n": 323,
-   "avg_R": -0.16,
-   "t": -3.55,
+   "n": 325,
+   "avg_R": -0.159,
+   "t": -3.54,
    "win": 0.582,
    "total_R": -51.6
   },
-  "open": 12
+  "open": 10
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -14052,11 +14068,11 @@
    "total_R": -10.89
   },
   "S2 | London": {
-   "n": 16,
-   "avg_R": -0.537,
-   "t": -3.43,
-   "win": 0.375,
-   "total_R": -8.59
+   "n": 17,
+   "avg_R": -0.567,
+   "t": -3.78,
+   "win": 0.353,
+   "total_R": -9.64
   },
   "S2 | New York": {
    "n": 6,
@@ -14066,18 +14082,18 @@
    "total_R": -3.16
   },
   "S2 | against trend": {
-   "n": 29,
-   "avg_R": -0.478,
-   "t": -3.82,
-   "win": 0.414,
-   "total_R": -13.85
+   "n": 30,
+   "avg_R": -0.497,
+   "t": -4.06,
+   "win": 0.4,
+   "total_R": -14.91
   },
   "S2 | compressed": {
-   "n": 16,
-   "avg_R": -0.507,
-   "t": -2.99,
-   "win": 0.375,
-   "total_R": -8.11
+   "n": 17,
+   "avg_R": -0.539,
+   "t": -3.32,
+   "win": 0.353,
+   "total_R": -9.17
   },
   "S2 | expanding": {
    "n": 5,
@@ -14108,11 +14124,11 @@
    "total_R": -1.02
   },
   "S2 | vol low": {
-   "n": 9,
-   "avg_R": -0.548,
-   "t": -2.64,
-   "win": 0.444,
-   "total_R": -4.93
+   "n": 10,
+   "avg_R": -0.599,
+   "t": -3.12,
+   "win": 0.4,
+   "total_R": -5.99
   },
   "S2 | vol normal": {
    "n": 41,
@@ -14360,11 +14376,11 @@
    "total_R": -10.44
   },
   "S6 | Asia": {
-   "n": 50,
-   "avg_R": 0.091,
-   "t": 0.97,
-   "win": 0.8,
-   "total_R": 4.54
+   "n": 51,
+   "avg_R": 0.11,
+   "t": 1.17,
+   "win": 0.804,
+   "total_R": 5.59
   },
   "S6 | against trend": {
    "n": 13,
@@ -14388,11 +14404,11 @@
    "total_R": -0.72
   },
   "S6 | normal": {
-   "n": 30,
-   "avg_R": -0.027,
-   "t": -0.23,
-   "win": 0.767,
-   "total_R": -0.81
+   "n": 31,
+   "avg_R": 0.008,
+   "t": 0.07,
+   "win": 0.774,
+   "total_R": 0.24
   },
   "S6 | vol high": {
    "n": 2,
@@ -14409,18 +14425,18 @@
    "total_R": -0.69
   },
   "S6 | vol normal": {
-   "n": 31,
-   "avg_R": 0.198,
-   "t": 2.08,
-   "win": 0.903,
-   "total_R": 6.15
+   "n": 32,
+   "avg_R": 0.225,
+   "t": 2.34,
+   "win": 0.906,
+   "total_R": 7.2
   },
   "S6 | with trend": {
-   "n": 37,
-   "avg_R": 0.03,
-   "t": 0.29,
-   "win": 0.784,
-   "total_R": 1.11
+   "n": 38,
+   "avg_R": 0.057,
+   "t": 0.54,
+   "win": 0.789,
+   "total_R": 2.16
   },
   "S7 | Asia": {
    "n": 4,
