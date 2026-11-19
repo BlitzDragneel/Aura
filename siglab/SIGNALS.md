@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-19 17:15 UTC
+Updated 2026-11-19 17:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -45,7 +45,7 @@ Updated 2026-11-19 17:15 UTC
 | ETHUSD S4 | 5 | -0.141 | -0.36 | 0.6 | PAPER |
 | ETHUSD S5 | 3 | -0.349 | -0.49 | 0.333 | PAPER |
 | ETHUSD S6 | 4 | 0.634 | 2.03 | 1.0 | PAPER |
-| ETHUSD S7 | 3 | -0.104 | -0.21 | 0.667 | PAPER |
+| ETHUSD S7 | 4 | 0.045 | 0.12 | 0.75 | PAPER |
 | LINKUSD S1 | 4 | -0.425 | -1.18 | 0.5 | PAPER |
 | LINKUSD S2 | 4 | -0.105 | -0.32 | 0.75 | PAPER |
 | LINKUSD S3 | 2 | -0.297 | -0.39 | 0.5 | PAPER |
@@ -127,7 +127,7 @@ Updated 2026-11-19 17:15 UTC
 - 19 Nov 15:45 XRPUSD sell S7 @ 0.9688 SL 0.978243 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 10 closed, avg -0.06R, 60% won.
 - 19 Nov 15:45 BNBUSD sell S7 @ 584.92 SL 588.38 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 16 closed, avg -0.36R, 44% won.
 - 19 Nov 15:45 SOLUSD sell S7 @ 73.6 SL 74.286 → closed TP3 +0.84R. TP3 after 79 min (best 1.4R, worst -0.6R). Lesson so far: big move against the trend: 17 closed, avg -0.33R, 47% won.
-- 19 Nov 15:45 ETHUSD sell S7 @ 1774.96 SL 1789.55 → open
+- 19 Nov 15:45 ETHUSD sell S7 @ 1774.96 SL 1789.55 → closed TP2+BE +0.49R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 18 closed, avg -0.27R, 50% won.
 - 19 Nov 15:45 NAS100 sell S7 @ 27096.66 SL 27237.82 → closed SL -1.01R. Stopped out after 44 min. The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 12 closed, avg -0.13R, 58% won.
 - 19 Nov 15:45 BTCUSD sell S7 @ 62855.0 SL 63310.1 → closed SL -1.02R. Stopped out after 55 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: big move with the trend: 15 closed, avg +0.00R, 73% won.
 - 19 Nov 15:45 BTCUSD buy S3 @ 62855.0 SL 62399.9 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 16 closed, avg -0.18R, 56% won.
