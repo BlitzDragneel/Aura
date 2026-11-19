@@ -700,3 +700,6 @@ Market now: trend up, volatility high, New York session
 👀 Silver day: WATCH at 44.61. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
 
 👀 Silver swing: WATCH at 44.61. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-19 20:01:03 UTC
+👀 Bitcoin swing: WATCH at 62,341.00. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
