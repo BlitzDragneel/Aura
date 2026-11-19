@@ -1,4 +1,4 @@
-Updated 2026-11-19 17:44 UTC - paper only, no keys, no real orders
+Updated 2026-11-19 23:55 UTC - paper only, no keys, no real orders
 
 {
  "home": "/home/runner/work/Aura/Aura/state/home",
@@ -28,142 +28,88 @@ Updated 2026-11-19 17:44 UTC - paper only, no keys, no real orders
   "upscout_watch": "paper",
   "btc_gold_invvol": "paper"
  },
- "last_bar": "2026-11-19T16:00:00+00:00",
+ "last_bar": "2026-11-19T22:00:00+00:00",
  "resting_orders": [
   {
-   "id": "e11fc5eaa87b41a1",
+   "id": "3eea262186934cd6",
    "strategy": "panic_h1",
-   "sym": "ASTERUSDT",
+   "sym": "SKYUSDT",
    "side": "long",
    "kind": "limit",
-   "qty": 10.329415,
-   "price": 0.48405455,
-   "placed_at": "2026-11-19T17:00:00+00:00",
-   "expires_at": "2026-11-19T20:00:00+00:00",
+   "qty": 109.01269,
+   "price": 0.04586622,
+   "placed_at": "2026-11-19T21:00:00+00:00",
+   "expires_at": "2026-11-20T00:00:00+00:00",
    "hold_bars": 24,
-   "stop_price": 0.24202728,
+   "stop_price": 0.02293311,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-19T16:00:00+00:00",
+   "signal_bar": "2026-11-19T20:00:00+00:00",
    "exchange_ids": {
     "paper": true
    },
    "status": "pending",
-   "note": "r24 -6.8% <= own q10 -4.5%; sigma 2.52%",
+   "note": "r24 -6.7% <= own q10 -4.6%; sigma 1.74%",
    "valid_for_bars": 3,
-   "ref_price": 0.5091,
+   "ref_price": 0.04749,
    "tf": "1h",
    "src_tf": "1h"
   },
   {
-   "id": "98d84c3782d64d07",
+   "id": "8bc0d29e74474639",
    "strategy": "panic15m_watch",
    "sym": "XLMUSDT",
    "side": "long",
    "kind": "limit",
-   "qty": 37.963372,
-   "price": 0.1317059,
-   "placed_at": "2026-11-19T17:15:00+00:00",
-   "expires_at": "2026-11-19T20:15:00+00:00",
+   "qty": 38.238351,
+   "price": 0.13075878,
+   "placed_at": "2026-11-19T21:30:00+00:00",
+   "expires_at": "2026-11-20T00:30:00+00:00",
    "hold_bars": 96,
-   "stop_price": 0.06585295,
+   "stop_price": 0.06537939,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-19T17:00:00+00:00",
+   "signal_bar": "2026-11-19T21:15:00+00:00",
    "exchange_ids": {
     "paper": true
    },
    "status": "pending",
-   "note": "r96 -4.20% <= own q10 -4.07%; sigma 0.342%",
+   "note": "r96 -4.25% <= own q10 -4.07%; sigma 0.347%",
    "valid_for_bars": 12,
-   "ref_price": 0.13261,
+   "ref_price": 0.13167,
    "tf": "15m",
    "src_tf": "5m"
   },
   {
-   "id": "517e7cff55494bfc",
-   "strategy": "panic5m_watch",
-   "sym": "XLMUSDT",
+   "id": "44c15becebb34299",
+   "strategy": "panic_h1",
+   "sym": "PROSUSDT",
    "side": "long",
    "kind": "limit",
-   "qty": 37.479231,
-   "price": 0.13340722,
-   "placed_at": "2026-11-19T17:35:00+00:00",
-   "expires_at": "2026-11-19T17:50:00+00:00",
-   "hold_bars": 288,
-   "stop_price": 0.06670361,
+   "qty": 9.593545,
+   "price": 0.52118381,
+   "placed_at": "2026-11-19T23:00:00+00:00",
+   "expires_at": "2026-11-20T02:00:00+00:00",
+   "hold_bars": 24,
+   "stop_price": 0.26059191,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-19T17:30:00+00:00",
+   "signal_bar": "2026-11-19T22:00:00+00:00",
    "exchange_ids": {
     "paper": true
    },
    "status": "pending",
-   "note": "r288 -4.31% <= own q10 -4.07%; sigma 0.208%",
+   "note": "r24 -19.6% <= own q10 -5.8%; sigma 1.98%",
    "valid_for_bars": 3,
-   "ref_price": 0.13452,
-   "tf": "5m",
-   "src_tf": "5m"
+   "ref_price": 0.5422,
+   "tf": "1h",
+   "src_tf": "1h"
   }
  ],
  "open_positions": [
-  {
-   "id": "2eb0a6a3f3974e77",
-   "strategy": "panic_h1",
-   "sym": "BREVUSDT",
-   "side": "long",
-   "qty": 60.314992,
-   "entry": 0.08289813,
-   "entry_time": "2026-11-18T18:00:00+00:00",
-   "exit_due": "2026-11-19T18:00:00+00:00",
-   "stop_price": 0.04144907,
-   "target_price": null,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "entry_kind": "limit",
-   "exchange_ids": {
-    "paper": true
-   },
-   "status": "open",
-   "exit": null,
-   "exit_time": null,
-   "exit_reason": "",
-   "pnl_usdt": null,
-   "note": "r24 -8.4% <= own q10 -5.7%; sigma 2.68%",
-   "entry_bar": "2026-11-18T17:00:00+00:00",
-   "tf": "1h",
-   "src_tf": "1h"
-  },
-  {
-   "id": "286c0d008bdc4d75",
-   "strategy": "upscout_watch",
-   "sym": "FILUSDT",
-   "side": "long",
-   "qty": 8.898381,
-   "entry": 0.5619,
-   "entry_time": "2026-11-18T23:00:00+00:00",
-   "exit_due": "2026-11-19T23:00:00+00:00",
-   "stop_price": 0.28095,
-   "target_price": null,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "entry_kind": "market",
-   "exchange_ids": {
-    "paper": true
-   },
-   "status": "open",
-   "exit": null,
-   "exit_time": null,
-   "exit_reason": "",
-   "pnl_usdt": null,
-   "note": "p_up_move 0.299 >= top-2% threshold 0.284",
-   "entry_bar": "2026-11-18T22:00:00+00:00",
-   "tf": "1h",
-   "src_tf": "1h"
-  },
   {
    "id": "48ad805c1e354d56",
    "strategy": "panic_h1",
@@ -190,109 +136,133 @@ Updated 2026-11-19 17:44 UTC - paper only, no keys, no real orders
    "entry_bar": "2026-11-19T16:00:00+00:00",
    "tf": "1h",
    "src_tf": "1h"
+  },
+  {
+   "id": "2daa725a292e457b",
+   "strategy": "upscout_watch",
+   "sym": "APTUSDT",
+   "side": "long",
+   "qty": 12.248898,
+   "entry": 0.4082,
+   "entry_time": "2026-11-19T22:00:00+00:00",
+   "exit_due": "2026-11-20T22:00:00+00:00",
+   "stop_price": 0.2041,
+   "target_price": null,
+   "leverage": 1,
+   "margin_usdt": 5.0,
+   "entry_kind": "market",
+   "exchange_ids": {
+    "paper": true
+   },
+   "status": "open",
+   "exit": null,
+   "exit_time": null,
+   "exit_reason": "",
+   "pnl_usdt": null,
+   "note": "p_up_move 0.314 >= top-2% threshold 0.284",
+   "entry_bar": "2026-11-19T21:00:00+00:00",
+   "tf": "1h",
+   "src_tf": "1h"
   }
  ],
- "closed_trades": 266,
- "today_pnl_paper": 0.503525,
+ "closed_trades": 268,
+ "today_pnl_paper": 0.15137600000000004,
  "recent_log": [
   {
-   "t": "2026-11-19T17:44:37Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "XLMUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-19T17:44:37Z",
-   "event": "order",
-   "mode": "paper",
-   "rule": "panic15m_watch",
-   "sym": "XLMUSDT",
-   "kind": "limit",
-   "qty": 37.963372,
-   "price": 0.1317059,
-   "ref": 0.13261,
-   "stop": 0.06585295,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "expires": "2026-11-19T20:15:00+00:00",
-   "why": "r96 -4.20% <= own q10 -4.07%; sigma 0.342%"
-  },
-  {
-   "t": "2026-11-19T17:44:37Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "XLMUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-19T17:44:37Z",
+   "t": "2026-11-19T23:55:37Z",
    "event": "expired",
-   "order": "150acd3bc8fe4c78",
+   "order": "3d83c000873c4b08",
    "sym": "XLMUSDT",
    "strategy": "panic5m_watch",
-   "price": 0.1316267
+   "price": 0.13038653
   },
   {
-   "t": "2026-11-19T17:44:37Z",
-   "event": "order",
-   "mode": "paper",
-   "rule": "panic5m_watch",
-   "sym": "XLMUSDT",
-   "kind": "limit",
-   "qty": 38.018573,
-   "price": 0.13151467,
-   "ref": 0.13255,
-   "stop": 0.06575734,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "expires": "2026-11-19T17:35:00+00:00",
-   "why": "r288 -4.82% <= own q10 -4.07%; sigma 0.196%"
-  },
-  {
-   "t": "2026-11-19T17:44:37Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "XLMUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-19T17:44:37Z",
-   "event": "ignored_busy",
-   "rule": "panic15m_watch",
-   "sym": "XLMUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-19T17:44:37Z",
-   "event": "ignored_busy",
-   "rule": "panic5m_watch",
-   "sym": "XLMUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-19T17:44:37Z",
+   "t": "2026-11-19T23:55:38Z",
    "event": "expired",
-   "order": "2336221874844742",
-   "sym": "XLMUSDT",
-   "strategy": "panic5m_watch",
-   "price": 0.13151467
+   "order": "d98ba2615f634c80",
+   "sym": "BREVUSDT",
+   "strategy": "panic_h1",
+   "price": 0.07187572
   },
   {
-   "t": "2026-11-19T17:44:37Z",
+   "t": "2026-11-19T23:55:38Z",
+   "event": "closed",
+   "mode": "paper",
+   "strategy": "upscout_watch",
+   "sym": "FILUSDT",
+   "price": 0.5718,
+   "reason": "time",
+   "pnl_usdt": 0.083094
+  },
+  {
+   "t": "2026-11-19T23:55:38Z",
+   "event": "ignored_busy",
+   "rule": "panic_h1",
+   "sym": "PIEVERSEUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-19T23:55:38Z",
+   "event": "ignored_busy",
+   "rule": "panic_h1",
+   "sym": "SKYUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-19T23:55:38Z",
    "event": "order",
    "mode": "paper",
-   "rule": "panic5m_watch",
-   "sym": "XLMUSDT",
+   "rule": "panic_h1",
+   "sym": "PROSUSDT",
    "kind": "limit",
-   "qty": 37.479231,
-   "price": 0.13340722,
-   "ref": 0.13452,
-   "stop": 0.06670361,
+   "qty": 9.593545,
+   "price": 0.52118381,
+   "ref": 0.5422,
+   "stop": 0.26059191,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "expires": "2026-11-19T17:50:00+00:00",
-   "why": "r288 -4.31% <= own q10 -4.07%; sigma 0.208%"
+   "expires": "2026-11-20T02:00:00+00:00",
+   "why": "r24 -19.6% <= own q10 -5.8%; sigma 1.98%"
+  },
+  {
+   "t": "2026-11-19T23:55:38Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "SOONUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-19T23:55:38Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "SPKUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-19T23:55:38Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "XDPUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-19T23:55:38Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "OFCUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
   }
  ]
 }
