@@ -835,3 +835,10 @@ Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
 
 🔁 Learning: breakout with the trend is now back to normal.
+
+## 2026-11-20 15:31:02 UTC
+⚡ Bitcoin: BIG MOVE under way right now (moved -1705.30 in the last hour, twice its normal hourly range), price ~60372.4
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+🔁 Learning: breakout against the trend is now MUTED (no trade plans) after 34 live signals (15 separate moments) averaging -0.58R.
