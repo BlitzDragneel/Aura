@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 06:16 UTC
+Updated 2026-11-20 06:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -81,7 +81,7 @@ Updated 2026-11-20 06:16 UTC
 | SUIUSD S5 | 3 | -0.394 | -0.59 | 0.333 | PAPER |
 | SUIUSD S6 | 4 | 0.048 | 0.12 | 0.75 | PAPER |
 | SUIUSD S7 | 2 | -0.479 | -0.82 | 0.5 | PAPER |
-| US30 S1 | 1 | -1.012 | None | 0.0 | PAPER |
+| US30 S1 | 2 | -0.449 | -0.8 | 0.5 | PAPER |
 | US30 S2 | 2 | 0.53 | 1.2 | 1.0 | PAPER |
 | US30 S3 | 2 | 0.247 | 3.09 | 1.0 | PAPER |
 | US30 S4 | 3 | 0.281 | 1.12 | 1.0 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-20 06:16 UTC
 
 ## Latest signals
 
-- 20 Nov 04:15 US30 sell S1 @ 49056.3 SL 49302.59 → open
+- 20 Nov 04:15 US30 sell S1 @ 49056.3 SL 49302.59 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 66 closed, avg -0.02R, 65% won.
 - 20 Nov 04:15 NAS100 sell S1 @ 26362.03 SL 26623.39 → open
 - 20 Nov 03:15 SUIUSD sell S4 @ 0.6991 SL 0.70955 → closed TP2+BE +0.44R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 47 closed, avg -0.13R, 60% won.
 - 20 Nov 03:15 LTCUSD sell S1 @ 41.84 SL 42.422 → open
