@@ -758,3 +758,8 @@ Market now: trend down, volatility normal, Asia session
 
 ## 2026-11-20 02:01:00 UTC
 👀 Bitcoin swing: WATCH at 61,547.20. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-20 02:31:10 UTC
+⚡ Silver: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~41.66
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
