@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 13:31 UTC
+Updated 2026-11-20 13:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -36,7 +36,7 @@ Updated 2026-11-20 13:31 UTC
 | DOGEUSD S2 | 5 | -0.498 | -1.43 | 0.4 | PAPER |
 | DOGEUSD S3 | 5 | 0.634 | 3.51 | 1.0 | PAPER |
 | DOGEUSD S4 | 5 | -0.092 | -0.22 | 0.6 | PAPER |
-| DOGEUSD S5 | 3 | -1.069 | -245.25 | 0.0 | PAPER |
+| DOGEUSD S5 | 4 | -0.535 | -1.0 | 0.25 | PAPER |
 | DOGEUSD S6 | 5 | 0.148 | 11.58 | 1.0 | PAPER |
 | DOGEUSD S7 | 2 | -0.233 | -0.28 | 0.5 | PAPER |
 | ETHUSD S1 | 6 | -0.203 | -0.75 | 0.667 | PAPER |
@@ -76,7 +76,7 @@ Updated 2026-11-20 13:31 UTC
 | SOLUSD S7 | 3 | 0.101 | 0.17 | 0.667 | PAPER |
 | SUIUSD S1 | 5 | -0.147 | -0.36 | 0.6 | PAPER |
 | SUIUSD S2 | 4 | -1.05 | -375.16 | 0.0 | PAPER |
-| SUIUSD S3 | 3 | -0.243 | -0.59 | 0.667 | PAPER |
+| SUIUSD S3 | 4 | -0.443 | -1.26 | 0.5 | PAPER |
 | SUIUSD S4 | 5 | 0.089 | 0.29 | 0.8 | PAPER |
 | SUIUSD S5 | 4 | -0.033 | -0.05 | 0.5 | PAPER |
 | SUIUSD S6 | 5 | 0.069 | 0.22 | 0.8 | PAPER |
@@ -112,20 +112,21 @@ Updated 2026-11-20 13:31 UTC
 
 ## Latest signals
 
+- 20 Nov 13:45 US30 buy S3 @ 48829.3 SL 48686.23 → open
 - 20 Nov 13:30 XRPUSD buy S3 @ 0.9376 SL 0.926371 → open
 - 20 Nov 12:15 AVAXUSD sell S2 @ 6.805 SL 6.8933 → open
 - 20 Nov 12:15 XRPUSD sell S2 @ 0.9451 SL 0.956464 → open
 - 20 Nov 12:15 SOLUSD buy S3 @ 70.97 SL 70.07 → open
 - 20 Nov 12:15 SOLUSD sell S2 @ 70.97 SL 71.87 → open
 - 20 Nov 12:00 XAUUSD sell S1 @ 3580.5 SL 3611.9 → open
-- 20 Nov 11:15 SUIUSD buy S3 @ 0.6849 SL 0.675414 → open
+- 20 Nov 11:15 SUIUSD buy S3 @ 0.6849 SL 0.675414 → closed SL -1.04R. Stopped out after 136 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 24 closed, avg +0.06R, 71% won.
 - 20 Nov 11:00 SUIUSD sell S2 @ 0.6889 SL 0.698386 → open
 - 20 Nov 10:45 ETHUSD buy S2 @ 1760.38 SL 1739.03 → closed SL -1.05R. Stopped out after 79 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 31 closed, avg -0.46R, 42% won.
 - 20 Nov 10:45 BTCUSD buy S2 @ 62245.6 SL 61601.04 → closed SL -1.02R. Stopped out after 79 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 31 closed, avg -0.46R, 42% won.
 - 20 Nov 07:30 SUIUSD sell S5 @ 0.696 SL 0.706407 → closed TP3 +1.05R. TP3 after 277 min (best 1.8R, worst -0.5R). Lesson so far: session drive with the trend: 30 closed, avg -0.23R, 47% won.
 - 20 Nov 07:30 LINKUSD sell S5 @ 8.84 SL 8.9682 → open
 - 20 Nov 07:30 ADAUSD sell S5 @ 0.1494 SL 0.151643 → closed TP3 +0.89R. TP3 after 276 min (best 1.5R, worst -0.5R). Lesson so far: session drive with the trend: 30 closed, avg -0.23R, 47% won.
-- 20 Nov 07:30 DOGEUSD sell S5 @ 0.05735 SL 0.058124 → open
+- 20 Nov 07:30 DOGEUSD sell S5 @ 0.05735 SL 0.058124 → closed TP3 +1.07R. TP3 after 361 min (best 1.9R, worst -0.5R). Lesson so far: session drive with the trend: 34 closed, avg -0.14R, 53% won.
 - 20 Nov 07:30 XRPUSD sell S5 @ 0.9628 SL 0.974714 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 27 closed, avg -0.27R, 41% won.
 - 20 Nov 07:30 BNBUSD sell S5 @ 570.09 SL 576.11 → open
 - 20 Nov 07:30 BNBUSD sell S1 @ 570.09 SL 576.11 → open
@@ -171,4 +172,3 @@ Updated 2026-11-20 13:31 UTC
 - 20 Nov 01:45 ADAUSD sell S1 @ 0.151 SL 0.152964 → closed TP3 +0.97R. TP3 after 40 min (best 1.6R, worst -0.1R). Lesson so far: trend pullback with the trend: 59 closed, avg -0.11R, 61% won.
 - 20 Nov 01:45 XRPUSD sell S1 @ 0.9625 SL 0.975114 → closed TP2+BE +0.40R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 62 closed, avg -0.07R, 63% won.
 - 20 Nov 01:45 ETHUSD sell S1 @ 1753.93 SL 1776.55 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 60 closed, avg -0.09R, 62% won.
-- 20 Nov 01:45 BTCUSD sell S1 @ 62003.2 SL 62665.77 → closed TP2+BE +0.52R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 60 closed, avg -0.09R, 62% won.
