@@ -1,11 +1,11 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 02:31 UTC
+Updated 2026-11-20 02:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 5 | -0.154 | -0.39 | 0.6 | PAPER |
-| ADAUSD S2 | 4 | -1.054 | -237.06 | 0.0 | PAPER |
+| ADAUSD S2 | 5 | -0.817 | -3.45 | 0.2 | PAPER |
 | ADAUSD S3 | 1 | 0.748 | None | 1.0 | PAPER |
 | ADAUSD S4 | 5 | -0.182 | -0.48 | 0.6 | PAPER |
 | ADAUSD S5 | 2 | -0.192 | -0.22 | 0.5 | PAPER |
@@ -33,7 +33,7 @@ Updated 2026-11-20 02:31 UTC
 | BTCUSD S6 | 4 | 0.65 | 2.81 | 1.0 | PAPER |
 | BTCUSD S7 | 3 | -0.046 | -0.09 | 0.667 | PAPER |
 | DOGEUSD S1 | 5 | 0.188 | 0.54 | 0.8 | PAPER |
-| DOGEUSD S2 | 4 | -0.655 | -1.63 | 0.25 | PAPER |
+| DOGEUSD S2 | 5 | -0.498 | -1.43 | 0.4 | PAPER |
 | DOGEUSD S3 | 4 | 0.631 | 2.71 | 1.0 | PAPER |
 | DOGEUSD S4 | 5 | -0.092 | -0.22 | 0.6 | PAPER |
 | DOGEUSD S5 | 3 | -1.069 | -245.25 | 0.0 | PAPER |
@@ -118,8 +118,8 @@ Updated 2026-11-20 02:31 UTC
 - 20 Nov 02:15 BNBUSD buy S3 @ 571.56 SL 565.76 → open
 - 20 Nov 02:00 LTCUSD sell S2 @ 41.61 SL 42.175 → open
 - 20 Nov 02:00 LINKUSD sell S2 @ 8.86 SL 8.9914 → open
-- 20 Nov 02:00 ADAUSD sell S2 @ 0.149 SL 0.151229 → open
-- 20 Nov 02:00 DOGEUSD sell S2 @ 0.05725 SL 0.058018 → open
+- 20 Nov 02:00 ADAUSD sell S2 @ 0.149 SL 0.151229 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 27 closed, avg -0.32R, 48% won.
+- 20 Nov 02:00 DOGEUSD sell S2 @ 0.05725 SL 0.058018 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 27 closed, avg -0.32R, 48% won.
 - 20 Nov 02:00 BNBUSD sell S2 @ 572.7 SL 578.5 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 25 closed, avg -0.40R, 44% won.
 - 20 Nov 01:45 LINKUSD sell S1 @ 8.957 SL 9.072 → open
 - 20 Nov 01:45 ADAUSD sell S1 @ 0.151 SL 0.152964 → closed TP3 +0.97R. TP3 after 40 min (best 1.6R, worst -0.1R). Lesson so far: trend pullback with the trend: 59 closed, avg -0.11R, 61% won.
