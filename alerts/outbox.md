@@ -812,3 +812,12 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 ⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3580.5
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-20 14:01:11 UTC
+⚡ Gold: SESSION DRIVE right now (New York open drive), price ~3578.9
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+⚡ Dow 30: SESSION DRIVE right now (New York open drive), price ~48957.06
+Market now: trend down, volatility normal, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
