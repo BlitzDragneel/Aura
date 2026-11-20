@@ -778,3 +778,20 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Dow 30: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~49056.3
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-20 07:31:06 UTC
+⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~41.81
+Market now: trend down, volatility high, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+⚡ Silver: SESSION DRIVE right now (London open drive), price ~41.81
+Market now: trend down, volatility high, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~61625.2
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Nasdaq 100: SESSION DRIVE right now (London open drive), price ~26224.28
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
