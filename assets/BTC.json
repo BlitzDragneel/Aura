@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-20T12:30:45.669607+00:00",
+ "asof": "2026-11-20T12:45:40.480199+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 61630.4,
-  "bar": "2026-11-20T12:15:00+00:00",
+  "price": 61581.9,
+  "bar": "2026-11-20T12:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 61630.4,
-    "ma20": 61788.225,
-    "ma50": 61830.187999999995,
-    "slope_atr": -0.14,
-    "bar": "2026-11-20T12:15:00+00:00"
+    "close": 61581.9,
+    "ma20": 61782.630000000005,
+    "ma50": 61821.674000000006,
+    "slope_atr": -0.17,
+    "bar": "2026-11-20T12:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -1.72,
   "funding": {
-   "rate": -9.0402238561e-06,
+   "rate": -4.8362742005e-06,
    "next_time": 1795190400000,
    "source": "okx-swap"
   },
@@ -103,8 +103,8 @@
     "p_big_move": 0.372,
     "flag": false,
     "detail": {
-     "p_up_move": 0.16,
-     "p_down_move": 0.213
+     "p_up_move": 0.164,
+     "p_down_move": 0.208
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -247,7 +247,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 61630.4; volatility regime active (hourly ATR 1.0% of price, 86.4th percentile).",
+    "Price 61581.9; volatility regime active (hourly ATR 1.0% of price, 86.4th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -258,6 +258,6 @@
    ]
   }
  ],
- "runs": 453,
+ "runs": 454,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
