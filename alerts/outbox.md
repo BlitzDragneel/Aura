@@ -847,3 +847,14 @@ Market now: trend down, volatility high, New York session
 ⚡ Nasdaq 100: BIG MOVE under way right now (moved -499.00 in the last hour, twice its normal hourly range), price ~25850.15
 Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-20 21:01:05 UTC
+📊 Signal Lab, end of day: 458 paper signals closed so far, avg -0.05R, 0 open.
+trend pullback: 72 closed, avg +0.00R, 67% won
+breakout: 70 closed, avg -0.35R, 49% won
+stretch fade: 60 closed, avg +0.07R, 68% won
+fib pullback: 77 closed, avg -0.08R, 64% won
+session drive: 59 closed, avg -0.20R, 52% won
+daily bias: 71 closed, avg +0.15R, 80% won
+big move: 49 closed, avg +0.07R, 69% won
+Earning trust: none yet (needs 15+ closed and a positive average)
