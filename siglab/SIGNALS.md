@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 00:01 UTC
+Updated 2026-11-20 00:16 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -90,7 +90,7 @@ Updated 2026-11-20 00:01 UTC
 | US30 S7 | 2 | 0.73 | 3.01 | 1.0 | PAPER |
 | XAGUSD S1 | 4 | 0.177 | 0.39 | 0.75 | PAPER |
 | XAGUSD S2 | 4 | -0.344 | -0.77 | 0.5 | PAPER |
-| XAGUSD S3 | 4 | 0.138 | 0.3 | 0.75 | PAPER |
+| XAGUSD S3 | 5 | 0.23 | 0.63 | 0.8 | PAPER |
 | XAGUSD S4 | 5 | -0.577 | -1.83 | 0.4 | PAPER |
 | XAGUSD S5 | 2 | 0.213 | 1.43 | 1.0 | PAPER |
 | XAGUSD S6 | 4 | 0.08 | 6.76 | 1.0 | PAPER |
@@ -115,7 +115,7 @@ Updated 2026-11-20 00:01 UTC
 - 20 Nov 00:00 DOGEUSD sell S1 @ 0.05819 SL 0.058869 → open
 - 20 Nov 00:00 SOLUSD sell S1 @ 73.11 SL 74.076 → open
 - 20 Nov 00:00 BTCUSD buy S4 @ 61949.1 SL 61294.76 → open
-- 20 Nov 00:00 XAGUSD buy S3 @ 42.63 SL 42.088 → open
+- 20 Nov 00:00 XAGUSD buy S3 @ 42.63 SL 42.088 → closed TP3 +0.60R. TP3 after 15 min (best 0.9R, worst -0.1R). Lesson so far: stretch fade against the trend: 19 closed, avg -0.05R, 63% won.
 - 20 Nov 00:00 XAUUSD buy S3 @ 3613.5 SL 3591.96 → open
 - 19 Nov 17:15 ETHUSD buy S3 @ 1754.73 SL 1737.39 → closed TP3 +0.93R. TP3 after 17 min (best 1.8R, worst -0.3R). Lesson so far: stretch fade against the trend: 18 closed, avg -0.11R, 61% won.
 - 19 Nov 16:00 SOLUSD buy S3 @ 73.51 SL 72.751 → closed SL -1.06R. Stopped out after 63 min. Price never reached TP1 (best was 0.7R in favour, TP1 needed 0.7R). Lesson so far: stretch fade with the trend: 26 closed, avg +0.38R, 85% won.
