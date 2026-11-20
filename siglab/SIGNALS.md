@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 01:00 UTC
+Updated 2026-11-20 01:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -91,7 +91,7 @@ Updated 2026-11-20 01:00 UTC
 | XAGUSD S1 | 4 | 0.177 | 0.39 | 0.75 | PAPER |
 | XAGUSD S2 | 4 | -0.344 | -0.77 | 0.5 | PAPER |
 | XAGUSD S3 | 5 | 0.23 | 0.63 | 0.8 | PAPER |
-| XAGUSD S4 | 5 | -0.577 | -1.83 | 0.4 | PAPER |
+| XAGUSD S4 | 6 | -0.458 | -1.61 | 0.5 | PAPER |
 | XAGUSD S5 | 2 | 0.213 | 1.43 | 1.0 | PAPER |
 | XAGUSD S6 | 4 | 0.08 | 6.76 | 1.0 | PAPER |
 | XAGUSD S7 | 2 | -0.268 | -0.34 | 0.5 | PAPER |
@@ -118,7 +118,7 @@ Updated 2026-11-20 01:00 UTC
 - 20 Nov 00:45 SOLUSD buy S4 @ 72.88 SL 71.914 → open
 - 20 Nov 00:45 ETHUSD buy S4 @ 1754.72 SL 1732.2 → open
 - 20 Nov 00:45 US30 sell S4 @ 49082.3 SL 49324.73 → open
-- 20 Nov 00:45 XAGUSD sell S4 @ 42.47 SL 43.012 → open
+- 20 Nov 00:45 XAGUSD sell S4 @ 42.47 SL 43.012 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 40 closed, avg -0.22R, 52% won.
 - 20 Nov 00:30 SUIUSD sell S1 @ 0.7093 SL 0.718679 → open
 - 20 Nov 00:30 AVAXUSD sell S1 @ 6.969 SL 7.0641 → open
 - 20 Nov 00:30 NAS100 sell S4 @ 26459.03 SL 26702.49 → open
