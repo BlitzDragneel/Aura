@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 04:15 UTC
+Updated 2026-11-20 04:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -74,7 +74,7 @@ Updated 2026-11-20 04:15 UTC
 | SOLUSD S5 | 3 | -0.665 | -1.69 | 0.333 | PAPER |
 | SOLUSD S6 | 4 | -0.443 | -1.25 | 0.5 | PAPER |
 | SOLUSD S7 | 3 | 0.101 | 0.17 | 0.667 | PAPER |
-| SUIUSD S1 | 4 | -0.445 | -1.27 | 0.5 | PAPER |
+| SUIUSD S1 | 5 | -0.147 | -0.36 | 0.6 | PAPER |
 | SUIUSD S2 | 4 | -1.05 | -375.16 | 0.0 | PAPER |
 | SUIUSD S3 | 3 | -0.243 | -0.59 | 0.667 | PAPER |
 | SUIUSD S4 | 4 | -0.0 | -0.0 | 0.75 | PAPER |
@@ -142,7 +142,7 @@ Updated 2026-11-20 04:15 UTC
 - 20 Nov 00:45 ETHUSD buy S4 @ 1754.72 SL 1732.2 → closed TP2+BE +0.31R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 22 closed, avg +0.01R, 68% won.
 - 20 Nov 00:45 US30 sell S4 @ 49082.3 SL 49324.73 → open
 - 20 Nov 00:45 XAGUSD sell S4 @ 42.47 SL 43.012 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 40 closed, avg -0.22R, 52% won.
-- 20 Nov 00:30 SUIUSD sell S1 @ 0.7093 SL 0.718679 → open
+- 20 Nov 00:30 SUIUSD sell S1 @ 0.7093 SL 0.718679 → closed TP3 +1.05R. TP3 after 236 min (best 1.8R, worst -0.7R). Lesson so far: trend pullback with the trend: 63 closed, avg -0.07R, 64% won.
 - 20 Nov 00:30 AVAXUSD sell S1 @ 6.969 SL 7.0641 → open
 - 20 Nov 00:30 NAS100 sell S4 @ 26459.03 SL 26702.49 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 41 closed, avg -0.21R, 54% won.
 - 20 Nov 00:30 XAUUSD sell S4 @ 3618.7 SL 3640.24 → closed TP3 +1.32R. TP3 after 71 min (best 2.0R, worst -0.1R). Lesson so far: fib pullback with the trend: 42 closed, avg -0.20R, 55% won.
