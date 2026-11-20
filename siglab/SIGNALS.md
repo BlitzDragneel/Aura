@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 15:30 UTC
+Updated 2026-11-20 15:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -13,7 +13,7 @@ Updated 2026-11-20 15:30 UTC
 | ADAUSD S7 | 2 | -0.197 | -0.22 | 0.5 | PAPER |
 | AVAXUSD S1 | 5 | -0.366 | -0.85 | 0.4 | PAPER |
 | AVAXUSD S2 | 5 | -0.342 | -1.18 | 0.6 | PAPER |
-| AVAXUSD S3 | 4 | 0.589 | 3.23 | 1.0 | PAPER |
+| AVAXUSD S3 | 5 | 0.263 | 0.74 | 0.8 | PAPER |
 | AVAXUSD S4 | 5 | -0.061 | -0.15 | 0.6 | PAPER |
 | AVAXUSD S5 | 5 | -0.819 | -3.52 | 0.2 | PAPER |
 | AVAXUSD S6 | 5 | 0.13 | 0.39 | 0.8 | PAPER |
@@ -41,14 +41,14 @@ Updated 2026-11-20 15:30 UTC
 | DOGEUSD S7 | 2 | -0.233 | -0.28 | 0.5 | PAPER |
 | ETHUSD S1 | 6 | -0.203 | -0.75 | 0.667 | PAPER |
 | ETHUSD S2 | 5 | -0.543 | -1.73 | 0.4 | PAPER |
-| ETHUSD S3 | 4 | 0.534 | 0.91 | 0.75 | PAPER |
+| ETHUSD S3 | 5 | 0.218 | 0.39 | 0.6 | PAPER |
 | ETHUSD S4 | 6 | -0.066 | -0.2 | 0.667 | PAPER |
 | ETHUSD S5 | 4 | -0.222 | -0.43 | 0.5 | PAPER |
 | ETHUSD S6 | 5 | 0.539 | 2.07 | 1.0 | PAPER |
 | ETHUSD S7 | 4 | 0.045 | 0.12 | 0.75 | PAPER |
 | LINKUSD S1 | 5 | -0.154 | -0.39 | 0.6 | PAPER |
 | LINKUSD S2 | 5 | -0.06 | -0.23 | 0.8 | PAPER |
-| LINKUSD S3 | 2 | -0.297 | -0.39 | 0.5 | PAPER |
+| LINKUSD S3 | 3 | -0.545 | -1.07 | 0.333 | PAPER |
 | LINKUSD S4 | 5 | -0.392 | -0.97 | 0.4 | PAPER |
 | LINKUSD S5 | 5 | -0.275 | -0.57 | 0.4 | PAPER |
 | LINKUSD S6 | 5 | -0.074 | -0.3 | 0.8 | PAPER |
@@ -116,16 +116,16 @@ Updated 2026-11-20 15:30 UTC
 - 20 Nov 15:30 LTCUSD sell S7 @ 40.43 SL 40.934 → open
 - 20 Nov 15:30 LTCUSD buy S3 @ 40.43 SL 39.926 → open
 - 20 Nov 15:30 LINKUSD sell S7 @ 8.484 SL 8.6065 → open
-- 20 Nov 15:30 LINKUSD buy S3 @ 8.484 SL 8.3615 → open
+- 20 Nov 15:30 LINKUSD buy S3 @ 8.484 SL 8.3615 → closed SL -1.04R. Stopped out after 12 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
 - 20 Nov 15:30 AVAXUSD sell S7 @ 6.562 SL 6.6599 → open
-- 20 Nov 15:30 AVAXUSD buy S3 @ 6.562 SL 6.4641 → open
+- 20 Nov 15:30 AVAXUSD buy S3 @ 6.562 SL 6.4641 → closed SL -1.04R. Stopped out after 15 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
 - 20 Nov 15:30 ADAUSD sell S7 @ 0.1414 SL 0.14365 → open
 - 20 Nov 15:30 DOGEUSD sell S7 @ 0.05447 SL 0.055227 → open
 - 20 Nov 15:30 XRPUSD sell S7 @ 0.9171 SL 0.929814 → open
 - 20 Nov 15:30 BNBUSD sell S7 @ 554.91 SL 560.57 → open
 - 20 Nov 15:30 SOLUSD sell S7 @ 69.07 SL 70.031 → open
 - 20 Nov 15:30 ETHUSD sell S7 @ 1681.66 SL 1704.3 → open
-- 20 Nov 15:30 ETHUSD buy S3 @ 1681.66 SL 1659.02 → open
+- 20 Nov 15:30 ETHUSD buy S3 @ 1681.66 SL 1659.02 → closed SL -1.04R. Stopped out after 12 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
 - 20 Nov 15:30 BTCUSD sell S7 @ 60372.4 SL 61031.2 → open
 - 20 Nov 15:30 BTCUSD buy S3 @ 60372.4 SL 59713.6 → open
 - 20 Nov 15:15 US30 buy S7 @ 49536.21 SL 49364.71 → closed SL -1.02R. Stopped out after 3 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 19 closed, avg -0.23R, 53% won.
