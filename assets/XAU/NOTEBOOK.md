@@ -36,9 +36,9 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 3531.5; volatility regime extreme (hourly ATR 0.778% of price, 96.5th percentile).
+- Price 3535.3; volatility regime extreme (hourly ATR 0.778% of price, 96.5th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
-- Spot XAUUSD 3523.28; the perpetual trades +0.23% from spot.
+- Spot XAUUSD 3526.01; the perpetual trades +0.26% from spot.
 
 ## My calls so far
 
