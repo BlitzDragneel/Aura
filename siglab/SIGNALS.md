@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 14:16 UTC
+Updated 2026-11-20 14:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -99,7 +99,7 @@ Updated 2026-11-20 14:16 UTC
 | XAUUSD S2 | 5 | 0.048 | 0.1 | 0.6 | PAPER |
 | XAUUSD S3 | 5 | 0.007 | 0.02 | 0.8 | PAPER |
 | XAUUSD S4 | 5 | 0.121 | 0.25 | 0.6 | PAPER |
-| XAUUSD S5 | 4 | 0.113 | 0.25 | 0.75 | PAPER |
+| XAUUSD S5 | 5 | 0.106 | 0.3 | 0.8 | PAPER |
 | XAUUSD S6 | 5 | -0.029 | -0.07 | 0.6 | PAPER |
 | XAUUSD S7 | 2 | 0.202 | 5.84 | 1.0 | PAPER |
 | XRPUSD S1 | 5 | 0.316 | 0.87 | 0.8 | PAPER |
@@ -115,7 +115,7 @@ Updated 2026-11-20 14:16 UTC
 - 20 Nov 14:00 LTCUSD buy S5 @ 41.56 SL 41.076 → open
 - 20 Nov 14:00 AVAXUSD buy S5 @ 6.819 SL 6.7281 → open
 - 20 Nov 14:00 US30 buy S5 @ 48957.06 SL 48812.42 → open
-- 20 Nov 14:00 XAUUSD buy S5 @ 3578.9 SL 3548.63 → open
+- 20 Nov 14:00 XAUUSD buy S5 @ 3578.9 SL 3548.63 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 18 closed, avg -0.55R, 33% won.
 - 20 Nov 13:45 US30 buy S3 @ 48829.3 SL 48686.23 → closed TP1+BE -0.04R. Reached TP1 then came back to the entry (best 0.2R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 25 closed, avg +0.01R, 68% won.
 - 20 Nov 13:30 XRPUSD buy S3 @ 0.9376 SL 0.926371 → open
 - 20 Nov 12:15 AVAXUSD sell S2 @ 6.805 SL 6.8933 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 32 closed, avg -0.28R, 53% won.
