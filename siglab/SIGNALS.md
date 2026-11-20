@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 12:45 UTC
+Updated 2026-11-20 13:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -58,7 +58,7 @@ Updated 2026-11-20 12:45 UTC
 | LTCUSD S3 | 4 | -0.124 | -0.2 | 0.5 | PAPER |
 | LTCUSD S4 | 6 | 0.037 | 0.09 | 0.667 | PAPER |
 | LTCUSD S5 | 4 | -0.211 | -0.42 | 0.5 | PAPER |
-| LTCUSD S6 | 4 | 0.317 | 0.66 | 0.75 | PAPER |
+| LTCUSD S6 | 5 | 0.283 | 0.76 | 0.8 | PAPER |
 | LTCUSD S7 | 2 | 0.601 | 1.1 | 1.0 | PAPER |
 | NAS100 S1 | 3 | 0.406 | 4.19 | 1.0 | PAPER |
 | NAS100 S2 | 2 | 0.043 | 0.77 | 0.5 | PAPER |
@@ -135,7 +135,7 @@ Updated 2026-11-20 12:45 UTC
 - 20 Nov 07:30 XAGUSD sell S5 @ 41.81 SL 42.494 → closed SL -1.04R. Stopped out after 55 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: session drive with the trend: 26 closed, avg -0.24R, 42% won.
 - 20 Nov 07:30 XAGUSD sell S1 @ 41.81 SL 42.494 → closed SL -1.04R. Stopped out after 55 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 68 closed, avg -0.01R, 66% won.
 - 20 Nov 07:00 SUIUSD sell S6 @ 0.7002 SL 0.710607 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
-- 20 Nov 07:00 LTCUSD sell S6 @ 41.57 SL 42.127 → open
+- 20 Nov 07:00 LTCUSD sell S6 @ 41.57 SL 42.127 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 54 closed, avg +0.17R, 82% won.
 - 20 Nov 07:00 LINKUSD sell S6 @ 8.9 SL 9.0282 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
 - 20 Nov 07:00 AVAXUSD sell S6 @ 6.913 SL 7.0131 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 51 closed, avg +0.19R, 82% won.
 - 20 Nov 07:00 ADAUSD sell S6 @ 0.1502 SL 0.152443 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
