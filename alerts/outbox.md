@@ -755,3 +755,6 @@ Market now: trend down, volatility high, Asia session
 ⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~62003.2
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-20 02:01:00 UTC
+👀 Bitcoin swing: WATCH at 61,547.20. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
