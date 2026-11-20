@@ -766,3 +766,6 @@ Market now: trend down, volatility high, Asia session
 
 ## 2026-11-20 03:01:05 UTC
 🔁 Learning: breakout with the trend is now MUTED (no trade plans) after 31 live signals (22 separate moments) averaging -0.30R.
+
+## 2026-11-20 04:01:01 UTC
+👀 Bitcoin swing: WATCH at 62,123.70. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
