@@ -722,3 +722,8 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 
 ## 2026-11-19 23:01:02 UTC
 👀 Bitcoin day: WATCH at 62,134.60. Big move likely, direction unknown. hourly volatility is high (90th percentile of the last 3 weeks)
+
+## 2026-11-20 00:01:09 UTC
+⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~61949.1
+Market now: trend down, volatility high, late session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
