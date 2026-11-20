@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-20T17:30:53.024429+00:00",
+ "asof": "2026-11-20T17:45:53.959699+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3536.3,
-  "bar": "2026-11-20T17:15:00+00:00",
+  "price": 3534.1,
+  "bar": "2026-11-20T17:30:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3536.3,
-    "ma20": 3563.725,
-    "ma50": 3569.3839999999996,
-    "slope_atr": -0.55,
-    "bar": "2026-11-20T17:15:00+00:00"
+    "close": 3534.1,
+    "ma20": 3561.575,
+    "ma50": 3569.5,
+    "slope_atr": -0.56,
+    "bar": "2026-11-20T17:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -3.57,
   "spot": {
-   "price": 3529.5950000000003,
-   "bid": 3529.276,
-   "ask": 3529.914,
+   "price": 3525.675,
+   "bid": 3525.356,
+   "ask": 3525.994,
    "spread": 0.638,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.19
+   "perp_premium_pct": 0.239
   },
   "funding": {
-   "rate": 0.0,
+   "rate": 6.1728457949e-06,
    "next_time": 1795219200000,
    "source": "okx-swap"
   },
@@ -253,8 +253,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3536.3; volatility regime extreme (hourly ATR 0.796% of price, 97.1th percentile).",
-    "Spot XAUUSD 3529.60; the perpetual trades +0.19% from spot."
+    "Price 3534.1; volatility regime extreme (hourly ATR 0.796% of price, 97.1th percentile).",
+    "Spot XAUUSD 3525.68; the perpetual trades +0.24% from spot."
    ]
   },
   {
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 473,
+ "runs": 474,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
