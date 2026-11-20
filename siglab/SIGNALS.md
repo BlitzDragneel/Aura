@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 08:16 UTC
+Updated 2026-11-20 08:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -60,7 +60,7 @@ Updated 2026-11-20 08:16 UTC
 | LTCUSD S5 | 4 | -0.211 | -0.42 | 0.5 | PAPER |
 | LTCUSD S6 | 4 | 0.317 | 0.66 | 0.75 | PAPER |
 | LTCUSD S7 | 2 | 0.601 | 1.1 | 1.0 | PAPER |
-| NAS100 S1 | 2 | 0.43 | 2.65 | 1.0 | PAPER |
+| NAS100 S1 | 3 | 0.406 | 4.19 | 1.0 | PAPER |
 | NAS100 S2 | 2 | 0.043 | 0.77 | 0.5 | PAPER |
 | NAS100 S3 | 2 | 0.237 | 0.4 | 0.5 | PAPER |
 | NAS100 S4 | 3 | 0.007 | 0.22 | 0.333 | PAPER |
@@ -88,11 +88,11 @@ Updated 2026-11-20 08:16 UTC
 | US30 S5 | 2 | 0.763 | 0.43 | 0.5 | PAPER |
 | US30 S6 | 2 | 1.268 | 0.56 | 0.5 | PAPER |
 | US30 S7 | 2 | 0.73 | 3.01 | 1.0 | PAPER |
-| XAGUSD S1 | 4 | 0.177 | 0.39 | 0.75 | PAPER |
+| XAGUSD S1 | 5 | -0.067 | -0.15 | 0.6 | PAPER |
 | XAGUSD S2 | 5 | -0.248 | -0.69 | 0.6 | PAPER |
 | XAGUSD S3 | 5 | 0.23 | 0.63 | 0.8 | PAPER |
 | XAGUSD S4 | 6 | -0.458 | -1.61 | 0.5 | PAPER |
-| XAGUSD S5 | 2 | 0.213 | 1.43 | 1.0 | PAPER |
+| XAGUSD S5 | 3 | -0.206 | -0.48 | 0.667 | PAPER |
 | XAGUSD S6 | 5 | 0.093 | 5.82 | 1.0 | PAPER |
 | XAGUSD S7 | 2 | -0.268 | -0.34 | 0.5 | PAPER |
 | XAUUSD S1 | 4 | 0.059 | 0.09 | 0.5 | PAPER |
@@ -123,8 +123,8 @@ Updated 2026-11-20 08:16 UTC
 - 20 Nov 07:30 ETHUSD sell S5 @ 1741.87 SL 1765.92 → open
 - 20 Nov 07:30 NAS100 sell S5 @ 26224.28 SL 26430.55 → open
 - 20 Nov 07:30 BTCUSD sell S5 @ 61625.2 SL 62358.31 → open
-- 20 Nov 07:30 XAGUSD sell S5 @ 41.81 SL 42.494 → open
-- 20 Nov 07:30 XAGUSD sell S1 @ 41.81 SL 42.494 → open
+- 20 Nov 07:30 XAGUSD sell S5 @ 41.81 SL 42.494 → closed SL -1.04R. Stopped out after 55 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: session drive with the trend: 26 closed, avg -0.24R, 42% won.
+- 20 Nov 07:30 XAGUSD sell S1 @ 41.81 SL 42.494 → closed SL -1.04R. Stopped out after 55 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 68 closed, avg -0.01R, 66% won.
 - 20 Nov 07:00 SUIUSD sell S6 @ 0.7002 SL 0.710607 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
 - 20 Nov 07:00 LTCUSD sell S6 @ 41.57 SL 42.127 → open
 - 20 Nov 07:00 LINKUSD sell S6 @ 8.9 SL 9.0282 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
@@ -141,7 +141,7 @@ Updated 2026-11-20 08:16 UTC
 - 20 Nov 07:00 XAGUSD sell S6 @ 42.26 SL 42.944 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 43 closed, avg +0.23R, 81% won.
 - 20 Nov 07:00 XAUUSD sell S6 @ 3566.3 SL 3596.66 → open
 - 20 Nov 04:15 US30 sell S1 @ 49056.3 SL 49302.59 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 66 closed, avg -0.02R, 65% won.
-- 20 Nov 04:15 NAS100 sell S1 @ 26362.03 SL 26623.39 → open
+- 20 Nov 04:15 NAS100 sell S1 @ 26362.03 SL 26623.39 → closed TP2+BE +0.36R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 68 closed, avg -0.01R, 66% won.
 - 20 Nov 03:15 SUIUSD sell S4 @ 0.6991 SL 0.70955 → closed TP2+BE +0.44R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 47 closed, avg -0.13R, 60% won.
 - 20 Nov 03:15 LTCUSD sell S1 @ 41.84 SL 42.422 → closed TP2+BE +0.45R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 67 closed, avg -0.01R, 66% won.
 - 20 Nov 03:15 LINKUSD sell S4 @ 8.874 SL 9.0076 → closed TP2+BE +0.41R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 47 closed, avg -0.13R, 60% won.
