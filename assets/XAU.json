@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-20T21:15:52.054046+00:00",
+ "asof": "2026-11-20T21:30:53.868654+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3527.5,
-  "bar": "2026-11-20T21:00:00+00:00",
+  "price": 3531.5,
+  "bar": "2026-11-20T21:15:00+00:00",
   "trend": {
    "15m": {
-    "state": "down",
-    "close": 3527.5,
-    "ma20": 3532.1099999999997,
-    "ma50": 3559.4559999999997,
-    "slope_atr": -0.5,
-    "bar": "2026-11-20T21:00:00+00:00"
+    "state": "flat",
+    "close": 3531.5,
+    "ma20": 3531.22,
+    "ma50": 3558.3340000000003,
+    "slope_atr": -0.43,
+    "bar": "2026-11-20T21:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -94,15 +94,15 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -3.57,
   "spot": {
-   "price": 3519.075,
-   "bid": 3518.758,
-   "ask": 3519.392,
-   "spread": 0.634,
-   "age_s": 1,
+   "price": 3523.2799999999997,
+   "bid": 3522.961,
+   "ask": 3523.599,
+   "spread": 0.638,
+   "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.239
+   "perp_premium_pct": 0.233
   },
   "funding": {
    "rate": 0.0,
@@ -254,9 +254,9 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3527.5; volatility regime extreme (hourly ATR 0.778% of price, 96.5th percentile).",
+    "Price 3531.5; volatility regime extreme (hourly ATR 0.778% of price, 96.5th percentile).",
     "spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.",
-    "Spot XAUUSD 3519.07; the perpetual trades +0.24% from spot."
+    "Spot XAUUSD 3523.28; the perpetual trades +0.23% from spot."
    ]
   },
   {
@@ -266,6 +266,6 @@
    ]
   }
  ],
- "runs": 489,
+ "runs": 490,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
