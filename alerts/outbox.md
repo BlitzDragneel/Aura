@@ -795,3 +795,8 @@ Market now: trend down, volatility normal, London session
 ⚡ Nasdaq 100: SESSION DRIVE right now (London open drive), price ~26224.28
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-20 10:46:03 UTC
+⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~62245.6
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
