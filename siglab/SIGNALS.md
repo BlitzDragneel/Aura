@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 03:31 UTC
+Updated 2026-11-20 03:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -102,7 +102,7 @@ Updated 2026-11-20 03:31 UTC
 | XAUUSD S5 | 4 | 0.113 | 0.25 | 0.75 | PAPER |
 | XAUUSD S6 | 4 | 0.215 | 0.46 | 0.75 | PAPER |
 | XAUUSD S7 | 2 | 0.202 | 5.84 | 1.0 | PAPER |
-| XRPUSD S1 | 4 | 0.295 | 0.63 | 0.75 | PAPER |
+| XRPUSD S1 | 5 | 0.316 | 0.87 | 0.8 | PAPER |
 | XRPUSD S2 | 4 | 0.094 | 0.22 | 0.75 | PAPER |
 | XRPUSD S3 | 4 | 0.193 | 0.36 | 0.75 | PAPER |
 | XRPUSD S4 | 5 | 0.014 | 0.03 | 0.6 | PAPER |
@@ -129,7 +129,7 @@ Updated 2026-11-20 03:31 UTC
 - 20 Nov 02:00 BNBUSD sell S2 @ 572.7 SL 578.5 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 25 closed, avg -0.40R, 44% won.
 - 20 Nov 01:45 LINKUSD sell S1 @ 8.957 SL 9.072 → open
 - 20 Nov 01:45 ADAUSD sell S1 @ 0.151 SL 0.152964 → closed TP3 +0.97R. TP3 after 40 min (best 1.6R, worst -0.1R). Lesson so far: trend pullback with the trend: 59 closed, avg -0.11R, 61% won.
-- 20 Nov 01:45 XRPUSD sell S1 @ 0.9625 SL 0.975114 → open
+- 20 Nov 01:45 XRPUSD sell S1 @ 0.9625 SL 0.975114 → closed TP2+BE +0.40R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 62 closed, avg -0.07R, 63% won.
 - 20 Nov 01:45 ETHUSD sell S1 @ 1753.93 SL 1776.55 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 60 closed, avg -0.09R, 62% won.
 - 20 Nov 01:45 BTCUSD sell S1 @ 62003.2 SL 62665.77 → closed TP2+BE +0.52R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 60 closed, avg -0.09R, 62% won.
 - 20 Nov 01:30 XAUUSD sell S2 @ 3582.5 SL 3606.12 → closed TP3 +1.26R. TP3 after 46 min (best 1.9R, worst -0.6R). Lesson so far: breakout with the trend: 25 closed, avg -0.40R, 44% won.
