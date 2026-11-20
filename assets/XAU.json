@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-20T08:30:58.824394+00:00",
+ "asof": "2026-11-20T08:45:57.286386+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3595.2,
-  "bar": "2026-11-20T08:15:00+00:00",
+  "price": 3589.6,
+  "bar": "2026-11-20T08:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3595.2,
-    "ma20": 3555.025,
-    "ma50": 3589.35,
-    "slope_atr": 0.48,
-    "bar": "2026-11-20T08:15:00+00:00"
+    "close": 3589.6,
+    "ma20": 3556.5200000000004,
+    "ma50": 3587.65,
+    "slope_atr": 0.54,
+    "bar": "2026-11-20T08:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -3.57,
   "spot": {
-   "price": 3590.0950000000003,
-   "bid": 3589.776,
-   "ask": 3590.414,
-   "spread": 0.638,
-   "age_s": 1,
+   "price": 3582.81,
+   "bid": 3582.493,
+   "ask": 3583.127,
+   "spread": 0.634,
+   "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.142
+   "perp_premium_pct": 0.19
   },
   "funding": {
-   "rate": 0.0001468453593714,
+   "rate": 0.0001350567936029,
    "next_time": 1795190400000,
    "source": "okx-swap"
   },
@@ -253,8 +253,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3595.2; volatility regime extreme (hourly ATR 0.868% of price, 99.8th percentile).",
-    "Spot XAUUSD 3590.10; the perpetual trades +0.14% from spot."
+    "Price 3589.6; volatility regime extreme (hourly ATR 0.868% of price, 99.8th percentile).",
+    "Spot XAUUSD 3582.81; the perpetual trades +0.19% from spot."
    ]
   },
   {
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 436,
+ "runs": 437,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

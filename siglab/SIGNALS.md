@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 08:31 UTC
+Updated 2026-11-20 08:46 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -30,7 +30,7 @@ Updated 2026-11-20 08:31 UTC
 | BTCUSD S3 | 3 | 0.047 | 0.09 | 0.667 | PAPER |
 | BTCUSD S4 | 6 | -0.219 | -0.87 | 0.667 | PAPER |
 | BTCUSD S5 | 3 | -0.351 | -0.52 | 0.333 | PAPER |
-| BTCUSD S6 | 4 | 0.65 | 2.81 | 1.0 | PAPER |
+| BTCUSD S6 | 5 | 0.554 | 2.72 | 1.0 | PAPER |
 | BTCUSD S7 | 3 | -0.046 | -0.09 | 0.667 | PAPER |
 | DOGEUSD S1 | 5 | 0.188 | 0.54 | 0.8 | PAPER |
 | DOGEUSD S2 | 5 | -0.498 | -1.43 | 0.4 | PAPER |
@@ -86,7 +86,7 @@ Updated 2026-11-20 08:31 UTC
 | US30 S3 | 2 | 0.247 | 3.09 | 1.0 | PAPER |
 | US30 S4 | 3 | 0.281 | 1.12 | 1.0 | PAPER |
 | US30 S5 | 2 | 0.763 | 0.43 | 0.5 | PAPER |
-| US30 S6 | 2 | 1.268 | 0.56 | 0.5 | PAPER |
+| US30 S6 | 3 | 0.507 | 0.33 | 0.333 | PAPER |
 | US30 S7 | 2 | 0.73 | 3.01 | 1.0 | PAPER |
 | XAGUSD S1 | 5 | -0.067 | -0.15 | 0.6 | PAPER |
 | XAGUSD S2 | 5 | -0.248 | -0.69 | 0.6 | PAPER |
@@ -135,9 +135,9 @@ Updated 2026-11-20 08:31 UTC
 - 20 Nov 07:00 BNBUSD sell S6 @ 572.51 SL 578.53 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
 - 20 Nov 07:00 SOLUSD buy S6 @ 72.85 SL 71.814 → open
 - 20 Nov 07:00 ETHUSD sell S6 @ 1749.01 SL 1773.06 → open
-- 20 Nov 07:00 US30 sell S6 @ 48965.3 SL 49156.3 → open
+- 20 Nov 07:00 US30 sell S6 @ 48965.3 SL 49156.3 → closed SL -1.01R. Stopped out after 81 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 49 closed, avg +0.22R, 84% won.
 - 20 Nov 07:00 NAS100 sell S6 @ 26208.03 SL 26414.3 → open
-- 20 Nov 07:00 BTCUSD sell S6 @ 62023.5 SL 62756.61 → open
+- 20 Nov 07:00 BTCUSD sell S6 @ 62023.5 SL 62756.61 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 49 closed, avg +0.22R, 84% won.
 - 20 Nov 07:00 XAGUSD sell S6 @ 42.26 SL 42.944 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 43 closed, avg +0.23R, 81% won.
 - 20 Nov 07:00 XAUUSD sell S6 @ 3566.3 SL 3596.66 → open
 - 20 Nov 04:15 US30 sell S1 @ 49056.3 SL 49302.59 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 66 closed, avg -0.02R, 65% won.
