@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 04:31 UTC
+Updated 2026-11-20 04:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -11,7 +11,7 @@ Updated 2026-11-20 04:31 UTC
 | ADAUSD S5 | 2 | -0.192 | -0.22 | 0.5 | PAPER |
 | ADAUSD S6 | 4 | -0.083 | -0.26 | 0.75 | PAPER |
 | ADAUSD S7 | 2 | -0.197 | -0.22 | 0.5 | PAPER |
-| AVAXUSD S1 | 4 | -0.717 | -2.2 | 0.25 | PAPER |
+| AVAXUSD S1 | 5 | -0.366 | -0.85 | 0.4 | PAPER |
 | AVAXUSD S2 | 4 | -0.475 | -1.43 | 0.5 | PAPER |
 | AVAXUSD S3 | 4 | 0.589 | 3.23 | 1.0 | PAPER |
 | AVAXUSD S4 | 4 | -0.113 | -0.21 | 0.5 | PAPER |
@@ -46,7 +46,7 @@ Updated 2026-11-20 04:31 UTC
 | ETHUSD S5 | 3 | -0.349 | -0.49 | 0.333 | PAPER |
 | ETHUSD S6 | 4 | 0.634 | 2.03 | 1.0 | PAPER |
 | ETHUSD S7 | 4 | 0.045 | 0.12 | 0.75 | PAPER |
-| LINKUSD S1 | 4 | -0.425 | -1.18 | 0.5 | PAPER |
+| LINKUSD S1 | 5 | -0.154 | -0.39 | 0.6 | PAPER |
 | LINKUSD S2 | 5 | -0.06 | -0.23 | 0.8 | PAPER |
 | LINKUSD S3 | 2 | -0.297 | -0.39 | 0.5 | PAPER |
 | LINKUSD S4 | 4 | -0.592 | -1.3 | 0.25 | PAPER |
@@ -129,7 +129,7 @@ Updated 2026-11-20 04:31 UTC
 - 20 Nov 02:00 ADAUSD sell S2 @ 0.149 SL 0.151229 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 27 closed, avg -0.32R, 48% won.
 - 20 Nov 02:00 DOGEUSD sell S2 @ 0.05725 SL 0.058018 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 27 closed, avg -0.32R, 48% won.
 - 20 Nov 02:00 BNBUSD sell S2 @ 572.7 SL 578.5 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 25 closed, avg -0.40R, 44% won.
-- 20 Nov 01:45 LINKUSD sell S1 @ 8.957 SL 9.072 → open
+- 20 Nov 01:45 LINKUSD sell S1 @ 8.957 SL 9.072 → closed TP3 +0.93R. TP3 after 166 min (best 1.7R, worst -0.1R). Lesson so far: trend pullback with the trend: 64 closed, avg -0.05R, 64% won.
 - 20 Nov 01:45 ADAUSD sell S1 @ 0.151 SL 0.152964 → closed TP3 +0.97R. TP3 after 40 min (best 1.6R, worst -0.1R). Lesson so far: trend pullback with the trend: 59 closed, avg -0.11R, 61% won.
 - 20 Nov 01:45 XRPUSD sell S1 @ 0.9625 SL 0.975114 → closed TP2+BE +0.40R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 62 closed, avg -0.07R, 63% won.
 - 20 Nov 01:45 ETHUSD sell S1 @ 1753.93 SL 1776.55 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 60 closed, avg -0.09R, 62% won.
@@ -143,7 +143,7 @@ Updated 2026-11-20 04:31 UTC
 - 20 Nov 00:45 US30 sell S4 @ 49082.3 SL 49324.73 → open
 - 20 Nov 00:45 XAGUSD sell S4 @ 42.47 SL 43.012 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 40 closed, avg -0.22R, 52% won.
 - 20 Nov 00:30 SUIUSD sell S1 @ 0.7093 SL 0.718679 → closed TP3 +1.05R. TP3 after 236 min (best 1.8R, worst -0.7R). Lesson so far: trend pullback with the trend: 63 closed, avg -0.07R, 64% won.
-- 20 Nov 00:30 AVAXUSD sell S1 @ 6.969 SL 7.0641 → open
+- 20 Nov 00:30 AVAXUSD sell S1 @ 6.969 SL 7.0641 → closed TP3 +1.04R. TP3 after 245 min (best 1.7R, worst -0.7R). Lesson so far: trend pullback with the trend: 64 closed, avg -0.05R, 64% won.
 - 20 Nov 00:30 NAS100 sell S4 @ 26459.03 SL 26702.49 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 41 closed, avg -0.21R, 54% won.
 - 20 Nov 00:30 XAUUSD sell S4 @ 3618.7 SL 3640.24 → closed TP3 +1.32R. TP3 after 71 min (best 2.0R, worst -0.1R). Lesson so far: fib pullback with the trend: 42 closed, avg -0.20R, 55% won.
 - 20 Nov 00:00 DOGEUSD sell S1 @ 0.05819 SL 0.058869 → closed TP3 +0.99R. TP3 after 114 min (best 1.8R, worst -0.4R). Lesson so far: trend pullback with the trend: 57 closed, avg -0.14R, 60% won.
