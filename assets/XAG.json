@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-20T02:05:18.271853+00:00",
+ "asof": "2026-11-20T02:15:57.244052+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.92,
-  "bar": "2026-11-20T01:45:00+00:00",
+  "price": 42.24,
+  "bar": "2026-11-20T02:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 41.92,
-    "ma20": 42.8525,
-    "ma50": 43.9646,
-    "slope_atr": -1.22,
-    "bar": "2026-11-20T01:45:00+00:00"
+    "close": 42.24,
+    "ma20": 42.7645,
+    "ma50": 43.9042,
+    "slope_atr": -1.18,
+    "bar": "2026-11-20T02:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -6.45,
   "spot": {
-   "price": 41.907,
-   "bid": 41.8772,
-   "ask": 41.9368,
-   "spread": 0.0596,
+   "price": 41.914,
+   "bid": 41.8872,
+   "ask": 41.9408,
+   "spread": 0.0536,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.031
+   "perp_premium_pct": 0.778
   },
   "funding": {
-   "rate": 0.0002119820309351,
+   "rate": 0.0002052055379142,
    "next_time": 1795161600000,
    "source": "okx-swap"
   },
@@ -253,8 +253,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.92; volatility regime extreme (hourly ATR 1.486% of price, 99.8th percentile).",
-    "Spot XAGUSD 41.91; the perpetual trades +0.03% from spot."
+    "Price 42.24; volatility regime extreme (hourly ATR 1.486% of price, 99.8th percentile).",
+    "Spot XAGUSD 41.91; the perpetual trades +0.78% from spot."
    ]
   },
   {
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 410,
+ "runs": 411,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
