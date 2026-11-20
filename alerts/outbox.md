@@ -745,3 +745,8 @@ Market now: trend down, volatility high, Asia session
 ⚡ Dow 30: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~49082.3
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-20 01:30:59 UTC
+⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3582.5
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.

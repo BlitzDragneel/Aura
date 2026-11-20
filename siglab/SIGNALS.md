@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 01:15 UTC
+Updated 2026-11-20 01:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -63,7 +63,7 @@ Updated 2026-11-20 01:15 UTC
 | NAS100 S1 | 2 | 0.43 | 2.65 | 1.0 | PAPER |
 | NAS100 S2 | 2 | 0.043 | 0.77 | 0.5 | PAPER |
 | NAS100 S3 | 2 | 0.237 | 0.4 | 0.5 | PAPER |
-| NAS100 S4 | 2 | -0.027 | -17.67 | 0.0 | PAPER |
+| NAS100 S4 | 3 | 0.007 | 0.22 | 0.333 | PAPER |
 | NAS100 S5 | 2 | -0.409 | -0.68 | 0.5 | PAPER |
 | NAS100 S6 | 2 | -0.171 | -0.2 | 0.5 | PAPER |
 | NAS100 S7 | 1 | -1.012 | None | 0.0 | PAPER |
@@ -112,6 +112,7 @@ Updated 2026-11-20 01:15 UTC
 
 ## Latest signals
 
+- 20 Nov 01:30 XAUUSD sell S2 @ 3582.5 SL 3606.12 → open
 - 20 Nov 01:00 DOGEUSD buy S4 @ 0.05809 SL 0.05739 → open
 - 20 Nov 01:00 XRPUSD buy S4 @ 0.9617 SL 0.949086 → open
 - 20 Nov 00:45 BNBUSD buy S4 @ 578.95 SL 574.01 → open
@@ -121,7 +122,7 @@ Updated 2026-11-20 01:15 UTC
 - 20 Nov 00:45 XAGUSD sell S4 @ 42.47 SL 43.012 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 40 closed, avg -0.22R, 52% won.
 - 20 Nov 00:30 SUIUSD sell S1 @ 0.7093 SL 0.718679 → open
 - 20 Nov 00:30 AVAXUSD sell S1 @ 6.969 SL 7.0641 → open
-- 20 Nov 00:30 NAS100 sell S4 @ 26459.03 SL 26702.49 → open
+- 20 Nov 00:30 NAS100 sell S4 @ 26459.03 SL 26702.49 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 41 closed, avg -0.21R, 54% won.
 - 20 Nov 00:30 XAUUSD sell S4 @ 3618.7 SL 3640.24 → open
 - 20 Nov 00:00 DOGEUSD sell S1 @ 0.05819 SL 0.058869 → open
 - 20 Nov 00:00 SOLUSD sell S1 @ 73.11 SL 74.076 → open
@@ -171,4 +172,3 @@ Updated 2026-11-20 01:15 UTC
 - 19 Nov 07:30 ETHUSD sell S5 @ 1802.4 SL 1820.27 → closed TP3 +1.08R. TP3 after 488 min (best 1.9R, worst -0.8R). Lesson so far: session drive with the trend: 22 closed, avg -0.47R, 32% won.
 - 19 Nov 07:30 BTCUSD sell S5 @ 63547.8 SL 64141.56 → closed TP3 +0.99R. TP3 after 563 min (best 1.6R, worst -0.9R). Lesson so far: session drive with the trend: 25 closed, avg -0.29R, 40% won.
 - 19 Nov 07:00 SUIUSD sell S6 @ 0.727 SL 0.735914 → closed TP3 +0.92R. TP3 after 515 min (best 1.5R, worst -0.8R). Lesson so far: daily bias with the trend: 40 closed, avg +0.17R, 80% won.
-- 19 Nov 07:00 LTCUSD sell S6 @ 44.68 SL 45.091 → closed TP3 +1.05R. TP3 after 494 min (best 1.7R, worst -0.2R). Lesson so far: daily bias with the trend: 37 closed, avg +0.03R, 78% won.
