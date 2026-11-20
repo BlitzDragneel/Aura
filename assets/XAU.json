@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-20T21:00:58.465529+00:00",
+ "asof": "2026-11-20T21:15:52.054046+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3533.8,
-  "bar": "2026-11-20T20:45:00+00:00",
+  "price": 3527.5,
+  "bar": "2026-11-20T21:00:00+00:00",
   "trend": {
    "15m": {
-    "state": "flat",
-    "close": 3533.8,
-    "ma20": 3533.7799999999997,
-    "ma50": 3560.698,
-    "slope_atr": -0.56,
-    "bar": "2026-11-20T20:45:00+00:00"
+    "state": "down",
+    "close": 3527.5,
+    "ma20": 3532.1099999999997,
+    "ma50": 3559.4559999999997,
+    "slope_atr": -0.5,
+    "bar": "2026-11-20T21:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -94,18 +94,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -3.57,
   "spot": {
-   "price": 3526.945,
-   "bid": 3526.628,
-   "ask": 3527.262,
+   "price": 3519.075,
+   "bid": 3518.758,
+   "ask": 3519.392,
    "spread": 0.634,
-   "age_s": 0,
+   "age_s": 1,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.194
+   "perp_premium_pct": 0.239
   },
   "funding": {
-   "rate": 8.0108821413e-06,
+   "rate": 0.0,
    "next_time": 1795219200000,
    "source": "okx-swap"
   },
@@ -254,9 +254,9 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3533.8; volatility regime extreme (hourly ATR 0.778% of price, 96.5th percentile).",
+    "Price 3527.5; volatility regime extreme (hourly ATR 0.778% of price, 96.5th percentile).",
     "spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.",
-    "Spot XAUUSD 3526.95; the perpetual trades +0.19% from spot."
+    "Spot XAUUSD 3519.07; the perpetual trades +0.24% from spot."
    ]
   },
   {
@@ -266,6 +266,6 @@
    ]
   }
  ],
- "runs": 488,
+ "runs": 489,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
