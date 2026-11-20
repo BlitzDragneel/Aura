@@ -5,7 +5,6 @@
 "since": "2026-11-19T22:01:01.219004+00:00",
 "previous": "WATCH",
 "reasons": [
-"scout: 50% chance of a big move in 4 h (top of its range; direction unknown)",
 "hourly volatility is high (100th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
@@ -632,14 +631,6 @@
 {
 "t": "2026-11-19T02:00:00+00:00",
 "price": 44.86,
-"horizon": "swing",
-"thr": 0.0420355391376346,
-"watch": true,
-"p": 0.399
-},
-{
-"t": "2026-11-19T02:00:00+00:00",
-"price": 44.86,
 "horizon": "hold",
 "thr": 0.10508884784408651,
 "watch": false,
@@ -952,14 +943,6 @@
 {
 "t": "2026-11-19T22:00:00+00:00",
 "price": 43.18,
-"horizon": "day",
-"thr": 0.022530271951300213,
-"watch": true,
-"p": 0.3
-},
-{
-"t": "2026-11-19T22:00:00+00:00",
-"price": 43.18,
 "horizon": "swing",
 "thr": 0.045060543902600426,
 "watch": true,
@@ -1044,30 +1027,54 @@
 "thr": 0.1485823336968376,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-20T02:00:00+00:00",
+"price": 41.86,
+"horizon": "day",
+"thr": 0.031192410074397676,
+"watch": true,
+"p": 0.498
+},
+{
+"t": "2026-11-20T02:00:00+00:00",
+"price": 41.86,
+"horizon": "swing",
+"thr": 0.06238482014879535,
+"watch": true,
+"p": 0.429
+},
+{
+"t": "2026-11-20T02:00:00+00:00",
+"price": 41.86,
+"horizon": "hold",
+"thr": 0.15596205037198838,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 101,
-"big": 14,
-"watch_n": 20,
-"watch_big": 2,
-"brier": 15.426022000000003,
+"n": 102,
+"big": 15,
+"watch_n": 21,
+"watch_big": 3,
+"brier": 15.916022000000003,
 "brier_base": 0.0,
-"scout_n": 101
+"scout_n": 102
 },
 "swing": {
-"n": 81,
-"big": 30,
-"watch_n": 21,
-"watch_big": 2,
-"brier": 24.465570000000003,
+"n": 82,
+"big": 31,
+"watch_n": 22,
+"watch_big": 3,
+"brier": 24.826771000000004,
 "brier_base": 0.0,
-"scout_n": 81
+"scout_n": 82
 }
 },
 "calls_record": {},
-"runs": 413,
+"runs": 414,
 "created": "2026-11-15T06:42:40",
-"last_run": "2026-11-20T02:45:49.855002+00:00"
+"last_run": "2026-11-20T03:00:59.236802+00:00"
 }

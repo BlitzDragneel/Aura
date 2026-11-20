@@ -763,3 +763,6 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Silver: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~41.66
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-20 03:01:05 UTC
+🔁 Learning: breakout with the trend is now MUTED (no trade plans) after 31 live signals (22 separate moments) averaging -0.30R.
