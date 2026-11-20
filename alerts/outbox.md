@@ -750,3 +750,8 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3582.5
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-20 01:45:52 UTC
+⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~62003.2
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
