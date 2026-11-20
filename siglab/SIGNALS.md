@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 18:23 UTC
+Updated 2026-11-20 18:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -38,7 +38,7 @@ Updated 2026-11-20 18:23 UTC
 | DOGEUSD S4 | 5 | -0.092 | -0.22 | 0.6 | PAPER |
 | DOGEUSD S5 | 4 | -0.535 | -1.0 | 0.25 | PAPER |
 | DOGEUSD S6 | 5 | 0.148 | 11.58 | 1.0 | PAPER |
-| DOGEUSD S7 | 2 | -0.233 | -0.28 | 0.5 | PAPER |
+| DOGEUSD S7 | 3 | 0.026 | 0.05 | 0.667 | PAPER |
 | ETHUSD S1 | 6 | -0.203 | -0.75 | 0.667 | PAPER |
 | ETHUSD S2 | 5 | -0.543 | -1.73 | 0.4 | PAPER |
 | ETHUSD S3 | 5 | 0.218 | 0.39 | 0.6 | PAPER |
@@ -59,7 +59,7 @@ Updated 2026-11-20 18:23 UTC
 | LTCUSD S4 | 6 | 0.037 | 0.09 | 0.667 | PAPER |
 | LTCUSD S5 | 5 | -0.155 | -0.4 | 0.6 | PAPER |
 | LTCUSD S6 | 5 | 0.283 | 0.76 | 0.8 | PAPER |
-| LTCUSD S7 | 2 | 0.601 | 1.1 | 1.0 | PAPER |
+| LTCUSD S7 | 3 | 0.6 | 1.9 | 1.0 | PAPER |
 | NAS100 S1 | 3 | 0.406 | 4.19 | 1.0 | PAPER |
 | NAS100 S2 | 2 | 0.043 | 0.77 | 0.5 | PAPER |
 | NAS100 S3 | 2 | 0.237 | 0.4 | 0.5 | PAPER |
@@ -114,14 +114,14 @@ Updated 2026-11-20 18:23 UTC
 
 - 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 26 closed, avg +0.29R, 81% won.
 - 20 Nov 15:30 SUIUSD sell S7 @ 0.6621 SL 0.672221 → closed TP3 +1.15R. TP3 after 33 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
-- 20 Nov 15:30 LTCUSD sell S7 @ 40.43 SL 40.934 → open
+- 20 Nov 15:30 LTCUSD sell S7 @ 40.43 SL 40.934 → closed TP2+BE +0.60R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 27 closed, avg +0.29R, 82% won.
 - 20 Nov 15:30 LTCUSD buy S3 @ 40.43 SL 39.926 → closed SL -1.05R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 31 closed, avg -0.07R, 61% won.
 - 20 Nov 15:30 LINKUSD sell S7 @ 8.484 SL 8.6065 → closed TP3 +1.09R. TP3 after 32 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
 - 20 Nov 15:30 LINKUSD buy S3 @ 8.484 SL 8.3615 → closed SL -1.04R. Stopped out after 12 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
 - 20 Nov 15:30 AVAXUSD sell S7 @ 6.562 SL 6.6599 → closed TP2+BE +0.55R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
 - 20 Nov 15:30 AVAXUSD buy S3 @ 6.562 SL 6.4641 → closed SL -1.04R. Stopped out after 15 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
 - 20 Nov 15:30 ADAUSD sell S7 @ 0.1414 SL 0.14365 → closed TP2+BE +0.55R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
-- 20 Nov 15:30 DOGEUSD sell S7 @ 0.05447 SL 0.055227 → open
+- 20 Nov 15:30 DOGEUSD sell S7 @ 0.05447 SL 0.055227 → closed TP2+BE +0.54R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 27 closed, avg +0.29R, 82% won.
 - 20 Nov 15:30 XRPUSD sell S7 @ 0.9171 SL 0.929814 → closed TP2+BE +0.50R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
 - 20 Nov 15:30 BNBUSD sell S7 @ 554.91 SL 560.57 → closed TP3 +1.07R. TP3 after 31 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
 - 20 Nov 15:30 SOLUSD sell S7 @ 69.07 SL 70.031 → closed TP2+BE +0.50R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
