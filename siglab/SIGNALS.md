@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 15:45 UTC
+Updated 2026-11-20 16:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -27,11 +27,11 @@ Updated 2026-11-20 15:45 UTC
 | BNBUSD S7 | 3 | -0.298 | -0.74 | 0.667 | PAPER |
 | BTCUSD S1 | 5 | 0.132 | 0.44 | 0.8 | PAPER |
 | BTCUSD S2 | 5 | -0.56 | -2.0 | 0.4 | PAPER |
-| BTCUSD S3 | 3 | 0.047 | 0.09 | 0.667 | PAPER |
+| BTCUSD S3 | 4 | -0.219 | -0.47 | 0.5 | PAPER |
 | BTCUSD S4 | 6 | -0.219 | -0.87 | 0.667 | PAPER |
 | BTCUSD S5 | 4 | -0.221 | -0.45 | 0.5 | PAPER |
 | BTCUSD S6 | 5 | 0.554 | 2.72 | 1.0 | PAPER |
-| BTCUSD S7 | 3 | -0.046 | -0.09 | 0.667 | PAPER |
+| BTCUSD S7 | 4 | 0.238 | 0.51 | 0.75 | PAPER |
 | DOGEUSD S1 | 5 | 0.188 | 0.54 | 0.8 | PAPER |
 | DOGEUSD S2 | 5 | -0.498 | -1.43 | 0.4 | PAPER |
 | DOGEUSD S3 | 5 | 0.634 | 3.51 | 1.0 | PAPER |
@@ -55,7 +55,7 @@ Updated 2026-11-20 15:45 UTC
 | LINKUSD S7 | 3 | -0.303 | -0.4 | 0.333 | PAPER |
 | LTCUSD S1 | 6 | 0.165 | 0.38 | 0.667 | PAPER |
 | LTCUSD S2 | 5 | -1.057 | -276.63 | 0.0 | PAPER |
-| LTCUSD S3 | 4 | -0.124 | -0.2 | 0.5 | PAPER |
+| LTCUSD S3 | 5 | -0.308 | -0.6 | 0.4 | PAPER |
 | LTCUSD S4 | 6 | 0.037 | 0.09 | 0.667 | PAPER |
 | LTCUSD S5 | 5 | -0.155 | -0.4 | 0.6 | PAPER |
 | LTCUSD S6 | 5 | 0.283 | 0.76 | 0.8 | PAPER |
@@ -112,9 +112,10 @@ Updated 2026-11-20 15:45 UTC
 
 ## Latest signals
 
+- 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → open
 - 20 Nov 15:30 SUIUSD sell S7 @ 0.6621 SL 0.672221 → open
 - 20 Nov 15:30 LTCUSD sell S7 @ 40.43 SL 40.934 → open
-- 20 Nov 15:30 LTCUSD buy S3 @ 40.43 SL 39.926 → open
+- 20 Nov 15:30 LTCUSD buy S3 @ 40.43 SL 39.926 → closed SL -1.05R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 31 closed, avg -0.07R, 61% won.
 - 20 Nov 15:30 LINKUSD sell S7 @ 8.484 SL 8.6065 → open
 - 20 Nov 15:30 LINKUSD buy S3 @ 8.484 SL 8.3615 → closed SL -1.04R. Stopped out after 12 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
 - 20 Nov 15:30 AVAXUSD sell S7 @ 6.562 SL 6.6599 → open
@@ -126,8 +127,8 @@ Updated 2026-11-20 15:45 UTC
 - 20 Nov 15:30 SOLUSD sell S7 @ 69.07 SL 70.031 → open
 - 20 Nov 15:30 ETHUSD sell S7 @ 1681.66 SL 1704.3 → open
 - 20 Nov 15:30 ETHUSD buy S3 @ 1681.66 SL 1659.02 → closed SL -1.04R. Stopped out after 12 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
-- 20 Nov 15:30 BTCUSD sell S7 @ 60372.4 SL 61031.2 → open
-- 20 Nov 15:30 BTCUSD buy S3 @ 60372.4 SL 59713.6 → open
+- 20 Nov 15:30 BTCUSD sell S7 @ 60372.4 SL 61031.2 → closed TP3 +1.09R. TP3 after 30 min (best 1.7R, worst -0.1R). Lesson so far: big move with the trend: 17 closed, avg +0.01R, 71% won.
+- 20 Nov 15:30 BTCUSD buy S3 @ 60372.4 SL 59713.6 → closed SL -1.01R. Stopped out after 15 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 31 closed, avg -0.07R, 61% won.
 - 20 Nov 15:15 US30 buy S7 @ 49536.21 SL 49364.71 → closed SL -1.02R. Stopped out after 3 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 19 closed, avg -0.23R, 53% won.
 - 20 Nov 15:15 US30 buy S2 @ 49536.21 SL 49364.71 → closed SL -1.02R. Stopped out after 3 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: breakout against the trend: 33 closed, avg -0.50R, 39% won.
 - 20 Nov 14:00 LTCUSD buy S5 @ 41.56 SL 41.076 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 19 closed, avg -0.52R, 37% won.
@@ -171,4 +172,3 @@ Updated 2026-11-20 15:45 UTC
 - 20 Nov 07:00 US30 sell S6 @ 48965.3 SL 49156.3 → closed SL -1.01R. Stopped out after 81 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 49 closed, avg +0.22R, 84% won.
 - 20 Nov 07:00 NAS100 sell S6 @ 26208.03 SL 26414.3 → closed TP1+BE +0.34R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 53 closed, avg +0.17R, 81% won.
 - 20 Nov 07:00 BTCUSD sell S6 @ 62023.5 SL 62756.61 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 49 closed, avg +0.22R, 84% won.
-- 20 Nov 07:00 XAGUSD sell S6 @ 42.26 SL 42.944 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 43 closed, avg +0.23R, 81% won.

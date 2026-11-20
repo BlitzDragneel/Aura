@@ -17365,14 +17365,22 @@
     61067.43
    ],
    "R": 658.8,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-20",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 60372.4,
+   "outcome": "SL",
+   "R_ladder": -1.015,
+   "R_tp1": -1.015,
+   "pips": -668.8,
+   "closed_ms": 1795189500000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 15 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 31 closed, avg -0.07R, 61% won."
   },
   {
    "id": "BTCUSD-S7-1795188600000",
@@ -17396,7 +17404,7 @@
     59303.17
    ],
    "R": 658.8,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -17405,7 +17413,15 @@
    "day": "2026-11-20",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 60372.4,
+   "outcome": "TP3",
+   "R_ladder": 1.09,
+   "R_tp1": 0.583,
+   "pips": 718.0,
+   "closed_ms": 1795190400000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 30 min (best 1.7R, worst -0.1R). Lesson so far: big move with the trend: 17 closed, avg +0.01R, 71% won."
   },
   {
    "id": "ETHUSD-S3-1795188600000",
@@ -17794,14 +17810,22 @@
     40.95
    ],
    "R": 0.5036,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-20",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 40.44,
+   "outcome": "SL",
+   "R_ladder": -1.047,
+   "R_tp1": -1.047,
+   "pips": -133.1,
+   "closed_ms": 1795189560000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 31 closed, avg -0.07R, 61% won."
   },
   {
    "id": "LTCUSD-S7-1795188600000",
@@ -17864,6 +17888,39 @@
    ],
    "day": "2026-11-20",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "NAS100-S7-1795190400000",
+   "symbol": "NAS100",
+   "setup": "S7",
+   "side": "sell",
+   "why": "moved -499.00 in the last hour, twice its normal hourly range",
+   "state": {
+    "trend": "down",
+    "vol": "high",
+    "shape": "normal",
+    "session": "New York",
+    "with_trend": true
+   },
+   "logged_ms": 1795190400000,
+   "ref_price": 25850.15,
+   "stop": 26054.46,
+   "targets": [
+    25729.62,
+    25657.29,
+    25522.45
+   ],
+   "R": 204.304,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-20",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
   }
  ],
  "sent_day": {},
@@ -18055,11 +18112,11 @@
     "grade": "PAPER"
    },
    "BTCUSD S3": {
-    "n": 3,
-    "avg_R": 0.047,
-    "t": 0.09,
-    "win": 0.667,
-    "total_R": 0.14,
+    "n": 4,
+    "avg_R": -0.219,
+    "t": -0.47,
+    "win": 0.5,
+    "total_R": -0.87,
     "grade": "PAPER"
    },
    "BTCUSD S4": {
@@ -18087,11 +18144,11 @@
     "grade": "PAPER"
    },
    "BTCUSD S7": {
-    "n": 3,
-    "avg_R": -0.046,
-    "t": -0.09,
-    "win": 0.667,
-    "total_R": -0.14,
+    "n": 4,
+    "avg_R": 0.238,
+    "t": 0.51,
+    "win": 0.75,
+    "total_R": 0.95,
     "grade": "PAPER"
    },
    "DOGEUSD S1": {
@@ -18279,11 +18336,11 @@
     "grade": "PAPER"
    },
    "LTCUSD S3": {
-    "n": 4,
-    "avg_R": -0.124,
-    "t": -0.2,
-    "win": 0.5,
-    "total_R": -0.5,
+    "n": 5,
+    "avg_R": -0.308,
+    "t": -0.6,
+    "win": 0.4,
+    "total_R": -1.54,
     "grade": "PAPER"
    },
    "LTCUSD S4": {
@@ -18727,11 +18784,11 @@
     "total_R": -24.86
    },
    "S3": {
-    "n": 58,
-    "avg_R": 0.113,
-    "t": 1.07,
-    "win": 0.707,
-    "total_R": 6.53
+    "n": 60,
+    "avg_R": 0.074,
+    "t": 0.71,
+    "win": 0.683,
+    "total_R": 4.47
    },
    "S4": {
     "n": 77,
@@ -18755,21 +18812,21 @@
     "total_R": 11.03
    },
    "S7": {
-    "n": 37,
-    "avg_R": -0.142,
-    "t": -1.06,
-    "win": 0.595,
-    "total_R": -5.24
+    "n": 38,
+    "avg_R": -0.109,
+    "t": -0.82,
+    "win": 0.605,
+    "total_R": -4.15
    }
   },
   "all": {
-   "n": 443,
-   "avg_R": -0.072,
-   "t": -1.85,
-   "win": 0.634,
-   "total_R": -31.68
+   "n": 446,
+   "avg_R": -0.073,
+   "t": -1.9,
+   "win": 0.632,
+   "total_R": -32.66
   },
-  "open": 14
+  "open": 12
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -18941,18 +18998,18 @@
    "total_R": -5.31
   },
   "S3 | New York": {
-   "n": 25,
-   "avg_R": 0.228,
-   "t": 1.29,
-   "win": 0.68,
-   "total_R": 5.7
+   "n": 27,
+   "avg_R": 0.135,
+   "t": 0.77,
+   "win": 0.63,
+   "total_R": 3.64
   },
   "S3 | against trend": {
-   "n": 31,
-   "avg_R": -0.071,
-   "t": -0.53,
-   "win": 0.613,
-   "total_R": -2.19
+   "n": 33,
+   "avg_R": -0.129,
+   "t": -0.98,
+   "win": 0.576,
+   "total_R": -4.26
   },
   "S3 | compressed": {
    "n": 5,
@@ -18976,18 +19033,18 @@
    "total_R": 4.24
   },
   "S3 | normal": {
-   "n": 37,
-   "avg_R": -0.064,
-   "t": -0.51,
-   "win": 0.649,
-   "total_R": -2.38
+   "n": 39,
+   "avg_R": -0.114,
+   "t": -0.91,
+   "win": 0.615,
+   "total_R": -4.45
   },
   "S3 | vol high": {
-   "n": 13,
-   "avg_R": 0.043,
-   "t": 0.19,
-   "win": 0.692,
-   "total_R": 0.55
+   "n": 15,
+   "avg_R": -0.101,
+   "t": -0.46,
+   "win": 0.6,
+   "total_R": -1.51
   },
   "S3 | vol low": {
    "n": 4,
@@ -19235,11 +19292,11 @@
    "total_R": -0.94
   },
   "S7 | New York": {
-   "n": 30,
-   "avg_R": -0.139,
-   "t": -0.89,
-   "win": 0.567,
-   "total_R": -4.17
+   "n": 31,
+   "avg_R": -0.099,
+   "t": -0.64,
+   "win": 0.581,
+   "total_R": -3.08
   },
   "S7 | against trend": {
    "n": 20,
@@ -19256,18 +19313,18 @@
    "total_R": -4.36
   },
   "S7 | normal": {
-   "n": 18,
-   "avg_R": -0.049,
-   "t": -0.3,
-   "win": 0.722,
-   "total_R": -0.88
+   "n": 19,
+   "avg_R": 0.011,
+   "t": 0.07,
+   "win": 0.737,
+   "total_R": 0.21
   },
   "S7 | vol high": {
-   "n": 18,
-   "avg_R": -0.078,
-   "t": -0.39,
-   "win": 0.611,
-   "total_R": -1.41
+   "n": 19,
+   "avg_R": -0.017,
+   "t": -0.08,
+   "win": 0.632,
+   "total_R": -0.32
   },
   "S7 | vol normal": {
    "n": 19,
@@ -19277,11 +19334,11 @@
    "total_R": -3.83
   },
   "S7 | with trend": {
-   "n": 17,
-   "avg_R": 0.008,
-   "t": 0.04,
-   "win": 0.706,
-   "total_R": 0.13
+   "n": 18,
+   "avg_R": 0.068,
+   "t": 0.37,
+   "win": 0.722,
+   "total_R": 1.22
   }
  },
  "scout_last": "2026-11-16T19:00:00+00:00",

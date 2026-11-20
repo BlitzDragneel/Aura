@@ -842,3 +842,8 @@ Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
 
 🔁 Learning: breakout against the trend is now MUTED (no trade plans) after 34 live signals (15 separate moments) averaging -0.58R.
+
+## 2026-11-20 16:01:10 UTC
+⚡ Nasdaq 100: BIG MOVE under way right now (moved -499.00 in the last hour, twice its normal hourly range), price ~25850.15
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
