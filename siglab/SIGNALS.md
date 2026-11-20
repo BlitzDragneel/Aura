@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 14:45 UTC
+Updated 2026-11-20 15:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -68,7 +68,7 @@ Updated 2026-11-20 14:45 UTC
 | NAS100 S6 | 3 | -0.002 | -0.0 | 0.667 | PAPER |
 | NAS100 S7 | 1 | -1.012 | None | 0.0 | PAPER |
 | SOLUSD S1 | 5 | 0.302 | 0.82 | 0.8 | PAPER |
-| SOLUSD S2 | 4 | -0.205 | -0.41 | 0.5 | PAPER |
+| SOLUSD S2 | 5 | -0.131 | -0.33 | 0.6 | PAPER |
 | SOLUSD S3 | 3 | -0.272 | -0.69 | 0.667 | PAPER |
 | SOLUSD S4 | 5 | 0.089 | 0.27 | 0.8 | PAPER |
 | SOLUSD S5 | 4 | -0.464 | -1.35 | 0.5 | PAPER |
@@ -121,7 +121,7 @@ Updated 2026-11-20 14:45 UTC
 - 20 Nov 12:15 AVAXUSD sell S2 @ 6.805 SL 6.8933 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 32 closed, avg -0.28R, 53% won.
 - 20 Nov 12:15 XRPUSD sell S2 @ 0.9451 SL 0.956464 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 32 closed, avg -0.28R, 53% won.
 - 20 Nov 12:15 SOLUSD buy S3 @ 70.97 SL 70.07 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 26 closed, avg +0.01R, 65% won.
-- 20 Nov 12:15 SOLUSD sell S2 @ 70.97 SL 71.87 → open
+- 20 Nov 12:15 SOLUSD sell S2 @ 70.97 SL 71.87 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 34 closed, avg -0.26R, 56% won.
 - 20 Nov 12:00 XAUUSD sell S1 @ 3580.5 SL 3611.9 → open
 - 20 Nov 11:15 SUIUSD buy S3 @ 0.6849 SL 0.675414 → closed SL -1.04R. Stopped out after 136 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 24 closed, avg +0.06R, 71% won.
 - 20 Nov 11:00 SUIUSD sell S2 @ 0.6889 SL 0.698386 → open

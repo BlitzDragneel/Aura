@@ -821,3 +821,6 @@ Market now: trend down, volatility normal, New York session
 ⚡ Dow 30: SESSION DRIVE right now (New York open drive), price ~48957.06
 Market now: trend down, volatility normal, New York session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+## 2026-11-20 15:01:05 UTC
+👀 Bitcoin day: WATCH at 61,740.80. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
