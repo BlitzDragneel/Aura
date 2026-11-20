@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 00:31 UTC
+Updated 2026-11-20 00:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -28,7 +28,7 @@ Updated 2026-11-20 00:31 UTC
 | BTCUSD S1 | 4 | 0.035 | 0.1 | 0.75 | PAPER |
 | BTCUSD S2 | 4 | -0.446 | -1.35 | 0.5 | PAPER |
 | BTCUSD S3 | 3 | 0.047 | 0.09 | 0.667 | PAPER |
-| BTCUSD S4 | 5 | -0.284 | -0.95 | 0.6 | PAPER |
+| BTCUSD S4 | 6 | -0.219 | -0.87 | 0.667 | PAPER |
 | BTCUSD S5 | 3 | -0.351 | -0.52 | 0.333 | PAPER |
 | BTCUSD S6 | 4 | 0.65 | 2.81 | 1.0 | PAPER |
 | BTCUSD S7 | 3 | -0.046 | -0.09 | 0.667 | PAPER |
@@ -112,13 +112,18 @@ Updated 2026-11-20 00:31 UTC
 
 ## Latest signals
 
+- 20 Nov 00:45 BNBUSD buy S4 @ 578.95 SL 574.01 → open
+- 20 Nov 00:45 SOLUSD buy S4 @ 72.88 SL 71.914 → open
+- 20 Nov 00:45 ETHUSD buy S4 @ 1754.72 SL 1732.2 → open
+- 20 Nov 00:45 US30 sell S4 @ 49082.3 SL 49324.73 → open
+- 20 Nov 00:45 XAGUSD sell S4 @ 42.47 SL 43.012 → open
 - 20 Nov 00:30 SUIUSD sell S1 @ 0.7093 SL 0.718679 → open
 - 20 Nov 00:30 AVAXUSD sell S1 @ 6.969 SL 7.0641 → open
 - 20 Nov 00:30 NAS100 sell S4 @ 26459.03 SL 26702.49 → open
 - 20 Nov 00:30 XAUUSD sell S4 @ 3618.7 SL 3640.24 → open
 - 20 Nov 00:00 DOGEUSD sell S1 @ 0.05819 SL 0.058869 → open
 - 20 Nov 00:00 SOLUSD sell S1 @ 73.11 SL 74.076 → open
-- 20 Nov 00:00 BTCUSD buy S4 @ 61949.1 SL 61294.76 → open
+- 20 Nov 00:00 BTCUSD buy S4 @ 61949.1 SL 61294.76 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 21 closed, avg +0.01R, 67% won.
 - 20 Nov 00:00 XAGUSD buy S3 @ 42.63 SL 42.088 → closed TP3 +0.60R. TP3 after 15 min (best 0.9R, worst -0.1R). Lesson so far: stretch fade against the trend: 19 closed, avg -0.05R, 63% won.
 - 20 Nov 00:00 XAUUSD buy S3 @ 3613.5 SL 3591.96 → closed TP3 +0.52R. TP3 after 16 min (best 0.9R, worst -0.3R). Lesson so far: stretch fade against the trend: 20 closed, avg -0.02R, 65% won.
 - 19 Nov 17:15 ETHUSD buy S3 @ 1754.73 SL 1737.39 → closed TP3 +0.93R. TP3 after 17 min (best 1.8R, worst -0.3R). Lesson so far: stretch fade against the trend: 18 closed, avg -0.11R, 61% won.
@@ -167,8 +172,3 @@ Updated 2026-11-20 00:31 UTC
 - 19 Nov 07:00 LTCUSD sell S6 @ 44.68 SL 45.091 → closed TP3 +1.05R. TP3 after 494 min (best 1.7R, worst -0.2R). Lesson so far: daily bias with the trend: 37 closed, avg +0.03R, 78% won.
 - 19 Nov 07:00 LINKUSD sell S6 @ 9.166 SL 9.2654 → closed SL -1.05R. Stopped out after 420 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). Lesson so far: daily bias with the trend: 36 closed, avg +0.06R, 81% won.
 - 19 Nov 07:00 AVAXUSD sell S6 @ 7.063 SL 7.1456 → closed SL -1.05R. Stopped out after 360 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.8R). Lesson so far: daily bias with the trend: 33 closed, avg +0.12R, 85% won.
-- 19 Nov 07:00 ADAUSD sell S6 @ 0.1537 SL 0.155393 → closed SL -1.05R. Stopped out after 367 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). Lesson so far: daily bias with the trend: 35 closed, avg +0.09R, 83% won.
-- 19 Nov 07:00 DOGEUSD buy S6 @ 0.05941 SL 0.058788 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 11 closed, avg +0.29R, 82% won.
-- 19 Nov 07:00 XRPUSD buy S6 @ 0.9837 SL 0.973507 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 11 closed, avg +0.29R, 82% won.
-- 19 Nov 07:00 XRPUSD sell S3 @ 0.9837 SL 0.993893 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 20 closed, avg +0.44R, 85% won.
-- 19 Nov 07:00 BNBUSD sell S6 @ 589.76 SL 594.3 → closed TP3 +0.95R. TP3 after 593 min (best 1.6R, worst -0.9R). Lesson so far: daily bias with the trend: 42 closed, avg +0.21R, 81% won.

@@ -736,3 +736,12 @@ Market now: trend down, volatility high, Asia session
 ⚡ Nasdaq 100: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~26459.03
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-20 00:46:00 UTC
+⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~42.47
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+⚡ Dow 30: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~49082.3
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
