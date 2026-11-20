@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 04:01 UTC
+Updated 2026-11-20 04:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-20 04:01 UTC
 
 ## Latest signals
 
+- 20 Nov 04:15 US30 sell S1 @ 49056.3 SL 49302.59 → open
+- 20 Nov 04:15 NAS100 sell S1 @ 26362.03 SL 26623.39 → open
 - 20 Nov 03:15 SUIUSD sell S4 @ 0.6991 SL 0.70955 → open
 - 20 Nov 03:15 LTCUSD sell S1 @ 41.84 SL 42.422 → open
 - 20 Nov 03:15 LINKUSD sell S4 @ 8.874 SL 9.0076 → open
@@ -170,5 +172,3 @@ Updated 2026-11-20 04:01 UTC
 - 19 Nov 15:45 BTCUSD buy S3 @ 62855.0 SL 62399.9 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 16 closed, avg -0.18R, 56% won.
 - 19 Nov 15:30 LTCUSD buy S3 @ 43.76 SL 43.434 → closed SL -1.08R. Stopped out after 8 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: stretch fade with the trend: 21 closed, avg +0.42R, 86% won.
 - 19 Nov 15:30 DOGEUSD sell S2 @ 0.05896 SL 0.059431 → closed TP2+BE +0.55R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 30 closed, avg -0.50R, 40% won.
-- 19 Nov 15:30 US30 sell S7 @ 49966.29 SL 50085.15 → closed TP3 +0.49R. TP3 after 9 min (best 2.0R, worst -0.0R). Lesson so far: big move with the trend: 13 closed, avg +0.04R, 77% won.
-- 19 Nov 14:45 US30 sell S2 @ 50353.14 SL 50457.78 → closed TP2+BE +0.09R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 24 closed, avg -0.41R, 42% won.

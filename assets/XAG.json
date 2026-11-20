@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-20T04:01:01.551664+00:00",
+ "asof": "2026-11-20T04:15:54.029407+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.97,
-  "bar": "2026-11-20T03:45:00+00:00",
+  "price": 41.81,
+  "bar": "2026-11-20T04:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 41.97,
-    "ma20": 42.277,
-    "ma50": 43.4116,
-    "slope_atr": -0.74,
-    "bar": "2026-11-20T03:45:00+00:00"
+    "close": 41.81,
+    "ma20": 42.2115,
+    "ma50": 43.3504,
+    "slope_atr": -0.78,
+    "bar": "2026-11-20T04:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -6.45,
   "spot": {
-   "price": 41.833,
-   "bid": 41.8097,
-   "ask": 41.8563,
-   "spread": 0.0466,
+   "price": 41.7665,
+   "bid": 41.7412,
+   "ask": 41.7918,
+   "spread": 0.0506,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.327
+   "perp_premium_pct": 0.104
   },
   "funding": {
-   "rate": 0.0001181476754517,
+   "rate": 9.20021390171e-05,
    "next_time": 1795161600000,
    "source": "okx-swap"
   },
@@ -253,8 +253,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.97; volatility regime extreme (hourly ATR 1.622% of price, 99.8th percentile).",
-    "Spot XAGUSD 41.83; the perpetual trades +0.33% from spot."
+    "Price 41.81; volatility regime extreme (hourly ATR 1.622% of price, 99.8th percentile).",
+    "Spot XAGUSD 41.77; the perpetual trades +0.10% from spot."
    ]
   },
   {
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 418,
+ "runs": 419,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

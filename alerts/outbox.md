@@ -769,3 +769,12 @@ Market now: trend down, volatility high, Asia session
 
 ## 2026-11-20 04:01:01 UTC
 👀 Bitcoin swing: WATCH at 62,123.70. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-20 04:16:02 UTC
+⚡ Nasdaq 100: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~26362.03
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Dow 30: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~49056.3
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
