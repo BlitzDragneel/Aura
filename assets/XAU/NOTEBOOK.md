@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 115 readings scored; big moves followed 16% of them, 21% after a WATCH (39 WATCH readings) - too few to judge yet.
+- My own record: 116 readings scored; big moves followed 16% of them, 20% after a WATCH (40 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 95 readings scored; big moves followed 46% of them, 53% after a WATCH (30 WATCH readings) - too few to judge yet.
+- My own record: 96 readings scored; big moves followed 47% of them, 55% after a WATCH (31 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,15 +29,15 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.21%) and the quietest late US (0.14%).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.21%) and the quietest London (0.14%).
 - At weekends, while spot is closed, the perpetual moves 33% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 1.4% from low to high (last 60 days); 35% of those days closed higher.
 - Over the last 30 days the price moved -12.3% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3551.6; volatility regime extreme (hourly ATR 0.82% of price, 97.5th percentile).
-- Spot XAUUSD 3542.50; the perpetual trades +0.26% from spot.
+- Price 3552.7; volatility regime extreme (hourly ATR 0.796% of price, 97.1th percentile).
+- Spot XAUUSD 3540.24; the perpetual trades +0.35% from spot.
 
 ## My calls so far
 
