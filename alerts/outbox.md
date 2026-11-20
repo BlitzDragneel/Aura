@@ -807,3 +807,8 @@ Bitcoin 62,017.50 | 1h trend down | vol active | typical day range 2.57% | big 4
 Gold 3,592.20 | 1h trend down | vol extreme | typical day range 1.43% | big 4h move chance 43% | day WATCH · swing WATCH · hold WAIT
 Silver 42.68 | 1h trend down | vol extreme | typical day range 2.68% | big 4h move chance 38% | day WATCH · swing WATCH · hold WAIT
 Calls come only from tested rules. WATCH = move likely, direction unknown.
+
+## 2026-11-20 12:01:15 UTC
+⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3580.5
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
