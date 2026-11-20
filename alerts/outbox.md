@@ -800,3 +800,10 @@ Market now: trend down, volatility normal, London session
 ⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~62245.6
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-20 11:00:57 UTC
+🌅 OMEGA morning read
+Bitcoin 62,017.50 | 1h trend down | vol active | typical day range 2.57% | big 4h move chance 28% | day WAIT · swing WATCH · hold WAIT
+Gold 3,592.20 | 1h trend down | vol extreme | typical day range 1.43% | big 4h move chance 43% | day WATCH · swing WATCH · hold WAIT
+Silver 42.68 | 1h trend down | vol extreme | typical day range 2.68% | big 4h move chance 38% | day WATCH · swing WATCH · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
