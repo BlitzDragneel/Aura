@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 03:15 UTC
+Updated 2026-11-20 03:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ Updated 2026-11-20 03:15 UTC
 | US30 S6 | 2 | 1.268 | 0.56 | 0.5 | PAPER |
 | US30 S7 | 2 | 0.73 | 3.01 | 1.0 | PAPER |
 | XAGUSD S1 | 4 | 0.177 | 0.39 | 0.75 | PAPER |
-| XAGUSD S2 | 4 | -0.344 | -0.77 | 0.5 | PAPER |
+| XAGUSD S2 | 5 | -0.248 | -0.69 | 0.6 | PAPER |
 | XAGUSD S3 | 5 | 0.23 | 0.63 | 0.8 | PAPER |
 | XAGUSD S4 | 6 | -0.458 | -1.61 | 0.5 | PAPER |
 | XAGUSD S5 | 2 | 0.213 | 1.43 | 1.0 | PAPER |
@@ -120,7 +120,7 @@ Updated 2026-11-20 03:15 UTC
 - 20 Nov 03:00 LTCUSD sell S4 @ 42.13 SL 42.712 → open
 - 20 Nov 02:30 ADAUSD buy S3 @ 0.1482 SL 0.145971 → closed TP2+BE +0.38R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 22 closed, avg +0.04R, 68% won.
 - 20 Nov 02:30 DOGEUSD buy S3 @ 0.05692 SL 0.056152 → closed TP3 +0.65R. TP3 after 29 min (best 1.0R, worst -0.2R). Lesson so far: stretch fade against the trend: 21 closed, avg +0.01R, 67% won.
-- 20 Nov 02:30 XAGUSD sell S2 @ 41.66 SL 42.283 → open
+- 20 Nov 02:30 XAGUSD sell S2 @ 41.66 SL 42.283 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 31 closed, avg -0.30R, 52% won.
 - 20 Nov 02:15 BNBUSD buy S3 @ 571.56 SL 565.76 → closed TP2+BE +0.24R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 22 closed, avg +0.04R, 68% won.
 - 20 Nov 02:00 LTCUSD sell S2 @ 41.61 SL 42.175 → closed SL -1.04R. Stopped out after 60 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 29 closed, avg -0.28R, 52% won.
 - 20 Nov 02:00 LINKUSD sell S2 @ 8.86 SL 8.9914 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 29 closed, avg -0.28R, 52% won.
