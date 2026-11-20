@@ -824,3 +824,14 @@ Market now: trend down, volatility normal, New York session
 
 ## 2026-11-20 15:01:05 UTC
 👀 Bitcoin day: WATCH at 61,740.80. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+## 2026-11-20 15:15:59 UTC
+⚡ Dow 30: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~49536.21
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Dow 30: BIG MOVE under way right now (moved +463.00 in the last hour, twice its normal hourly range), price ~49536.21
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+🔁 Learning: breakout with the trend is now back to normal.
