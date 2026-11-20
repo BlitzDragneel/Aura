@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 16:15 UTC
+Updated 2026-11-20 16:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -66,7 +66,7 @@ Updated 2026-11-20 16:15 UTC
 | NAS100 S4 | 3 | 0.007 | 0.22 | 0.333 | PAPER |
 | NAS100 S5 | 3 | -0.248 | -0.65 | 0.667 | PAPER |
 | NAS100 S6 | 3 | -0.002 | -0.0 | 0.667 | PAPER |
-| NAS100 S7 | 1 | -1.012 | None | 0.0 | PAPER |
+| NAS100 S7 | 2 | -0.437 | -0.76 | 0.5 | PAPER |
 | SOLUSD S1 | 5 | 0.302 | 0.82 | 0.8 | PAPER |
 | SOLUSD S2 | 5 | -0.131 | -0.33 | 0.6 | PAPER |
 | SOLUSD S3 | 3 | -0.272 | -0.69 | 0.667 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-20 16:15 UTC
 
 ## Latest signals
 
-- 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → open
+- 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 26 closed, avg +0.29R, 81% won.
 - 20 Nov 15:30 SUIUSD sell S7 @ 0.6621 SL 0.672221 → closed TP3 +1.15R. TP3 after 33 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
 - 20 Nov 15:30 LTCUSD sell S7 @ 40.43 SL 40.934 → open
 - 20 Nov 15:30 LTCUSD buy S3 @ 40.43 SL 39.926 → closed SL -1.05R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 31 closed, avg -0.07R, 61% won.
