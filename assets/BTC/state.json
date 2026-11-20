@@ -5,7 +5,7 @@
 "since": "2026-11-19T23:00:52.085083+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (96th percentile of the last 3 weeks)",
+"hourly volatility is high (95th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -663,14 +663,6 @@
 {
 "t": "2026-11-19T06:00:00+00:00",
 "price": 63721.3,
-"horizon": "swing",
-"thr": 0.03727257828790606,
-"watch": false,
-"p": 0.344
-},
-{
-"t": "2026-11-19T06:00:00+00:00",
-"price": 63721.3,
 "horizon": "hold",
 "thr": 0.09318144571976515,
 "watch": false,
@@ -983,14 +975,6 @@
 {
 "t": "2026-11-20T02:00:00+00:00",
 "price": 62245.6,
-"horizon": "day",
-"thr": 0.024889194692361512,
-"watch": true,
-"p": 0.256
-},
-{
-"t": "2026-11-20T02:00:00+00:00",
-"price": 62245.6,
 "horizon": "swing",
 "thr": 0.049778389384723024,
 "watch": false,
@@ -1075,30 +1059,54 @@
 "thr": 0.12330634849069343,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-20T06:00:00+00:00",
+"price": 62023.5,
+"horizon": "day",
+"thr": 0.023639657318827327,
+"watch": true,
+"p": 0.19
+},
+{
+"t": "2026-11-20T06:00:00+00:00",
+"price": 62023.5,
+"horizon": "swing",
+"thr": 0.047279314637654654,
+"watch": true,
+"p": 0.247
+},
+{
+"t": "2026-11-20T06:00:00+00:00",
+"price": 62023.5,
+"horizon": "hold",
+"thr": 0.11819828659413664,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 105,
+"n": 106,
 "big": 12,
-"watch_n": 12,
+"watch_n": 13,
 "watch_big": 0,
-"brier": 11.28387,
+"brier": 11.349406,
 "brier_base": 0.0,
-"scout_n": 105
+"scout_n": 106
 },
 "swing": {
-"n": 85,
+"n": 86,
 "big": 0,
 "watch_n": 33,
 "watch_big": 0,
-"brier": 7.602309,
+"brier": 7.720645,
 "brier_base": 0.0,
-"scout_n": 85
+"scout_n": 86
 }
 },
 "calls_record": {},
-"runs": 429,
+"runs": 430,
 "created": "2026-11-15T06:42:30",
-"last_run": "2026-11-20T06:45:41.911538+00:00"
+"last_run": "2026-11-20T07:00:51.590965+00:00"
 }
