@@ -3,7 +3,7 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-20T02:00:50.806171+00:00",
+ "asof": "2026-11-20T02:05:08.585329+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -1.72,
   "funding": {
-   "rate": -4.1327435866e-06,
+   "rate": -2.5173495724e-06,
    "next_time": 1795161600000,
    "source": "okx-swap"
   },
@@ -141,7 +141,7 @@
   "swing": {
    "state": "WATCH",
    "since": "2026-11-20T02:00:50.806171+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "price is within 1 hourly ATR of its 30-day low: a break or a rejection is near",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -259,6 +259,6 @@
    ]
   }
  ],
- "runs": 409,
+ "runs": 410,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
