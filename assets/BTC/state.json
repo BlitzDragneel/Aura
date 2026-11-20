@@ -5,7 +5,7 @@
 "since": "2026-11-19T23:00:52.085083+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (95th percentile of the last 3 weeks)",
+"hourly volatility is high (93th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -671,14 +671,6 @@
 {
 "t": "2026-11-19T07:00:00+00:00",
 "price": 63714.3,
-"horizon": "swing",
-"thr": 0.034645283711819866,
-"watch": false,
-"p": 0.338
-},
-{
-"t": "2026-11-19T07:00:00+00:00",
-"price": 63714.3,
 "horizon": "hold",
 "thr": 0.08661320927954966,
 "watch": false,
@@ -991,14 +983,6 @@
 {
 "t": "2026-11-20T03:00:00+00:00",
 "price": 62123.7,
-"horizon": "day",
-"thr": 0.0253954150003484,
-"watch": true,
-"p": 0.191
-},
-{
-"t": "2026-11-20T03:00:00+00:00",
-"price": 62123.7,
 "horizon": "swing",
 "thr": 0.0507908300006968,
 "watch": true,
@@ -1083,30 +1067,54 @@
 "thr": 0.11819828659413664,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-20T07:00:00+00:00",
+"price": 61818.1,
+"horizon": "day",
+"thr": 0.022272718554228355,
+"watch": true,
+"p": 0.204
+},
+{
+"t": "2026-11-20T07:00:00+00:00",
+"price": 61818.1,
+"horizon": "swing",
+"thr": 0.04454543710845671,
+"watch": true,
+"p": 0.26
+},
+{
+"t": "2026-11-20T07:00:00+00:00",
+"price": 61818.1,
+"horizon": "hold",
+"thr": 0.11136359277114177,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 106,
+"n": 107,
 "big": 12,
-"watch_n": 13,
+"watch_n": 14,
 "watch_big": 0,
-"brier": 11.349406,
+"brier": 11.385887,
 "brier_base": 0.0,
-"scout_n": 106
+"scout_n": 107
 },
 "swing": {
-"n": 86,
+"n": 87,
 "big": 0,
 "watch_n": 33,
 "watch_big": 0,
-"brier": 7.720645,
+"brier": 7.834889,
 "brier_base": 0.0,
-"scout_n": 86
+"scout_n": 87
 }
 },
 "calls_record": {},
-"runs": 433,
+"runs": 434,
 "created": "2026-11-15T06:42:30",
-"last_run": "2026-11-20T07:45:45.549109+00:00"
+"last_run": "2026-11-20T08:00:52.502326+00:00"
 }
