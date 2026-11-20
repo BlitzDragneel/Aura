@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-20T05:01:01.803400+00:00",
+ "asof": "2026-11-20T05:15:50.672426+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.55,
-  "bar": "2026-11-20T04:45:00+00:00",
+  "price": 41.35,
+  "bar": "2026-11-20T05:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 41.55,
-    "ma20": 42.0335,
-    "ma50": 43.1632,
-    "slope_atr": -0.74,
-    "bar": "2026-11-20T04:45:00+00:00"
+    "close": 41.35,
+    "ma20": 41.949,
+    "ma50": 43.0916,
+    "slope_atr": -0.83,
+    "bar": "2026-11-20T05:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -6.45,
   "spot": {
-   "price": 41.42400000000001,
-   "bid": 41.4027,
-   "ask": 41.4453,
-   "spread": 0.0426,
+   "price": 41.2735,
+   "bid": 41.2507,
+   "ask": 41.2963,
+   "spread": 0.0456,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.304
+   "perp_premium_pct": 0.185
   },
   "funding": {
-   "rate": 4.9774739644e-05,
+   "rate": 4.28724460622e-05,
    "next_time": 1795161600000,
    "source": "okx-swap"
   },
@@ -252,8 +252,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.55; volatility regime extreme (hourly ATR 1.666% of price, 99.8th percentile).",
-    "Spot XAGUSD 41.42; the perpetual trades +0.30% from spot."
+    "Price 41.35; volatility regime extreme (hourly ATR 1.666% of price, 99.8th percentile).",
+    "Spot XAGUSD 41.27; the perpetual trades +0.18% from spot."
    ]
   },
   {
@@ -263,6 +263,6 @@
    ]
   }
  ],
- "runs": 422,
+ "runs": 423,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
