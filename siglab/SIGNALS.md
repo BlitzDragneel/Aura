@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 05:45 UTC
+Updated 2026-11-20 06:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -49,7 +49,7 @@ Updated 2026-11-20 05:45 UTC
 | LINKUSD S1 | 5 | -0.154 | -0.39 | 0.6 | PAPER |
 | LINKUSD S2 | 5 | -0.06 | -0.23 | 0.8 | PAPER |
 | LINKUSD S3 | 2 | -0.297 | -0.39 | 0.5 | PAPER |
-| LINKUSD S4 | 4 | -0.592 | -1.3 | 0.25 | PAPER |
+| LINKUSD S4 | 5 | -0.392 | -0.97 | 0.4 | PAPER |
 | LINKUSD S5 | 4 | -0.601 | -1.31 | 0.25 | PAPER |
 | LINKUSD S6 | 4 | -0.131 | -0.43 | 0.75 | PAPER |
 | LINKUSD S7 | 3 | -0.303 | -0.4 | 0.333 | PAPER |
@@ -77,7 +77,7 @@ Updated 2026-11-20 05:45 UTC
 | SUIUSD S1 | 5 | -0.147 | -0.36 | 0.6 | PAPER |
 | SUIUSD S2 | 4 | -1.05 | -375.16 | 0.0 | PAPER |
 | SUIUSD S3 | 3 | -0.243 | -0.59 | 0.667 | PAPER |
-| SUIUSD S4 | 4 | -0.0 | -0.0 | 0.75 | PAPER |
+| SUIUSD S4 | 5 | 0.089 | 0.29 | 0.8 | PAPER |
 | SUIUSD S5 | 3 | -0.394 | -0.59 | 0.333 | PAPER |
 | SUIUSD S6 | 4 | 0.048 | 0.12 | 0.75 | PAPER |
 | SUIUSD S7 | 2 | -0.479 | -0.82 | 0.5 | PAPER |
@@ -114,9 +114,9 @@ Updated 2026-11-20 05:45 UTC
 
 - 20 Nov 04:15 US30 sell S1 @ 49056.3 SL 49302.59 → open
 - 20 Nov 04:15 NAS100 sell S1 @ 26362.03 SL 26623.39 → open
-- 20 Nov 03:15 SUIUSD sell S4 @ 0.6991 SL 0.70955 → open
+- 20 Nov 03:15 SUIUSD sell S4 @ 0.6991 SL 0.70955 → closed TP2+BE +0.44R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 47 closed, avg -0.13R, 60% won.
 - 20 Nov 03:15 LTCUSD sell S1 @ 41.84 SL 42.422 → open
-- 20 Nov 03:15 LINKUSD sell S4 @ 8.874 SL 9.0076 → open
+- 20 Nov 03:15 LINKUSD sell S4 @ 8.874 SL 9.0076 → closed TP2+BE +0.41R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 47 closed, avg -0.13R, 60% won.
 - 20 Nov 03:15 AVAXUSD sell S4 @ 6.891 SL 6.9969 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 43 closed, avg -0.17R, 56% won.
 - 20 Nov 03:15 ADAUSD sell S4 @ 0.1486 SL 0.15085 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 43 closed, avg -0.17R, 56% won.
 - 20 Nov 03:00 LTCUSD sell S4 @ 42.13 SL 42.712 → closed TP3 +0.94R. TP3 after 136 min (best 1.6R, worst -0.1R). Lesson so far: fib pullback with the trend: 43 closed, avg -0.17R, 56% won.
