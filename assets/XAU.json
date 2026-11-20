@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-20T13:15:54.287428+00:00",
+ "asof": "2026-11-20T13:30:57.579616+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3577.0,
-  "bar": "2026-11-20T13:00:00+00:00",
+  "price": 3565.5,
+  "bar": "2026-11-20T13:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 3577.0,
-    "ma20": 3585.28,
-    "ma50": 3568.198,
-    "slope_atr": 0.32,
-    "bar": "2026-11-20T13:00:00+00:00"
+    "close": 3565.5,
+    "ma20": 3583.7950000000005,
+    "ma50": 3567.438,
+    "slope_atr": 0.08,
+    "bar": "2026-11-20T13:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -3.57,
   "spot": {
-   "price": 3570.615,
-   "bid": 3570.298,
-   "ask": 3570.932,
+   "price": 3563.1,
+   "bid": 3562.783,
+   "ask": 3563.417,
    "spread": 0.634,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.179
+   "perp_premium_pct": 0.067
   },
   "funding": {
-   "rate": 8.3293179686e-06,
+   "rate": 6.7552108437e-06,
    "next_time": 1795190400000,
    "source": "okx-swap"
   },
@@ -253,8 +253,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3577.0; volatility regime extreme (hourly ATR 0.886% of price, 99.2th percentile).",
-    "Spot XAUUSD 3570.61; the perpetual trades +0.18% from spot."
+    "Price 3565.5; volatility regime extreme (hourly ATR 0.886% of price, 99.2th percentile).",
+    "Spot XAUUSD 3563.10; the perpetual trades +0.07% from spot."
    ]
   },
   {
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 456,
+ "runs": 457,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

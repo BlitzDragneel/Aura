@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 13:15 UTC
+Updated 2026-11-20 13:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-20 13:15 UTC
 
 ## Latest signals
 
+- 20 Nov 13:30 XRPUSD buy S3 @ 0.9376 SL 0.926371 → open
 - 20 Nov 12:15 AVAXUSD sell S2 @ 6.805 SL 6.8933 → open
 - 20 Nov 12:15 XRPUSD sell S2 @ 0.9451 SL 0.956464 → open
 - 20 Nov 12:15 SOLUSD buy S3 @ 70.97 SL 70.07 → open
@@ -171,4 +172,3 @@ Updated 2026-11-20 13:15 UTC
 - 20 Nov 01:45 XRPUSD sell S1 @ 0.9625 SL 0.975114 → closed TP2+BE +0.40R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 62 closed, avg -0.07R, 63% won.
 - 20 Nov 01:45 ETHUSD sell S1 @ 1753.93 SL 1776.55 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 60 closed, avg -0.09R, 62% won.
 - 20 Nov 01:45 BTCUSD sell S1 @ 62003.2 SL 62665.77 → closed TP2+BE +0.52R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 60 closed, avg -0.09R, 62% won.
-- 20 Nov 01:30 XAUUSD sell S2 @ 3582.5 SL 3606.12 → closed TP3 +1.26R. TP3 after 46 min (best 1.9R, worst -0.6R). Lesson so far: breakout with the trend: 25 closed, avg -0.40R, 44% won.
