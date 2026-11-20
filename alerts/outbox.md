@@ -727,3 +727,12 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 ⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~61949.1
 Market now: trend down, volatility high, late session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-20 00:31:06 UTC
+⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3618.7
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+⚡ Nasdaq 100: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~26459.03
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
