@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 103 readings scored; big moves followed 15% of them, 14% after a WATCH (22 WATCH readings) - too few to judge yet.
+- My own record: 104 readings scored; big moves followed 14% of them, 13% after a WATCH (23 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 83 readings scored; big moves followed 39% of them, 17% after a WATCH (23 WATCH readings) - too few to judge yet.
+- My own record: 84 readings scored; big moves followed 39% of them, 17% after a WATCH (23 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,15 +29,15 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.40%) and the quietest London (0.24%).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.41%) and the quietest London (0.23%).
 - At weekends, while spot is closed, the perpetual moves 38% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 2.7% from low to high (last 60 days); 40% of those days closed higher.
 - Over the last 30 days the price moved -26.4% (a fact, not a forecast).
 
 ## Right now
 
-- Price 41.57; volatility regime extreme (hourly ATR 1.622% of price, 99.8th percentile).
-- Spot XAGUSD 41.47; the perpetual trades +0.25% from spot.
+- Price 41.55; volatility regime extreme (hourly ATR 1.666% of price, 99.8th percentile).
+- Spot XAGUSD 41.42; the perpetual trades +0.30% from spot.
 
 ## My calls so far
 
