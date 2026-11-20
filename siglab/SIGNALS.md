@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 05:30 UTC
+Updated 2026-11-20 05:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -84,7 +84,7 @@ Updated 2026-11-20 05:30 UTC
 | US30 S1 | 1 | -1.012 | None | 0.0 | PAPER |
 | US30 S2 | 2 | 0.53 | 1.2 | 1.0 | PAPER |
 | US30 S3 | 2 | 0.247 | 3.09 | 1.0 | PAPER |
-| US30 S4 | 2 | 0.399 | 1.04 | 1.0 | PAPER |
+| US30 S4 | 3 | 0.281 | 1.12 | 1.0 | PAPER |
 | US30 S5 | 2 | 0.763 | 0.43 | 0.5 | PAPER |
 | US30 S6 | 2 | 1.268 | 0.56 | 0.5 | PAPER |
 | US30 S7 | 2 | 0.73 | 3.01 | 1.0 | PAPER |
@@ -140,7 +140,7 @@ Updated 2026-11-20 05:30 UTC
 - 20 Nov 00:45 BNBUSD buy S4 @ 578.95 SL 574.01 → closed TP1+BE +0.04R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 22 closed, avg +0.01R, 68% won.
 - 20 Nov 00:45 SOLUSD buy S4 @ 72.88 SL 71.914 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 22 closed, avg +0.01R, 68% won.
 - 20 Nov 00:45 ETHUSD buy S4 @ 1754.72 SL 1732.2 → closed TP2+BE +0.31R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 22 closed, avg +0.01R, 68% won.
-- 20 Nov 00:45 US30 sell S4 @ 49082.3 SL 49324.73 → open
+- 20 Nov 00:45 US30 sell S4 @ 49082.3 SL 49324.73 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 46 closed, avg -0.13R, 59% won.
 - 20 Nov 00:45 XAGUSD sell S4 @ 42.47 SL 43.012 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 40 closed, avg -0.22R, 52% won.
 - 20 Nov 00:30 SUIUSD sell S1 @ 0.7093 SL 0.718679 → closed TP3 +1.05R. TP3 after 236 min (best 1.8R, worst -0.7R). Lesson so far: trend pullback with the trend: 63 closed, avg -0.07R, 64% won.
 - 20 Nov 00:30 AVAXUSD sell S1 @ 6.969 SL 7.0641 → closed TP3 +1.04R. TP3 after 245 min (best 1.7R, worst -0.7R). Lesson so far: trend pullback with the trend: 64 closed, avg -0.05R, 64% won.
