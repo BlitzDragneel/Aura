@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 07:30 UTC
+Updated 2026-11-20 07:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -107,7 +107,7 @@ Updated 2026-11-20 07:30 UTC
 | XRPUSD S3 | 4 | 0.193 | 0.36 | 0.75 | PAPER |
 | XRPUSD S4 | 5 | 0.014 | 0.03 | 0.6 | PAPER |
 | XRPUSD S5 | 3 | 0.231 | 0.35 | 0.667 | PAPER |
-| XRPUSD S6 | 4 | 0.454 | 1.61 | 1.0 | PAPER |
+| XRPUSD S6 | 5 | 0.153 | 0.41 | 0.8 | PAPER |
 | XRPUSD S7 | 2 | -0.48 | -0.83 | 0.5 | PAPER |
 
 ## Latest signals
@@ -131,7 +131,7 @@ Updated 2026-11-20 07:30 UTC
 - 20 Nov 07:00 AVAXUSD sell S6 @ 6.913 SL 7.0131 → open
 - 20 Nov 07:00 ADAUSD sell S6 @ 0.1502 SL 0.152443 → open
 - 20 Nov 07:00 DOGEUSD sell S6 @ 0.05769 SL 0.058464 → open
-- 20 Nov 07:00 XRPUSD buy S6 @ 0.9714 SL 0.959486 → open
+- 20 Nov 07:00 XRPUSD buy S6 @ 0.9714 SL 0.959486 → closed SL -1.05R. Stopped out after 35 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 13 closed, avg +0.26R, 85% won.
 - 20 Nov 07:00 BNBUSD sell S6 @ 572.51 SL 578.53 → open
 - 20 Nov 07:00 SOLUSD buy S6 @ 72.85 SL 71.814 → open
 - 20 Nov 07:00 ETHUSD sell S6 @ 1749.01 SL 1773.06 → open
