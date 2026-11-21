@@ -858,3 +858,8 @@ session drive: 59 closed, avg -0.20R, 52% won
 daily bias: 71 closed, avg +0.15R, 80% won
 big move: 49 closed, avg +0.07R, 69% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-21 01:01:05 UTC
+⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~58996.2
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
