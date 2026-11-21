@@ -3,53 +3,53 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-21T02:30:59.183186+00:00",
- "data_source": "okx-swap",
+ "asof": "2026-11-21T02:45:47.697911+00:00",
+ "data_source": "binance-futures",
  "errors": [],
  "read": {
-  "price": 41.39,
-  "bar": "2026-11-21T02:15:00+00:00",
+  "price": 41.37,
+  "bar": "2026-11-21T02:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 41.39,
-    "ma20": 41.3865,
-    "ma50": 41.434,
-    "slope_atr": 1.35,
-    "bar": "2026-11-21T02:15:00+00:00"
+    "close": 41.37,
+    "ma20": 41.4005,
+    "ma50": 41.4226,
+    "slope_atr": 1.23,
+    "bar": "2026-11-21T02:30:00+00:00"
    },
    "1h": {
     "state": "flat",
-    "close": 41.36,
-    "ma20": 41.8505,
-    "ma50": 43.3008,
-    "slope_atr": -0.23,
+    "close": 41.37,
+    "ma20": 41.859,
+    "ma50": 43.306,
+    "slope_atr": -0.22,
     "bar": "2026-11-21T01:00:00+00:00"
    },
    "4h": {
     "state": "down",
-    "close": 41.42,
+    "close": 41.43,
     "ma20": 44.347,
-    "ma50": 46.7688,
-    "slope_atr": -1.41,
+    "ma50": 46.766400000000004,
+    "slope_atr": -1.39,
     "bar": "2026-11-20T20:00:00+00:00"
    },
    "1d": {
     "state": "down",
-    "close": 41.42,
-    "ma20": 49.3695,
-    "ma50": 54.003600000000006,
-    "slope_atr": -0.83,
+    "close": 41.43,
+    "ma20": 49.371,
+    "ma50": 54.0028,
+    "slope_atr": -0.82,
     "bar": "2026-11-20T00:00:00+00:00"
    }
   },
   "volatility": {
-   "atr1h_pct": 1.231,
+   "atr1h_pct": 1.243,
    "atr1h_pctile": 94.4,
-   "atr1h": 0.5092857142857135,
-   "rv20d_ann_pct": 54.9,
-   "rv20d_pctile": 64.3,
-   "day_range_pct_median": 2.92,
+   "atr1h": 0.514285714285714,
+   "rv20d_ann_pct": 55.1,
+   "rv20d_pctile": 61.1,
+   "day_range_pct_median": 3.14,
    "regime": "active",
    "regime_daily": "normal"
   },
@@ -65,28 +65,28 @@
   "ranges": {
    "24h": {
     "high": 42.98,
-    "low": 40.88,
-    "to_high_pct": 3.92,
+    "low": 40.89,
+    "to_high_pct": 3.89,
     "to_low_pct": 1.17,
-    "to_high_atr": 3.2,
+    "to_high_atr": 3.1,
     "to_low_atr": 0.9,
     "position": 0.23
    },
    "7d": {
     "high": 49.11,
-    "low": 40.88,
-    "to_high_pct": 18.74,
+    "low": 40.89,
+    "to_high_pct": 18.71,
     "to_low_pct": 1.17,
-    "to_high_atr": 15.2,
+    "to_high_atr": 15.1,
     "to_low_atr": 0.9,
     "position": 0.06
    },
    "30d": {
     "high": 57.71,
-    "low": 40.88,
-    "to_high_pct": 39.53,
+    "low": 40.89,
+    "to_high_pct": 39.5,
     "to_low_pct": 1.17,
-    "to_high_atr": 32.1,
+    "to_high_atr": 31.8,
     "to_low_atr": 0.9,
     "position": 0.03
    }
@@ -98,24 +98,24 @@
    "bid": 41.1727,
    "ask": 41.2323,
    "spread": 0.0596,
-   "age_s": 16259,
+   "age_s": 17147,
    "stale": true,
    "note": "market closed or feed paused",
    "source": "swissquote"
   },
   "funding": {
    "rate": 0.0,
-   "next_time": 1795248000000,
-   "source": "okx-swap"
+   "next_time": 1795233600000,
+   "source": "binance-futures"
   },
   "scouts": {
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.198,
+    "p_big_move": 0.201,
     "flag": false,
     "detail": {
-     "p_up_move": 0.08,
+     "p_up_move": 0.083,
      "p_down_move": 0.118
     },
     "trained_to": "2025-12-31",
@@ -125,11 +125,11 @@
    "swing": {
     "horizon": "24 h",
     "skill_ok": false,
-    "p_big_move": 0.172,
+    "p_big_move": 0.171,
     "flag": false,
     "detail": {
-     "p_up_move": 0.072,
-     "p_down_move": 0.099
+     "p_up_move": 0.071,
+     "p_down_move": 0.1
     },
     "trained_to": "2025-12-31",
     "label": "own scout on SI=F silver futures hourly (CME hours); validation AUC 0.54/0.49 (up/down); UNTESTED as a trading signal; NO SKILL on validation (AUC < 0.55): not used for WATCH",
@@ -245,14 +245,14 @@
    "lines": [
     "Over the last 20 days the busiest session was Asia (average hourly move 0.42%) and the quietest London (0.24%).",
     "At weekends, while spot is closed, the perpetual moves 38% as much per hour as on weekdays: weekend prices are thin and less reliable.",
-    "A typical day ranges 2.9% from low to high (last 60 days); 38% of those days closed higher.",
-    "Over the last 30 days the price moved -28.1% (a fact, not a forecast)."
+    "A typical day ranges 3.1% from low to high (last 60 days); 38% of those days closed higher.",
+    "Over the last 30 days the price moved -28.0% (a fact, not a forecast)."
    ]
   },
   {
    "title": "Right now",
    "lines": [
-    "Price 41.39; volatility regime active (hourly ATR 1.231% of price, 94.4th percentile).",
+    "Price 41.37; volatility regime active (hourly ATR 1.243% of price, 94.4th percentile).",
     "spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.",
     "Spot XAGUSD 41.20 (stale: market closed)."
    ]
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 511,
+ "runs": 512,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

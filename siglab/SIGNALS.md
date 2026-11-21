@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 02:31 UTC
+Updated 2026-11-21 02:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,21 @@ Updated 2026-11-21 02:31 UTC
 
 ## Latest signals
 
+- 21 Nov 02:45 SUIUSD buy S3 @ 0.6393 SL 0.625964 → open
+- 21 Nov 02:45 SUIUSD sell S2 @ 0.6393 SL 0.652636 → open
+- 21 Nov 02:45 LTCUSD sell S2 @ 40.22 SL 40.89 → open
+- 21 Nov 02:45 LINKUSD sell S2 @ 8.484 SL 8.6414 → open
+- 21 Nov 02:45 LINKUSD sell S1 @ 8.484 SL 8.6414 → open
+- 21 Nov 02:45 AVAXUSD sell S2 @ 6.44 SL 6.5737 → open
+- 21 Nov 02:45 ADAUSD sell S2 @ 0.1422 SL 0.144771 → open
+- 21 Nov 02:45 ADAUSD sell S1 @ 0.1422 SL 0.144771 → open
+- 21 Nov 02:45 DOGEUSD sell S1 @ 0.05413 SL 0.055132 → open
+- 21 Nov 02:45 XRPUSD sell S2 @ 0.9017 SL 0.917621 → open
+- 21 Nov 02:45 BNBUSD buy S3 @ 534.8 SL 527.08 → open
+- 21 Nov 02:45 BNBUSD sell S2 @ 534.8 SL 542.52 → open
+- 21 Nov 02:45 SOLUSD sell S2 @ 68.48 SL 69.745 → open
+- 21 Nov 02:45 BTCUSD sell S2 @ 58597.0 SL 59478.29 → open
+- 21 Nov 02:45 XAUUSD sell S4 @ 3543.9 SL 3567.66 → open
 - 21 Nov 02:15 LTCUSD sell S1 @ 40.45 SL 41.12 → open
 - 21 Nov 02:00 XAGUSD sell S1 @ 41.36 SL 41.869 → open
 - 21 Nov 02:00 XAUUSD sell S1 @ 3542.5 SL 3566.26 → open
@@ -157,18 +172,3 @@ Updated 2026-11-21 02:31 UTC
 - 20 Nov 11:15 SUIUSD buy S3 @ 0.6849 SL 0.675414 → closed SL -1.04R. Stopped out after 136 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 24 closed, avg +0.06R, 71% won.
 - 20 Nov 11:00 SUIUSD sell S2 @ 0.6889 SL 0.698386 → closed TP3 +1.14R. TP3 after 250 min (best 1.9R, worst -0.2R). Lesson so far: breakout with the trend: 35 closed, avg -0.24R, 57% won.
 - 20 Nov 10:45 ETHUSD buy S2 @ 1760.38 SL 1739.03 → closed SL -1.05R. Stopped out after 79 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 31 closed, avg -0.46R, 42% won.
-- 20 Nov 10:45 BTCUSD buy S2 @ 62245.6 SL 61601.04 → closed SL -1.02R. Stopped out after 79 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 31 closed, avg -0.46R, 42% won.
-- 20 Nov 07:30 SUIUSD sell S5 @ 0.696 SL 0.706407 → closed TP3 +1.05R. TP3 after 277 min (best 1.8R, worst -0.5R). Lesson so far: session drive with the trend: 30 closed, avg -0.23R, 47% won.
-- 20 Nov 07:30 LINKUSD sell S5 @ 8.84 SL 8.9682 → closed TP3 +1.03R. TP3 after 462 min (best 1.7R, worst -0.6R). Lesson so far: session drive with the trend: 36 closed, avg -0.10R, 56% won.
-- 20 Nov 07:30 ADAUSD sell S5 @ 0.1494 SL 0.151643 → closed TP3 +0.89R. TP3 after 276 min (best 1.5R, worst -0.5R). Lesson so far: session drive with the trend: 30 closed, avg -0.23R, 47% won.
-- 20 Nov 07:30 DOGEUSD sell S5 @ 0.05735 SL 0.058124 → closed TP3 +1.07R. TP3 after 361 min (best 1.9R, worst -0.5R). Lesson so far: session drive with the trend: 34 closed, avg -0.14R, 53% won.
-- 20 Nov 07:30 XRPUSD sell S5 @ 0.9628 SL 0.974714 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 27 closed, avg -0.27R, 41% won.
-- 20 Nov 07:30 BNBUSD sell S5 @ 570.09 SL 576.11 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 35 closed, avg -0.10R, 54% won.
-- 20 Nov 07:30 BNBUSD sell S1 @ 570.09 SL 576.11 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 70 closed, avg -0.02R, 66% won.
-- 20 Nov 07:30 SOLUSD sell S5 @ 72.44 SL 73.476 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 28 closed, avg -0.26R, 43% won.
-- 20 Nov 07:30 ETHUSD sell S5 @ 1741.87 SL 1765.92 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 32 closed, avg -0.16R, 50% won.
-- 20 Nov 07:30 NAS100 sell S5 @ 26224.28 SL 26430.55 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 28 closed, avg -0.26R, 43% won.
-- 20 Nov 07:30 BTCUSD sell S5 @ 61625.2 SL 62358.31 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 32 closed, avg -0.16R, 50% won.
-- 20 Nov 07:30 XAGUSD sell S5 @ 41.81 SL 42.494 → closed SL -1.04R. Stopped out after 55 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: session drive with the trend: 26 closed, avg -0.24R, 42% won.
-- 20 Nov 07:30 XAGUSD sell S1 @ 41.81 SL 42.494 → closed SL -1.04R. Stopped out after 55 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 68 closed, avg -0.01R, 66% won.
-- 20 Nov 07:00 SUIUSD sell S6 @ 0.7002 SL 0.710607 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
