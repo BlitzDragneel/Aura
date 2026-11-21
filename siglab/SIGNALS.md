@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 00:07 UTC
+Updated 2026-11-21 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-21 00:07 UTC
 
 ## Latest signals
 
+- 21 Nov 00:15 SUIUSD sell S1 @ 0.6495 SL 0.663264 → open
+- 21 Nov 00:15 AVAXUSD buy S4 @ 6.5 SL 6.3636 → open
 - 21 Nov 00:00 SOLUSD sell S1 @ 68.82 SL 70.141 → open
 - 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 26 closed, avg +0.29R, 81% won.
 - 20 Nov 15:30 SUIUSD sell S7 @ 0.6621 SL 0.672221 → closed TP3 +1.15R. TP3 after 33 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
@@ -170,5 +172,3 @@ Updated 2026-11-21 00:07 UTC
 - 20 Nov 07:00 BNBUSD sell S6 @ 572.51 SL 578.53 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 44 closed, avg +0.23R, 82% won.
 - 20 Nov 07:00 SOLUSD buy S6 @ 72.85 SL 71.814 → closed SL -1.04R. Stopped out after 200 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 14 closed, avg +0.17R, 79% won.
 - 20 Nov 07:00 ETHUSD sell S6 @ 1749.01 SL 1773.06 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 55 closed, avg +0.17R, 82% won.
-- 20 Nov 07:00 US30 sell S6 @ 48965.3 SL 49156.3 → closed SL -1.01R. Stopped out after 81 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 49 closed, avg +0.22R, 84% won.
-- 20 Nov 07:00 NAS100 sell S6 @ 26208.03 SL 26414.3 → closed TP1+BE +0.34R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 53 closed, avg +0.17R, 81% won.
