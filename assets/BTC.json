@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-21T00:30:47.076284+00:00",
+ "asof": "2026-11-21T00:45:42.283780+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 59030.9,
-  "bar": "2026-11-21T00:15:00+00:00",
+  "price": 59048.5,
+  "bar": "2026-11-21T00:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 59030.9,
-    "ma20": 58857.415,
-    "ma50": 59661.098,
-    "slope_atr": 0.42,
-    "bar": "2026-11-21T00:15:00+00:00"
+    "close": 59048.5,
+    "ma20": 58869.67999999999,
+    "ma50": 59614.252,
+    "slope_atr": 0.49,
+    "bar": "2026-11-21T00:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -4.89,
   "funding": {
-   "rate": -6.51910995418e-05,
+   "rate": -6.91323241679e-05,
    "next_time": 1795248000000,
    "source": "okx-swap"
   },
@@ -100,10 +100,10 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.094,
+    "p_big_move": 0.091,
     "flag": false,
     "detail": {
-     "p_up_move": 0.04,
+     "p_up_move": 0.038,
      "p_down_move": 0.053
     },
     "trained_to": "2026-11-03",
@@ -248,7 +248,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 59030.9; volatility regime extreme (hourly ATR 1.555% of price, 97.9th percentile).",
+    "Price 59048.5; volatility regime extreme (hourly ATR 1.555% of price, 97.9th percentile).",
     "Bitcoin trades 24/7; weekend liquidity is thinner."
    ]
   },
@@ -259,6 +259,6 @@
    ]
   }
  ],
- "runs": 503,
+ "runs": 504,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
