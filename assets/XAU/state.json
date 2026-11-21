@@ -1,14 +1,13 @@
 {
 "horizons": {
 "day": {
-"state": "WATCH",
-"since": "2026-11-19T22:00:59.157500+00:00",
+"state": "WAIT",
+"since": "2026-11-21T08:01:02.056409+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (92th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
-"plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
+"plain": "Nothing to do. No tested rule is calling a trade.",
 "direction": null
 },
 "swing": {
@@ -863,14 +862,6 @@
 {
 "t": "2026-11-20T07:00:00+00:00",
 "price": 3574.1,
-"horizon": "swing",
-"thr": 0.03473401895382262,
-"watch": true,
-"p": 0.162
-},
-{
-"t": "2026-11-20T07:00:00+00:00",
-"price": 3574.1,
 "horizon": "hold",
 "thr": 0.08683504738455654,
 "watch": false,
@@ -1183,14 +1174,6 @@
 {
 "t": "2026-11-21T03:00:00+00:00",
 "price": 3528.4,
-"horizon": "day",
-"thr": 0.01326785106968757,
-"watch": true,
-"p": 0.17
-},
-{
-"t": "2026-11-21T03:00:00+00:00",
-"price": 3528.4,
 "horizon": "swing",
 "thr": 0.02653570213937514,
 "watch": true,
@@ -1275,30 +1258,54 @@
 "thr": 0.05828642347413663,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-21T07:00:00+00:00",
+"price": 3536.9,
+"horizon": "day",
+"thr": 0.011208362448148683,
+"watch": false,
+"p": 0.064
+},
+{
+"t": "2026-11-21T07:00:00+00:00",
+"price": 3536.9,
+"horizon": "swing",
+"thr": 0.022416724896297365,
+"watch": true,
+"p": 0.02
+},
+{
+"t": "2026-11-21T07:00:00+00:00",
+"price": 3536.9,
+"horizon": "hold",
+"thr": 0.056041812240743415,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 130,
+"n": 131,
 "big": 18,
-"watch_n": 54,
+"watch_n": 55,
 "watch_big": 8,
-"brier": 16.599859999999993,
+"brier": 16.628759999999993,
 "brier_base": 0.0,
-"scout_n": 130
+"scout_n": 131
 },
 "swing": {
-"n": 110,
+"n": 111,
 "big": 51,
-"watch_n": 45,
+"watch_n": 46,
 "watch_big": 23,
-"brier": 44.44100400000001,
+"brier": 44.467248000000005,
 "brier_base": 0.0,
-"scout_n": 110
+"scout_n": 111
 }
 },
 "calls_record": {},
-"runs": 533,
+"runs": 534,
 "created": "2026-11-15T06:42:38",
-"last_run": "2026-11-21T07:45:49.265189+00:00"
+"last_run": "2026-11-21T08:01:02.056409+00:00"
 }
