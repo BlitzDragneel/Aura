@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-21T14:00:52.027717+00:00",
+ "asof": "2026-11-21T14:15:42.533308+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 60520.2,
-  "bar": "2026-11-21T13:45:00+00:00",
+  "price": 60243.3,
+  "bar": "2026-11-21T14:00:00+00:00",
   "trend": {
    "15m": {
     "state": "up",
-    "close": 60520.2,
-    "ma20": 58501.329999999994,
-    "ma50": 57825.138000000006,
-    "slope_atr": 1.06,
-    "bar": "2026-11-21T13:45:00+00:00"
+    "close": 60243.3,
+    "ma20": 58619.675,
+    "ma50": 57850.852,
+    "slope_atr": 1.14,
+    "bar": "2026-11-21T14:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -4.89,
   "funding": {
-   "rate": -7.8645631664e-06,
+   "rate": -9.2733086666e-06,
    "next_time": 1795276800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.246,
+    "p_big_move": 0.23,
     "flag": false,
     "detail": {
-     "p_up_move": 0.108,
-     "p_down_move": 0.138
+     "p_up_move": 0.103,
+     "p_down_move": 0.127
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -248,7 +248,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 60520.2; volatility regime extreme (hourly ATR 1.757% of price, 99.2th percentile).",
+    "Price 60243.3; volatility regime extreme (hourly ATR 1.757% of price, 99.2th percentile).",
     "Bitcoin trades 24/7; weekend liquidity is thinner."
    ]
   },
@@ -259,6 +259,6 @@
    ]
   }
  ],
- "runs": 558,
+ "runs": 559,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
