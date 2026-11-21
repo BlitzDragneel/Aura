@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 13:15 UTC
+Updated 2026-11-21 13:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -56,7 +56,7 @@ Updated 2026-11-21 13:15 UTC
 | LTCUSD S1 | 7 | 0.284 | 0.73 | 0.714 | PAPER |
 | LTCUSD S2 | 6 | -0.721 | -2.14 | 0.167 | PAPER |
 | LTCUSD S3 | 6 | -0.43 | -0.98 | 0.333 | PAPER |
-| LTCUSD S4 | 6 | 0.037 | 0.09 | 0.667 | PAPER |
+| LTCUSD S4 | 7 | 0.096 | 0.28 | 0.714 | PAPER |
 | LTCUSD S5 | 5 | -0.155 | -0.4 | 0.6 | PAPER |
 | LTCUSD S6 | 5 | 0.283 | 0.76 | 0.8 | PAPER |
 | LTCUSD S7 | 4 | 0.581 | 2.59 | 1.0 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-21 13:15 UTC
 
 ## Latest signals
 
-- 21 Nov 12:15 LTCUSD buy S4 @ 39.12 SL 38.402 → open
+- 21 Nov 12:15 LTCUSD buy S4 @ 39.12 SL 38.402 → closed TP3 +0.45R. TP3 after 71 min (best 0.7R, worst -0.0R). Lesson so far: fib pullback against the trend: 32 closed, avg -0.02R, 69% won.
 - 21 Nov 12:15 LINKUSD buy S4 @ 8.465 SL 8.3053 → open
 - 21 Nov 12:00 BTCUSD buy S4 @ 58177.2 SL 57282.27 → closed TP3 +0.51R. TP3 after 35 min (best 1.1R, worst -0.1R). Lesson so far: fib pullback against the trend: 31 closed, avg -0.04R, 68% won.
 - 21 Nov 10:30 DOGEUSD sell S4 @ 0.05311 SL 0.054181 → closed SL -1.03R. Stopped out after 63 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: fib pullback with the trend: 52 closed, avg -0.12R, 60% won.
