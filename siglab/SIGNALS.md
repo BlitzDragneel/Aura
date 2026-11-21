@@ -1,13 +1,13 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 09:31 UTC
+Updated 2026-11-21 09:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 6 | 0.047 | 0.12 | 0.667 | PAPER |
 | ADAUSD S2 | 6 | -0.505 | -1.38 | 0.333 | PAPER |
 | ADAUSD S3 | 3 | 0.031 | 0.06 | 0.667 | PAPER |
-| ADAUSD S4 | 6 | -0.13 | -0.41 | 0.667 | PAPER |
+| ADAUSD S4 | 7 | -0.033 | -0.12 | 0.714 | PAPER |
 | ADAUSD S5 | 3 | 0.168 | 0.27 | 0.667 | PAPER |
 | ADAUSD S6 | 5 | -0.036 | -0.14 | 0.8 | PAPER |
 | ADAUSD S7 | 4 | 0.085 | 0.21 | 0.75 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-21 09:31 UTC
 
 ## Latest signals
 
-- 21 Nov 08:45 ADAUSD buy S4 @ 0.1374 SL 0.134457 → open
+- 21 Nov 08:45 ADAUSD buy S4 @ 0.1374 SL 0.134457 → closed TP3 +0.55R. TP3 after 58 min (best 0.9R, worst -0.0R). Lesson so far: fib pullback against the trend: 29 closed, avg -0.08R, 66% won.
 - 21 Nov 08:45 XRPUSD buy S4 @ 0.8858 SL 0.869243 → open
 - 21 Nov 07:00 SOLUSD buy S7 @ 68.2 SL 66.851 → closed SL -1.03R. Stopped out after 92 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move against the trend: 20 closed, avg -0.27R, 50% won.
 - 21 Nov 07:00 ETHUSD buy S7 @ 1639.7 SL 1606.88 → open
