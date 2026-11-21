@@ -17,7 +17,6 @@
 "previous": "WATCH",
 "reasons": [
 "daily volatility is high (88th percentile)",
-"price is within 1 hourly ATR of its 30-day low: a break or a rejection is near",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -856,14 +855,6 @@
 {
 "t": "2026-11-20T06:00:00+00:00",
 "price": 3566.3,
-"horizon": "swing",
-"thr": 0.03405690571660912,
-"watch": true,
-"p": 0.155
-},
-{
-"t": "2026-11-20T06:00:00+00:00",
-"price": 3566.3,
 "horizon": "hold",
 "thr": 0.0851422642915228,
 "watch": false,
@@ -1176,14 +1167,6 @@
 {
 "t": "2026-11-21T02:00:00+00:00",
 "price": 3541.8,
-"horizon": "day",
-"thr": 0.013024047498043737,
-"watch": true,
-"p": 0.06
-},
-{
-"t": "2026-11-21T02:00:00+00:00",
-"price": 3541.8,
 "horizon": "swing",
 "thr": 0.026048094996087474,
 "watch": true,
@@ -1268,30 +1251,54 @@
 "thr": 0.05810464512780569,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-21T06:00:00+00:00",
+"price": 3545.3,
+"horizon": "day",
+"thr": 0.011657284694827326,
+"watch": true,
+"p": 0.086
+},
+{
+"t": "2026-11-21T06:00:00+00:00",
+"price": 3545.3,
+"horizon": "swing",
+"thr": 0.023314569389654653,
+"watch": true,
+"p": 0.023
+},
+{
+"t": "2026-11-21T06:00:00+00:00",
+"price": 3545.3,
+"horizon": "hold",
+"thr": 0.05828642347413663,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 129,
+"n": 130,
 "big": 18,
-"watch_n": 53,
+"watch_n": 54,
 "watch_big": 8,
-"brier": 16.596259999999994,
+"brier": 16.599859999999993,
 "brier_base": 0.0,
-"scout_n": 129
+"scout_n": 130
 },
 "swing": {
-"n": 109,
+"n": 110,
 "big": 51,
-"watch_n": 44,
+"watch_n": 45,
 "watch_big": 23,
-"brier": 44.416979000000005,
+"brier": 44.44100400000001,
 "brier_base": 0.0,
-"scout_n": 109
+"scout_n": 110
 }
 },
 "calls_record": {},
-"runs": 528,
+"runs": 529,
 "created": "2026-11-15T06:42:38",
-"last_run": "2026-11-21T06:45:53.974428+00:00"
+"last_run": "2026-11-21T07:01:00.435284+00:00"
 }
