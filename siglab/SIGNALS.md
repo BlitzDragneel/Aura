@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 10:15 UTC
+Updated 2026-11-21 10:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-21 10:15 UTC
 
 ## Latest signals
 
+- 21 Nov 10:30 DOGEUSD sell S4 @ 0.05311 SL 0.054181 → open
 - 21 Nov 10:15 BNBUSD sell S4 @ 523.01 SL 531.18 → open
 - 21 Nov 08:45 ADAUSD buy S4 @ 0.1374 SL 0.134457 → closed TP3 +0.55R. TP3 after 58 min (best 0.9R, worst -0.0R). Lesson so far: fib pullback against the trend: 29 closed, avg -0.08R, 66% won.
 - 21 Nov 08:45 XRPUSD buy S4 @ 0.8858 SL 0.869243 → open
@@ -171,4 +172,3 @@ Updated 2026-11-21 10:15 UTC
 - 21 Nov 00:00 SOLUSD sell S1 @ 68.82 SL 70.141 → closed TP3 +0.87R. TP3 after 210 min (best 1.4R, worst -0.3R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
 - 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 26 closed, avg +0.29R, 81% won.
 - 20 Nov 15:30 SUIUSD sell S7 @ 0.6621 SL 0.672221 → closed TP3 +1.15R. TP3 after 33 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
-- 20 Nov 15:30 LTCUSD sell S7 @ 40.43 SL 40.934 → closed TP2+BE +0.60R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 27 closed, avg +0.29R, 82% won.
