@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 12:30 UTC
+Updated 2026-11-21 12:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -28,7 +28,7 @@ Updated 2026-11-21 12:30 UTC
 | BTCUSD S1 | 6 | 0.271 | 0.96 | 0.833 | PAPER |
 | BTCUSD S2 | 6 | -0.307 | -0.9 | 0.5 | PAPER |
 | BTCUSD S3 | 5 | -0.377 | -0.96 | 0.4 | PAPER |
-| BTCUSD S4 | 6 | -0.219 | -0.87 | 0.667 | PAPER |
+| BTCUSD S4 | 7 | -0.115 | -0.48 | 0.714 | PAPER |
 | BTCUSD S5 | 4 | -0.221 | -0.45 | 0.5 | PAPER |
 | BTCUSD S6 | 5 | 0.554 | 2.72 | 1.0 | PAPER |
 | BTCUSD S7 | 5 | 0.385 | 0.99 | 0.8 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-21 12:30 UTC
 
 - 21 Nov 12:15 LTCUSD buy S4 @ 39.12 SL 38.402 → open
 - 21 Nov 12:15 LINKUSD buy S4 @ 8.465 SL 8.3053 → open
-- 21 Nov 12:00 BTCUSD buy S4 @ 58177.2 SL 57282.27 → open
+- 21 Nov 12:00 BTCUSD buy S4 @ 58177.2 SL 57282.27 → closed TP3 +0.51R. TP3 after 35 min (best 1.1R, worst -0.1R). Lesson so far: fib pullback against the trend: 31 closed, avg -0.04R, 68% won.
 - 21 Nov 10:30 DOGEUSD sell S4 @ 0.05311 SL 0.054181 → closed SL -1.03R. Stopped out after 63 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: fib pullback with the trend: 52 closed, avg -0.12R, 60% won.
 - 21 Nov 10:15 BNBUSD sell S4 @ 523.01 SL 531.18 → closed SL -1.04R. Stopped out after 77 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.7R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: fib pullback with the trend: 52 closed, avg -0.12R, 60% won.
 - 21 Nov 08:45 ADAUSD buy S4 @ 0.1374 SL 0.134457 → closed TP3 +0.55R. TP3 after 58 min (best 0.9R, worst -0.0R). Lesson so far: fib pullback against the trend: 29 closed, avg -0.08R, 66% won.
