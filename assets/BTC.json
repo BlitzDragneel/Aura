@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-21T04:15:50.756098+00:00",
+ "asof": "2026-11-21T04:30:50.609838+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 55906.8,
-  "bar": "2026-11-21T04:00:00+00:00",
+  "price": 55731.4,
+  "bar": "2026-11-21T04:15:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 55906.8,
-    "ma20": 58500.86000000001,
-    "ma50": 58748.89600000001,
-    "slope_atr": -1.13,
-    "bar": "2026-11-21T04:00:00+00:00"
+    "close": 55731.4,
+    "ma20": 58339.68000000001,
+    "ma50": 58674.636,
+    "slope_atr": -1.37,
+    "bar": "2026-11-21T04:15:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -4.89,
   "funding": {
-   "rate": -6.81378750118e-05,
+   "rate": -6.74269312327e-05,
    "next_time": 1795248000000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.632,
+    "p_big_move": 0.556,
     "flag": true,
     "detail": {
-     "p_up_move": 0.339,
-     "p_down_move": 0.294
+     "p_up_move": 0.304,
+     "p_down_move": 0.251
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -131,7 +131,7 @@
    "since": "2026-11-20T15:00:54.241907+00:00",
    "previous": "WATCH",
    "reasons": [
-    "scout: 63% chance of a big move in 4 h (top of its range; direction unknown)",
+    "scout: 56% chance of a big move in 4 h (top of its range; direction unknown)",
     "hourly volatility is high (100th percentile of the last 3 weeks)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
    ],
@@ -250,7 +250,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 55906.8; volatility regime extreme (hourly ATR 1.733% of price, 99.6th percentile).",
+    "Price 55731.4; volatility regime extreme (hourly ATR 1.733% of price, 99.6th percentile).",
     "Bitcoin trades 24/7; weekend liquidity is thinner."
    ]
   },
@@ -261,6 +261,6 @@
    ]
   }
  ],
- "runs": 518,
+ "runs": 519,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
