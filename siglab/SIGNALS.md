@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 16:01 UTC
+Updated 2026-11-21 16:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-21 16:01 UTC
 
 ## Latest signals
 
+- 21 Nov 16:15 SOLUSD buy S4 @ 70.31 SL 68.929 → open
 - 21 Nov 12:15 LTCUSD buy S4 @ 39.12 SL 38.402 → closed TP3 +0.45R. TP3 after 71 min (best 0.7R, worst -0.0R). Lesson so far: fib pullback against the trend: 32 closed, avg -0.02R, 69% won.
 - 21 Nov 12:15 LINKUSD buy S4 @ 8.465 SL 8.3053 → closed TP3 +0.54R. TP3 after 81 min (best 1.2R, worst -0.0R). Lesson so far: fib pullback against the trend: 33 closed, avg -0.01R, 70% won.
 - 21 Nov 12:00 BTCUSD buy S4 @ 58177.2 SL 57282.27 → closed TP3 +0.51R. TP3 after 35 min (best 1.1R, worst -0.1R). Lesson so far: fib pullback against the trend: 31 closed, avg -0.04R, 68% won.
@@ -171,4 +172,3 @@ Updated 2026-11-21 16:01 UTC
 - 21 Nov 00:30 SUIUSD buy S4 @ 0.6486 SL 0.634836 → closed SL -1.03R. Stopped out after 155 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 27 closed, avg -0.01R, 70% won.
 - 21 Nov 00:30 BNBUSD sell S1 @ 540.25 SL 548.3 → closed TP3 +0.90R. TP3 after 180 min (best 1.9R, worst -0.2R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
 - 21 Nov 00:15 SUIUSD sell S1 @ 0.6495 SL 0.663264 → closed TP3 +1.02R. TP3 after 195 min (best 2.0R, worst -0.1R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
-- 21 Nov 00:15 AVAXUSD buy S4 @ 6.5 SL 6.3636 → closed SL -1.03R. Stopped out after 182 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 28 closed, avg -0.04R, 68% won.
