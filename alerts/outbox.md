@@ -897,3 +897,8 @@ Market now: trend down, volatility low, Asia session
 ⚡ Bitcoin: BIG MOVE under way right now (moved -1859.30 in the last hour, twice its normal hourly range), price ~56737.7
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-21 05:01:04 UTC
+⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~41.05
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.

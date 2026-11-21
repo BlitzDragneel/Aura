@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - | Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025–26 | Verdict |
 - | E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | −12…−17, t −3…−9 | −13…−17, t −7…−11 (n 800–3,200); gross ≈ 0 | FAIL |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 127 readings scored; big moves followed 13% of them, 7% after a WATCH (29 WATCH readings) - too few to judge yet.
+- My own record: 128 readings scored; big moves followed 14% of them, 10% after a WATCH (30 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 107 readings scored; big moves followed 15% of them, 15% after a WATCH (40 WATCH readings) - too few to judge yet.
+- My own record: 108 readings scored; big moves followed 16% of them, 17% after a WATCH (41 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,13 +29,13 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.37%) and the quietest London (0.27%).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.38%) and the quietest London (0.28%).
 - A typical day ranges 2.6% from low to high (last 60 days); 45% of those days closed higher.
 - Over the last 30 days the price moved -29.9% (a fact, not a forecast).
 
 ## Right now
 
-- Price 55929.9; volatility regime extreme (hourly ATR 1.733% of price, 99.6th percentile).
+- Price 56270.7; volatility regime extreme (hourly ATR 1.805% of price, 99.8th percentile).
 - Bitcoin trades 24/7; weekend liquidity is thinner.
 
 ## My calls so far
