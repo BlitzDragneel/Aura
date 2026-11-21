@@ -881,3 +881,6 @@ Market now: trend down, volatility low, Asia session
 ⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~58597.0
 Market now: trend down, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-21 03:01:02 UTC
+👀 Gold swing: WATCH at 3,541.80. Big move likely, direction unknown. daily volatility is high (88th percentile)
