@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 133 readings scored; big moves followed 11% of them, 6% after a WATCH (51 WATCH readings) - too few to judge yet.
+- My own record: 134 readings scored; big moves followed 11% of them, 6% after a WATCH (51 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 113 readings scored; big moves followed 43% of them, 26% after a WATCH (43 WATCH readings) - too few to judge yet.
+- My own record: 114 readings scored; big moves followed 43% of them, 25% after a WATCH (44 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,14 +29,14 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.43%) and the quietest London (0.25%).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.43%) and the quietest London (0.24%).
 - At weekends, while spot is closed, the perpetual moves 42% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 2.9% from low to high (last 60 days); 38% of those days closed higher.
 - Over the last 30 days the price moved -28.1% (a fact, not a forecast).
 
 ## Right now
 
-- Price 41.34; volatility regime normal (hourly ATR 0.708% of price, 46.3th percentile).
+- Price 41.34; volatility regime normal (hourly ATR 0.663% of price, 38.3th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAGUSD 41.20 (stale: market closed).
 

@@ -902,3 +902,10 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~41.05
 Market now: trend down, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-21 11:01:01 UTC
+🌅 OMEGA morning read
+Bitcoin 57,903.80 | 1h trend down | vol extreme | typical day range 2.57% | big 4h move chance 16% | day WATCH · swing WATCH · hold WAIT
+Gold 3,540.50 | 1h trend down | vol normal | typical day range 1.48% | big 4h move chance 3% | day WAIT · swing WATCH · hold WAIT
+Silver 41.34 | 1h trend flat | vol normal | typical day range 2.92% | big 4h move chance 22% | day WAIT · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
