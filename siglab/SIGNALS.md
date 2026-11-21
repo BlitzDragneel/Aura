@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 22:01 UTC
+Updated 2026-11-21 22:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -70,7 +70,7 @@ Updated 2026-11-21 22:01 UTC
 | SOLUSD S1 | 6 | 0.396 | 1.26 | 0.833 | PAPER |
 | SOLUSD S2 | 6 | 0.042 | 0.11 | 0.667 | PAPER |
 | SOLUSD S3 | 4 | -0.462 | -1.37 | 0.5 | PAPER |
-| SOLUSD S4 | 5 | 0.089 | 0.27 | 0.8 | PAPER |
+| SOLUSD S4 | 6 | 0.091 | 0.34 | 0.833 | PAPER |
 | SOLUSD S5 | 4 | -0.464 | -1.35 | 0.5 | PAPER |
 | SOLUSD S6 | 5 | -0.563 | -1.88 | 0.4 | PAPER |
 | SOLUSD S7 | 5 | -0.046 | -0.11 | 0.6 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-21 22:01 UTC
 
 ## Latest signals
 
-- 21 Nov 16:15 SOLUSD buy S4 @ 70.31 SL 68.929 → open
+- 21 Nov 16:15 SOLUSD buy S4 @ 70.31 SL 68.929 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 34 closed, avg +0.01R, 71% won.
 - 21 Nov 12:15 LTCUSD buy S4 @ 39.12 SL 38.402 → closed TP3 +0.45R. TP3 after 71 min (best 0.7R, worst -0.0R). Lesson so far: fib pullback against the trend: 32 closed, avg -0.02R, 69% won.
 - 21 Nov 12:15 LINKUSD buy S4 @ 8.465 SL 8.3053 → closed TP3 +0.54R. TP3 after 81 min (best 1.2R, worst -0.0R). Lesson so far: fib pullback against the trend: 33 closed, avg -0.01R, 70% won.
 - 21 Nov 12:00 BTCUSD buy S4 @ 58177.2 SL 57282.27 → closed TP3 +0.51R. TP3 after 35 min (best 1.1R, worst -0.1R). Lesson so far: fib pullback against the trend: 31 closed, avg -0.04R, 68% won.
