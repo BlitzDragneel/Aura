@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 05:16 UTC
+Updated 2026-11-21 05:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -24,7 +24,7 @@ Updated 2026-11-21 05:16 UTC
 | BNBUSD S4 | 6 | -0.175 | -0.59 | 0.667 | PAPER |
 | BNBUSD S5 | 3 | -0.67 | -1.64 | 0.333 | PAPER |
 | BNBUSD S6 | 5 | 0.635 | 3.19 | 1.0 | PAPER |
-| BNBUSD S7 | 4 | 0.044 | 0.1 | 0.75 | PAPER |
+| BNBUSD S7 | 5 | 0.064 | 0.19 | 0.8 | PAPER |
 | BTCUSD S1 | 6 | 0.271 | 0.96 | 0.833 | PAPER |
 | BTCUSD S2 | 6 | -0.307 | -0.9 | 0.5 | PAPER |
 | BTCUSD S3 | 5 | -0.377 | -0.96 | 0.4 | PAPER |
@@ -119,7 +119,7 @@ Updated 2026-11-21 05:16 UTC
 - 21 Nov 03:45 AVAXUSD sell S7 @ 6.163 SL 6.2956 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 29 closed, avg +0.31R, 83% won.
 - 21 Nov 03:45 ADAUSD sell S7 @ 0.1357 SL 0.138264 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 30 closed, avg +0.30R, 83% won.
 - 21 Nov 03:45 DOGEUSD sell S7 @ 0.05197 SL 0.052969 → closed TP2+BE +0.48R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 30 closed, avg +0.30R, 83% won.
-- 21 Nov 03:45 BNBUSD sell S7 @ 516.55 SL 524.28 → open
+- 21 Nov 03:45 BNBUSD sell S7 @ 516.55 SL 524.28 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 35 closed, avg +0.31R, 86% won.
 - 21 Nov 03:45 ETHUSD buy S3 @ 1565.76 SL 1535.22 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 43 closed, avg -0.34R, 44% won.
 - 21 Nov 03:45 ETHUSD sell S2 @ 1565.76 SL 1596.3 → closed TP2+BE +0.41R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 46 closed, avg +0.05R, 67% won.
 - 21 Nov 03:45 BTCUSD sell S7 @ 56737.7 SL 57609.2 → open
