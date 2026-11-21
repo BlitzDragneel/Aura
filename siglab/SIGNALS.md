@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 03:01 UTC
+Updated 2026-11-21 03:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -77,7 +77,7 @@ Updated 2026-11-21 03:01 UTC
 | SUIUSD S1 | 5 | -0.147 | -0.36 | 0.6 | PAPER |
 | SUIUSD S2 | 5 | -0.613 | -1.4 | 0.2 | PAPER |
 | SUIUSD S3 | 4 | -0.443 | -1.26 | 0.5 | PAPER |
-| SUIUSD S4 | 5 | 0.089 | 0.29 | 0.8 | PAPER |
+| SUIUSD S4 | 6 | -0.098 | -0.31 | 0.667 | PAPER |
 | SUIUSD S5 | 4 | -0.033 | -0.05 | 0.5 | PAPER |
 | SUIUSD S6 | 5 | 0.069 | 0.22 | 0.8 | PAPER |
 | SUIUSD S7 | 3 | 0.065 | 0.1 | 0.667 | PAPER |
@@ -112,6 +112,7 @@ Updated 2026-11-21 03:01 UTC
 
 ## Latest signals
 
+- 21 Nov 03:15 DOGEUSD sell S2 @ 0.054 SL 0.054999 → open
 - 21 Nov 02:45 SUIUSD buy S3 @ 0.6393 SL 0.625964 → open
 - 21 Nov 02:45 SUIUSD sell S2 @ 0.6393 SL 0.652636 → open
 - 21 Nov 02:45 LTCUSD sell S2 @ 40.22 SL 40.89 → open
@@ -134,7 +135,7 @@ Updated 2026-11-21 03:01 UTC
 - 21 Nov 01:30 XRPUSD sell S1 @ 0.9067 SL 0.922979 → open
 - 21 Nov 01:00 ETHUSD sell S1 @ 1622.31 SL 1653.66 → open
 - 21 Nov 01:00 BTCUSD sell S1 @ 58996.2 SL 59881.6 → open
-- 21 Nov 00:30 SUIUSD buy S4 @ 0.6486 SL 0.634836 → open
+- 21 Nov 00:30 SUIUSD buy S4 @ 0.6486 SL 0.634836 → closed SL -1.03R. Stopped out after 155 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 27 closed, avg -0.01R, 70% won.
 - 21 Nov 00:30 BNBUSD sell S1 @ 540.25 SL 548.3 → open
 - 21 Nov 00:15 SUIUSD sell S1 @ 0.6495 SL 0.663264 → open
 - 21 Nov 00:15 AVAXUSD buy S4 @ 6.5 SL 6.3636 → open
@@ -171,4 +172,3 @@ Updated 2026-11-21 03:01 UTC
 - 20 Nov 12:00 XAUUSD sell S1 @ 3580.5 SL 3611.9 → closed TP3 +1.08R. TP3 after 322 min (best 1.6R, worst -0.4R). Lesson so far: trend pullback with the trend: 71 closed, avg -0.01R, 66% won.
 - 20 Nov 11:15 SUIUSD buy S3 @ 0.6849 SL 0.675414 → closed SL -1.04R. Stopped out after 136 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 24 closed, avg +0.06R, 71% won.
 - 20 Nov 11:00 SUIUSD sell S2 @ 0.6889 SL 0.698386 → closed TP3 +1.14R. TP3 after 250 min (best 1.9R, worst -0.2R). Lesson so far: breakout with the trend: 35 closed, avg -0.24R, 57% won.
-- 20 Nov 10:45 ETHUSD buy S2 @ 1760.38 SL 1739.03 → closed SL -1.05R. Stopped out after 79 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 31 closed, avg -0.46R, 42% won.
