@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 11:45 UTC
+Updated 2026-11-21 12:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-21 11:45 UTC
 
 ## Latest signals
 
+- 21 Nov 12:00 BTCUSD buy S4 @ 58177.2 SL 57282.27 → open
 - 21 Nov 10:30 DOGEUSD sell S4 @ 0.05311 SL 0.054181 → closed SL -1.03R. Stopped out after 63 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: fib pullback with the trend: 52 closed, avg -0.12R, 60% won.
 - 21 Nov 10:15 BNBUSD sell S4 @ 523.01 SL 531.18 → closed SL -1.04R. Stopped out after 77 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.7R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: fib pullback with the trend: 52 closed, avg -0.12R, 60% won.
 - 21 Nov 08:45 ADAUSD buy S4 @ 0.1374 SL 0.134457 → closed TP3 +0.55R. TP3 after 58 min (best 0.9R, worst -0.0R). Lesson so far: fib pullback against the trend: 29 closed, avg -0.08R, 66% won.
@@ -171,4 +172,3 @@ Updated 2026-11-21 11:45 UTC
 - 21 Nov 00:15 AVAXUSD buy S4 @ 6.5 SL 6.3636 → closed SL -1.03R. Stopped out after 182 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 28 closed, avg -0.04R, 68% won.
 - 21 Nov 00:00 SOLUSD sell S1 @ 68.82 SL 70.141 → closed TP3 +0.87R. TP3 after 210 min (best 1.4R, worst -0.3R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
 - 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 26 closed, avg +0.29R, 81% won.
-- 20 Nov 15:30 SUIUSD sell S7 @ 0.6621 SL 0.672221 → closed TP3 +1.15R. TP3 after 33 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
