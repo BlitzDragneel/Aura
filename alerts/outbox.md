@@ -884,3 +884,16 @@ Market now: trend down, volatility low, Asia session
 
 ## 2026-11-21 03:01:02 UTC
 👀 Gold swing: WATCH at 3,541.80. Big move likely, direction unknown. daily volatility is high (88th percentile)
+
+## 2026-11-21 03:45:52 UTC
+⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3518.9
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Silver: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~40.83
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Bitcoin: BIG MOVE under way right now (moved -1859.30 in the last hour, twice its normal hourly range), price ~56737.7
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
