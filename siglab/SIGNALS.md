@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 13:30 UTC
+Updated 2026-11-21 13:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -49,7 +49,7 @@ Updated 2026-11-21 13:30 UTC
 | LINKUSD S1 | 6 | 0.023 | 0.06 | 0.667 | PAPER |
 | LINKUSD S2 | 6 | 0.101 | 0.38 | 0.833 | PAPER |
 | LINKUSD S3 | 4 | -0.667 | -1.75 | 0.25 | PAPER |
-| LINKUSD S4 | 5 | -0.392 | -0.97 | 0.4 | PAPER |
+| LINKUSD S4 | 6 | -0.238 | -0.65 | 0.5 | PAPER |
 | LINKUSD S5 | 5 | -0.275 | -0.57 | 0.4 | PAPER |
 | LINKUSD S6 | 5 | -0.074 | -0.3 | 0.8 | PAPER |
 | LINKUSD S7 | 5 | 0.127 | 0.25 | 0.6 | PAPER |
@@ -113,7 +113,7 @@ Updated 2026-11-21 13:30 UTC
 ## Latest signals
 
 - 21 Nov 12:15 LTCUSD buy S4 @ 39.12 SL 38.402 → closed TP3 +0.45R. TP3 after 71 min (best 0.7R, worst -0.0R). Lesson so far: fib pullback against the trend: 32 closed, avg -0.02R, 69% won.
-- 21 Nov 12:15 LINKUSD buy S4 @ 8.465 SL 8.3053 → open
+- 21 Nov 12:15 LINKUSD buy S4 @ 8.465 SL 8.3053 → closed TP3 +0.54R. TP3 after 81 min (best 1.2R, worst -0.0R). Lesson so far: fib pullback against the trend: 33 closed, avg -0.01R, 70% won.
 - 21 Nov 12:00 BTCUSD buy S4 @ 58177.2 SL 57282.27 → closed TP3 +0.51R. TP3 after 35 min (best 1.1R, worst -0.1R). Lesson so far: fib pullback against the trend: 31 closed, avg -0.04R, 68% won.
 - 21 Nov 10:30 DOGEUSD sell S4 @ 0.05311 SL 0.054181 → closed SL -1.03R. Stopped out after 63 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: fib pullback with the trend: 52 closed, avg -0.12R, 60% won.
 - 21 Nov 10:15 BNBUSD sell S4 @ 523.01 SL 531.18 → closed SL -1.04R. Stopped out after 77 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.7R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: fib pullback with the trend: 52 closed, avg -0.12R, 60% won.
