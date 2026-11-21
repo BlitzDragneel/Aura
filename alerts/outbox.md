@@ -914,3 +914,14 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 ⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~58177.2
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-21 21:01:21 UTC
+📊 Signal Lab, end of day: 519 paper signals closed so far, avg -0.03R, 1 open.
+trend pullback: 85 closed, avg +0.14R, 72% won
+breakout: 83 closed, avg -0.20R, 54% won
+stretch fade: 73 closed, avg -0.07R, 60% won
+fib pullback: 89 closed, avg -0.10R, 62% won
+session drive: 59 closed, avg -0.20R, 52% won
+daily bias: 71 closed, avg +0.15R, 80% won
+big move: 59 closed, avg +0.10R, 73% won
+Earning trust: none yet (needs 15+ closed and a positive average)
