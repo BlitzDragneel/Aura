@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-20 23:45 UTC
+Updated 2026-11-21 00:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-20 23:45 UTC
 
 ## Latest signals
 
+- 21 Nov 00:00 SOLUSD sell S1 @ 68.82 SL 70.141 → open
 - 20 Nov 16:00 NAS100 sell S7 @ 25850.15 SL 26054.46 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 26 closed, avg +0.29R, 81% won.
 - 20 Nov 15:30 SUIUSD sell S7 @ 0.6621 SL 0.672221 → closed TP3 +1.15R. TP3 after 33 min (best 1.8R, worst -0.0R). Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
 - 20 Nov 15:30 LTCUSD sell S7 @ 40.43 SL 40.934 → closed TP2+BE +0.60R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 27 closed, avg +0.29R, 82% won.
@@ -171,4 +172,3 @@ Updated 2026-11-20 23:45 UTC
 - 20 Nov 07:00 ETHUSD sell S6 @ 1749.01 SL 1773.06 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 55 closed, avg +0.17R, 82% won.
 - 20 Nov 07:00 US30 sell S6 @ 48965.3 SL 49156.3 → closed SL -1.01R. Stopped out after 81 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 49 closed, avg +0.22R, 84% won.
 - 20 Nov 07:00 NAS100 sell S6 @ 26208.03 SL 26414.3 → closed TP1+BE +0.34R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 53 closed, avg +0.17R, 81% won.
-- 20 Nov 07:00 BTCUSD sell S6 @ 62023.5 SL 62756.61 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 49 closed, avg +0.22R, 84% won.

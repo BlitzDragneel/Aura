@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 122 readings scored; big moves followed 12% of them, 7% after a WATCH (41 WATCH readings) - too few to judge yet.
+- My own record: 123 readings scored; big moves followed 12% of them, 7% after a WATCH (42 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 102 readings scored; big moves followed 48% of them, 34% after a WATCH (32 WATCH readings) - too few to judge yet.
+- My own record: 103 readings scored; big moves followed 48% of them, 33% after a WATCH (33 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,14 +29,14 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.42%) and the quietest London (0.24%).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.43%) and the quietest London (0.24%).
 - At weekends, while spot is closed, the perpetual moves 38% as much per hour as on weekdays: weekend prices are thin and less reliable.
-- A typical day ranges 2.7% from low to high (last 60 days); 40% of those days closed higher.
-- Over the last 30 days the price moved -26.4% (a fact, not a forecast).
+- A typical day ranges 2.9% from low to high (last 60 days); 38% of those days closed higher.
+- Over the last 30 days the price moved -28.1% (a fact, not a forecast).
 
 ## Right now
 
-- Price 41.4; volatility regime extreme (hourly ATR 1.402% of price, 95.5th percentile).
+- Price 41.42; volatility regime extreme (hourly ATR 1.368% of price, 95.3th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAGUSD 41.20 (stale: market closed).
 

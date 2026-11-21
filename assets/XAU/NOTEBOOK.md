@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 122 readings scored; big moves followed 15% of them, 17% after a WATCH (46 WATCH readings) - too few to judge yet.
+- My own record: 123 readings scored; big moves followed 15% of them, 17% after a WATCH (47 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 102 readings scored; big moves followed 50% of them, 62% after a WATCH (37 WATCH readings) - too few to judge yet.
+- My own record: 103 readings scored; big moves followed 50% of them, 61% after a WATCH (38 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -31,12 +31,12 @@ Built automatically from the research findings, the approved rules and my own fo
 
 - Over the last 20 days the busiest session was Asia (average hourly move 0.22%) and the quietest London (0.14%).
 - At weekends, while spot is closed, the perpetual moves 34% as much per hour as on weekdays: weekend prices are thin and less reliable.
-- A typical day ranges 1.4% from low to high (last 60 days); 35% of those days closed higher.
-- Over the last 30 days the price moved -12.3% (a fact, not a forecast).
+- A typical day ranges 1.5% from low to high (last 60 days); 35% of those days closed higher.
+- Over the last 30 days the price moved -14.1% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3545.5; volatility regime extreme (hourly ATR 0.739% of price, 95.7th percentile).
+- Price 3548.9; volatility regime extreme (hourly ATR 0.72% of price, 95.3th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAUUSD 3534.41 (stale: market closed).
 
