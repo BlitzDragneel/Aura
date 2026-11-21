@@ -36,7 +36,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 41.45; volatility regime normal (hourly ATR 0.588% of price, 25.1th percentile).
+- Price 41.55; volatility regime normal (hourly ATR 0.588% of price, 25.1th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAGUSD 41.20 (stale: market closed).
 
