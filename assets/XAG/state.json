@@ -5,7 +5,7 @@
 "since": "2026-11-19T22:01:01.219004+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (95th percentile of the last 3 weeks)",
+"hourly volatility is high (94th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -815,14 +815,6 @@
 {
 "t": "2026-11-20T01:00:00+00:00",
 "price": 41.92,
-"horizon": "swing",
-"thr": 0.059432933478735045,
-"watch": true,
-"p": 0.436
-},
-{
-"t": "2026-11-20T01:00:00+00:00",
-"price": 41.92,
 "horizon": "hold",
 "thr": 0.1485823336968376,
 "watch": false,
@@ -1135,14 +1127,6 @@
 {
 "t": "2026-11-20T21:00:00+00:00",
 "price": 41.35,
-"horizon": "day",
-"thr": 0.029262394195888698,
-"watch": true,
-"p": 0.277
-},
-{
-"t": "2026-11-20T21:00:00+00:00",
-"price": 41.35,
 "horizon": "swing",
 "thr": 0.058524788391777396,
 "watch": true,
@@ -1227,30 +1211,54 @@
 "thr": 0.12712595301341964,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-21T01:00:00+00:00",
+"price": 41.36,
+"horizon": "day",
+"thr": 0.024626968775904905,
+"watch": true,
+"p": 0.198
+},
+{
+"t": "2026-11-21T01:00:00+00:00",
+"price": 41.36,
+"horizon": "swing",
+"thr": 0.04925393755180981,
+"watch": true,
+"p": 0.172
+},
+{
+"t": "2026-11-21T01:00:00+00:00",
+"price": 41.36,
+"horizon": "hold",
+"thr": 0.12313484387952453,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 124,
+"n": 125,
 "big": 15,
-"watch_n": 43,
+"watch_n": 44,
 "watch_big": 3,
-"brier": 19.151134000000003,
+"brier": 19.227863000000003,
 "brier_base": 0.0,
-"scout_n": 124
+"scout_n": 125
 },
 "swing": {
-"n": 104,
+"n": 105,
 "big": 49,
-"watch_n": 34,
+"watch_n": 35,
 "watch_big": 11,
-"brier": 34.623650999999995,
+"brier": 34.81374699999999,
 "brier_base": 0.0,
-"scout_n": 104
+"scout_n": 105
 }
 },
 "calls_record": {},
-"runs": 508,
+"runs": 509,
 "created": "2026-11-15T06:42:40",
-"last_run": "2026-11-21T01:45:54.438866+00:00"
+"last_run": "2026-11-21T02:01:03.264242+00:00"
 }

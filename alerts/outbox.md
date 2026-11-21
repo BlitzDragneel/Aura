@@ -863,3 +863,12 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 ⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~58996.2
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-21 02:01:10 UTC
+⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3542.5
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~41.36
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
