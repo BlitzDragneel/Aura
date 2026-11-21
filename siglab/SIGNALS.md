@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 06:15 UTC
+Updated 2026-11-21 06:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -31,7 +31,7 @@ Updated 2026-11-21 06:15 UTC
 | BTCUSD S4 | 6 | -0.219 | -0.87 | 0.667 | PAPER |
 | BTCUSD S5 | 4 | -0.221 | -0.45 | 0.5 | PAPER |
 | BTCUSD S6 | 5 | 0.554 | 2.72 | 1.0 | PAPER |
-| BTCUSD S7 | 4 | 0.238 | 0.51 | 0.75 | PAPER |
+| BTCUSD S7 | 5 | 0.385 | 0.99 | 0.8 | PAPER |
 | DOGEUSD S1 | 6 | 0.314 | 1.0 | 0.833 | PAPER |
 | DOGEUSD S2 | 6 | -0.258 | -0.69 | 0.5 | PAPER |
 | DOGEUSD S3 | 6 | 0.357 | 1.13 | 0.833 | PAPER |
@@ -112,6 +112,7 @@ Updated 2026-11-21 06:15 UTC
 
 ## Latest signals
 
+- 21 Nov 06:30 ETHUSD sell S4 @ 1569.28 SL 1596.62 → open
 - 21 Nov 05:00 XAGUSD sell S4 @ 41.05 SL 41.523 → open
 - 21 Nov 03:45 SUIUSD sell S7 @ 0.607 SL 0.620479 → closed TP1+BE +0.20R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 30 closed, avg +0.30R, 83% won.
 - 21 Nov 03:45 LTCUSD sell S7 @ 38.58 SL 39.254 → closed TP2+BE +0.52R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 30 closed, avg +0.30R, 83% won.
@@ -122,7 +123,7 @@ Updated 2026-11-21 06:15 UTC
 - 21 Nov 03:45 BNBUSD sell S7 @ 516.55 SL 524.28 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 35 closed, avg +0.31R, 86% won.
 - 21 Nov 03:45 ETHUSD buy S3 @ 1565.76 SL 1535.22 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 43 closed, avg -0.34R, 44% won.
 - 21 Nov 03:45 ETHUSD sell S2 @ 1565.76 SL 1596.3 → closed TP2+BE +0.41R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 46 closed, avg +0.05R, 67% won.
-- 21 Nov 03:45 BTCUSD sell S7 @ 56737.7 SL 57609.2 → open
+- 21 Nov 03:45 BTCUSD sell S7 @ 56737.7 SL 57609.2 → closed TP3 +0.97R. TP3 after 151 min (best 1.7R, worst -0.3R). Lesson so far: big move with the trend: 36 closed, avg +0.31R, 86% won.
 - 21 Nov 03:45 XAGUSD buy S3 @ 40.83 SL 40.33 → closed TP1+BE +0.04R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 44 closed, avg -0.33R, 46% won.
 - 21 Nov 03:45 XAGUSD sell S2 @ 40.83 SL 41.33 → open
 - 21 Nov 03:45 XAUUSD buy S3 @ 3518.9 SL 3495.84 → closed TP2+BE +0.23R. Reached TP2 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 44 closed, avg -0.33R, 46% won.
@@ -171,4 +172,3 @@ Updated 2026-11-21 06:15 UTC
 - 20 Nov 15:30 LINKUSD buy S3 @ 8.484 SL 8.3615 → closed SL -1.04R. Stopped out after 12 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
 - 20 Nov 15:30 AVAXUSD sell S7 @ 6.562 SL 6.6599 → closed TP2+BE +0.55R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
 - 20 Nov 15:30 AVAXUSD buy S3 @ 6.562 SL 6.4641 → closed SL -1.04R. Stopped out after 15 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade against the trend: 28 closed, avg +0.03R, 68% won.
-- 20 Nov 15:30 ADAUSD sell S7 @ 0.1414 SL 0.14365 → closed TP2+BE +0.55R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 18 closed, avg +0.07R, 72% won.
