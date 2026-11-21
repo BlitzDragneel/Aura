@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-21 03:45 UTC
+Updated 2026-11-21 04:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -41,7 +41,7 @@ Updated 2026-11-21 03:45 UTC
 | DOGEUSD S7 | 3 | 0.026 | 0.05 | 0.667 | PAPER |
 | ETHUSD S1 | 7 | -0.045 | -0.16 | 0.714 | PAPER |
 | ETHUSD S2 | 5 | -0.543 | -1.73 | 0.4 | PAPER |
-| ETHUSD S3 | 5 | 0.218 | 0.39 | 0.6 | PAPER |
+| ETHUSD S3 | 6 | 0.194 | 0.43 | 0.667 | PAPER |
 | ETHUSD S4 | 6 | -0.066 | -0.2 | 0.667 | PAPER |
 | ETHUSD S5 | 4 | -0.222 | -0.43 | 0.5 | PAPER |
 | ETHUSD S6 | 5 | 0.539 | 2.07 | 1.0 | PAPER |
@@ -119,7 +119,7 @@ Updated 2026-11-21 03:45 UTC
 - 21 Nov 03:45 ADAUSD sell S7 @ 0.1357 SL 0.138264 → open
 - 21 Nov 03:45 DOGEUSD sell S7 @ 0.05197 SL 0.052969 → open
 - 21 Nov 03:45 BNBUSD sell S7 @ 516.55 SL 524.28 → open
-- 21 Nov 03:45 ETHUSD buy S3 @ 1565.76 SL 1535.22 → open
+- 21 Nov 03:45 ETHUSD buy S3 @ 1565.76 SL 1535.22 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 43 closed, avg -0.34R, 44% won.
 - 21 Nov 03:45 ETHUSD sell S2 @ 1565.76 SL 1596.3 → open
 - 21 Nov 03:45 BTCUSD sell S7 @ 56737.7 SL 57609.2 → open
 - 21 Nov 03:45 XAGUSD buy S3 @ 40.83 SL 40.33 → open
