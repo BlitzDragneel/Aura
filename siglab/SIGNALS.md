@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 03:01 UTC
+Updated 2026-11-22 03:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-22 03:01 UTC
 
 ## Latest signals
 
+- 22 Nov 03:15 AVAXUSD buy S3 @ 6.509 SL 6.4449 → open
 - 22 Nov 03:00 XRPUSD buy S3 @ 0.9216 SL 0.912314 → open
 - 22 Nov 03:00 XAGUSD buy S3 @ 41.43 SL 41.25 → open
 - 22 Nov 02:45 SUIUSD buy S3 @ 0.6403 SL 0.633607 → open
@@ -171,4 +172,3 @@ Updated 2026-11-22 03:01 UTC
 - 21 Nov 05:00 XAGUSD sell S4 @ 41.05 SL 41.523 → closed SL -1.06R. Stopped out after 108 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.8R). Lesson so far: fib pullback with the trend: 50 closed, avg -0.12R, 60% won.
 - 21 Nov 03:45 SUIUSD sell S7 @ 0.607 SL 0.620479 → closed TP1+BE +0.20R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 30 closed, avg +0.30R, 83% won.
 - 21 Nov 03:45 LTCUSD sell S7 @ 38.58 SL 39.254 → closed TP2+BE +0.52R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 30 closed, avg +0.30R, 83% won.
-- 21 Nov 03:45 LINKUSD sell S7 @ 8.168 SL 8.3254 → closed TP2+BE +0.45R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 30 closed, avg +0.30R, 83% won.
