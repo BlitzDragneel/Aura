@@ -980,3 +980,10 @@ Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
 
 🔁 Learning: trend pullback with the trend is now EARNED (trade plans sent again, tagged) after 94 live signals (33 separate moments) averaging +0.20R.
+
+## 2026-11-22 11:00:59 UTC
+🌅 OMEGA morning read
+Bitcoin 60,850.00 | 1h trend up | vol normal | typical day range 2.67% | big 4h move chance 32% | day WAIT · swing WATCH · hold WAIT
+Gold 3,567.20 | 1h trend flat | vol quiet | typical day range 1.48% | big 4h move chance 4% | day WAIT · swing WATCH · hold WAIT
+Silver 41.69 | 1h trend flat | vol quiet | typical day range 2.82% | big 4h move chance 26% | day WAIT · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
