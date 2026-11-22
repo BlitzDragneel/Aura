@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 02:01 UTC
+Updated 2026-11-22 02:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-22 02:01 UTC
 
 ## Latest signals
 
+- 22 Nov 02:15 BNBUSD sell S1 @ 548.67 SL 552.77 → open
+- 22 Nov 02:15 XAGUSD sell S1 @ 41.61 SL 41.79 → open
 - 22 Nov 01:45 AVAXUSD buy S4 @ 6.571 SL 6.4948 → open
 - 22 Nov 01:45 DOGEUSD buy S4 @ 0.05519 SL 0.054639 → open
 - 22 Nov 01:45 BNBUSD buy S4 @ 549.39 SL 544.83 → open
@@ -170,5 +172,3 @@ Updated 2026-11-22 02:01 UTC
 - 21 Nov 03:30 BTCUSD buy S3 @ 58231.7 SL 57360.2 → closed SL -1.01R. Stopped out after 1 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 35 closed, avg -0.18R, 54% won.
 - 21 Nov 03:15 DOGEUSD sell S2 @ 0.054 SL 0.054999 → closed TP3 +0.94R. TP3 after 16 min (best 2.0R, worst -0.0R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
 - 21 Nov 02:45 SUIUSD buy S3 @ 0.6393 SL 0.625964 → closed SL -1.03R. Stopped out after 45 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 33 closed, avg -0.13R, 58% won.
-- 21 Nov 02:45 SUIUSD sell S2 @ 0.6393 SL 0.652636 → closed TP3 +1.03R. TP3 after 46 min (best 2.3R, worst -0.1R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
-- 21 Nov 02:45 LTCUSD sell S2 @ 40.22 SL 40.89 → closed TP3 +0.96R. TP3 after 46 min (best 2.4R, worst -0.1R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
