@@ -22721,14 +22721,22 @@
     6.8152
    ],
    "R": 0.06286,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-22",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 6.692,
+   "outcome": "SL",
+   "R_ladder": -1.065,
+   "R_tp1": -1.065,
+   "pips": -98.5,
+   "closed_ms": 1795386300000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 460 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 97 closed, avg +0.16R, 72% won."
   }
  ],
  "sent_day": {},
@@ -22792,11 +22800,11 @@
     "grade": "PAPER"
    },
    "AVAXUSD S1": {
-    "n": 6,
-    "avg_R": -0.153,
-    "t": -0.37,
-    "win": 0.5,
-    "total_R": -0.92,
+    "n": 7,
+    "avg_R": -0.283,
+    "t": -0.76,
+    "win": 0.429,
+    "total_R": -1.98,
     "grade": "PAPER"
    },
    "AVAXUSD S2": {
@@ -23578,11 +23586,11 @@
   },
   "by_setup": {
    "S1": {
-    "n": 97,
-    "avg_R": 0.156,
-    "t": 1.88,
-    "win": 0.722,
-    "total_R": 15.14
+    "n": 98,
+    "avg_R": 0.144,
+    "t": 1.73,
+    "win": 0.714,
+    "total_R": 14.07
    },
    "S2": {
     "n": 96,
@@ -23628,13 +23636,13 @@
    }
   },
   "all": {
-   "n": 577,
-   "avg_R": -0.025,
-   "t": -0.74,
-   "win": 0.648,
-   "total_R": -14.54
+   "n": 578,
+   "avg_R": -0.027,
+   "t": -0.79,
+   "win": 0.647,
+   "total_R": -15.61
   },
-  "open": 1
+  "open": 0
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -23652,11 +23660,11 @@
    "total_R": 1.39
   },
   "S1 | New York": {
-   "n": 3,
-   "avg_R": 0.288,
-   "t": 1.2,
-   "win": 1.0,
-   "total_R": 0.86
+   "n": 4,
+   "avg_R": -0.05,
+   "t": -0.13,
+   "win": 0.75,
+   "total_R": -0.2
   },
   "S1 | compressed": {
    "n": 50,
@@ -23673,11 +23681,11 @@
    "total_R": 1.69
   },
   "S1 | normal": {
-   "n": 47,
-   "avg_R": -0.007,
-   "t": -0.06,
-   "win": 0.638,
-   "total_R": -0.34
+   "n": 48,
+   "avg_R": -0.029,
+   "t": -0.24,
+   "win": 0.625,
+   "total_R": -1.4
   },
   "S1 | vol high": {
    "n": 7,
@@ -23694,18 +23702,18 @@
    "total_R": 6.26
   },
   "S1 | vol normal": {
-   "n": 73,
-   "avg_R": 0.15,
-   "t": 1.62,
-   "win": 0.74,
-   "total_R": 10.93
+   "n": 74,
+   "avg_R": 0.133,
+   "t": 1.44,
+   "win": 0.73,
+   "total_R": 9.87
   },
   "S1 | with trend": {
-   "n": 97,
-   "avg_R": 0.156,
-   "t": 1.88,
-   "win": 0.722,
-   "total_R": 15.14
+   "n": 98,
+   "avg_R": 0.144,
+   "t": 1.73,
+   "win": 0.714,
+   "total_R": 14.07
   },
   "S2 | Asia": {
    "n": 62,
@@ -24151,15 +24159,6 @@
  },
  "scout_last": "2026-11-16T19:00:00+00:00",
  "adapt": {
-  "S1 with": {
-   "state": "earned",
-   "n": 33,
-   "avg_R": 0.206,
-   "t": 1.72,
-   "win": 0.697,
-   "total_R": 6.8,
-   "signals": 97
-  },
   "S2 against": {
    "state": "muted",
    "n": 18,
@@ -24248,6 +24247,12 @@
    "n": 33,
    "avg_R": 0.205,
    "t": 1.63
+  },
+  {
+   "ms": 1795386659798,
+   "cell": "S1 with",
+   "frm": "earned",
+   "to": null
   }
  ]
 }

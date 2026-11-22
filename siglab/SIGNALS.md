@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 22:15 UTC
+Updated 2026-11-22 22:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -11,7 +11,7 @@ Updated 2026-11-22 22:15 UTC
 | ADAUSD S5 | 3 | 0.168 | 0.27 | 0.667 | PAPER |
 | ADAUSD S6 | 5 | -0.036 | -0.14 | 0.8 | PAPER |
 | ADAUSD S7 | 5 | 0.151 | 0.48 | 0.8 | PAPER |
-| AVAXUSD S1 | 6 | -0.153 | -0.37 | 0.5 | PAPER |
+| AVAXUSD S1 | 7 | -0.283 | -0.76 | 0.429 | PAPER |
 | AVAXUSD S2 | 7 | 0.04 | 0.13 | 0.714 | PAPER |
 | AVAXUSD S3 | 7 | 0.058 | 0.19 | 0.714 | PAPER |
 | AVAXUSD S4 | 7 | -0.341 | -1.0 | 0.429 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-22 22:15 UTC
 
 ## Latest signals
 
-- 22 Nov 14:45 AVAXUSD buy S1 @ 6.693 SL 6.6301 → open
+- 22 Nov 14:45 AVAXUSD buy S1 @ 6.693 SL 6.6301 → closed SL -1.06R. Stopped out after 460 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 97 closed, avg +0.16R, 72% won.
 - 22 Nov 08:45 BNBUSD buy S7 @ 546.33 SL 543.25 → closed TP3 +0.85R. TP3 after 65 min (best 2.1R, worst -0.7R). Lesson so far: big move against the trend: 25 closed, avg -0.20R, 56% won.
 - 22 Nov 08:45 ETHUSD buy S7 @ 1686.0 SL 1675.23 → closed TP3 +0.99R. TP3 after 65 min (best 2.5R, worst -0.5R). Lesson so far: big move against the trend: 25 closed, avg -0.20R, 56% won.
 - 22 Nov 08:45 BTCUSD buy S7 @ 59765.1 SL 59399.97 → closed TP3 +0.99R. TP3 after 65 min (best 2.6R, worst -0.7R). Lesson so far: big move against the trend: 25 closed, avg -0.20R, 56% won.

@@ -998,3 +998,6 @@ session drive: 59 closed, avg -0.20R, 52% won
 daily bias: 71 closed, avg +0.15R, 80% won
 big move: 65 closed, avg +0.15R, 75% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-22 22:30:59 UTC
+🔁 Learning: trend pullback with the trend is now back to normal.
