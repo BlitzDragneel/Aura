@@ -939,3 +939,8 @@ Market now: trend down, volatility low, late session
 ⚡ Bitcoin: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~60289.1
 Market now: trend up, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-22 00:31:02 UTC
+⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~41.57
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.

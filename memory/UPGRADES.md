@@ -57,3 +57,15 @@
 - NAS100: not enough scored predictions yet (317); settings unchanged (0.55, blocked [])
 - US30: not enough scored predictions yet (318); settings unchanged (0.55, blocked [])
 - wrong calls in the last 7 days: 803; reasons: high volatility 560, close vote (the look-alikes were split) 531, called against the 24h move 449, shock move 378, session New York 262, session Asia 225, session London 195, unfamiliar situation (few close look-alikes) 181, session late 121, news 16
+
+## Self-review 2026-11-22 00:31 UTC
+
+- XAUUSD: 6201 scored (last 90 days, 440 live); right 51.5% overall, 52.0% on 1941 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: session New York 49.8% (n 1820), unfamiliar 50.0% (n 1241), session Asia 50.2% (n 1792)
+- XAGUSD: 6201 scored (last 90 days, 440 live); right 51.8% overall, 54.4% on 2834 calls at threshold 0.53. No change (nothing beat the current settings on fresh data).
+  worst situations: session Asia 50.2% (n 1792), close vote 50.8% (n 3615), session New York 51.3% (n 1820)
+- BTCUSD: 6105 scored (last 90 days, 440 live); right 51.9% overall, 53.8% on 1961 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: close vote 50.5% (n 3915), session Asia 51.5% (n 1764), session New York 51.7% (n 1792)
+- NAS100: not enough scored predictions yet (317); settings unchanged (0.55, blocked [])
+- US30: not enough scored predictions yet (318); settings unchanged (0.55, blocked [])
+- wrong calls in the last 7 days: 949; reasons: close vote (the look-alikes were split) 607, high volatility 594, called against the 24h move 527, shock move 417, session New York 305, session Asia 262, session London 240, unfamiliar situation (few close look-alikes) 230, session late 142, news 16

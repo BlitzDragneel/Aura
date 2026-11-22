@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 00:15 UTC
+Updated 2026-11-22 00:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-22 00:15 UTC
 
 ## Latest signals
 
+- 22 Nov 00:30 XAGUSD sell S4 @ 41.57 SL 41.75 → open
 - 22 Nov 00:15 LINKUSD sell S1 @ 8.599 SL 8.6878 → open
 - 22 Nov 00:15 XRPUSD buy S4 @ 0.933 SL 0.922707 → open
 - 22 Nov 00:15 BTCUSD buy S1 @ 60289.1 SL 59671.49 → open
@@ -171,4 +172,3 @@ Updated 2026-11-22 00:15 UTC
 - 21 Nov 02:45 BTCUSD sell S2 @ 58597.0 SL 59478.29 → closed TP3 +0.96R. TP3 after 46 min (best 1.6R, worst -0.1R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
 - 21 Nov 02:45 XAUUSD sell S4 @ 3543.9 SL 3567.66 → closed TP2+BE +0.76R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 50 closed, avg -0.12R, 60% won.
 - 21 Nov 02:15 LTCUSD sell S1 @ 40.45 SL 41.12 → closed TP3 +1.00R. TP3 after 75 min (best 1.8R, worst -0.2R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
-- 21 Nov 02:00 XAGUSD sell S1 @ 41.36 SL 41.869 → closed TP2+BE +0.67R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 83 closed, avg +0.13R, 71% won.
