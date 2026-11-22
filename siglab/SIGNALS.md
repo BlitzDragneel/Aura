@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 03:45 UTC
+Updated 2026-11-22 04:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -20,7 +20,7 @@ Updated 2026-11-22 03:45 UTC
 | AVAXUSD S7 | 5 | -0.154 | -0.41 | 0.6 | PAPER |
 | BNBUSD S1 | 6 | -0.122 | -0.38 | 0.667 | PAPER |
 | BNBUSD S2 | 7 | -0.219 | -0.67 | 0.571 | PAPER |
-| BNBUSD S3 | 5 | -0.005 | -0.01 | 0.6 | PAPER |
+| BNBUSD S3 | 6 | -0.184 | -0.45 | 0.5 | PAPER |
 | BNBUSD S4 | 8 | -0.395 | -1.52 | 0.5 | PAPER |
 | BNBUSD S5 | 3 | -0.67 | -1.64 | 0.333 | PAPER |
 | BNBUSD S6 | 5 | 0.635 | 3.19 | 1.0 | PAPER |
@@ -34,14 +34,14 @@ Updated 2026-11-22 03:45 UTC
 | BTCUSD S7 | 5 | 0.385 | 0.99 | 0.8 | PAPER |
 | DOGEUSD S1 | 6 | 0.314 | 1.0 | 0.833 | PAPER |
 | DOGEUSD S2 | 6 | -0.258 | -0.69 | 0.5 | PAPER |
-| DOGEUSD S3 | 6 | 0.357 | 1.13 | 0.833 | PAPER |
+| DOGEUSD S3 | 7 | 0.153 | 0.46 | 0.714 | PAPER |
 | DOGEUSD S4 | 7 | -0.364 | -1.1 | 0.429 | PAPER |
 | DOGEUSD S5 | 4 | -0.535 | -1.0 | 0.25 | PAPER |
 | DOGEUSD S6 | 5 | 0.148 | 11.58 | 1.0 | PAPER |
 | DOGEUSD S7 | 4 | 0.139 | 0.34 | 0.75 | PAPER |
 | ETHUSD S1 | 7 | -0.045 | -0.16 | 0.714 | PAPER |
 | ETHUSD S2 | 6 | -0.383 | -1.27 | 0.5 | PAPER |
-| ETHUSD S3 | 6 | 0.194 | 0.43 | 0.667 | PAPER |
+| ETHUSD S3 | 7 | 0.015 | 0.03 | 0.571 | PAPER |
 | ETHUSD S4 | 7 | -0.205 | -0.66 | 0.571 | PAPER |
 | ETHUSD S5 | 4 | -0.222 | -0.43 | 0.5 | PAPER |
 | ETHUSD S6 | 5 | 0.539 | 2.07 | 1.0 | PAPER |
@@ -76,7 +76,7 @@ Updated 2026-11-22 03:45 UTC
 | SOLUSD S7 | 5 | -0.046 | -0.11 | 0.6 | PAPER |
 | SUIUSD S1 | 6 | 0.049 | 0.13 | 0.667 | PAPER |
 | SUIUSD S2 | 6 | -0.339 | -0.75 | 0.333 | PAPER |
-| SUIUSD S3 | 5 | -0.56 | -1.89 | 0.4 | PAPER |
+| SUIUSD S3 | 6 | -0.643 | -2.51 | 0.333 | PAPER |
 | SUIUSD S4 | 7 | -0.234 | -0.79 | 0.571 | PAPER |
 | SUIUSD S5 | 4 | -0.033 | -0.05 | 0.5 | PAPER |
 | SUIUSD S6 | 5 | 0.069 | 0.22 | 0.8 | PAPER |
@@ -115,18 +115,18 @@ Updated 2026-11-22 03:45 UTC
 - 22 Nov 03:15 AVAXUSD buy S3 @ 6.509 SL 6.4449 → open
 - 22 Nov 03:00 XRPUSD buy S3 @ 0.9216 SL 0.912314 → open
 - 22 Nov 03:00 XAGUSD buy S3 @ 41.43 SL 41.25 → open
-- 22 Nov 02:45 SUIUSD buy S3 @ 0.6403 SL 0.633607 → open
+- 22 Nov 02:45 SUIUSD buy S3 @ 0.6403 SL 0.633607 → closed SL -1.06R. Stopped out after 64 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 47 closed, avg -0.32R, 47% won.
 - 22 Nov 02:45 SUIUSD sell S2 @ 0.6403 SL 0.646993 → open
 - 22 Nov 02:45 LTCUSD buy S3 @ 39.45 SL 39.059 → open
 - 22 Nov 02:45 LTCUSD sell S2 @ 39.45 SL 39.841 → open
 - 22 Nov 02:45 ADAUSD buy S3 @ 0.1423 SL 0.140857 → open
-- 22 Nov 02:45 DOGEUSD buy S3 @ 0.05457 SL 0.054091 → open
+- 22 Nov 02:45 DOGEUSD buy S3 @ 0.05457 SL 0.054091 → closed SL -1.07R. Stopped out after 61 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 47 closed, avg -0.32R, 47% won.
 - 22 Nov 02:45 DOGEUSD sell S2 @ 0.05457 SL 0.055049 → open
 - 22 Nov 02:45 XRPUSD sell S2 @ 0.9225 SL 0.931607 → open
-- 22 Nov 02:45 BNBUSD buy S3 @ 543.65 SL 539.55 → open
+- 22 Nov 02:45 BNBUSD buy S3 @ 543.65 SL 539.55 → closed SL -1.08R. Stopped out after 64 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 47 closed, avg -0.32R, 47% won.
 - 22 Nov 02:45 SOLUSD buy S3 @ 69.57 SL 68.949 → open
 - 22 Nov 02:45 SOLUSD sell S2 @ 69.57 SL 70.191 → open
-- 22 Nov 02:45 ETHUSD buy S3 @ 1670.66 SL 1654.88 → open
+- 22 Nov 02:45 ETHUSD buy S3 @ 1670.66 SL 1654.88 → closed SL -1.06R. Stopped out after 64 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade with the trend: 27 closed, avg +0.32R, 82% won.
 - 22 Nov 02:45 ETHUSD sell S2 @ 1670.66 SL 1686.44 → open
 - 22 Nov 02:45 BTCUSD buy S3 @ 59607.9 SL 59042.77 → open
 - 22 Nov 02:45 XAGUSD sell S2 @ 41.47 SL 41.65 → open
