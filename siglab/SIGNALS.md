@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 01:15 UTC
+Updated 2026-11-22 01:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-22 01:15 UTC
 
 ## Latest signals
 
+- 22 Nov 01:30 LTCUSD sell S1 @ 39.74 SL 40.175 → open
+- 22 Nov 01:30 DOGEUSD sell S1 @ 0.05509 SL 0.055641 → open
 - 22 Nov 01:15 SUIUSD buy S4 @ 0.6465 SL 0.638936 → open
 - 22 Nov 01:15 XRPUSD buy S1 @ 0.9322 SL 0.922129 → open
 - 22 Nov 01:15 BNBUSD buy S2 @ 550.48 SL 545.92 → open
@@ -170,5 +172,3 @@ Updated 2026-11-22 01:15 UTC
 - 21 Nov 02:45 LINKUSD sell S1 @ 8.484 SL 8.6414 → closed TP3 +0.91R. TP3 after 45 min (best 1.4R, worst -0.1R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
 - 21 Nov 02:45 AVAXUSD sell S2 @ 6.44 SL 6.5737 → closed TP3 +0.90R. TP3 after 45 min (best 1.3R, worst -0.1R). Lesson so far: breakout with the trend: 36 closed, avg -0.21R, 58% won.
 - 21 Nov 02:45 ADAUSD sell S2 @ 0.1422 SL 0.144771 → closed TP3 +1.05R. TP3 after 45 min (best 1.7R, worst -0.1R). Lesson so far: breakout with the trend: 36 closed, avg -0.21R, 58% won.
-- 21 Nov 02:45 ADAUSD sell S1 @ 0.1422 SL 0.144771 → closed TP3 +1.05R. TP3 after 45 min (best 1.7R, worst -0.1R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
-- 21 Nov 02:45 DOGEUSD sell S1 @ 0.05413 SL 0.055132 → closed TP3 +0.94R. TP3 after 46 min (best 2.1R, worst -0.2R). Lesson so far: trend pullback with the trend: 80 closed, avg +0.10R, 70% won.
