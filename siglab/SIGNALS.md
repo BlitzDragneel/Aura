@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 23:15 UTC
+Updated 2026-11-22 23:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -94,14 +94,14 @@ Updated 2026-11-22 23:15 UTC
 | XAGUSD S4 | 8 | -0.474 | -2.05 | 0.5 | PAPER |
 | XAGUSD S5 | 3 | -0.206 | -0.48 | 0.667 | PAPER |
 | XAGUSD S6 | 5 | 0.093 | 5.82 | 1.0 | PAPER |
-| XAGUSD S7 | 2 | -0.268 | -0.34 | 0.5 | PAPER |
+| XAGUSD S7 | 3 | -0.056 | -0.11 | 0.667 | PAPER |
 | XAUUSD S1 | 7 | 0.416 | 1.12 | 0.714 | PAPER |
 | XAUUSD S2 | 7 | -0.078 | -0.22 | 0.571 | PAPER |
 | XAUUSD S3 | 7 | -0.108 | -0.45 | 0.714 | PAPER |
 | XAUUSD S4 | 7 | 0.314 | 0.87 | 0.714 | PAPER |
 | XAUUSD S5 | 5 | 0.106 | 0.3 | 0.8 | PAPER |
 | XAUUSD S6 | 5 | -0.029 | -0.07 | 0.6 | PAPER |
-| XAUUSD S7 | 2 | 0.202 | 5.84 | 1.0 | PAPER |
+| XAUUSD S7 | 3 | 0.294 | 3.11 | 1.0 | PAPER |
 | XRPUSD S1 | 7 | 0.209 | 0.62 | 0.714 | PAPER |
 | XRPUSD S2 | 7 | 0.228 | 0.87 | 0.857 | PAPER |
 | XRPUSD S3 | 7 | -0.118 | -0.32 | 0.571 | PAPER |
@@ -112,8 +112,8 @@ Updated 2026-11-22 23:15 UTC
 
 ## Latest signals
 
-- 22 Nov 23:15 XAGUSD buy S7 @ 42.21 SL 42.03 → open
-- 22 Nov 23:15 XAUUSD buy S7 @ 3584.2 SL 3576.76 → open
+- 22 Nov 23:15 XAGUSD buy S7 @ 42.21 SL 42.03 → closed TP2+BE +0.37R. Reached TP2 then came back to the entry (best 2.2R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 37 closed, avg +0.33R, 86% won.
+- 22 Nov 23:15 XAUUSD buy S7 @ 3584.2 SL 3576.76 → closed TP2+BE +0.48R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 37 closed, avg +0.33R, 86% won.
 - 22 Nov 14:45 AVAXUSD buy S1 @ 6.693 SL 6.6301 → closed SL -1.06R. Stopped out after 460 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 97 closed, avg +0.16R, 72% won.
 - 22 Nov 08:45 BNBUSD buy S7 @ 546.33 SL 543.25 → closed TP3 +0.85R. TP3 after 65 min (best 2.1R, worst -0.7R). Lesson so far: big move against the trend: 25 closed, avg -0.20R, 56% won.
 - 22 Nov 08:45 ETHUSD buy S7 @ 1686.0 SL 1675.23 → closed TP3 +0.99R. TP3 after 65 min (best 2.5R, worst -0.5R). Lesson so far: big move against the trend: 25 closed, avg -0.20R, 56% won.
