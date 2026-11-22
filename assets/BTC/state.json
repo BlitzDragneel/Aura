@@ -15,7 +15,7 @@
 "since": "2026-11-20T04:00:52.208552+00:00",
 "previous": "WATCH",
 "reasons": [
-"daily volatility is high (87th percentile)",
+"daily volatility is high (88th percentile)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -990,14 +990,6 @@
 {
 "t": "2026-11-20T23:00:00+00:00",
 "price": 58919.5,
-"horizon": "swing",
-"thr": 0.062195756195196156,
-"watch": true,
-"p": 0.284
-},
-{
-"t": "2026-11-20T23:00:00+00:00",
-"price": 58919.5,
 "horizon": "hold",
 "thr": 0.15548939048799038,
 "watch": false,
@@ -1310,14 +1302,6 @@
 {
 "t": "2026-11-21T19:00:00+00:00",
 "price": 60331.2,
-"horizon": "day",
-"thr": 0.029622673319466997,
-"watch": true,
-"p": 0.075
-},
-{
-"t": "2026-11-21T19:00:00+00:00",
-"price": 60331.2,
 "horizon": "swing",
 "thr": 0.05924534663893399,
 "watch": true,
@@ -1402,30 +1386,54 @@
 "thr": 0.10245661120992502,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-21T23:00:00+00:00",
+"price": 60183.2,
+"horizon": "day",
+"thr": 0.02052447479410484,
+"watch": false,
+"p": 0.066
+},
+{
+"t": "2026-11-21T23:00:00+00:00",
+"price": 60183.2,
+"horizon": "swing",
+"thr": 0.04104894958820968,
+"watch": true,
+"p": 0.153
+},
+{
+"t": "2026-11-21T23:00:00+00:00",
+"price": 60183.2,
+"horizon": "hold",
+"thr": 0.10262237397052419,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 146,
+"n": 147,
 "big": 22,
-"watch_n": 48,
+"watch_n": 49,
 "watch_big": 7,
-"brier": 19.041141000000003,
+"brier": 19.046766,
 "brier_base": 0.0,
-"scout_n": 146
+"scout_n": 147
 },
 "swing": {
-"n": 126,
+"n": 127,
 "big": 25,
-"watch_n": 59,
+"watch_n": 60,
 "watch_big": 15,
-"brier": 21.157275000000002,
+"brier": 21.237931000000003,
 "brier_base": 0.0,
-"scout_n": 126
+"scout_n": 127
 }
 },
 "calls_record": {},
-"runs": 599,
+"runs": 600,
 "created": "2026-11-15T06:42:30",
-"last_run": "2026-11-21T23:45:45.270193+00:00"
+"last_run": "2026-11-22T00:00:52.691875+00:00"
 }

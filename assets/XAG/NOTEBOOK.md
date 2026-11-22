@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 146 readings scored; big moves followed 10% of them, 6% after a WATCH (51 WATCH readings) - too few to judge yet.
+- My own record: 147 readings scored; big moves followed 10% of them, 6% after a WATCH (51 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 126 readings scored; big moves followed 39% of them, 20% after a WATCH (56 WATCH readings) - too few to judge yet.
+- My own record: 127 readings scored; big moves followed 39% of them, 19% after a WATCH (57 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -31,12 +31,12 @@ Built automatically from the research findings, the approved rules and my own fo
 
 - Over the last 20 days the busiest session was Asia (average hourly move 0.44%) and the quietest London (0.24%).
 - At weekends, while spot is closed, the perpetual moves 46% as much per hour as on weekdays: weekend prices are thin and less reliable.
-- A typical day ranges 2.9% from low to high (last 60 days); 38% of those days closed higher.
-- Over the last 30 days the price moved -28.1% (a fact, not a forecast).
+- A typical day ranges 2.8% from low to high (last 60 days); 38% of those days closed higher.
+- Over the last 30 days the price moved -24.0% (a fact, not a forecast).
 
 ## Right now
 
-- Price 41.55; volatility regime quiet (hourly ATR 0.401% of price, 14.4th percentile).
+- Price 41.56; volatility regime quiet (hourly ATR 0.407% of price, 14.6th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAGUSD 41.20 (stale: market closed).
 
