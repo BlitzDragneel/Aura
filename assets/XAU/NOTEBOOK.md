@@ -15,17 +15,17 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 163 readings scored; big moves followed 12% of them, 14% after a WATCH (58 WATCH readings) - too few to judge yet.
+- My own record: 164 readings scored; big moves followed 12% of them, 14% after a WATCH (58 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 143 readings scored; big moves followed 36% of them, 29% after a WATCH (78 WATCH readings) - too few to judge yet.
+- My own record: 144 readings scored; big moves followed 35% of them, 29% after a WATCH (79 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: no readings scored yet (each is scored once its horizon has passed).
+- My own record: 1 readings scored; big moves followed 100% of them - too few to judge yet.
 
 ## Habits I measure myself
 
@@ -36,7 +36,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 3570.4; volatility regime quiet (hourly ATR 0.23% of price, 13.0th percentile).
+- Price 3569.9; volatility regime quiet (hourly ATR 0.216% of price, 11.1th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAUUSD 3534.41 (stale: market closed).
 

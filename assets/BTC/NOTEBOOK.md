@@ -15,17 +15,17 @@ Built automatically from the research findings, the approved rules and my own fo
 - | Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025–26 | Verdict |
 - | E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | −12…−17, t −3…−9 | −13…−17, t −7…−11 (n 800–3,200); gross ≈ 0 | FAIL |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 163 readings scored; big moves followed 17% of them, 14% after a WATCH (49 WATCH readings) - too few to judge yet.
+- My own record: 164 readings scored; big moves followed 16% of them, 14% after a WATCH (49 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 143 readings scored; big moves followed 17% of them, 20% after a WATCH (76 WATCH readings) - too few to judge yet.
+- My own record: 144 readings scored; big moves followed 17% of them, 19% after a WATCH (77 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
 - Tested rule I can call: btc_gold_invvol (grade B, status paper). Evidence: edges/results/E94_result.json; edges/results/E97_result.json; edges/results/E97_leverage.json; edges/assets/BTC/FINDINGS.md
-- My own record: no readings scored yet (each is scored once its horizon has passed).
+- My own record: 1 readings scored; big moves followed 0% of them - too few to judge yet.
 
 ## Habits I measure myself
 
@@ -35,7 +35,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 61315.0; volatility regime active (hourly ATR 1.103% of price, 86.0th percentile).
+- Price 61222.2; volatility regime active (hourly ATR 1.066% of price, 83.7th percentile).
 - Bitcoin trades 24/7; weekend liquidity is thinner.
 
 ## My calls so far
