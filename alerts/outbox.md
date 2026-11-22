@@ -973,3 +973,10 @@ Market now: trend down, volatility low, Asia session
 
 ## 2026-11-22 05:31:13 UTC
 🔁 Learning: fib pullback with the trend is now back to normal.
+
+## 2026-11-22 08:46:07 UTC
+⚡ Bitcoin: BIG MOVE under way right now (moved +746.70 in the last hour, twice its normal hourly range), price ~59765.1
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+🔁 Learning: trend pullback with the trend is now EARNED (trade plans sent again, tagged) after 94 live signals (33 separate moments) averaging +0.20R.
