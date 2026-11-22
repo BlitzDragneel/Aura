@@ -954,3 +954,8 @@ Market now: trend down, volatility low, Asia session
 ⚡ Silver: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~41.61
 Market now: trend down, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+## 2026-11-22 02:31:03 UTC
+⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~59821.1
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.58R). Logged and scored anyway.
