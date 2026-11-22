@@ -959,3 +959,14 @@ Market now: trend down, volatility low, Asia session
 ⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~59821.1
 Market now: trend up, volatility low, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.58R). Logged and scored anyway.
+
+## 2026-11-22 02:46:01 UTC
+⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3556.6
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Silver: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~41.47
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 55 live signals (25 separate moments) averaging -0.24R.
