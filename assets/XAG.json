@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-22T21:15:44.907536+00:00",
+ "asof": "2026-11-22T21:31:44.561279+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.53,
-  "bar": "2026-11-22T21:00:00+00:00",
+  "price": 41.57,
+  "bar": "2026-11-22T21:15:00+00:00",
   "trend": {
    "15m": {
-    "state": "flat",
-    "close": 41.53,
-    "ma20": 41.696999999999996,
-    "ma50": 41.68600000000001,
-    "slope_atr": -0.87,
-    "bar": "2026-11-22T21:00:00+00:00"
+    "state": "down",
+    "close": 41.57,
+    "ma20": 41.685,
+    "ma50": 41.687,
+    "slope_atr": -0.8,
+    "bar": "2026-11-22T21:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -98,7 +98,7 @@
    "bid": 41.1727,
    "ask": 41.2323,
    "spread": 0.0596,
-   "age_s": 170145,
+   "age_s": 171104,
    "stale": true,
    "note": "market closed or feed paused",
    "source": "swissquote"
@@ -256,7 +256,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.53; volatility regime quiet (hourly ATR 0.321% of price, 10.9th percentile).",
+    "Price 41.57; volatility regime quiet (hourly ATR 0.321% of price, 10.9th percentile).",
     "spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.",
     "Spot XAGUSD 41.20 (stale: market closed)."
    ]
@@ -268,6 +268,6 @@
    ]
   }
  ],
- "runs": 688,
+ "runs": 689,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
