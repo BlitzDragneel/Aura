@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 23:01 UTC
+Updated 2026-11-22 23:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-22 23:01 UTC
 
 ## Latest signals
 
+- 22 Nov 23:15 XAGUSD buy S7 @ 42.21 SL 42.03 → open
+- 22 Nov 23:15 XAUUSD buy S7 @ 3584.2 SL 3576.76 → open
 - 22 Nov 14:45 AVAXUSD buy S1 @ 6.693 SL 6.6301 → closed SL -1.06R. Stopped out after 460 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 97 closed, avg +0.16R, 72% won.
 - 22 Nov 08:45 BNBUSD buy S7 @ 546.33 SL 543.25 → closed TP3 +0.85R. TP3 after 65 min (best 2.1R, worst -0.7R). Lesson so far: big move against the trend: 25 closed, avg -0.20R, 56% won.
 - 22 Nov 08:45 ETHUSD buy S7 @ 1686.0 SL 1675.23 → closed TP3 +0.99R. TP3 after 65 min (best 2.5R, worst -0.5R). Lesson so far: big move against the trend: 25 closed, avg -0.20R, 56% won.
@@ -170,5 +172,3 @@ Updated 2026-11-22 23:01 UTC
 - 22 Nov 00:00 SOLUSD sell S4 @ 70.26 SL 70.981 → closed TP2+BE +0.58R. Reached TP2 then came back to the entry (best 2.2R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 60 closed, avg -0.11R, 60% won.
 - 22 Nov 00:00 BTCUSD sell S4 @ 60183.2 SL 60800.81 → closed TP3 +1.25R. TP3 after 318 min (best 2.3R, worst -0.2R). Lesson so far: fib pullback with the trend: 55 closed, avg -0.17R, 56% won.
 - 22 Nov 00:00 XAUUSD sell S4 @ 3563.8 SL 3574.12 → closed TP2+BE +0.83R. Reached TP2 then came back to the entry (best 2.2R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 62 closed, avg -0.10R, 61% won.
-- 21 Nov 16:15 SOLUSD buy S4 @ 70.31 SL 68.929 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 34 closed, avg +0.01R, 71% won.
-- 21 Nov 12:15 LTCUSD buy S4 @ 39.12 SL 38.402 → closed TP3 +0.45R. TP3 after 71 min (best 0.7R, worst -0.0R). Lesson so far: fib pullback against the trend: 32 closed, avg -0.02R, 69% won.
