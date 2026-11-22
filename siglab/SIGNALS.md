@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 17:30 UTC
+Updated 2026-11-22 17:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -90,7 +90,7 @@ Updated 2026-11-22 17:30 UTC
 | US30 S7 | 3 | 0.146 | 0.24 | 0.667 | PAPER |
 | XAGUSD S1 | 7 | 0.141 | 0.43 | 0.714 | PAPER |
 | XAGUSD S2 | 7 | -0.324 | -1.16 | 0.571 | PAPER |
-| XAGUSD S3 | 6 | 0.198 | 0.66 | 0.833 | PAPER |
+| XAGUSD S3 | 7 | 0.314 | 1.13 | 0.857 | PAPER |
 | XAGUSD S4 | 8 | -0.474 | -2.05 | 0.5 | PAPER |
 | XAGUSD S5 | 3 | -0.206 | -0.48 | 0.667 | PAPER |
 | XAGUSD S6 | 5 | 0.093 | 5.82 | 1.0 | PAPER |
@@ -126,7 +126,7 @@ Updated 2026-11-22 17:30 UTC
 - 22 Nov 04:15 ETHUSD sell S4 @ 1664.47 SL 1677.2 → closed TP2+BE +0.54R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 56 closed, avg -0.15R, 57% won.
 - 22 Nov 03:15 AVAXUSD buy S3 @ 6.509 SL 6.4449 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 50 closed, avg -0.37R, 44% won.
 - 22 Nov 03:00 XRPUSD buy S3 @ 0.9216 SL 0.912314 → closed SL -1.06R. Stopped out after 157 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade with the trend: 30 closed, avg +0.19R, 73% won.
-- 22 Nov 03:00 XAGUSD buy S3 @ 41.43 SL 41.25 → open
+- 22 Nov 03:00 XAGUSD buy S3 @ 41.43 SL 41.25 → closed TP3 +1.01R. TP3 after 878 min (best 2.4R, worst -0.9R). Lesson so far: stretch fade against the trend: 53 closed, avg -0.39R, 43% won.
 - 22 Nov 02:45 SUIUSD buy S3 @ 0.6403 SL 0.633607 → closed SL -1.06R. Stopped out after 64 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 47 closed, avg -0.32R, 47% won.
 - 22 Nov 02:45 SUIUSD sell S2 @ 0.6403 SL 0.646993 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 49 closed, avg +0.01R, 65% won.
 - 22 Nov 02:45 LTCUSD buy S3 @ 39.45 SL 39.059 → closed SL -1.06R. Stopped out after 153 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 51 closed, avg -0.36R, 45% won.
