@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 03:30 UTC
+Updated 2026-11-22 03:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -14,7 +14,7 @@ Updated 2026-11-22 03:30 UTC
 | AVAXUSD S1 | 6 | -0.153 | -0.37 | 0.5 | PAPER |
 | AVAXUSD S2 | 6 | -0.135 | -0.43 | 0.667 | PAPER |
 | AVAXUSD S3 | 6 | 0.048 | 0.13 | 0.667 | PAPER |
-| AVAXUSD S4 | 6 | -0.222 | -0.59 | 0.5 | PAPER |
+| AVAXUSD S4 | 7 | -0.341 | -1.0 | 0.429 | PAPER |
 | AVAXUSD S5 | 5 | -0.819 | -3.52 | 0.2 | PAPER |
 | AVAXUSD S6 | 5 | 0.13 | 0.39 | 0.8 | PAPER |
 | AVAXUSD S7 | 5 | -0.154 | -0.41 | 0.6 | PAPER |
@@ -97,7 +97,7 @@ Updated 2026-11-22 03:30 UTC
 | XAGUSD S7 | 2 | -0.268 | -0.34 | 0.5 | PAPER |
 | XAUUSD S1 | 6 | 0.347 | 0.8 | 0.667 | PAPER |
 | XAUUSD S2 | 6 | -0.128 | -0.3 | 0.5 | PAPER |
-| XAUUSD S3 | 6 | 0.044 | 0.2 | 0.833 | PAPER |
+| XAUUSD S3 | 7 | -0.108 | -0.45 | 0.714 | PAPER |
 | XAUUSD S4 | 6 | 0.228 | 0.55 | 0.667 | PAPER |
 | XAUUSD S5 | 5 | 0.106 | 0.3 | 0.8 | PAPER |
 | XAUUSD S6 | 5 | -0.029 | -0.07 | 0.6 | PAPER |
@@ -130,13 +130,13 @@ Updated 2026-11-22 03:30 UTC
 - 22 Nov 02:45 ETHUSD sell S2 @ 1670.66 SL 1686.44 → open
 - 22 Nov 02:45 BTCUSD buy S3 @ 59607.9 SL 59042.77 → open
 - 22 Nov 02:45 XAGUSD sell S2 @ 41.47 SL 41.65 → open
-- 22 Nov 02:45 XAUUSD buy S3 @ 3556.6 SL 3546.53 → open
+- 22 Nov 02:45 XAUUSD buy S3 @ 3556.6 SL 3546.53 → closed SL -1.02R. Stopped out after 53 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 46 closed, avg -0.31R, 48% won.
 - 22 Nov 02:45 XAUUSD sell S2 @ 3556.6 SL 3566.67 → open
 - 22 Nov 02:30 ADAUSD sell S2 @ 0.1433 SL 0.144743 → open
 - 22 Nov 02:30 BTCUSD sell S2 @ 59821.1 SL 60386.23 → open
 - 22 Nov 02:15 BNBUSD sell S1 @ 548.67 SL 552.77 → open
 - 22 Nov 02:15 XAGUSD sell S1 @ 41.61 SL 41.79 → open
-- 22 Nov 01:45 AVAXUSD buy S4 @ 6.571 SL 6.4948 → open
+- 22 Nov 01:45 AVAXUSD buy S4 @ 6.571 SL 6.4948 → closed SL -1.05R. Stopped out after 110 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 38 closed, avg -0.07R, 66% won.
 - 22 Nov 01:45 DOGEUSD buy S4 @ 0.05519 SL 0.054639 → closed SL -1.06R. Stopped out after 53 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 35 closed, avg +0.01R, 71% won.
 - 22 Nov 01:45 BNBUSD buy S4 @ 549.39 SL 544.83 → closed SL -1.07R. Stopped out after 47 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 35 closed, avg +0.01R, 71% won.
 - 22 Nov 01:45 XAUUSD sell S1 @ 3564.1 SL 3574.49 → open
