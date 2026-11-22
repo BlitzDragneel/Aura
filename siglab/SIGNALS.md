@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 00:30 UTC
+Updated 2026-11-22 00:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,9 @@ Updated 2026-11-22 00:30 UTC
 
 ## Latest signals
 
+- 22 Nov 00:45 SUIUSD sell S1 @ 0.6466 SL 0.654507 → open
+- 22 Nov 00:45 ADAUSD sell S1 @ 0.1442 SL 0.145843 → open
+- 22 Nov 00:45 ETHUSD sell S1 @ 1683.33 SL 1701.61 → open
 - 22 Nov 00:30 XAGUSD sell S4 @ 41.57 SL 41.75 → open
 - 22 Nov 00:15 LINKUSD sell S1 @ 8.599 SL 8.6878 → open
 - 22 Nov 00:15 XRPUSD buy S4 @ 0.933 SL 0.922707 → open
@@ -169,6 +172,3 @@ Updated 2026-11-22 00:30 UTC
 - 21 Nov 02:45 BNBUSD buy S3 @ 534.8 SL 527.08 → closed SL -1.04R. Stopped out after 45 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 33 closed, avg -0.13R, 58% won.
 - 21 Nov 02:45 BNBUSD sell S2 @ 534.8 SL 542.52 → closed TP3 +0.92R. TP3 after 46 min (best 1.8R, worst -0.1R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
 - 21 Nov 02:45 SOLUSD sell S2 @ 68.48 SL 69.745 → closed TP3 +0.90R. TP3 after 46 min (best 1.9R, worst -0.2R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
-- 21 Nov 02:45 BTCUSD sell S2 @ 58597.0 SL 59478.29 → closed TP3 +0.96R. TP3 after 46 min (best 1.6R, worst -0.1R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
-- 21 Nov 02:45 XAUUSD sell S4 @ 3543.9 SL 3567.66 → closed TP2+BE +0.76R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 50 closed, avg -0.12R, 60% won.
-- 21 Nov 02:15 LTCUSD sell S1 @ 40.45 SL 41.12 → closed TP3 +1.00R. TP3 after 75 min (best 1.8R, worst -0.2R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
