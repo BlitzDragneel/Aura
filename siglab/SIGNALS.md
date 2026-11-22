@@ -1,12 +1,12 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 05:30 UTC
+Updated 2026-11-22 05:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 6 | 0.047 | 0.12 | 0.667 | PAPER |
 | ADAUSD S2 | 6 | -0.505 | -1.38 | 0.333 | PAPER |
-| ADAUSD S3 | 3 | 0.031 | 0.06 | 0.667 | PAPER |
+| ADAUSD S3 | 4 | -0.24 | -0.51 | 0.5 | PAPER |
 | ADAUSD S4 | 7 | -0.033 | -0.12 | 0.714 | PAPER |
 | ADAUSD S5 | 3 | 0.168 | 0.27 | 0.667 | PAPER |
 | ADAUSD S6 | 5 | -0.036 | -0.14 | 0.8 | PAPER |
@@ -104,7 +104,7 @@ Updated 2026-11-22 05:30 UTC
 | XAUUSD S7 | 2 | 0.202 | 5.84 | 1.0 | PAPER |
 | XRPUSD S1 | 7 | 0.209 | 0.62 | 0.714 | PAPER |
 | XRPUSD S2 | 7 | 0.228 | 0.87 | 0.857 | PAPER |
-| XRPUSD S3 | 6 | 0.038 | 0.1 | 0.667 | PAPER |
+| XRPUSD S3 | 7 | -0.118 | -0.32 | 0.571 | PAPER |
 | XRPUSD S4 | 7 | -0.061 | -0.16 | 0.571 | PAPER |
 | XRPUSD S5 | 4 | 0.203 | 0.43 | 0.75 | PAPER |
 | XRPUSD S6 | 5 | 0.153 | 0.41 | 0.8 | PAPER |
@@ -115,13 +115,13 @@ Updated 2026-11-22 05:30 UTC
 - 22 Nov 04:15 LTCUSD sell S4 @ 39.41 SL 39.746 → open
 - 22 Nov 04:15 ETHUSD sell S4 @ 1664.47 SL 1677.2 → open
 - 22 Nov 03:15 AVAXUSD buy S3 @ 6.509 SL 6.4449 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 50 closed, avg -0.37R, 44% won.
-- 22 Nov 03:00 XRPUSD buy S3 @ 0.9216 SL 0.912314 → open
+- 22 Nov 03:00 XRPUSD buy S3 @ 0.9216 SL 0.912314 → closed SL -1.06R. Stopped out after 157 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade with the trend: 30 closed, avg +0.19R, 73% won.
 - 22 Nov 03:00 XAGUSD buy S3 @ 41.43 SL 41.25 → open
 - 22 Nov 02:45 SUIUSD buy S3 @ 0.6403 SL 0.633607 → closed SL -1.06R. Stopped out after 64 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 47 closed, avg -0.32R, 47% won.
 - 22 Nov 02:45 SUIUSD sell S2 @ 0.6403 SL 0.646993 → closed TP1+BE +0.19R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 49 closed, avg +0.01R, 65% won.
 - 22 Nov 02:45 LTCUSD buy S3 @ 39.45 SL 39.059 → closed SL -1.06R. Stopped out after 153 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 51 closed, avg -0.36R, 45% won.
 - 22 Nov 02:45 LTCUSD sell S2 @ 39.45 SL 39.841 → open
-- 22 Nov 02:45 ADAUSD buy S3 @ 0.1423 SL 0.140857 → open
+- 22 Nov 02:45 ADAUSD buy S3 @ 0.1423 SL 0.140857 → closed SL -1.05R. Stopped out after 172 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 52 closed, avg -0.37R, 44% won.
 - 22 Nov 02:45 DOGEUSD buy S3 @ 0.05457 SL 0.054091 → closed SL -1.07R. Stopped out after 61 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 47 closed, avg -0.32R, 47% won.
 - 22 Nov 02:45 DOGEUSD sell S2 @ 0.05457 SL 0.055049 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 49 closed, avg +0.01R, 65% won.
 - 22 Nov 02:45 XRPUSD sell S2 @ 0.9225 SL 0.931607 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 35 closed, avg -0.53R, 37% won.
