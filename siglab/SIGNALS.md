@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 01:30 UTC
+Updated 2026-11-22 01:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,10 @@ Updated 2026-11-22 01:30 UTC
 
 ## Latest signals
 
+- 22 Nov 01:45 AVAXUSD buy S4 @ 6.571 SL 6.4948 → open
+- 22 Nov 01:45 DOGEUSD buy S4 @ 0.05519 SL 0.054639 → open
+- 22 Nov 01:45 BNBUSD buy S4 @ 549.39 SL 544.83 → open
+- 22 Nov 01:45 XAUUSD sell S1 @ 3564.1 SL 3574.49 → open
 - 22 Nov 01:30 LTCUSD sell S1 @ 39.74 SL 40.175 → open
 - 22 Nov 01:30 DOGEUSD sell S1 @ 0.05509 SL 0.055641 → open
 - 22 Nov 01:15 SUIUSD buy S4 @ 0.6465 SL 0.638936 → open
@@ -168,7 +172,3 @@ Updated 2026-11-22 01:30 UTC
 - 21 Nov 02:45 SUIUSD buy S3 @ 0.6393 SL 0.625964 → closed SL -1.03R. Stopped out after 45 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 33 closed, avg -0.13R, 58% won.
 - 21 Nov 02:45 SUIUSD sell S2 @ 0.6393 SL 0.652636 → closed TP3 +1.03R. TP3 after 46 min (best 2.3R, worst -0.1R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
 - 21 Nov 02:45 LTCUSD sell S2 @ 40.22 SL 40.89 → closed TP3 +0.96R. TP3 after 46 min (best 2.4R, worst -0.1R). Lesson so far: breakout with the trend: 39 closed, avg -0.12R, 62% won.
-- 21 Nov 02:45 LINKUSD sell S2 @ 8.484 SL 8.6414 → closed TP3 +0.91R. TP3 after 45 min (best 1.4R, worst -0.1R). Lesson so far: breakout with the trend: 36 closed, avg -0.21R, 58% won.
-- 21 Nov 02:45 LINKUSD sell S1 @ 8.484 SL 8.6414 → closed TP3 +0.91R. TP3 after 45 min (best 1.4R, worst -0.1R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
-- 21 Nov 02:45 AVAXUSD sell S2 @ 6.44 SL 6.5737 → closed TP3 +0.90R. TP3 after 45 min (best 1.3R, worst -0.1R). Lesson so far: breakout with the trend: 36 closed, avg -0.21R, 58% won.
-- 21 Nov 02:45 ADAUSD sell S2 @ 0.1422 SL 0.144771 → closed TP3 +1.05R. TP3 after 45 min (best 1.7R, worst -0.1R). Lesson so far: breakout with the trend: 36 closed, avg -0.21R, 58% won.

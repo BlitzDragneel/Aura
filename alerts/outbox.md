@@ -944,3 +944,8 @@ Market now: trend up, volatility low, Asia session
 ⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~41.57
 Market now: trend down, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-22 01:46:00 UTC
+⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3564.1
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
