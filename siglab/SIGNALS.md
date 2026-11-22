@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 06:30 UTC
+Updated 2026-11-22 06:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -42,7 +42,7 @@ Updated 2026-11-22 06:30 UTC
 | ETHUSD S1 | 7 | -0.045 | -0.16 | 0.714 | PAPER |
 | ETHUSD S2 | 7 | -0.307 | -1.15 | 0.571 | PAPER |
 | ETHUSD S3 | 7 | 0.015 | 0.03 | 0.571 | PAPER |
-| ETHUSD S4 | 7 | -0.205 | -0.66 | 0.571 | PAPER |
+| ETHUSD S4 | 8 | -0.112 | -0.4 | 0.625 | PAPER |
 | ETHUSD S5 | 4 | -0.222 | -0.43 | 0.5 | PAPER |
 | ETHUSD S6 | 5 | 0.539 | 2.07 | 1.0 | PAPER |
 | ETHUSD S7 | 6 | 0.272 | 0.93 | 0.833 | PAPER |
@@ -113,7 +113,7 @@ Updated 2026-11-22 06:30 UTC
 ## Latest signals
 
 - 22 Nov 04:15 LTCUSD sell S4 @ 39.41 SL 39.746 → open
-- 22 Nov 04:15 ETHUSD sell S4 @ 1664.47 SL 1677.2 → open
+- 22 Nov 04:15 ETHUSD sell S4 @ 1664.47 SL 1677.2 → closed TP2+BE +0.54R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 56 closed, avg -0.15R, 57% won.
 - 22 Nov 03:15 AVAXUSD buy S3 @ 6.509 SL 6.4449 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 50 closed, avg -0.37R, 44% won.
 - 22 Nov 03:00 XRPUSD buy S3 @ 0.9216 SL 0.912314 → closed SL -1.06R. Stopped out after 157 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade with the trend: 30 closed, avg +0.19R, 73% won.
 - 22 Nov 03:00 XAGUSD buy S3 @ 41.43 SL 41.25 → open
