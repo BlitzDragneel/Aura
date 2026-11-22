@@ -934,3 +934,8 @@ Market now: trend down, volatility low, late session
 ⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~60183.2
 Market now: trend down, volatility low, late session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-22 00:15:56 UTC
+⚡ Bitcoin: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~60289.1
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.

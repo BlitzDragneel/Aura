@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 00:01 UTC
+Updated 2026-11-22 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,9 @@ Updated 2026-11-22 00:01 UTC
 
 ## Latest signals
 
+- 22 Nov 00:15 LINKUSD sell S1 @ 8.599 SL 8.6878 → open
+- 22 Nov 00:15 XRPUSD buy S4 @ 0.933 SL 0.922707 → open
+- 22 Nov 00:15 BTCUSD buy S1 @ 60289.1 SL 59671.49 → open
 - 22 Nov 00:00 LINKUSD sell S4 @ 8.608 SL 8.6968 → open
 - 22 Nov 00:00 ADAUSD sell S4 @ 0.1443 SL 0.145943 → open
 - 22 Nov 00:00 SOLUSD sell S4 @ 70.26 SL 70.981 → open
@@ -169,6 +172,3 @@ Updated 2026-11-22 00:01 UTC
 - 21 Nov 02:45 XAUUSD sell S4 @ 3543.9 SL 3567.66 → closed TP2+BE +0.76R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 50 closed, avg -0.12R, 60% won.
 - 21 Nov 02:15 LTCUSD sell S1 @ 40.45 SL 41.12 → closed TP3 +1.00R. TP3 after 75 min (best 1.8R, worst -0.2R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
 - 21 Nov 02:00 XAGUSD sell S1 @ 41.36 SL 41.869 → closed TP2+BE +0.67R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 83 closed, avg +0.13R, 71% won.
-- 21 Nov 02:00 XAUUSD sell S1 @ 3542.5 SL 3566.26 → closed TP2+BE +0.77R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 83 closed, avg +0.13R, 71% won.
-- 21 Nov 01:30 AVAXUSD sell S1 @ 6.488 SL 6.6213 → closed TP3 +0.92R. TP3 after 120 min (best 1.7R, worst -0.2R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
-- 21 Nov 01:30 XRPUSD sell S1 @ 0.9067 SL 0.922979 → closed TP3 +0.94R. TP3 after 120 min (best 1.4R, worst -0.3R). Lesson so far: trend pullback with the trend: 72 closed, avg +0.00R, 67% won.
