@@ -970,3 +970,6 @@ Market now: trend down, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
 
 🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 55 live signals (25 separate moments) averaging -0.24R.
+
+## 2026-11-22 05:31:13 UTC
+🔁 Learning: fib pullback with the trend is now back to normal.
