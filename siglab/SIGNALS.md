@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-22 04:15 UTC
+Updated 2026-11-22 04:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -89,7 +89,7 @@ Updated 2026-11-22 04:15 UTC
 | US30 S6 | 3 | 0.507 | 0.33 | 0.333 | PAPER |
 | US30 S7 | 3 | 0.146 | 0.24 | 0.667 | PAPER |
 | XAGUSD S1 | 6 | 0.055 | 0.15 | 0.667 | PAPER |
-| XAGUSD S2 | 6 | -0.383 | -1.19 | 0.5 | PAPER |
+| XAGUSD S2 | 7 | -0.324 | -1.16 | 0.571 | PAPER |
 | XAGUSD S3 | 6 | 0.198 | 0.66 | 0.833 | PAPER |
 | XAGUSD S4 | 7 | -0.544 | -2.14 | 0.429 | PAPER |
 | XAGUSD S5 | 3 | -0.206 | -0.48 | 0.667 | PAPER |
@@ -131,7 +131,7 @@ Updated 2026-11-22 04:15 UTC
 - 22 Nov 02:45 ETHUSD buy S3 @ 1670.66 SL 1654.88 → closed SL -1.06R. Stopped out after 64 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade with the trend: 27 closed, avg +0.32R, 82% won.
 - 22 Nov 02:45 ETHUSD sell S2 @ 1670.66 SL 1686.44 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 35 closed, avg -0.53R, 37% won.
 - 22 Nov 02:45 BTCUSD buy S3 @ 59607.9 SL 59042.77 → open
-- 22 Nov 02:45 XAGUSD sell S2 @ 41.47 SL 41.65 → open
+- 22 Nov 02:45 XAGUSD sell S2 @ 41.47 SL 41.65 → closed TP1+BE +0.03R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 51 closed, avg +0.02R, 67% won.
 - 22 Nov 02:45 XAUUSD buy S3 @ 3556.6 SL 3546.53 → closed SL -1.02R. Stopped out after 53 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 46 closed, avg -0.31R, 48% won.
 - 22 Nov 02:45 XAUUSD sell S2 @ 3556.6 SL 3566.67 → open
 - 22 Nov 02:30 ADAUSD sell S2 @ 0.1433 SL 0.144743 → open
