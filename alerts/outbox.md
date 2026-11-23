@@ -1026,3 +1026,8 @@ Market now: trend up, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
 
 🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 65 live signals (28 separate moments) averaging -0.23R.
+
+## 2026-11-23 02:15:56 UTC
+⚡ Gold: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~3594.2
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move with the trend lost money (avg -0.23R). Logged and scored anyway.

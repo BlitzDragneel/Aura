@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 02:00 UTC
+Updated 2026-11-23 02:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-23 02:00 UTC
 
 ## Latest signals
 
+- 23 Nov 02:15 XAUUSD buy S4 @ 3594.2 SL 3580.04 → open
 - 23 Nov 01:15 SUIUSD sell S2 @ 0.65 SL 0.655293 → open
 - 23 Nov 01:15 BNBUSD buy S4 @ 559.05 SL 555.65 → closed SL -1.10R. Stopped out after 40 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 65 closed, avg -0.11R, 60% won.
 - 23 Nov 01:15 XAUUSD buy S2 @ 3625.3 SL 3615.09 → closed TP2+BE +0.42R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 55 closed, avg +0.03R, 69% won.
@@ -171,4 +172,3 @@ Updated 2026-11-23 02:00 UTC
 - 22 Nov 01:30 DOGEUSD sell S1 @ 0.05509 SL 0.055641 → closed TP2+BE +0.69R. Reached TP2 then came back to the entry (best 2.5R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 93 closed, avg +0.13R, 71% won.
 - 22 Nov 01:15 SUIUSD buy S4 @ 0.6465 SL 0.638936 → closed SL -1.05R. Stopped out after 90 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 37 closed, avg -0.04R, 68% won.
 - 22 Nov 01:15 XRPUSD buy S1 @ 0.9322 SL 0.922129 → closed SL -1.06R. Stopped out after 84 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 86 closed, avg +0.14R, 72% won.
-- 22 Nov 01:15 BNBUSD buy S2 @ 550.48 SL 545.92 → closed SL -1.07R. Stopped out after 69 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 34 closed, avg -0.51R, 38% won.
