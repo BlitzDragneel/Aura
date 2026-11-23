@@ -1070,3 +1070,8 @@ Market now: trend up, volatility high, London session
 ⚡ Silver: SESSION DRIVE right now (London open drive), price ~42.92
 Market now: trend up, volatility high, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-23 09:01:05 UTC
+⚡ Gold: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~3621.0
+Market now: trend up, volatility high, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
