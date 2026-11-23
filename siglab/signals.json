@@ -22873,7 +22873,7 @@
     3611.58
    ],
    "R": 9.436,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -22882,7 +22882,15 @@
    "day": "2026-11-23",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3591.9,
+   "outcome": "SL",
+   "R_ladder": -1.021,
+   "R_tp1": -1.021,
+   "pips": -95.4,
+   "closed_ms": 1795392240000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 4 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 39 closed, avg +0.33R, 87% won."
   },
   {
    "id": "XAGUSD-S3-1795392000000",
@@ -22937,7 +22945,7 @@
     42.818
    ],
    "R": 0.2114,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -22946,7 +22954,46 @@
    "day": "2026-11-23",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 42.42,
+   "outcome": "SL",
+   "R_ladder": -1.142,
+   "R_tp1": -1.142,
+   "pips": -24.1,
+   "closed_ms": 1795392240000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 4 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 39 closed, avg +0.33R, 87% won."
+  },
+  {
+   "id": "SUIUSD-S4-1795392900000",
+   "symbol": "SUIUSD",
+   "setup": "S4",
+   "side": "sell",
+   "why": "bounced back half of a strong down-leg",
+   "state": {
+    "trend": "up",
+    "vol": "low",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795392900000,
+   "ref_price": 0.6549,
+   "stop": 0.660157,
+   "targets": [
+    0.650999,
+    0.648239,
+    0.63804
+   ],
+   "R": 0.0052571,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-23",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -23674,11 +23721,11 @@
     "grade": "PAPER"
    },
    "XAGUSD S7": {
-    "n": 3,
-    "avg_R": -0.056,
-    "t": -0.11,
-    "win": 0.667,
-    "total_R": -0.17,
+    "n": 4,
+    "avg_R": -0.327,
+    "t": -0.73,
+    "win": 0.5,
+    "total_R": -1.31,
     "grade": "PAPER"
    },
    "XAUUSD S1": {
@@ -23730,11 +23777,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S7": {
-    "n": 3,
-    "avg_R": 0.294,
-    "t": 3.11,
-    "win": 1.0,
-    "total_R": 0.88,
+    "n": 4,
+    "avg_R": -0.035,
+    "t": -0.1,
+    "win": 0.75,
+    "total_R": -0.14,
     "grade": "PAPER"
    },
    "XRPUSD S1": {
@@ -23838,21 +23885,21 @@
     "total_R": 11.03
    },
    "S7": {
-    "n": 67,
-    "avg_R": 0.16,
-    "t": 1.75,
-    "win": 0.761,
-    "total_R": 10.72
+    "n": 69,
+    "avg_R": 0.124,
+    "t": 1.34,
+    "win": 0.739,
+    "total_R": 8.55
    }
   },
   "all": {
-   "n": 580,
-   "avg_R": -0.025,
-   "t": -0.75,
-   "win": 0.648,
-   "total_R": -14.76
+   "n": 582,
+   "avg_R": -0.029,
+   "t": -0.85,
+   "win": 0.646,
+   "total_R": -16.92
   },
-  "open": 4
+  "open": 3
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -24332,18 +24379,18 @@
    "total_R": -2.21
   },
   "S7 | expanding": {
-   "n": 23,
-   "avg_R": -0.084,
-   "t": -0.45,
-   "win": 0.565,
-   "total_R": -1.93
+   "n": 25,
+   "avg_R": -0.164,
+   "t": -0.9,
+   "win": 0.52,
+   "total_R": -4.1
   },
   "S7 | late": {
-   "n": 2,
-   "avg_R": 0.423,
-   "t": 7.77,
-   "win": 1.0,
-   "total_R": 0.85
+   "n": 4,
+   "avg_R": -0.329,
+   "t": -0.76,
+   "win": 0.5,
+   "total_R": -1.32
   },
   "S7 | normal": {
    "n": 44,
@@ -24353,11 +24400,11 @@
    "total_R": 12.65
   },
   "S7 | vol high": {
-   "n": 35,
-   "avg_R": 0.224,
-   "t": 1.72,
-   "win": 0.771,
-   "total_R": 7.84
+   "n": 37,
+   "avg_R": 0.153,
+   "t": 1.16,
+   "win": 0.73,
+   "total_R": 5.67
   },
   "S7 | vol normal": {
    "n": 32,
@@ -24367,11 +24414,11 @@
    "total_R": 2.88
   },
   "S7 | with trend": {
-   "n": 39,
-   "avg_R": 0.331,
-   "t": 3.31,
-   "win": 0.872,
-   "total_R": 12.93
+   "n": 41,
+   "avg_R": 0.262,
+   "t": 2.46,
+   "win": 0.829,
+   "total_R": 10.76
   }
  },
  "scout_last": "2026-11-16T19:00:00+00:00",
