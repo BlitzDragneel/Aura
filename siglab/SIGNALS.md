@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 00:45 UTC
+Updated 2026-11-23 01:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,9 @@ Updated 2026-11-23 00:45 UTC
 
 ## Latest signals
 
+- 23 Nov 01:00 LTCUSD buy S4 @ 40.03 SL 39.719 → open
+- 23 Nov 01:00 LTCUSD buy S1 @ 40.03 SL 39.719 → open
+- 23 Nov 01:00 ETHUSD buy S1 @ 1720.44 SL 1707.41 → open
 - 23 Nov 00:45 ADAUSD sell S2 @ 0.1432 SL 0.144364 → open
 - 23 Nov 00:30 XRPUSD buy S4 @ 0.9246 SL 0.917871 → open
 - 23 Nov 00:15 SUIUSD sell S4 @ 0.6549 SL 0.660157 → open
@@ -169,6 +172,3 @@ Updated 2026-11-23 00:45 UTC
 - 22 Nov 01:15 SOLUSD buy S1 @ 70.4 SL 69.693 → closed SL -1.06R. Stopped out after 83 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 86 closed, avg +0.14R, 72% won.
 - 22 Nov 00:45 SUIUSD sell S1 @ 0.6466 SL 0.654507 → closed TP2+BE +0.72R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 90 closed, avg +0.12R, 70% won.
 - 22 Nov 00:45 ADAUSD sell S1 @ 0.1442 SL 0.145843 → closed TP2+BE +0.56R. Reached TP2 then came back to the entry (best 2.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 90 closed, avg +0.12R, 70% won.
-- 22 Nov 00:45 ETHUSD sell S1 @ 1683.33 SL 1701.61 → closed TP2+BE +0.54R. Reached TP2 then came back to the entry (best 2.0R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 90 closed, avg +0.12R, 70% won.
-- 22 Nov 00:30 XAGUSD sell S4 @ 41.57 SL 41.75 → closed TP1+BE +0.01R. Reached TP1 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 61 closed, avg -0.10R, 61% won.
-- 22 Nov 00:15 LINKUSD sell S1 @ 8.599 SL 8.6878 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 85 closed, avg +0.14R, 72% won.
