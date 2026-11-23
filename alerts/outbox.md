@@ -1031,3 +1031,8 @@ Market now: trend up, volatility high, Asia session
 ⚡ Gold: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~3594.2
 Market now: trend up, volatility high, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move with the trend lost money (avg -0.23R). Logged and scored anyway.
+
+## 2026-11-23 02:46:01 UTC
+⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~60527.6
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.47R). Logged and scored anyway.

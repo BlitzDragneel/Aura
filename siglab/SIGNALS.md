@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 02:30 UTC
+Updated 2026-11-23 02:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,14 @@ Updated 2026-11-23 02:30 UTC
 
 ## Latest signals
 
+- 23 Nov 02:45 SUIUSD buy S3 @ 0.6428 SL 0.637343 → open
+- 23 Nov 02:45 AVAXUSD sell S2 @ 6.579 SL 6.6276 → open
+- 23 Nov 02:45 DOGEUSD buy S3 @ 0.05447 SL 0.054069 → open
+- 23 Nov 02:45 DOGEUSD sell S2 @ 0.05447 SL 0.054871 → open
+- 23 Nov 02:45 XRPUSD sell S2 @ 0.9157 SL 0.922543 → open
+- 23 Nov 02:45 BNBUSD buy S3 @ 551.99 SL 548.3 → open
+- 23 Nov 02:45 ETHUSD sell S2 @ 1701.98 SL 1715.66 → open
+- 23 Nov 02:45 BTCUSD sell S2 @ 60527.6 SL 61003.39 → open
 - 23 Nov 02:30 BNBUSD sell S2 @ 553.74 SL 557.43 → open
 - 23 Nov 02:15 XAUUSD buy S4 @ 3594.2 SL 3580.04 → open
 - 23 Nov 01:15 SUIUSD sell S2 @ 0.65 SL 0.655293 → open
@@ -164,11 +172,3 @@ Updated 2026-11-23 02:30 UTC
 - 22 Nov 02:30 ADAUSD sell S2 @ 0.1433 SL 0.144743 → closed TP2+BE +0.56R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 52 closed, avg +0.02R, 67% won.
 - 22 Nov 02:30 BTCUSD sell S2 @ 59821.1 SL 60386.23 → closed TP2+BE +0.54R. Reached TP2 then came back to the entry (best 1.9R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 38 closed, avg -0.46R, 42% won.
 - 22 Nov 02:15 BNBUSD sell S1 @ 548.67 SL 552.77 → closed TP3 +1.57R. TP3 after 183 min (best 2.9R, worst -0.0R). Lesson so far: trend pullback with the trend: 89 closed, avg +0.10R, 70% won.
-- 22 Nov 02:15 XAGUSD sell S1 @ 41.61 SL 41.79 → closed TP2+BE +0.66R. Reached TP2 then came back to the entry (best 1.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 94 closed, avg +0.14R, 71% won.
-- 22 Nov 01:45 AVAXUSD buy S4 @ 6.571 SL 6.4948 → closed SL -1.05R. Stopped out after 110 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 38 closed, avg -0.07R, 66% won.
-- 22 Nov 01:45 DOGEUSD buy S4 @ 0.05519 SL 0.054639 → closed SL -1.06R. Stopped out after 53 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 35 closed, avg +0.01R, 71% won.
-- 22 Nov 01:45 BNBUSD buy S4 @ 549.39 SL 544.83 → closed SL -1.07R. Stopped out after 47 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 35 closed, avg +0.01R, 71% won.
-- 22 Nov 01:45 XAUUSD sell S1 @ 3564.1 SL 3574.49 → closed TP2+BE +0.83R. Reached TP2 then came back to the entry (best 2.2R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 94 closed, avg +0.14R, 71% won.
-- 22 Nov 01:30 LTCUSD sell S1 @ 39.74 SL 40.175 → closed TP2+BE +0.69R. Reached TP2 then came back to the entry (best 2.0R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 94 closed, avg +0.14R, 71% won.
-- 22 Nov 01:30 DOGEUSD sell S1 @ 0.05509 SL 0.055641 → closed TP2+BE +0.69R. Reached TP2 then came back to the entry (best 2.5R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 93 closed, avg +0.13R, 71% won.
-- 22 Nov 01:15 SUIUSD buy S4 @ 0.6465 SL 0.638936 → closed SL -1.05R. Stopped out after 90 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 37 closed, avg -0.04R, 68% won.
