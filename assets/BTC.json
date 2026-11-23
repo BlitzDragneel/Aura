@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-23T21:30:51.413875+00:00",
+ "asof": "2026-11-23T21:45:41.119821+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 61401.2,
-  "bar": "2026-11-23T21:15:00+00:00",
+  "price": 61233.9,
+  "bar": "2026-11-23T21:30:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 61401.2,
-    "ma20": 61490.625,
-    "ma50": 61827.3,
-    "slope_atr": -1.34,
-    "bar": "2026-11-23T21:15:00+00:00"
+    "close": 61233.9,
+    "ma20": 61444.425,
+    "ma50": 61818.07399999999,
+    "slope_atr": -1.15,
+    "bar": "2026-11-23T21:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.76,
   "funding": {
-   "rate": 6.49316132621e-05,
+   "rate": 6.40207086728e-05,
    "next_time": 1795478400000,
    "source": "okx-swap"
   },
@@ -104,7 +104,7 @@
     "flag": false,
     "detail": {
      "p_up_move": 0.076,
-     "p_down_move": 0.151
+     "p_down_move": 0.15
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -254,7 +254,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 61401.2; volatility regime active (hourly ATR 1.419% of price, 92.2th percentile).",
+    "Price 61233.9; volatility regime active (hourly ATR 1.419% of price, 92.2th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -265,6 +265,6 @@
    ]
   }
  ],
- "runs": 788,
+ "runs": 789,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
