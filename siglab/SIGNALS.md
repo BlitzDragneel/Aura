@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 07:45 UTC
+Updated 2026-11-23 08:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -100,7 +100,7 @@ Updated 2026-11-23 07:45 UTC
 | XAUUSD S3 | 8 | -0.024 | -0.11 | 0.75 | PAPER |
 | XAUUSD S4 | 8 | 0.399 | 1.23 | 0.75 | PAPER |
 | XAUUSD S5 | 5 | 0.106 | 0.3 | 0.8 | PAPER |
-| XAUUSD S6 | 5 | -0.029 | -0.07 | 0.6 | PAPER |
+| XAUUSD S6 | 6 | -0.005 | -0.01 | 0.667 | PAPER |
 | XAUUSD S7 | 4 | -0.035 | -0.1 | 0.75 | PAPER |
 | XRPUSD S1 | 8 | 0.328 | 1.03 | 0.75 | PAPER |
 | XRPUSD S2 | 8 | 0.064 | 0.23 | 0.75 | PAPER |
@@ -129,7 +129,7 @@ Updated 2026-11-23 07:45 UTC
 - 23 Nov 07:00 ETHUSD sell S6 @ 1723.67 SL 1738.29 → open
 - 23 Nov 07:00 BTCUSD sell S6 @ 61433.7 SL 61948.79 → open
 - 23 Nov 07:00 XAGUSD buy S6 @ 42.74 SL 42.324 → closed TP1+BE +0.04R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 56 closed, avg +0.17R, 82% won.
-- 23 Nov 07:00 XAUUSD buy S6 @ 3628.3 SL 3609.83 → open
+- 23 Nov 07:00 XAUUSD buy S6 @ 3628.3 SL 3609.83 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 57 closed, avg +0.17R, 82% won.
 - 23 Nov 05:45 XAGUSD buy S2 @ 42.84 SL 42.484 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 59 closed, avg +0.06R, 71% won.
 - 23 Nov 03:45 SUIUSD buy S7 @ 0.6543 SL 0.649321 → closed TP3 +0.92R. TP3 after 106 min (best 1.9R, worst -0.5R). Lesson so far: big move with the trend: 45 closed, avg +0.25R, 84% won.
 - 23 Nov 03:45 AVAXUSD buy S7 @ 6.679 SL 6.6354 → closed TP2+BE +0.38R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 46 closed, avg +0.26R, 85% won.
