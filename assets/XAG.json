@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-23T09:15:53.102836+00:00",
+ "asof": "2026-11-23T09:30:51.011949+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 42.78,
-  "bar": "2026-11-23T09:00:00+00:00",
+  "price": 42.85,
+  "bar": "2026-11-23T09:15:00+00:00",
   "trend": {
    "15m": {
     "state": "up",
-    "close": 42.78,
-    "ma20": 42.602,
-    "ma50": 42.245,
-    "slope_atr": 0.4,
-    "bar": "2026-11-23T09:00:00+00:00"
+    "close": 42.85,
+    "ma20": 42.631,
+    "ma50": 42.2708,
+    "slope_atr": 0.52,
+    "bar": "2026-11-23T09:15:00+00:00"
    },
    "1h": {
     "state": "up",
@@ -93,15 +93,15 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 2.07,
   "spot": {
-   "price": 42.747,
-   "bid": 42.7267,
-   "ask": 42.7673,
-   "spread": 0.0406,
+   "price": 42.726,
+   "bid": 42.7047,
+   "ask": 42.7473,
+   "spread": 0.0426,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.077
+   "perp_premium_pct": 0.29
   },
   "funding": {
    "rate": 0.0,
@@ -256,8 +256,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 42.78; volatility regime active (hourly ATR 1.042% of price, 89.3th percentile).",
-    "Spot XAGUSD 42.75; the perpetual trades +0.08% from spot."
+    "Price 42.85; volatility regime active (hourly ATR 1.042% of price, 89.3th percentile).",
+    "Spot XAGUSD 42.73; the perpetual trades +0.29% from spot."
    ]
   },
   {
@@ -267,6 +267,6 @@
    ]
   }
  ],
- "runs": 738,
+ "runs": 739,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
