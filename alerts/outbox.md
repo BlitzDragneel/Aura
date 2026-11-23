@@ -1019,3 +1019,10 @@ Market now: trend up, volatility high, late session
 ⚡ Silver: BIG MOVE under way right now (moved +0.86 in the last hour, twice its normal hourly range), price ~42.42
 Market now: trend up, volatility high, late session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
+
+## 2026-11-23 01:15:59 UTC
+⚡ Gold: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~3625.3
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 65 live signals (28 separate moments) averaging -0.23R.
