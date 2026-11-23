@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 08:01 UTC
+Updated 2026-11-23 08:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -92,14 +92,14 @@ Updated 2026-11-23 08:01 UTC
 | XAGUSD S2 | 8 | -0.278 | -1.13 | 0.625 | PAPER |
 | XAGUSD S3 | 8 | 0.323 | 1.34 | 0.875 | PAPER |
 | XAGUSD S4 | 9 | -0.544 | -2.52 | 0.444 | PAPER |
-| XAGUSD S5 | 3 | -0.206 | -0.48 | 0.667 | PAPER |
+| XAGUSD S5 | 4 | -0.423 | -1.14 | 0.5 | PAPER |
 | XAGUSD S6 | 6 | 0.084 | 5.29 | 1.0 | PAPER |
 | XAGUSD S7 | 4 | -0.327 | -0.73 | 0.5 | PAPER |
 | XAUUSD S1 | 7 | 0.416 | 1.12 | 0.714 | PAPER |
 | XAUUSD S2 | 8 | -0.015 | -0.05 | 0.625 | PAPER |
 | XAUUSD S3 | 8 | -0.024 | -0.11 | 0.75 | PAPER |
 | XAUUSD S4 | 8 | 0.399 | 1.23 | 0.75 | PAPER |
-| XAUUSD S5 | 5 | 0.106 | 0.3 | 0.8 | PAPER |
+| XAUUSD S5 | 6 | -0.08 | -0.23 | 0.667 | PAPER |
 | XAUUSD S6 | 6 | -0.005 | -0.01 | 0.667 | PAPER |
 | XAUUSD S7 | 4 | -0.035 | -0.1 | 0.75 | PAPER |
 | XRPUSD S1 | 8 | 0.328 | 1.03 | 0.75 | PAPER |
@@ -115,8 +115,8 @@ Updated 2026-11-23 08:01 UTC
 - 23 Nov 07:30 LINKUSD buy S5 @ 8.916 SL 8.8482 → open
 - 23 Nov 07:30 AVAXUSD buy S5 @ 6.72 SL 6.6689 → open
 - 23 Nov 07:30 ADAUSD buy S5 @ 0.1465 SL 0.145243 → open
-- 23 Nov 07:30 XAGUSD buy S5 @ 42.92 SL 42.504 → open
-- 23 Nov 07:30 XAUUSD buy S5 @ 3639.2 SL 3620.73 → open
+- 23 Nov 07:30 XAGUSD buy S5 @ 42.92 SL 42.504 → closed SL -1.07R. Stopped out after 34 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 37 closed, avg -0.07R, 57% won.
+- 23 Nov 07:30 XAUUSD buy S5 @ 3639.2 SL 3620.73 → closed SL -1.01R. Stopped out after 33 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 37 closed, avg -0.07R, 57% won.
 - 23 Nov 07:00 SUIUSD sell S6 @ 0.6637 SL 0.670057 → open
 - 23 Nov 07:00 LTCUSD sell S6 @ 40.57 SL 40.914 → open
 - 23 Nov 07:00 LINKUSD buy S6 @ 8.89 SL 8.8222 → open
