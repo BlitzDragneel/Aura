@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 00:15 UTC
+Updated 2026-11-23 00:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-23 00:15 UTC
 
 ## Latest signals
 
+- 23 Nov 00:30 XRPUSD buy S4 @ 0.9246 SL 0.917871 → open
 - 23 Nov 00:15 SUIUSD sell S4 @ 0.6549 SL 0.660157 → open
 - 23 Nov 00:00 XAGUSD buy S7 @ 42.42 SL 42.209 → closed SL -1.14R. Stopped out after 4 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 39 closed, avg +0.33R, 87% won.
 - 23 Nov 00:00 XAGUSD sell S3 @ 42.42 SL 42.631 → open
@@ -171,4 +172,3 @@ Updated 2026-11-23 00:15 UTC
 - 22 Nov 00:30 XAGUSD sell S4 @ 41.57 SL 41.75 → closed TP1+BE +0.01R. Reached TP1 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 61 closed, avg -0.10R, 61% won.
 - 22 Nov 00:15 LINKUSD sell S1 @ 8.599 SL 8.6878 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 85 closed, avg +0.14R, 72% won.
 - 22 Nov 00:15 XRPUSD buy S4 @ 0.933 SL 0.922707 → closed SL -1.05R. Stopped out after 143 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 54 closed, avg -0.16R, 57% won.
-- 22 Nov 00:15 BTCUSD buy S1 @ 60289.1 SL 59671.49 → closed SL -1.02R. Stopped out after 137 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 86 closed, avg +0.14R, 72% won.
