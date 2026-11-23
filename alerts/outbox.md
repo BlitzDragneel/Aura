@@ -1053,3 +1053,6 @@ Market now: trend up, volatility normal, Asia session
 ⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~61128.3
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-23 04:45:59 UTC
+🔁 Learning: fib pullback with the trend is now back to normal.

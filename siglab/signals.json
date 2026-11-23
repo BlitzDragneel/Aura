@@ -23355,7 +23355,7 @@
     3618.38
    ],
    "R": 14.157,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -23364,7 +23364,15 @@
    "day": "2026-11-23",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3594.2,
+   "outcome": "TP3",
+   "R_ladder": 0.995,
+   "R_tp1": 0.417,
+   "pips": 140.9,
+   "closed_ms": 1795408920000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 147 min (best 1.7R, worst -0.8R). Lesson so far: fib pullback with the trend: 66 closed, avg -0.13R, 59% won."
   },
   {
    "id": "BNBUSD-S2-1795401000000",
@@ -25450,11 +25458,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S4": {
-    "n": 7,
-    "avg_R": 0.314,
-    "t": 0.87,
-    "win": 0.714,
-    "total_R": 2.2,
+    "n": 8,
+    "avg_R": 0.399,
+    "t": 1.23,
+    "win": 0.75,
+    "total_R": 3.19,
     "grade": "PAPER"
    },
    "XAUUSD S5": {
@@ -25561,11 +25569,11 @@
     "total_R": -12.2
    },
    "S4": {
-    "n": 113,
-    "avg_R": -0.168,
-    "t": -2.27,
-    "win": 0.575,
-    "total_R": -19.0
+    "n": 114,
+    "avg_R": -0.158,
+    "t": -2.13,
+    "win": 0.579,
+    "total_R": -18.01
    },
    "S5": {
     "n": 59,
@@ -25590,13 +25598,13 @@
    }
   },
   "all": {
-   "n": 618,
-   "avg_R": -0.041,
-   "t": -1.24,
+   "n": 619,
+   "avg_R": -0.039,
+   "t": -1.19,
    "win": 0.641,
-   "total_R": -25.37
+   "total_R": -24.38
   },
-  "open": 12
+  "open": 11
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -25845,11 +25853,11 @@
    "total_R": 6.3
   },
   "S4 | Asia": {
-   "n": 87,
-   "avg_R": -0.235,
-   "t": -2.7,
-   "win": 0.529,
-   "total_R": -20.41
+   "n": 88,
+   "avg_R": -0.221,
+   "t": -2.54,
+   "win": 0.534,
+   "total_R": -19.41
   },
   "S4 | London": {
    "n": 11,
@@ -25880,11 +25888,11 @@
    "total_R": -4.43
   },
   "S4 | expanding": {
-   "n": 1,
-   "avg_R": 1.252,
-   "t": null,
+   "n": 2,
+   "avg_R": 1.123,
+   "t": 8.74,
    "win": 1.0,
-   "total_R": 1.25
+   "total_R": 2.25
   },
   "S4 | late": {
    "n": 7,
@@ -25901,11 +25909,11 @@
    "total_R": -14.81
   },
   "S4 | vol high": {
-   "n": 16,
-   "avg_R": 0.118,
-   "t": 0.61,
-   "win": 0.75,
-   "total_R": 1.89
+   "n": 17,
+   "avg_R": 0.17,
+   "t": 0.9,
+   "win": 0.765,
+   "total_R": 2.89
   },
   "S4 | vol low": {
    "n": 23,
@@ -25922,11 +25930,11 @@
    "total_R": -16.03
   },
   "S4 | with trend": {
-   "n": 66,
-   "avg_R": -0.127,
-   "t": -1.27,
-   "win": 0.591,
-   "total_R": -8.37
+   "n": 67,
+   "avg_R": -0.11,
+   "t": -1.1,
+   "win": 0.597,
+   "total_R": -7.38
   },
   "S5 | London": {
    "n": 47,
@@ -26127,15 +26135,6 @@
  },
  "scout_last": "2026-11-16T19:00:00+00:00",
  "adapt": {
-  "S4 with": {
-   "state": "muted",
-   "n": 28,
-   "avg_R": -0.226,
-   "t": -1.6,
-   "win": 0.5,
-   "total_R": -6.32,
-   "signals": 66
-  },
   "S2 against": {
    "state": "muted",
    "n": 21,
@@ -26239,6 +26238,12 @@
    "n": 28,
    "avg_R": -0.225,
    "t": -1.6
+  },
+  {
+   "ms": 1795409159458,
+   "cell": "S4 with",
+   "frm": "muted",
+   "to": null
   }
  ]
 }

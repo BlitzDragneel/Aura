@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 04:31 UTC
+Updated 2026-11-23 04:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -98,7 +98,7 @@ Updated 2026-11-23 04:31 UTC
 | XAUUSD S1 | 7 | 0.416 | 1.12 | 0.714 | PAPER |
 | XAUUSD S2 | 8 | -0.015 | -0.05 | 0.625 | PAPER |
 | XAUUSD S3 | 8 | -0.024 | -0.11 | 0.75 | PAPER |
-| XAUUSD S4 | 7 | 0.314 | 0.87 | 0.714 | PAPER |
+| XAUUSD S4 | 8 | 0.399 | 1.23 | 0.75 | PAPER |
 | XAUUSD S5 | 5 | 0.106 | 0.3 | 0.8 | PAPER |
 | XAUUSD S6 | 5 | -0.029 | -0.07 | 0.6 | PAPER |
 | XAUUSD S7 | 4 | -0.035 | -0.1 | 0.75 | PAPER |
@@ -148,7 +148,7 @@ Updated 2026-11-23 04:31 UTC
 - 23 Nov 02:45 ETHUSD sell S2 @ 1701.98 SL 1715.66 → closed SL -1.07R. Stopped out after 19 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 41 closed, avg -0.36R, 46% won.
 - 23 Nov 02:45 BTCUSD sell S2 @ 60527.6 SL 61003.39 → closed SL -1.02R. Stopped out after 26 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 41 closed, avg -0.36R, 46% won.
 - 23 Nov 02:30 BNBUSD sell S2 @ 553.74 SL 557.43 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 41 closed, avg -0.36R, 46% won.
-- 23 Nov 02:15 XAUUSD buy S4 @ 3594.2 SL 3580.04 → open
+- 23 Nov 02:15 XAUUSD buy S4 @ 3594.2 SL 3580.04 → closed TP3 +0.99R. TP3 after 147 min (best 1.7R, worst -0.8R). Lesson so far: fib pullback with the trend: 66 closed, avg -0.13R, 59% won.
 - 23 Nov 01:15 SUIUSD sell S2 @ 0.65 SL 0.655293 → closed TP2+BE +0.62R. Reached TP2 then came back to the entry (best 1.9R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 41 closed, avg -0.36R, 46% won.
 - 23 Nov 01:15 BNBUSD buy S4 @ 559.05 SL 555.65 → closed SL -1.10R. Stopped out after 40 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 65 closed, avg -0.11R, 60% won.
 - 23 Nov 01:15 XAUUSD buy S2 @ 3625.3 SL 3615.09 → closed TP2+BE +0.42R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 55 closed, avg +0.03R, 69% won.
