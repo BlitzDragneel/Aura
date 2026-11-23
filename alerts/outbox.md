@@ -1010,3 +1010,12 @@ Market now: trend up, volatility normal, late session
 ⚡ Silver: BIG MOVE under way right now (moved +0.65 in the last hour, twice its normal hourly range), price ~42.21
 Market now: trend up, volatility high, late session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
+
+## 2026-11-23 00:00:58 UTC
+⚡ Gold: BIG MOVE under way right now (moved +33.50 in the last hour, twice its normal hourly range), price ~3592.0
+Market now: trend up, volatility high, late session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.10R). Logged and scored anyway.
+
+⚡ Silver: BIG MOVE under way right now (moved +0.86 in the last hour, twice its normal hourly range), price ~42.42
+Market now: trend up, volatility high, late session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.

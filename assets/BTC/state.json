@@ -15,7 +15,7 @@
 "since": "2026-11-20T04:00:52.208552+00:00",
 "previous": "WATCH",
 "reasons": [
-"daily volatility is high (88th percentile)",
+"daily volatility is high (90th percentile)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -1174,14 +1174,6 @@
 {
 "t": "2026-11-21T23:00:00+00:00",
 "price": 60183.2,
-"horizon": "swing",
-"thr": 0.04104894958820968,
-"watch": true,
-"p": 0.153
-},
-{
-"t": "2026-11-21T23:00:00+00:00",
-"price": 60183.2,
 "horizon": "hold",
 "thr": 0.10262237397052419,
 "watch": false,
@@ -1494,14 +1486,6 @@
 {
 "t": "2026-11-22T19:00:00+00:00",
 "price": 60710.6,
-"horizon": "day",
-"thr": 0.020200049791257897,
-"watch": false,
-"p": 0.165
-},
-{
-"t": "2026-11-22T19:00:00+00:00",
-"price": 60710.6,
 "horizon": "swing",
 "thr": 0.040400099582515794,
 "watch": true,
@@ -1586,26 +1570,50 @@
 "thr": 0.08992902924780824,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-22T23:00:00+00:00",
+"price": 61240.0,
+"horizon": "day",
+"thr": 0.01531562004292246,
+"watch": false,
+"p": 0.29
+},
+{
+"t": "2026-11-22T23:00:00+00:00",
+"price": 61240.0,
+"horizon": "swing",
+"thr": 0.03063124008584492,
+"watch": true,
+"p": 0.218
+},
+{
+"t": "2026-11-22T23:00:00+00:00",
+"price": 61240.0,
+"horizon": "hold",
+"thr": 0.0765781002146123,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 170,
+"n": 171,
 "big": 27,
 "watch_n": 49,
 "watch_big": 7,
-"brier": 23.59731900000001,
+"brier": 23.62454400000001,
 "brier_base": 0.0,
-"scout_n": 170
+"scout_n": 171
 },
 "swing": {
-"n": 150,
+"n": 151,
 "big": 25,
-"watch_n": 83,
+"watch_n": 84,
 "watch_big": 15,
-"brier": 22.761552,
+"brier": 22.784961,
 "brier_base": 0.0,
-"scout_n": 150
+"scout_n": 151
 },
 "hold": {
 "n": 1,
@@ -1618,7 +1626,7 @@
 }
 },
 "calls_record": {},
-"runs": 699,
+"runs": 700,
 "created": "2026-11-15T06:42:30",
-"last_run": "2026-11-22T23:45:38.995162+00:00"
+"last_run": "2026-11-23T00:00:44.714017+00:00"
 }

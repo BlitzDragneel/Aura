@@ -15,12 +15,12 @@ Built automatically from the research findings, the approved rules and my own fo
 - | Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025–26 | Verdict |
 - | E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | −12…−17, t −3…−9 | −13…−17, t −7…−11 (n 800–3,200); gross ≈ 0 | FAIL |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 170 readings scored; big moves followed 16% of them, 14% after a WATCH (49 WATCH readings) - too few to judge yet.
+- My own record: 171 readings scored; big moves followed 16% of them, 14% after a WATCH (49 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 150 readings scored; big moves followed 17% of them, 18% after a WATCH (83 WATCH readings) - too few to judge yet.
+- My own record: 151 readings scored; big moves followed 17% of them, 18% after a WATCH (84 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
@@ -29,14 +29,14 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.42%) and the quietest London (0.31%).
-- A typical day ranges 2.7% from low to high (last 60 days); 47% of those days closed higher.
-- Over the last 30 days the price moved -26.0% (a fact, not a forecast).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.43%) and the quietest London (0.31%).
+- A typical day ranges 2.7% from low to high (last 60 days); 48% of those days closed higher.
+- Over the last 30 days the price moved -24.5% (a fact, not a forecast).
 
 ## Right now
 
-- Price 61268.4; volatility regime normal (hourly ATR 0.899% of price, 66.5th percentile).
-- Bitcoin trades 24/7; weekend liquidity is thinner.
+- Price 61240.0; volatility regime normal (hourly ATR 0.766% of price, 45.7th percentile).
+- Bitcoin trades 24/7.
 
 ## My calls so far
 
