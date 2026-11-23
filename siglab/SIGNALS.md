@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 07:30 UTC
+Updated 2026-11-23 07:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -89,11 +89,11 @@ Updated 2026-11-23 07:30 UTC
 | US30 S6 | 3 | 0.507 | 0.33 | 0.333 | PAPER |
 | US30 S7 | 3 | 0.146 | 0.24 | 0.667 | PAPER |
 | XAGUSD S1 | 8 | 0.129 | 0.46 | 0.75 | PAPER |
-| XAGUSD S2 | 7 | -0.324 | -1.16 | 0.571 | PAPER |
+| XAGUSD S2 | 8 | -0.278 | -1.13 | 0.625 | PAPER |
 | XAGUSD S3 | 8 | 0.323 | 1.34 | 0.875 | PAPER |
 | XAGUSD S4 | 9 | -0.544 | -2.52 | 0.444 | PAPER |
 | XAGUSD S5 | 3 | -0.206 | -0.48 | 0.667 | PAPER |
-| XAGUSD S6 | 5 | 0.093 | 5.82 | 1.0 | PAPER |
+| XAGUSD S6 | 6 | 0.084 | 5.29 | 1.0 | PAPER |
 | XAGUSD S7 | 4 | -0.327 | -0.73 | 0.5 | PAPER |
 | XAUUSD S1 | 7 | 0.416 | 1.12 | 0.714 | PAPER |
 | XAUUSD S2 | 8 | -0.015 | -0.05 | 0.625 | PAPER |
@@ -128,9 +128,9 @@ Updated 2026-11-23 07:30 UTC
 - 23 Nov 07:00 SOLUSD sell S6 @ 71.97 SL 72.572 → open
 - 23 Nov 07:00 ETHUSD sell S6 @ 1723.67 SL 1738.29 → open
 - 23 Nov 07:00 BTCUSD sell S6 @ 61433.7 SL 61948.79 → open
-- 23 Nov 07:00 XAGUSD buy S6 @ 42.74 SL 42.324 → open
+- 23 Nov 07:00 XAGUSD buy S6 @ 42.74 SL 42.324 → closed TP1+BE +0.04R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 56 closed, avg +0.17R, 82% won.
 - 23 Nov 07:00 XAUUSD buy S6 @ 3628.3 SL 3609.83 → open
-- 23 Nov 05:45 XAGUSD buy S2 @ 42.84 SL 42.484 → open
+- 23 Nov 05:45 XAGUSD buy S2 @ 42.84 SL 42.484 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 59 closed, avg +0.06R, 71% won.
 - 23 Nov 03:45 SUIUSD buy S7 @ 0.6543 SL 0.649321 → closed TP3 +0.92R. TP3 after 106 min (best 1.9R, worst -0.5R). Lesson so far: big move with the trend: 45 closed, avg +0.25R, 84% won.
 - 23 Nov 03:45 AVAXUSD buy S7 @ 6.679 SL 6.6354 → closed TP2+BE +0.38R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 46 closed, avg +0.26R, 85% won.
 - 23 Nov 03:45 DOGEUSD buy S7 @ 0.05535 SL 0.05499 → open
