@@ -1075,3 +1075,8 @@ Market now: trend up, volatility high, London session
 ⚡ Gold: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~3621.0
 Market now: trend up, volatility high, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-23 10:01:01 UTC
+👀 Gold day: WATCH at 3,621.30. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+👀 Silver day: WATCH at 42.67. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
