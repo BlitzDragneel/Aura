@@ -1,4 +1,4 @@
-Updated 2026-11-22 19:28 UTC - paper only, no keys, no real orders
+Updated 2026-11-23 00:27 UTC - paper only, no keys, no real orders
 
 {
  "home": "/home/runner/work/Aura/Aura/state/home",
@@ -28,31 +28,31 @@ Updated 2026-11-22 19:28 UTC - paper only, no keys, no real orders
   "upscout_watch": "paper",
   "btc_gold_invvol": "paper"
  },
- "last_bar": "2026-11-22T18:00:00+00:00",
+ "last_bar": "2026-11-22T23:00:00+00:00",
  "resting_orders": [
   {
-   "id": "3a55579184364a06",
+   "id": "3ac3d701cf384053",
    "strategy": "panic_h1",
    "sym": "AKEUSDT",
    "side": "long",
    "kind": "limit",
-   "qty": 2070.007659,
-   "price": 0.00241545,
-   "placed_at": "2026-11-22T19:00:00+00:00",
-   "expires_at": "2026-11-22T22:00:00+00:00",
+   "qty": 2083.967207,
+   "price": 0.00239927,
+   "placed_at": "2026-11-22T22:00:00+00:00",
+   "expires_at": "2026-11-23T01:00:00+00:00",
    "hold_bars": 24,
-   "stop_price": 0.00120773,
+   "stop_price": 0.00119964,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-22T18:00:00+00:00",
+   "signal_bar": "2026-11-22T21:00:00+00:00",
    "exchange_ids": {
     "paper": true
    },
    "status": "pending",
-   "note": "r24 -60.5% <= own q10 -46.7%; sigma 7.30%",
+   "note": "r24 -63.9% <= own q10 -46.7%; sigma 7.29%",
    "valid_for_bars": 3,
-   "ref_price": 0.002795,
+   "ref_price": 0.002776,
    "tf": "1h",
    "src_tf": "1h"
   }
@@ -114,10 +114,20 @@ Updated 2026-11-22 19:28 UTC - paper only, no keys, no real orders
   }
  ],
  "closed_trades": 379,
- "today_pnl_paper": 4.871703,
+ "today_pnl_paper": 0,
  "recent_log": [
   {
-   "t": "2026-11-22T19:28:35Z",
+   "t": "2026-11-23T00:27:32Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "MONUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-23T00:27:32Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
@@ -127,7 +137,34 @@ Updated 2026-11-22 19:28 UTC - paper only, no keys, no real orders
    ]
   },
   {
-   "t": "2026-11-22T19:28:35Z",
+   "t": "2026-11-23T00:27:32Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "SKYUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-23T00:27:33Z",
+   "event": "ignored_busy",
+   "rule": "panic_h1",
+   "sym": "AKEUSDT",
+   "note": "the rule already holds this coin (as in the research)"
+  },
+  {
+   "t": "2026-11-23T00:27:33Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "NESUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-23T00:27:33Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
@@ -137,14 +174,14 @@ Updated 2026-11-22 19:28 UTC - paper only, no keys, no real orders
    ]
   },
   {
-   "t": "2026-11-22T19:28:37Z",
+   "t": "2026-11-23T00:27:34Z",
    "event": "ignored_busy",
    "rule": "panic_h1",
    "sym": "AKEUSDT",
    "note": "the rule already holds this coin (as in the research)"
   },
   {
-   "t": "2026-11-22T19:28:37Z",
+   "t": "2026-11-23T00:27:34Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
@@ -154,61 +191,17 @@ Updated 2026-11-22 19:28 UTC - paper only, no keys, no real orders
    ]
   },
   {
-   "t": "2026-11-22T19:28:37Z",
+   "t": "2026-11-23T00:27:34Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
-   "sym": "CCUSDT",
+   "sym": "SKYUSDT",
    "reasons": [
     "3 positions/orders already open (max 3)"
    ]
   },
   {
-   "t": "2026-11-22T19:28:37Z",
-   "event": "refused",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "SENTUSDT",
-   "reasons": [
-    "3 positions/orders already open (max 3)"
-   ]
-  },
-  {
-   "t": "2026-11-22T19:28:39Z",
-   "event": "expired",
-   "order": "7092692b2e7e4645",
-   "sym": "AKEUSDT",
-   "strategy": "panic_h1",
-   "price": 0.00240991
-  },
-  {
-   "t": "2026-11-22T19:28:39Z",
-   "event": "order",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "AKEUSDT",
-   "kind": "limit",
-   "qty": 2070.007659,
-   "price": 0.00241545,
-   "ref": 0.002795,
-   "stop": 0.00120773,
-   "leverage": 1,
-   "margin_usdt": 5.0,
-   "expires": "2026-11-22T22:00:00+00:00",
-   "why": "r24 -60.5% <= own q10 -46.7%; sigma 7.30%"
-  },
-  {
-   "t": "2026-11-22T19:28:39Z",
-   "event": "refused",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "NESUSDT",
-   "reasons": [
-    "3 positions/orders already open (max 3)"
-   ]
-  },
-  {
-   "t": "2026-11-22T19:28:39Z",
+   "t": "2026-11-23T00:27:34Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
