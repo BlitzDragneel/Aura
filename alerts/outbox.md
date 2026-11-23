@@ -1087,3 +1087,12 @@ Bitcoin 61,398.10 | 1h trend up | vol normal | typical day range 2.67% | big 4h 
 Gold 3,631.00 | 1h trend up | vol active | typical day range 1.48% | big 4h move chance 21% | day WATCH · swing WATCH · hold WAIT
 Silver 42.72 | 1h trend up | vol active | typical day range 2.82% | big 4h move chance 20% | day WATCH · swing WAIT · hold WAIT
 Calls come only from tested rules. WATCH = move likely, direction unknown.
+
+## 2026-11-23 14:01:08 UTC
+⚡ Bitcoin: SESSION DRIVE right now (New York open drive), price ~63831.5
+Market now: trend up, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Bitcoin: BIG MOVE under way right now (moved +2534.90 in the last hour, twice its normal hourly range), price ~63831.5
+Market now: trend up, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
