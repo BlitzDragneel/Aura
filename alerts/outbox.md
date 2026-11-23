@@ -1096,3 +1096,6 @@ Market now: trend up, volatility high, New York session
 ⚡ Bitcoin: BIG MOVE under way right now (moved +2534.90 in the last hour, twice its normal hourly range), price ~63831.5
 Market now: trend up, volatility high, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-23 15:00:59 UTC
+👀 Bitcoin day: WATCH at 62,868.90. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
