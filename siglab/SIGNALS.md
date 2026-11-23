@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 04:01 UTC
+Updated 2026-11-23 04:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -88,7 +88,7 @@ Updated 2026-11-23 04:01 UTC
 | US30 S5 | 3 | 0.647 | 0.62 | 0.667 | PAPER |
 | US30 S6 | 3 | 0.507 | 0.33 | 0.333 | PAPER |
 | US30 S7 | 3 | 0.146 | 0.24 | 0.667 | PAPER |
-| XAGUSD S1 | 7 | 0.141 | 0.43 | 0.714 | PAPER |
+| XAGUSD S1 | 8 | 0.129 | 0.46 | 0.75 | PAPER |
 | XAGUSD S2 | 7 | -0.324 | -1.16 | 0.571 | PAPER |
 | XAGUSD S3 | 8 | 0.323 | 1.34 | 0.875 | PAPER |
 | XAGUSD S4 | 8 | -0.474 | -2.05 | 0.5 | PAPER |
@@ -138,7 +138,7 @@ Updated 2026-11-23 04:01 UTC
 - 23 Nov 03:15 BTCUSD sell S4 @ 61128.3 SL 61555.96 → closed SL -1.02R. Stopped out after 5 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: fib pullback against the trend: 39 closed, avg -0.10R, 64% won.
 - 23 Nov 03:15 BTCUSD buy S1 @ 61128.3 SL 60700.64 → closed TP3 +1.16R. TP3 after 6 min (best 1.9R, worst -0.2R). Lesson so far: trend pullback with the trend: 100 closed, avg +0.12R, 70% won.
 - 23 Nov 03:15 XAGUSD sell S4 @ 42.16 SL 42.474 → open
-- 23 Nov 03:15 XAGUSD buy S1 @ 42.16 SL 41.846 → open
+- 23 Nov 03:15 XAGUSD buy S1 @ 42.16 SL 41.846 → closed TP1+BE +0.04R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 103 closed, avg +0.14R, 71% won.
 - 23 Nov 02:45 SUIUSD buy S3 @ 0.6428 SL 0.637343 → closed TP3 +0.86R. TP3 after 35 min (best 2.5R, worst -0.5R). Lesson so far: stretch fade with the trend: 33 closed, avg +0.13R, 70% won.
 - 23 Nov 02:45 AVAXUSD sell S2 @ 6.579 SL 6.6276 → closed SL -1.08R. Stopped out after 20 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: breakout against the trend: 41 closed, avg -0.36R, 46% won.
 - 23 Nov 02:45 DOGEUSD buy S3 @ 0.05447 SL 0.054069 → closed TP3 +0.99R. TP3 after 35 min (best 2.8R, worst -0.3R). Lesson so far: stretch fade with the trend: 33 closed, avg +0.13R, 70% won.
