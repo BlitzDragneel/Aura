@@ -1110,3 +1110,6 @@ session drive: 72 closed, avg -0.25R, 50% won
 daily bias: 84 closed, avg +0.05R, 75% won
 big move: 80 closed, avg +0.13R, 75% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-23 23:01:06 UTC
+👀 Gold swing: WATCH at 3,645.80. Big move likely, direction unknown. daily volatility is high (86th percentile)

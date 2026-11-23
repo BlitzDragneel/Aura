@@ -15,28 +15,28 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 193 readings scored; big moves followed 15% of them, 17% after a WATCH (64 WATCH readings) - too few to judge yet.
+- My own record: 194 readings scored; big moves followed 15% of them, 17% after a WATCH (64 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 173 readings scored; big moves followed 42% of them, 41% after a WATCH (108 WATCH readings) - too few to judge yet.
+- My own record: 174 readings scored; big moves followed 42% of them, 41% after a WATCH (109 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 22 readings scored; big moves followed 100% of them - too few to judge yet.
+- My own record: 23 readings scored; big moves followed 100% of them - too few to judge yet.
 
 ## Habits I measure myself
 
 - Over the last 20 days the busiest session was Asia (average hourly move 0.23%) and the quietest London (0.15%).
-- At weekends, while spot is closed, the perpetual moves 46% as much per hour as on weekdays: weekend prices are thin and less reliable.
-- A typical day ranges 1.5% from low to high (last 60 days); 42% of those days closed higher.
+- At weekends, while spot is closed, the perpetual moves 47% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- A typical day ranges 1.5% from low to high (last 60 days); 38% of those days closed higher.
 - Over the last 30 days the price moved -10.2% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3644.6; volatility regime active (hourly ATR 0.562% of price, 86.0th percentile).
+- Price 3645.8; volatility regime active (hourly ATR 0.53% of price, 81.9th percentile).
 - Spot XAUUSD 3633.66 (stale: market closed).
 
 ## My calls so far
