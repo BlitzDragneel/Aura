@@ -1099,3 +1099,14 @@ Market now: trend up, volatility high, New York session
 
 ## 2026-11-23 15:00:59 UTC
 👀 Bitcoin day: WATCH at 62,868.90. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+## 2026-11-23 21:01:11 UTC
+📊 Signal Lab, end of day: 671 paper signals closed so far, avg -0.04R, 0 open.
+trend pullback: 111 closed, avg +0.19R, 73% won
+breakout: 109 closed, avg -0.14R, 60% won
+stretch fade: 99 closed, avg -0.10R, 60% won
+fib pullback: 116 closed, avg -0.16R, 58% won
+session drive: 72 closed, avg -0.25R, 50% won
+daily bias: 84 closed, avg +0.05R, 75% won
+big move: 80 closed, avg +0.13R, 75% won
+Earning trust: none yet (needs 15+ closed and a positive average)

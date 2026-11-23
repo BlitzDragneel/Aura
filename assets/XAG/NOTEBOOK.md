@@ -15,29 +15,30 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 191 readings scored; big moves followed 14% of them, 10% after a WATCH (58 WATCH readings) - too few to judge yet.
+- My own record: 192 readings scored; big moves followed 14% of them, 10% after a WATCH (59 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 171 readings scored; big moves followed 39% of them, 17% after a WATCH (63 WATCH readings) - too few to judge yet.
+- My own record: 172 readings scored; big moves followed 40% of them, 17% after a WATCH (63 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 20 readings scored; big moves followed 70% of them - too few to judge yet.
+- My own record: 21 readings scored; big moves followed 71% of them - too few to judge yet.
 
 ## Habits I measure myself
 
 - Over the last 20 days the busiest session was Asia (average hourly move 0.45%) and the quietest London (0.25%).
-- At weekends, while spot is closed, the perpetual moves 45% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- At weekends, while spot is closed, the perpetual moves 46% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 2.8% from low to high (last 60 days); 40% of those days closed higher.
 - Over the last 30 days the price moved -21.2% (a fact, not a forecast).
 
 ## Right now
 
-- Price 43.25; volatility regime active (hourly ATR 1.152% of price, 92.2th percentile).
-- Spot XAGUSD 43.14; the perpetual trades +0.26% from spot.
+- Price 43.19; volatility regime active (hourly ATR 1.156% of price, 92.2th percentile).
+- CME daily break (21-22 UTC): spot quotes pause.
+- Spot XAGUSD 43.14; the perpetual trades +0.10% from spot.
 
 ## My calls so far
 
