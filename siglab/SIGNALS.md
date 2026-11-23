@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 01:15 UTC
+Updated 2026-11-23 01:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -96,7 +96,7 @@ Updated 2026-11-23 01:15 UTC
 | XAGUSD S6 | 5 | 0.093 | 5.82 | 1.0 | PAPER |
 | XAGUSD S7 | 4 | -0.327 | -0.73 | 0.5 | PAPER |
 | XAUUSD S1 | 7 | 0.416 | 1.12 | 0.714 | PAPER |
-| XAUUSD S2 | 7 | -0.078 | -0.22 | 0.571 | PAPER |
+| XAUUSD S2 | 8 | -0.015 | -0.05 | 0.625 | PAPER |
 | XAUUSD S3 | 8 | -0.024 | -0.11 | 0.75 | PAPER |
 | XAUUSD S4 | 7 | 0.314 | 0.87 | 0.714 | PAPER |
 | XAUUSD S5 | 5 | 0.106 | 0.3 | 0.8 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-23 01:15 UTC
 
 - 23 Nov 01:15 SUIUSD sell S2 @ 0.65 SL 0.655293 → open
 - 23 Nov 01:15 BNBUSD buy S4 @ 559.05 SL 555.65 → open
-- 23 Nov 01:15 XAUUSD buy S2 @ 3625.3 SL 3615.09 → open
+- 23 Nov 01:15 XAUUSD buy S2 @ 3625.3 SL 3615.09 → closed TP2+BE +0.42R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 55 closed, avg +0.03R, 69% won.
 - 23 Nov 01:00 LTCUSD buy S4 @ 40.03 SL 39.719 → closed SL -1.07R. Stopped out after 10 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 63 closed, avg -0.08R, 62% won.
 - 23 Nov 01:00 LTCUSD buy S1 @ 40.03 SL 39.719 → closed SL -1.07R. Stopped out after 10 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 98 closed, avg +0.14R, 71% won.
 - 23 Nov 01:00 ETHUSD buy S1 @ 1720.44 SL 1707.41 → open
