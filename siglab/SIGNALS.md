@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 01:45 UTC
+Updated 2026-11-23 01:59 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -21,7 +21,7 @@ Updated 2026-11-23 01:45 UTC
 | BNBUSD S1 | 7 | 0.12 | 0.33 | 0.714 | PAPER |
 | BNBUSD S2 | 7 | -0.219 | -0.67 | 0.571 | PAPER |
 | BNBUSD S3 | 6 | -0.184 | -0.45 | 0.5 | PAPER |
-| BNBUSD S4 | 8 | -0.395 | -1.52 | 0.5 | PAPER |
+| BNBUSD S4 | 9 | -0.473 | -1.95 | 0.444 | PAPER |
 | BNBUSD S5 | 3 | -0.67 | -1.64 | 0.333 | PAPER |
 | BNBUSD S6 | 5 | 0.635 | 3.19 | 1.0 | PAPER |
 | BNBUSD S7 | 6 | 0.195 | 0.63 | 0.833 | PAPER |
@@ -39,7 +39,7 @@ Updated 2026-11-23 01:45 UTC
 | DOGEUSD S5 | 4 | -0.535 | -1.0 | 0.25 | PAPER |
 | DOGEUSD S6 | 5 | 0.148 | 11.58 | 1.0 | PAPER |
 | DOGEUSD S7 | 4 | 0.139 | 0.34 | 0.75 | PAPER |
-| ETHUSD S1 | 8 | 0.027 | 0.11 | 0.75 | PAPER |
+| ETHUSD S1 | 9 | -0.096 | -0.38 | 0.667 | PAPER |
 | ETHUSD S2 | 7 | -0.307 | -1.15 | 0.571 | PAPER |
 | ETHUSD S3 | 7 | 0.015 | 0.03 | 0.571 | PAPER |
 | ETHUSD S4 | 8 | -0.112 | -0.4 | 0.625 | PAPER |
@@ -113,11 +113,11 @@ Updated 2026-11-23 01:45 UTC
 ## Latest signals
 
 - 23 Nov 01:15 SUIUSD sell S2 @ 0.65 SL 0.655293 → open
-- 23 Nov 01:15 BNBUSD buy S4 @ 559.05 SL 555.65 → open
+- 23 Nov 01:15 BNBUSD buy S4 @ 559.05 SL 555.65 → closed SL -1.10R. Stopped out after 40 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 65 closed, avg -0.11R, 60% won.
 - 23 Nov 01:15 XAUUSD buy S2 @ 3625.3 SL 3615.09 → closed TP2+BE +0.42R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 55 closed, avg +0.03R, 69% won.
 - 23 Nov 01:00 LTCUSD buy S4 @ 40.03 SL 39.719 → closed SL -1.07R. Stopped out after 10 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 63 closed, avg -0.08R, 62% won.
 - 23 Nov 01:00 LTCUSD buy S1 @ 40.03 SL 39.719 → closed SL -1.07R. Stopped out after 10 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: trend pullback with the trend: 98 closed, avg +0.14R, 71% won.
-- 23 Nov 01:00 ETHUSD buy S1 @ 1720.44 SL 1707.41 → open
+- 23 Nov 01:00 ETHUSD buy S1 @ 1720.44 SL 1707.41 → closed SL -1.08R. Stopped out after 57 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 99 closed, avg +0.13R, 71% won.
 - 23 Nov 00:45 ADAUSD sell S2 @ 0.1432 SL 0.144364 → open
 - 23 Nov 00:30 XRPUSD buy S4 @ 0.9246 SL 0.917871 → closed SL -1.08R. Stopped out after 40 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 63 closed, avg -0.08R, 62% won.
 - 23 Nov 00:15 SUIUSD sell S4 @ 0.6549 SL 0.660157 → open
