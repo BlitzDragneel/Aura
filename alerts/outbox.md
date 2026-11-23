@@ -1080,3 +1080,10 @@ Market now: trend up, volatility high, London session
 👀 Gold day: WATCH at 3,621.30. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
 
 👀 Silver day: WATCH at 42.67. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+## 2026-11-23 11:01:01 UTC
+🌅 OMEGA morning read
+Bitcoin 61,398.10 | 1h trend up | vol normal | typical day range 2.67% | big 4h move chance 35% | day WAIT · swing WATCH · hold WAIT
+Gold 3,631.00 | 1h trend up | vol active | typical day range 1.48% | big 4h move chance 21% | day WATCH · swing WATCH · hold WAIT
+Silver 42.72 | 1h trend up | vol active | typical day range 2.82% | big 4h move chance 20% | day WATCH · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
