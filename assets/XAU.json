@@ -3,7 +3,7 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-23T22:00:55.215983+00:00",
+ "asof": "2026-11-23T22:11:13.148144+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
@@ -94,17 +94,16 @@
   "change_24h_pct": 0.79,
   "spot": {
    "price": 3633.665,
-   "bid": 3633.348,
-   "ask": 3633.982,
-   "spread": 0.634,
-   "age_s": 55,
-   "stale": false,
-   "note": null,
-   "source": "swissquote",
-   "perp_premium_pct": 0.213
+   "bid": 3633.346,
+   "ask": 3633.984,
+   "spread": 0.638,
+   "age_s": 673,
+   "stale": true,
+   "note": "market closed or feed paused",
+   "source": "swissquote"
   },
   "funding": {
-   "rate": 2.59399094835e-05,
+   "rate": 2.77212282531e-05,
    "next_time": 1795478400000,
    "source": "okx-swap"
   },
@@ -258,7 +257,7 @@
    "title": "Right now",
    "lines": [
     "Price 3641.4; volatility regime active (hourly ATR 0.556% of price, 86.0th percentile).",
-    "Spot XAUUSD 3633.66; the perpetual trades +0.21% from spot."
+    "Spot XAUUSD 3633.66 (stale: market closed)."
    ]
   },
   {
@@ -268,6 +267,6 @@
    ]
   }
  ],
- "runs": 790,
+ "runs": 791,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
