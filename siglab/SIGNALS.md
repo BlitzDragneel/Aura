@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 09:00 UTC
+Updated 2026-11-23 09:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -72,14 +72,14 @@ Updated 2026-11-23 09:00 UTC
 | SOLUSD S3 | 5 | -0.583 | -2.03 | 0.4 | PAPER |
 | SOLUSD S4 | 7 | 0.161 | 0.68 | 0.857 | PAPER |
 | SOLUSD S5 | 4 | -0.464 | -1.35 | 0.5 | PAPER |
-| SOLUSD S6 | 5 | -0.563 | -1.88 | 0.4 | PAPER |
+| SOLUSD S6 | 6 | -0.648 | -2.51 | 0.333 | PAPER |
 | SOLUSD S7 | 6 | -0.025 | -0.07 | 0.667 | PAPER |
 | SUIUSD S1 | 8 | 0.168 | 0.57 | 0.75 | PAPER |
 | SUIUSD S2 | 8 | -0.153 | -0.43 | 0.5 | PAPER |
 | SUIUSD S3 | 7 | -0.427 | -1.4 | 0.429 | PAPER |
 | SUIUSD S4 | 8 | -0.13 | -0.47 | 0.625 | PAPER |
 | SUIUSD S5 | 4 | -0.033 | -0.05 | 0.5 | PAPER |
-| SUIUSD S6 | 5 | 0.069 | 0.22 | 0.8 | PAPER |
+| SUIUSD S6 | 6 | -0.12 | -0.37 | 0.667 | PAPER |
 | SUIUSD S7 | 6 | 0.288 | 0.91 | 0.833 | PAPER |
 | US30 S1 | 2 | -0.449 | -0.8 | 0.5 | PAPER |
 | US30 S2 | 3 | 0.012 | 0.02 | 0.667 | PAPER |
@@ -118,7 +118,7 @@ Updated 2026-11-23 09:00 UTC
 - 23 Nov 07:30 ADAUSD buy S5 @ 0.1465 SL 0.145243 → open
 - 23 Nov 07:30 XAGUSD buy S5 @ 42.92 SL 42.504 → closed SL -1.07R. Stopped out after 34 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 37 closed, avg -0.07R, 57% won.
 - 23 Nov 07:30 XAUUSD buy S5 @ 3639.2 SL 3620.73 → closed SL -1.01R. Stopped out after 33 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 37 closed, avg -0.07R, 57% won.
-- 23 Nov 07:00 SUIUSD sell S6 @ 0.6637 SL 0.670057 → open
+- 23 Nov 07:00 SUIUSD sell S6 @ 0.6637 SL 0.670057 → closed SL -1.06R. Stopped out after 133 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 17 closed, avg +0.09R, 76% won.
 - 23 Nov 07:00 LTCUSD sell S6 @ 40.57 SL 40.914 → open
 - 23 Nov 07:00 LINKUSD buy S6 @ 8.89 SL 8.8222 → open
 - 23 Nov 07:00 AVAXUSD sell S6 @ 6.706 SL 6.7571 → open
@@ -126,7 +126,7 @@ Updated 2026-11-23 09:00 UTC
 - 23 Nov 07:00 DOGEUSD sell S6 @ 0.05566 SL 0.056082 → open
 - 23 Nov 07:00 XRPUSD sell S6 @ 0.9397 SL 0.947443 → open
 - 23 Nov 07:00 BNBUSD sell S6 @ 557.34 SL 561.61 → open
-- 23 Nov 07:00 SOLUSD sell S6 @ 71.97 SL 72.572 → open
+- 23 Nov 07:00 SOLUSD sell S6 @ 71.97 SL 72.572 → closed SL -1.07R. Stopped out after 125 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 17 closed, avg +0.09R, 76% won.
 - 23 Nov 07:00 ETHUSD sell S6 @ 1723.67 SL 1738.29 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 15 closed, avg +0.09R, 73% won.
 - 23 Nov 07:00 BTCUSD sell S6 @ 61433.7 SL 61948.79 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 15 closed, avg +0.09R, 73% won.
 - 23 Nov 07:00 XAGUSD buy S6 @ 42.74 SL 42.324 → closed TP1+BE +0.04R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 56 closed, avg +0.17R, 82% won.
