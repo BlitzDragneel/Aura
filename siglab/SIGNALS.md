@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 12:15 UTC
+Updated 2026-11-23 12:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -70,7 +70,7 @@ Updated 2026-11-23 12:15 UTC
 | SOLUSD S1 | 8 | 0.288 | 0.93 | 0.75 | PAPER |
 | SOLUSD S2 | 8 | 0.228 | 0.77 | 0.75 | PAPER |
 | SOLUSD S3 | 5 | -0.583 | -2.03 | 0.4 | PAPER |
-| SOLUSD S4 | 7 | 0.161 | 0.68 | 0.857 | PAPER |
+| SOLUSD S4 | 8 | 0.188 | 0.91 | 0.875 | PAPER |
 | SOLUSD S5 | 4 | -0.464 | -1.35 | 0.5 | PAPER |
 | SOLUSD S6 | 6 | -0.648 | -2.51 | 0.333 | PAPER |
 | SOLUSD S7 | 6 | -0.025 | -0.07 | 0.667 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-23 12:15 UTC
 
 ## Latest signals
 
-- 23 Nov 09:45 SOLUSD buy S4 @ 72.24 SL 71.611 → open
+- 23 Nov 09:45 SOLUSD buy S4 @ 72.24 SL 71.611 → closed TP2+BE +0.37R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 67 closed, avg -0.11R, 60% won.
 - 23 Nov 09:00 XAUUSD buy S1 @ 3621.0 SL 3600.71 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 110 closed, avg +0.19R, 73% won.
 - 23 Nov 07:30 LINKUSD buy S5 @ 8.916 SL 8.8482 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 41 closed, avg -0.10R, 56% won.
 - 23 Nov 07:30 AVAXUSD buy S5 @ 6.72 SL 6.6689 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 39 closed, avg -0.12R, 54% won.
