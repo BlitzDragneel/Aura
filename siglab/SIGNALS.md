@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-23 06:15 UTC
+Updated 2026-11-23 06:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -17,7 +17,7 @@ Updated 2026-11-23 06:15 UTC
 | AVAXUSD S4 | 8 | -0.434 | -1.4 | 0.375 | PAPER |
 | AVAXUSD S5 | 5 | -0.819 | -3.52 | 0.2 | PAPER |
 | AVAXUSD S6 | 5 | 0.13 | 0.39 | 0.8 | PAPER |
-| AVAXUSD S7 | 5 | -0.154 | -0.41 | 0.6 | PAPER |
+| AVAXUSD S7 | 6 | -0.064 | -0.2 | 0.667 | PAPER |
 | BNBUSD S1 | 8 | 0.163 | 0.51 | 0.75 | PAPER |
 | BNBUSD S2 | 8 | -0.177 | -0.62 | 0.625 | PAPER |
 | BNBUSD S3 | 7 | -0.013 | -0.03 | 0.571 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-23 06:15 UTC
 
 - 23 Nov 05:45 XAGUSD buy S2 @ 42.84 SL 42.484 → open
 - 23 Nov 03:45 SUIUSD buy S7 @ 0.6543 SL 0.649321 → closed TP3 +0.92R. TP3 after 106 min (best 1.9R, worst -0.5R). Lesson so far: big move with the trend: 45 closed, avg +0.25R, 84% won.
-- 23 Nov 03:45 AVAXUSD buy S7 @ 6.679 SL 6.6354 → open
+- 23 Nov 03:45 AVAXUSD buy S7 @ 6.679 SL 6.6354 → closed TP2+BE +0.38R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 46 closed, avg +0.26R, 85% won.
 - 23 Nov 03:45 DOGEUSD buy S7 @ 0.05535 SL 0.05499 → open
 - 23 Nov 03:30 SUIUSD buy S1 @ 0.6543 SL 0.649321 → closed TP2+BE +0.34R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 101 closed, avg +0.13R, 70% won.
 - 23 Nov 03:30 LTCUSD buy S2 @ 40.28 SL 39.99 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 56 closed, avg +0.04R, 70% won.
