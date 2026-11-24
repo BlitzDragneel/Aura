@@ -36,9 +36,9 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 40.85; volatility regime active (hourly ATR 1.117% of price, 88.3th percentile).
+- Price 40.87; volatility regime active (hourly ATR 1.117% of price, 88.3th percentile).
 - CME daily break (21-22 UTC): spot quotes pause.
-- Spot XAGUSD 40.77; the perpetual trades +0.19% from spot.
+- Spot XAGUSD 40.80; the perpetual trades +0.17% from spot.
 
 ## My calls so far
 
