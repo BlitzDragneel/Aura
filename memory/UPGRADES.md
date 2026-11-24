@@ -81,3 +81,17 @@
 - NAS100: not enough scored predictions yet (322); settings unchanged (0.55, blocked [])
 - US30: not enough scored predictions yet (323); settings unchanged (0.55, blocked [])
 - wrong calls in the last 7 days: 1089; reasons: close vote (the look-alikes were split) 683, high volatility 622, called against the 24h move 612, shock move 451, session New York 349, session Asia 294, unfamiliar situation (few close look-alikes) 293, session London 281, session late 165, news 16
+
+## Self-review 2026-11-24 00:31 UTC
+
+- XAUUSD: 6393 scored (last 90 days, 632 live); right 51.5% overall, 51.8% on 1986 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: unfamiliar 49.5% (n 1279), session New York 49.7% (n 1876), session Asia 50.4% (n 1848)
+- XAGUSD: 6393 scored (last 90 days, 632 live); right 52.1% overall, 54.6% on 2903 calls at threshold 0.53. No change (nothing beat the current settings on fresh data).
+  worst situations: session Asia 50.4% (n 1848), close vote 51.1% (n 3718), session New York 51.7% (n 1876)
+- BTCUSD: 6297 scored (last 90 days, 632 live); right 51.8% overall, 53.6% on 2026 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: close vote 50.4% (n 4063), session New York 51.1% (n 1848), unfamiliar 51.7% (n 1260)
+- NAS100: 412 scored (last 90 days, 412 live); right 52.2% overall, 50.7% on 282 calls at threshold 0.5. threshold changed 0.55 -> 0.5 (newer half: 59.5% right on 148 calls vs 0.0% on 37)
+  worst situations: session Asia 40.0% (n 105), against 24h move 51.4% (n 222), close vote 52.5% (n 244)
+- US30: 413 scored (last 90 days, 413 live); right 48.9% overall, 50.0% on 54 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: against 24h move 43.6% (n 179), session Asia 44.3% (n 106), session late 46.4% (n 56)
+- wrong calls in the last 7 days: 1299; reasons: close vote (the look-alikes were split) 821, high volatility 769, called against the 24h move 714, shock move 535, session New York 416, session Asia 360, unfamiliar situation (few close look-alikes) 336, session London 323, session late 200, news 16

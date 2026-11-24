@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 00:15 UTC
+Updated 2026-11-24 00:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,13 @@ Updated 2026-11-24 00:15 UTC
 
 ## Latest signals
 
+- 24 Nov 00:30 SUIUSD buy S1 @ 0.676 SL 0.660536 → open
+- 24 Nov 00:30 AVAXUSD buy S1 @ 6.807 SL 6.6876 → open
+- 24 Nov 00:30 DOGEUSD buy S1 @ 0.05656 SL 0.055526 → open
+- 24 Nov 00:30 XRPUSD buy S1 @ 0.9438 SL 0.925714 → open
+- 24 Nov 00:30 XAGUSD sell S3 @ 43.72 SL 44.186 → open
+- 24 Nov 00:30 XAGUSD buy S2 @ 43.72 SL 43.254 → open
+- 24 Nov 00:30 XAUUSD buy S1 @ 3652.4 SL 3632.56 → open
 - 24 Nov 00:15 XAGUSD sell S4 @ 43.38 SL 43.846 → open
 - 24 Nov 00:15 XAGUSD buy S1 @ 43.38 SL 42.914 → open
 - 24 Nov 00:15 XAUUSD sell S4 @ 3642.3 SL 3662.14 → open
@@ -165,10 +172,3 @@ Updated 2026-11-24 00:15 UTC
 - 23 Nov 03:45 SUIUSD buy S7 @ 0.6543 SL 0.649321 → closed TP3 +0.92R. TP3 after 106 min (best 1.9R, worst -0.5R). Lesson so far: big move with the trend: 45 closed, avg +0.25R, 84% won.
 - 23 Nov 03:45 AVAXUSD buy S7 @ 6.679 SL 6.6354 → closed TP2+BE +0.38R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 46 closed, avg +0.26R, 85% won.
 - 23 Nov 03:45 DOGEUSD buy S7 @ 0.05535 SL 0.05499 → closed TP2+BE +0.41R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 47 closed, avg +0.26R, 85% won.
-- 23 Nov 03:30 SUIUSD buy S1 @ 0.6543 SL 0.649321 → closed TP2+BE +0.34R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 101 closed, avg +0.13R, 70% won.
-- 23 Nov 03:30 LTCUSD buy S2 @ 40.28 SL 39.99 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 56 closed, avg +0.04R, 70% won.
-- 23 Nov 03:30 LINKUSD buy S7 @ 8.872 SL 8.818 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 41 closed, avg +0.26R, 83% won.
-- 23 Nov 03:30 LINKUSD buy S2 @ 8.872 SL 8.818 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 56 closed, avg +0.04R, 70% won.
-- 23 Nov 03:30 XRPUSD buy S7 @ 0.9323 SL 0.926186 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 41 closed, avg +0.26R, 83% won.
-- 23 Nov 03:30 SOLUSD buy S7 @ 71.32 SL 70.835 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 41 closed, avg +0.26R, 83% won.
-- 23 Nov 03:30 ETHUSD buy S7 @ 1731.45 SL 1719.51 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 41 closed, avg +0.26R, 83% won.
