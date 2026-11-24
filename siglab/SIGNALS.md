@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 15:01 UTC
+Updated 2026-11-24 15:16 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -55,7 +55,7 @@ Updated 2026-11-24 15:01 UTC
 | LINKUSD S7 | 7 | 0.117 | 0.33 | 0.714 | PAPER |
 | LTCUSD S1 | 10 | 0.188 | 0.62 | 0.7 | PAPER |
 | LTCUSD S2 | 9 | -0.558 | -2.15 | 0.333 | PAPER |
-| LTCUSD S3 | 8 | -0.444 | -1.31 | 0.375 | PAPER |
+| LTCUSD S3 | 9 | -0.348 | -1.11 | 0.444 | PAPER |
 | LTCUSD S4 | 10 | -0.117 | -0.42 | 0.6 | PAPER |
 | LTCUSD S5 | 7 | 0.026 | 0.09 | 0.714 | PAPER |
 | LTCUSD S6 | 7 | -0.101 | -0.28 | 0.571 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-24 15:01 UTC
 
 ## Latest signals
 
-- 24 Nov 13:15 LTCUSD buy S3 @ 40.3 SL 39.829 → open
+- 24 Nov 13:15 LTCUSD buy S3 @ 40.3 SL 39.829 → closed TP2+BE +0.42R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 42 closed, avg +0.19R, 76% won.
 - 24 Nov 13:15 AVAXUSD buy S3 @ 6.565 SL 6.4898 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 67 closed, avg -0.25R, 54% won.
 - 24 Nov 09:15 XRPUSD buy S3 @ 0.9321 SL 0.920957 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 40 closed, avg +0.19R, 75% won.
 - 24 Nov 08:30 SUIUSD buy S3 @ 0.6635 SL 0.653964 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 38 closed, avg +0.19R, 74% won.
