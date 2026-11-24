@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-24T13:30:58.398812+00:00",
+ "asof": "2026-11-24T13:45:53.323696+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 42.27,
-  "bar": "2026-11-24T13:15:00+00:00",
+  "price": 42.23,
+  "bar": "2026-11-24T13:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 42.27,
-    "ma20": 42.2625,
-    "ma50": 42.5894,
-    "slope_atr": 0.14,
-    "bar": "2026-11-24T13:15:00+00:00"
+    "close": 42.23,
+    "ma20": 42.255,
+    "ma50": 42.561800000000005,
+    "slope_atr": 0.11,
+    "bar": "2026-11-24T13:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.93,
   "spot": {
-   "price": 42.214,
-   "bid": 42.1917,
-   "ask": 42.2363,
-   "spread": 0.0446,
+   "price": 42.2025,
+   "bid": 42.1817,
+   "ask": 42.2233,
+   "spread": 0.0416,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.133
+   "perp_premium_pct": 0.065
   },
   "funding": {
-   "rate": 0.0001025468051799,
+   "rate": 8.98660375187e-05,
    "next_time": 1795536000000,
    "source": "okx-swap"
   },
@@ -256,8 +256,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 42.27; volatility regime active (hourly ATR 1.097% of price, 88.5th percentile).",
-    "Spot XAGUSD 42.21; the perpetual trades +0.13% from spot."
+    "Price 42.23; volatility regime active (hourly ATR 1.097% of price, 88.5th percentile).",
+    "Spot XAGUSD 42.20; the perpetual trades +0.07% from spot."
    ]
   },
   {
@@ -267,6 +267,6 @@
    ]
   }
  ],
- "runs": 854,
+ "runs": 855,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
