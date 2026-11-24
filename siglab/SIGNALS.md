@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 00:01 UTC
+Updated 2026-11-24 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,9 @@ Updated 2026-11-24 00:01 UTC
 
 ## Latest signals
 
+- 24 Nov 00:15 XAGUSD sell S4 @ 43.38 SL 43.846 → open
+- 24 Nov 00:15 XAGUSD buy S1 @ 43.38 SL 42.914 → open
+- 24 Nov 00:15 XAUUSD sell S4 @ 3642.3 SL 3662.14 → open
 - 24 Nov 00:00 SUIUSD sell S4 @ 0.6738 SL 0.689264 → open
 - 24 Nov 00:00 LTCUSD buy S1 @ 41.43 SL 40.749 → open
 - 24 Nov 00:00 LINKUSD buy S1 @ 9.01 SL 8.8585 → open
@@ -169,6 +172,3 @@ Updated 2026-11-24 00:01 UTC
 - 23 Nov 03:30 XRPUSD buy S7 @ 0.9323 SL 0.926186 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 41 closed, avg +0.26R, 83% won.
 - 23 Nov 03:30 SOLUSD buy S7 @ 71.32 SL 70.835 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 41 closed, avg +0.26R, 83% won.
 - 23 Nov 03:30 ETHUSD buy S7 @ 1731.45 SL 1719.51 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 41 closed, avg +0.26R, 83% won.
-- 23 Nov 03:15 LINKUSD sell S4 @ 8.824 SL 8.878 → closed SL -1.10R. Stopped out after 5 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 39 closed, avg -0.10R, 64% won.
-- 23 Nov 03:15 LINKUSD buy S1 @ 8.824 SL 8.77 → closed TP3 +1.26R. TP3 after 143 min (best 2.4R, worst -0.2R). Lesson so far: trend pullback with the trend: 104 closed, avg +0.13R, 71% won.
-- 23 Nov 03:15 AVAXUSD sell S4 @ 6.638 SL 6.6816 → closed SL -1.09R. Stopped out after 5 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: fib pullback against the trend: 39 closed, avg -0.10R, 64% won.

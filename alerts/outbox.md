@@ -1113,3 +1113,16 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 
 ## 2026-11-23 23:01:06 UTC
 👀 Gold swing: WATCH at 3,645.80. Big move likely, direction unknown. daily volatility is high (86th percentile)
+
+## 2026-11-24 00:16:03 UTC
+⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3642.3
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Silver: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~43.38
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~43.38
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
