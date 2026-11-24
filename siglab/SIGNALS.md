@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 05:30 UTC
+Updated 2026-11-24 05:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@ Updated 2026-11-24 05:30 UTC
 | BTCUSD S7 | 7 | 0.272 | 0.77 | 0.714 | PAPER |
 | DOGEUSD S1 | 9 | 0.42 | 1.91 | 0.889 | PAPER |
 | DOGEUSD S2 | 9 | -0.388 | -1.41 | 0.444 | PAPER |
-| DOGEUSD S3 | 8 | 0.258 | 0.84 | 0.75 | PAPER |
+| DOGEUSD S3 | 9 | 0.298 | 1.08 | 0.778 | PAPER |
 | DOGEUSD S4 | 9 | -0.347 | -1.2 | 0.444 | PAPER |
 | DOGEUSD S5 | 5 | -0.263 | -0.53 | 0.4 | PAPER |
 | DOGEUSD S6 | 6 | 0.148 | 14.11 | 1.0 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-24 05:30 UTC
 
 - 24 Nov 04:15 BTCUSD sell S4 @ 60377.1 SL 61181.5 → open
 - 24 Nov 04:00 SOLUSD sell S4 @ 71.35 SL 72.639 → open
-- 24 Nov 03:15 DOGEUSD buy S3 @ 0.05549 SL 0.054382 → open
+- 24 Nov 03:15 DOGEUSD buy S3 @ 0.05549 SL 0.054382 → closed TP3 +0.61R. TP3 after 141 min (best 1.2R, worst -0.2R). Lesson so far: stretch fade with the trend: 35 closed, avg +0.18R, 71% won.
 - 24 Nov 03:15 SOLUSD buy S3 @ 70.42 SL 68.893 → open
 - 24 Nov 03:15 SOLUSD sell S2 @ 70.42 SL 71.947 → closed SL -1.03R. Stopped out after 80 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 50 closed, avg -0.36R, 46% won.
 - 24 Nov 03:15 ETHUSD buy S3 @ 1675.11 SL 1643.16 → open
