@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 13:01 UTC
+Updated 2026-11-24 13:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-24 13:01 UTC
 
 ## Latest signals
 
+- 24 Nov 13:15 LTCUSD buy S3 @ 40.3 SL 39.829 → open
+- 24 Nov 13:15 AVAXUSD buy S3 @ 6.565 SL 6.4898 → open
 - 24 Nov 09:15 XRPUSD buy S3 @ 0.9321 SL 0.920957 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 40 closed, avg +0.19R, 75% won.
 - 24 Nov 08:30 SUIUSD buy S3 @ 0.6635 SL 0.653964 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 38 closed, avg +0.19R, 74% won.
 - 24 Nov 07:30 SUIUSD sell S5 @ 0.6696 SL 0.679993 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 27 closed, avg -0.31R, 56% won.
@@ -170,5 +172,3 @@ Updated 2026-11-24 13:01 UTC
 - 24 Nov 01:00 BNBUSD buy S1 @ 558.1 SL 550.83 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 113 closed, avg +0.20R, 74% won.
 - 24 Nov 00:45 XAUUSD sell S3 @ 3664.0 SL 3683.84 → closed SL -1.01R. Stopped out after 51 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 65 closed, avg -0.25R, 54% won.
 - 24 Nov 00:45 XAUUSD buy S2 @ 3664.0 SL 3644.16 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 60 closed, avg +0.06R, 72% won.
-- 24 Nov 00:30 SUIUSD buy S1 @ 0.676 SL 0.660536 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 113 closed, avg +0.20R, 74% won.
-- 24 Nov 00:30 AVAXUSD buy S1 @ 6.807 SL 6.6876 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 113 closed, avg +0.20R, 74% won.
