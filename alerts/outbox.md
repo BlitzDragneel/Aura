@@ -1152,3 +1152,10 @@ Market now: trend up, volatility high, Asia session
 ⚡ Bitcoin: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~61517.9
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-24 02:16:01 UTC
+⚡ Bitcoin: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~60971.9
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.38R). Logged and scored anyway.
+
+🔁 Learning: fib pullback against the trend is now back to normal.
