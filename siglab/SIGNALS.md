@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 11:30 UTC
+Updated 2026-11-24 11:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -43,7 +43,7 @@ Updated 2026-11-24 11:30 UTC
 | ETHUSD S2 | 9 | -0.473 | -2.05 | 0.444 | PAPER |
 | ETHUSD S3 | 9 | 0.075 | 0.23 | 0.667 | PAPER |
 | ETHUSD S4 | 10 | -0.146 | -0.58 | 0.6 | PAPER |
-| ETHUSD S5 | 5 | -0.387 | -0.89 | 0.4 | PAPER |
+| ETHUSD S5 | 6 | -0.265 | -0.7 | 0.5 | PAPER |
 | ETHUSD S6 | 7 | 0.248 | 0.86 | 0.857 | PAPER |
 | ETHUSD S7 | 8 | 0.339 | 1.45 | 0.875 | PAPER |
 | LINKUSD S1 | 9 | 0.199 | 0.73 | 0.778 | PAPER |
@@ -123,7 +123,7 @@ Updated 2026-11-24 11:30 UTC
 - 24 Nov 07:30 XRPUSD sell S5 @ 0.9433 SL 0.955321 → closed TP3 +0.68R. TP3 after 180 min (best 1.2R, worst -0.4R). Lesson so far: session drive against the trend: 28 closed, avg -0.29R, 57% won.
 - 24 Nov 07:30 BNBUSD sell S5 @ 551.88 SL 556.87 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 50 closed, avg -0.18R, 52% won.
 - 24 Nov 07:30 SOLUSD sell S5 @ 71.62 SL 72.534 → closed TP3 +0.76R. TP3 after 186 min (best 1.2R, worst -0.1R). Lesson so far: session drive against the trend: 30 closed, avg -0.23R, 60% won.
-- 24 Nov 07:30 ETHUSD sell S5 @ 1694.75 SL 1714.91 → open
+- 24 Nov 07:30 ETHUSD sell S5 @ 1694.75 SL 1714.91 → closed TP2+BE +0.35R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 51 closed, avg -0.17R, 53% won.
 - 24 Nov 07:30 XAGUSD sell S5 @ 42.41 SL 42.832 → closed TP3 +0.51R. TP3 after 58 min (best 0.9R, worst -0.5R). Lesson so far: session drive against the trend: 22 closed, avg -0.42R, 46% won.
 - 24 Nov 07:30 XAUUSD sell S5 @ 3623.9 SL 3642.84 → closed TP2+BE +0.25R. Reached TP2 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 24 closed, avg -0.36R, 50% won.
 - 24 Nov 07:00 SUIUSD buy S6 @ 0.673 SL 0.662607 → closed SL -1.04R. Stopped out after 120 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 60 closed, avg +0.15R, 82% won.
