@@ -1183,3 +1183,12 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 
 ## 2026-11-24 14:01:05 UTC
 👀 Silver day: WATCH at 42.15. Big move likely, direction unknown. hourly volatility is high (90th percentile of the last 3 weeks)
+
+## 2026-11-24 15:46:03 UTC
+⚡ Gold: BIG MOVE under way right now (moved -46.60 in the last hour, twice its normal hourly range), price ~3587.9
+Market now: trend up, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.21R). Logged and scored anyway.
+
+⚡ Silver: BIG MOVE under way right now (moved -1.13 in the last hour, twice its normal hourly range), price ~41.26
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
