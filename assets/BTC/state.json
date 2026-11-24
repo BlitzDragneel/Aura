@@ -5,7 +5,7 @@
 "since": "2026-11-23T15:00:49.888063+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (92th percentile of the last 3 weeks)",
+"hourly volatility is high (91th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -16,7 +16,7 @@
 "since": "2026-11-20T04:00:52.208552+00:00",
 "previous": "WATCH",
 "reasons": [
-"daily volatility is high (90th percentile)",
+"daily volatility is high (89th percentile)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -36,14 +36,6 @@
 "open_calls": [],
 "closed_calls": [],
 "pending": [
-{
-"t": "2026-11-16T23:00:00+00:00",
-"price": 64846.3,
-"horizon": "hold",
-"thr": 0.08790236076912439,
-"watch": false,
-"p": null
-},
 {
 "t": "2026-11-17T00:00:00+00:00",
 "price": 64603.7,
@@ -1191,14 +1183,6 @@
 {
 "t": "2026-11-22T23:00:00+00:00",
 "price": 61240.0,
-"horizon": "swing",
-"thr": 0.03063124008584492,
-"watch": true,
-"p": 0.218
-},
-{
-"t": "2026-11-22T23:00:00+00:00",
-"price": 61240.0,
 "horizon": "hold",
 "thr": 0.0765781002146123,
 "watch": false,
@@ -1511,14 +1495,6 @@
 {
 "t": "2026-11-23T19:00:00+00:00",
 "price": 61233.1,
-"horizon": "day",
-"thr": 0.028430934996175078,
-"watch": true,
-"p": 0.231
-},
-{
-"t": "2026-11-23T19:00:00+00:00",
-"price": 61233.1,
 "horizon": "swing",
 "thr": 0.056861869992350156,
 "watch": true,
@@ -1603,29 +1579,53 @@
 "thr": 0.14273043936012647,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-23T23:00:00+00:00",
+"price": 61246.1,
+"horizon": "day",
+"thr": 0.02799991696264278,
+"watch": true,
+"p": 0.208
+},
+{
+"t": "2026-11-23T23:00:00+00:00",
+"price": 61246.1,
+"horizon": "swing",
+"thr": 0.05599983392528556,
+"watch": true,
+"p": 0.215
+},
+{
+"t": "2026-11-23T23:00:00+00:00",
+"price": 61246.1,
+"horizon": "hold",
+"thr": 0.1399995848132139,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 194,
+"n": 195,
 "big": 31,
-"watch_n": 54,
+"watch_n": 55,
 "watch_big": 7,
-"brier": 26.939540000000008,
+"brier": 26.992901000000007,
 "brier_base": 0.0,
-"scout_n": 194
+"scout_n": 195
 },
 "swing": {
-"n": 174,
+"n": 175,
 "big": 31,
-"watch_n": 107,
+"watch_n": 108,
 "watch_big": 21,
-"brier": 27.45432699999999,
+"brier": 27.501850999999988,
 "brier_base": 0.0,
-"scout_n": 174
+"scout_n": 175
 },
 "hold": {
-"n": 23,
+"n": 24,
 "big": 0,
 "watch_n": 0,
 "watch_big": 0,
@@ -1635,7 +1635,7 @@
 }
 },
 "calls_record": {},
-"runs": 798,
+"runs": 799,
 "created": "2026-11-15T06:42:30",
-"last_run": "2026-11-23T23:45:48.430201+00:00"
+"last_run": "2026-11-24T00:00:51.224481+00:00"
 }
