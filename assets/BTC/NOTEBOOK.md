@@ -15,27 +15,27 @@ Built automatically from the research findings, the approved rules and my own fo
 - | Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025–26 | Verdict |
 - | E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | −12…−17, t −3…−9 | −13…−17, t −7…−11 (n 800–3,200); gross ≈ 0 | FAIL |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 197 readings scored; big moves followed 16% of them, 12% after a WATCH (57 WATCH readings) - too few to judge yet.
+- My own record: 198 readings scored; big moves followed 16% of them, 12% after a WATCH (58 WATCH readings) - too few to judge yet.
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 177 readings scored; big moves followed 18% of them, 19% after a WATCH (110 WATCH readings) - too few to judge yet.
+- My own record: 178 readings scored; big moves followed 17% of them, 19% after a WATCH (111 WATCH readings) - too few to judge yet.
 
 ## Holding (weeks-months)
 
 - Tested rule I can call: btc_gold_invvol (grade B, status paper). Evidence: edges/results/E94_result.json; edges/results/E97_result.json; edges/results/E97_leverage.json; edges/assets/BTC/FINDINGS.md
-- My own record: 26 readings scored; big moves followed 0% of them - too few to judge yet.
+- My own record: 27 readings scored; big moves followed 0% of them - too few to judge yet.
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was New York (average hourly move 0.44%) and the quietest London (0.31%).
+- Over the last 20 days the busiest session was Asia (average hourly move 0.45%) and the quietest London (0.31%).
 - A typical day ranges 2.7% from low to high (last 60 days); 48% of those days closed higher.
 - Over the last 30 days the price moved -24.2% (a fact, not a forecast).
 
 ## Right now
 
-- Price 60309.3; volatility regime active (hourly ATR 1.459% of price, 92.6th percentile).
+- Price 60052.3; volatility regime extreme (hourly ATR 1.562% of price, 95.1th percentile).
 - Bitcoin trades 24/7.
 
 ## My calls so far
