@@ -1197,3 +1197,6 @@ Market now: trend down, volatility high, New York session
 👀 Silver day: WATCH at 41.07. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
 
 👀 Silver swing: WATCH at 41.07. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-24 19:01:01 UTC
+👀 Silver swing: WATCH at 40.90. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
