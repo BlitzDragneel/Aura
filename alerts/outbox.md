@@ -1192,3 +1192,8 @@ Market now: trend up, volatility high, New York session
 ⚡ Silver: BIG MOVE under way right now (moved -1.13 in the last hour, twice its normal hourly range), price ~41.26
 Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
+
+## 2026-11-24 16:01:03 UTC
+👀 Silver day: WATCH at 41.07. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
+
+👀 Silver swing: WATCH at 41.07. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
