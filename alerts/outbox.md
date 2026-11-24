@@ -1164,3 +1164,12 @@ Market now: trend up, volatility normal, Asia session
 ⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~60377.1
 Market now: trend up, volatility high, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-24 07:31:01 UTC
+⚡ Gold: SESSION DRIVE right now (London open drive), price ~3623.9
+Market now: trend up, volatility high, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+⚡ Silver: SESSION DRIVE right now (London open drive), price ~42.41
+Market now: trend up, volatility high, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
