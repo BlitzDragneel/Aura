@@ -1135,3 +1135,10 @@ Market now: trend up, volatility high, Asia session
 ⚡ Silver: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~43.72
 Market now: trend up, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-24 00:45:53 UTC
+⚡ Gold: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~3664.0
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+🔁 Learning: fib pullback against the trend is now MUTED (no trade plans) after 49 live signals (20 separate moments) averaging -0.22R.
