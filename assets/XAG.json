@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-24T03:30:48.175059+00:00",
+ "asof": "2026-11-24T03:45:53.319891+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 42.88,
-  "bar": "2026-11-24T03:15:00+00:00",
+  "price": 42.78,
+  "bar": "2026-11-24T03:30:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 42.88,
-    "ma20": 43.3785,
-    "ma50": 43.40559999999999,
-    "slope_atr": -0.14,
-    "bar": "2026-11-24T03:15:00+00:00"
+    "close": 42.78,
+    "ma20": 43.354499999999994,
+    "ma50": 43.3892,
+    "slope_atr": -0.25,
+    "bar": "2026-11-24T03:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.93,
   "spot": {
-   "price": 42.730000000000004,
-   "bid": 42.7032,
-   "ask": 42.7568,
-   "spread": 0.0536,
-   "age_s": 1,
+   "price": 42.68000000000001,
+   "bid": 42.6587,
+   "ask": 42.7013,
+   "spread": 0.0426,
+   "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.351
+   "perp_premium_pct": 0.234
   },
   "funding": {
-   "rate": 1.86737615051e-05,
+   "rate": 3.11416443778e-05,
    "next_time": 1795507200000,
    "source": "okx-swap"
   },
@@ -257,8 +257,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 42.88; volatility regime active (hourly ATR 1.318% of price, 94.9th percentile).",
-    "Spot XAGUSD 42.73; the perpetual trades +0.35% from spot."
+    "Price 42.78; volatility regime active (hourly ATR 1.318% of price, 94.9th percentile).",
+    "Spot XAGUSD 42.68; the perpetual trades +0.23% from spot."
    ]
   },
   {
@@ -268,6 +268,6 @@
    ]
   }
  ],
- "runs": 813,
+ "runs": 814,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
