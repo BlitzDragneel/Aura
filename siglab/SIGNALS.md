@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 10:01 UTC
+Updated 2026-11-24 10:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -104,7 +104,7 @@ Updated 2026-11-24 10:01 UTC
 | XAUUSD S7 | 4 | -0.035 | -0.1 | 0.75 | PAPER |
 | XRPUSD S1 | 9 | 0.317 | 1.13 | 0.778 | PAPER |
 | XRPUSD S2 | 9 | 0.063 | 0.26 | 0.778 | PAPER |
-| XRPUSD S3 | 8 | -0.056 | -0.17 | 0.625 | PAPER |
+| XRPUSD S3 | 9 | -0.038 | -0.13 | 0.667 | PAPER |
 | XRPUSD S4 | 9 | -0.142 | -0.46 | 0.556 | PAPER |
 | XRPUSD S5 | 5 | -0.048 | -0.11 | 0.6 | PAPER |
 | XRPUSD S6 | 7 | -0.193 | -0.57 | 0.571 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-24 10:01 UTC
 
 ## Latest signals
 
-- 24 Nov 09:15 XRPUSD buy S3 @ 0.9321 SL 0.920957 → open
+- 24 Nov 09:15 XRPUSD buy S3 @ 0.9321 SL 0.920957 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 40 closed, avg +0.19R, 75% won.
 - 24 Nov 08:30 SUIUSD buy S3 @ 0.6635 SL 0.653964 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 38 closed, avg +0.19R, 74% won.
 - 24 Nov 07:30 SUIUSD sell S5 @ 0.6696 SL 0.679993 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 27 closed, avg -0.31R, 56% won.
 - 24 Nov 07:30 LTCUSD sell S5 @ 41.61 SL 42.121 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 22 closed, avg -0.42R, 46% won.
