@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-24T17:32:25.345065+00:00",
+ "asof": "2026-11-24T17:45:56.087916+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.05,
-  "bar": "2026-11-24T17:15:00+00:00",
+  "price": 41.16,
+  "bar": "2026-11-24T17:30:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 41.05,
-    "ma20": 41.790499999999994,
-    "ma50": 42.1118,
-    "slope_atr": -1.04,
-    "bar": "2026-11-24T17:15:00+00:00"
+    "close": 41.16,
+    "ma20": 41.713499999999996,
+    "ma50": 42.07939999999999,
+    "slope_atr": -1.12,
+    "bar": "2026-11-24T17:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.93,
   "spot": {
-   "price": 40.986000000000004,
-   "bid": 40.9647,
-   "ask": 41.0073,
+   "price": 41.084,
+   "bid": 41.0627,
+   "ask": 41.1053,
    "spread": 0.0426,
-   "age_s": 0,
+   "age_s": 1,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.156
+   "perp_premium_pct": 0.185
   },
   "funding": {
-   "rate": 0.0001397232032281,
+   "rate": 0.0001568211555541,
    "next_time": 1795564800000,
    "source": "okx-swap"
   },
@@ -258,8 +258,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.05; volatility regime active (hourly ATR 1.169% of price, 91.2th percentile).",
-    "Spot XAGUSD 40.99; the perpetual trades +0.16% from spot."
+    "Price 41.16; volatility regime active (hourly ATR 1.169% of price, 91.2th percentile).",
+    "Spot XAGUSD 41.08; the perpetual trades +0.18% from spot."
    ]
   },
   {
@@ -269,6 +269,6 @@
    ]
   }
  ],
- "runs": 871,
+ "runs": 872,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
