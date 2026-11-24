@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 01:15 UTC
+Updated 2026-11-24 01:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -90,7 +90,7 @@ Updated 2026-11-24 01:15 UTC
 | US30 S7 | 3 | 0.146 | 0.24 | 0.667 | PAPER |
 | XAGUSD S1 | 9 | 0.176 | 0.69 | 0.778 | PAPER |
 | XAGUSD S2 | 9 | -0.224 | -1.0 | 0.667 | PAPER |
-| XAGUSD S3 | 8 | 0.323 | 1.34 | 0.875 | PAPER |
+| XAGUSD S3 | 9 | 0.308 | 1.45 | 0.889 | PAPER |
 | XAGUSD S4 | 10 | -0.596 | -2.99 | 0.4 | PAPER |
 | XAGUSD S5 | 4 | -0.423 | -1.14 | 0.5 | PAPER |
 | XAGUSD S6 | 6 | 0.084 | 5.29 | 1.0 | PAPER |
@@ -112,6 +112,10 @@ Updated 2026-11-24 01:15 UTC
 
 ## Latest signals
 
+- 24 Nov 01:30 SUIUSD buy S2 @ 0.6813 SL 0.665629 → open
+- 24 Nov 01:30 AVAXUSD buy S2 @ 6.851 SL 6.7302 → open
+- 24 Nov 01:30 ADAUSD sell S3 @ 0.1504 SL 0.153136 → open
+- 24 Nov 01:30 DOGEUSD buy S2 @ 0.05708 SL 0.056032 → open
 - 24 Nov 01:15 LTCUSD buy S2 @ 41.78 SL 41.089 → open
 - 24 Nov 01:15 LINKUSD buy S2 @ 9.117 SL 8.9625 → open
 - 24 Nov 01:15 ADAUSD buy S2 @ 0.1498 SL 0.147064 → open
@@ -127,7 +131,7 @@ Updated 2026-11-24 01:15 UTC
 - 24 Nov 00:30 AVAXUSD buy S1 @ 6.807 SL 6.6876 → open
 - 24 Nov 00:30 DOGEUSD buy S1 @ 0.05656 SL 0.055526 → open
 - 24 Nov 00:30 XRPUSD buy S1 @ 0.9438 SL 0.925714 → open
-- 24 Nov 00:30 XAGUSD sell S3 @ 43.72 SL 44.186 → open
+- 24 Nov 00:30 XAGUSD sell S3 @ 43.72 SL 44.186 → closed TP2+BE +0.19R. Reached TP2 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 64 closed, avg -0.26R, 53% won.
 - 24 Nov 00:30 XAGUSD buy S2 @ 43.72 SL 43.254 → closed TP2+BE +0.20R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 60 closed, avg +0.06R, 72% won.
 - 24 Nov 00:30 XAUUSD buy S1 @ 3652.4 SL 3632.56 → open
 - 24 Nov 00:15 XAGUSD sell S4 @ 43.38 SL 43.846 → closed SL -1.07R. Stopped out after 16 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 47 closed, avg -0.23R, 55% won.
@@ -168,7 +172,3 @@ Updated 2026-11-24 01:15 UTC
 - 23 Nov 07:30 XAUUSD buy S5 @ 3639.2 SL 3620.73 → closed SL -1.01R. Stopped out after 33 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 37 closed, avg -0.07R, 57% won.
 - 23 Nov 07:00 SUIUSD sell S6 @ 0.6637 SL 0.670057 → closed SL -1.06R. Stopped out after 133 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 17 closed, avg +0.09R, 76% won.
 - 23 Nov 07:00 LTCUSD sell S6 @ 40.57 SL 40.914 → closed SL -1.07R. Stopped out after 283 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 22 closed, avg -0.12R, 64% won.
-- 23 Nov 07:00 LINKUSD buy S6 @ 8.89 SL 8.8222 → closed TP2+BE +0.35R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 58 closed, avg +0.17R, 83% won.
-- 23 Nov 07:00 AVAXUSD sell S6 @ 6.706 SL 6.7571 → closed SL -1.08R. Stopped out after 305 min. Price never reached TP1 (best was 0.6R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 23 closed, avg -0.16R, 61% won.
-- 23 Nov 07:00 ADAUSD sell S6 @ 0.146 SL 0.147257 → closed SL -1.06R. Stopped out after 139 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 19 closed, avg -0.03R, 68% won.
-- 23 Nov 07:00 DOGEUSD sell S6 @ 0.05566 SL 0.056082 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 21 closed, avg -0.13R, 62% won.
