@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 03:45 UTC
+Updated 2026-11-24 04:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-24 03:45 UTC
 
 ## Latest signals
 
+- 24 Nov 04:00 SOLUSD sell S4 @ 71.35 SL 72.639 → open
 - 24 Nov 03:15 DOGEUSD buy S3 @ 0.05549 SL 0.054382 → open
 - 24 Nov 03:15 SOLUSD buy S3 @ 70.42 SL 68.893 → open
 - 24 Nov 03:15 SOLUSD sell S2 @ 70.42 SL 71.947 → open
@@ -171,4 +172,3 @@ Updated 2026-11-24 03:45 UTC
 - 23 Nov 14:00 BNBUSD buy S7 @ 577.48 SL 571.63 → closed SL -1.06R. Stopped out after 6 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 48 closed, avg +0.27R, 85% won.
 - 23 Nov 14:00 BNBUSD buy S5 @ 577.48 SL 571.63 → closed SL -1.06R. Stopped out after 6 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 42 closed, avg -0.10R, 57% won.
 - 23 Nov 14:00 SOLUSD buy S5 @ 76.59 SL 75.614 → closed SL -1.05R. Stopped out after 0 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 42 closed, avg -0.10R, 57% won.
-- 23 Nov 14:00 SOLUSD sell S3 @ 76.59 SL 77.566 → closed TP2+BE +0.34R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 56 closed, avg -0.33R, 46% won.
