@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 12:01 UTC
+Updated 2026-11-24 12:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -100,7 +100,7 @@ Updated 2026-11-24 12:01 UTC
 | XAUUSD S3 | 9 | -0.133 | -0.59 | 0.667 | PAPER |
 | XAUUSD S4 | 9 | 0.243 | 0.74 | 0.667 | PAPER |
 | XAUUSD S5 | 7 | -0.033 | -0.11 | 0.714 | PAPER |
-| XAUUSD S6 | 6 | -0.005 | -0.01 | 0.667 | PAPER |
+| XAUUSD S6 | 7 | 0.017 | 0.06 | 0.714 | PAPER |
 | XAUUSD S7 | 4 | -0.035 | -0.1 | 0.75 | PAPER |
 | XRPUSD S1 | 9 | 0.317 | 1.13 | 0.778 | PAPER |
 | XRPUSD S2 | 9 | 0.063 | 0.26 | 0.778 | PAPER |
@@ -138,7 +138,7 @@ Updated 2026-11-24 12:01 UTC
 - 24 Nov 07:00 ETHUSD buy S6 @ 1699.61 SL 1679.45 → closed SL -1.05R. Stopped out after 128 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 25 closed, avg -0.23R, 56% won.
 - 24 Nov 07:00 BTCUSD buy S6 @ 60442.0 SL 59851.62 → closed SL -1.02R. Stopped out after 126 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 25 closed, avg -0.23R, 56% won.
 - 24 Nov 07:00 XAGUSD buy S6 @ 42.56 SL 42.138 → closed SL -1.07R. Stopped out after 87 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: daily bias with the trend: 59 closed, avg +0.17R, 83% won.
-- 24 Nov 07:00 XAUUSD buy S6 @ 3630.5 SL 3611.56 → open
+- 24 Nov 07:00 XAUUSD buy S6 @ 3630.5 SL 3611.56 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 69 closed, avg -0.01R, 71% won.
 - 24 Nov 04:15 BTCUSD sell S4 @ 60377.1 SL 61181.5 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 53 closed, avg -0.21R, 57% won.
 - 24 Nov 04:00 SOLUSD sell S4 @ 71.35 SL 72.639 → closed TP3 +0.56R. TP3 after 409 min (best 0.9R, worst -0.6R). Lesson so far: fib pullback against the trend: 54 closed, avg -0.20R, 57% won.
 - 24 Nov 03:15 DOGEUSD buy S3 @ 0.05549 SL 0.054382 → closed TP3 +0.61R. TP3 after 141 min (best 1.2R, worst -0.2R). Lesson so far: stretch fade with the trend: 35 closed, avg +0.18R, 71% won.
