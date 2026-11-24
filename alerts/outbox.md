@@ -1200,3 +1200,14 @@ Market now: trend down, volatility high, New York session
 
 ## 2026-11-24 19:01:01 UTC
 👀 Silver swing: WATCH at 40.90. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-24 21:01:03 UTC
+📊 Signal Lab, end of day: 748 paper signals closed so far, avg -0.06R, 1 open.
+trend pullback: 124 closed, avg +0.17R, 73% won
+breakout: 122 closed, avg -0.18R, 57% won
+stretch fade: 111 closed, avg -0.07R, 63% won
+fib pullback: 129 closed, avg -0.17R, 57% won
+session drive: 84 closed, avg -0.16R, 57% won
+daily bias: 97 closed, avg -0.08R, 66% won
+big move: 81 closed, avg +0.14R, 75% won
+Earning trust: none yet (needs 15+ closed and a positive average)
