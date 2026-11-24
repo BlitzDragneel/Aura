@@ -1147,3 +1147,8 @@ Market now: trend up, volatility high, Asia session
 👀 Gold day: WATCH at 3,675.90. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
 
 👀 Silver day: WATCH at 44.03. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
+
+## 2026-11-24 01:15:59 UTC
+⚡ Bitcoin: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~61517.9
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
