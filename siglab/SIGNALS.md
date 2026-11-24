@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 00:45 UTC
+Updated 2026-11-24 01:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-24 00:45 UTC
 
 ## Latest signals
 
+- 24 Nov 01:00 BNBUSD buy S1 @ 558.1 SL 550.83 → open
 - 24 Nov 00:45 XAUUSD sell S3 @ 3664.0 SL 3683.84 → open
 - 24 Nov 00:45 XAUUSD buy S2 @ 3664.0 SL 3644.16 → open
 - 24 Nov 00:30 SUIUSD buy S1 @ 0.676 SL 0.660536 → open
@@ -171,4 +172,3 @@ Updated 2026-11-24 00:45 UTC
 - 23 Nov 07:00 XAGUSD buy S6 @ 42.74 SL 42.324 → closed TP1+BE +0.04R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 56 closed, avg +0.17R, 82% won.
 - 23 Nov 07:00 XAUUSD buy S6 @ 3628.3 SL 3609.83 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 57 closed, avg +0.17R, 82% won.
 - 23 Nov 05:45 XAGUSD buy S2 @ 42.84 SL 42.484 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 59 closed, avg +0.06R, 71% won.
-- 23 Nov 03:45 SUIUSD buy S7 @ 0.6543 SL 0.649321 → closed TP3 +0.92R. TP3 after 106 min (best 1.9R, worst -0.5R). Lesson so far: big move with the trend: 45 closed, avg +0.25R, 84% won.

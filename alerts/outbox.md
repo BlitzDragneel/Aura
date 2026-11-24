@@ -1142,3 +1142,8 @@ Market now: trend up, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
 
 🔁 Learning: fib pullback against the trend is now MUTED (no trade plans) after 49 live signals (20 separate moments) averaging -0.22R.
+
+## 2026-11-24 01:00:59 UTC
+👀 Gold day: WATCH at 3,675.90. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
+
+👀 Silver day: WATCH at 44.03. Big move likely, direction unknown. hourly volatility is high (92th percentile of the last 3 weeks)
