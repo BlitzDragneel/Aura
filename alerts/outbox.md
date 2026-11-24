@@ -1159,3 +1159,8 @@ Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.38R). Logged and scored anyway.
 
 🔁 Learning: fib pullback against the trend is now back to normal.
+
+## 2026-11-24 04:15:57 UTC
+⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~60377.1
+Market now: trend up, volatility high, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
