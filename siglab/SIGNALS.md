@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 05:15 UTC
+Updated 2026-11-24 05:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -40,7 +40,7 @@ Updated 2026-11-24 05:15 UTC
 | DOGEUSD S6 | 6 | 0.148 | 14.11 | 1.0 | PAPER |
 | DOGEUSD S7 | 5 | 0.194 | 0.61 | 0.8 | PAPER |
 | ETHUSD S1 | 10 | -0.189 | -0.77 | 0.6 | PAPER |
-| ETHUSD S2 | 8 | -0.403 | -1.61 | 0.5 | PAPER |
+| ETHUSD S2 | 9 | -0.473 | -2.05 | 0.444 | PAPER |
 | ETHUSD S3 | 8 | 0.055 | 0.15 | 0.625 | PAPER |
 | ETHUSD S4 | 10 | -0.146 | -0.58 | 0.6 | PAPER |
 | ETHUSD S5 | 5 | -0.387 | -0.89 | 0.4 | PAPER |
@@ -118,7 +118,7 @@ Updated 2026-11-24 05:15 UTC
 - 24 Nov 03:15 SOLUSD buy S3 @ 70.42 SL 68.893 → open
 - 24 Nov 03:15 SOLUSD sell S2 @ 70.42 SL 71.947 → closed SL -1.03R. Stopped out after 80 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 50 closed, avg -0.36R, 46% won.
 - 24 Nov 03:15 ETHUSD buy S3 @ 1675.11 SL 1643.16 → open
-- 24 Nov 03:15 ETHUSD sell S2 @ 1675.11 SL 1707.06 → open
+- 24 Nov 03:15 ETHUSD sell S2 @ 1675.11 SL 1707.06 → closed SL -1.03R. Stopped out after 127 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 51 closed, avg -0.38R, 45% won.
 - 24 Nov 03:00 BNBUSD buy S3 @ 549.44 SL 541.56 → open
 - 24 Nov 02:45 BTCUSD buy S3 @ 60309.3 SL 59418.35 → open
 - 24 Nov 02:30 ETHUSD sell S4 @ 1696.82 SL 1727.83 → closed TP3 +0.52R. TP3 after 36 min (best 0.9R, worst -0.1R). Lesson so far: fib pullback against the trend: 50 closed, avg -0.25R, 54% won.
