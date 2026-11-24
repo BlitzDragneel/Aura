@@ -1,20 +1,20 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-24 03:01 UTC
+Updated 2026-11-24 03:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 9 | 0.274 | 0.96 | 0.778 | PAPER |
 | ADAUSD S2 | 9 | -0.189 | -0.65 | 0.556 | PAPER |
 | ADAUSD S3 | 6 | 0.018 | 0.05 | 0.667 | PAPER |
-| ADAUSD S4 | 9 | -0.089 | -0.35 | 0.667 | PAPER |
+| ADAUSD S4 | 10 | -0.183 | -0.74 | 0.6 | PAPER |
 | ADAUSD S5 | 4 | 0.157 | 0.36 | 0.75 | PAPER |
 | ADAUSD S6 | 6 | -0.207 | -0.77 | 0.667 | PAPER |
 | ADAUSD S7 | 6 | 0.297 | 1.0 | 0.833 | PAPER |
 | AVAXUSD S1 | 9 | -0.082 | -0.25 | 0.556 | PAPER |
 | AVAXUSD S2 | 9 | -0.204 | -0.7 | 0.556 | PAPER |
 | AVAXUSD S3 | 8 | 0.065 | 0.25 | 0.75 | PAPER |
-| AVAXUSD S4 | 8 | -0.434 | -1.4 | 0.375 | PAPER |
+| AVAXUSD S4 | 9 | -0.325 | -1.11 | 0.444 | PAPER |
 | AVAXUSD S5 | 6 | -0.668 | -2.75 | 0.333 | PAPER |
 | AVAXUSD S6 | 6 | -0.071 | -0.21 | 0.667 | PAPER |
 | AVAXUSD S7 | 6 | -0.064 | -0.2 | 0.667 | PAPER |
@@ -35,28 +35,28 @@ Updated 2026-11-24 03:01 UTC
 | DOGEUSD S1 | 9 | 0.42 | 1.91 | 0.889 | PAPER |
 | DOGEUSD S2 | 9 | -0.388 | -1.41 | 0.444 | PAPER |
 | DOGEUSD S3 | 8 | 0.258 | 0.84 | 0.75 | PAPER |
-| DOGEUSD S4 | 8 | -0.455 | -1.51 | 0.375 | PAPER |
+| DOGEUSD S4 | 9 | -0.347 | -1.2 | 0.444 | PAPER |
 | DOGEUSD S5 | 5 | -0.263 | -0.53 | 0.4 | PAPER |
 | DOGEUSD S6 | 6 | 0.148 | 14.11 | 1.0 | PAPER |
 | DOGEUSD S7 | 5 | 0.194 | 0.61 | 0.8 | PAPER |
 | ETHUSD S1 | 10 | -0.189 | -0.77 | 0.6 | PAPER |
 | ETHUSD S2 | 8 | -0.403 | -1.61 | 0.5 | PAPER |
 | ETHUSD S3 | 8 | 0.055 | 0.15 | 0.625 | PAPER |
-| ETHUSD S4 | 9 | -0.22 | -0.81 | 0.556 | PAPER |
+| ETHUSD S4 | 10 | -0.146 | -0.58 | 0.6 | PAPER |
 | ETHUSD S5 | 5 | -0.387 | -0.89 | 0.4 | PAPER |
 | ETHUSD S6 | 6 | 0.464 | 2.06 | 1.0 | PAPER |
 | ETHUSD S7 | 8 | 0.339 | 1.45 | 0.875 | PAPER |
 | LINKUSD S1 | 9 | 0.199 | 0.73 | 0.778 | PAPER |
 | LINKUSD S2 | 9 | 0.089 | 0.36 | 0.778 | PAPER |
 | LINKUSD S3 | 6 | -0.612 | -2.13 | 0.333 | PAPER |
-| LINKUSD S4 | 8 | -0.248 | -0.8 | 0.5 | PAPER |
+| LINKUSD S4 | 9 | -0.335 | -1.17 | 0.444 | PAPER |
 | LINKUSD S5 | 6 | -0.214 | -0.54 | 0.5 | PAPER |
 | LINKUSD S6 | 6 | -0.003 | -0.02 | 0.833 | PAPER |
 | LINKUSD S7 | 7 | 0.117 | 0.33 | 0.714 | PAPER |
 | LTCUSD S1 | 10 | 0.188 | 0.62 | 0.7 | PAPER |
 | LTCUSD S2 | 9 | -0.558 | -2.15 | 0.333 | PAPER |
 | LTCUSD S3 | 8 | -0.444 | -1.31 | 0.375 | PAPER |
-| LTCUSD S4 | 9 | -0.015 | -0.05 | 0.667 | PAPER |
+| LTCUSD S4 | 10 | -0.117 | -0.42 | 0.6 | PAPER |
 | LTCUSD S5 | 6 | 0.016 | 0.05 | 0.667 | PAPER |
 | LTCUSD S6 | 6 | 0.058 | 0.15 | 0.667 | PAPER |
 | LTCUSD S7 | 5 | 0.639 | 3.49 | 1.0 | PAPER |
@@ -112,14 +112,19 @@ Updated 2026-11-24 03:01 UTC
 
 ## Latest signals
 
+- 24 Nov 03:15 DOGEUSD buy S3 @ 0.05549 SL 0.054382 → open
+- 24 Nov 03:15 SOLUSD buy S3 @ 70.42 SL 68.893 → open
+- 24 Nov 03:15 SOLUSD sell S2 @ 70.42 SL 71.947 → open
+- 24 Nov 03:15 ETHUSD buy S3 @ 1675.11 SL 1643.16 → open
+- 24 Nov 03:15 ETHUSD sell S2 @ 1675.11 SL 1707.06 → open
 - 24 Nov 03:00 BNBUSD buy S3 @ 549.44 SL 541.56 → open
 - 24 Nov 02:45 BTCUSD buy S3 @ 60309.3 SL 59418.35 → open
-- 24 Nov 02:30 ETHUSD sell S4 @ 1696.82 SL 1727.83 → open
-- 24 Nov 02:15 LINKUSD buy S4 @ 9.079 SL 8.9209 → open
-- 24 Nov 02:15 ADAUSD buy S4 @ 0.1494 SL 0.146579 → open
+- 24 Nov 02:30 ETHUSD sell S4 @ 1696.82 SL 1727.83 → closed TP3 +0.52R. TP3 after 36 min (best 0.9R, worst -0.1R). Lesson so far: fib pullback against the trend: 50 closed, avg -0.25R, 54% won.
+- 24 Nov 02:15 LINKUSD buy S4 @ 9.079 SL 8.9209 → closed SL -1.03R. Stopped out after 50 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 69 closed, avg -0.12R, 59% won.
+- 24 Nov 02:15 ADAUSD buy S4 @ 0.1494 SL 0.146579 → closed SL -1.03R. Stopped out after 50 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 69 closed, avg -0.12R, 59% won.
 - 24 Nov 02:15 XRPUSD buy S4 @ 0.9466 SL 0.927636 → open
 - 24 Nov 02:15 BTCUSD sell S2 @ 60971.9 SL 61862.85 → closed TP3 +0.61R. TP3 after 38 min (best 1.0R, worst -0.0R). Lesson so far: breakout against the trend: 49 closed, avg -0.38R, 45% won.
-- 24 Nov 02:00 LTCUSD buy S4 @ 41.5 SL 40.804 → open
+- 24 Nov 02:00 LTCUSD buy S4 @ 41.5 SL 40.804 → closed SL -1.03R. Stopped out after 65 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 69 closed, avg -0.12R, 59% won.
 - 24 Nov 02:00 BNBUSD buy S4 @ 557.61 SL 550.12 → closed SL -1.04R. Stopped out after 53 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 68 closed, avg -0.10R, 60% won.
 - 24 Nov 01:30 SUIUSD buy S2 @ 0.6813 SL 0.665629 → closed SL -1.03R. Stopped out after 82 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
 - 24 Nov 01:30 AVAXUSD buy S2 @ 6.851 SL 6.7302 → closed SL -1.03R. Stopped out after 82 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
@@ -149,9 +154,9 @@ Updated 2026-11-24 03:01 UTC
 - 24 Nov 00:00 SUIUSD sell S4 @ 0.6738 SL 0.689264 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 49 closed, avg -0.26R, 53% won.
 - 24 Nov 00:00 LTCUSD buy S1 @ 41.43 SL 40.749 → closed TP2+BE +0.28R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 116 closed, avg +0.19R, 74% won.
 - 24 Nov 00:00 LINKUSD buy S1 @ 9.01 SL 8.8585 → closed TP2+BE +0.25R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 121 closed, avg +0.19R, 74% won.
-- 24 Nov 00:00 AVAXUSD sell S4 @ 6.784 SL 6.9034 → open
+- 24 Nov 00:00 AVAXUSD sell S4 @ 6.784 SL 6.9034 → closed TP3 +0.55R. TP3 after 186 min (best 1.1R, worst -0.7R). Lesson so far: fib pullback against the trend: 50 closed, avg -0.25R, 54% won.
 - 24 Nov 00:00 ADAUSD buy S1 @ 0.1484 SL 0.145664 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 116 closed, avg +0.19R, 74% won.
-- 24 Nov 00:00 DOGEUSD sell S4 @ 0.05636 SL 0.057394 → open
+- 24 Nov 00:00 DOGEUSD sell S4 @ 0.05636 SL 0.057394 → closed TP3 +0.52R. TP3 after 186 min (best 1.0R, worst -0.8R). Lesson so far: fib pullback against the trend: 50 closed, avg -0.25R, 54% won.
 - 23 Nov 14:00 SUIUSD buy S5 @ 0.7097 SL 0.699564 → closed SL -1.04R. Stopped out after 6 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 42 closed, avg -0.10R, 57% won.
 - 23 Nov 14:00 LTCUSD buy S7 @ 42.4 SL 41.949 → closed TP3 +0.87R. TP3 after 17 min (best 1.5R, worst -0.9R). Lesson so far: big move with the trend: 50 closed, avg +0.21R, 82% won.
 - 23 Nov 14:00 LTCUSD buy S5 @ 42.4 SL 41.949 → closed TP3 +0.87R. TP3 after 17 min (best 1.5R, worst -0.9R). Lesson so far: session drive with the trend: 48 closed, avg -0.22R, 50% won.
@@ -167,8 +172,3 @@ Updated 2026-11-24 03:01 UTC
 - 23 Nov 14:00 BNBUSD buy S5 @ 577.48 SL 571.63 → closed SL -1.06R. Stopped out after 6 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 42 closed, avg -0.10R, 57% won.
 - 23 Nov 14:00 SOLUSD buy S5 @ 76.59 SL 75.614 → closed SL -1.05R. Stopped out after 0 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 42 closed, avg -0.10R, 57% won.
 - 23 Nov 14:00 SOLUSD sell S3 @ 76.59 SL 77.566 → closed TP2+BE +0.34R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 56 closed, avg -0.33R, 46% won.
-- 23 Nov 14:00 ETHUSD buy S5 @ 1809.63 SL 1788.52 → closed SL -1.05R. Stopped out after 6 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 42 closed, avg -0.10R, 57% won.
-- 23 Nov 14:00 ETHUSD sell S3 @ 1809.63 SL 1830.74 → closed TP2+BE +0.33R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 62 closed, avg -0.28R, 52% won.
-- 23 Nov 14:00 BTCUSD buy S7 @ 63831.5 SL 63146.71 → closed SL -1.01R. Stopped out after 5 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: big move with the trend: 48 closed, avg +0.27R, 85% won.
-- 23 Nov 14:00 BTCUSD buy S5 @ 63831.5 SL 63146.71 → closed SL -1.01R. Stopped out after 5 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: session drive with the trend: 42 closed, avg -0.10R, 57% won.
-- 23 Nov 14:00 BTCUSD sell S3 @ 63831.5 SL 64516.29 → closed TP2+BE +0.44R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 62 closed, avg -0.28R, 52% won.
