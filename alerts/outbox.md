@@ -1173,3 +1173,10 @@ Market now: trend up, volatility high, London session
 ⚡ Silver: SESSION DRIVE right now (London open drive), price ~42.41
 Market now: trend up, volatility high, London session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+## 2026-11-24 11:00:59 UTC
+🌅 OMEGA morning read
+Bitcoin 59,763.60 | 1h trend down | vol normal | typical day range 2.73% | big 4h move chance 26% | day WAIT · swing WATCH · hold WAIT
+Gold 3,635.60 | 1h trend flat | vol normal | typical day range 1.53% | big 4h move chance 18% | day WAIT · swing WATCH · hold WAIT
+Silver 42.18 | 1h trend flat | vol active | typical day range 3.01% | big 4h move chance 33% | day WAIT · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
