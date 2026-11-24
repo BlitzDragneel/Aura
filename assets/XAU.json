@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-24T06:15:50.050549+00:00",
+ "asof": "2026-11-24T06:30:54.893136+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3635.5,
-  "bar": "2026-11-24T06:00:00+00:00",
+  "price": 3625.2,
+  "bar": "2026-11-24T06:15:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3635.5,
-    "ma20": 3647.8849999999998,
-    "ma50": 3648.986,
-    "slope_atr": -0.58,
-    "bar": "2026-11-24T06:00:00+00:00"
+    "close": 3625.2,
+    "ma20": 3645.4800000000005,
+    "ma50": 3648.2919999999995,
+    "slope_atr": -0.85,
+    "bar": "2026-11-24T06:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.28,
   "spot": {
-   "price": 3623.65,
-   "bid": 3623.333,
-   "ask": 3623.967,
+   "price": 3619.95,
+   "bid": 3619.633,
+   "ask": 3620.267,
    "spread": 0.634,
-   "age_s": 0,
+   "age_s": 1,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.327
+   "perp_premium_pct": 0.145
   },
   "funding": {
-   "rate": 4.56746802757e-05,
+   "rate": 4.50444228942e-05,
    "next_time": 1795507200000,
    "source": "okx-swap"
   },
@@ -257,8 +257,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3635.5; volatility regime active (hourly ATR 0.518% of price, 76.5th percentile).",
-    "Spot XAUUSD 3623.65; the perpetual trades +0.33% from spot."
+    "Price 3625.2; volatility regime active (hourly ATR 0.518% of price, 76.5th percentile).",
+    "Spot XAUUSD 3619.95; the perpetual trades +0.14% from spot."
    ]
   },
   {
@@ -268,6 +268,6 @@
    ]
   }
  ],
- "runs": 825,
+ "runs": 826,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
