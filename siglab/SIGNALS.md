@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 04:30 UTC
+Updated 2026-11-25 04:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-25 04:30 UTC
 
 ## Latest signals
 
+- 25 Nov 04:45 AVAXUSD sell S1 @ 6.494 SL 6.5627 → open
 - 25 Nov 03:30 AVAXUSD sell S4 @ 6.503 SL 6.579 → open
 - 25 Nov 03:30 BNBUSD sell S4 @ 543.06 SL 547.3 → open
 - 25 Nov 03:15 LINKUSD sell S4 @ 8.782 SL 8.8758 → open
@@ -171,4 +172,3 @@ Updated 2026-11-25 04:30 UTC
 - 24 Nov 07:00 LTCUSD buy S6 @ 41.79 SL 41.279 → closed SL -1.05R. Stopped out after 128 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: daily bias with the trend: 66 closed, avg +0.04R, 74% won.
 - 24 Nov 07:00 LINKUSD buy S6 @ 9.095 SL 8.9841 → closed SL -1.05R. Stopped out after 131 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). Lesson so far: daily bias with the trend: 66 closed, avg +0.04R, 74% won.
 - 24 Nov 07:00 AVAXUSD buy S6 @ 6.758 SL 6.6704 → closed SL -1.05R. Stopped out after 232 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 68 closed, avg +0.01R, 72% won.
-- 24 Nov 07:00 ADAUSD buy S6 @ 0.1488 SL 0.146714 → closed SL -1.04R. Stopped out after 120 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). Lesson so far: daily bias with the trend: 60 closed, avg +0.15R, 82% won.
