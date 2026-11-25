@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 09:15 UTC
+Updated 2026-11-25 09:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -97,7 +97,7 @@ Updated 2026-11-25 09:15 UTC
 | XAGUSD S7 | 5 | -0.213 | -0.58 | 0.6 | PAPER |
 | XAUUSD S1 | 10 | 0.474 | 1.79 | 0.8 | PAPER |
 | XAUUSD S2 | 10 | 0.012 | 0.05 | 0.7 | PAPER |
-| XAUUSD S3 | 9 | -0.133 | -0.59 | 0.667 | PAPER |
+| XAUUSD S3 | 10 | -0.104 | -0.51 | 0.7 | PAPER |
 | XAUUSD S4 | 10 | 0.231 | 0.79 | 0.7 | PAPER |
 | XAUUSD S5 | 8 | -0.009 | -0.03 | 0.75 | PAPER |
 | XAUUSD S6 | 8 | -0.111 | -0.38 | 0.625 | PAPER |
@@ -149,7 +149,7 @@ Updated 2026-11-25 09:15 UTC
 - 25 Nov 06:30 BNBUSD sell S1 @ 540.95 SL 544.54 → closed SL -1.09R. Stopped out after 35 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). Lesson so far: trend pullback with the trend: 132 closed, avg +0.18R, 75% won.
 - 25 Nov 06:30 BTCUSD sell S1 @ 59010.0 SL 59474.1 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 133 closed, avg +0.17R, 74% won.
 - 25 Nov 06:00 XAGUSD buy S3 @ 40.26 SL 39.875 → closed TP2+BE +0.35R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 70 closed, avg -0.23R, 56% won.
-- 25 Nov 06:00 XAUUSD buy S3 @ 3530.7 SL 3514.37 → open
+- 25 Nov 06:00 XAUUSD buy S3 @ 3530.7 SL 3514.37 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 75 closed, avg -0.21R, 57% won.
 - 25 Nov 04:45 AVAXUSD sell S1 @ 6.494 SL 6.5627 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 133 closed, avg +0.17R, 74% won.
 - 25 Nov 03:30 AVAXUSD sell S4 @ 6.503 SL 6.579 → closed TP2+BE +0.43R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 79 closed, avg -0.12R, 61% won.
 - 25 Nov 03:30 BNBUSD sell S4 @ 543.06 SL 547.3 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 75 closed, avg -0.14R, 59% won.
