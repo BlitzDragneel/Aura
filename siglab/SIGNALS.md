@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 06:01 UTC
+Updated 2026-11-25 06:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -21,7 +21,7 @@ Updated 2026-11-25 06:01 UTC
 | BNBUSD S1 | 9 | 0.152 | 0.54 | 0.778 | PAPER |
 | BNBUSD S2 | 9 | -0.273 | -1.01 | 0.556 | PAPER |
 | BNBUSD S3 | 8 | 0.023 | 0.07 | 0.625 | PAPER |
-| BNBUSD S4 | 10 | -0.53 | -2.36 | 0.4 | PAPER |
+| BNBUSD S4 | 11 | -0.472 | -2.23 | 0.455 | PAPER |
 | BNBUSD S5 | 5 | -0.595 | -2.03 | 0.4 | PAPER |
 | BNBUSD S6 | 7 | 0.147 | 0.43 | 0.714 | PAPER |
 | BNBUSD S7 | 7 | 0.016 | 0.05 | 0.714 | PAPER |
@@ -116,7 +116,7 @@ Updated 2026-11-25 06:01 UTC
 - 25 Nov 06:00 XAUUSD buy S3 @ 3530.7 SL 3514.37 → open
 - 25 Nov 04:45 AVAXUSD sell S1 @ 6.494 SL 6.5627 → open
 - 25 Nov 03:30 AVAXUSD sell S4 @ 6.503 SL 6.579 → open
-- 25 Nov 03:30 BNBUSD sell S4 @ 543.06 SL 547.3 → open
+- 25 Nov 03:30 BNBUSD sell S4 @ 543.06 SL 547.3 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 75 closed, avg -0.14R, 59% won.
 - 25 Nov 03:15 LINKUSD sell S4 @ 8.782 SL 8.8758 → open
 - 25 Nov 03:15 ADAUSD sell S4 @ 0.1428 SL 0.144414 → open
 - 25 Nov 03:15 DOGEUSD sell S4 @ 0.05475 SL 0.055289 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 74 closed, avg -0.15R, 58% won.
