@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 17:45 UTC
+Updated 2026-11-25 18:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -38,14 +38,14 @@ Updated 2026-11-25 17:45 UTC
 | DOGEUSD S4 | 10 | -0.298 | -1.14 | 0.5 | PAPER |
 | DOGEUSD S5 | 7 | -0.103 | -0.29 | 0.571 | PAPER |
 | DOGEUSD S6 | 8 | -0.155 | -0.78 | 0.75 | PAPER |
-| DOGEUSD S7 | 5 | 0.194 | 0.61 | 0.8 | PAPER |
+| DOGEUSD S7 | 6 | 0.171 | 0.65 | 0.833 | PAPER |
 | ETHUSD S1 | 11 | -0.113 | -0.48 | 0.636 | PAPER |
 | ETHUSD S2 | 10 | -0.409 | -1.89 | 0.5 | PAPER |
 | ETHUSD S3 | 10 | 0.076 | 0.26 | 0.7 | PAPER |
 | ETHUSD S4 | 11 | -0.031 | -0.12 | 0.636 | PAPER |
 | ETHUSD S5 | 7 | -0.14 | -0.41 | 0.571 | PAPER |
 | ETHUSD S6 | 8 | 0.382 | 1.35 | 0.875 | PAPER |
-| ETHUSD S7 | 8 | 0.339 | 1.45 | 0.875 | PAPER |
+| ETHUSD S7 | 9 | 0.308 | 1.48 | 0.889 | PAPER |
 | LINKUSD S1 | 10 | 0.218 | 0.9 | 0.8 | PAPER |
 | LINKUSD S2 | 10 | 0.092 | 0.41 | 0.8 | PAPER |
 | LINKUSD S3 | 6 | -0.612 | -2.13 | 0.333 | PAPER |
@@ -118,11 +118,11 @@ Updated 2026-11-25 17:45 UTC
 - 25 Nov 17:45 LINKUSD buy S7 @ 8.882 SL 8.7719 → open
 - 25 Nov 17:45 AVAXUSD buy S7 @ 6.523 SL 6.4448 → open
 - 25 Nov 17:45 ADAUSD buy S7 @ 0.1436 SL 0.141593 → open
-- 25 Nov 17:45 DOGEUSD buy S7 @ 0.05487 SL 0.054209 → open
+- 25 Nov 17:45 DOGEUSD buy S7 @ 0.05487 SL 0.054209 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 30 closed, avg -0.01R, 63% won.
 - 25 Nov 17:45 XRPUSD buy S7 @ 0.9245 SL 0.913464 → open
 - 25 Nov 17:45 BNBUSD buy S7 @ 549.2 SL 543.62 → open
 - 25 Nov 17:45 SOLUSD buy S7 @ 69.25 SL 68.291 → open
-- 25 Nov 17:45 ETHUSD buy S7 @ 1678.32 SL 1655.69 → open
+- 25 Nov 17:45 ETHUSD buy S7 @ 1678.32 SL 1655.69 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 30 closed, avg -0.01R, 63% won.
 - 25 Nov 17:45 BTCUSD buy S7 @ 59714.1 SL 59045.04 → open
 - 25 Nov 17:30 NAS100 buy S7 @ 25539.37 SL 25331.91 → open
 - 25 Nov 16:45 US30 sell S1 @ 49230.08 SL 49423.65 → closed SL -1.01R. Stopped out after 13 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: trend pullback with the trend: 138 closed, avg +0.19R, 75% won.
