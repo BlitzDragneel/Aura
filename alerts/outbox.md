@@ -1216,3 +1216,8 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 ⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~40.98
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-25 00:30:53 UTC
+⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3549.2
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
