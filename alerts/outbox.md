@@ -1354,3 +1354,8 @@ record of this setup here: 2 closed, avg -0.45R, 50% won
 ## 2026-11-25 17:16:01 UTC
 ❌ Dow 30 SELL (trend pullback) closed: SL, -1.01R (-189 pips)
 Why: Stopped out after 13 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: trend pullback with the trend: 138 closed, avg +0.19R, 75% won.
+
+## 2026-11-25 17:31:00 UTC
+⚡ Nasdaq 100: BIG MOVE under way right now (moved +434.75 in the last hour, twice its normal hourly range), price ~25539.37
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
