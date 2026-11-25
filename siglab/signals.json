@@ -29724,14 +29724,22 @@
     39.87
    ],
    "R": 0.5,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-25",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 40.68,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.096,
+   "R_tp1": 0.384,
+   "pips": 12.0,
+   "closed_ms": 1795571880000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 125 closed, avg +0.17R, 74% won."
   },
   {
    "id": "SUIUSD-S1-1795565700000",
@@ -30198,6 +30206,68 @@
    ],
    "day": "2026-11-25",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XRPUSD-S3-1795572000000",
+   "symbol": "XRPUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "low",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795572000000,
+   "ref_price": 0.9133,
+   "stop": 0.9044,
+   "targets": [
+    0.917083,
+    0.921159,
+    0.927478
+   ],
+   "R": 0.0089,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "ADAUSD-S2-1795572000000",
+   "symbol": "ADAUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795572000000,
+   "ref_price": 0.1425,
+   "stop": 0.144186,
+   "targets": [
+    0.14146,
+    0.1407,
+    0.13942
+   ],
+   "R": 0.0016857,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -30597,11 +30667,11 @@
     "grade": "PAPER"
    },
    "LTCUSD S1": {
-    "n": 10,
-    "avg_R": 0.188,
-    "t": 0.62,
-    "win": 0.7,
-    "total_R": 1.88,
+    "n": 11,
+    "avg_R": 0.18,
+    "t": 0.66,
+    "win": 0.727,
+    "total_R": 1.98,
     "grade": "PAPER"
    },
    "LTCUSD S2": {
@@ -31047,11 +31117,11 @@
   },
   "by_setup": {
    "S1": {
-    "n": 125,
+    "n": 126,
     "avg_R": 0.166,
-    "t": 2.3,
-    "win": 0.736,
-    "total_R": 20.81
+    "t": 2.31,
+    "win": 0.738,
+    "total_R": 20.9
    },
    "S2": {
     "n": 123,
@@ -31097,21 +31167,21 @@
    }
   },
   "all": {
-   "n": 754,
+   "n": 755,
    "avg_R": -0.057,
    "t": -1.94,
    "win": 0.641,
-   "total_R": -43.09
+   "total_R": -42.99
   },
-  "open": 17
+  "open": 18
  },
  "record_by_context": {
   "S1 | Asia": {
-   "n": 107,
-   "avg_R": 0.159,
-   "t": 2.02,
-   "win": 0.729,
-   "total_R": 17.0
+   "n": 108,
+   "avg_R": 0.158,
+   "t": 2.03,
+   "win": 0.731,
+   "total_R": 17.1
   },
   "S1 | London": {
    "n": 7,
@@ -31128,11 +31198,11 @@
    "total_R": -0.2
   },
   "S1 | compressed": {
-   "n": 66,
-   "avg_R": 0.235,
-   "t": 2.51,
-   "win": 0.788,
-   "total_R": 15.52
+   "n": 67,
+   "avg_R": 0.233,
+   "t": 2.52,
+   "win": 0.791,
+   "total_R": 15.62
   },
   "S1 | expanding": {
    "n": 1,
@@ -31170,18 +31240,18 @@
    "total_R": 6.26
   },
   "S1 | vol normal": {
-   "n": 97,
-   "avg_R": 0.155,
-   "t": 1.92,
-   "win": 0.742,
-   "total_R": 15.01
+   "n": 98,
+   "avg_R": 0.154,
+   "t": 1.93,
+   "win": 0.745,
+   "total_R": 15.11
   },
   "S1 | with trend": {
-   "n": 125,
+   "n": 126,
    "avg_R": 0.166,
-   "t": 2.3,
-   "win": 0.736,
-   "total_R": 20.81
+   "t": 2.31,
+   "win": 0.738,
+   "total_R": 20.9
   },
   "S2 | Asia": {
    "n": 89,
