@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 11:31 UTC
+Updated 2026-11-25 11:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-25 11:31 UTC
 
 ## Latest signals
 
+- 25 Nov 11:45 US30 buy S3 @ 49411.62 SL 49270.91 → open
 - 25 Nov 09:45 US30 sell S7 @ 49588.62 SL 49722.76 → open
 - 25 Nov 09:00 NAS100 sell S1 @ 25760.5 SL 25923.11 → open
 - 25 Nov 08:15 US30 sell S4 @ 49749.7 SL 49896.06 → closed SL -1.02R. Stopped out after 18 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 58 closed, avg -0.22R, 57% won.
@@ -171,4 +172,3 @@ Updated 2026-11-25 11:31 UTC
 - 25 Nov 01:45 LINKUSD sell S2 @ 8.754 SL 8.853 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 71 closed, avg -0.03R, 68% won.
 - 25 Nov 01:45 DOGEUSD sell S2 @ 0.05471 SL 0.055267 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 71 closed, avg -0.03R, 68% won.
 - 25 Nov 01:45 XRPUSD sell S2 @ 0.9154 SL 0.924264 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 79 closed, avg -0.00R, 71% won.
-- 25 Nov 01:45 BNBUSD buy S3 @ 543.51 SL 539.15 → closed SL -1.07R. Stopped out after 351 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 71 closed, avg -0.22R, 56% won.
