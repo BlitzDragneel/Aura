@@ -5,7 +5,7 @@
 "since": "2026-11-25T13:00:59.967552+00:00",
 "previous": "WATCH",
 "reasons": [
-"hourly volatility is high (99th percentile of the last 3 weeks)",
+"hourly volatility is high (100th percentile of the last 3 weeks)",
 "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
 ],
 "plain": "Big-move risk, direction unknown. Watch only: no tested rule is calling a trade.",
@@ -36,14 +36,6 @@
 "open_calls": [],
 "closed_calls": [],
 "pending": [
-{
-"t": "2026-11-18T18:00:00+00:00",
-"price": 45.34,
-"horizon": "hold",
-"thr": 0.09909257042031654,
-"watch": false,
-"p": null
-},
 {
 "t": "2026-11-18T19:00:00+00:00",
 "price": 44.97,
@@ -1191,14 +1183,6 @@
 {
 "t": "2026-11-24T18:00:00+00:00",
 "price": 40.9,
-"horizon": "swing",
-"thr": 0.04701362207474665,
-"watch": true,
-"p": 0.238
-},
-{
-"t": "2026-11-24T18:00:00+00:00",
-"price": 40.9,
 "horizon": "hold",
 "thr": 0.11753405518686663,
 "watch": false,
@@ -1511,14 +1495,6 @@
 {
 "t": "2026-11-25T14:00:00+00:00",
 "price": 39.2,
-"horizon": "day",
-"thr": 0.030794460641399454,
-"watch": true,
-"p": 0.447
-},
-{
-"t": "2026-11-25T14:00:00+00:00",
-"price": 39.2,
 "horizon": "swing",
 "thr": 0.06158892128279891,
 "watch": true,
@@ -1595,30 +1571,54 @@
 "thr": 0.16596323056012593,
 "watch": false,
 "p": null
+},
+{
+"t": "2026-11-25T18:00:00+00:00",
+"price": 40.53,
+"horizon": "day",
+"thr": 0.03482429241126503,
+"watch": true,
+"p": 0.22
+},
+{
+"t": "2026-11-25T18:00:00+00:00",
+"price": 40.53,
+"horizon": "swing",
+"thr": 0.06964858482253006,
+"watch": true,
+"p": 0.171
+},
+{
+"t": "2026-11-25T18:00:00+00:00",
+"price": 40.53,
+"horizon": "hold",
+"thr": 0.17412146205632514,
+"watch": false,
+"p": null
 }
 ],
 "forward": {
 "day": {
-"n": 237,
-"big": 36,
-"watch_n": 75,
-"watch_big": 9,
-"brier": 35.584936,
+"n": 238,
+"big": 37,
+"watch_n": 76,
+"watch_big": 10,
+"brier": 35.890744999999995,
 "brier_base": 0.0,
-"scout_n": 237
+"scout_n": 238
 },
 "swing": {
-"n": 217,
+"n": 218,
 "big": 97,
-"watch_n": 65,
+"watch_n": 66,
 "watch_big": 13,
-"brier": 73.28865499999998,
+"brier": 73.34529899999998,
 "brier_base": 0.0,
-"scout_n": 217
+"scout_n": 218
 },
 "hold": {
-"n": 66,
-"big": 59,
+"n": 67,
+"big": 60,
 "watch_n": 0,
 "watch_big": 0,
 "brier": 0.0,
@@ -1627,7 +1627,7 @@
 }
 },
 "calls_record": {},
-"runs": 972,
+"runs": 973,
 "created": "2026-11-15T06:42:40",
-"last_run": "2026-11-25T18:45:51.306163+00:00"
+"last_run": "2026-11-25T19:01:01.372491+00:00"
 }

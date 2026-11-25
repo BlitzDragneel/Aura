@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 18:45 UTC
+Updated 2026-11-25 19:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -52,7 +52,7 @@ Updated 2026-11-25 18:45 UTC
 | LINKUSD S4 | 10 | -0.29 | -1.12 | 0.5 | PAPER |
 | LINKUSD S5 | 8 | -0.066 | -0.21 | 0.625 | PAPER |
 | LINKUSD S6 | 8 | -0.268 | -1.15 | 0.625 | PAPER |
-| LINKUSD S7 | 7 | 0.117 | 0.33 | 0.714 | PAPER |
+| LINKUSD S7 | 8 | 0.178 | 0.58 | 0.75 | PAPER |
 | LTCUSD S1 | 11 | 0.18 | 0.66 | 0.727 | PAPER |
 | LTCUSD S2 | 10 | -0.487 | -2.01 | 0.4 | PAPER |
 | LTCUSD S3 | 9 | -0.348 | -1.11 | 0.444 | PAPER |
@@ -115,7 +115,7 @@ Updated 2026-11-25 18:45 UTC
 - 25 Nov 17:45 SUIUSD buy S7 @ 0.6498 SL 0.640764 → closed TP2+BE +0.24R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 39 closed, avg +0.07R, 72% won.
 - 25 Nov 17:45 LTCUSD buy S7 @ 41.85 SL 41.329 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:45 LTCUSD sell S3 @ 41.85 SL 42.371 → open
-- 25 Nov 17:45 LINKUSD buy S7 @ 8.882 SL 8.7719 → open
+- 25 Nov 17:45 LINKUSD buy S7 @ 8.882 SL 8.7719 → closed TP3 +0.61R. TP3 after 63 min (best 1.4R, worst -0.4R). Lesson so far: big move against the trend: 41 closed, avg +0.08R, 73% won.
 - 25 Nov 17:45 AVAXUSD buy S7 @ 6.523 SL 6.4448 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:45 ADAUSD buy S7 @ 0.1436 SL 0.141593 → closed TP2+BE +0.33R. Reached TP2 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:45 DOGEUSD buy S7 @ 0.05487 SL 0.054209 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 30 closed, avg -0.01R, 63% won.
