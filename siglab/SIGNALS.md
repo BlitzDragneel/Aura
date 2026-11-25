@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 03:45 UTC
+Updated 2026-11-25 04:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -41,7 +41,7 @@ Updated 2026-11-25 03:45 UTC
 | DOGEUSD S7 | 5 | 0.194 | 0.61 | 0.8 | PAPER |
 | ETHUSD S1 | 10 | -0.189 | -0.77 | 0.6 | PAPER |
 | ETHUSD S2 | 10 | -0.409 | -1.89 | 0.5 | PAPER |
-| ETHUSD S3 | 9 | 0.075 | 0.23 | 0.667 | PAPER |
+| ETHUSD S3 | 10 | 0.076 | 0.26 | 0.7 | PAPER |
 | ETHUSD S4 | 10 | -0.146 | -0.58 | 0.6 | PAPER |
 | ETHUSD S5 | 6 | -0.265 | -0.7 | 0.5 | PAPER |
 | ETHUSD S6 | 7 | 0.248 | 0.86 | 0.857 | PAPER |
@@ -133,7 +133,7 @@ Updated 2026-11-25 03:45 UTC
 - 25 Nov 01:45 XRPUSD sell S2 @ 0.9154 SL 0.924264 → open
 - 25 Nov 01:45 BNBUSD buy S3 @ 543.51 SL 539.15 → open
 - 25 Nov 01:45 SOLUSD sell S2 @ 69.2 SL 69.993 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 74 closed, avg -0.02R, 69% won.
-- 25 Nov 01:45 ETHUSD buy S3 @ 1660.97 SL 1643.85 → open
+- 25 Nov 01:45 ETHUSD buy S3 @ 1660.97 SL 1643.85 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 68 closed, avg -0.24R, 54% won.
 - 25 Nov 01:45 ETHUSD sell S2 @ 1660.97 SL 1678.09 → closed TP1+BE +0.17R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 74 closed, avg -0.02R, 69% won.
 - 25 Nov 01:45 BTCUSD sell S2 @ 59308.8 SL 59869.53 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 71 closed, avg -0.03R, 68% won.
 - 25 Nov 01:15 XAGUSD sell S1 @ 40.9 SL 41.331 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 124 closed, avg +0.17R, 73% won.
