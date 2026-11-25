@@ -1249,3 +1249,8 @@ Market now: trend down, volatility high, Asia session
 ⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3557.2
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-25 03:16:09 UTC
+⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~59459.0
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.

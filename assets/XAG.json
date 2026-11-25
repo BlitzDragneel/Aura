@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-25T03:00:55.850565+00:00",
+ "asof": "2026-11-25T03:16:00.586775+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 40.8,
-  "bar": "2026-11-25T02:45:00+00:00",
+  "price": 40.97,
+  "bar": "2026-11-25T03:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 40.8,
-    "ma20": 41.058499999999995,
-    "ma50": 41.113,
-    "slope_atr": 0.2,
-    "bar": "2026-11-25T02:45:00+00:00"
+    "close": 40.97,
+    "ma20": 41.054,
+    "ma50": 41.0846,
+    "slope_atr": 0.14,
+    "bar": "2026-11-25T03:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -5.16,
   "spot": {
-   "price": 40.724000000000004,
-   "bid": 40.6967,
-   "ask": 40.7513,
-   "spread": 0.0546,
+   "price": 40.8835,
+   "bid": 40.8542,
+   "ask": 40.9128,
+   "spread": 0.0586,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.187
+   "perp_premium_pct": 0.212
   },
   "funding": {
-   "rate": 0.0002177299155345,
+   "rate": 0.0002247245244019,
    "next_time": 1795593600000,
    "source": "okx-swap"
   },
@@ -152,7 +152,7 @@
   "swing": {
    "state": "WATCH",
    "since": "2026-11-25T03:00:55.850565+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "price is within 1 hourly ATR of its 30-day low: a break or a rejection is near",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -257,8 +257,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 40.8; volatility regime active (hourly ATR 1.127% of price, 88.9th percentile).",
-    "Spot XAGUSD 40.72; the perpetual trades +0.19% from spot."
+    "Price 40.97; volatility regime active (hourly ATR 1.127% of price, 88.9th percentile).",
+    "Spot XAGUSD 40.88; the perpetual trades +0.21% from spot."
    ]
   },
   {
@@ -268,6 +268,6 @@
    ]
   }
  ],
- "runs": 910,
+ "runs": 911,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
