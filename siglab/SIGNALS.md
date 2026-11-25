@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 07:01 UTC
+Updated 2026-11-25 07:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -18,7 +18,7 @@ Updated 2026-11-25 07:01 UTC
 | AVAXUSD S5 | 7 | -0.558 | -2.39 | 0.429 | PAPER |
 | AVAXUSD S6 | 7 | -0.211 | -0.66 | 0.571 | PAPER |
 | AVAXUSD S7 | 6 | -0.064 | -0.2 | 0.667 | PAPER |
-| BNBUSD S1 | 9 | 0.152 | 0.54 | 0.778 | PAPER |
+| BNBUSD S1 | 10 | 0.028 | 0.1 | 0.7 | PAPER |
 | BNBUSD S2 | 9 | -0.273 | -1.01 | 0.556 | PAPER |
 | BNBUSD S3 | 8 | 0.023 | 0.07 | 0.625 | PAPER |
 | BNBUSD S4 | 11 | -0.472 | -2.23 | 0.455 | PAPER |
@@ -128,7 +128,7 @@ Updated 2026-11-25 07:01 UTC
 - 25 Nov 07:00 XAGUSD sell S6 @ 40.42 SL 40.803 → open
 - 25 Nov 07:00 XAUUSD sell S6 @ 3523.3 SL 3539.67 → open
 - 25 Nov 06:30 DOGEUSD sell S1 @ 0.05472 SL 0.055163 → open
-- 25 Nov 06:30 BNBUSD sell S1 @ 540.95 SL 544.54 → open
+- 25 Nov 06:30 BNBUSD sell S1 @ 540.95 SL 544.54 → closed SL -1.09R. Stopped out after 35 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). Lesson so far: trend pullback with the trend: 132 closed, avg +0.18R, 75% won.
 - 25 Nov 06:30 BTCUSD sell S1 @ 59010.0 SL 59474.1 → open
 - 25 Nov 06:00 XAGUSD buy S3 @ 40.26 SL 39.875 → open
 - 25 Nov 06:00 XAUUSD buy S3 @ 3530.7 SL 3514.37 → open
