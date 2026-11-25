@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 18:30 UTC
+Updated 2026-11-25 18:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -73,14 +73,14 @@ Updated 2026-11-25 18:30 UTC
 | SOLUSD S4 | 10 | 0.101 | 0.48 | 0.8 | PAPER |
 | SOLUSD S5 | 7 | -0.137 | -0.39 | 0.571 | PAPER |
 | SOLUSD S6 | 8 | -0.468 | -1.53 | 0.375 | PAPER |
-| SOLUSD S7 | 6 | -0.025 | -0.07 | 0.667 | PAPER |
+| SOLUSD S7 | 7 | 0.019 | 0.07 | 0.714 | PAPER |
 | SUIUSD S1 | 10 | 0.154 | 0.67 | 0.8 | PAPER |
 | SUIUSD S2 | 10 | -0.211 | -0.72 | 0.5 | PAPER |
 | SUIUSD S3 | 9 | -0.289 | -1.15 | 0.556 | PAPER |
 | SUIUSD S4 | 10 | -0.203 | -0.85 | 0.6 | PAPER |
 | SUIUSD S5 | 7 | -0.071 | -0.19 | 0.571 | PAPER |
 | SUIUSD S6 | 8 | -0.353 | -1.26 | 0.5 | PAPER |
-| SUIUSD S7 | 6 | 0.288 | 0.91 | 0.833 | PAPER |
+| SUIUSD S7 | 7 | 0.281 | 1.04 | 0.857 | PAPER |
 | US30 S1 | 3 | -0.636 | -1.7 | 0.333 | PAPER |
 | US30 S2 | 4 | -0.243 | -0.51 | 0.5 | PAPER |
 | US30 S3 | 4 | 0.132 | 1.7 | 0.75 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-25 18:30 UTC
 
 ## Latest signals
 
-- 25 Nov 17:45 SUIUSD buy S7 @ 0.6498 SL 0.640764 → open
+- 25 Nov 17:45 SUIUSD buy S7 @ 0.6498 SL 0.640764 → closed TP2+BE +0.24R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 39 closed, avg +0.07R, 72% won.
 - 25 Nov 17:45 LTCUSD buy S7 @ 41.85 SL 41.329 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:45 LTCUSD sell S3 @ 41.85 SL 42.371 → open
 - 25 Nov 17:45 LINKUSD buy S7 @ 8.882 SL 8.7719 → open
@@ -121,7 +121,7 @@ Updated 2026-11-25 18:30 UTC
 - 25 Nov 17:45 DOGEUSD buy S7 @ 0.05487 SL 0.054209 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 30 closed, avg -0.01R, 63% won.
 - 25 Nov 17:45 XRPUSD buy S7 @ 0.9245 SL 0.913464 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:45 BNBUSD buy S7 @ 549.2 SL 543.62 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
-- 25 Nov 17:45 SOLUSD buy S7 @ 69.25 SL 68.291 → open
+- 25 Nov 17:45 SOLUSD buy S7 @ 69.25 SL 68.291 → closed TP2+BE +0.28R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 39 closed, avg +0.07R, 72% won.
 - 25 Nov 17:45 ETHUSD buy S7 @ 1678.32 SL 1655.69 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 30 closed, avg -0.01R, 63% won.
 - 25 Nov 17:45 BTCUSD buy S7 @ 59714.1 SL 59045.04 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:30 NAS100 buy S7 @ 25539.37 SL 25331.91 → closed TP3 +2.34R. TP3 after 46 min (best 1.7R, worst -0.1R). Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
