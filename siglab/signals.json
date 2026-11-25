@@ -29600,14 +29600,22 @@
     70.574
    ],
    "R": 0.8257,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-25",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 69.49,
+   "outcome": "SL",
+   "R_ladder": -1.051,
+   "R_tp1": -1.051,
+   "pips": -123.4,
+   "closed_ms": 1795572480000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 113 min. The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 57 closed, avg -0.20R, 58% won."
   },
   {
    "id": "XRPUSD-S1-1795565700000",
@@ -30268,6 +30276,101 @@
    ],
    "day": "2026-11-25",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XAGUSD-S2-1795572900000",
+   "symbol": "XAGUSD",
+   "setup": "S2",
+   "side": "buy",
+   "why": "closed above the last 4 hours' high on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "high",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795572900000,
+   "ref_price": 41.39,
+   "stop": 40.95,
+   "targets": [
+    41.57,
+    41.69,
+    42.04
+   ],
+   "R": 0.44,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "ADAUSD-S3-1795572900000",
+   "symbol": "ADAUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795572900000,
+   "ref_price": 0.1421,
+   "stop": 0.140414,
+   "targets": [
+    0.142901,
+    0.1434,
+    0.14488
+   ],
+   "R": 0.0016857,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "AVAXUSD-S2-1795572900000",
+   "symbol": "AVAXUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795572900000,
+   "ref_price": 6.491,
+   "stop": 6.5676,
+   "targets": [
+    6.448,
+    6.4202,
+    6.3704
+   ],
+   "R": 0.07657,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -30803,11 +30906,11 @@
     "grade": "PAPER"
    },
    "SOLUSD S4": {
-    "n": 9,
-    "avg_R": 0.229,
-    "t": 1.23,
-    "win": 0.889,
-    "total_R": 2.06,
+    "n": 10,
+    "avg_R": 0.101,
+    "t": 0.48,
+    "win": 0.8,
+    "total_R": 1.01,
     "grade": "PAPER"
    },
    "SOLUSD S5": {
@@ -31138,11 +31241,11 @@
     "total_R": -7.94
    },
    "S4": {
-    "n": 132,
-    "avg_R": -0.176,
-    "t": -2.59,
-    "win": 0.576,
-    "total_R": -23.28
+    "n": 133,
+    "avg_R": -0.183,
+    "t": -2.7,
+    "win": 0.571,
+    "total_R": -24.33
    },
    "S5": {
     "n": 84,
@@ -31167,13 +31270,13 @@
    }
   },
   "all": {
-   "n": 755,
-   "avg_R": -0.057,
-   "t": -1.94,
-   "win": 0.641,
-   "total_R": -42.99
+   "n": 756,
+   "avg_R": -0.058,
+   "t": -1.98,
+   "win": 0.64,
+   "total_R": -44.04
   },
-  "open": 18
+  "open": 20
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -31422,11 +31525,11 @@
    "total_R": 8.41
   },
   "S4 | Asia": {
-   "n": 101,
-   "avg_R": -0.249,
-   "t": -3.12,
-   "win": 0.525,
-   "total_R": -25.13
+   "n": 102,
+   "avg_R": -0.257,
+   "t": -3.24,
+   "win": 0.52,
+   "total_R": -26.18
   },
   "S4 | London": {
    "n": 12,
@@ -31443,18 +31546,18 @@
    "total_R": -1.15
   },
   "S4 | against trend": {
-   "n": 57,
-   "avg_R": -0.201,
-   "t": -2.04,
-   "win": 0.579,
-   "total_R": -11.47
+   "n": 58,
+   "avg_R": -0.216,
+   "t": -2.2,
+   "win": 0.569,
+   "total_R": -12.52
   },
   "S4 | compressed": {
-   "n": 55,
-   "avg_R": -0.165,
-   "t": -1.64,
-   "win": 0.6,
-   "total_R": -9.09
+   "n": 56,
+   "avg_R": -0.181,
+   "t": -1.81,
+   "win": 0.589,
+   "total_R": -10.14
   },
   "S4 | expanding": {
    "n": 3,
@@ -31492,11 +31595,11 @@
    "total_R": -4.91
   },
   "S4 | vol normal": {
-   "n": 86,
-   "avg_R": -0.218,
-   "t": -2.66,
-   "win": 0.558,
-   "total_R": -18.75
+   "n": 87,
+   "avg_R": -0.228,
+   "t": -2.79,
+   "win": 0.552,
+   "total_R": -19.8
   },
   "S4 | with trend": {
    "n": 74,
