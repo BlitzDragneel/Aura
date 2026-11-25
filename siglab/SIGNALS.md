@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 04:45 UTC
+Updated 2026-11-25 05:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -69,7 +69,7 @@ Updated 2026-11-25 04:45 UTC
 | NAS100 S7 | 2 | -0.437 | -0.76 | 0.5 | PAPER |
 | SOLUSD S1 | 10 | 0.176 | 0.63 | 0.7 | PAPER |
 | SOLUSD S2 | 10 | 0.094 | 0.35 | 0.7 | PAPER |
-| SOLUSD S3 | 7 | -0.333 | -1.3 | 0.571 | PAPER |
+| SOLUSD S3 | 8 | -0.237 | -0.98 | 0.625 | PAPER |
 | SOLUSD S4 | 10 | 0.101 | 0.48 | 0.8 | PAPER |
 | SOLUSD S5 | 6 | -0.357 | -1.09 | 0.5 | PAPER |
 | SOLUSD S6 | 7 | -0.705 | -3.12 | 0.286 | PAPER |
@@ -122,7 +122,7 @@ Updated 2026-11-25 04:45 UTC
 - 25 Nov 03:15 BTCUSD sell S4 @ 59459.0 SL 59997.96 → open
 - 25 Nov 03:00 XAUUSD sell S1 @ 3557.2 SL 3576.69 → open
 - 25 Nov 02:45 AVAXUSD buy S3 @ 6.465 SL 6.3884 → open
-- 25 Nov 02:30 SOLUSD buy S3 @ 68.61 SL 67.836 → open
+- 25 Nov 02:30 SOLUSD buy S3 @ 68.61 SL 67.836 → closed TP2+BE +0.44R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 69 closed, avg -0.24R, 55% won.
 - 25 Nov 02:15 AVAXUSD sell S2 @ 6.491 SL 6.5676 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 74 closed, avg -0.02R, 69% won.
 - 25 Nov 02:15 ADAUSD buy S3 @ 0.1421 SL 0.140414 → open
 - 25 Nov 02:15 XAGUSD buy S2 @ 41.39 SL 40.95 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 52 closed, avg -0.39R, 44% won.
