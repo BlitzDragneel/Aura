@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 14:16 UTC
+Updated 2026-11-25 14:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -106,7 +106,7 @@ Updated 2026-11-25 14:16 UTC
 | XRPUSD S2 | 10 | 0.069 | 0.32 | 0.8 | PAPER |
 | XRPUSD S3 | 10 | 0.004 | 0.02 | 0.7 | PAPER |
 | XRPUSD S4 | 10 | -0.233 | -0.81 | 0.5 | PAPER |
-| XRPUSD S5 | 6 | 0.072 | 0.19 | 0.667 | PAPER |
+| XRPUSD S5 | 7 | -0.089 | -0.25 | 0.571 | PAPER |
 | XRPUSD S6 | 8 | -0.303 | -0.96 | 0.5 | PAPER |
 | XRPUSD S7 | 4 | -0.096 | -0.29 | 0.75 | PAPER |
 
@@ -116,7 +116,7 @@ Updated 2026-11-25 14:16 UTC
 - 25 Nov 14:00 LTCUSD sell S5 @ 39.85 SL 40.263 → open
 - 25 Nov 14:00 LINKUSD sell S5 @ 8.546 SL 8.6359 → open
 - 25 Nov 14:00 AVAXUSD sell S5 @ 6.327 SL 6.3919 → open
-- 25 Nov 14:00 XRPUSD sell S5 @ 0.8941 SL 0.903357 → open
+- 25 Nov 14:00 XRPUSD sell S5 @ 0.8941 SL 0.903357 → closed SL -1.06R. Stopped out after 23 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: session drive with the trend: 60 closed, avg -0.07R, 60% won.
 - 25 Nov 14:00 XAGUSD sell S5 @ 39.35 SL 39.914 → open
 - 25 Nov 13:45 LTCUSD sell S2 @ 39.82 SL 40.21 → open
 - 25 Nov 13:45 DOGEUSD buy S3 @ 0.05302 SL 0.052525 → open
