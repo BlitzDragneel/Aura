@@ -1311,3 +1311,6 @@ Market now: trend down, volatility normal, London session
 ⚡ Dow 30: BIG MOVE under way right now (moved -333.00 in the last hour, twice its normal hourly range), price ~49588.62
 Market now: trend up, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+## 2026-11-25 10:45:50 UTC
+🧪 Silver watch-list paper trade closed (time): +0.44% after costs
