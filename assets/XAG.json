@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-25T12:01:03.651220+00:00",
+ "asof": "2026-11-25T12:15:51.414224+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 39.49,
-  "bar": "2026-11-25T11:45:00+00:00",
+  "price": 39.89,
+  "bar": "2026-11-25T12:00:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 39.49,
-    "ma20": 40.272000000000006,
-    "ma50": 40.6196,
-    "slope_atr": -0.44,
-    "bar": "2026-11-25T11:45:00+00:00"
+    "close": 39.89,
+    "ma20": 40.2435,
+    "ma50": 40.5968,
+    "slope_atr": -0.52,
+    "bar": "2026-11-25T12:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -5.16,
   "spot": {
-   "price": 39.425,
-   "bid": 39.3982,
-   "ask": 39.4518,
-   "spread": 0.0536,
+   "price": 39.8995,
+   "bid": 39.8742,
+   "ask": 39.9248,
+   "spread": 0.0506,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.165
+   "perp_premium_pct": -0.024
   },
   "funding": {
-   "rate": 0.0001414529568557,
+   "rate": 0.0001342136560039,
    "next_time": 1795622400000,
    "source": "okx-swap"
   },
@@ -257,8 +257,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 39.49; volatility regime active (hourly ATR 1.145% of price, 89.5th percentile).",
-    "Spot XAGUSD 39.42; the perpetual trades +0.17% from spot."
+    "Price 39.89; volatility regime active (hourly ATR 1.145% of price, 89.5th percentile).",
+    "Spot XAGUSD 39.90; the perpetual trades -0.02% from spot."
    ]
   },
   {
@@ -268,6 +268,6 @@
    ]
   }
  ],
- "runs": 947,
+ "runs": 948,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

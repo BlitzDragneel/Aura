@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 12:01 UTC
+Updated 2026-11-25 12:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -63,7 +63,7 @@ Updated 2026-11-25 12:01 UTC
 | NAS100 S1 | 4 | 0.603 | 2.89 | 1.0 | PAPER |
 | NAS100 S2 | 3 | 0.065 | 1.66 | 0.667 | PAPER |
 | NAS100 S3 | 3 | 0.427 | 1.09 | 0.667 | PAPER |
-| NAS100 S4 | 3 | 0.007 | 0.22 | 0.333 | PAPER |
+| NAS100 S4 | 4 | 0.291 | 1.02 | 0.5 | PAPER |
 | NAS100 S5 | 4 | -0.159 | -0.56 | 0.75 | PAPER |
 | NAS100 S6 | 4 | -0.254 | -0.57 | 0.5 | PAPER |
 | NAS100 S7 | 2 | -0.437 | -0.76 | 0.5 | PAPER |
@@ -83,11 +83,11 @@ Updated 2026-11-25 12:01 UTC
 | SUIUSD S7 | 6 | 0.288 | 0.91 | 0.833 | PAPER |
 | US30 S1 | 2 | -0.449 | -0.8 | 0.5 | PAPER |
 | US30 S2 | 4 | -0.243 | -0.51 | 0.5 | PAPER |
-| US30 S3 | 3 | 0.153 | 1.45 | 0.667 | PAPER |
+| US30 S3 | 4 | 0.132 | 1.7 | 0.75 | PAPER |
 | US30 S4 | 4 | -0.045 | -0.12 | 0.75 | PAPER |
 | US30 S5 | 4 | 0.233 | 0.28 | 0.5 | PAPER |
 | US30 S6 | 4 | 0.48 | 0.45 | 0.5 | PAPER |
-| US30 S7 | 3 | 0.146 | 0.24 | 0.667 | PAPER |
+| US30 S7 | 4 | 0.367 | 0.77 | 0.75 | PAPER |
 | XAGUSD S1 | 10 | 0.166 | 0.73 | 0.8 | PAPER |
 | XAGUSD S2 | 10 | -0.195 | -0.97 | 0.7 | PAPER |
 | XAGUSD S3 | 10 | 0.313 | 1.64 | 0.9 | PAPER |
@@ -112,11 +112,11 @@ Updated 2026-11-25 12:01 UTC
 
 ## Latest signals
 
-- 25 Nov 11:45 US30 buy S3 @ 49411.62 SL 49270.91 → open
-- 25 Nov 09:45 US30 sell S7 @ 49588.62 SL 49722.76 → open
+- 25 Nov 11:45 US30 buy S3 @ 49411.62 SL 49270.91 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 43 closed, avg +0.20R, 77% won.
+- 25 Nov 09:45 US30 sell S7 @ 49588.62 SL 49722.76 → closed TP3 +1.03R. TP3 after 139 min (best 1.8R, worst -0.7R). Lesson so far: big move against the trend: 29 closed, avg -0.05R, 62% won.
 - 25 Nov 09:00 NAS100 sell S1 @ 25760.5 SL 25923.11 → closed TP3 +1.19R. TP3 after 162 min (best 1.9R, worst -0.0R). Lesson so far: trend pullback with the trend: 136 closed, avg +0.17R, 75% won.
 - 25 Nov 08:15 US30 sell S4 @ 49749.7 SL 49896.06 → closed SL -1.02R. Stopped out after 18 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 58 closed, avg -0.22R, 57% won.
-- 25 Nov 08:15 NAS100 sell S4 @ 25713.58 SL 25887.62 → open
+- 25 Nov 08:15 NAS100 sell S4 @ 25713.58 SL 25887.62 → closed TP3 +1.14R. TP3 after 229 min (best 1.7R, worst -0.8R). Lesson so far: fib pullback with the trend: 83 closed, avg -0.12R, 60% won.
 - 25 Nov 08:00 SUIUSD sell S4 @ 0.6401 SL 0.646429 → closed SL -1.06R. Stopped out after 31 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Lesson so far: fib pullback with the trend: 81 closed, avg -0.12R, 60% won.
 - 25 Nov 08:00 LTCUSD sell S4 @ 40.28 SL 40.631 → closed SL -1.07R. Stopped out after 30 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 79 closed, avg -0.12R, 61% won.
 - 25 Nov 07:45 NAS100 buy S3 @ 25649.25 SL 25478.16 → closed TP2+BE +0.81R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 76 closed, avg -0.20R, 58% won.
