@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-25T23:30:56.773341+00:00",
+ "asof": "2026-11-25T23:45:50.346351+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.4,
-  "bar": "2026-11-25T23:15:00+00:00",
+  "price": 41.59,
+  "bar": "2026-11-25T23:30:00+00:00",
   "trend": {
    "15m": {
     "state": "up",
-    "close": 41.4,
-    "ma20": 41.134,
-    "ma50": 40.167,
-    "slope_atr": 1.8,
-    "bar": "2026-11-25T23:15:00+00:00"
+    "close": 41.59,
+    "ma20": 41.1845,
+    "ma50": 40.1916,
+    "slope_atr": 1.62,
+    "bar": "2026-11-25T23:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -5.16,
   "spot": {
-   "price": 41.319,
-   "bid": 41.2902,
-   "ask": 41.3478,
-   "spread": 0.0576,
+   "price": 41.418000000000006,
+   "bid": 41.3877,
+   "ask": 41.4483,
+   "spread": 0.0606,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.196
+   "perp_premium_pct": 0.415
   },
   "funding": {
-   "rate": 0.0001608199808362,
+   "rate": 0.0001538095310974,
    "next_time": 1795651200000,
    "source": "okx-swap"
   },
@@ -257,8 +257,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.4; volatility regime extreme (hourly ATR 1.626% of price, 97.9th percentile).",
-    "Spot XAGUSD 41.32; the perpetual trades +0.20% from spot."
+    "Price 41.59; volatility regime extreme (hourly ATR 1.626% of price, 97.9th percentile).",
+    "Spot XAGUSD 41.42; the perpetual trades +0.41% from spot."
    ]
   },
   {
@@ -268,6 +268,6 @@
    ]
   }
  ],
- "runs": 992,
+ "runs": 993,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
