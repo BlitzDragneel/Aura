@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 15:15 UTC
+Updated 2026-11-25 15:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -92,7 +92,7 @@ Updated 2026-11-25 15:15 UTC
 | XAGUSD S2 | 10 | -0.195 | -0.97 | 0.7 | PAPER |
 | XAGUSD S3 | 10 | 0.313 | 1.64 | 0.9 | PAPER |
 | XAGUSD S4 | 11 | -0.537 | -2.83 | 0.455 | PAPER |
-| XAGUSD S5 | 5 | -0.237 | -0.69 | 0.6 | PAPER |
+| XAGUSD S5 | 6 | -0.056 | -0.17 | 0.667 | PAPER |
 | XAGUSD S6 | 8 | -0.062 | -0.43 | 0.875 | PAPER |
 | XAGUSD S7 | 5 | -0.213 | -0.58 | 0.6 | PAPER |
 | XAUUSD S1 | 10 | 0.474 | 1.79 | 0.8 | PAPER |
@@ -118,7 +118,7 @@ Updated 2026-11-25 15:15 UTC
 - 25 Nov 14:00 LINKUSD sell S5 @ 8.546 SL 8.6359 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 61 closed, avg -0.09R, 59% won.
 - 25 Nov 14:00 AVAXUSD sell S5 @ 6.327 SL 6.3919 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 63 closed, avg -0.08R, 60% won.
 - 25 Nov 14:00 XRPUSD sell S5 @ 0.8941 SL 0.903357 → closed SL -1.06R. Stopped out after 23 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). Lesson so far: session drive with the trend: 60 closed, avg -0.07R, 60% won.
-- 25 Nov 14:00 XAGUSD sell S5 @ 39.35 SL 39.914 → open
+- 25 Nov 14:00 XAGUSD sell S5 @ 39.35 SL 39.914 → closed TP3 +0.85R. TP3 after 76 min (best 1.8R, worst -0.5R). Lesson so far: session drive with the trend: 64 closed, avg -0.07R, 61% won.
 - 25 Nov 13:45 LTCUSD sell S2 @ 39.82 SL 40.21 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 82 closed, avg +0.01R, 72% won.
 - 25 Nov 13:45 DOGEUSD buy S3 @ 0.05302 SL 0.052525 → closed SL -1.06R. Stopped out after 49 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 77 closed, avg -0.19R, 58% won.
 - 25 Nov 13:45 ETHUSD sell S1 @ 1633.49 SL 1649.11 → closed TP2+BE +0.65R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 137 closed, avg +0.18R, 75% won.
