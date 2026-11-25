@@ -1359,3 +1359,8 @@ Why: Stopped out after 13 min. Price never reached TP1 (best was 0.1R in favour,
 ⚡ Nasdaq 100: BIG MOVE under way right now (moved +434.75 in the last hour, twice its normal hourly range), price ~25539.37
 Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+## 2026-11-25 17:45:56 UTC
+⚡ Bitcoin: BIG MOVE under way right now (moved +1593.50 in the last hour, twice its normal hourly range), price ~59714.1
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
