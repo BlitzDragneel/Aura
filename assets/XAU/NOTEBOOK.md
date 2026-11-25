@@ -36,9 +36,9 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 3578.3; volatility regime extreme (hourly ATR 0.957% of price, 99.8th percentile).
+- Price 3586.5; volatility regime extreme (hourly ATR 0.957% of price, 99.8th percentile).
 - CME daily break (21-22 UTC): spot quotes pause.
-- Spot XAUUSD 3573.76; the perpetual trades +0.13% from spot.
+- Spot XAUUSD 3577.43; the perpetual trades +0.25% from spot.
 
 ## My calls so far
 
