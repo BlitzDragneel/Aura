@@ -1332,3 +1332,8 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 
 ## 2026-11-25 13:01:00 UTC
 👀 Silver day: WATCH at 40.12. Big move likely, direction unknown. hourly volatility is high (94th percentile of the last 3 weeks)
+
+## 2026-11-25 14:01:13 UTC
+⚡ Silver: SESSION DRIVE right now (New York open drive), price ~39.35
+Market now: trend down, volatility high, New York session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
