@@ -1364,3 +1364,14 @@ Market now: trend down, volatility high, New York session
 ⚡ Bitcoin: BIG MOVE under way right now (moved +1593.50 in the last hour, twice its normal hourly range), price ~59714.1
 Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
+
+## 2026-11-25 21:01:03 UTC
+📊 Signal Lab, end of day: 851 paper signals closed so far, avg -0.04R, 1 open.
+trend pullback: 139 closed, avg +0.18R, 75% won
+breakout: 137 closed, avg -0.14R, 61% won
+stretch fade: 125 closed, avg -0.06R, 65% won
+fib pullback: 144 closed, avg -0.17R, 58% won
+session drive: 99 closed, avg -0.10R, 62% won
+daily bias: 112 closed, avg -0.12R, 62% won
+big move: 95 closed, avg +0.18R, 79% won
+Earning trust: none yet (needs 15+ closed and a positive average)
