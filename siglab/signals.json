@@ -29489,14 +29489,22 @@
     0.938678
    ],
    "R": 0.0092714,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-25",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 0.9245,
+   "outcome": "SL",
+   "R_ladder": -1.059,
+   "R_tp1": -1.059,
+   "pips": -107.4,
+   "closed_ms": 1795570320000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 92 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 56 closed, avg -0.19R, 59% won."
   },
   {
    "id": "XAGUSD-S4-1795565700000",
@@ -29850,7 +29858,7 @@
     3532.0
    ],
    "R": 18.636,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -29859,7 +29867,15 @@
    "day": "2026-11-25",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3555.8,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.125,
+   "R_tp1": 0.397,
+   "pips": 23.3,
+   "closed_ms": 1795570560000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 73 closed, avg -0.15R, 57% won."
   },
   {
    "id": "XAGUSD-S1-1795569300000",
@@ -29901,6 +29917,287 @@
    "closed_ms": 1795570020000,
    "source": "okx-perp-1m",
    "review": "Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 124 closed, avg +0.17R, 73% won."
+  },
+  {
+   "id": "BTCUSD-S2-1795571100000",
+   "symbol": "BTCUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "low",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 59308.8,
+   "stop": 59869.53,
+   "targets": [
+    58978.53,
+    58715.55,
+    58389.21
+   ],
+   "R": 560.729,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "ETHUSD-S2-1795571100000",
+   "symbol": "ETHUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 1660.97,
+   "stop": 1678.09,
+   "targets": [
+    1649.52,
+    1642.99,
+    1631.33
+   ],
+   "R": 17.122,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "ETHUSD-S3-1795571100000",
+   "symbol": "ETHUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 1660.97,
+   "stop": 1643.85,
+   "targets": [
+    1668.4,
+    1673.9,
+    1685.21
+   ],
+   "R": 17.122,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "SOLUSD-S2-1795571100000",
+   "symbol": "SOLUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 69.2,
+   "stop": 69.993,
+   "targets": [
+    68.73,
+    68.35,
+    67.78
+   ],
+   "R": 0.7929,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "BNBUSD-S3-1795571100000",
+   "symbol": "BNBUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 543.51,
+   "stop": 539.15,
+   "targets": [
+    545.68,
+    547.68,
+    549.8
+   ],
+   "R": 4.357,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XRPUSD-S2-1795571100000",
+   "symbol": "XRPUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "low",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 0.9154,
+   "stop": 0.924264,
+   "targets": [
+    0.910463,
+    0.906296,
+    0.898877
+   ],
+   "R": 0.0088643,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "DOGEUSD-S2-1795571100000",
+   "symbol": "DOGEUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 0.05471,
+   "stop": 0.055267,
+   "targets": [
+    0.05439,
+    0.0541,
+    0.053642
+   ],
+   "R": 0.0005571,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "LINKUSD-S2-1795571100000",
+   "symbol": "LINKUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 8.754,
+   "stop": 8.853,
+   "targets": [
+    8.704,
+    8.6694,
+    8.618
+   ],
+   "R": 0.099,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "SUIUSD-S2-1795571100000",
+   "symbol": "SUIUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "down",
+    "vol": "low",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795571100000,
+   "ref_price": 0.6422,
+   "stop": 0.650386,
+   "targets": [
+    0.6376,
+    0.632737,
+    0.626623
+   ],
+   "R": 0.0081857,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -30660,11 +30957,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S4": {
-    "n": 9,
-    "avg_R": 0.243,
-    "t": 0.74,
-    "win": 0.667,
-    "total_R": 2.18,
+    "n": 10,
+    "avg_R": 0.231,
+    "t": 0.79,
+    "win": 0.7,
+    "total_R": 2.31,
     "grade": "PAPER"
    },
    "XAUUSD S5": {
@@ -30716,11 +31013,11 @@
     "grade": "PAPER"
    },
    "XRPUSD S4": {
-    "n": 9,
-    "avg_R": -0.142,
-    "t": -0.46,
-    "win": 0.556,
-    "total_R": -1.28,
+    "n": 10,
+    "avg_R": -0.233,
+    "t": -0.81,
+    "win": 0.5,
+    "total_R": -2.33,
     "grade": "PAPER"
    },
    "XRPUSD S5": {
@@ -30771,11 +31068,11 @@
     "total_R": -7.94
    },
    "S4": {
-    "n": 130,
-    "avg_R": -0.172,
-    "t": -2.5,
-    "win": 0.577,
-    "total_R": -22.34
+    "n": 132,
+    "avg_R": -0.176,
+    "t": -2.59,
+    "win": 0.576,
+    "total_R": -23.28
    },
    "S5": {
     "n": 84,
@@ -30800,13 +31097,13 @@
    }
   },
   "all": {
-   "n": 752,
-   "avg_R": -0.056,
-   "t": -1.9,
+   "n": 754,
+   "avg_R": -0.057,
+   "t": -1.94,
    "win": 0.641,
-   "total_R": -42.15
+   "total_R": -43.09
   },
-  "open": 10
+  "open": 17
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -31055,11 +31352,11 @@
    "total_R": 8.41
   },
   "S4 | Asia": {
-   "n": 100,
-   "avg_R": -0.253,
-   "t": -3.14,
-   "win": 0.52,
-   "total_R": -25.26
+   "n": 101,
+   "avg_R": -0.249,
+   "t": -3.12,
+   "win": 0.525,
+   "total_R": -25.13
   },
   "S4 | London": {
    "n": 12,
@@ -31076,18 +31373,18 @@
    "total_R": -1.15
   },
   "S4 | against trend": {
-   "n": 56,
-   "avg_R": -0.186,
-   "t": -1.87,
-   "win": 0.589,
-   "total_R": -10.41
+   "n": 57,
+   "avg_R": -0.201,
+   "t": -2.04,
+   "win": 0.579,
+   "total_R": -11.47
   },
   "S4 | compressed": {
-   "n": 53,
-   "avg_R": -0.154,
-   "t": -1.49,
-   "win": 0.604,
-   "total_R": -8.16
+   "n": 55,
+   "avg_R": -0.165,
+   "t": -1.64,
+   "win": 0.6,
+   "total_R": -9.09
   },
   "S4 | expanding": {
    "n": 3,
@@ -31097,11 +31394,11 @@
    "total_R": 1.15
   },
   "S4 | late": {
-   "n": 10,
-   "avg_R": 0.39,
-   "t": 2.04,
-   "win": 0.9,
-   "total_R": 3.9
+   "n": 11,
+   "avg_R": 0.259,
+   "t": 1.19,
+   "win": 0.818,
+   "total_R": 2.85
   },
   "S4 | normal": {
    "n": 73,
@@ -31118,25 +31415,25 @@
    "total_R": 1.4
   },
   "S4 | vol low": {
-   "n": 23,
-   "avg_R": -0.168,
-   "t": -0.96,
-   "win": 0.565,
-   "total_R": -3.85
+   "n": 24,
+   "avg_R": -0.205,
+   "t": -1.2,
+   "win": 0.542,
+   "total_R": -4.91
   },
   "S4 | vol normal": {
-   "n": 85,
-   "avg_R": -0.222,
-   "t": -2.68,
-   "win": 0.553,
-   "total_R": -18.88
+   "n": 86,
+   "avg_R": -0.218,
+   "t": -2.66,
+   "win": 0.558,
+   "total_R": -18.75
   },
   "S4 | with trend": {
-   "n": 73,
-   "avg_R": -0.15,
-   "t": -1.57,
-   "win": 0.575,
-   "total_R": -10.92
+   "n": 74,
+   "avg_R": -0.146,
+   "t": -1.55,
+   "win": 0.581,
+   "total_R": -10.79
   },
   "S5 | London": {
    "n": 64,
