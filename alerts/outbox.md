@@ -1306,3 +1306,8 @@ Market now: trend up, volatility normal, London session
 ⚡ Nasdaq 100: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~25760.5
 Market now: trend down, volatility normal, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-25 09:46:00 UTC
+⚡ Dow 30: BIG MOVE under way right now (moved -333.00 in the last hour, twice its normal hourly range), price ~49588.62
+Market now: trend up, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.18R). Logged and scored anyway.
