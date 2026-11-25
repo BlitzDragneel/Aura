@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 09:01 UTC
+Updated 2026-11-25 09:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -72,7 +72,7 @@ Updated 2026-11-25 09:01 UTC
 | SOLUSD S3 | 8 | -0.237 | -0.98 | 0.625 | PAPER |
 | SOLUSD S4 | 10 | 0.101 | 0.48 | 0.8 | PAPER |
 | SOLUSD S5 | 6 | -0.357 | -1.09 | 0.5 | PAPER |
-| SOLUSD S6 | 7 | -0.705 | -3.12 | 0.286 | PAPER |
+| SOLUSD S6 | 8 | -0.468 | -1.53 | 0.375 | PAPER |
 | SOLUSD S7 | 6 | -0.025 | -0.07 | 0.667 | PAPER |
 | SUIUSD S1 | 10 | 0.154 | 0.67 | 0.8 | PAPER |
 | SUIUSD S2 | 10 | -0.211 | -0.72 | 0.5 | PAPER |
@@ -138,7 +138,7 @@ Updated 2026-11-25 09:01 UTC
 - 25 Nov 07:00 DOGEUSD buy S6 @ 0.05486 SL 0.054431 → closed SL -1.08R. Stopped out after 36 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 27 closed, avg -0.29R, 52% won.
 - 25 Nov 07:00 XRPUSD buy S6 @ 0.9194 SL 0.9119 → closed SL -1.07R. Stopped out after 36 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 27 closed, avg -0.29R, 52% won.
 - 25 Nov 07:00 BNBUSD buy S6 @ 543.31 SL 539.78 → closed SL -1.09R. Stopped out after 36 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: daily bias against the trend: 27 closed, avg -0.29R, 52% won.
-- 25 Nov 07:00 SOLUSD sell S6 @ 68.8 SL 69.466 → open
+- 25 Nov 07:00 SOLUSD sell S6 @ 68.8 SL 69.466 → closed TP3 +1.19R. TP3 after 132 min (best 2.0R, worst -0.3R). Lesson so far: daily bias with the trend: 74 closed, avg -0.00R, 72% won.
 - 25 Nov 07:00 ETHUSD sell S6 @ 1659.36 SL 1673.08 → open
 - 25 Nov 07:00 US30 buy S6 @ 49771.7 SL 49614.27 → open
 - 25 Nov 07:00 NAS100 buy S6 @ 25816.58 SL 25647.62 → closed SL -1.01R. Stopped out after 27 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 27 closed, avg -0.29R, 52% won.
