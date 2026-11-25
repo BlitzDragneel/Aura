@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 02:45 UTC
+Updated 2026-11-25 03:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-25 02:45 UTC
 
 ## Latest signals
 
+- 25 Nov 03:00 XAUUSD sell S1 @ 3557.2 SL 3576.69 → open
 - 25 Nov 02:45 AVAXUSD buy S3 @ 6.465 SL 6.3884 → open
 - 25 Nov 02:30 SOLUSD buy S3 @ 68.61 SL 67.836 → open
 - 25 Nov 02:15 AVAXUSD sell S2 @ 6.491 SL 6.5676 → open
@@ -171,4 +172,3 @@ Updated 2026-11-25 02:45 UTC
 - 24 Nov 07:00 ETHUSD buy S6 @ 1699.61 SL 1679.45 → closed SL -1.05R. Stopped out after 128 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 25 closed, avg -0.23R, 56% won.
 - 24 Nov 07:00 BTCUSD buy S6 @ 60442.0 SL 59851.62 → closed SL -1.02R. Stopped out after 126 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 25 closed, avg -0.23R, 56% won.
 - 24 Nov 07:00 XAGUSD buy S6 @ 42.56 SL 42.138 → closed SL -1.07R. Stopped out after 87 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.4R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: daily bias with the trend: 59 closed, avg +0.17R, 83% won.
-- 24 Nov 07:00 XAUUSD buy S6 @ 3630.5 SL 3611.56 → closed TP1+BE +0.15R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 69 closed, avg -0.01R, 71% won.

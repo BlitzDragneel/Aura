@@ -1241,3 +1241,11 @@ Market now: trend down, volatility low, Asia session
 ⚡ Silver: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~41.39
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.36R). Logged and scored anyway.
+
+## 2026-11-25 03:00:56 UTC
+👀 Silver swing: WATCH at 40.80. Big move likely, direction unknown. price is within 1 hourly ATR of its 30-day low: a break or a rejection is near
+
+## 2026-11-25 03:01:03 UTC
+⚡ Gold: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~3557.2
+Market now: trend down, volatility high, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.

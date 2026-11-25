@@ -15,27 +15,27 @@ Built automatically from the research findings, the approved rules and my own fo
 - | Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025–26 | Verdict |
 - | E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | −12…−17, t −3…−9 | −13…−17, t −7…−11 (n 800–3,200); gross ≈ 0 | FAIL |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 221 readings scored; big moves followed 14% of them, 11% after a WATCH (62 WATCH readings).
+- My own record: 222 readings scored; big moves followed 14% of them, 11% after a WATCH (62 WATCH readings).
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 201 readings scored; big moves followed 16% of them, 16% after a WATCH (134 WATCH readings).
+- My own record: 202 readings scored; big moves followed 16% of them, 16% after a WATCH (135 WATCH readings).
 
 ## Holding (weeks-months)
 
 - Tested rule I can call: btc_gold_invvol (grade B, status paper). Evidence: edges/results/E94_result.json; edges/results/E97_result.json; edges/results/E97_leverage.json; edges/assets/BTC/FINDINGS.md
-- My own record: 50 readings scored; big moves followed 18% of them - too few to judge yet.
+- My own record: 51 readings scored; big moves followed 18% of them - too few to judge yet.
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was New York (average hourly move 0.47%) and the quietest London (0.32%).
+- Over the last 20 days the busiest session was New York (average hourly move 0.47%) and the quietest London (0.31%).
 - A typical day ranges 2.7% from low to high (last 60 days); 48% of those days closed higher.
 - Over the last 30 days the price moved -25.4% (a fact, not a forecast).
 
 ## Right now
 
-- Price 59146.2; volatility regime normal (hourly ATR 0.918% of price, 62.1th percentile).
+- Price 59209.7; volatility regime normal (hourly ATR 0.91% of price, 60.9th percentile).
 - Bitcoin trades 24/7.
 
 ## My calls so far
