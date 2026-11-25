@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 08:45 UTC
+Updated 2026-11-25 09:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-25 08:45 UTC
 
 ## Latest signals
 
+- 25 Nov 09:00 NAS100 sell S1 @ 25760.5 SL 25923.11 → open
 - 25 Nov 08:15 US30 sell S4 @ 49749.7 SL 49896.06 → closed SL -1.02R. Stopped out after 18 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 58 closed, avg -0.22R, 57% won.
 - 25 Nov 08:15 NAS100 sell S4 @ 25713.58 SL 25887.62 → open
 - 25 Nov 08:00 SUIUSD sell S4 @ 0.6401 SL 0.646429 → closed SL -1.06R. Stopped out after 31 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Lesson so far: fib pullback with the trend: 81 closed, avg -0.12R, 60% won.
@@ -171,4 +172,3 @@ Updated 2026-11-25 08:45 UTC
 - 25 Nov 01:45 XRPUSD sell S2 @ 0.9154 SL 0.924264 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 79 closed, avg -0.00R, 71% won.
 - 25 Nov 01:45 BNBUSD buy S3 @ 543.51 SL 539.15 → closed SL -1.07R. Stopped out after 351 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 71 closed, avg -0.22R, 56% won.
 - 25 Nov 01:45 SOLUSD sell S2 @ 69.2 SL 69.993 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 74 closed, avg -0.02R, 69% won.
-- 25 Nov 01:45 ETHUSD buy S3 @ 1660.97 SL 1643.85 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 68 closed, avg -0.24R, 54% won.

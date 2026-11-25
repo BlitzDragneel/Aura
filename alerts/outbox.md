@@ -1301,3 +1301,8 @@ Market now: trend up, volatility normal, London session
 
 ## 2026-11-25 08:45:51 UTC
 🧪 Gold watch-list paper trade closed (stop): -0.40% after costs
+
+## 2026-11-25 09:01:12 UTC
+⚡ Nasdaq 100: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~25760.5
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
