@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 01:15 UTC
+Updated 2026-11-25 01:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -88,7 +88,7 @@ Updated 2026-11-25 01:15 UTC
 | US30 S5 | 3 | 0.647 | 0.62 | 0.667 | PAPER |
 | US30 S6 | 3 | 0.507 | 0.33 | 0.333 | PAPER |
 | US30 S7 | 3 | 0.146 | 0.24 | 0.667 | PAPER |
-| XAGUSD S1 | 9 | 0.176 | 0.69 | 0.778 | PAPER |
+| XAGUSD S1 | 10 | 0.166 | 0.73 | 0.8 | PAPER |
 | XAGUSD S2 | 9 | -0.224 | -1.0 | 0.667 | PAPER |
 | XAGUSD S3 | 9 | 0.308 | 1.45 | 0.889 | PAPER |
 | XAGUSD S4 | 11 | -0.537 | -2.83 | 0.455 | PAPER |
@@ -96,7 +96,7 @@ Updated 2026-11-25 01:15 UTC
 | XAGUSD S6 | 7 | -0.081 | -0.49 | 0.857 | PAPER |
 | XAGUSD S7 | 5 | -0.213 | -0.58 | 0.6 | PAPER |
 | XAUUSD S1 | 9 | 0.434 | 1.48 | 0.778 | PAPER |
-| XAUUSD S2 | 9 | -0.001 | -0.0 | 0.667 | PAPER |
+| XAUUSD S2 | 10 | 0.012 | 0.05 | 0.7 | PAPER |
 | XAUUSD S3 | 9 | -0.133 | -0.59 | 0.667 | PAPER |
 | XAUUSD S4 | 9 | 0.243 | 0.74 | 0.667 | PAPER |
 | XAUUSD S5 | 7 | -0.033 | -0.11 | 0.714 | PAPER |
@@ -112,10 +112,10 @@ Updated 2026-11-25 01:15 UTC
 
 ## Latest signals
 
-- 25 Nov 01:15 XAGUSD sell S1 @ 40.9 SL 41.331 → open
+- 25 Nov 01:15 XAGUSD sell S1 @ 40.9 SL 41.331 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 124 closed, avg +0.17R, 73% won.
 - 25 Nov 01:00 XAUUSD sell S4 @ 3555.8 SL 3574.44 → open
 - 25 Nov 00:30 BNBUSD sell S2 @ 545.74 SL 550.27 → open
-- 25 Nov 00:30 XAUUSD sell S2 @ 3549.2 SL 3567.39 → open
+- 25 Nov 00:30 XAUUSD sell S2 @ 3549.2 SL 3567.39 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 70 closed, avg -0.03R, 67% won.
 - 25 Nov 00:15 SUIUSD sell S1 @ 0.645 SL 0.653436 → open
 - 25 Nov 00:15 LTCUSD sell S1 @ 40.69 SL 41.19 → open
 - 25 Nov 00:15 LINKUSD sell S1 @ 8.803 SL 8.9047 → open
