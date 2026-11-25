@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 00:01 UTC
+Updated 2026-11-25 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,14 @@ Updated 2026-11-25 00:01 UTC
 
 ## Latest signals
 
+- 25 Nov 00:15 SUIUSD sell S1 @ 0.645 SL 0.653436 → open
+- 25 Nov 00:15 LTCUSD sell S1 @ 40.69 SL 41.19 → open
+- 25 Nov 00:15 LINKUSD sell S1 @ 8.803 SL 8.9047 → open
+- 25 Nov 00:15 ADAUSD sell S1 @ 0.1437 SL 0.145457 → open
+- 25 Nov 00:15 XRPUSD sell S1 @ 0.9216 SL 0.930871 → open
+- 25 Nov 00:15 SOLUSD buy S4 @ 69.5 SL 68.674 → open
+- 25 Nov 00:15 SOLUSD sell S1 @ 69.5 SL 70.326 → open
+- 25 Nov 00:15 XAGUSD buy S4 @ 40.98 SL 40.56 → open
 - 25 Nov 00:00 XRPUSD buy S4 @ 0.9244 SL 0.915129 → open
 - 24 Nov 15:45 XAGUSD sell S7 @ 41.26 SL 41.709 → closed TP2+BE +0.24R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 52 closed, avg +0.24R, 83% won.
 - 24 Nov 15:45 XAUUSD sell S7 @ 3587.9 SL 3605.24 → closed TP3 +0.74R. TP3 after 34 min (best 1.3R, worst -0.4R). Lesson so far: big move against the trend: 28 closed, avg -0.08R, 61% won.
@@ -164,11 +172,3 @@ Updated 2026-11-25 00:01 UTC
 - 24 Nov 01:30 AVAXUSD buy S2 @ 6.851 SL 6.7302 → closed SL -1.03R. Stopped out after 82 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
 - 24 Nov 01:30 ADAUSD sell S3 @ 0.1504 SL 0.153136 → closed TP3 +0.69R. TP3 after 81 min (best 1.1R, worst -0.0R). Lesson so far: stretch fade against the trend: 66 closed, avg -0.26R, 53% won.
 - 24 Nov 01:30 DOGEUSD buy S2 @ 0.05708 SL 0.056032 → closed SL -1.03R. Stopped out after 81 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
-- 24 Nov 01:15 LTCUSD buy S2 @ 41.78 SL 41.089 → closed SL -1.04R. Stopped out after 88 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 65 closed, avg +0.04R, 72% won.
-- 24 Nov 01:15 LINKUSD buy S2 @ 9.117 SL 8.9625 → closed SL -1.03R. Stopped out after 98 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
-- 24 Nov 01:15 ADAUSD buy S2 @ 0.1498 SL 0.147064 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 62 closed, avg +0.06R, 73% won.
-- 24 Nov 01:15 XRPUSD buy S2 @ 0.9491 SL 0.9307 → closed TP1+BE +0.06R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 62 closed, avg +0.06R, 73% won.
-- 24 Nov 01:15 BNBUSD buy S2 @ 560.4 SL 553.13 → closed SL -1.05R. Stopped out after 68 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 64 closed, avg +0.06R, 73% won.
-- 24 Nov 01:15 SOLUSD buy S1 @ 72.4 SL 70.919 → closed SL -1.03R. Stopped out after 98 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 123 closed, avg +0.18R, 74% won.
-- 24 Nov 01:15 ETHUSD buy S1 @ 1718.46 SL 1688.39 → closed SL -1.03R. Stopped out after 87 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 121 closed, avg +0.19R, 74% won.
-- 24 Nov 01:15 BTCUSD buy S1 @ 61517.9 SL 60651.55 → closed SL -1.01R. Stopped out after 49 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 116 closed, avg +0.19R, 74% won.

@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-25T00:00:57.628875+00:00",
+ "asof": "2026-11-25T00:15:37.385328+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 59796.8,
-  "bar": "2026-11-24T23:45:00+00:00",
+  "price": 59529.8,
+  "bar": "2026-11-25T00:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 59796.8,
-    "ma20": 59827.95,
-    "ma50": 59941.106,
-    "slope_atr": -0.15,
-    "bar": "2026-11-24T23:45:00+00:00"
+    "close": 59529.8,
+    "ma20": 59807.86,
+    "ma50": 59932.477999999996,
+    "slope_atr": -0.22,
+    "bar": "2026-11-25T00:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -2.37,
   "funding": {
-   "rate": 5.50189519743e-05,
+   "rate": 5.16937880833e-05,
    "next_time": 1795593600000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.139,
+    "p_big_move": 0.163,
     "flag": false,
     "detail": {
-     "p_up_move": 0.063,
-     "p_down_move": 0.076
+     "p_up_move": 0.075,
+     "p_down_move": 0.088
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -140,7 +140,7 @@
   "swing": {
    "state": "WAIT",
    "since": "2026-11-25T00:00:57.628875+00:00",
-   "previous": "WATCH",
+   "previous": "WAIT",
    "reasons": [
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
    ],
@@ -252,7 +252,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 59796.8; volatility regime normal (hourly ATR 0.975% of price, 68.3th percentile).",
+    "Price 59529.8; volatility regime normal (hourly ATR 0.975% of price, 68.3th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -263,6 +263,6 @@
    ]
   }
  ],
- "runs": 897,
+ "runs": 898,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

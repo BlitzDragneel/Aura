@@ -1211,3 +1211,8 @@ session drive: 84 closed, avg -0.16R, 57% won
 daily bias: 97 closed, avg -0.08R, 66% won
 big move: 81 closed, avg +0.14R, 75% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-25 00:15:52 UTC
+⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~40.98
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
