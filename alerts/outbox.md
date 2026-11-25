@@ -1289,3 +1289,12 @@ Market now: trend up, volatility low, London session
 ⚡ Dow 30: SESSION DRIVE right now (London open drive), price ~49719.62
 Market now: trend up, volatility low, London session
 ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+## 2026-11-25 08:16:02 UTC
+⚡ Nasdaq 100: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~25713.58
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+⚡ Dow 30: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~49749.7
+Market now: trend up, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).

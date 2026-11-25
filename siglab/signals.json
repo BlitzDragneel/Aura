@@ -31657,7 +31657,7 @@
     3561.17
    ],
    "R": 16.371,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -31666,7 +31666,15 @@
    "day": "2026-11-25",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3529.0,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.162,
+   "R_tp1": 0.509,
+   "pips": 26.6,
+   "closed_ms": 1795593720000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 32 closed, avg -0.17R, 62% won."
   },
   {
    "id": "BTCUSD-S5-1795591800000",
@@ -32026,14 +32034,22 @@
     0.627423
    ],
    "R": 0.0063571,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-25",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 0.6424,
+   "outcome": "TP2+BE",
+   "R_ladder": 0.57,
+   "R_tp1": 0.575,
+   "pips": 56.4,
+   "closed_ms": 1795593660000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 53 closed, avg -0.15R, 55% won."
   },
   {
    "id": "NAS100-S3-1795592700000",
@@ -32127,6 +32143,72 @@
    ],
    "day": "2026-11-25",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "NAS100-S4-1795594500000",
+   "symbol": "NAS100",
+   "setup": "S4",
+   "side": "sell",
+   "why": "bounced back half of a strong down-leg",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "London",
+    "with_trend": true
+   },
+   "logged_ms": 1795594500000,
+   "ref_price": 25713.58,
+   "stop": 25887.62,
+   "targets": [
+    25595.41,
+    25523.01,
+    25414.07
+   ],
+   "R": 174.036,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "US30-S4-1795594500000",
+   "symbol": "US30",
+   "setup": "S4",
+   "side": "sell",
+   "why": "bounced back half of a strong down-leg",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "London",
+    "with_trend": false
+   },
+   "logged_ms": 1795594500000,
+   "ref_price": 49749.7,
+   "stop": 49896.06,
+   "targets": [
+    49649.88,
+    49587.68,
+    49533.53
+   ],
+   "R": 146.357,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-25",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
   }
  ],
  "sent_day": {},
@@ -32726,11 +32808,11 @@
     "grade": "PAPER"
    },
    "SUIUSD S5": {
-    "n": 6,
-    "avg_R": -0.178,
-    "t": -0.43,
-    "win": 0.5,
-    "total_R": -1.07,
+    "n": 7,
+    "avg_R": -0.071,
+    "t": -0.19,
+    "win": 0.571,
+    "total_R": -0.5,
     "grade": "PAPER"
    },
    "SUIUSD S6": {
@@ -32894,11 +32976,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S5": {
-    "n": 7,
-    "avg_R": -0.033,
-    "t": -0.11,
-    "win": 0.714,
-    "total_R": -0.23,
+    "n": 8,
+    "avg_R": -0.009,
+    "t": -0.03,
+    "win": 0.75,
+    "total_R": -0.07,
     "grade": "PAPER"
    },
    "XAUUSD S6": {
@@ -33004,11 +33086,11 @@
     "total_R": -22.71
    },
    "S5": {
-    "n": 85,
-    "avg_R": -0.16,
-    "t": -1.74,
-    "win": 0.576,
-    "total_R": -13.62
+    "n": 87,
+    "avg_R": -0.148,
+    "t": -1.64,
+    "win": 0.586,
+    "total_R": -12.88
    },
    "S6": {
     "n": 105,
@@ -33026,11 +33108,11 @@
    }
   },
   "all": {
-   "n": 795,
-   "avg_R": -0.058,
-   "t": -2.04,
-   "win": 0.645,
-   "total_R": -45.97
+   "n": 797,
+   "avg_R": -0.057,
+   "t": -2.0,
+   "win": 0.646,
+   "total_R": -45.24
   },
   "open": 27
  },
@@ -33365,11 +33447,11 @@
    "total_R": -9.18
   },
   "S5 | London": {
-   "n": 65,
-   "avg_R": -0.194,
-   "t": -1.99,
-   "win": 0.585,
-   "total_R": -12.6
+   "n": 67,
+   "avg_R": -0.177,
+   "t": -1.86,
+   "win": 0.597,
+   "total_R": -11.87
   },
   "S5 | New York": {
    "n": 20,
@@ -33379,18 +33461,18 @@
    "total_R": -1.02
   },
   "S5 | against trend": {
-   "n": 32,
-   "avg_R": -0.168,
-   "t": -1.3,
-   "win": 0.625,
-   "total_R": -5.38
+   "n": 33,
+   "avg_R": -0.158,
+   "t": -1.26,
+   "win": 0.636,
+   "total_R": -5.22
   },
   "S5 | compressed": {
-   "n": 47,
-   "avg_R": 0.05,
-   "t": 0.42,
-   "win": 0.723,
-   "total_R": 2.33
+   "n": 49,
+   "avg_R": 0.062,
+   "t": 0.55,
+   "win": 0.735,
+   "total_R": 3.06
   },
   "S5 | expanding": {
    "n": 6,
@@ -33421,18 +33503,18 @@
    "total_R": -9.07
   },
   "S5 | vol normal": {
-   "n": 59,
-   "avg_R": 0.039,
-   "t": 0.37,
-   "win": 0.712,
-   "total_R": 2.32
+   "n": 61,
+   "avg_R": 0.05,
+   "t": 0.48,
+   "win": 0.721,
+   "total_R": 3.05
   },
   "S5 | with trend": {
-   "n": 53,
-   "avg_R": -0.155,
-   "t": -1.23,
-   "win": 0.547,
-   "total_R": -8.23
+   "n": 54,
+   "avg_R": -0.142,
+   "t": -1.14,
+   "win": 0.556,
+   "total_R": -7.66
   },
   "S6 | Asia": {
    "n": 105,
