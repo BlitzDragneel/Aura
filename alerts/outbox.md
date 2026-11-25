@@ -1314,3 +1314,10 @@ Market now: trend up, volatility normal, London session
 
 ## 2026-11-25 10:45:50 UTC
 🧪 Silver watch-list paper trade closed (time): +0.44% after costs
+
+## 2026-11-25 11:01:00 UTC
+🌅 OMEGA morning read
+Bitcoin 58,881.20 | 1h trend down | vol normal | typical day range 2.74% | big 4h move chance 31% | day WAIT · swing WAIT · hold WAIT
+Gold 3,539.00 | 1h trend down | vol normal | typical day range 1.55% | big 4h move chance 27% | day WAIT · swing WAIT · hold WAIT
+Silver 40.39 | 1h trend down | vol active | typical day range 3.11% | big 4h move chance 39% | day WAIT · swing WATCH · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
