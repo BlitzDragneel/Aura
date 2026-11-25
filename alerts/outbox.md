@@ -1329,3 +1329,6 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 
 ## 2026-11-25 12:01:11 UTC
 🔁 Learning: trend pullback with the trend is now EARNED (trade plans sent again, tagged) after 137 live signals (45 separate moments) averaging +0.18R.
+
+## 2026-11-25 13:01:00 UTC
+👀 Silver day: WATCH at 40.12. Big move likely, direction unknown. hourly volatility is high (94th percentile of the last 3 weeks)
