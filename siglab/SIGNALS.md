@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 01:01 UTC
+Updated 2026-11-25 01:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -91,7 +91,7 @@ Updated 2026-11-25 01:01 UTC
 | XAGUSD S1 | 9 | 0.176 | 0.69 | 0.778 | PAPER |
 | XAGUSD S2 | 9 | -0.224 | -1.0 | 0.667 | PAPER |
 | XAGUSD S3 | 9 | 0.308 | 1.45 | 0.889 | PAPER |
-| XAGUSD S4 | 10 | -0.596 | -2.99 | 0.4 | PAPER |
+| XAGUSD S4 | 11 | -0.537 | -2.83 | 0.455 | PAPER |
 | XAGUSD S5 | 5 | -0.237 | -0.69 | 0.6 | PAPER |
 | XAGUSD S6 | 7 | -0.081 | -0.49 | 0.857 | PAPER |
 | XAGUSD S7 | 5 | -0.213 | -0.58 | 0.6 | PAPER |
@@ -112,6 +112,7 @@ Updated 2026-11-25 01:01 UTC
 
 ## Latest signals
 
+- 25 Nov 01:15 XAGUSD sell S1 @ 40.9 SL 41.331 → open
 - 25 Nov 01:00 XAUUSD sell S4 @ 3555.8 SL 3574.44 → open
 - 25 Nov 00:30 BNBUSD sell S2 @ 545.74 SL 550.27 → open
 - 25 Nov 00:30 XAUUSD sell S2 @ 3549.2 SL 3567.39 → open
@@ -122,7 +123,7 @@ Updated 2026-11-25 01:01 UTC
 - 25 Nov 00:15 XRPUSD sell S1 @ 0.9216 SL 0.930871 → open
 - 25 Nov 00:15 SOLUSD buy S4 @ 69.5 SL 68.674 → open
 - 25 Nov 00:15 SOLUSD sell S1 @ 69.5 SL 70.326 → open
-- 25 Nov 00:15 XAGUSD buy S4 @ 40.98 SL 40.56 → open
+- 25 Nov 00:15 XAGUSD buy S4 @ 40.98 SL 40.56 → closed TP1+BE +0.05R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 55 closed, avg -0.19R, 58% won.
 - 25 Nov 00:00 XRPUSD buy S4 @ 0.9244 SL 0.915129 → open
 - 24 Nov 15:45 XAGUSD sell S7 @ 41.26 SL 41.709 → closed TP2+BE +0.24R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 52 closed, avg +0.24R, 83% won.
 - 24 Nov 15:45 XAUUSD sell S7 @ 3587.9 SL 3605.24 → closed TP3 +0.74R. TP3 after 34 min (best 1.3R, worst -0.4R). Lesson so far: big move against the trend: 28 closed, avg -0.08R, 61% won.
@@ -171,4 +172,3 @@ Updated 2026-11-25 01:01 UTC
 - 24 Nov 02:15 BTCUSD sell S2 @ 60971.9 SL 61862.85 → closed TP3 +0.61R. TP3 after 38 min (best 1.0R, worst -0.0R). Lesson so far: breakout against the trend: 49 closed, avg -0.38R, 45% won.
 - 24 Nov 02:00 LTCUSD buy S4 @ 41.5 SL 40.804 → closed SL -1.03R. Stopped out after 65 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 69 closed, avg -0.12R, 59% won.
 - 24 Nov 02:00 BNBUSD buy S4 @ 557.61 SL 550.12 → closed SL -1.04R. Stopped out after 53 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 68 closed, avg -0.10R, 60% won.
-- 24 Nov 01:30 SUIUSD buy S2 @ 0.6813 SL 0.665629 → closed SL -1.03R. Stopped out after 82 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
