@@ -1264,3 +1264,28 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~59010.0
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-25 07:31:08 UTC
+⚡ Gold: SESSION DRIVE right now (London open drive), price ~3528.9
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
+
+⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~59035.4
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Nasdaq 100: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~25699.25
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+⚡ Nasdaq 100: SESSION DRIVE right now (London open drive), price ~25699.25
+Market now: trend down, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Dow 30: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~49719.62
+Market now: trend up, volatility low, London session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.34R). Logged and scored anyway.
+
+⚡ Dow 30: SESSION DRIVE right now (London open drive), price ~49719.62
+Market now: trend up, volatility low, London session
+ℹ️ No trade plan: on past data, trading this kind of move against the trend lost money (avg -0.09R). Logged and scored anyway.
