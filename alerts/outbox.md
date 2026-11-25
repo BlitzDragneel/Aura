@@ -1298,3 +1298,6 @@ Market now: trend down, volatility normal, London session
 ⚡ Dow 30: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~49749.7
 Market now: trend up, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-25 08:45:51 UTC
+🧪 Gold watch-list paper trade closed (stop): -0.40% after costs
