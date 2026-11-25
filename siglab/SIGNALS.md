@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 19:15 UTC
+Updated 2026-11-25 19:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -55,7 +55,7 @@ Updated 2026-11-25 19:15 UTC
 | LINKUSD S7 | 8 | 0.178 | 0.58 | 0.75 | PAPER |
 | LTCUSD S1 | 11 | 0.18 | 0.66 | 0.727 | PAPER |
 | LTCUSD S2 | 10 | -0.487 | -2.01 | 0.4 | PAPER |
-| LTCUSD S3 | 9 | -0.348 | -1.11 | 0.444 | PAPER |
+| LTCUSD S3 | 10 | -0.418 | -1.44 | 0.4 | PAPER |
 | LTCUSD S4 | 11 | -0.203 | -0.76 | 0.545 | PAPER |
 | LTCUSD S5 | 8 | 0.038 | 0.14 | 0.75 | PAPER |
 | LTCUSD S6 | 8 | -0.221 | -0.67 | 0.5 | PAPER |
@@ -115,7 +115,7 @@ Updated 2026-11-25 19:15 UTC
 - 25 Nov 19:15 LINKUSD sell S3 @ 9.025 SL 9.1506 → open
 - 25 Nov 17:45 SUIUSD buy S7 @ 0.6498 SL 0.640764 → closed TP2+BE +0.24R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 39 closed, avg +0.07R, 72% won.
 - 25 Nov 17:45 LTCUSD buy S7 @ 41.85 SL 41.329 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
-- 25 Nov 17:45 LTCUSD sell S3 @ 41.85 SL 42.371 → open
+- 25 Nov 17:45 LTCUSD sell S3 @ 41.85 SL 42.371 → closed SL -1.05R. Stopped out after 90 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade with the trend: 44 closed, avg +0.19R, 77% won.
 - 25 Nov 17:45 LINKUSD buy S7 @ 8.882 SL 8.7719 → closed TP3 +0.61R. TP3 after 63 min (best 1.4R, worst -0.4R). Lesson so far: big move against the trend: 41 closed, avg +0.08R, 73% won.
 - 25 Nov 17:45 AVAXUSD buy S7 @ 6.523 SL 6.4448 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:45 ADAUSD buy S7 @ 0.1436 SL 0.141593 → closed TP2+BE +0.33R. Reached TP2 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
