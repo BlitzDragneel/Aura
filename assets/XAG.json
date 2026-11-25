@@ -3,7 +3,7 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-25T19:45:54.137870+00:00",
+ "asof": "2026-11-25T19:58:20.625542+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -5.16,
   "spot": {
-   "price": 40.6215,
-   "bid": 40.5987,
-   "ask": 40.6443,
-   "spread": 0.0456,
+   "price": 40.73625,
+   "bid": 40.7102,
+   "ask": 40.7623,
+   "spread": 0.0521,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.242
+   "perp_premium_pct": -0.04
   },
   "funding": {
-   "rate": 0.0002374560369526,
+   "rate": 0.0002474742136802,
    "next_time": 1795651200000,
    "source": "okx-swap"
   },
@@ -259,7 +259,7 @@
    "title": "Right now",
    "lines": [
     "Price 40.72; volatility regime extreme (hourly ATR 1.741% of price, 99.8th percentile).",
-    "Spot XAGUSD 40.62; the perpetual trades +0.24% from spot."
+    "Spot XAGUSD 40.74; the perpetual trades -0.04% from spot."
    ]
   },
   {
@@ -269,6 +269,6 @@
    ]
   }
  ],
- "runs": 976,
+ "runs": 977,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
