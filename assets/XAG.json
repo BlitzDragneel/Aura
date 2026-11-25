@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-25T13:30:57.874807+00:00",
+ "asof": "2026-11-25T13:45:54.635662+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 40.14,
-  "bar": "2026-11-25T13:15:00+00:00",
+  "price": 39.43,
+  "bar": "2026-11-25T13:30:00+00:00",
   "trend": {
    "15m": {
-    "state": "flat",
-    "close": 40.14,
-    "ma20": 40.1845,
-    "ma50": 40.507,
-    "slope_atr": -0.2,
-    "bar": "2026-11-25T13:15:00+00:00"
+    "state": "down",
+    "close": 39.43,
+    "ma20": 40.133500000000005,
+    "ma50": 40.477599999999995,
+    "slope_atr": -0.28,
+    "bar": "2026-11-25T13:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -5.16,
   "spot": {
-   "price": 39.666,
-   "bid": 39.6347,
-   "ask": 39.6973,
-   "spread": 0.0626,
+   "price": 39.341499999999996,
+   "bid": 39.3162,
+   "ask": 39.3668,
+   "spread": 0.0506,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 1.195
+   "perp_premium_pct": 0.225
   },
   "funding": {
-   "rate": 0.0001041094520965,
+   "rate": 0.0001069591260259,
    "next_time": 1795622400000,
    "source": "okx-swap"
   },
@@ -258,8 +258,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 40.14; volatility regime active (hourly ATR 1.28% of price, 94.4th percentile).",
-    "Spot XAGUSD 39.67; the perpetual trades +1.20% from spot."
+    "Price 39.43; volatility regime active (hourly ATR 1.28% of price, 94.4th percentile).",
+    "Spot XAGUSD 39.34; the perpetual trades +0.23% from spot."
    ]
   },
   {
@@ -269,6 +269,6 @@
    ]
   }
  ],
- "runs": 953,
+ "runs": 954,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
