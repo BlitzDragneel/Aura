@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-25T21:31:08.845496+00:00",
+ "asof": "2026-11-25T21:45:52.146689+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.32,
-  "bar": "2026-11-25T21:15:00+00:00",
+  "price": 41.25,
+  "bar": "2026-11-25T21:30:00+00:00",
   "trend": {
    "15m": {
     "state": "up",
-    "close": 41.32,
-    "ma20": 40.4445,
-    "ma50": 39.9906,
-    "slope_atr": 2.19,
-    "bar": "2026-11-25T21:15:00+00:00"
+    "close": 41.25,
+    "ma20": 40.572500000000005,
+    "ma50": 40.008,
+    "slope_atr": 2.31,
+    "bar": "2026-11-25T21:30:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -94,18 +94,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -5.16,
   "spot": {
-   "price": 41.149,
-   "bid": 41.1222,
-   "ask": 41.1758,
-   "spread": 0.0536,
-   "age_s": 0,
+   "price": 41.227000000000004,
+   "bid": 41.1992,
+   "ask": 41.2548,
+   "spread": 0.0556,
+   "age_s": 1,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.416
+   "perp_premium_pct": 0.056
   },
   "funding": {
-   "rate": 0.0002775701718272,
+   "rate": 0.0002827464342626,
    "next_time": 1795651200000,
    "source": "okx-swap"
   },
@@ -259,9 +259,9 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.32; volatility regime extreme (hourly ATR 1.69% of price, 99.4th percentile).",
+    "Price 41.25; volatility regime extreme (hourly ATR 1.69% of price, 99.4th percentile).",
     "CME daily break (21-22 UTC): spot quotes pause.",
-    "Spot XAGUSD 41.15; the perpetual trades +0.42% from spot."
+    "Spot XAGUSD 41.23; the perpetual trades +0.06% from spot."
    ]
   },
   {
@@ -271,6 +271,6 @@
    ]
   }
  ],
- "runs": 984,
+ "runs": 985,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
