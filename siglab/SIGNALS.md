@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 17:01 UTC
+Updated 2026-11-25 17:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -81,7 +81,7 @@ Updated 2026-11-25 17:01 UTC
 | SUIUSD S5 | 7 | -0.071 | -0.19 | 0.571 | PAPER |
 | SUIUSD S6 | 8 | -0.353 | -1.26 | 0.5 | PAPER |
 | SUIUSD S7 | 6 | 0.288 | 0.91 | 0.833 | PAPER |
-| US30 S1 | 2 | -0.449 | -0.8 | 0.5 | PAPER |
+| US30 S1 | 3 | -0.636 | -1.7 | 0.333 | PAPER |
 | US30 S2 | 4 | -0.243 | -0.51 | 0.5 | PAPER |
 | US30 S3 | 4 | 0.132 | 1.7 | 0.75 | PAPER |
 | US30 S4 | 4 | -0.045 | -0.12 | 0.75 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-25 17:01 UTC
 
 ## Latest signals
 
-- 25 Nov 16:45 US30 sell S1 @ 49230.08 SL 49423.65 → open
+- 25 Nov 16:45 US30 sell S1 @ 49230.08 SL 49423.65 → closed SL -1.01R. Stopped out after 13 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: trend pullback with the trend: 138 closed, avg +0.19R, 75% won.
 - 25 Nov 14:45 BTCUSD buy S3 @ 57359.1 SL 56806.4 → closed TP3 +0.80R. TP3 after 12 min (best 1.3R, worst -0.2R). Lesson so far: stretch fade against the trend: 79 closed, avg -0.19R, 58% won.
 - 25 Nov 14:00 SUIUSD buy S3 @ 0.6192 SL 0.611779 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 77 closed, avg -0.19R, 58% won.
 - 25 Nov 14:00 LTCUSD sell S5 @ 39.85 SL 40.263 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 61 closed, avg -0.09R, 59% won.

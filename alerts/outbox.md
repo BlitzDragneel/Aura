@@ -1350,3 +1350,7 @@ TP2 49050.83 (reached in 40% of similar moments in the last 3 days)
 TP3 48958.69 (reached in 20% of similar moments in the last 3 days)
 Setup: trend pullback (downtrend, price closed back below its short average after a bounce)
 record of this setup here: 2 closed, avg -0.45R, 50% won
+
+## 2026-11-25 17:16:01 UTC
+❌ Dow 30 SELL (trend pullback) closed: SL, -1.01R (-189 pips)
+Why: Stopped out after 13 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: trend pullback with the trend: 138 closed, avg +0.19R, 75% won.
