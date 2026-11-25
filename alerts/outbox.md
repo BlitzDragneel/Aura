@@ -1221,3 +1221,8 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3549.2
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-25 01:01:04 UTC
+⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3555.8
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.

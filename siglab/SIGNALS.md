@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 00:45 UTC
+Updated 2026-11-25 01:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-25 00:45 UTC
 
 ## Latest signals
 
+- 25 Nov 01:00 XAUUSD sell S4 @ 3555.8 SL 3574.44 → open
 - 25 Nov 00:30 BNBUSD sell S2 @ 545.74 SL 550.27 → open
 - 25 Nov 00:30 XAUUSD sell S2 @ 3549.2 SL 3567.39 → open
 - 25 Nov 00:15 SUIUSD sell S1 @ 0.645 SL 0.653436 → open
@@ -171,4 +172,3 @@ Updated 2026-11-25 00:45 UTC
 - 24 Nov 02:00 LTCUSD buy S4 @ 41.5 SL 40.804 → closed SL -1.03R. Stopped out after 65 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 69 closed, avg -0.12R, 59% won.
 - 24 Nov 02:00 BNBUSD buy S4 @ 557.61 SL 550.12 → closed SL -1.04R. Stopped out after 53 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 68 closed, avg -0.10R, 60% won.
 - 24 Nov 01:30 SUIUSD buy S2 @ 0.6813 SL 0.665629 → closed SL -1.03R. Stopped out after 82 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
-- 24 Nov 01:30 AVAXUSD buy S2 @ 6.851 SL 6.7302 → closed SL -1.03R. Stopped out after 82 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 66 closed, avg +0.03R, 71% won.
