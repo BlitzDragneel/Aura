@@ -1337,3 +1337,16 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 ⚡ Silver: SESSION DRIVE right now (New York open drive), price ~39.35
 Market now: trend down, volatility high, New York session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-25 16:45:58 UTC
+⚡ Dow 30: TREND resuming right now
+Market now: trend down, volatility high, normal range, New York session
+🧪 PAPER (untested, do not trade)
+✅ EARNED LIVE (this setup averaged +0.19R over its live signals)
+Dow 30 SELL now ~49230.08
+SL 49423.65
+TP1 49113.35 (reached in 60% of similar moments in the last 3 days)
+TP2 49050.83 (reached in 40% of similar moments in the last 3 days)
+TP3 48958.69 (reached in 20% of similar moments in the last 3 days)
+Setup: trend pullback (downtrend, price closed back below its short average after a bounce)
+record of this setup here: 2 closed, avg -0.45R, 50% won

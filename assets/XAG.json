@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-25T16:30:55.588566+00:00",
+ "asof": "2026-11-25T16:45:52.971513+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 38.97,
-  "bar": "2026-11-25T16:15:00+00:00",
+  "price": 38.69,
+  "bar": "2026-11-25T16:30:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 38.97,
-    "ma20": 39.375,
-    "ma50": 40.0186,
-    "slope_atr": -0.83,
-    "bar": "2026-11-25T16:15:00+00:00"
+    "close": 38.69,
+    "ma20": 39.3155,
+    "ma50": 39.9752,
+    "slope_atr": -0.76,
+    "bar": "2026-11-25T16:30:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -5.16,
   "spot": {
-   "price": 38.870999999999995,
-   "bid": 38.8467,
-   "ask": 38.8953,
-   "spread": 0.0486,
+   "price": 38.6313,
+   "bid": 38.6099,
+   "ask": 38.6527,
+   "spread": 0.0428,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.255
+   "perp_premium_pct": 0.152
   },
   "funding": {
-   "rate": 0.0001746848831578,
+   "rate": 0.0001872166090479,
    "next_time": 1795651200000,
    "source": "okx-swap"
   },
@@ -258,8 +258,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 38.97; volatility regime extreme (hourly ATR 1.609% of price, 98.1th percentile).",
-    "Spot XAGUSD 38.87; the perpetual trades +0.26% from spot."
+    "Price 38.69; volatility regime extreme (hourly ATR 1.609% of price, 98.1th percentile).",
+    "Spot XAGUSD 38.63; the perpetual trades +0.15% from spot."
    ]
   },
   {
@@ -269,6 +269,6 @@
    ]
   }
  ],
- "runs": 963,
+ "runs": 964,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

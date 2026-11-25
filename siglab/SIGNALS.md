@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 16:30 UTC
+Updated 2026-11-25 16:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-25 16:30 UTC
 
 ## Latest signals
 
+- 25 Nov 16:45 US30 sell S1 @ 49230.08 SL 49423.65 → open
 - 25 Nov 14:45 BTCUSD buy S3 @ 57359.1 SL 56806.4 → closed TP3 +0.80R. TP3 after 12 min (best 1.3R, worst -0.2R). Lesson so far: stretch fade against the trend: 79 closed, avg -0.19R, 58% won.
 - 25 Nov 14:00 SUIUSD buy S3 @ 0.6192 SL 0.611779 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 77 closed, avg -0.19R, 58% won.
 - 25 Nov 14:00 LTCUSD sell S5 @ 39.85 SL 40.263 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 61 closed, avg -0.09R, 59% won.
@@ -171,4 +172,3 @@ Updated 2026-11-25 16:30 UTC
 - 25 Nov 03:15 ETHUSD sell S4 @ 1662.85 SL 1679.47 → closed TP3 +1.12R. TP3 after 262 min (best 1.9R, worst -0.5R). Lesson so far: fib pullback with the trend: 77 closed, avg -0.14R, 60% won.
 - 25 Nov 03:15 BTCUSD sell S4 @ 59459.0 SL 59997.96 → closed TP2+BE +0.54R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 81 closed, avg -0.12R, 60% won.
 - 25 Nov 03:00 XAUUSD sell S1 @ 3557.2 SL 3576.69 → closed TP3 +0.83R. TP3 after 169 min (best 1.4R, worst -0.5R). Lesson so far: trend pullback with the trend: 131 closed, avg +0.17R, 75% won.
-- 25 Nov 02:45 AVAXUSD buy S3 @ 6.465 SL 6.3884 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 71 closed, avg -0.22R, 56% won.
