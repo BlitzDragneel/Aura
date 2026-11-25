@@ -29,15 +29,15 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was Asia (average hourly move 0.44%) and the quietest London (0.25%).
-- At weekends, while spot is closed, the perpetual moves 45% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- Over the last 20 days the busiest session was Asia (average hourly move 0.43%) and the quietest London (0.25%).
+- At weekends, while spot is closed, the perpetual moves 44% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 3.1% from low to high (last 60 days); 40% of those days closed higher.
 - Over the last 30 days the price moved -24.1% (a fact, not a forecast).
 
 ## Right now
 
-- Price 40.5; volatility regime normal (hourly ATR 0.956% of price, 74.9th percentile).
-- Spot XAGUSD 40.42; the perpetual trades +0.19% from spot.
+- Price 40.49; volatility regime normal (hourly ATR 0.963% of price, 73.9th percentile).
+- Spot XAGUSD 40.38; the perpetual trades +0.28% from spot.
 
 ## My calls so far
 

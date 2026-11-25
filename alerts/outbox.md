@@ -1254,3 +1254,13 @@ Market now: trend down, volatility high, Asia session
 ⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~59459.0
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-25 06:30:55 UTC
+🧪 Gold WATCH-LIST signal (grade C, paper only, NOT a passed rule; failed on other markets): open interest jumped (z 11.47) while price moved -1.06% in 4h → SELL near 3,533.90, stop 3,546.59, target 3,508.53, 4h max.
+
+🧪 Silver WATCH-LIST signal (grade C, paper only, NOT a passed rule; failed on other markets): open interest jumped (z 11.04) while price moved -2.20% in 4h → SELL near 40.48, stop 40.80, target 39.85, 4h max.
+
+## 2026-11-25 06:30:59 UTC
+⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~59010.0
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.

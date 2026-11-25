@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-25 06:15 UTC
+Updated 2026-11-25 06:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,9 @@ Updated 2026-11-25 06:15 UTC
 
 ## Latest signals
 
+- 25 Nov 06:30 DOGEUSD sell S1 @ 0.05472 SL 0.055163 → open
+- 25 Nov 06:30 BNBUSD sell S1 @ 540.95 SL 544.54 → open
+- 25 Nov 06:30 BTCUSD sell S1 @ 59010.0 SL 59474.1 → open
 - 25 Nov 06:00 XAGUSD buy S3 @ 40.26 SL 39.875 → open
 - 25 Nov 06:00 XAUUSD buy S3 @ 3530.7 SL 3514.37 → open
 - 25 Nov 04:45 AVAXUSD sell S1 @ 6.494 SL 6.5627 → open
@@ -169,6 +172,3 @@ Updated 2026-11-25 06:15 UTC
 - 24 Nov 07:30 SOLUSD sell S5 @ 71.62 SL 72.534 → closed TP3 +0.76R. TP3 after 186 min (best 1.2R, worst -0.1R). Lesson so far: session drive against the trend: 30 closed, avg -0.23R, 60% won.
 - 24 Nov 07:30 ETHUSD sell S5 @ 1694.75 SL 1714.91 → closed TP2+BE +0.35R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 51 closed, avg -0.17R, 53% won.
 - 24 Nov 07:30 XAGUSD sell S5 @ 42.41 SL 42.832 → closed TP3 +0.51R. TP3 after 58 min (best 0.9R, worst -0.5R). Lesson so far: session drive against the trend: 22 closed, avg -0.42R, 46% won.
-- 24 Nov 07:30 XAUUSD sell S5 @ 3623.9 SL 3642.84 → closed TP2+BE +0.25R. Reached TP2 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: session drive against the trend: 24 closed, avg -0.36R, 50% won.
-- 24 Nov 07:00 SUIUSD buy S6 @ 0.673 SL 0.662607 → closed SL -1.04R. Stopped out after 120 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.3R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias with the trend: 60 closed, avg +0.15R, 82% won.
-- 24 Nov 07:00 LTCUSD buy S6 @ 41.79 SL 41.279 → closed SL -1.05R. Stopped out after 128 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.5R). Lesson so far: daily bias with the trend: 66 closed, avg +0.04R, 74% won.
