@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 06:01 UTC
+Updated 2026-11-26 06:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -14,7 +14,7 @@ Updated 2026-11-26 06:01 UTC
 | AVAXUSD S1 | 10 | -0.027 | -0.09 | 0.6 | PAPER |
 | AVAXUSD S2 | 11 | -0.129 | -0.54 | 0.636 | PAPER |
 | AVAXUSD S3 | 10 | 0.093 | 0.44 | 0.8 | PAPER |
-| AVAXUSD S4 | 10 | -0.249 | -0.91 | 0.5 | PAPER |
+| AVAXUSD S4 | 11 | -0.2 | -0.79 | 0.545 | PAPER |
 | AVAXUSD S5 | 8 | -0.412 | -1.65 | 0.5 | PAPER |
 | AVAXUSD S6 | 8 | -0.122 | -0.42 | 0.625 | PAPER |
 | AVAXUSD S7 | 7 | -0.045 | -0.17 | 0.714 | PAPER |
@@ -89,7 +89,7 @@ Updated 2026-11-26 06:01 UTC
 | US30 S6 | 4 | 0.48 | 0.45 | 0.5 | PAPER |
 | US30 S7 | 4 | 0.367 | 0.77 | 0.75 | PAPER |
 | XAGUSD S1 | 11 | 0.056 | 0.24 | 0.727 | PAPER |
-| XAGUSD S2 | 10 | -0.195 | -0.97 | 0.7 | PAPER |
+| XAGUSD S2 | 11 | -0.272 | -1.37 | 0.636 | PAPER |
 | XAGUSD S3 | 10 | 0.313 | 1.64 | 0.9 | PAPER |
 | XAGUSD S4 | 12 | -0.44 | -2.22 | 0.5 | PAPER |
 | XAGUSD S5 | 6 | -0.056 | -0.17 | 0.667 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-26 06:01 UTC
 
 - 26 Nov 05:30 SUIUSD buy S1 @ 0.6724 SL 0.662707 → open
 - 26 Nov 03:45 ETHUSD buy S1 @ 1696.3 SL 1671.24 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 141 closed, avg +0.16R, 74% won.
-- 26 Nov 02:45 XAGUSD buy S2 @ 42.24 SL 41.559 → open
+- 26 Nov 02:45 XAGUSD buy S2 @ 42.24 SL 41.559 → closed SL -1.04R. Stopped out after 209 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Volatility was high, so a 1R stop was easy to hit. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 58 closed, avg -0.34R, 48% won.
 - 26 Nov 02:15 XRPUSD sell S3 @ 0.9545 SL 0.967536 → open
 - 26 Nov 02:15 US30 buy S4 @ 50345.08 SL 50073.44 → open
 - 26 Nov 01:45 XAGUSD buy S4 @ 41.06 SL 40.364 → closed TP3 +0.63R. TP3 after 36 min (best 1.1R, worst -0.2R). Lesson so far: fib pullback against the trend: 63 closed, avg -0.26R, 54% won.
@@ -124,7 +124,7 @@ Updated 2026-11-26 06:01 UTC
 - 26 Nov 01:00 XAUUSD sell S1 @ 3569.1 SL 3603.89 → closed SL -1.01R. Stopped out after 94 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 140 closed, avg +0.17R, 74% won.
 - 26 Nov 00:45 SUIUSD buy S4 @ 0.6725 SL 0.662593 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 86 closed, avg -0.11R, 60% won.
 - 26 Nov 00:45 LTCUSD buy S4 @ 42.9 SL 42.338 → closed TP3 +0.82R. TP3 after 81 min (best 1.5R, worst -0.1R). Lesson so far: fib pullback with the trend: 84 closed, avg -0.11R, 61% won.
-- 26 Nov 00:45 AVAXUSD buy S4 @ 6.654 SL 6.5695 → open
+- 26 Nov 00:45 AVAXUSD buy S4 @ 6.654 SL 6.5695 → closed TP2+BE +0.29R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 65 closed, avg -0.24R, 55% won.
 - 26 Nov 00:45 DOGEUSD buy S4 @ 0.05641 SL 0.055687 → open
 - 26 Nov 00:45 SOLUSD buy S4 @ 70.87 SL 69.899 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 88 closed, avg -0.12R, 60% won.
 - 26 Nov 00:45 ETHUSD buy S4 @ 1697.23 SL 1674.36 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 61 closed, avg -0.26R, 54% won.
