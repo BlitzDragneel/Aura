@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 02:41 UTC
+Updated 2026-11-26 02:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-26 02:41 UTC
 
 ## Latest signals
 
+- 26 Nov 02:45 XAGUSD buy S2 @ 42.24 SL 41.559 → open
 - 26 Nov 02:15 XRPUSD sell S3 @ 0.9545 SL 0.967536 → open
 - 26 Nov 02:15 US30 buy S4 @ 50345.08 SL 50073.44 → open
 - 26 Nov 01:45 XAGUSD buy S4 @ 41.06 SL 40.364 → closed TP3 +0.63R. TP3 after 36 min (best 1.1R, worst -0.2R). Lesson so far: fib pullback against the trend: 63 closed, avg -0.26R, 54% won.
@@ -171,4 +172,3 @@ Updated 2026-11-26 02:41 UTC
 - 25 Nov 11:45 US30 buy S3 @ 49411.62 SL 49270.91 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 43 closed, avg +0.20R, 77% won.
 - 25 Nov 09:45 US30 sell S7 @ 49588.62 SL 49722.76 → closed TP3 +1.03R. TP3 after 139 min (best 1.8R, worst -0.7R). Lesson so far: big move against the trend: 29 closed, avg -0.05R, 62% won.
 - 25 Nov 09:00 NAS100 sell S1 @ 25760.5 SL 25923.11 → closed TP3 +1.19R. TP3 after 162 min (best 1.9R, worst -0.0R). Lesson so far: trend pullback with the trend: 136 closed, avg +0.17R, 75% won.
-- 25 Nov 08:15 US30 sell S4 @ 49749.7 SL 49896.06 → closed SL -1.02R. Stopped out after 18 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 58 closed, avg -0.22R, 57% won.
