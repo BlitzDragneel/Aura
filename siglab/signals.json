@@ -34210,14 +34210,22 @@
     1715.99
    ],
    "R": 22.874,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-26",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 1697.24,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.067,
+   "R_tp1": 0.288,
+   "pips": 15.3,
+   "closed_ms": 1795657020000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 61 closed, avg -0.26R, 54% won."
   },
   {
    "id": "SOLUSD-S4-1795653900000",
@@ -34462,6 +34470,72 @@
     3537.33
    ],
    "R": 34.793,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-26",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "XAGUSD-S1-1795657500000",
+   "symbol": "XAGUSD",
+   "setup": "S1",
+   "side": "sell",
+   "why": "downtrend, price closed back below its short average after a bounce",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795657500000,
+   "ref_price": 41.06,
+   "stop": 41.756,
+   "targets": [
+    40.706,
+    40.5,
+    40.2
+   ],
+   "R": 0.6964,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-26",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": true
+  },
+  {
+   "id": "XAGUSD-S4-1795657500000",
+   "symbol": "XAGUSD",
+   "setup": "S4",
+   "side": "buy",
+   "why": "pulled back half of a strong up-leg",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795657500000,
+   "ref_price": 41.06,
+   "stop": 40.364,
+   "targets": [
+    41.3,
+    41.48,
+    41.8
+   ],
+   "R": 0.6964,
    "status": "open",
    "target_odds": [
     60,
@@ -34783,11 +34857,11 @@
     "grade": "PAPER"
    },
    "ETHUSD S4": {
-    "n": 11,
-    "avg_R": -0.031,
-    "t": -0.12,
-    "win": 0.636,
-    "total_R": -0.34,
+    "n": 12,
+    "avg_R": -0.023,
+    "t": -0.1,
+    "win": 0.667,
+    "total_R": -0.28,
     "grade": "PAPER"
    },
    "ETHUSD S5": {
@@ -35342,11 +35416,11 @@
     "total_R": -8.99
    },
    "S4": {
-    "n": 146,
-    "avg_R": -0.177,
-    "t": -2.73,
-    "win": 0.575,
-    "total_R": -25.86
+    "n": 147,
+    "avg_R": -0.175,
+    "t": -2.72,
+    "win": 0.578,
+    "total_R": -25.79
    },
    "S5": {
     "n": 99,
@@ -35371,13 +35445,13 @@
    }
   },
   "all": {
-   "n": 864,
-   "avg_R": -0.04,
+   "n": 865,
+   "avg_R": -0.039,
    "t": -1.46,
-   "win": 0.657,
-   "total_R": -34.22
+   "win": 0.658,
+   "total_R": -34.15
   },
-  "open": 15
+  "open": 16
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -35626,11 +35700,11 @@
    "total_R": 5.35
   },
   "S4 | Asia": {
-   "n": 109,
-   "avg_R": -0.217,
-   "t": -2.85,
-   "win": 0.55,
-   "total_R": -23.6
+   "n": 110,
+   "avg_R": -0.214,
+   "t": -2.84,
+   "win": 0.555,
+   "total_R": -23.54
   },
   "S4 | London": {
    "n": 16,
@@ -35647,11 +35721,11 @@
    "total_R": -1.15
   },
   "S4 | against trend": {
-   "n": 61,
-   "avg_R": -0.257,
-   "t": -2.67,
-   "win": 0.541,
-   "total_R": -15.65
+   "n": 62,
+   "avg_R": -0.251,
+   "t": -2.65,
+   "win": 0.548,
+   "total_R": -15.58
   },
   "S4 | compressed": {
    "n": 60,
@@ -35675,11 +35749,11 @@
    "total_R": 0.74
   },
   "S4 | normal": {
-   "n": 82,
-   "avg_R": -0.169,
-   "t": -1.97,
-   "win": 0.585,
-   "total_R": -13.87
+   "n": 83,
+   "avg_R": -0.166,
+   "t": -1.95,
+   "win": 0.59,
+   "total_R": -13.8
   },
   "S4 | vol high": {
    "n": 21,
@@ -35696,11 +35770,11 @@
    "total_R": -4.91
   },
   "S4 | vol normal": {
-   "n": 100,
-   "avg_R": -0.213,
-   "t": -2.78,
-   "win": 0.56,
-   "total_R": -21.33
+   "n": 101,
+   "avg_R": -0.211,
+   "t": -2.77,
+   "win": 0.564,
+   "total_R": -21.26
   },
   "S4 | with trend": {
    "n": 84,
@@ -35927,11 +36001,11 @@
   "S4 against": {
    "state": "muted",
    "n": 25,
-   "avg_R": -0.222,
-   "t": -1.7,
+   "avg_R": -0.207,
+   "t": -1.63,
    "win": 0.52,
-   "total_R": -5.54,
-   "signals": 61
+   "total_R": -5.17,
+   "signals": 62
   },
   "S2 against": {
    "state": "muted",
