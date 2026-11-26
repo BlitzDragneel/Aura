@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 00:30 UTC
+Updated 2026-11-26 00:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,13 @@ Updated 2026-11-26 00:30 UTC
 
 ## Latest signals
 
+- 26 Nov 00:45 SUIUSD buy S4 @ 0.6725 SL 0.662593 → open
+- 26 Nov 00:45 LTCUSD buy S4 @ 42.9 SL 42.338 → open
+- 26 Nov 00:45 AVAXUSD buy S4 @ 6.654 SL 6.5695 → open
+- 26 Nov 00:45 DOGEUSD buy S4 @ 0.05641 SL 0.055687 → open
+- 26 Nov 00:45 SOLUSD buy S4 @ 70.87 SL 69.899 → open
+- 26 Nov 00:45 ETHUSD buy S4 @ 1697.23 SL 1674.36 → open
+- 26 Nov 00:45 BTCUSD buy S4 @ 60622.7 SL 59908.91 → open
 - 26 Nov 00:15 SUIUSD sell S3 @ 0.6762 SL 0.686107 → open
 - 26 Nov 00:15 SUIUSD buy S2 @ 0.6762 SL 0.666293 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 83 closed, avg +0.01R, 72% won.
 - 26 Nov 00:15 LTCUSD sell S3 @ 43.18 SL 43.742 → open
@@ -165,10 +172,3 @@ Updated 2026-11-26 00:30 UTC
 - 25 Nov 07:30 SUIUSD sell S5 @ 0.6424 SL 0.648757 → closed TP2+BE +0.57R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 53 closed, avg -0.15R, 55% won.
 - 25 Nov 07:30 ADAUSD sell S5 @ 0.1432 SL 0.144614 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 54 closed, avg -0.14R, 56% won.
 - 25 Nov 07:30 DOGEUSD sell S5 @ 0.05465 SL 0.055079 → closed TP2+BE +0.52R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 56 closed, avg -0.12R, 57% won.
-- 25 Nov 07:30 BNBUSD sell S5 @ 541.83 SL 545.36 → closed TP2+BE +0.49R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 54 closed, avg -0.14R, 56% won.
-- 25 Nov 07:30 SOLUSD sell S5 @ 68.53 SL 69.196 → closed TP3 +1.18R. TP3 after 361 min (best 2.5R, worst -0.1R). Lesson so far: session drive with the trend: 59 closed, avg -0.09R, 59% won.
-- 25 Nov 07:30 ETHUSD sell S5 @ 1655.44 SL 1669.16 → closed TP2+BE +0.61R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 56 closed, avg -0.12R, 57% won.
-- 25 Nov 07:30 US30 sell S5 @ 49719.62 SL 49877.05 → closed SL -1.01R. Stopped out after 61 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: session drive against the trend: 33 closed, avg -0.16R, 64% won.
-- 25 Nov 07:30 US30 sell S2 @ 49719.62 SL 49877.05 → closed SL -1.01R. Stopped out after 61 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 53 closed, avg -0.38R, 45% won.
-- 25 Nov 07:30 NAS100 sell S5 @ 25699.25 SL 25870.34 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 52 closed, avg -0.16R, 54% won.
-- 25 Nov 07:30 NAS100 sell S2 @ 25699.25 SL 25870.34 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 79 closed, avg -0.00R, 71% won.

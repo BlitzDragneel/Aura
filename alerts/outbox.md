@@ -1383,3 +1383,8 @@ Market now: trend down, volatility normal, Asia session
 
 ## 2026-11-26 00:31:02 UTC
 🔁 Learning: fib pullback against the trend is now MUTED (no trade plans) after 61 live signals (25 separate moments) averaging -0.22R.
+
+## 2026-11-26 00:45:49 UTC
+⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~60622.7
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.22R). Logged and scored anyway.
