@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 10:45 UTC
+Updated 2026-11-26 11:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -36,7 +36,7 @@ Updated 2026-11-26 10:45 UTC
 | DOGEUSD S2 | 11 | -0.284 | -1.21 | 0.545 | PAPER |
 | DOGEUSD S3 | 10 | 0.161 | 0.57 | 0.7 | PAPER |
 | DOGEUSD S4 | 11 | -0.249 | -1.03 | 0.545 | PAPER |
-| DOGEUSD S5 | 7 | -0.103 | -0.29 | 0.571 | PAPER |
+| DOGEUSD S5 | 8 | -0.079 | -0.25 | 0.625 | PAPER |
 | DOGEUSD S6 | 8 | -0.155 | -0.78 | 0.75 | PAPER |
 | DOGEUSD S7 | 6 | 0.171 | 0.65 | 0.833 | PAPER |
 | ETHUSD S1 | 12 | -0.098 | -0.46 | 0.667 | PAPER |
@@ -119,7 +119,7 @@ Updated 2026-11-26 10:45 UTC
 - 26 Nov 08:30 BTCUSD buy S1 @ 60676.2 SL 60164.58 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 147 closed, avg +0.16R, 75% won.
 - 26 Nov 07:45 XRPUSD buy S1 @ 0.9538 SL 0.943343 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 143 closed, avg +0.16R, 74% won.
 - 26 Nov 07:30 SUIUSD buy S5 @ 0.6674 SL 0.658679 → closed TP2+BE +0.35R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 66 closed, avg -0.05R, 62% won.
-- 26 Nov 07:30 DOGEUSD buy S5 @ 0.0565 SL 0.055894 → open
+- 26 Nov 07:30 DOGEUSD buy S5 @ 0.0565 SL 0.055894 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 67 closed, avg -0.05R, 63% won.
 - 26 Nov 07:30 BNBUSD sell S5 @ 554.7 SL 559.44 → open
 - 26 Nov 07:30 SOLUSD buy S5 @ 70.92 SL 70.163 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 65 closed, avg -0.05R, 62% won.
 - 26 Nov 07:30 SOLUSD buy S1 @ 70.92 SL 70.163 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 143 closed, avg +0.16R, 74% won.

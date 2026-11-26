@@ -1461,3 +1461,10 @@ Market now: trend down, volatility high, Asia session
 ⚡ Bitcoin: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~60676.2
 Market now: trend up, volatility low, London session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-26 11:00:56 UTC
+🌅 OMEGA morning read
+Bitcoin 60,484.60 | 1h trend up | vol normal | typical day range 2.78% | big 4h move chance 27% | day WAIT · swing WAIT · hold WAIT
+Gold 3,562.00 | 1h trend flat | vol active | typical day range 1.55% | big 4h move chance 17% | day WAIT · swing WAIT · hold WAIT
+Silver 41.45 | 1h trend up | vol active | typical day range 3.15% | big 4h move chance 20% | day WAIT · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
