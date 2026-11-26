@@ -1442,3 +1442,9 @@ Why: Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour,
 🔁 Learning: trend pullback with the trend is now back to normal.
 
 🔁 Learning: fib pullback against the trend is now back to normal.
+
+## 2026-11-26 02:41:28 UTC
+❌ Gold SELL (trend pullback) closed: SL, -1.01R (-351 pips)
+Why: Stopped out after 94 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 140 closed, avg +0.17R, 74% won.
+
+🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 88 live signals (36 separate moments) averaging -0.18R.

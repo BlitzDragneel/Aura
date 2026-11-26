@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 02:30 UTC
+Updated 2026-11-26 02:41 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -77,7 +77,7 @@ Updated 2026-11-26 02:30 UTC
 | SUIUSD S1 | 10 | 0.154 | 0.67 | 0.8 | PAPER |
 | SUIUSD S2 | 11 | -0.165 | -0.61 | 0.545 | PAPER |
 | SUIUSD S3 | 9 | -0.289 | -1.15 | 0.556 | PAPER |
-| SUIUSD S4 | 10 | -0.203 | -0.85 | 0.6 | PAPER |
+| SUIUSD S4 | 11 | -0.157 | -0.71 | 0.636 | PAPER |
 | SUIUSD S5 | 7 | -0.071 | -0.19 | 0.571 | PAPER |
 | SUIUSD S6 | 8 | -0.353 | -1.26 | 0.5 | PAPER |
 | SUIUSD S7 | 7 | 0.281 | 1.04 | 0.857 | PAPER |
@@ -95,10 +95,10 @@ Updated 2026-11-26 02:30 UTC
 | XAGUSD S5 | 6 | -0.056 | -0.17 | 0.667 | PAPER |
 | XAGUSD S6 | 8 | -0.062 | -0.43 | 0.875 | PAPER |
 | XAGUSD S7 | 5 | -0.213 | -0.58 | 0.6 | PAPER |
-| XAUUSD S1 | 10 | 0.474 | 1.79 | 0.8 | PAPER |
-| XAUUSD S2 | 10 | 0.012 | 0.05 | 0.7 | PAPER |
+| XAUUSD S1 | 11 | 0.339 | 1.23 | 0.727 | PAPER |
+| XAUUSD S2 | 11 | -0.08 | -0.33 | 0.636 | PAPER |
 | XAUUSD S3 | 10 | -0.104 | -0.51 | 0.7 | PAPER |
-| XAUUSD S4 | 10 | 0.231 | 0.79 | 0.7 | PAPER |
+| XAUUSD S4 | 11 | 0.118 | 0.41 | 0.636 | PAPER |
 | XAUUSD S5 | 8 | -0.009 | -0.03 | 0.75 | PAPER |
 | XAUUSD S6 | 8 | -0.111 | -0.38 | 0.625 | PAPER |
 | XAUUSD S7 | 5 | 0.119 | 0.4 | 0.8 | PAPER |
@@ -116,10 +116,10 @@ Updated 2026-11-26 02:30 UTC
 - 26 Nov 02:15 US30 buy S4 @ 50345.08 SL 50073.44 → open
 - 26 Nov 01:45 XAGUSD buy S4 @ 41.06 SL 40.364 → closed TP3 +0.63R. TP3 after 36 min (best 1.1R, worst -0.2R). Lesson so far: fib pullback against the trend: 63 closed, avg -0.26R, 54% won.
 - 26 Nov 01:45 XAGUSD sell S1 @ 41.06 SL 41.756 → closed SL -1.04R. Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 139 closed, avg +0.18R, 75% won.
-- 26 Nov 01:30 XAUUSD sell S4 @ 3575.6 SL 3610.39 → open
-- 26 Nov 01:00 XAUUSD sell S2 @ 3569.1 SL 3603.89 → open
-- 26 Nov 01:00 XAUUSD sell S1 @ 3569.1 SL 3603.89 → open
-- 26 Nov 00:45 SUIUSD buy S4 @ 0.6725 SL 0.662593 → open
+- 26 Nov 01:30 XAUUSD sell S4 @ 3575.6 SL 3610.39 → closed SL -1.01R. Stopped out after 70 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback with the trend: 86 closed, avg -0.11R, 60% won.
+- 26 Nov 01:00 XAUUSD sell S2 @ 3569.1 SL 3603.89 → closed SL -1.01R. Stopped out after 94 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 88 closed, avg +0.04R, 74% won.
+- 26 Nov 01:00 XAUUSD sell S1 @ 3569.1 SL 3603.89 → closed SL -1.01R. Stopped out after 94 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 140 closed, avg +0.17R, 74% won.
+- 26 Nov 00:45 SUIUSD buy S4 @ 0.6725 SL 0.662593 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 86 closed, avg -0.11R, 60% won.
 - 26 Nov 00:45 LTCUSD buy S4 @ 42.9 SL 42.338 → closed TP3 +0.82R. TP3 after 81 min (best 1.5R, worst -0.1R). Lesson so far: fib pullback with the trend: 84 closed, avg -0.11R, 61% won.
 - 26 Nov 00:45 AVAXUSD buy S4 @ 6.654 SL 6.5695 → open
 - 26 Nov 00:45 DOGEUSD buy S4 @ 0.05641 SL 0.055687 → open
