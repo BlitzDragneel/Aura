@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 18:00 UTC
+Updated 2026-11-26 18:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -48,7 +48,7 @@ Updated 2026-11-26 18:00 UTC
 | ETHUSD S7 | 10 | 0.168 | 0.72 | 0.8 | PAPER |
 | LINKUSD S1 | 11 | 0.208 | 0.95 | 0.818 | PAPER |
 | LINKUSD S2 | 11 | 0.111 | 0.55 | 0.818 | PAPER |
-| LINKUSD S3 | 7 | -0.674 | -2.69 | 0.286 | PAPER |
+| LINKUSD S3 | 8 | -0.467 | -1.56 | 0.375 | PAPER |
 | LINKUSD S4 | 11 | -0.359 | -1.47 | 0.455 | PAPER |
 | LINKUSD S5 | 8 | -0.066 | -0.21 | 0.625 | PAPER |
 | LINKUSD S6 | 9 | -0.202 | -0.94 | 0.667 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-26 18:00 UTC
 
 - 26 Nov 15:15 SUIUSD sell S7 @ 0.6559 SL 0.661579 → closed SL -1.07R. Stopped out after 29 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: big move against the trend: 42 closed, avg +0.09R, 74% won.
 - 26 Nov 15:15 LINKUSD sell S7 @ 9.106 SL 9.1851 → closed SL -1.07R. Stopped out after 39 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: big move against the trend: 45 closed, avg +0.01R, 69% won.
-- 26 Nov 15:15 LINKUSD buy S3 @ 9.106 SL 9.0269 → open
+- 26 Nov 15:15 LINKUSD buy S3 @ 9.106 SL 9.0269 → closed TP3 +0.98R. TP3 after 173 min (best 1.8R, worst -0.2R). Lesson so far: stretch fade with the trend: 49 closed, avg +0.13R, 74% won.
 - 26 Nov 15:15 AVAXUSD sell S7 @ 6.519 SL 6.564 → closed SL -1.09R. Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: big move against the trend: 45 closed, avg +0.01R, 69% won.
 - 26 Nov 15:15 AVAXUSD buy S3 @ 6.519 SL 6.474 → closed TP3 +0.98R. TP3 after 46 min (best 1.8R, worst -0.2R). Lesson so far: stretch fade with the trend: 48 closed, avg +0.12R, 73% won.
 - 26 Nov 15:15 ADAUSD sell S2 @ 0.1469 SL 0.148171 → closed SL -1.07R. Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 59 closed, avg -0.35R, 48% won.
