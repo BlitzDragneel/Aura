@@ -36,7 +36,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 41.82; volatility regime normal (hourly ATR 0.701% of price, 42.4th percentile).
+- Price 41.83; volatility regime normal (hourly ATR 0.701% of price, 42.4th percentile).
 - CME daily break (21-22 UTC): spot quotes pause.
 - Spot XAGUSD 41.54 (stale: market closed).
 
