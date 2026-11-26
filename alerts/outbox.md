@@ -1380,3 +1380,6 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 ⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~60939.8
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.37R). Logged and scored anyway.
+
+## 2026-11-26 00:31:02 UTC
+🔁 Learning: fib pullback against the trend is now MUTED (no trade plans) after 61 live signals (25 separate moments) averaging -0.22R.
