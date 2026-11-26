@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 05:15 UTC
+Updated 2026-11-26 05:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-26 05:15 UTC
 
 ## Latest signals
 
+- 26 Nov 05:30 SUIUSD buy S1 @ 0.6724 SL 0.662707 → open
 - 26 Nov 03:45 ETHUSD buy S1 @ 1696.3 SL 1671.24 → open
 - 26 Nov 02:45 XAGUSD buy S2 @ 42.24 SL 41.559 → open
 - 26 Nov 02:15 XRPUSD sell S3 @ 0.9545 SL 0.967536 → open
@@ -171,4 +172,3 @@ Updated 2026-11-26 05:15 UTC
 - 25 Nov 13:45 DOGEUSD buy S3 @ 0.05302 SL 0.052525 → closed SL -1.06R. Stopped out after 49 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 77 closed, avg -0.19R, 58% won.
 - 25 Nov 13:45 ETHUSD sell S1 @ 1633.49 SL 1649.11 → closed TP2+BE +0.65R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 137 closed, avg +0.18R, 75% won.
 - 25 Nov 11:45 US30 buy S3 @ 49411.62 SL 49270.91 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.3R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 43 closed, avg +0.20R, 77% won.
-- 25 Nov 09:45 US30 sell S7 @ 49588.62 SL 49722.76 → closed TP3 +1.03R. TP3 after 139 min (best 1.8R, worst -0.7R). Lesson so far: big move against the trend: 29 closed, avg -0.05R, 62% won.
