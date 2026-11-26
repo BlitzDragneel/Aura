@@ -36,7 +36,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 41.76; volatility regime normal (hourly ATR 0.794% of price, 52.5th percentile).
+- Price 41.78; volatility regime normal (hourly ATR 0.794% of price, 52.5th percentile).
 - Spot XAGUSD 41.54 (stale: market closed).
 
 ## My calls so far
