@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 08:15 UTC
+Updated 2026-11-26 08:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-26 08:15 UTC
 
 ## Latest signals
 
+- 26 Nov 08:30 BTCUSD buy S1 @ 60676.2 SL 60164.58 → open
 - 26 Nov 07:45 XRPUSD buy S1 @ 0.9538 SL 0.943343 → open
 - 26 Nov 07:30 SUIUSD buy S5 @ 0.6674 SL 0.658679 → open
 - 26 Nov 07:30 DOGEUSD buy S5 @ 0.0565 SL 0.055894 → open
@@ -171,4 +172,3 @@ Updated 2026-11-26 08:15 UTC
 - 25 Nov 17:45 SUIUSD buy S7 @ 0.6498 SL 0.640764 → closed TP2+BE +0.24R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 39 closed, avg +0.07R, 72% won.
 - 25 Nov 17:45 LTCUSD buy S7 @ 41.85 SL 41.329 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 32 closed, avg -0.01R, 66% won.
 - 25 Nov 17:45 LTCUSD sell S3 @ 41.85 SL 42.371 → closed SL -1.05R. Stopped out after 90 min. Price never reached TP1 (best was 0.4R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade with the trend: 44 closed, avg +0.19R, 77% won.
-- 25 Nov 17:45 LINKUSD buy S7 @ 8.882 SL 8.7719 → closed TP3 +0.61R. TP3 after 63 min (best 1.4R, worst -0.4R). Lesson so far: big move against the trend: 41 closed, avg +0.08R, 73% won.

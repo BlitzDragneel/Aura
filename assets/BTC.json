@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-26T08:15:37.817163+00:00",
+ "asof": "2026-11-26T08:30:49.475120+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 60580.0,
-  "bar": "2026-11-26T08:00:00+00:00",
+  "price": 60676.2,
+  "bar": "2026-11-26T08:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 60580.0,
-    "ma20": 60717.14,
-    "ma50": 60542.322,
-    "slope_atr": -0.39,
-    "bar": "2026-11-26T08:00:00+00:00"
+    "close": 60676.2,
+    "ma20": 60716.2,
+    "ma50": 60558.722,
+    "slope_atr": -0.29,
+    "bar": "2026-11-26T08:15:00+00:00"
    },
    "1h": {
     "state": "up",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.06,
   "funding": {
-   "rate": 7.19282384481e-05,
+   "rate": 7.48915968647e-05,
    "next_time": 1795708800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.171,
+    "p_big_move": 0.173,
     "flag": false,
     "detail": {
      "p_up_move": 0.096,
-     "p_down_move": 0.075
+     "p_down_move": 0.078
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -252,7 +252,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 60580.0; volatility regime normal (hourly ATR 0.846% of price, 46.5th percentile).",
+    "Price 60676.2; volatility regime normal (hourly ATR 0.846% of price, 46.5th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -263,6 +263,6 @@
    ]
   }
  ],
- "runs": 1028,
+ "runs": 1029,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
