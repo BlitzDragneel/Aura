@@ -35,7 +35,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 60698.0; volatility regime quiet (hourly ATR 0.644% of price, 22.0th percentile).
+- Price 60623.6; volatility regime quiet (hourly ATR 0.644% of price, 22.0th percentile).
 - Bitcoin trades 24/7.
 
 ## My calls so far
