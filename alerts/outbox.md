@@ -1434,3 +1434,11 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Dow 30: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~50345.08
 Market now: trend up, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-26 02:31:01 UTC
+❌ Silver SELL (trend pullback) closed: SL, -1.04R (-73 pips)
+Why: Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.5R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 139 closed, avg +0.18R, 75% won.
+
+🔁 Learning: trend pullback with the trend is now back to normal.
+
+🔁 Learning: fib pullback against the trend is now back to normal.
