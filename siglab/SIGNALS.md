@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 14:01 UTC
+Updated 2026-11-26 14:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -72,7 +72,7 @@ Updated 2026-11-26 14:01 UTC
 | SOLUSD S3 | 8 | -0.237 | -0.98 | 0.625 | PAPER |
 | SOLUSD S4 | 11 | 0.121 | 0.63 | 0.818 | PAPER |
 | SOLUSD S5 | 8 | -0.107 | -0.35 | 0.625 | PAPER |
-| SOLUSD S6 | 8 | -0.468 | -1.53 | 0.375 | PAPER |
+| SOLUSD S6 | 9 | -0.533 | -1.92 | 0.333 | PAPER |
 | SOLUSD S7 | 7 | 0.019 | 0.07 | 0.714 | PAPER |
 | SUIUSD S1 | 10 | 0.154 | 0.67 | 0.8 | PAPER |
 | SUIUSD S2 | 11 | -0.165 | -0.61 | 0.545 | PAPER |
@@ -134,7 +134,7 @@ Updated 2026-11-26 14:01 UTC
 - 26 Nov 07:00 DOGEUSD buy S6 @ 0.0563 SL 0.055694 → open
 - 26 Nov 07:00 XRPUSD buy S6 @ 0.9496 SL 0.939143 → closed TP2+BE +0.40R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 77 closed, avg +0.04R, 73% won.
 - 26 Nov 07:00 BNBUSD sell S6 @ 555.61 SL 560.35 → open
-- 26 Nov 07:00 SOLUSD sell S6 @ 70.64 SL 71.397 → open
+- 26 Nov 07:00 SOLUSD sell S6 @ 70.64 SL 71.397 → closed SL -1.05R. Stopped out after 430 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 37 closed, avg -0.47R, 40% won.
 - 26 Nov 07:00 ETHUSD sell S6 @ 1686.81 SL 1704.02 → closed SL -1.06R. Stopped out after 156 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 35 closed, avg -0.47R, 40% won.
 - 26 Nov 07:00 BTCUSD sell S6 @ 60526.5 SL 61126.57 → open
 - 26 Nov 07:00 XAGUSD sell S6 @ 41.53 SL 42.116 → open
