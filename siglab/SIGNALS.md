@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 00:45 UTC
+Updated 2026-11-26 01:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-26 00:45 UTC
 
 ## Latest signals
 
+- 26 Nov 01:00 XAUUSD sell S2 @ 3569.1 SL 3603.89 → open
+- 26 Nov 01:00 XAUUSD sell S1 @ 3569.1 SL 3603.89 → open
 - 26 Nov 00:45 SUIUSD buy S4 @ 0.6725 SL 0.662593 → open
 - 26 Nov 00:45 LTCUSD buy S4 @ 42.9 SL 42.338 → open
 - 26 Nov 00:45 AVAXUSD buy S4 @ 6.654 SL 6.5695 → open
@@ -170,5 +172,3 @@ Updated 2026-11-26 00:45 UTC
 - 25 Nov 08:00 LTCUSD sell S4 @ 40.28 SL 40.631 → closed SL -1.07R. Stopped out after 30 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 79 closed, avg -0.12R, 61% won.
 - 25 Nov 07:45 NAS100 buy S3 @ 25649.25 SL 25478.16 → closed TP2+BE +0.81R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 76 closed, avg -0.20R, 58% won.
 - 25 Nov 07:30 SUIUSD sell S5 @ 0.6424 SL 0.648757 → closed TP2+BE +0.57R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 53 closed, avg -0.15R, 55% won.
-- 25 Nov 07:30 ADAUSD sell S5 @ 0.1432 SL 0.144614 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 54 closed, avg -0.14R, 56% won.
-- 25 Nov 07:30 DOGEUSD sell S5 @ 0.05465 SL 0.055079 → closed TP2+BE +0.52R. Reached TP2 then came back to the entry (best 1.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 56 closed, avg -0.12R, 57% won.

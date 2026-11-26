@@ -1388,3 +1388,21 @@ Market now: trend down, volatility normal, Asia session
 ⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~60622.7
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.22R). Logged and scored anyway.
+
+## 2026-11-26 01:01:07 UTC
+⚡ Gold: TREND resuming right now
+Market now: trend down, volatility normal, compressed range, Asia session
+🧪 PAPER (untested, do not trade)
+✅ EARNED LIVE (this setup averaged +0.16R over its live signals)
+⏪ On this market's recent history: 73 of these, 60% ended positive, average -0.15R
+Gold SELL now ~3569.1
+SL 3603.89
+TP1 3554.7 (reached in 60% of similar moments in the last 3 days)
+TP2 3547.18 (reached in 40% of similar moments in the last 3 days)
+TP3 3530.83 (reached in 20% of similar moments in the last 3 days)
+Setup: trend pullback (downtrend, price closed back below its short average after a bounce)
+record of this setup here: 10 closed, avg +0.47R, 80% won
+
+⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3569.1
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
