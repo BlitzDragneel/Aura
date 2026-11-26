@@ -15,29 +15,29 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 249 readings scored; big moves followed 16% of them, 15% after a WATCH (87 WATCH readings).
+- My own record: 250 readings scored; big moves followed 16% of them, 15% after a WATCH (88 WATCH readings).
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 229 readings scored; big moves followed 43% of them, 18% after a WATCH (76 WATCH readings).
+- My own record: 230 readings scored; big moves followed 43% of them, 18% after a WATCH (77 WATCH readings).
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 78 readings scored; big moves followed 81% of them - too few to judge yet.
+- My own record: 79 readings scored; big moves followed 81% of them - too few to judge yet.
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was New York (average hourly move 0.46%) and the quietest London (0.28%).
+- Over the last 20 days the busiest session was New York (average hourly move 0.46%) and the quietest London (0.27%).
 - At weekends, while spot is closed, the perpetual moves 42% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 3.1% from low to high (last 60 days); 42% of those days closed higher.
 - Over the last 30 days the price moved -23.1% (a fact, not a forecast).
 
 ## Right now
 
-- Price 41.48; volatility regime active (hourly ATR 1.385% of price, 92.0th percentile).
-- Spot XAGUSD 41.38; the perpetual trades +0.24% from spot.
+- Price 41.53; volatility regime active (hourly ATR 1.41% of price, 92.2th percentile).
+- Spot XAGUSD 41.43; the perpetual trades +0.25% from spot.
 
 ## My calls so far
 
