@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 05:45 UTC
+Updated 2026-11-26 06:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -39,7 +39,7 @@ Updated 2026-11-26 05:45 UTC
 | DOGEUSD S5 | 7 | -0.103 | -0.29 | 0.571 | PAPER |
 | DOGEUSD S6 | 8 | -0.155 | -0.78 | 0.75 | PAPER |
 | DOGEUSD S7 | 6 | 0.171 | 0.65 | 0.833 | PAPER |
-| ETHUSD S1 | 11 | -0.113 | -0.48 | 0.636 | PAPER |
+| ETHUSD S1 | 12 | -0.098 | -0.46 | 0.667 | PAPER |
 | ETHUSD S2 | 11 | -0.326 | -1.53 | 0.545 | PAPER |
 | ETHUSD S3 | 11 | -0.025 | -0.09 | 0.636 | PAPER |
 | ETHUSD S4 | 12 | -0.023 | -0.1 | 0.667 | PAPER |
@@ -70,7 +70,7 @@ Updated 2026-11-26 05:45 UTC
 | SOLUSD S1 | 10 | 0.176 | 0.63 | 0.7 | PAPER |
 | SOLUSD S2 | 11 | 0.115 | 0.48 | 0.727 | PAPER |
 | SOLUSD S3 | 8 | -0.237 | -0.98 | 0.625 | PAPER |
-| SOLUSD S4 | 10 | 0.101 | 0.48 | 0.8 | PAPER |
+| SOLUSD S4 | 11 | 0.121 | 0.63 | 0.818 | PAPER |
 | SOLUSD S5 | 7 | -0.137 | -0.39 | 0.571 | PAPER |
 | SOLUSD S6 | 8 | -0.468 | -1.53 | 0.375 | PAPER |
 | SOLUSD S7 | 7 | 0.019 | 0.07 | 0.714 | PAPER |
@@ -113,7 +113,7 @@ Updated 2026-11-26 05:45 UTC
 ## Latest signals
 
 - 26 Nov 05:30 SUIUSD buy S1 @ 0.6724 SL 0.662707 → open
-- 26 Nov 03:45 ETHUSD buy S1 @ 1696.3 SL 1671.24 → open
+- 26 Nov 03:45 ETHUSD buy S1 @ 1696.3 SL 1671.24 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 141 closed, avg +0.16R, 74% won.
 - 26 Nov 02:45 XAGUSD buy S2 @ 42.24 SL 41.559 → open
 - 26 Nov 02:15 XRPUSD sell S3 @ 0.9545 SL 0.967536 → open
 - 26 Nov 02:15 US30 buy S4 @ 50345.08 SL 50073.44 → open
@@ -126,7 +126,7 @@ Updated 2026-11-26 05:45 UTC
 - 26 Nov 00:45 LTCUSD buy S4 @ 42.9 SL 42.338 → closed TP3 +0.82R. TP3 after 81 min (best 1.5R, worst -0.1R). Lesson so far: fib pullback with the trend: 84 closed, avg -0.11R, 61% won.
 - 26 Nov 00:45 AVAXUSD buy S4 @ 6.654 SL 6.5695 → open
 - 26 Nov 00:45 DOGEUSD buy S4 @ 0.05641 SL 0.055687 → open
-- 26 Nov 00:45 SOLUSD buy S4 @ 70.87 SL 69.899 → open
+- 26 Nov 00:45 SOLUSD buy S4 @ 70.87 SL 69.899 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 88 closed, avg -0.12R, 60% won.
 - 26 Nov 00:45 ETHUSD buy S4 @ 1697.23 SL 1674.36 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 61 closed, avg -0.26R, 54% won.
 - 26 Nov 00:45 BTCUSD buy S4 @ 60622.7 SL 59908.91 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 64 closed, avg -0.25R, 55% won.
 - 26 Nov 00:15 SUIUSD sell S3 @ 0.6762 SL 0.686107 → open

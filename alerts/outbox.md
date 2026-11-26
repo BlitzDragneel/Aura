@@ -1453,3 +1453,6 @@ Why: Stopped out after 94 min. Price never reached TP1 (best was 0.3R in favour,
 ⚡ Silver: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~42.24
 Market now: trend down, volatility high, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.34R). Logged and scored anyway.
+
+## 2026-11-26 06:01:14 UTC
+🔁 Learning: fib pullback with the trend is now back to normal.
