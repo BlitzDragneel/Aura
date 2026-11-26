@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-26T09:00:58.243943+00:00",
+ "asof": "2026-11-26T09:15:54.374303+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 41.77,
-  "bar": "2026-11-26T08:45:00+00:00",
+  "price": 41.74,
+  "bar": "2026-11-26T09:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 41.77,
-    "ma20": 41.701499999999996,
-    "ma50": 41.5904,
-    "slope_atr": -0.33,
-    "bar": "2026-11-26T08:45:00+00:00"
+    "close": 41.74,
+    "ma20": 41.694,
+    "ma50": 41.604400000000005,
+    "slope_atr": -0.26,
+    "bar": "2026-11-26T09:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 1.24,
   "spot": {
-   "price": 41.632999999999996,
-   "bid": 41.6107,
-   "ask": 41.6553,
-   "spread": 0.0446,
+   "price": 41.6105,
+   "bid": 41.5877,
+   "ask": 41.6333,
+   "spread": 0.0456,
    "age_s": 0,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.329
+   "perp_premium_pct": 0.311
   },
   "funding": {
-   "rate": 3.50549633171e-05,
+   "rate": 3.52387277232e-05,
    "next_time": 1795708800000,
    "source": "okx-swap"
   },
@@ -141,7 +141,7 @@
   "day": {
    "state": "WAIT",
    "since": "2026-11-26T09:00:58.243943+00:00",
-   "previous": "WATCH",
+   "previous": "WAIT",
    "reasons": [
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
    ],
@@ -256,8 +256,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 41.77; volatility regime active (hourly ATR 1.194% of price, 88.9th percentile).",
-    "Spot XAGUSD 41.63; the perpetual trades +0.33% from spot."
+    "Price 41.74; volatility regime active (hourly ATR 1.194% of price, 88.9th percentile).",
+    "Spot XAGUSD 41.61; the perpetual trades +0.31% from spot."
    ]
   },
   {
@@ -267,6 +267,6 @@
    ]
   }
  ],
- "runs": 1031,
+ "runs": 1032,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
