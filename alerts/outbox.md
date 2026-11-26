@@ -1406,3 +1406,8 @@ record of this setup here: 10 closed, avg +0.47R, 80% won
 ⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3569.1
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+## 2026-11-26 01:31:02 UTC
+⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3575.6
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.

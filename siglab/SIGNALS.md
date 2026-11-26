@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 01:15 UTC
+Updated 2026-11-26 01:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -55,7 +55,7 @@ Updated 2026-11-26 01:15 UTC
 | LINKUSD S7 | 8 | 0.178 | 0.58 | 0.75 | PAPER |
 | LTCUSD S1 | 11 | 0.18 | 0.66 | 0.727 | PAPER |
 | LTCUSD S2 | 10 | -0.487 | -2.01 | 0.4 | PAPER |
-| LTCUSD S3 | 10 | -0.418 | -1.44 | 0.4 | PAPER |
+| LTCUSD S3 | 11 | -0.368 | -1.38 | 0.455 | PAPER |
 | LTCUSD S4 | 11 | -0.203 | -0.76 | 0.545 | PAPER |
 | LTCUSD S5 | 8 | 0.038 | 0.14 | 0.75 | PAPER |
 | LTCUSD S6 | 8 | -0.221 | -0.67 | 0.5 | PAPER |
@@ -112,6 +112,7 @@ Updated 2026-11-26 01:15 UTC
 
 ## Latest signals
 
+- 26 Nov 01:30 XAUUSD sell S4 @ 3575.6 SL 3610.39 → open
 - 26 Nov 01:00 XAUUSD sell S2 @ 3569.1 SL 3603.89 → open
 - 26 Nov 01:00 XAUUSD sell S1 @ 3569.1 SL 3603.89 → open
 - 26 Nov 00:45 SUIUSD buy S4 @ 0.6725 SL 0.662593 → open
@@ -123,7 +124,7 @@ Updated 2026-11-26 01:15 UTC
 - 26 Nov 00:45 BTCUSD buy S4 @ 60622.7 SL 59908.91 → open
 - 26 Nov 00:15 SUIUSD sell S3 @ 0.6762 SL 0.686107 → open
 - 26 Nov 00:15 SUIUSD buy S2 @ 0.6762 SL 0.666293 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 83 closed, avg +0.01R, 72% won.
-- 26 Nov 00:15 LTCUSD sell S3 @ 43.18 SL 43.742 → open
+- 26 Nov 00:15 LTCUSD sell S3 @ 43.18 SL 43.742 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 80 closed, avg -0.18R, 59% won.
 - 26 Nov 00:15 LINKUSD buy S2 @ 9.144 SL 9.0224 → closed TP2+BE +0.31R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 83 closed, avg +0.01R, 72% won.
 - 26 Nov 00:15 AVAXUSD buy S2 @ 6.676 SL 6.5915 → closed TP2+BE +0.27R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 54 closed, avg -0.39R, 44% won.
 - 26 Nov 00:15 ADAUSD sell S4 @ 0.1468 SL 0.149 → open
@@ -171,4 +172,3 @@ Updated 2026-11-26 01:15 UTC
 - 25 Nov 08:00 SUIUSD sell S4 @ 0.6401 SL 0.646429 → closed SL -1.06R. Stopped out after 31 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). Lesson so far: fib pullback with the trend: 81 closed, avg -0.12R, 60% won.
 - 25 Nov 08:00 LTCUSD sell S4 @ 40.28 SL 40.631 → closed SL -1.07R. Stopped out after 30 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). Lesson so far: fib pullback with the trend: 79 closed, avg -0.12R, 61% won.
 - 25 Nov 07:45 NAS100 buy S3 @ 25649.25 SL 25478.16 → closed TP2+BE +0.81R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 76 closed, avg -0.20R, 58% won.
-- 25 Nov 07:30 SUIUSD sell S5 @ 0.6424 SL 0.648757 → closed TP2+BE +0.57R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 53 closed, avg -0.15R, 55% won.
