@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 09:30 UTC
+Updated 2026-11-26 09:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -44,7 +44,7 @@ Updated 2026-11-26 09:30 UTC
 | ETHUSD S3 | 11 | -0.025 | -0.09 | 0.636 | PAPER |
 | ETHUSD S4 | 12 | -0.023 | -0.1 | 0.667 | PAPER |
 | ETHUSD S5 | 7 | -0.14 | -0.41 | 0.571 | PAPER |
-| ETHUSD S6 | 8 | 0.382 | 1.35 | 0.875 | PAPER |
+| ETHUSD S6 | 9 | 0.222 | 0.75 | 0.778 | PAPER |
 | ETHUSD S7 | 9 | 0.308 | 1.48 | 0.889 | PAPER |
 | LINKUSD S1 | 10 | 0.218 | 0.9 | 0.8 | PAPER |
 | LINKUSD S2 | 11 | 0.111 | 0.55 | 0.818 | PAPER |
@@ -133,7 +133,7 @@ Updated 2026-11-26 09:30 UTC
 - 26 Nov 07:00 XRPUSD buy S6 @ 0.9496 SL 0.939143 → open
 - 26 Nov 07:00 BNBUSD sell S6 @ 555.61 SL 560.35 → open
 - 26 Nov 07:00 SOLUSD sell S6 @ 70.64 SL 71.397 → open
-- 26 Nov 07:00 ETHUSD sell S6 @ 1686.81 SL 1704.02 → open
+- 26 Nov 07:00 ETHUSD sell S6 @ 1686.81 SL 1704.02 → closed SL -1.06R. Stopped out after 156 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 35 closed, avg -0.47R, 40% won.
 - 26 Nov 07:00 BTCUSD sell S6 @ 60526.5 SL 61126.57 → open
 - 26 Nov 07:00 XAGUSD sell S6 @ 41.53 SL 42.116 → open
 - 26 Nov 07:00 XAUUSD sell S6 @ 3576.5 SL 3604.79 → open
