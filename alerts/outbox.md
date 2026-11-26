@@ -1468,3 +1468,14 @@ Bitcoin 60,484.60 | 1h trend up | vol normal | typical day range 2.78% | big 4h 
 Gold 3,562.00 | 1h trend flat | vol active | typical day range 1.55% | big 4h move chance 17% | day WAIT · swing WAIT · hold WAIT
 Silver 41.45 | 1h trend up | vol active | typical day range 3.15% | big 4h move chance 20% | day WAIT · swing WAIT · hold WAIT
 Calls come only from tested rules. WATCH = move likely, direction unknown.
+
+## 2026-11-26 21:01:10 UTC
+📊 Signal Lab, end of day: 924 paper signals closed so far, avg -0.04R, 1 open.
+trend pullback: 152 closed, avg +0.14R, 74% won
+breakout: 150 closed, avg -0.14R, 62% won
+stretch fade: 133 closed, avg -0.04R, 65% won
+fib pullback: 158 closed, avg -0.16R, 59% won
+session drive: 105 closed, avg -0.08R, 63% won
+daily bias: 124 closed, avg -0.08R, 64% won
+big move: 102 closed, avg +0.09R, 74% won
+Earning trust: none yet (needs 15+ closed and a positive average)
