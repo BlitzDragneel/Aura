@@ -1375,3 +1375,8 @@ session drive: 99 closed, avg -0.10R, 62% won
 daily bias: 112 closed, avg -0.12R, 62% won
 big move: 95 closed, avg +0.18R, 79% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-26 00:15:58 UTC
+⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~60939.8
+Market now: trend down, volatility normal, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.37R). Logged and scored anyway.
