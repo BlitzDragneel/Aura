@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 10:01 UTC
+Updated 2026-11-26 10:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -78,7 +78,7 @@ Updated 2026-11-26 10:01 UTC
 | SUIUSD S2 | 11 | -0.165 | -0.61 | 0.545 | PAPER |
 | SUIUSD S3 | 9 | -0.289 | -1.15 | 0.556 | PAPER |
 | SUIUSD S4 | 11 | -0.157 | -0.71 | 0.636 | PAPER |
-| SUIUSD S5 | 7 | -0.071 | -0.19 | 0.571 | PAPER |
+| SUIUSD S5 | 8 | -0.018 | -0.06 | 0.625 | PAPER |
 | SUIUSD S6 | 8 | -0.353 | -1.26 | 0.5 | PAPER |
 | SUIUSD S7 | 7 | 0.281 | 1.04 | 0.857 | PAPER |
 | US30 S1 | 3 | -0.636 | -1.7 | 0.333 | PAPER |
@@ -118,7 +118,7 @@ Updated 2026-11-26 10:01 UTC
 - 26 Nov 08:45 DOGEUSD buy S1 @ 0.05659 SL 0.056081 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 143 closed, avg +0.16R, 74% won.
 - 26 Nov 08:30 BTCUSD buy S1 @ 60676.2 SL 60164.58 → open
 - 26 Nov 07:45 XRPUSD buy S1 @ 0.9538 SL 0.943343 → closed TP1+BE +0.09R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 143 closed, avg +0.16R, 74% won.
-- 26 Nov 07:30 SUIUSD buy S5 @ 0.6674 SL 0.658679 → open
+- 26 Nov 07:30 SUIUSD buy S5 @ 0.6674 SL 0.658679 → closed TP2+BE +0.35R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 66 closed, avg -0.05R, 62% won.
 - 26 Nov 07:30 DOGEUSD buy S5 @ 0.0565 SL 0.055894 → open
 - 26 Nov 07:30 BNBUSD sell S5 @ 554.7 SL 559.44 → open
 - 26 Nov 07:30 SOLUSD buy S5 @ 70.92 SL 70.163 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 65 closed, avg -0.05R, 62% won.
