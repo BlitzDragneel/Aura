@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 16:01 UTC
+Updated 2026-11-26 16:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -13,7 +13,7 @@ Updated 2026-11-26 16:01 UTC
 | ADAUSD S7 | 7 | 0.301 | 1.2 | 0.857 | PAPER |
 | AVAXUSD S1 | 11 | -0.014 | -0.05 | 0.636 | PAPER |
 | AVAXUSD S2 | 11 | -0.129 | -0.54 | 0.636 | PAPER |
-| AVAXUSD S3 | 10 | 0.093 | 0.44 | 0.8 | PAPER |
+| AVAXUSD S3 | 11 | 0.174 | 0.84 | 0.818 | PAPER |
 | AVAXUSD S4 | 11 | -0.2 | -0.79 | 0.545 | PAPER |
 | AVAXUSD S5 | 8 | -0.412 | -1.65 | 0.5 | PAPER |
 | AVAXUSD S6 | 9 | 0.032 | 0.11 | 0.667 | PAPER |
@@ -116,7 +116,7 @@ Updated 2026-11-26 16:01 UTC
 - 26 Nov 15:15 LINKUSD sell S7 @ 9.106 SL 9.1851 → closed SL -1.07R. Stopped out after 39 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: big move against the trend: 45 closed, avg +0.01R, 69% won.
 - 26 Nov 15:15 LINKUSD buy S3 @ 9.106 SL 9.0269 → open
 - 26 Nov 15:15 AVAXUSD sell S7 @ 6.519 SL 6.564 → closed SL -1.09R. Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: big move against the trend: 45 closed, avg +0.01R, 69% won.
-- 26 Nov 15:15 AVAXUSD buy S3 @ 6.519 SL 6.474 → open
+- 26 Nov 15:15 AVAXUSD buy S3 @ 6.519 SL 6.474 → closed TP3 +0.98R. TP3 after 46 min (best 1.8R, worst -0.2R). Lesson so far: stretch fade with the trend: 48 closed, avg +0.12R, 73% won.
 - 26 Nov 15:15 ADAUSD sell S2 @ 0.1469 SL 0.148171 → closed SL -1.07R. Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 59 closed, avg -0.35R, 48% won.
 - 26 Nov 15:15 DOGEUSD sell S7 @ 0.05616 SL 0.056536 → closed SL -1.09R. Stopped out after 35 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: big move against the trend: 45 closed, avg +0.01R, 69% won.
 - 26 Nov 15:15 XRPUSD sell S2 @ 0.9394 SL 0.946586 → closed SL -1.08R. Stopped out after 31 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 59 closed, avg -0.35R, 48% won.
