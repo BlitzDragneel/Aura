@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 02:45 UTC
+Updated 2026-11-26 03:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -28,7 +28,7 @@ Updated 2026-11-26 02:45 UTC
 | BTCUSD S1 | 10 | 0.093 | 0.36 | 0.7 | PAPER |
 | BTCUSD S2 | 11 | -0.11 | -0.48 | 0.636 | PAPER |
 | BTCUSD S3 | 10 | -0.133 | -0.53 | 0.6 | PAPER |
-| BTCUSD S4 | 11 | 0.007 | 0.03 | 0.727 | PAPER |
+| BTCUSD S4 | 12 | 0.033 | 0.16 | 0.75 | PAPER |
 | BTCUSD S5 | 6 | -0.287 | -0.82 | 0.5 | PAPER |
 | BTCUSD S6 | 8 | 0.303 | 1.32 | 0.875 | PAPER |
 | BTCUSD S7 | 8 | 0.252 | 0.82 | 0.75 | PAPER |
@@ -126,7 +126,7 @@ Updated 2026-11-26 02:45 UTC
 - 26 Nov 00:45 DOGEUSD buy S4 @ 0.05641 SL 0.055687 → open
 - 26 Nov 00:45 SOLUSD buy S4 @ 70.87 SL 69.899 → open
 - 26 Nov 00:45 ETHUSD buy S4 @ 1697.23 SL 1674.36 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 61 closed, avg -0.26R, 54% won.
-- 26 Nov 00:45 BTCUSD buy S4 @ 60622.7 SL 59908.91 → open
+- 26 Nov 00:45 BTCUSD buy S4 @ 60622.7 SL 59908.91 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 64 closed, avg -0.25R, 55% won.
 - 26 Nov 00:15 SUIUSD sell S3 @ 0.6762 SL 0.686107 → open
 - 26 Nov 00:15 SUIUSD buy S2 @ 0.6762 SL 0.666293 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 83 closed, avg +0.01R, 72% won.
 - 26 Nov 00:15 LTCUSD sell S3 @ 43.18 SL 43.742 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 80 closed, avg -0.18R, 59% won.
