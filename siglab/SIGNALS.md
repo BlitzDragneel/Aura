@@ -1,10 +1,10 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 10:15 UTC
+Updated 2026-11-26 10:31 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
-| ADAUSD S1 | 10 | 0.297 | 1.16 | 0.8 | PAPER |
+| ADAUSD S1 | 11 | 0.279 | 1.21 | 0.818 | PAPER |
 | ADAUSD S2 | 10 | -0.07 | -0.25 | 0.6 | PAPER |
 | ADAUSD S3 | 7 | 0.067 | 0.23 | 0.714 | PAPER |
 | ADAUSD S4 | 12 | -0.229 | -1.04 | 0.583 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-26 10:15 UTC
 
 ## Latest signals
 
-- 26 Nov 09:00 ADAUSD buy S1 @ 0.1485 SL 0.146821 → open
+- 26 Nov 09:00 ADAUSD buy S1 @ 0.1485 SL 0.146821 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 146 closed, avg +0.16R, 75% won.
 - 26 Nov 08:45 LINKUSD buy S1 @ 9.205 SL 9.1071 → open
 - 26 Nov 08:45 AVAXUSD buy S1 @ 6.664 SL 6.6081 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 142 closed, avg +0.16R, 74% won.
 - 26 Nov 08:45 DOGEUSD buy S1 @ 0.05659 SL 0.056081 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 143 closed, avg +0.16R, 74% won.
