@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 13:45 UTC
+Updated 2026-11-26 14:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-26 13:45 UTC
 
 ## Latest signals
 
+- 26 Nov 14:00 LTCUSD buy S5 @ 43.76 SL 43.332 → open
 - 26 Nov 13:45 BNBUSD buy S1 @ 552.82 SL 549.15 → open
 - 26 Nov 09:00 ADAUSD buy S1 @ 0.1485 SL 0.146821 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 146 closed, avg +0.16R, 75% won.
 - 26 Nov 08:45 LINKUSD buy S1 @ 9.205 SL 9.1071 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 147 closed, avg +0.16R, 75% won.
@@ -171,4 +172,3 @@ Updated 2026-11-26 13:45 UTC
 - 26 Nov 00:15 BTCUSD sell S3 @ 60939.8 SL 61653.59 → closed TP1+BE +0.20R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 47 closed, avg +0.11R, 72% won.
 - 26 Nov 00:15 BTCUSD buy S2 @ 60939.8 SL 60226.01 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 54 closed, avg -0.39R, 44% won.
 - 26 Nov 00:00 LTCUSD buy S2 @ 42.75 SL 42.188 → closed TP3 +0.85R. TP3 after 122 min (best 1.5R, worst -0.1R). Lesson so far: breakout with the trend: 87 closed, avg +0.03R, 74% won.
-- 26 Nov 00:00 LINKUSD sell S4 @ 9.05 SL 9.1716 → closed SL -1.04R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 59 closed, avg -0.23R, 56% won.
