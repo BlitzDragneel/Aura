@@ -36,8 +36,8 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 3577.3; volatility regime quiet (hourly ATR 0.284% of price, 21.2th percentile).
-- Spot XAUUSD 3567.19 (stale: market closed).
+- Price 3572.8; volatility regime quiet (hourly ATR 0.284% of price, 21.2th percentile).
+- Spot XAUUSD 3565.80; the perpetual trades +0.20% from spot.
 
 ## My calls so far
 
