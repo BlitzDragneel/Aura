@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 01:45 UTC
+Updated 2026-11-26 02:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -27,7 +27,7 @@ Updated 2026-11-26 01:45 UTC
 | BNBUSD S7 | 8 | 0.02 | 0.07 | 0.75 | PAPER |
 | BTCUSD S1 | 10 | 0.093 | 0.36 | 0.7 | PAPER |
 | BTCUSD S2 | 11 | -0.11 | -0.48 | 0.636 | PAPER |
-| BTCUSD S3 | 9 | -0.169 | -0.62 | 0.556 | PAPER |
+| BTCUSD S3 | 10 | -0.133 | -0.53 | 0.6 | PAPER |
 | BTCUSD S4 | 11 | 0.007 | 0.03 | 0.727 | PAPER |
 | BTCUSD S5 | 6 | -0.287 | -0.82 | 0.5 | PAPER |
 | BTCUSD S6 | 8 | 0.303 | 1.32 | 0.875 | PAPER |
@@ -136,7 +136,7 @@ Updated 2026-11-26 01:45 UTC
 - 26 Nov 00:15 SOLUSD buy S2 @ 71.11 SL 70.139 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 54 closed, avg -0.39R, 44% won.
 - 26 Nov 00:15 ETHUSD sell S3 @ 1704.88 SL 1727.75 → closed SL -1.04R. Stopped out after 1 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade with the trend: 46 closed, avg +0.14R, 74% won.
 - 26 Nov 00:15 ETHUSD buy S2 @ 1704.88 SL 1682.01 → closed TP3 +0.51R. TP3 after 1 min (best 1.0R, worst -0.1R). Lesson so far: breakout against the trend: 54 closed, avg -0.39R, 44% won.
-- 26 Nov 00:15 BTCUSD sell S3 @ 60939.8 SL 61653.59 → open
+- 26 Nov 00:15 BTCUSD sell S3 @ 60939.8 SL 61653.59 → closed TP1+BE +0.20R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 47 closed, avg +0.11R, 72% won.
 - 26 Nov 00:15 BTCUSD buy S2 @ 60939.8 SL 60226.01 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 54 closed, avg -0.39R, 44% won.
 - 26 Nov 00:00 LTCUSD buy S2 @ 42.75 SL 42.188 → open
 - 26 Nov 00:00 LINKUSD sell S4 @ 9.05 SL 9.1716 → closed SL -1.04R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 59 closed, avg -0.23R, 56% won.
