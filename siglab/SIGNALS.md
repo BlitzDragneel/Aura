@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-26 08:45 UTC
+Updated 2026-11-26 09:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-26 08:45 UTC
 
 ## Latest signals
 
+- 26 Nov 09:00 ADAUSD buy S1 @ 0.1485 SL 0.146821 → open
 - 26 Nov 08:45 LINKUSD buy S1 @ 9.205 SL 9.1071 → open
 - 26 Nov 08:45 AVAXUSD buy S1 @ 6.664 SL 6.6081 → open
 - 26 Nov 08:45 DOGEUSD buy S1 @ 0.05659 SL 0.056081 → open
@@ -171,4 +172,3 @@ Updated 2026-11-26 08:45 UTC
 - 26 Nov 00:00 LTCUSD buy S2 @ 42.75 SL 42.188 → closed TP3 +0.85R. TP3 after 122 min (best 1.5R, worst -0.1R). Lesson so far: breakout with the trend: 87 closed, avg +0.03R, 74% won.
 - 26 Nov 00:00 LINKUSD sell S4 @ 9.05 SL 9.1716 → closed SL -1.04R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 59 closed, avg -0.23R, 56% won.
 - 26 Nov 00:00 BNBUSD sell S4 @ 553.66 SL 559.51 → closed SL -1.06R. Stopped out after 16 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: fib pullback against the trend: 59 closed, avg -0.23R, 56% won.
-- 25 Nov 19:15 LINKUSD sell S3 @ 9.025 SL 9.1506 → closed SL -1.04R. Stopped out after 299 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.6R). Volatility was high, so a 1R stop was easy to hit. Lesson so far: stretch fade with the trend: 45 closed, avg +0.17R, 76% won.
