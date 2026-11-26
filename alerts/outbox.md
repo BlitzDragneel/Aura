@@ -1429,3 +1429,8 @@ record of this setup here: 10 closed, avg +0.17R, 80% won
 ⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~41.06
 Market now: trend down, volatility normal, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.22R). Logged and scored anyway.
+
+## 2026-11-26 02:15:54 UTC
+⚡ Dow 30: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~50345.08
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
