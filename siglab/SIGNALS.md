@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 15:01 UTC
+Updated 2026-11-27 15:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -59,7 +59,7 @@ Updated 2026-11-27 15:01 UTC
 | LTCUSD S4 | 13 | -0.191 | -0.77 | 0.538 | PAPER |
 | LTCUSD S5 | 9 | -0.084 | -0.32 | 0.667 | PAPER |
 | LTCUSD S6 | 10 | -0.093 | -0.34 | 0.6 | PAPER |
-| LTCUSD S7 | 6 | 0.548 | 3.13 | 1.0 | PAPER |
+| LTCUSD S7 | 7 | 0.528 | 3.54 | 1.0 | PAPER |
 | NAS100 S1 | 4 | 0.603 | 2.89 | 1.0 | PAPER |
 | NAS100 S2 | 3 | 0.065 | 1.66 | 0.667 | PAPER |
 | NAS100 S3 | 3 | 0.427 | 1.09 | 0.667 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-27 15:01 UTC
 
 ## Latest signals
 
-- 27 Nov 15:00 LTCUSD sell S7 @ 43.33 SL 43.748 → open
+- 27 Nov 15:00 LTCUSD sell S7 @ 43.33 SL 43.748 → closed TP2+BE +0.41R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 51 closed, avg -0.02R, 65% won.
 - 27 Nov 14:45 SUIUSD sell S7 @ 0.6704 SL 0.676393 → closed TP3 +1.10R. TP3 after 7 min (best 2.1R, worst -0.1R). Lesson so far: big move against the trend: 49 closed, avg -0.08R, 63% won.
 - 27 Nov 14:45 ADAUSD sell S7 @ 0.1488 SL 0.150093 → closed TP3 +1.43R. TP3 after 15 min (best 2.5R, worst -0.1R). Lesson so far: big move against the trend: 49 closed, avg -0.08R, 63% won.
 - 27 Nov 14:00 DOGEUSD buy S5 @ 0.05896 SL 0.058473 → closed SL -1.07R. Stopped out after 26 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: session drive with the trend: 73 closed, avg -0.04R, 64% won.
