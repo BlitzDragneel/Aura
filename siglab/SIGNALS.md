@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 07:45 UTC
+Updated 2026-11-27 08:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -16,7 +16,7 @@ Updated 2026-11-27 07:45 UTC
 | AVAXUSD S3 | 12 | 0.069 | 0.32 | 0.75 | PAPER |
 | AVAXUSD S4 | 12 | -0.274 | -1.13 | 0.5 | PAPER |
 | AVAXUSD S5 | 8 | -0.412 | -1.65 | 0.5 | PAPER |
-| AVAXUSD S6 | 9 | 0.032 | 0.11 | 0.667 | PAPER |
+| AVAXUSD S6 | 10 | 0.045 | 0.17 | 0.7 | PAPER |
 | AVAXUSD S7 | 9 | -0.145 | -0.61 | 0.667 | PAPER |
 | BNBUSD S1 | 12 | 0.016 | 0.06 | 0.667 | PAPER |
 | BNBUSD S2 | 12 | -0.013 | -0.05 | 0.667 | PAPER |
@@ -118,7 +118,7 @@ Updated 2026-11-27 07:45 UTC
 - 27 Nov 07:00 SUIUSD buy S6 @ 0.6838 SL 0.678029 → open
 - 27 Nov 07:00 LTCUSD buy S6 @ 44.27 SL 43.901 → open
 - 27 Nov 07:00 LINKUSD buy S6 @ 9.587 SL 9.4866 → open
-- 27 Nov 07:00 AVAXUSD sell S6 @ 6.759 SL 6.8066 → open
+- 27 Nov 07:00 AVAXUSD sell S6 @ 6.759 SL 6.8066 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 42 closed, avg -0.39R, 43% won.
 - 27 Nov 07:00 ADAUSD buy S6 @ 0.1528 SL 0.151514 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 83 closed, avg +0.06R, 75% won.
 - 27 Nov 07:00 DOGEUSD buy S6 @ 0.05806 SL 0.057657 → open
 - 27 Nov 07:00 XRPUSD buy S6 @ 0.972 SL 0.965257 → open
