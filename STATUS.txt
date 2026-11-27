@@ -1,4 +1,4 @@
-Updated 2026-11-26 19:52 UTC - paper only, no keys, no real orders
+Updated 2026-11-27 02:29 UTC - paper only, no keys, no real orders
 
 {
  "home": "/home/runner/work/Aura/Aura/state/home",
@@ -28,57 +28,57 @@ Updated 2026-11-26 19:52 UTC - paper only, no keys, no real orders
   "upscout_watch": "paper",
   "btc_gold_invvol": "paper"
  },
- "last_bar": "2026-11-26T18:00:00+00:00",
+ "last_bar": "2026-11-27T01:00:00+00:00",
  "resting_orders": [
   {
-   "id": "d418b412ffc84d84",
+   "id": "91e8bed638d94887",
    "strategy": "panic_h1",
-   "sym": "BLURUSDT",
+   "sym": "ZECUSDT",
    "side": "long",
    "kind": "limit",
-   "qty": 541.301289,
-   "price": 0.009237,
-   "placed_at": "2026-11-26T17:00:00+00:00",
-   "expires_at": "2026-11-26T20:00:00+00:00",
+   "qty": 0.007561,
+   "price": 661.34670931,
+   "placed_at": "2026-11-27T00:00:00+00:00",
+   "expires_at": "2026-11-27T03:00:00+00:00",
    "hold_bars": 24,
-   "stop_price": 0.0046185,
+   "stop_price": 330.67335466,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-26T16:00:00+00:00",
+   "signal_bar": "2026-11-26T23:00:00+00:00",
    "exchange_ids": {
     "paper": true
    },
    "status": "pending",
-   "note": "r24 -8.4% <= own q10 -5.6%; sigma 1.94%",
+   "note": "r24 -12.3% <= own q10 -10.0%; sigma 1.55%",
    "valid_for_bars": 3,
-   "ref_price": 0.009602,
+   "ref_price": 682.21,
    "tf": "1h",
    "src_tf": "1h"
   },
   {
-   "id": "6fbb6e31d81f4e10",
+   "id": "6a74616bcf4e4304",
    "strategy": "panic_h1",
-   "sym": "BIGTIMEUSDT",
+   "sym": "VVVUSDT",
    "side": "long",
    "kind": "limit",
-   "qty": 951.252133,
-   "price": 0.00525623,
-   "placed_at": "2026-11-26T18:00:00+00:00",
-   "expires_at": "2026-11-26T21:00:00+00:00",
+   "qty": 0.198425,
+   "price": 25.19855032,
+   "placed_at": "2026-11-27T02:00:00+00:00",
+   "expires_at": "2026-11-27T05:00:00+00:00",
    "hold_bars": 24,
-   "stop_price": 0.00262812,
+   "stop_price": 12.59927516,
    "target_price": null,
    "leverage": 1,
    "margin_usdt": 5.0,
-   "signal_bar": "2026-11-26T17:00:00+00:00",
+   "signal_bar": "2026-11-27T01:00:00+00:00",
    "exchange_ids": {
     "paper": true
    },
    "status": "pending",
-   "note": "r24 -19.0% <= own q10 -7.4%; sigma 2.82%",
+   "note": "r24 -14.3% <= own q10 -8.2%; sigma 1.78%",
    "valid_for_bars": 3,
-   "ref_price": 0.005561,
+   "ref_price": 26.114,
    "tf": "1h",
    "src_tf": "1h"
   }
@@ -113,81 +113,63 @@ Updated 2026-11-26 19:52 UTC - paper only, no keys, no real orders
   }
  ],
  "closed_trades": 451,
- "today_pnl_paper": 1.903401,
+ "today_pnl_paper": 0,
  "recent_log": [
   {
-   "t": "2026-11-26T19:52:44Z",
-   "event": "refused",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "ATUSDT",
-   "reasons": [
-    "3 positions/orders already open (max 3)"
-   ]
-  },
-  {
-   "t": "2026-11-26T19:52:44Z",
-   "event": "refused",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "AIUSDT",
-   "reasons": [
-    "3 positions/orders already open (max 3)"
-   ]
-  },
-  {
-   "t": "2026-11-26T19:52:44Z",
-   "event": "refused",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "HMSTRUSDT",
-   "reasons": [
-    "3 positions/orders already open (max 3)"
-   ]
-  },
-  {
-   "t": "2026-11-26T19:52:44Z",
-   "event": "refused",
-   "mode": "paper",
-   "rule": "panic_h1",
-   "sym": "XDPUSDT",
-   "reasons": [
-    "3 positions/orders already open (max 3)"
-   ]
-  },
-  {
-   "t": "2026-11-26T19:52:46Z",
+   "t": "2026-11-27T02:29:26Z",
    "event": "ignored_busy",
    "rule": "panic_h1",
    "sym": "MMTUSDT",
    "note": "the rule already holds this coin (as in the research)"
   },
   {
-   "t": "2026-11-26T19:52:46Z",
-   "event": "ignored_busy",
+   "t": "2026-11-27T02:29:26Z",
+   "event": "order",
+   "mode": "paper",
    "rule": "panic_h1",
-   "sym": "BIGTIMEUSDT",
-   "note": "the rule already holds this coin (as in the research)"
+   "sym": "VVVUSDT",
+   "kind": "limit",
+   "qty": 0.198425,
+   "price": 25.19855032,
+   "ref": 26.114,
+   "stop": 12.59927516,
+   "leverage": 1,
+   "margin_usdt": 5.0,
+   "expires": "2026-11-27T05:00:00+00:00",
+   "why": "r24 -14.3% <= own q10 -8.2%; sigma 1.78%"
   },
   {
-   "t": "2026-11-26T19:52:46Z",
-   "event": "ignored_busy",
-   "rule": "panic_h1",
-   "sym": "BLURUSDT",
-   "note": "the rule already holds this coin (as in the research)"
-  },
-  {
-   "t": "2026-11-26T19:52:46Z",
+   "t": "2026-11-27T02:29:26Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
-   "sym": "AIUSDT",
+   "sym": "MOVEUSDT",
    "reasons": [
     "3 positions/orders already open (max 3)"
    ]
   },
   {
-   "t": "2026-11-26T19:52:46Z",
+   "t": "2026-11-27T02:29:26Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "MONUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-27T02:29:26Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "BLURUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-27T02:29:26Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
@@ -197,11 +179,41 @@ Updated 2026-11-26 19:52 UTC - paper only, no keys, no real orders
    ]
   },
   {
-   "t": "2026-11-26T19:52:46Z",
+   "t": "2026-11-27T02:29:26Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "AIUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-27T02:29:26Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "CCUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-27T02:29:26Z",
    "event": "refused",
    "mode": "paper",
    "rule": "panic_h1",
    "sym": "XDPUSDT",
+   "reasons": [
+    "3 positions/orders already open (max 3)"
+   ]
+  },
+  {
+   "t": "2026-11-27T02:29:26Z",
+   "event": "refused",
+   "mode": "paper",
+   "rule": "panic_h1",
+   "sym": "ATUSDT",
    "reasons": [
     "3 positions/orders already open (max 3)"
    ]
