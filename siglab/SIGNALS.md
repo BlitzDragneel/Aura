@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 04:01 UTC
+Updated 2026-11-27 04:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -73,7 +73,7 @@ Updated 2026-11-27 04:01 UTC
 | SOLUSD S4 | 12 | 0.021 | 0.1 | 0.75 | PAPER |
 | SOLUSD S5 | 8 | -0.107 | -0.35 | 0.625 | PAPER |
 | SOLUSD S6 | 9 | -0.533 | -1.92 | 0.333 | PAPER |
-| SOLUSD S7 | 8 | -0.119 | -0.42 | 0.625 | PAPER |
+| SOLUSD S7 | 9 | -0.054 | -0.21 | 0.667 | PAPER |
 | SUIUSD S1 | 12 | 0.134 | 0.58 | 0.75 | PAPER |
 | SUIUSD S2 | 11 | -0.165 | -0.61 | 0.545 | PAPER |
 | SUIUSD S3 | 10 | -0.145 | -0.54 | 0.6 | PAPER |
@@ -116,7 +116,7 @@ Updated 2026-11-27 04:01 UTC
 - 27 Nov 02:45 LINKUSD buy S7 @ 9.515 SL 9.4333 → open
 - 27 Nov 02:45 AVAXUSD buy S7 @ 6.72 SL 6.6732 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 59 closed, avg +0.27R, 85% won.
 - 27 Nov 02:45 BNBUSD buy S7 @ 562.51 SL 559.79 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 59 closed, avg +0.27R, 85% won.
-- 27 Nov 02:45 SOLUSD buy S7 @ 72.5 SL 71.95 → open
+- 27 Nov 02:45 SOLUSD buy S7 @ 72.5 SL 71.95 → closed TP2+BE +0.46R. Reached TP2 then came back to the entry (best 1.2R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 61 closed, avg +0.26R, 85% won.
 - 27 Nov 02:30 SUIUSD sell S3 @ 0.6811 SL 0.68685 → open
 - 27 Nov 02:30 ADAUSD sell S3 @ 0.1511 SL 0.152314 → open
 - 27 Nov 02:30 ADAUSD buy S2 @ 0.1511 SL 0.149886 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 95 closed, avg +0.09R, 75% won.
