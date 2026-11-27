@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 07:31 UTC
+Updated 2026-11-27 07:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -100,19 +100,19 @@ Updated 2026-11-27 07:31 UTC
 | XAUUSD S3 | 11 | -0.187 | -0.92 | 0.636 | PAPER |
 | XAUUSD S4 | 12 | 0.122 | 0.47 | 0.667 | PAPER |
 | XAUUSD S5 | 8 | -0.009 | -0.03 | 0.75 | PAPER |
-| XAUUSD S6 | 9 | -0.078 | -0.3 | 0.667 | PAPER |
+| XAUUSD S6 | 10 | -0.054 | -0.23 | 0.7 | PAPER |
 | XAUUSD S7 | 6 | 0.276 | 0.94 | 0.833 | PAPER |
 | XRPUSD S1 | 12 | 0.379 | 1.72 | 0.833 | PAPER |
 | XRPUSD S2 | 12 | 0.059 | 0.26 | 0.75 | PAPER |
 | XRPUSD S3 | 12 | -0.078 | -0.33 | 0.667 | PAPER |
 | XRPUSD S4 | 12 | -0.373 | -1.45 | 0.417 | PAPER |
-| XRPUSD S5 | 7 | -0.089 | -0.25 | 0.571 | PAPER |
+| XRPUSD S5 | 8 | -0.065 | -0.21 | 0.625 | PAPER |
 | XRPUSD S6 | 9 | -0.225 | -0.78 | 0.556 | PAPER |
 | XRPUSD S7 | 6 | -0.039 | -0.18 | 0.833 | PAPER |
 
 ## Latest signals
 
-- 27 Nov 07:30 XRPUSD buy S5 @ 0.9755 SL 0.968757 → open
+- 27 Nov 07:30 XRPUSD buy S5 @ 0.9755 SL 0.968757 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 70 closed, avg -0.05R, 63% won.
 - 27 Nov 07:30 BTCUSD buy S5 @ 61812.2 SL 61427.09 → open
 - 27 Nov 07:30 XAUUSD buy S5 @ 3665.8 SL 3650.66 → open
 - 27 Nov 07:00 SUIUSD buy S6 @ 0.6838 SL 0.678029 → open
@@ -127,7 +127,7 @@ Updated 2026-11-27 07:31 UTC
 - 27 Nov 07:00 ETHUSD buy S6 @ 1733.77 SL 1720.27 → open
 - 27 Nov 07:00 BTCUSD buy S6 @ 61678.9 SL 61293.79 → open
 - 27 Nov 07:00 XAGUSD buy S6 @ 44.26 SL 43.844 → open
-- 27 Nov 07:00 XAUUSD buy S6 @ 3660.9 SL 3645.76 → open
+- 27 Nov 07:00 XAUUSD buy S6 @ 3660.9 SL 3645.76 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 84 closed, avg +0.06R, 75% won.
 - 27 Nov 02:45 LTCUSD sell S3 @ 44.69 SL 45.044 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 93 closed, avg -0.26R, 54% won.
 - 27 Nov 02:45 LINKUSD buy S7 @ 9.515 SL 9.4333 → closed TP3 +1.02R. TP3 after 141 min (best 2.0R, worst -0.6R). Lesson so far: big move with the trend: 62 closed, avg +0.26R, 86% won.
 - 27 Nov 02:45 AVAXUSD buy S7 @ 6.72 SL 6.6732 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 59 closed, avg +0.27R, 85% won.
