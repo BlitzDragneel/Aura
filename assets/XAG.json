@@ -3,20 +3,20 @@
  "name": "Silver",
  "perp": "XAGUSDT",
  "spot_symbol": "XAGUSD",
- "asof": "2026-11-27T19:01:04.565540+00:00",
+ "asof": "2026-11-27T19:15:47.196408+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 43.58,
-  "bar": "2026-11-27T18:45:00+00:00",
+  "price": 43.57,
+  "bar": "2026-11-27T19:00:00+00:00",
   "trend": {
    "15m": {
-    "state": "down",
-    "close": 43.58,
-    "ma20": 43.60549999999999,
-    "ma50": 43.977799999999995,
-    "slope_atr": -0.26,
-    "bar": "2026-11-27T18:45:00+00:00"
+    "state": "flat",
+    "close": 43.57,
+    "ma20": 43.599000000000004,
+    "ma50": 43.9658,
+    "slope_atr": -0.22,
+    "bar": "2026-11-27T19:00:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -93,18 +93,18 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.24,
   "spot": {
-   "price": 43.46045,
-   "bid": 43.4406,
-   "ask": 43.4803,
-   "spread": 0.0397,
-   "age_s": 2,
+   "price": 43.49785,
+   "bid": 43.477,
+   "ask": 43.5187,
+   "spread": 0.0417,
+   "age_s": 3,
    "stale": false,
    "note": null,
    "source": "swissquote",
-   "perp_premium_pct": 0.275
+   "perp_premium_pct": 0.166
   },
   "funding": {
-   "rate": 4.62112162113e-05,
+   "rate": 5.07946030164e-05,
    "next_time": 1795824000000,
    "source": "okx-swap"
   },
@@ -256,8 +256,8 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 43.58; volatility regime active (hourly ATR 1.151% of price, 84.8th percentile).",
-    "Spot XAGUSD 43.46; the perpetual trades +0.28% from spot."
+    "Price 43.57; volatility regime active (hourly ATR 1.151% of price, 84.8th percentile).",
+    "Spot XAGUSD 43.50; the perpetual trades +0.17% from spot."
    ]
   },
   {
@@ -267,6 +267,6 @@
    ]
   }
  ],
- "runs": 1171,
+ "runs": 1172,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
