@@ -15,17 +15,17 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 270 readings scored; big moves followed 16% of them, 14% after a WATCH (93 WATCH readings).
+- My own record: 271 readings scored; big moves followed 16% of them, 14% after a WATCH (93 WATCH readings).
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 250 readings scored; big moves followed 41% of them, 20% after a WATCH (91 WATCH readings).
+- My own record: 251 readings scored; big moves followed 41% of them, 20% after a WATCH (91 WATCH readings).
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 99 readings scored; big moves followed 67% of them - too few to judge yet.
+- My own record: 100 readings scored; big moves followed 66% of them - too few to judge yet.
 
 ## Habits I measure myself
 
@@ -36,8 +36,8 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 43.68; volatility regime normal (hourly ATR 0.884% of price, 63.4th percentile).
-- Spot XAGUSD 43.59; the perpetual trades +0.21% from spot.
+- Price 43.59; volatility regime normal (hourly ATR 0.867% of price, 62.1th percentile).
+- Spot XAGUSD 43.50; the perpetual trades +0.20% from spot.
 
 ## My calls so far
 
