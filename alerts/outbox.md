@@ -1524,3 +1524,10 @@ Market now: trend up, volatility normal, Asia session
 ⚡ Silver: BIG MOVE under way right now (moved +1.16 in the last hour, twice its normal hourly range), price ~42.71
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.27R). Logged and scored anyway.
+
+## 2026-11-27 02:16:07 UTC
+⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~61236.8
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
+
+🔁 Learning: fib pullback against the trend is now MUTED (no trade plans) after 79 live signals (28 separate moments) averaging -0.22R.
