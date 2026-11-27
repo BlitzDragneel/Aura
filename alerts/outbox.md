@@ -1531,3 +1531,8 @@ Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
 
 🔁 Learning: fib pullback against the trend is now MUTED (no trade plans) after 79 live signals (28 separate moments) averaging -0.22R.
+
+## 2026-11-27 02:31:05 UTC
+⚡ Bitcoin: BIG MOVE under way right now (moved +733.90 in the last hour, twice its normal hourly range), price ~61504.2
+Market now: trend up, volatility normal, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
