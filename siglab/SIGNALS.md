@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 13:01 UTC
+Updated 2026-11-27 13:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -99,7 +99,7 @@ Updated 2026-11-27 13:01 UTC
 | XAUUSD S2 | 12 | -0.159 | -0.67 | 0.583 | PAPER |
 | XAUUSD S3 | 11 | -0.187 | -0.92 | 0.636 | PAPER |
 | XAUUSD S4 | 12 | 0.122 | 0.47 | 0.667 | PAPER |
-| XAUUSD S5 | 8 | -0.009 | -0.03 | 0.75 | PAPER |
+| XAUUSD S5 | 9 | 0.045 | 0.2 | 0.778 | PAPER |
 | XAUUSD S6 | 10 | -0.054 | -0.23 | 0.7 | PAPER |
 | XAUUSD S7 | 6 | 0.276 | 0.94 | 0.833 | PAPER |
 | XRPUSD S1 | 12 | 0.379 | 1.72 | 0.833 | PAPER |
@@ -114,7 +114,7 @@ Updated 2026-11-27 13:01 UTC
 
 - 27 Nov 07:30 XRPUSD buy S5 @ 0.9755 SL 0.968757 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 70 closed, avg -0.05R, 63% won.
 - 27 Nov 07:30 BTCUSD buy S5 @ 61812.2 SL 61427.09 → closed TP1+BE +0.18R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 71 closed, avg -0.05R, 63% won.
-- 27 Nov 07:30 XAUUSD buy S5 @ 3665.8 SL 3650.66 → open
+- 27 Nov 07:30 XAUUSD buy S5 @ 3665.8 SL 3650.66 → closed TP2+BE +0.48R. Reached TP2 then came back to the entry (best 1.7R). Partial profit kept by moving the stop to entry. Lesson so far: session drive with the trend: 72 closed, avg -0.04R, 64% won.
 - 27 Nov 07:00 SUIUSD buy S6 @ 0.6838 SL 0.678029 → open
 - 27 Nov 07:00 LTCUSD buy S6 @ 44.27 SL 43.901 → open
 - 27 Nov 07:00 LINKUSD buy S6 @ 9.587 SL 9.4866 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 88 closed, avg +0.08R, 76% won.
