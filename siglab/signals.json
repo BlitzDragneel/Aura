@@ -34974,14 +34974,22 @@
     40.672
    ],
    "R": 0.5857,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-26",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 41.53,
+   "outcome": "SL",
+   "R_ladder": -1.051,
+   "R_tp1": -1.051,
+   "pips": -61.6,
+   "closed_ms": 1795743960000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 1126 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: daily bias against the trend: 41 closed, avg -0.38R, 44% won."
   },
   {
    "id": "BTCUSD-S6-1795676400000",
@@ -37236,7 +37244,7 @@
     3596.06
    ],
    "R": 9.543,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -37245,7 +37253,15 @@
    "day": "2026-11-27",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3576.4,
+   "outcome": "TP3",
+   "R_ladder": 1.168,
+   "R_tp1": 0.488,
+   "pips": 112.6,
+   "closed_ms": 1795744620000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 42 min (best 2.2R, worst -0.4R). Lesson so far: trend pullback with the trend: 152 closed, avg +0.14R, 74% won."
   },
   {
    "id": "XAGUSD-S1-1795742100000",
@@ -37269,7 +37285,7 @@
     42.39
    ],
    "R": 0.2536,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -37278,7 +37294,15 @@
    "day": "2026-11-27",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 41.92,
+   "outcome": "TP3",
+   "R_ladder": 1.01,
+   "R_tp1": 0.409,
+   "pips": 25.7,
+   "closed_ms": 1795744380000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 38 min (best 1.9R, worst -0.6R). Lesson so far: trend pullback with the trend: 152 closed, avg +0.14R, 74% won."
   },
   {
    "id": "XAGUSD-S2-1795742100000",
@@ -37302,7 +37326,7 @@
     42.39
    ],
    "R": 0.2536,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -37311,7 +37335,15 @@
    "day": "2026-11-27",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 41.92,
+   "outcome": "TP3",
+   "R_ladder": 1.01,
+   "R_tp1": 0.409,
+   "pips": 25.7,
+   "closed_ms": 1795744380000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 38 min (best 1.9R, worst -0.6R). Lesson so far: breakout with the trend: 89 closed, avg +0.02R, 73% won."
   },
   {
    "id": "XRPUSD-S1-1795742100000",
@@ -37405,6 +37437,134 @@
    ],
    "day": "2026-11-27",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XAUUSD-S3-1795744800000",
+   "symbol": "XAUUSD",
+   "setup": "S3",
+   "side": "sell",
+   "why": "stretched far above its 4-hour average",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795744800000,
+   "ref_price": 3599.9,
+   "stop": 3611.02,
+   "targets": [
+    3592.76,
+    3583.34,
+    3568.04
+   ],
+   "R": 11.121,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-27",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XAUUSD-S7-1795744800000",
+   "symbol": "XAUUSD",
+   "setup": "S7",
+   "side": "buy",
+   "why": "moved +32.10 in the last hour, twice its normal hourly range",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795744800000,
+   "ref_price": 3599.9,
+   "stop": 3588.78,
+   "targets": [
+    3605.76,
+    3610.8,
+    3619.7
+   ],
+   "R": 11.121,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-27",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "XAGUSD-S3-1795744800000",
+   "symbol": "XAGUSD",
+   "setup": "S3",
+   "side": "sell",
+   "why": "stretched far above its 4-hour average",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "expanding",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795744800000,
+   "ref_price": 42.71,
+   "stop": 43.036,
+   "targets": [
+    42.48,
+    42.304,
+    41.96
+   ],
+   "R": 0.3264,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-27",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XAGUSD-S7-1795744800000",
+   "symbol": "XAGUSD",
+   "setup": "S7",
+   "side": "buy",
+   "why": "moved +1.16 in the last hour, twice its normal hourly range",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "expanding",
+    "session": "Asia",
+    "with_trend": true
+   },
+   "logged_ms": 1795744800000,
+   "ref_price": 42.71,
+   "stop": 42.384,
+   "targets": [
+    42.87,
+    42.986,
+    43.188
+   ],
+   "R": 0.3264,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-27",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
   }
  ],
  "sent_day": {},
@@ -38084,19 +38244,19 @@
     "grade": "PAPER"
    },
    "XAGUSD S1": {
-    "n": 11,
-    "avg_R": 0.056,
-    "t": 0.24,
-    "win": 0.727,
-    "total_R": 0.61,
+    "n": 12,
+    "avg_R": 0.135,
+    "t": 0.59,
+    "win": 0.75,
+    "total_R": 1.62,
     "grade": "PAPER"
    },
    "XAGUSD S2": {
-    "n": 11,
-    "avg_R": -0.272,
-    "t": -1.37,
-    "win": 0.636,
-    "total_R": -3.0,
+    "n": 12,
+    "avg_R": -0.166,
+    "t": -0.79,
+    "win": 0.667,
+    "total_R": -1.99,
     "grade": "PAPER"
    },
    "XAGUSD S3": {
@@ -38124,11 +38284,11 @@
     "grade": "PAPER"
    },
    "XAGUSD S6": {
-    "n": 8,
-    "avg_R": -0.062,
-    "t": -0.43,
-    "win": 0.875,
-    "total_R": -0.5,
+    "n": 9,
+    "avg_R": -0.172,
+    "t": -1.02,
+    "win": 0.778,
+    "total_R": -1.55,
     "grade": "PAPER"
    },
    "XAGUSD S7": {
@@ -38140,11 +38300,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S1": {
-    "n": 11,
-    "avg_R": 0.339,
-    "t": 1.23,
-    "win": 0.727,
-    "total_R": 3.73,
+    "n": 12,
+    "avg_R": 0.408,
+    "t": 1.57,
+    "win": 0.75,
+    "total_R": 4.9,
     "grade": "PAPER"
    },
    "XAUUSD S2": {
@@ -38254,18 +38414,18 @@
   },
   "by_setup": {
    "S1": {
-    "n": 152,
-    "avg_R": 0.14,
-    "t": 2.22,
-    "win": 0.743,
-    "total_R": 21.34
+    "n": 154,
+    "avg_R": 0.153,
+    "t": 2.42,
+    "win": 0.747,
+    "total_R": 23.52
    },
    "S2": {
-    "n": 151,
-    "avg_R": -0.144,
-    "t": -2.32,
-    "win": 0.616,
-    "total_R": -21.75
+    "n": 152,
+    "avg_R": -0.136,
+    "t": -2.2,
+    "win": 0.618,
+    "total_R": -20.74
    },
    "S3": {
     "n": 134,
@@ -38289,11 +38449,11 @@
     "total_R": -8.51
    },
    "S6": {
-    "n": 124,
-    "avg_R": -0.084,
-    "t": -1.13,
-    "win": 0.645,
-    "total_R": -10.43
+    "n": 125,
+    "avg_R": -0.092,
+    "t": -1.23,
+    "win": 0.64,
+    "total_R": -11.48
    },
    "S7": {
     "n": 102,
@@ -38304,21 +38464,21 @@
    }
   },
   "all": {
-   "n": 929,
-   "avg_R": -0.046,
-   "t": -1.75,
+   "n": 933,
+   "avg_R": -0.043,
+   "t": -1.66,
    "win": 0.657,
-   "total_R": -42.43
+   "total_R": -40.29
   },
   "open": 27
  },
  "record_by_context": {
   "S1 | Asia": {
-   "n": 123,
-   "avg_R": 0.138,
-   "t": 1.93,
-   "win": 0.732,
-   "total_R": 17.03
+   "n": 125,
+   "avg_R": 0.154,
+   "t": 2.15,
+   "win": 0.736,
+   "total_R": 19.21
   },
   "S1 | London": {
    "n": 15,
@@ -38335,11 +38495,11 @@
    "total_R": -1.65
   },
   "S1 | compressed": {
-   "n": 88,
-   "avg_R": 0.187,
-   "t": 2.43,
-   "win": 0.795,
-   "total_R": 16.49
+   "n": 89,
+   "avg_R": 0.198,
+   "t": 2.57,
+   "win": 0.798,
+   "total_R": 17.66
   },
   "S1 | expanding": {
    "n": 1,
@@ -38356,11 +38516,11 @@
    "total_R": 2.52
   },
   "S1 | normal": {
-   "n": 63,
-   "avg_R": 0.076,
-   "t": 0.7,
-   "win": 0.667,
-   "total_R": 4.81
+   "n": 64,
+   "avg_R": 0.091,
+   "t": 0.84,
+   "win": 0.672,
+   "total_R": 5.82
   },
   "S1 | vol high": {
    "n": 13,
@@ -38370,11 +38530,11 @@
    "total_R": -0.66
   },
   "S1 | vol low": {
-   "n": 25,
-   "avg_R": 0.253,
-   "t": 1.63,
-   "win": 0.8,
-   "total_R": 6.33
+   "n": 27,
+   "avg_R": 0.315,
+   "t": 2.11,
+   "win": 0.815,
+   "total_R": 8.5
   },
   "S1 | vol normal": {
    "n": 114,
@@ -38384,18 +38544,18 @@
    "total_R": 15.67
   },
   "S1 | with trend": {
-   "n": 152,
-   "avg_R": 0.14,
-   "t": 2.22,
-   "win": 0.743,
-   "total_R": 21.34
+   "n": 154,
+   "avg_R": 0.153,
+   "t": 2.42,
+   "win": 0.747,
+   "total_R": 23.52
   },
   "S2 | Asia": {
-   "n": 111,
-   "avg_R": -0.064,
-   "t": -0.91,
-   "win": 0.676,
-   "total_R": -7.13
+   "n": 112,
+   "avg_R": -0.055,
+   "t": -0.78,
+   "win": 0.679,
+   "total_R": -6.12
   },
   "S2 | London": {
    "n": 27,
@@ -38440,11 +38600,11 @@
    "total_R": -0.24
   },
   "S2 | normal": {
-   "n": 57,
-   "avg_R": -0.228,
-   "t": -2.38,
-   "win": 0.596,
-   "total_R": -13.0
+   "n": 58,
+   "avg_R": -0.207,
+   "t": -2.14,
+   "win": 0.603,
+   "total_R": -11.99
   },
   "S2 | vol high": {
    "n": 15,
@@ -38454,11 +38614,11 @@
    "total_R": -1.76
   },
   "S2 | vol low": {
-   "n": 34,
-   "avg_R": -0.069,
-   "t": -0.53,
-   "win": 0.676,
-   "total_R": -2.34
+   "n": 35,
+   "avg_R": -0.038,
+   "t": -0.29,
+   "win": 0.686,
+   "total_R": -1.33
   },
   "S2 | vol normal": {
    "n": 102,
@@ -38468,11 +38628,11 @@
    "total_R": -17.65
   },
   "S2 | with trend": {
-   "n": 89,
-   "avg_R": 0.024,
-   "t": 0.31,
-   "win": 0.73,
-   "total_R": 2.15
+   "n": 90,
+   "avg_R": 0.035,
+   "t": 0.45,
+   "win": 0.733,
+   "total_R": 3.16
   },
   "S3 | Asia": {
    "n": 62,
@@ -38713,25 +38873,25 @@
    "total_R": -3.35
   },
   "S6 | Asia": {
-   "n": 124,
-   "avg_R": -0.084,
-   "t": -1.13,
-   "win": 0.645,
-   "total_R": -10.43
+   "n": 125,
+   "avg_R": -0.092,
+   "t": -1.23,
+   "win": 0.64,
+   "total_R": -11.48
   },
   "S6 | against trend": {
-   "n": 41,
-   "avg_R": -0.376,
-   "t": -2.85,
-   "win": 0.439,
-   "total_R": -15.4
+   "n": 42,
+   "avg_R": -0.392,
+   "t": -3.03,
+   "win": 0.429,
+   "total_R": -16.45
   },
   "S6 | compressed": {
-   "n": 55,
-   "avg_R": -0.08,
-   "t": -0.63,
-   "win": 0.6,
-   "total_R": -4.38
+   "n": 56,
+   "avg_R": -0.097,
+   "t": -0.77,
+   "win": 0.589,
+   "total_R": -5.43
   },
   "S6 | expanding": {
    "n": 7,
@@ -38762,11 +38922,11 @@
    "total_R": 5.06
   },
   "S6 | vol normal": {
-   "n": 89,
-   "avg_R": -0.146,
-   "t": -1.8,
-   "win": 0.629,
-   "total_R": -12.95
+   "n": 90,
+   "avg_R": -0.156,
+   "t": -1.93,
+   "win": 0.622,
+   "total_R": -14.0
   },
   "S6 | with trend": {
    "n": 83,
