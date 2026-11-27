@@ -1555,3 +1555,14 @@ Calls come only from tested rules. WATCH = move likely, direction unknown.
 
 ## 2026-11-27 15:01:01 UTC
 👀 Silver day: WATCH at 43.69. Big move likely, direction unknown. hourly volatility is high (91th percentile of the last 3 weeks)
+
+## 2026-11-27 21:01:06 UTC
+📊 Signal Lab, end of day: 1012 paper signals closed so far, avg -0.03R, 0 open.
+trend pullback: 165 closed, avg +0.21R, 76% won
+breakout: 163 closed, avg -0.07R, 64% won
+stretch fade: 149 closed, avg -0.11R, 61% won
+fib pullback: 171 closed, avg -0.21R, 56% won
+session drive: 111 closed, avg -0.10R, 62% won
+daily bias: 138 closed, avg -0.05R, 67% won
+big move: 115 closed, avg +0.14R, 76% won
+Earning trust: none yet (needs 15+ closed and a positive average)
