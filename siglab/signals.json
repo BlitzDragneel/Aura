@@ -39723,14 +39723,22 @@
     0.146
    ],
    "R": 0.0012929,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-27",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 0.1489,
+   "outcome": "TP3",
+   "R_ladder": 1.434,
+   "R_tp1": 0.595,
+   "pips": 114.9,
+   "closed_ms": 1795791600000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 15 min (best 2.5R, worst -0.1R). Lesson so far: big move against the trend: 49 closed, avg -0.08R, 63% won."
   },
   {
    "id": "SUIUSD-S7-1795790700000",
@@ -39754,6 +39762,45 @@
     0.659499
    ],
    "R": 0.0059929,
+   "status": "closed",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-27",
+   "grade_at_issue": "PAPER",
+   "fill": 0.6704,
+   "outcome": "TP3",
+   "R_ladder": 1.096,
+   "R_tp1": 0.484,
+   "pips": 97.9,
+   "closed_ms": 1795791120000,
+   "source": "okx-perp-1m",
+   "review": "TP3 after 7 min (best 2.1R, worst -0.1R). Lesson so far: big move against the trend: 49 closed, avg -0.08R, 63% won."
+  },
+  {
+   "id": "LTCUSD-S7-1795791600000",
+   "symbol": "LTCUSD",
+   "setup": "S7",
+   "side": "sell",
+   "why": "moved -1.06 in the last hour, twice its normal hourly range",
+   "state": {
+    "trend": "up",
+    "vol": "normal",
+    "shape": "expanding",
+    "session": "New York",
+    "with_trend": false
+   },
+   "logged_ms": 1795791600000,
+   "ref_price": 43.33,
+   "stop": 43.748,
+   "targets": [
+    43.13,
+    42.974,
+    42.782
+   ],
+   "R": 0.4179,
    "status": "open",
    "target_odds": [
     60,
@@ -39817,11 +39864,11 @@
     "grade": "PAPER"
    },
    "ADAUSD S7": {
-    "n": 7,
-    "avg_R": 0.301,
-    "t": 1.2,
-    "win": 0.857,
-    "total_R": 2.11,
+    "n": 8,
+    "avg_R": 0.443,
+    "t": 1.71,
+    "win": 0.875,
+    "total_R": 3.54,
     "grade": "PAPER"
    },
    "AVAXUSD S1": {
@@ -40377,11 +40424,11 @@
     "grade": "PAPER"
    },
    "SUIUSD S7": {
-    "n": 8,
-    "avg_R": 0.112,
-    "t": 0.39,
-    "win": 0.75,
-    "total_R": 0.9,
+    "n": 9,
+    "avg_R": 0.221,
+    "t": 0.8,
+    "win": 0.778,
+    "total_R": 1.99,
     "grade": "PAPER"
    },
    "US30 S1": {
@@ -40653,21 +40700,21 @@
     "total_R": -6.72
    },
    "S7": {
-    "n": 112,
-    "avg_R": 0.121,
-    "t": 1.69,
-    "win": 0.759,
-    "total_R": 13.54
+    "n": 114,
+    "avg_R": 0.141,
+    "t": 1.96,
+    "win": 0.763,
+    "total_R": 16.07
    }
   },
   "all": {
-   "n": 1009,
-   "avg_R": -0.032,
-   "t": -1.27,
-   "win": 0.659,
-   "total_R": -32.44
+   "n": 1011,
+   "avg_R": -0.03,
+   "t": -1.17,
+   "win": 0.66,
+   "total_R": -29.91
   },
-  "open": 2
+  "open": 1
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -41147,18 +41194,18 @@
    "total_R": 3.86
   },
   "S7 | New York": {
-   "n": 67,
-   "avg_R": 0.032,
-   "t": 0.31,
-   "win": 0.672,
-   "total_R": 2.15
+   "n": 69,
+   "avg_R": 0.068,
+   "t": 0.65,
+   "win": 0.681,
+   "total_R": 4.68
   },
   "S7 | against trend": {
-   "n": 49,
-   "avg_R": -0.076,
-   "t": -0.62,
-   "win": 0.633,
-   "total_R": -3.74
+   "n": 51,
+   "avg_R": -0.024,
+   "t": -0.19,
+   "win": 0.647,
+   "total_R": -1.21
   },
   "S7 | compressed": {
    "n": 4,
@@ -41168,11 +41215,11 @@
    "total_R": -4.35
   },
   "S7 | expanding": {
-   "n": 44,
-   "avg_R": -0.055,
-   "t": -0.49,
-   "win": 0.682,
-   "total_R": -2.43
+   "n": 45,
+   "avg_R": -0.022,
+   "t": -0.19,
+   "win": 0.689,
+   "total_R": -0.99
   },
   "S7 | late": {
    "n": 4,
@@ -41182,11 +41229,11 @@
    "total_R": -1.32
   },
   "S7 | normal": {
-   "n": 64,
-   "avg_R": 0.317,
-   "t": 3.67,
-   "win": 0.859,
-   "total_R": 20.32
+   "n": 65,
+   "avg_R": 0.329,
+   "t": 3.83,
+   "win": 0.862,
+   "total_R": 21.41
   },
   "S7 | vol high": {
    "n": 54,
@@ -41196,11 +41243,11 @@
    "total_R": 9.75
   },
   "S7 | vol normal": {
-   "n": 58,
-   "avg_R": 0.065,
-   "t": 0.67,
-   "win": 0.741,
-   "total_R": 3.79
+   "n": 60,
+   "avg_R": 0.105,
+   "t": 1.07,
+   "win": 0.75,
+   "total_R": 6.32
   },
   "S7 | with trend": {
    "n": 63,
