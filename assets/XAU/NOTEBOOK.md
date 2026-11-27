@@ -15,29 +15,29 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 279 readings scored; big moves followed 18% of them, 19% after a WATCH (89 WATCH readings).
+- My own record: 280 readings scored; big moves followed 18% of them, 19% after a WATCH (89 WATCH readings).
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 259 readings scored; big moves followed 39% of them, 43% after a WATCH (164 WATCH readings).
+- My own record: 260 readings scored; big moves followed 40% of them, 43% after a WATCH (164 WATCH readings).
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 108 readings scored; big moves followed 65% of them - too few to judge yet.
+- My own record: 109 readings scored; big moves followed 64% of them - too few to judge yet.
 
 ## Habits I measure myself
 
-- Over the last 20 days the busiest session was New York (average hourly move 0.24%) and the quietest London (0.16%).
+- Over the last 20 days the busiest session was New York (average hourly move 0.23%) and the quietest London (0.16%).
 - At weekends, while spot is closed, the perpetual moves 44% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 1.6% from low to high (last 60 days); 40% of those days closed higher.
 - Over the last 30 days the price moved -12.2% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3674.5; volatility regime normal (hourly ATR 0.506% of price, 70.0th percentile).
-- Spot XAUUSD 3667.57; the perpetual trades +0.19% from spot.
+- Price 3675.9; volatility regime normal (hourly ATR 0.518% of price, 72.2th percentile).
+- Spot XAUUSD 3667.48; the perpetual trades +0.23% from spot.
 
 ## My calls so far
 
