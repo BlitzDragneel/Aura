@@ -36442,14 +36442,22 @@
     42.05
    ],
    "R": 0.255,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-26",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 41.53,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.095,
+   "R_tp1": 0.531,
+   "pips": 2.3,
+   "closed_ms": 1795740600000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 50 closed, avg +0.15R, 74% won."
   },
   {
    "id": "DOGEUSD-S3-1795734900000",
@@ -37101,6 +37109,70 @@
     0.654419
    ],
    "R": 0.0060071,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-27",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "XAUUSD-S2-1795741200000",
+   "symbol": "XAUUSD",
+   "setup": "S2",
+   "side": "sell",
+   "why": "closed below the last 4 hours' low on a wide bar",
+   "state": {
+    "trend": "up",
+    "vol": "low",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795741200000,
+   "ref_price": 3567.8,
+   "stop": 3577.34,
+   "targets": [
+    3561.96,
+    3551.34,
+    3538.0
+   ],
+   "R": 9.543,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-27",
+   "grade_at_issue": "PAPER",
+   "sent": true,
+   "plan_sent": false
+  },
+  {
+   "id": "DOGEUSD-S4-1795741200000",
+   "symbol": "DOGEUSD",
+   "setup": "S4",
+   "side": "sell",
+   "why": "bounced back half of a strong down-leg",
+   "state": {
+    "trend": "up",
+    "vol": "low",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795741200000,
+   "ref_price": 0.05659,
+   "stop": 0.056986,
+   "targets": [
+    0.056356,
+    0.05605,
+    0.055572
+   ],
+   "R": 0.0003964,
    "status": "open",
    "target_odds": [
     60,
@@ -37804,11 +37876,11 @@
     "grade": "PAPER"
    },
    "XAGUSD S3": {
-    "n": 10,
-    "avg_R": 0.313,
-    "t": 1.64,
-    "win": 0.9,
-    "total_R": 3.13,
+    "n": 11,
+    "avg_R": 0.293,
+    "t": 1.69,
+    "win": 0.909,
+    "total_R": 3.22,
     "grade": "PAPER"
    },
    "XAGUSD S4": {
@@ -37972,11 +38044,11 @@
     "total_R": -20.73
    },
    "S3": {
-    "n": 133,
-    "avg_R": -0.042,
-    "t": -0.62,
-    "win": 0.654,
-    "total_R": -5.56
+    "n": 134,
+    "avg_R": -0.041,
+    "t": -0.61,
+    "win": 0.657,
+    "total_R": -5.47
    },
    "S4": {
     "n": 158,
@@ -38008,13 +38080,13 @@
    }
   },
   "all": {
-   "n": 924,
+   "n": 925,
    "avg_R": -0.044,
    "t": -1.68,
    "win": 0.657,
-   "total_R": -40.64
+   "total_R": -40.55
   },
-  "open": 24
+  "open": 25
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -38207,11 +38279,11 @@
    "total_R": -13.07
   },
   "S3 | compressed": {
-   "n": 44,
-   "avg_R": -0.327,
-   "t": -2.82,
-   "win": 0.477,
-   "total_R": -14.38
+   "n": 45,
+   "avg_R": -0.317,
+   "t": -2.79,
+   "win": 0.489,
+   "total_R": -14.29
   },
   "S3 | expanding": {
    "n": 26,
@@ -38221,11 +38293,11 @@
    "total_R": 8.87
   },
   "S3 | late": {
-   "n": 9,
-   "avg_R": 0.577,
-   "t": 4.92,
+   "n": 10,
+   "avg_R": 0.528,
+   "t": 4.58,
    "win": 1.0,
-   "total_R": 5.19
+   "total_R": 5.28
   },
   "S3 | normal": {
    "n": 63,
@@ -38242,11 +38314,11 @@
    "total_R": 0.25
   },
   "S3 | vol low": {
-   "n": 20,
-   "avg_R": -0.283,
-   "t": -1.49,
-   "win": 0.5,
-   "total_R": -5.65
+   "n": 21,
+   "avg_R": -0.265,
+   "t": -1.46,
+   "win": 0.524,
+   "total_R": -5.56
   },
   "S3 | vol normal": {
    "n": 81,
@@ -38256,11 +38328,11 @@
    "total_R": -0.16
   },
   "S3 | with trend": {
-   "n": 50,
-   "avg_R": 0.15,
-   "t": 1.28,
-   "win": 0.74,
-   "total_R": 7.5
+   "n": 51,
+   "avg_R": 0.149,
+   "t": 1.3,
+   "win": 0.745,
+   "total_R": 7.6
   },
   "S4 | Asia": {
    "n": 121,

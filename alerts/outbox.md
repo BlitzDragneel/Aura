@@ -1497,3 +1497,8 @@ Market now: trend up, volatility low, Asia session
 ⚡ Bitcoin: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~60707.4
 Market now: trend up, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-27 01:01:09 UTC
+⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3567.8
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.39R). Logged and scored anyway.
