@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-27T23:15:44.252461+00:00",
+ "asof": "2026-11-27T23:30:47.181253+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 59797.0,
-  "bar": "2026-11-27T23:00:00+00:00",
+  "price": 59820.0,
+  "bar": "2026-11-27T23:15:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 59797.0,
-    "ma20": 59801.159999999996,
-    "ma50": 60343.29,
-    "slope_atr": -0.13,
-    "bar": "2026-11-27T23:00:00+00:00"
+    "close": 59820.0,
+    "ma20": 59801.765,
+    "ma50": 60306.998,
+    "slope_atr": -0.01,
+    "bar": "2026-11-27T23:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.19,
   "funding": {
-   "rate": 4.81275796164e-05,
+   "rate": 5.22651117941e-05,
    "next_time": 1795824000000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.129,
+    "p_big_move": 0.117,
     "flag": false,
     "detail": {
-     "p_up_move": 0.065,
-     "p_down_move": 0.063
+     "p_up_move": 0.055,
+     "p_down_move": 0.062
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -252,7 +252,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 59797.0; volatility regime normal (hourly ATR 0.932% of price, 61.1th percentile).",
+    "Price 59820.0; volatility regime normal (hourly ATR 0.932% of price, 61.1th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -263,6 +263,6 @@
    ]
   }
  ],
- "runs": 1189,
+ "runs": 1190,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
