@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 09:45 UTC
+Updated 2026-11-27 10:00 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -93,7 +93,7 @@ Updated 2026-11-27 09:45 UTC
 | XAGUSD S3 | 12 | 0.178 | 0.91 | 0.833 | PAPER |
 | XAGUSD S4 | 13 | -0.4 | -2.14 | 0.538 | PAPER |
 | XAGUSD S5 | 6 | -0.056 | -0.17 | 0.667 | PAPER |
-| XAGUSD S6 | 9 | -0.172 | -1.02 | 0.778 | PAPER |
+| XAGUSD S6 | 10 | -0.118 | -0.74 | 0.8 | PAPER |
 | XAGUSD S7 | 6 | -0.027 | -0.08 | 0.667 | PAPER |
 | XAUUSD S1 | 12 | 0.408 | 1.57 | 0.75 | PAPER |
 | XAUUSD S2 | 12 | -0.159 | -0.67 | 0.583 | PAPER |
@@ -126,7 +126,7 @@ Updated 2026-11-27 09:45 UTC
 - 27 Nov 07:00 SOLUSD buy S6 @ 73.02 SL 72.435 → open
 - 27 Nov 07:00 ETHUSD buy S6 @ 1733.77 SL 1720.27 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 85 closed, avg +0.06R, 75% won.
 - 27 Nov 07:00 BTCUSD buy S6 @ 61678.9 SL 61293.79 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.4R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 88 closed, avg +0.08R, 76% won.
-- 27 Nov 07:00 XAGUSD buy S6 @ 44.26 SL 43.844 → open
+- 27 Nov 07:00 XAGUSD buy S6 @ 44.26 SL 43.844 → closed TP2+BE +0.36R. Reached TP2 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 91 closed, avg +0.09R, 77% won.
 - 27 Nov 07:00 XAUUSD buy S6 @ 3660.9 SL 3645.76 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 84 closed, avg +0.06R, 75% won.
 - 27 Nov 02:45 LTCUSD sell S3 @ 44.69 SL 45.044 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 93 closed, avg -0.26R, 54% won.
 - 27 Nov 02:45 LINKUSD buy S7 @ 9.515 SL 9.4333 → closed TP3 +1.02R. TP3 after 141 min (best 2.0R, worst -0.6R). Lesson so far: big move with the trend: 62 closed, avg +0.26R, 86% won.
