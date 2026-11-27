@@ -123,3 +123,17 @@
 - US30: 591 scored (last 90 days, 591 live); right 48.2% overall, 50.0% on 72 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
   worst situations: against 24h move 45.1% (n 233), session London 46.5% (n 159), session Asia 46.8% (n 158)
 - wrong calls in the last 7 days: 1410; reasons: high volatility 903, close vote (the look-alikes were split) 899, called against the 24h move 772, shock move 620, session New York 422, session Asia 420, session London 356, unfamiliar situation (few close look-alikes) 298, session late 212
+
+## Self-review 2026-11-27 00:31 UTC
+
+- XAUUSD: 6679 scored (last 90 days, 918 live); right 51.4% overall, 51.8% on 2047 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: unfamiliar 49.2% (n 1336), session New York 49.4% (n 1958), session Asia 50.4% (n 1932)
+- XAGUSD: 6679 scored (last 90 days, 918 live); right 52.1% overall, 54.6% on 3019 calls at threshold 0.53. No change (nothing beat the current settings on fresh data).
+  worst situations: session Asia 50.4% (n 1932), session New York 51.2% (n 1958), close vote 51.3% (n 3897)
+- BTCUSD: 6583 scored (last 90 days, 918 live); right 51.6% overall, 53.8% on 2093 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: close vote 50.2% (n 4266), session New York 50.7% (n 1930), high volatility 51.4% (n 2272)
+- NAS100: 608 scored (last 90 days, 608 live); right 51.8% overall, 51.0% on 408 calls at threshold 0.5. No change (nothing beat the current settings on fresh data).
+  worst situations: session Asia 43.6% (n 172), against 24h move 50.5% (n 315), close vote 51.2% (n 373)
+- US30: 609 scored (last 90 days, 609 live); right 48.3% overall, 49.4% on 83 calls at threshold 0.55. No change (nothing beat the current settings on fresh data).
+  worst situations: against 24h move 44.9% (n 234), session London 46.5% (n 159), session Asia 46.8% (n 173)
+- wrong calls in the last 7 days: 1330; reasons: close vote (the look-alikes were split) 829, high volatility 811, called against the 24h move 742, shock move 562, session New York 404, session Asia 394, session London 331, unfamiliar situation (few close look-alikes) 275, session late 201
