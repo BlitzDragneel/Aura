@@ -1502,3 +1502,16 @@ Market now: trend up, volatility low, Asia session
 ⚡ Gold: BREAKOUT right now (closed below the last 4 hours' low on a wide bar), price ~3567.8
 Market now: trend up, volatility low, Asia session
 ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.39R). Logged and scored anyway.
+
+## 2026-11-27 01:16:06 UTC
+⚡ Gold: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~3576.3
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+⚡ Silver: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~41.92
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.26R). Logged and scored anyway.
+
+⚡ Silver: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~41.92
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.13R). Logged and scored anyway.
