@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 00:01 UTC
+Updated 2026-11-27 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,13 @@ Updated 2026-11-27 00:01 UTC
 
 ## Latest signals
 
+- 27 Nov 00:15 LTCUSD buy S1 @ 43.83 SL 43.47 → open
+- 27 Nov 00:15 LINKUSD buy S1 @ 9.299 SL 9.2177 → open
+- 27 Nov 00:15 BNBUSD sell S4 @ 554.09 SL 556.98 → open
+- 27 Nov 00:15 BNBUSD buy S1 @ 554.09 SL 551.21 → open
+- 27 Nov 00:15 BTCUSD sell S4 @ 60517.9 SL 60870.62 → open
+- 27 Nov 00:15 XAGUSD sell S4 @ 41.6 SL 41.862 → open
+- 27 Nov 00:15 XAUUSD sell S4 @ 3573.9 SL 3584.01 → open
 - 26 Nov 23:15 DOGEUSD buy S3 @ 0.05633 SL 0.055938 → open
 - 26 Nov 23:15 XAGUSD buy S3 @ 41.54 SL 41.285 → open
 - 26 Nov 23:00 ADAUSD buy S3 @ 0.1486 SL 0.14735 → open
@@ -165,10 +172,3 @@ Updated 2026-11-27 00:01 UTC
 - 26 Nov 01:00 XAUUSD sell S2 @ 3569.1 SL 3603.89 → closed SL -1.01R. Stopped out after 94 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 88 closed, avg +0.04R, 74% won.
 - 26 Nov 01:00 XAUUSD sell S1 @ 3569.1 SL 3603.89 → closed SL -1.01R. Stopped out after 94 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 140 closed, avg +0.17R, 74% won.
 - 26 Nov 00:45 SUIUSD buy S4 @ 0.6725 SL 0.662593 → closed TP2+BE +0.30R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 86 closed, avg -0.11R, 60% won.
-- 26 Nov 00:45 LTCUSD buy S4 @ 42.9 SL 42.338 → closed TP3 +0.82R. TP3 after 81 min (best 1.5R, worst -0.1R). Lesson so far: fib pullback with the trend: 84 closed, avg -0.11R, 61% won.
-- 26 Nov 00:45 AVAXUSD buy S4 @ 6.654 SL 6.5695 → closed TP2+BE +0.29R. Reached TP2 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 65 closed, avg -0.24R, 55% won.
-- 26 Nov 00:45 DOGEUSD buy S4 @ 0.05641 SL 0.055687 → closed TP2+BE +0.25R. Reached TP2 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 89 closed, avg -0.11R, 61% won.
-- 26 Nov 00:45 SOLUSD buy S4 @ 70.87 SL 69.899 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback with the trend: 88 closed, avg -0.12R, 60% won.
-- 26 Nov 00:45 ETHUSD buy S4 @ 1697.23 SL 1674.36 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 61 closed, avg -0.26R, 54% won.
-- 26 Nov 00:45 BTCUSD buy S4 @ 60622.7 SL 59908.91 → closed TP2+BE +0.32R. Reached TP2 then came back to the entry (best 0.7R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 64 closed, avg -0.25R, 55% won.
-- 26 Nov 00:15 SUIUSD sell S3 @ 0.6762 SL 0.686107 → closed TP3 +1.16R. TP3 after 887 min (best 1.9R, worst -0.8R). Lesson so far: stretch fade against the trend: 82 closed, avg -0.17R, 60% won.

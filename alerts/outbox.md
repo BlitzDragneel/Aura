@@ -1479,3 +1479,16 @@ session drive: 105 closed, avg -0.08R, 63% won
 daily bias: 124 closed, avg -0.08R, 64% won
 big move: 102 closed, avg +0.09R, 74% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-27 00:16:00 UTC
+⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3573.9
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Silver: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~41.6
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Bitcoin: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~60517.9
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
