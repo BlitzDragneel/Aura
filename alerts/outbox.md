@@ -1536,3 +1536,12 @@ Market now: trend up, volatility normal, Asia session
 ⚡ Bitcoin: BIG MOVE under way right now (moved +733.90 in the last hour, twice its normal hourly range), price ~61504.2
 Market now: trend up, volatility normal, Asia session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-27 07:31:03 UTC
+⚡ Gold: SESSION DRIVE right now (London open drive), price ~3665.8
+Market now: trend up, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~61812.2
+Market now: trend up, volatility normal, London session
+ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
