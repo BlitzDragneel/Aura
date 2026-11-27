@@ -1545,3 +1545,10 @@ Market now: trend up, volatility normal, London session
 ⚡ Bitcoin: SESSION DRIVE right now (London open drive), price ~61812.2
 Market now: trend up, volatility normal, London session
 ℹ️ No trade plan: this setup has no positive evidence yet (logged and scored; it gets plans once it earns them).
+
+## 2026-11-27 11:01:04 UTC
+🌅 OMEGA morning read
+Bitcoin 61,634.60 | 1h trend up | vol quiet | typical day range 2.84% | big 4h move chance 29% | day WAIT · swing WAIT · hold WAIT
+Gold 3,684.90 | 1h trend up | vol normal | typical day range 1.58% | big 4h move chance 26% | day WAIT · swing WAIT · hold WAIT
+Silver 44.44 | 1h trend up | vol active | typical day range 3.2% | big 4h move chance 34% | day WAIT · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
