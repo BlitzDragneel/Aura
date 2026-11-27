@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 04:31 UTC
+Updated 2026-11-27 04:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -12,7 +12,7 @@ Updated 2026-11-27 04:31 UTC
 | ADAUSD S6 | 9 | -0.332 | -1.45 | 0.556 | PAPER |
 | ADAUSD S7 | 7 | 0.301 | 1.2 | 0.857 | PAPER |
 | AVAXUSD S1 | 12 | 0.071 | 0.27 | 0.667 | PAPER |
-| AVAXUSD S2 | 11 | -0.129 | -0.54 | 0.636 | PAPER |
+| AVAXUSD S2 | 12 | -0.037 | -0.16 | 0.667 | PAPER |
 | AVAXUSD S3 | 12 | 0.069 | 0.32 | 0.75 | PAPER |
 | AVAXUSD S4 | 12 | -0.274 | -1.13 | 0.5 | PAPER |
 | AVAXUSD S5 | 8 | -0.412 | -1.65 | 0.5 | PAPER |
@@ -47,7 +47,7 @@ Updated 2026-11-27 04:31 UTC
 | ETHUSD S6 | 9 | 0.222 | 0.75 | 0.778 | PAPER |
 | ETHUSD S7 | 11 | 0.192 | 0.9 | 0.818 | PAPER |
 | LINKUSD S1 | 12 | 0.279 | 1.31 | 0.833 | PAPER |
-| LINKUSD S2 | 11 | 0.111 | 0.55 | 0.818 | PAPER |
+| LINKUSD S2 | 12 | 0.189 | 0.94 | 0.833 | PAPER |
 | LINKUSD S3 | 9 | -0.534 | -1.96 | 0.333 | PAPER |
 | LINKUSD S4 | 12 | -0.317 | -1.39 | 0.5 | PAPER |
 | LINKUSD S5 | 8 | -0.066 | -0.21 | 0.625 | PAPER |
@@ -127,9 +127,9 @@ Updated 2026-11-27 04:31 UTC
 - 27 Nov 02:15 SUIUSD buy S2 @ 0.6765 SL 0.67075 → open
 - 27 Nov 02:15 LTCUSD buy S2 @ 44.42 SL 44.066 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 95 closed, avg +0.09R, 75% won.
 - 27 Nov 02:15 LINKUSD sell S3 @ 9.427 SL 9.5087 → closed SL -1.07R. Stopped out after 11 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
-- 27 Nov 02:15 LINKUSD buy S2 @ 9.427 SL 9.3453 → open
+- 27 Nov 02:15 LINKUSD buy S2 @ 9.427 SL 9.3453 → closed TP3 +1.05R. TP3 after 139 min (best 1.9R, worst -0.0R). Lesson so far: breakout with the trend: 97 closed, avg +0.09R, 75% won.
 - 27 Nov 02:15 AVAXUSD sell S3 @ 6.684 SL 6.7308 → closed SL -1.08R. Stopped out after 11 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
-- 27 Nov 02:15 AVAXUSD buy S2 @ 6.684 SL 6.6372 → open
+- 27 Nov 02:15 AVAXUSD buy S2 @ 6.684 SL 6.6372 → closed TP3 +0.98R. TP3 after 140 min (best 1.7R, worst -0.1R). Lesson so far: breakout with the trend: 97 closed, avg +0.09R, 75% won.
 - 27 Nov 02:15 DOGEUSD sell S3 @ 0.05721 SL 0.057594 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
 - 27 Nov 02:15 DOGEUSD buy S2 @ 0.05721 SL 0.056826 → closed TP3 +1.08R. TP3 after 11 min (best 1.9R, worst -0.1R). Lesson so far: breakout with the trend: 90 closed, avg +0.04R, 73% won.
 - 27 Nov 02:15 XRPUSD sell S3 @ 0.9564 SL 0.962564 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
