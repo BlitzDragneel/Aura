@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 03:30 UTC
+Updated 2026-11-27 03:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -17,14 +17,14 @@ Updated 2026-11-27 03:30 UTC
 | AVAXUSD S4 | 12 | -0.274 | -1.13 | 0.5 | PAPER |
 | AVAXUSD S5 | 8 | -0.412 | -1.65 | 0.5 | PAPER |
 | AVAXUSD S6 | 9 | 0.032 | 0.11 | 0.667 | PAPER |
-| AVAXUSD S7 | 8 | -0.175 | -0.66 | 0.625 | PAPER |
+| AVAXUSD S7 | 9 | -0.145 | -0.61 | 0.667 | PAPER |
 | BNBUSD S1 | 12 | 0.016 | 0.06 | 0.667 | PAPER |
 | BNBUSD S2 | 12 | -0.013 | -0.05 | 0.667 | PAPER |
 | BNBUSD S3 | 10 | -0.201 | -0.66 | 0.5 | PAPER |
 | BNBUSD S4 | 13 | -0.566 | -3.0 | 0.385 | PAPER |
 | BNBUSD S5 | 7 | -0.202 | -0.61 | 0.571 | PAPER |
 | BNBUSD S6 | 9 | 0.112 | 0.35 | 0.667 | PAPER |
-| BNBUSD S7 | 9 | -0.105 | -0.38 | 0.667 | PAPER |
+| BNBUSD S7 | 10 | -0.088 | -0.36 | 0.7 | PAPER |
 | BTCUSD S1 | 12 | 0.175 | 0.76 | 0.75 | PAPER |
 | BTCUSD S2 | 12 | -0.011 | -0.05 | 0.667 | PAPER |
 | BTCUSD S3 | 11 | -0.214 | -0.9 | 0.545 | PAPER |
@@ -114,8 +114,8 @@ Updated 2026-11-27 03:30 UTC
 
 - 27 Nov 02:45 LTCUSD sell S3 @ 44.69 SL 45.044 → open
 - 27 Nov 02:45 LINKUSD buy S7 @ 9.515 SL 9.4333 → open
-- 27 Nov 02:45 AVAXUSD buy S7 @ 6.72 SL 6.6732 → open
-- 27 Nov 02:45 BNBUSD buy S7 @ 562.51 SL 559.79 → open
+- 27 Nov 02:45 AVAXUSD buy S7 @ 6.72 SL 6.6732 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 59 closed, avg +0.27R, 85% won.
+- 27 Nov 02:45 BNBUSD buy S7 @ 562.51 SL 559.79 → closed TP1+BE +0.07R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: big move with the trend: 59 closed, avg +0.27R, 85% won.
 - 27 Nov 02:45 SOLUSD buy S7 @ 72.5 SL 71.95 → open
 - 27 Nov 02:30 SUIUSD sell S3 @ 0.6811 SL 0.68685 → open
 - 27 Nov 02:30 ADAUSD sell S3 @ 0.1511 SL 0.152314 → open
