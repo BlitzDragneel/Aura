@@ -3,28 +3,28 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-27T21:45:43.359455+00:00",
+ "asof": "2026-11-27T22:00:50.003980+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 59799.9,
-  "bar": "2026-11-27T21:30:00+00:00",
+  "price": 59765.8,
+  "bar": "2026-11-27T21:45:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 59799.9,
-    "ma20": 59825.295,
-    "ma50": 60572.61,
-    "slope_atr": -0.59,
-    "bar": "2026-11-27T21:30:00+00:00"
+    "close": 59765.8,
+    "ma20": 59817.185,
+    "ma50": 60533.902,
+    "slope_atr": -0.54,
+    "bar": "2026-11-27T21:45:00+00:00"
    },
    "1h": {
     "state": "flat",
-    "close": 59769.9,
-    "ma20": 60903.134999999995,
-    "ma50": 60715.654,
-    "slope_atr": -0.33,
-    "bar": "2026-11-27T20:00:00+00:00"
+    "close": 59765.8,
+    "ma20": 60855.985,
+    "ma50": 60713.846,
+    "slope_atr": -0.35,
+    "bar": "2026-11-27T21:00:00+00:00"
    },
    "4h": {
     "state": "flat",
@@ -44,9 +44,9 @@
    }
   },
   "volatility": {
-   "atr1h_pct": 1.004,
-   "atr1h_pctile": 69.1,
-   "atr1h": 599.9142857142859,
+   "atr1h_pct": 0.967,
+   "atr1h_pctile": 64.6,
+   "atr1h": 577.8928571428571,
    "rv20d_ann_pct": 45.7,
    "rv20d_pctile": 71.0,
    "day_range_pct_median": 2.84,
@@ -55,7 +55,7 @@
   },
   "session": {
    "name": "late US",
-   "utc_hour": 21,
+   "utc_hour": 22,
    "weekday": "Friday",
    "weekend": true,
    "note": "Bitcoin trades 24/7"
@@ -64,35 +64,35 @@
    "24h": {
     "high": 62199.2,
     "low": 58729.6,
-    "to_high_pct": 4.06,
-    "to_low_pct": 1.77,
-    "to_high_atr": 4.0,
-    "to_low_atr": 1.7,
+    "to_high_pct": 4.07,
+    "to_low_pct": 1.76,
+    "to_high_atr": 4.2,
+    "to_low_atr": 1.8,
     "position": 0.3
    },
    "7d": {
     "high": 64570.0,
     "low": 55100.0,
-    "to_high_pct": 8.03,
-    "to_low_pct": 8.48,
-    "to_high_atr": 8.0,
-    "to_low_atr": 7.8,
+    "to_high_pct": 8.04,
+    "to_low_pct": 8.47,
+    "to_high_atr": 8.3,
+    "to_low_atr": 8.1,
     "position": 0.49
    },
    "30d": {
     "high": 81944.4,
     "low": 55100.0,
-    "to_high_pct": 37.1,
-    "to_low_pct": 8.48,
-    "to_high_atr": 37.0,
-    "to_low_atr": 7.8,
+    "to_high_pct": 37.11,
+    "to_low_pct": 8.47,
+    "to_high_atr": 38.4,
+    "to_low_atr": 8.1,
     "position": 0.17
    }
   },
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": 0.19,
   "funding": {
-   "rate": 1.48811587208e-05,
+   "rate": 1.87077777078e-05,
    "next_time": 1795824000000,
    "source": "okx-swap"
   },
@@ -100,10 +100,10 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.139,
+    "p_big_move": 0.136,
     "flag": false,
     "detail": {
-     "p_up_move": 0.061,
+     "p_up_move": 0.058,
      "p_down_move": 0.078
     },
     "trained_to": "2026-11-03",
@@ -113,11 +113,11 @@
    "swing": {
     "horizon": "24 h",
     "skill_ok": true,
-    "p_big_move": 0.166,
+    "p_big_move": 0.156,
     "flag": false,
     "detail": {
-     "p_up_move": 0.095,
-     "p_down_move": 0.071
+     "p_up_move": 0.088,
+     "p_down_move": 0.068
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -173,34 +173,34 @@
  "recent_calls": [],
  "forward": {
   "day": {
-   "scored": 288,
-   "big_move_rate": 0.153,
+   "scored": 289,
+   "big_move_rate": 0.152,
    "watch_readings": 62,
    "big_move_rate_when_watch": 0.113,
-   "big_move_rate_otherwise": 0.164,
-   "scout_brier": 0.1316,
+   "big_move_rate_otherwise": 0.163,
+   "scout_brier": 0.1314,
    "enough": true,
-   "text": "288 readings scored; big moves followed 15% of them, 11% after a WATCH (62 WATCH readings)"
+   "text": "289 readings scored; big moves followed 15% of them, 11% after a WATCH (62 WATCH readings)"
   },
   "swing": {
-   "scored": 268,
+   "scored": 269,
    "big_move_rate": 0.138,
    "watch_readings": 155,
    "big_move_rate_when_watch": 0.142,
-   "big_move_rate_otherwise": 0.133,
-   "scout_brier": 0.1311,
+   "big_move_rate_otherwise": 0.132,
+   "scout_brier": 0.1307,
    "enough": true,
-   "text": "268 readings scored; big moves followed 14% of them, 14% after a WATCH (155 WATCH readings)"
+   "text": "269 readings scored; big moves followed 14% of them, 14% after a WATCH (155 WATCH readings)"
   },
   "hold": {
-   "scored": 117,
-   "big_move_rate": 0.171,
+   "scored": 118,
+   "big_move_rate": 0.169,
    "watch_readings": 0,
    "big_move_rate_when_watch": null,
-   "big_move_rate_otherwise": 0.171,
+   "big_move_rate_otherwise": 0.169,
    "scout_brier": null,
    "enough": false,
-   "text": "117 readings scored; big moves followed 17% of them - too few to judge yet"
+   "text": "118 readings scored; big moves followed 17% of them - too few to judge yet"
   },
   "calls": {
    "closed": 0,
@@ -224,21 +224,21 @@
     "| Plan (md5) | Horizon | Var. | Best / chosen | Luck (real vs null p95) | 2024 | 2025\u201326 | Verdict |",
     "| E86 handoff rules 15m (856f2ace) | day | 5 | breakout / compression / comp+conf / retest / failed auction, one config each | all below random-entry p95 | \u221212\u2026\u221217, t \u22123\u2026\u22129 | \u221213\u2026\u221217, t \u22127\u2026\u221211 (n 800\u20133,200); gross \u2248 0 | FAIL |",
     "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
-    "My own record: 288 readings scored; big moves followed 15% of them, 11% after a WATCH (62 WATCH readings)."
+    "My own record: 289 readings scored; big moves followed 15% of them, 11% after a WATCH (62 WATCH readings)."
    ]
   },
   {
    "title": "Swing trades (1-20 days)",
    "lines": [
     "No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.",
-    "My own record: 268 readings scored; big moves followed 14% of them, 14% after a WATCH (155 WATCH readings)."
+    "My own record: 269 readings scored; big moves followed 14% of them, 14% after a WATCH (155 WATCH readings)."
    ]
   },
   {
    "title": "Holding (weeks-months)",
    "lines": [
     "Tested rule I can call: btc_gold_invvol (grade B, status paper). Evidence: edges/results/E94_result.json; edges/results/E97_result.json; edges/results/E97_leverage.json; edges/assets/BTC/FINDINGS.md",
-    "My own record: 117 readings scored; big moves followed 17% of them - too few to judge yet."
+    "My own record: 118 readings scored; big moves followed 17% of them - too few to judge yet."
    ]
   },
   {
@@ -252,7 +252,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 59799.9; volatility regime normal (hourly ATR 1.004% of price, 69.1th percentile).",
+    "Price 59765.8; volatility regime normal (hourly ATR 0.967% of price, 64.6th percentile).",
     "Bitcoin trades 24/7."
    ]
   },
@@ -263,6 +263,6 @@
    ]
   }
  ],
- "runs": 1183,
+ "runs": 1184,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
