@@ -1615,3 +1615,17 @@ Market now: trend down, volatility low, Asia session
 
 ## 2026-11-28 06:01:11 UTC
 🔁 Learning: trend pullback with the trend is now EARNED (trade plans sent again, tagged) after 171 live signals (60 separate moments) averaging +0.15R.
+
+## 2026-11-28 06:46:05 UTC
+⚡ Silver: TREND resuming right now
+Market now: trend up, volatility low, compressed range, Asia session
+🧪 PAPER (untested, do not trade)
+✅ EARNED LIVE (this setup averaged +0.15R over its live signals)
+⏪ On this market's recent history: 72 of these, 44% ended positive, average -0.26R
+Silver BUY now ~43.91
+SL 43.707
+TP1 44.05 (reached in 60% of similar moments in the last 3 days)
+TP2 44.15 (reached in 40% of similar moments in the last 3 days)
+TP3 44.4 (reached in 20% of similar moments in the last 3 days)
+Setup: trend pullback (uptrend, price closed back above its short average after a dip)
+record of this setup here: 12 closed, avg +0.14R, 75% won
