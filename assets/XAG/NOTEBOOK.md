@@ -15,28 +15,28 @@ Built automatically from the research findings, the approved rules and my own fo
 - BLS calendars returned 403, so CPI/NFP were skipped. FOMC dates are from federalreserve.gov.
 - | Plan | md5 | Var. | Discovery best | Luck (95th pct) | Validation | Final | Verdict |
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 298 readings scored; big moves followed 15% of them, 14% after a WATCH (94 WATCH readings).
+- My own record: 299 readings scored; big moves followed 15% of them, 14% after a WATCH (94 WATCH readings).
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 278 readings scored; big moves followed 43% of them, 20% after a WATCH (91 WATCH readings).
+- My own record: 279 readings scored; big moves followed 43% of them, 20% after a WATCH (91 WATCH readings).
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 127 readings scored; big moves followed 52% of them - too few to judge yet.
+- My own record: 128 readings scored; big moves followed 52% of them - too few to judge yet.
 
 ## Habits I measure myself
 
 - Over the last 20 days the busiest session was Asia (average hourly move 0.47%) and the quietest late US (0.28%).
-- At weekends, while spot is closed, the perpetual moves 45% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- At weekends, while spot is closed, the perpetual moves 44% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 3.2% from low to high (last 60 days); 45% of those days closed higher.
 - Over the last 30 days the price moved -18.7% (a fact, not a forecast).
 
 ## Right now
 
-- Price 43.91; volatility regime quiet (hourly ATR 0.405% of price, 13.4th percentile).
+- Price 43.9; volatility regime quiet (hourly ATR 0.334% of price, 8.0th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAGUSD 43.75 (stale: market closed).
 
