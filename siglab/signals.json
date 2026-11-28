@@ -40398,14 +40398,22 @@
     561.49
    ],
    "R": 4.246,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-28",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 555.91,
+   "outcome": "SL",
+   "R_ladder": -1.078,
+   "R_tp1": -1.078,
+   "pips": -82.5,
+   "closed_ms": 1795844280000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 263 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.4R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout against the trend: 62 closed, avg -0.39R, 45% won."
   },
   {
    "id": "XAUUSD-S1-1795829400000",
@@ -40429,7 +40437,7 @@
     3695.87
    ],
    "R": 13.907,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -40438,7 +40446,15 @@
    "day": "2026-11-28",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3663.4,
+   "outcome": "TP1+BE",
+   "R_ladder": 0.173,
+   "R_tp1": 0.546,
+   "pips": 24.0,
+   "closed_ms": 1795843800000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 168 closed, avg +0.21R, 77% won."
   },
   {
    "id": "XRPUSD-S2-1795829400000",
@@ -41262,6 +41278,68 @@
    ],
    "day": "2026-11-28",
    "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "BNBUSD-S3-1795844700000",
+   "symbol": "BNBUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "low",
+    "shape": "compressed",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795844700000,
+   "ref_price": 551.61,
+   "stop": 548.45,
+   "targets": [
+    553.52,
+    554.91,
+    557.06
+   ],
+   "R": 3.157,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-28",
+   "grade_at_issue": "PAPER"
+  },
+  {
+   "id": "SUIUSD-S3-1795844700000",
+   "symbol": "SUIUSD",
+   "setup": "S3",
+   "side": "buy",
+   "why": "stretched far below its 4-hour average",
+   "state": {
+    "trend": "down",
+    "vol": "normal",
+    "shape": "normal",
+    "session": "Asia",
+    "with_trend": false
+   },
+   "logged_ms": 1795844700000,
+   "ref_price": 0.6638,
+   "stop": 0.65765,
+   "targets": [
+    0.667699,
+    0.670061,
+    0.674999
+   ],
+   "R": 0.00615,
+   "status": "open",
+   "target_odds": [
+    60,
+    40,
+    20
+   ],
+   "day": "2026-11-28",
+   "grade_at_issue": "PAPER"
   }
  ],
  "sent_day": {},
@@ -41389,11 +41467,11 @@
     "grade": "PAPER"
    },
    "BNBUSD S2": {
-    "n": 12,
-    "avg_R": -0.013,
-    "t": -0.05,
-    "win": 0.667,
-    "total_R": -0.16,
+    "n": 13,
+    "avg_R": -0.095,
+    "t": -0.39,
+    "win": 0.615,
+    "total_R": -1.24,
     "grade": "PAPER"
    },
    "BNBUSD S3": {
@@ -41997,11 +42075,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S1": {
-    "n": 12,
-    "avg_R": 0.408,
-    "t": 1.57,
-    "win": 0.75,
-    "total_R": 4.9,
+    "n": 13,
+    "avg_R": 0.39,
+    "t": 1.63,
+    "win": 0.769,
+    "total_R": 5.07,
     "grade": "PAPER"
    },
    "XAUUSD S2": {
@@ -42111,18 +42189,18 @@
   },
   "by_setup": {
    "S1": {
-    "n": 168,
+    "n": 169,
     "avg_R": 0.212,
-    "t": 3.51,
-    "win": 0.768,
-    "total_R": 35.64
+    "t": 3.52,
+    "win": 0.769,
+    "total_R": 35.81
    },
    "S2": {
-    "n": 164,
-    "avg_R": -0.068,
-    "t": -1.1,
-    "win": 0.646,
-    "total_R": -11.07
+    "n": 165,
+    "avg_R": -0.074,
+    "t": -1.2,
+    "win": 0.642,
+    "total_R": -12.15
    },
    "S3": {
     "n": 153,
@@ -42161,21 +42239,21 @@
    }
   },
   "all": {
-   "n": 1024,
-   "avg_R": -0.032,
-   "t": -1.28,
+   "n": 1026,
+   "avg_R": -0.033,
+   "t": -1.31,
    "win": 0.66,
-   "total_R": -32.74
+   "total_R": -33.64
   },
   "open": 31
  },
  "record_by_context": {
   "S1 | Asia": {
-   "n": 137,
+   "n": 138,
    "avg_R": 0.227,
-   "t": 3.31,
-   "win": 0.759,
-   "total_R": 31.09
+   "t": 3.33,
+   "win": 0.761,
+   "total_R": 31.26
   },
   "S1 | London": {
    "n": 15,
@@ -42192,11 +42270,11 @@
    "total_R": -1.65
   },
   "S1 | compressed": {
-   "n": 93,
-   "avg_R": 0.205,
-   "t": 2.76,
-   "win": 0.806,
-   "total_R": 19.04
+   "n": 94,
+   "avg_R": 0.204,
+   "t": 2.78,
+   "win": 0.809,
+   "total_R": 19.21
   },
   "S1 | expanding": {
    "n": 1,
@@ -42227,11 +42305,11 @@
    "total_R": -0.66
   },
   "S1 | vol low": {
-   "n": 33,
-   "avg_R": 0.39,
-   "t": 3.01,
-   "win": 0.848,
-   "total_R": 12.86
+   "n": 34,
+   "avg_R": 0.383,
+   "t": 3.05,
+   "win": 0.853,
+   "total_R": 13.03
   },
   "S1 | vol normal": {
    "n": 122,
@@ -42241,18 +42319,18 @@
    "total_R": 23.44
   },
   "S1 | with trend": {
-   "n": 168,
+   "n": 169,
    "avg_R": 0.212,
-   "t": 3.51,
-   "win": 0.768,
-   "total_R": 35.64
+   "t": 3.52,
+   "win": 0.769,
+   "total_R": 35.81
   },
   "S2 | Asia": {
-   "n": 124,
-   "avg_R": 0.029,
-   "t": 0.42,
-   "win": 0.71,
-   "total_R": 3.55
+   "n": 125,
+   "avg_R": 0.02,
+   "t": 0.29,
+   "win": 0.704,
+   "total_R": 2.47
   },
   "S2 | London": {
    "n": 27,
@@ -42269,18 +42347,18 @@
    "total_R": -5.63
   },
   "S2 | against trend": {
-   "n": 62,
-   "avg_R": -0.386,
-   "t": -4.06,
-   "win": 0.452,
-   "total_R": -23.9
+   "n": 63,
+   "avg_R": -0.397,
+   "t": -4.21,
+   "win": 0.444,
+   "total_R": -24.98
   },
   "S2 | compressed": {
-   "n": 87,
-   "avg_R": -0.045,
-   "t": -0.54,
-   "win": 0.655,
-   "total_R": -3.94
+   "n": 88,
+   "avg_R": -0.057,
+   "t": -0.68,
+   "win": 0.648,
+   "total_R": -5.02
   },
   "S2 | expanding": {
    "n": 9,
@@ -42311,11 +42389,11 @@
    "total_R": -1.76
   },
   "S2 | vol low": {
-   "n": 35,
-   "avg_R": -0.038,
-   "t": -0.29,
-   "win": 0.686,
-   "total_R": -1.33
+   "n": 36,
+   "avg_R": -0.067,
+   "t": -0.52,
+   "win": 0.667,
+   "total_R": -2.41
   },
   "S2 | vol normal": {
    "n": 114,
@@ -42732,12 +42810,12 @@
   },
   "S2 against": {
    "state": "muted",
-   "n": 29,
-   "avg_R": -0.416,
-   "t": -3.12,
-   "win": 0.345,
-   "total_R": -12.05,
-   "signals": 62
+   "n": 30,
+   "avg_R": -0.438,
+   "t": -3.35,
+   "win": 0.333,
+   "total_R": -13.13,
+   "signals": 63
   }
  },
  "adapt_log": [
