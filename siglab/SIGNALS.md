@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 12:45 UTC
+Updated 2026-11-28 13:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-28 12:45 UTC
 
 ## Latest signals
 
+- 28 Nov 13:00 LINKUSD sell S1 @ 9.156 SL 9.2187 → open
 - 28 Nov 12:00 LTCUSD buy S1 @ 44.06 SL 43.64 → open
 - 28 Nov 06:45 XAGUSD buy S1 @ 43.91 SL 43.707 → open
 - 28 Nov 05:45 SUIUSD buy S3 @ 0.6638 SL 0.65765 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 100 closed, avg -0.28R, 53% won.
@@ -171,4 +172,3 @@ Updated 2026-11-28 12:45 UTC
 - 27 Nov 07:00 SUIUSD buy S6 @ 0.6838 SL 0.678029 → closed TP2+BE +0.46R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 93 closed, avg +0.09R, 77% won.
 - 27 Nov 07:00 LTCUSD buy S6 @ 44.27 SL 43.901 → closed TP2+BE +0.50R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 93 closed, avg +0.09R, 77% won.
 - 27 Nov 07:00 LINKUSD buy S6 @ 9.587 SL 9.4866 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 88 closed, avg +0.08R, 76% won.
-- 27 Nov 07:00 AVAXUSD sell S6 @ 6.759 SL 6.8066 → closed TP1+BE +0.16R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias against the trend: 42 closed, avg -0.39R, 43% won.
