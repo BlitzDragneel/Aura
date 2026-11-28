@@ -1574,3 +1574,12 @@ Earning trust: none yet (needs 15+ closed and a positive average)
 ⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~43.89
 Market now: trend up, volatility low, late session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.
+
+## 2026-11-28 01:15:58 UTC
+⚡ Bitcoin: BREAKOUT right now (closed above the last 4 hours' high on a wide bar), price ~60038.7
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.42R). Logged and scored anyway.
+
+⚡ Bitcoin: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~60038.7
+Market now: trend down, volatility low, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.22R). Logged and scored anyway.

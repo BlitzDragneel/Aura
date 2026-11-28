@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 01:01 UTC
+Updated 2026-11-28 01:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,9 @@ Updated 2026-11-28 01:01 UTC
 
 ## Latest signals
 
+- 28 Nov 01:15 BNBUSD buy S2 @ 555.91 SL 551.66 → open
+- 28 Nov 01:15 BTCUSD buy S4 @ 60038.7 SL 59491.1 → open
+- 28 Nov 01:15 BTCUSD buy S2 @ 60038.7 SL 59491.1 → open
 - 28 Nov 01:00 LTCUSD buy S4 @ 44.78 SL 44.262 → open
 - 28 Nov 01:00 AVAXUSD sell S1 @ 6.607 SL 6.6754 → open
 - 28 Nov 01:00 ETHUSD sell S1 @ 1660.65 SL 1678.37 → open
@@ -169,6 +172,3 @@ Updated 2026-11-28 01:01 UTC
 - 27 Nov 02:15 DOGEUSD sell S3 @ 0.05721 SL 0.057594 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
 - 27 Nov 02:15 DOGEUSD buy S2 @ 0.05721 SL 0.056826 → closed TP3 +1.08R. TP3 after 11 min (best 1.9R, worst -0.1R). Lesson so far: breakout with the trend: 90 closed, avg +0.04R, 73% won.
 - 27 Nov 02:15 XRPUSD sell S3 @ 0.9564 SL 0.962564 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
-- 27 Nov 02:15 XRPUSD buy S2 @ 0.9564 SL 0.950236 → closed TP3 +1.10R. TP3 after 195 min (best 1.9R, worst -0.2R). Lesson so far: breakout with the trend: 100 closed, avg +0.12R, 76% won.
-- 27 Nov 02:15 BNBUSD sell S3 @ 559.41 SL 562.12 → closed SL -1.12R. Stopped out after 11 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.9R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
-- 27 Nov 02:15 BNBUSD buy S2 @ 559.41 SL 556.69 → closed TP3 +1.06R. TP3 after 11 min (best 2.0R, worst -0.1R). Lesson so far: breakout with the trend: 90 closed, avg +0.04R, 73% won.
