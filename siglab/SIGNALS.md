@@ -1,12 +1,12 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 04:30 UTC
+Updated 2026-11-28 04:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
 | ADAUSD S1 | 12 | 0.367 | 1.61 | 0.833 | PAPER |
 | ADAUSD S2 | 12 | -0.139 | -0.55 | 0.583 | PAPER |
-| ADAUSD S3 | 9 | 0.04 | 0.14 | 0.667 | PAPER |
+| ADAUSD S3 | 10 | 0.049 | 0.19 | 0.7 | PAPER |
 | ADAUSD S4 | 13 | -0.293 | -1.39 | 0.538 | PAPER |
 | ADAUSD S5 | 6 | 0.306 | 1.04 | 0.833 | PAPER |
 | ADAUSD S6 | 10 | -0.285 | -1.35 | 0.6 | PAPER |
@@ -34,7 +34,7 @@ Updated 2026-11-28 04:30 UTC
 | BTCUSD S7 | 9 | 0.242 | 0.9 | 0.778 | PAPER |
 | DOGEUSD S1 | 13 | 0.43 | 2.65 | 0.923 | PAPER |
 | DOGEUSD S2 | 12 | -0.17 | -0.7 | 0.583 | PAPER |
-| DOGEUSD S3 | 12 | 0.14 | 0.52 | 0.667 | PAPER |
+| DOGEUSD S3 | 13 | 0.14 | 0.56 | 0.692 | PAPER |
 | DOGEUSD S4 | 12 | -0.318 | -1.37 | 0.5 | PAPER |
 | DOGEUSD S5 | 9 | -0.189 | -0.64 | 0.556 | PAPER |
 | DOGEUSD S6 | 10 | -0.041 | -0.24 | 0.8 | PAPER |
@@ -112,9 +112,9 @@ Updated 2026-11-28 04:30 UTC
 
 ## Latest signals
 
-- 28 Nov 03:30 ADAUSD buy S3 @ 0.1471 SL 0.145393 → open
+- 28 Nov 03:30 ADAUSD buy S3 @ 0.1471 SL 0.145393 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 97 closed, avg -0.27R, 54% won.
 - 28 Nov 03:30 ADAUSD sell S2 @ 0.1471 SL 0.148807 → open
-- 28 Nov 03:30 DOGEUSD buy S3 @ 0.05737 SL 0.056723 → open
+- 28 Nov 03:30 DOGEUSD buy S3 @ 0.05737 SL 0.056723 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade with the trend: 53 closed, avg +0.18R, 76% won.
 - 28 Nov 03:30 DOGEUSD sell S2 @ 0.05737 SL 0.058017 → open
 - 28 Nov 03:15 LINKUSD buy S3 @ 9.269 SL 9.1648 → open
 - 28 Nov 03:15 LINKUSD sell S2 @ 9.269 SL 9.3732 → open
