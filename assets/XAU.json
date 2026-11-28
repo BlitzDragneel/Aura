@@ -3,20 +3,20 @@
  "name": "Gold",
  "perp": "XAUUSDT",
  "spot_symbol": "XAUUSD",
- "asof": "2026-11-28T16:15:54.980420+00:00",
+ "asof": "2026-11-28T16:30:52.597937+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 3659.6,
-  "bar": "2026-11-28T16:00:00+00:00",
+  "price": 3659.5,
+  "bar": "2026-11-28T16:15:00+00:00",
   "trend": {
    "15m": {
     "state": "down",
-    "close": 3659.6,
-    "ma20": 3662.41,
-    "ma50": 3664.2859999999996,
-    "slope_atr": -0.51,
-    "bar": "2026-11-28T16:00:00+00:00"
+    "close": 3659.5,
+    "ma20": 3662.155,
+    "ma50": 3664.1139999999996,
+    "slope_atr": -0.5,
+    "bar": "2026-11-28T16:15:00+00:00"
    },
    "1h": {
     "state": "flat",
@@ -98,7 +98,7 @@
    "bid": 3653.176,
    "ask": 3653.814,
    "spread": 0.638,
-   "age_s": 65755,
+   "age_s": 66652,
    "stale": true,
    "note": "market closed or feed paused",
    "source": "swissquote"
@@ -258,7 +258,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 3659.6; volatility regime quiet (hourly ATR 0.141% of price, 3.7th percentile).",
+    "Price 3659.5; volatility regime quiet (hourly ATR 0.141% of price, 3.7th percentile).",
     "spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.",
     "Spot XAUUSD 3653.49 (stale: market closed)."
    ]
@@ -270,6 +270,6 @@
    ]
   }
  ],
- "runs": 1259,
+ "runs": 1260,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
