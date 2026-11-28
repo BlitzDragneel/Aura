@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 01:15 UTC
+Updated 2026-11-28 01:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,8 @@ Updated 2026-11-28 01:15 UTC
 
 ## Latest signals
 
+- 28 Nov 01:30 XRPUSD buy S2 @ 0.9518 SL 0.942393 → open
+- 28 Nov 01:30 XAUUSD buy S1 @ 3663.4 SL 3649.49 → open
 - 28 Nov 01:15 BNBUSD buy S2 @ 555.91 SL 551.66 → open
 - 28 Nov 01:15 BTCUSD buy S4 @ 60038.7 SL 59491.1 → open
 - 28 Nov 01:15 BTCUSD buy S2 @ 60038.7 SL 59491.1 → open
@@ -170,5 +172,3 @@ Updated 2026-11-28 01:15 UTC
 - 27 Nov 02:15 AVAXUSD sell S3 @ 6.684 SL 6.7308 → closed SL -1.08R. Stopped out after 11 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
 - 27 Nov 02:15 AVAXUSD buy S2 @ 6.684 SL 6.6372 → closed TP3 +0.98R. TP3 after 140 min (best 1.7R, worst -0.1R). Lesson so far: breakout with the trend: 97 closed, avg +0.09R, 75% won.
 - 27 Nov 02:15 DOGEUSD sell S3 @ 0.05721 SL 0.057594 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
-- 27 Nov 02:15 DOGEUSD buy S2 @ 0.05721 SL 0.056826 → closed TP3 +1.08R. TP3 after 11 min (best 1.9R, worst -0.1R). Lesson so far: breakout with the trend: 90 closed, avg +0.04R, 73% won.
-- 27 Nov 02:15 XRPUSD sell S3 @ 0.9564 SL 0.962564 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
