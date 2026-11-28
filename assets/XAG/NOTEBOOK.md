@@ -36,7 +36,7 @@ Built automatically from the research findings, the approved rules and my own fo
 
 ## Right now
 
-- Price 43.75; volatility regime quiet (hourly ATR 0.25% of price, 4.3th percentile).
+- Price 43.78; volatility regime quiet (hourly ATR 0.25% of price, 4.3th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
 - Spot XAGUSD 43.75 (stale: market closed).
 
