@@ -1566,3 +1566,11 @@ session drive: 111 closed, avg -0.10R, 62% won
 daily bias: 138 closed, avg -0.05R, 67% won
 big move: 115 closed, avg +0.14R, 76% won
 Earning trust: none yet (needs 15+ closed and a positive average)
+
+## 2026-11-28 00:01:04 UTC
+👀 Gold swing: WATCH at 3,666.30. Big move likely, direction unknown. daily volatility is high (89th percentile)
+
+## 2026-11-28 00:01:09 UTC
+⚡ Silver: PULLBACK in a strong move right now (pulled back half of a strong up-leg), price ~43.89
+Market now: trend up, volatility low, late session
+ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.03R). Logged and scored anyway.

@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-27 23:45 UTC
+Updated 2026-11-28 00:01 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,15 @@ Updated 2026-11-27 23:45 UTC
 
 ## Latest signals
 
+- 28 Nov 00:00 SUIUSD sell S4 @ 0.6729 SL 0.680764 → open
+- 28 Nov 00:00 SUIUSD buy S1 @ 0.6729 SL 0.665036 → open
+- 28 Nov 00:00 LTCUSD sell S3 @ 45.17 SL 45.644 → open
+- 28 Nov 00:00 AVAXUSD sell S4 @ 6.608 SL 6.6766 → open
+- 28 Nov 00:00 ADAUSD sell S4 @ 0.1482 SL 0.149979 → open
+- 28 Nov 00:00 DOGEUSD buy S1 @ 0.0577 SL 0.057022 → open
+- 28 Nov 00:00 SOLUSD sell S4 @ 71.62 SL 72.406 → open
+- 28 Nov 00:00 ETHUSD sell S4 @ 1661.74 SL 1679.46 → open
+- 28 Nov 00:00 XAGUSD buy S4 @ 43.89 SL 43.534 → open
 - 27 Nov 15:00 LTCUSD sell S7 @ 43.33 SL 43.748 → closed TP2+BE +0.41R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: big move against the trend: 51 closed, avg -0.02R, 65% won.
 - 27 Nov 14:45 SUIUSD sell S7 @ 0.6704 SL 0.676393 → closed TP3 +1.10R. TP3 after 7 min (best 2.1R, worst -0.1R). Lesson so far: big move against the trend: 49 closed, avg -0.08R, 63% won.
 - 27 Nov 14:45 ADAUSD sell S7 @ 0.1488 SL 0.150093 → closed TP3 +1.43R. TP3 after 15 min (best 2.5R, worst -0.1R). Lesson so far: big move against the trend: 49 closed, avg -0.08R, 63% won.
@@ -163,12 +172,3 @@ Updated 2026-11-27 23:45 UTC
 - 27 Nov 02:15 ETHUSD sell S3 @ 1714.96 SL 1726.64 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
 - 27 Nov 02:15 ETHUSD buy S2 @ 1714.96 SL 1703.28 → closed TP3 +0.93R. TP3 after 11 min (best 1.8R, worst -0.2R). Lesson so far: breakout with the trend: 90 closed, avg +0.04R, 73% won.
 - 27 Nov 02:15 BTCUSD sell S3 @ 61236.8 SL 61568.49 → closed SL -1.03R. Stopped out after 11 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
-- 27 Nov 02:15 BTCUSD buy S2 @ 61236.8 SL 60905.11 → closed TP3 +1.07R. TP3 after 11 min (best 1.9R, worst -0.3R). Lesson so far: breakout with the trend: 90 closed, avg +0.04R, 73% won.
-- 27 Nov 02:00 XAGUSD buy S7 @ 42.71 SL 42.384 → closed TP3 +0.90R. TP3 after 6 min (best 1.6R, worst -0.1R). Lesson so far: big move with the trend: 53 closed, avg +0.24R, 83% won.
-- 27 Nov 02:00 XAGUSD sell S3 @ 42.71 SL 43.036 → closed SL -1.09R. Stopped out after 5 min. Price never reached TP1 (best was 0.1R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 83 closed, avg -0.16R, 60% won.
-- 27 Nov 02:00 XAUUSD buy S7 @ 3599.9 SL 3588.78 → closed TP3 +1.06R. TP3 after 5 min (best 1.8R, worst -0.2R). Lesson so far: big move with the trend: 53 closed, avg +0.24R, 83% won.
-- 27 Nov 02:00 XAUUSD sell S3 @ 3599.9 SL 3611.02 → closed SL -1.02R. Stopped out after 5 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 83 closed, avg -0.16R, 60% won.
-- 27 Nov 01:15 DOGEUSD buy S1 @ 0.05674 SL 0.056344 → closed TP3 +1.09R. TP3 after 54 min (best 1.8R, worst -0.3R). Lesson so far: trend pullback with the trend: 154 closed, avg +0.15R, 75% won.
-- 27 Nov 01:15 XRPUSD sell S4 @ 0.9481 SL 0.954386 → closed SL -1.09R. Stopped out after 52 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: fib pullback against the trend: 69 closed, avg -0.24R, 56% won.
-- 27 Nov 01:15 XRPUSD buy S1 @ 0.9481 SL 0.941814 → closed TP3 +1.16R. TP3 after 70 min (best 2.0R, worst -0.3R). Lesson so far: trend pullback with the trend: 161 closed, avg +0.19R, 76% won.
-- 27 Nov 01:15 XAGUSD buy S2 @ 41.92 SL 41.666 → closed TP3 +1.01R. TP3 after 38 min (best 1.9R, worst -0.6R). Lesson so far: breakout with the trend: 89 closed, avg +0.02R, 73% won.
