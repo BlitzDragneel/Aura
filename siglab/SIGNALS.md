@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 10:30 UTC
+Updated 2026-11-28 10:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -76,7 +76,7 @@ Updated 2026-11-28 10:30 UTC
 | SOLUSD S7 | 9 | -0.054 | -0.21 | 0.667 | PAPER |
 | SUIUSD S1 | 13 | 0.132 | 0.62 | 0.769 | PAPER |
 | SUIUSD S2 | 13 | -0.02 | -0.08 | 0.615 | PAPER |
-| SUIUSD S3 | 11 | -0.229 | -0.89 | 0.545 | PAPER |
+| SUIUSD S3 | 12 | -0.168 | -0.69 | 0.583 | PAPER |
 | SUIUSD S4 | 13 | -0.205 | -1.03 | 0.615 | PAPER |
 | SUIUSD S5 | 8 | -0.018 | -0.06 | 0.625 | PAPER |
 | SUIUSD S6 | 10 | -0.198 | -0.81 | 0.6 | PAPER |
@@ -113,7 +113,7 @@ Updated 2026-11-28 10:30 UTC
 ## Latest signals
 
 - 28 Nov 06:45 XAGUSD buy S1 @ 43.91 SL 43.707 → open
-- 28 Nov 05:45 SUIUSD buy S3 @ 0.6638 SL 0.65765 → open
+- 28 Nov 05:45 SUIUSD buy S3 @ 0.6638 SL 0.65765 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 100 closed, avg -0.28R, 53% won.
 - 28 Nov 05:45 BNBUSD buy S3 @ 551.61 SL 548.45 → closed SL -1.11R. Stopped out after 83 min. Price never reached TP1 (best was 0.5R in favour, TP1 needed 0.6R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 99 closed, avg -0.27R, 54% won.
 - 28 Nov 05:30 AVAXUSD buy S3 @ 6.547 SL 6.4927 → closed SL -1.07R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 98 closed, avg -0.26R, 54% won.
 - 28 Nov 05:15 SUIUSD sell S2 @ 0.6661 SL 0.67225 → closed TP2+BE +0.49R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 66 closed, avg -0.38R, 46% won.
