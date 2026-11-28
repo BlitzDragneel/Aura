@@ -1606,3 +1606,6 @@ Market now: trend up, volatility low, Asia session
 ⚡ Bitcoin: TREND resuming right now (downtrend, price closed back below its short average after a bounce), price ~59960.0
 Market now: trend down, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.06R). Logged and scored anyway.
+
+## 2026-11-28 03:16:04 UTC
+🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 92 live signals (38 separate moments) averaging -0.20R.
