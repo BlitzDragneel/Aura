@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 14:30 UTC
+Updated 2026-11-28 14:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -46,7 +46,7 @@ Updated 2026-11-28 14:30 UTC
 | ETHUSD S5 | 9 | -0.15 | -0.5 | 0.556 | PAPER |
 | ETHUSD S6 | 10 | 0.212 | 0.8 | 0.8 | PAPER |
 | ETHUSD S7 | 11 | 0.192 | 0.9 | 0.818 | PAPER |
-| LINKUSD S1 | 12 | 0.279 | 1.31 | 0.833 | PAPER |
+| LINKUSD S1 | 13 | 0.267 | 1.36 | 0.846 | PAPER |
 | LINKUSD S2 | 13 | 0.244 | 1.26 | 0.846 | PAPER |
 | LINKUSD S3 | 10 | -0.586 | -2.35 | 0.3 | PAPER |
 | LINKUSD S4 | 13 | -0.374 | -1.73 | 0.462 | PAPER |
@@ -113,7 +113,7 @@ Updated 2026-11-28 14:30 UTC
 ## Latest signals
 
 - 28 Nov 13:45 XAUUSD buy S3 @ 3659.7 SL 3652.38 → open
-- 28 Nov 13:00 LINKUSD sell S1 @ 9.156 SL 9.2187 → open
+- 28 Nov 13:00 LINKUSD sell S1 @ 9.156 SL 9.2187 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 177 closed, avg +0.22R, 77% won.
 - 28 Nov 12:00 LTCUSD buy S1 @ 44.06 SL 43.64 → closed SL -1.06R. Stopped out after 101 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 175 closed, avg +0.23R, 78% won.
 - 28 Nov 06:45 XAGUSD buy S1 @ 43.91 SL 43.707 → closed SL -1.15R. Stopped out after 411 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 175 closed, avg +0.23R, 78% won.
 - 28 Nov 05:45 SUIUSD buy S3 @ 0.6638 SL 0.65765 → closed TP2+BE +0.51R. Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 100 closed, avg -0.28R, 53% won.
