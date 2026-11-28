@@ -1609,3 +1609,9 @@ Market now: trend down, volatility low, Asia session
 
 ## 2026-11-28 03:16:04 UTC
 🔁 Learning: fib pullback with the trend is now MUTED (no trade plans) after 92 live signals (38 separate moments) averaging -0.20R.
+
+## 2026-11-28 06:00:57 UTC
+👀 Bitcoin day: WATCH at 59,710.20. Big move likely, direction unknown. hourly volatility is unusually compressed (5th percentile): squeezes often end in a burst (untested here)
+
+## 2026-11-28 06:01:11 UTC
+🔁 Learning: trend pullback with the trend is now EARNED (trade plans sent again, tagged) after 171 live signals (60 separate moments) averaging +0.15R.
