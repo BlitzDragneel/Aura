@@ -1641,3 +1641,9 @@ Silver 43.93 | 1h trend flat | vol quiet | typical day range 3.2% | big 4h move 
 Calls come only from tested rules. WATCH = move likely, direction unknown.
 
 👀 Gold day: WATCH at 3,665.70. Big move likely, direction unknown. hourly volatility is unusually compressed (5th percentile): squeezes often end in a burst (untested here)
+
+## 2026-11-28 13:46:06 UTC
+❌ Silver BUY (trend pullback) closed: SL, -1.15R (-23 pips)
+Why: Stopped out after 411 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: trend pullback with the trend: 175 closed, avg +0.23R, 78% won.
+
+🔁 Learning: trend pullback with the trend is now back to normal.
