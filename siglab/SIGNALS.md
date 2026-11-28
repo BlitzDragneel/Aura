@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 00:31 UTC
+Updated 2026-11-28 00:45 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -54,7 +54,7 @@ Updated 2026-11-28 00:31 UTC
 | LINKUSD S6 | 10 | -0.17 | -0.87 | 0.7 | PAPER |
 | LINKUSD S7 | 10 | 0.138 | 0.47 | 0.7 | PAPER |
 | LTCUSD S1 | 13 | 0.248 | 1.02 | 0.769 | PAPER |
-| LTCUSD S2 | 12 | -0.324 | -1.39 | 0.5 | PAPER |
+| LTCUSD S2 | 13 | -0.288 | -1.33 | 0.538 | PAPER |
 | LTCUSD S3 | 13 | -0.295 | -1.28 | 0.538 | PAPER |
 | LTCUSD S4 | 13 | -0.191 | -0.77 | 0.538 | PAPER |
 | LTCUSD S5 | 9 | -0.084 | -0.32 | 0.667 | PAPER |
@@ -112,7 +112,7 @@ Updated 2026-11-28 00:31 UTC
 
 ## Latest signals
 
-- 28 Nov 00:15 LTCUSD buy S2 @ 45.27 SL 44.796 → open
+- 28 Nov 00:15 LTCUSD buy S2 @ 45.27 SL 44.796 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 101 closed, avg +0.13R, 76% won.
 - 28 Nov 00:15 SOLUSD buy S1 @ 71.74 SL 70.954 → open
 - 28 Nov 00:00 SUIUSD sell S4 @ 0.6729 SL 0.680764 → open
 - 28 Nov 00:00 SUIUSD buy S1 @ 0.6729 SL 0.665036 → open
