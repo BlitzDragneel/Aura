@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 00:01 UTC
+Updated 2026-11-28 00:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -55,7 +55,7 @@ Updated 2026-11-28 00:01 UTC
 | LINKUSD S7 | 10 | 0.138 | 0.47 | 0.7 | PAPER |
 | LTCUSD S1 | 13 | 0.248 | 1.02 | 0.769 | PAPER |
 | LTCUSD S2 | 12 | -0.324 | -1.39 | 0.5 | PAPER |
-| LTCUSD S3 | 12 | -0.326 | -1.32 | 0.5 | PAPER |
+| LTCUSD S3 | 13 | -0.295 | -1.28 | 0.538 | PAPER |
 | LTCUSD S4 | 13 | -0.191 | -0.77 | 0.538 | PAPER |
 | LTCUSD S5 | 9 | -0.084 | -0.32 | 0.667 | PAPER |
 | LTCUSD S6 | 10 | -0.093 | -0.34 | 0.6 | PAPER |
@@ -112,9 +112,11 @@ Updated 2026-11-28 00:01 UTC
 
 ## Latest signals
 
+- 28 Nov 00:15 LTCUSD buy S2 @ 45.27 SL 44.796 → open
+- 28 Nov 00:15 SOLUSD buy S1 @ 71.74 SL 70.954 → open
 - 28 Nov 00:00 SUIUSD sell S4 @ 0.6729 SL 0.680764 → open
 - 28 Nov 00:00 SUIUSD buy S1 @ 0.6729 SL 0.665036 → open
-- 28 Nov 00:00 LTCUSD sell S3 @ 45.17 SL 45.644 → open
+- 28 Nov 00:00 LTCUSD sell S3 @ 45.17 SL 45.644 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 96 closed, avg -0.27R, 53% won.
 - 28 Nov 00:00 AVAXUSD sell S4 @ 6.608 SL 6.6766 → open
 - 28 Nov 00:00 ADAUSD sell S4 @ 0.1482 SL 0.149979 → open
 - 28 Nov 00:00 DOGEUSD buy S1 @ 0.0577 SL 0.057022 → open
@@ -170,5 +172,3 @@ Updated 2026-11-28 00:01 UTC
 - 27 Nov 02:15 SOLUSD sell S3 @ 72.09 SL 72.64 → closed SL -1.08R. Stopped out after 11 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
 - 27 Nov 02:15 SOLUSD buy S2 @ 72.09 SL 71.54 → closed TP3 +0.95R. TP3 after 18 min (best 1.5R, worst -0.2R). Lesson so far: breakout with the trend: 94 closed, avg +0.08R, 74% won.
 - 27 Nov 02:15 ETHUSD sell S3 @ 1714.96 SL 1726.64 → closed SL -1.09R. Stopped out after 11 min. Price never reached TP1 (best was 0.2R in favour, TP1 needed 0.8R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
-- 27 Nov 02:15 ETHUSD buy S2 @ 1714.96 SL 1703.28 → closed TP3 +0.93R. TP3 after 11 min (best 1.8R, worst -0.2R). Lesson so far: breakout with the trend: 90 closed, avg +0.04R, 73% won.
-- 27 Nov 02:15 BTCUSD sell S3 @ 61236.8 SL 61568.49 → closed SL -1.03R. Stopped out after 11 min. Price never reached TP1 (best was 0.3R in favour, TP1 needed 0.7R). The signal was against the 15-minute trend. Lesson so far: stretch fade against the trend: 85 closed, avg -0.18R, 59% won.
