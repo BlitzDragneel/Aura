@@ -15,30 +15,30 @@ Built automatically from the research findings, the approved rules and my own fo
 - brief. Day rules were searched on PAXG 2020–23 (hourly correlation with GC 0.984) and checked on GC 1h 2026.
 - Not available: Dukascopy (not attempted); BLS calendars answer 403, so CPI/NFP/PPI were skipped. FOMC dates come from
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 304 readings scored; big moves followed 17% of them, 19% after a WATCH (89 WATCH readings).
+- My own record: 305 readings scored; big moves followed 17% of them, 19% after a WATCH (89 WATCH readings).
 
 ## Swing trades (1-20 days)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 284 readings scored; big moves followed 39% of them, 43% after a WATCH (164 WATCH readings).
+- My own record: 285 readings scored; big moves followed 39% of them, 43% after a WATCH (164 WATCH readings).
 
 ## Holding (weeks-months)
 
 - No rule has passed for this horizon, so I do not call trades here; I WAIT or WATCH.
-- My own record: 133 readings scored; big moves followed 53% of them - too few to judge yet.
+- My own record: 134 readings scored; big moves followed 52% of them - too few to judge yet.
 
 ## Habits I measure myself
 
 - Over the last 20 days the busiest session was New York (average hourly move 0.25%) and the quietest London (0.16%).
-- At weekends, while spot is closed, the perpetual moves 46% as much per hour as on weekdays: weekend prices are thin and less reliable.
+- At weekends, while spot is closed, the perpetual moves 47% as much per hour as on weekdays: weekend prices are thin and less reliable.
 - A typical day ranges 1.6% from low to high (last 60 days); 42% of those days closed higher.
 - Over the last 30 days the price moved -9.7% (a fact, not a forecast).
 
 ## Right now
 
-- Price 3659.7; volatility regime quiet (hourly ATR 0.134% of price, 4.1th percentile).
+- Price 3658.9; volatility regime quiet (hourly ATR 0.143% of price, 4.3th percentile).
 - spot gold/silver closed for the weekend; the perpetual still trades but thinly - moves are less reliable.
-- Spot XAUUSD 3653.50 (stale: market closed).
+- Spot XAUUSD 3653.49 (stale: market closed).
 
 ## My calls so far
 
