@@ -1632,3 +1632,12 @@ record of this setup here: 12 closed, avg +0.14R, 75% won
 
 ## 2026-11-28 09:00:58 UTC
 👀 Silver day: WATCH at 43.91. Big move likely, direction unknown. hourly volatility is unusually compressed (5th percentile): squeezes often end in a burst (untested here)
+
+## 2026-11-28 11:00:56 UTC
+🌅 OMEGA morning read
+Bitcoin 59,226.20 | 1h trend down | vol quiet | typical day range 2.84% | big 4h move chance 19% | day WAIT · swing WAIT · hold WAIT
+Gold 3,665.70 | 1h trend flat | vol quiet | typical day range 1.58% | big 4h move chance 2% | day WATCH · swing WATCH · hold WAIT
+Silver 43.93 | 1h trend flat | vol quiet | typical day range 3.2% | big 4h move chance 33% | day WATCH · swing WAIT · hold WAIT
+Calls come only from tested rules. WATCH = move likely, direction unknown.
+
+👀 Gold day: WATCH at 3,665.70. Big move likely, direction unknown. hourly volatility is unusually compressed (5th percentile): squeezes often end in a burst (untested here)
