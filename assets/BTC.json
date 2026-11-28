@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-28T06:00:47.391852+00:00",
+ "asof": "2026-11-28T06:15:39.843230+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 59710.2,
-  "bar": "2026-11-28T05:45:00+00:00",
+  "price": 59741.9,
+  "bar": "2026-11-28T06:00:00+00:00",
   "trend": {
    "15m": {
     "state": "flat",
-    "close": 59710.2,
-    "ma20": 59970.56499999999,
-    "ma50": 59881.685999999994,
-    "slope_atr": -0.29,
-    "bar": "2026-11-28T05:45:00+00:00"
+    "close": 59741.9,
+    "ma20": 59955.725,
+    "ma50": 59885.02,
+    "slope_atr": -0.44,
+    "bar": "2026-11-28T06:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -1.08,
   "funding": {
-   "rate": 5.34839682116e-05,
+   "rate": 5.47627590678e-05,
    "next_time": 1795852800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.158,
+    "p_big_move": 0.148,
     "flag": false,
     "detail": {
-     "p_up_move": 0.046,
-     "p_down_move": 0.112
+     "p_up_move": 0.045,
+     "p_down_move": 0.103
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -129,7 +129,7 @@
   "day": {
    "state": "WATCH",
    "since": "2026-11-28T06:00:47.391852+00:00",
-   "previous": "WAIT",
+   "previous": "WATCH",
    "reasons": [
     "hourly volatility is unusually compressed (5th percentile): squeezes often end in a burst (untested here)",
     "no rule for this asset and horizon has passed its test yet, so the bot calls no trades"
@@ -253,7 +253,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 59710.2; volatility regime quiet (hourly ATR 0.495% of price, 4.7th percentile).",
+    "Price 59741.9; volatility regime quiet (hourly ATR 0.495% of price, 4.7th percentile).",
     "Bitcoin trades 24/7; weekend liquidity is thinner."
    ]
   },
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 1217,
+ "runs": 1218,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }

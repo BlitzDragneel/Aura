@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 06:00 UTC
+Updated 2026-11-28 06:15 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -68,7 +68,7 @@ Updated 2026-11-28 06:00 UTC
 | NAS100 S6 | 4 | -0.254 | -0.57 | 0.5 | PAPER |
 | NAS100 S7 | 3 | 0.488 | 0.5 | 0.667 | PAPER |
 | SOLUSD S1 | 13 | 0.221 | 1.01 | 0.769 | PAPER |
-| SOLUSD S2 | 12 | 0.184 | 0.8 | 0.75 | PAPER |
+| SOLUSD S2 | 13 | 0.177 | 0.84 | 0.769 | PAPER |
 | SOLUSD S3 | 9 | -0.33 | -1.42 | 0.556 | PAPER |
 | SOLUSD S4 | 12 | 0.021 | 0.1 | 0.75 | PAPER |
 | SOLUSD S5 | 9 | -0.214 | -0.73 | 0.556 | PAPER |
@@ -117,7 +117,7 @@ Updated 2026-11-28 06:00 UTC
 - 28 Nov 05:30 AVAXUSD buy S3 @ 6.547 SL 6.4927 → closed SL -1.07R. Stopped out after 16 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.5R). The signal was against the 15-minute trend. The range was compressed: breaks from tight ranges often fail first. Lesson so far: stretch fade against the trend: 98 closed, avg -0.26R, 54% won.
 - 28 Nov 05:15 SUIUSD sell S2 @ 0.6661 SL 0.67225 → open
 - 28 Nov 05:15 AVAXUSD sell S2 @ 6.557 SL 6.6113 → open
-- 28 Nov 05:15 SOLUSD sell S2 @ 71.33 SL 71.958 → open
+- 28 Nov 05:15 SOLUSD sell S2 @ 71.33 SL 71.958 → closed TP1+BE +0.10R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 65 closed, avg -0.39R, 45% won.
 - 28 Nov 05:15 ETHUSD sell S2 @ 1657.52 SL 1669.76 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 1.0R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 102 closed, avg +0.13R, 76% won.
 - 28 Nov 03:30 ADAUSD buy S3 @ 0.1471 SL 0.145393 → closed TP1+BE +0.12R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 97 closed, avg -0.27R, 54% won.
 - 28 Nov 03:30 ADAUSD sell S2 @ 0.1471 SL 0.148807 → open
