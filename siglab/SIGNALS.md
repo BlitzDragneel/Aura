@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 04:15 UTC
+Updated 2026-11-28 04:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -77,7 +77,7 @@ Updated 2026-11-28 04:15 UTC
 | SUIUSD S1 | 13 | 0.132 | 0.62 | 0.769 | PAPER |
 | SUIUSD S2 | 12 | -0.063 | -0.23 | 0.583 | PAPER |
 | SUIUSD S3 | 11 | -0.229 | -0.89 | 0.545 | PAPER |
-| SUIUSD S4 | 12 | -0.233 | -1.08 | 0.583 | PAPER |
+| SUIUSD S4 | 13 | -0.205 | -1.03 | 0.615 | PAPER |
 | SUIUSD S5 | 8 | -0.018 | -0.06 | 0.625 | PAPER |
 | SUIUSD S6 | 10 | -0.198 | -0.81 | 0.6 | PAPER |
 | SUIUSD S7 | 9 | 0.221 | 0.8 | 0.778 | PAPER |
@@ -141,7 +141,7 @@ Updated 2026-11-28 04:15 UTC
 - 28 Nov 01:00 ETHUSD sell S1 @ 1660.65 SL 1678.37 → open
 - 28 Nov 00:15 LTCUSD buy S2 @ 45.27 SL 44.796 → closed TP1+BE +0.14R. Reached TP1 then came back to the entry (best 0.8R). Partial profit kept by moving the stop to entry. Lesson so far: breakout with the trend: 101 closed, avg +0.13R, 76% won.
 - 28 Nov 00:15 SOLUSD buy S1 @ 71.74 SL 70.954 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.6R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 165 closed, avg +0.21R, 76% won.
-- 28 Nov 00:00 SUIUSD sell S4 @ 0.6729 SL 0.680764 → open
+- 28 Nov 00:00 SUIUSD sell S4 @ 0.6729 SL 0.680764 → closed TP1+BE +0.13R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: fib pullback against the trend: 79 closed, avg -0.33R, 51% won.
 - 28 Nov 00:00 SUIUSD buy S1 @ 0.6729 SL 0.665036 → closed TP1+BE +0.11R. Reached TP1 then came back to the entry (best 0.5R). Partial profit kept by moving the stop to entry. Lesson so far: trend pullback with the trend: 165 closed, avg +0.21R, 76% won.
 - 28 Nov 00:00 LTCUSD sell S3 @ 45.17 SL 45.644 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.4R). Partial profit kept by moving the stop to entry. Lesson so far: stretch fade against the trend: 96 closed, avg -0.27R, 53% won.
 - 28 Nov 00:00 AVAXUSD sell S4 @ 6.608 SL 6.6766 → open
