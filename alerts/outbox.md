@@ -1588,3 +1588,8 @@ Market now: trend down, volatility low, Asia session
 ⚡ Gold: TREND resuming right now (uptrend, price closed back above its short average after a dip), price ~3663.4
 Market now: trend up, volatility low, Asia session
 ℹ️ No trade plan: on past data, trading this kind of move with the trend lost money (avg -0.15R). Logged and scored anyway.
+
+## 2026-11-28 01:46:02 UTC
+⚡ Gold: PULLBACK in a strong move right now (bounced back half of a strong down-leg), price ~3665.4
+Market now: trend up, volatility low, Asia session
+ℹ️ No trade plan: on its live record, trading this kind of move against the trend lost money (avg -0.22R). Logged and scored anyway.
