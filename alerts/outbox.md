@@ -1629,3 +1629,6 @@ TP2 44.15 (reached in 40% of similar moments in the last 3 days)
 TP3 44.4 (reached in 20% of similar moments in the last 3 days)
 Setup: trend pullback (uptrend, price closed back above its short average after a dip)
 record of this setup here: 12 closed, avg +0.14R, 75% won
+
+## 2026-11-28 09:00:58 UTC
+👀 Silver day: WATCH at 43.91. Big move likely, direction unknown. hourly volatility is unusually compressed (5th percentile): squeezes often end in a burst (untested here)
