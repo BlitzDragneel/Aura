@@ -40652,7 +40652,7 @@
     3705.41
    ],
    "R": 13.529,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
@@ -40661,7 +40661,15 @@
    "day": "2026-11-28",
    "grade_at_issue": "PAPER",
    "sent": true,
-   "plan_sent": false
+   "plan_sent": false,
+   "fill": 3673.0,
+   "outcome": "SL",
+   "R_ladder": -1.015,
+   "R_tp1": -1.015,
+   "pips": -137.3,
+   "closed_ms": 1795847100000,
+   "source": "okx-perp-1m",
+   "review": "Stopped out after 220 min. Price never reached TP1 (best was 0.0R in favour, TP1 needed 0.6R). The range was compressed: breaks from tight ranges often fail first. Lesson so far: breakout with the trend: 103 closed, avg +0.13R, 77% won."
   },
   {
    "id": "XAGUSD-S2-1795833900000",
@@ -41319,14 +41327,22 @@
     0.654919
    ],
    "R": 0.00615,
-   "status": "open",
+   "status": "closed",
    "target_odds": [
     60,
     40,
     20
    ],
    "day": "2026-11-28",
-   "grade_at_issue": "PAPER"
+   "grade_at_issue": "PAPER",
+   "fill": 0.6662,
+   "outcome": "TP2+BE",
+   "R_ladder": 0.488,
+   "R_tp1": 0.529,
+   "pips": 44.3,
+   "closed_ms": 1795846680000,
+   "source": "okx-perp-1m",
+   "review": "Reached TP2 then came back to the entry (best 1.1R). Partial profit kept by moving the stop to entry. Lesson so far: breakout against the trend: 66 closed, avg -0.38R, 46% won."
   },
   {
    "id": "AVAXUSD-S3-1795843800000",
@@ -42003,11 +42019,11 @@
     "grade": "PAPER"
    },
    "SUIUSD S2": {
-    "n": 12,
-    "avg_R": -0.063,
-    "t": -0.23,
-    "win": 0.583,
-    "total_R": -0.75,
+    "n": 13,
+    "avg_R": -0.02,
+    "t": -0.08,
+    "win": 0.615,
+    "total_R": -0.26,
     "grade": "PAPER"
    },
    "SUIUSD S3": {
@@ -42171,11 +42187,11 @@
     "grade": "PAPER"
    },
    "XAUUSD S2": {
-    "n": 12,
-    "avg_R": -0.159,
-    "t": -0.67,
-    "win": 0.583,
-    "total_R": -1.91,
+    "n": 13,
+    "avg_R": -0.225,
+    "t": -0.98,
+    "win": 0.538,
+    "total_R": -2.92,
     "grade": "PAPER"
    },
    "XAUUSD S3": {
@@ -42284,11 +42300,11 @@
     "total_R": 37.85
    },
    "S2": {
-    "n": 169,
-    "avg_R": -0.072,
-    "t": -1.19,
-    "win": 0.645,
-    "total_R": -12.11
+    "n": 171,
+    "avg_R": -0.074,
+    "t": -1.23,
+    "win": 0.643,
+    "total_R": -12.64
    },
    "S3": {
     "n": 155,
@@ -42327,13 +42343,13 @@
    }
   },
   "all": {
-   "n": 1037,
+   "n": 1039,
    "avg_R": -0.03,
-   "t": -1.19,
-   "win": 0.661,
-   "total_R": -30.68
+   "t": -1.21,
+   "win": 0.66,
+   "total_R": -31.21
   },
-  "open": 20
+  "open": 18
  },
  "record_by_context": {
   "S1 | Asia": {
@@ -42414,11 +42430,11 @@
    "total_R": 37.85
   },
   "S2 | Asia": {
-   "n": 129,
-   "avg_R": 0.019,
-   "t": 0.29,
-   "win": 0.705,
-   "total_R": 2.51
+   "n": 131,
+   "avg_R": 0.015,
+   "t": 0.23,
+   "win": 0.702,
+   "total_R": 1.98
   },
   "S2 | London": {
    "n": 27,
@@ -42435,18 +42451,18 @@
    "total_R": -5.63
   },
   "S2 | against trend": {
-   "n": 66,
-   "avg_R": -0.38,
-   "t": -4.09,
-   "win": 0.455,
-   "total_R": -25.05
+   "n": 67,
+   "avg_R": -0.367,
+   "t": -3.97,
+   "win": 0.463,
+   "total_R": -24.56
   },
   "S2 | compressed": {
-   "n": 92,
-   "avg_R": -0.054,
-   "t": -0.67,
-   "win": 0.652,
-   "total_R": -4.98
+   "n": 94,
+   "avg_R": -0.059,
+   "t": -0.73,
+   "win": 0.649,
+   "total_R": -5.51
   },
   "S2 | expanding": {
    "n": 9,
@@ -42477,25 +42493,25 @@
    "total_R": -1.76
   },
   "S2 | vol low": {
-   "n": 37,
-   "avg_R": -0.062,
-   "t": -0.5,
-   "win": 0.676,
-   "total_R": -2.3
+   "n": 38,
+   "avg_R": -0.087,
+   "t": -0.7,
+   "win": 0.658,
+   "total_R": -3.31
   },
   "S2 | vol normal": {
-   "n": 117,
-   "avg_R": -0.069,
-   "t": -0.93,
-   "win": 0.632,
-   "total_R": -8.05
+   "n": 118,
+   "avg_R": -0.064,
+   "t": -0.87,
+   "win": 0.636,
+   "total_R": -7.56
   },
   "S2 | with trend": {
-   "n": 103,
-   "avg_R": 0.126,
-   "t": 1.72,
-   "win": 0.767,
-   "total_R": 12.94
+   "n": 104,
+   "avg_R": 0.115,
+   "t": 1.57,
+   "win": 0.76,
+   "total_R": 11.93
   },
   "S3 | Asia": {
    "n": 80,
@@ -42908,11 +42924,11 @@
   "S2 against": {
    "state": "muted",
    "n": 32,
-   "avg_R": -0.379,
-   "t": -2.91,
+   "avg_R": -0.373,
+   "t": -2.85,
    "win": 0.375,
-   "total_R": -12.13,
-   "signals": 66
+   "total_R": -11.93,
+   "signals": 67
   }
  },
  "adapt_log": [
