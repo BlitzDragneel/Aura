@@ -1,6 +1,6 @@
 # OMEGA Signal Lab (paper signals, every one scored)
 
-Updated 2026-11-28 05:15 UTC
+Updated 2026-11-28 05:30 UTC
 
 | setup · market | closed | avg R | t | won | grade |
 |---|---|---|---|---|---|
@@ -112,6 +112,7 @@ Updated 2026-11-28 05:15 UTC
 
 ## Latest signals
 
+- 28 Nov 05:30 AVAXUSD buy S3 @ 6.547 SL 6.4927 → open
 - 28 Nov 05:15 SUIUSD sell S2 @ 0.6661 SL 0.67225 → open
 - 28 Nov 05:15 AVAXUSD sell S2 @ 6.557 SL 6.6113 → open
 - 28 Nov 05:15 SOLUSD sell S2 @ 71.33 SL 71.958 → open
@@ -171,4 +172,3 @@ Updated 2026-11-28 05:15 UTC
 - 27 Nov 07:00 DOGEUSD buy S6 @ 0.05806 SL 0.057657 → closed TP2+BE +0.50R. Reached TP2 then came back to the entry (best 1.3R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 88 closed, avg +0.08R, 76% won.
 - 27 Nov 07:00 XRPUSD buy S6 @ 0.972 SL 0.965257 → closed TP3 +1.18R. TP3 after 80 min (best 2.2R, worst -0.2R). Lesson so far: daily bias with the trend: 85 closed, avg +0.06R, 75% won.
 - 27 Nov 07:00 BNBUSD buy S6 @ 565.44 SL 562.32 → closed TP1+BE +0.08R. Reached TP1 then came back to the entry (best 0.9R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 85 closed, avg +0.06R, 75% won.
-- 27 Nov 07:00 SOLUSD buy S6 @ 73.02 SL 72.435 → closed TP2+BE +0.47R. Reached TP2 then came back to the entry (best 1.5R). Partial profit kept by moving the stop to entry. Lesson so far: daily bias with the trend: 92 closed, avg +0.09R, 77% won.
