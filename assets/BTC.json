@@ -3,20 +3,20 @@
  "name": "Bitcoin",
  "perp": "BTCUSDT",
  "spot_symbol": null,
- "asof": "2026-11-28T07:00:47.384399+00:00",
+ "asof": "2026-11-28T07:15:41.913374+00:00",
  "data_source": "okx-swap",
  "errors": [],
  "read": {
-  "price": 59717.4,
-  "bar": "2026-11-28T06:45:00+00:00",
+  "price": 59679.3,
+  "bar": "2026-11-28T07:00:00+00:00",
   "trend": {
    "15m": {
-    "state": "flat",
-    "close": 59717.4,
-    "ma20": 59904.95,
-    "ma50": 59880.85600000001,
-    "slope_atr": -0.54,
-    "bar": "2026-11-28T06:45:00+00:00"
+    "state": "down",
+    "close": 59679.3,
+    "ma20": 59878.615000000005,
+    "ma50": 59878.944,
+    "slope_atr": -0.53,
+    "bar": "2026-11-28T07:00:00+00:00"
    },
    "1h": {
     "state": "down",
@@ -92,7 +92,7 @@
   "note": "descriptive only: trend words say where price sits against its averages, they are not a call",
   "change_24h_pct": -1.08,
   "funding": {
-   "rate": 4.99690272021e-05,
+   "rate": 4.89562106506e-05,
    "next_time": 1795852800000,
    "source": "okx-swap"
   },
@@ -100,11 +100,11 @@
    "day": {
     "horizon": "4 h",
     "skill_ok": true,
-    "p_big_move": 0.136,
+    "p_big_move": 0.185,
     "flag": false,
     "detail": {
-     "p_up_move": 0.045,
-     "p_down_move": 0.091
+     "p_up_move": 0.077,
+     "p_down_move": 0.108
     },
     "trained_to": "2026-11-03",
     "label": "OMEGA scouts (30 coins); tested E81/E82: rank big moves better than chance, trading the flags lost money after costs",
@@ -253,7 +253,7 @@
   {
    "title": "Right now",
    "lines": [
-    "Price 59717.4; volatility regime quiet (hourly ATR 0.436% of price, 4.1th percentile).",
+    "Price 59679.3; volatility regime quiet (hourly ATR 0.436% of price, 4.1th percentile).",
     "Bitcoin trades 24/7; weekend liquidity is thinner."
    ]
   },
@@ -264,6 +264,6 @@
    ]
   }
  ],
- "runs": 1221,
+ "runs": 1222,
  "honesty": "Calls come only from rules that passed a pre-registered test (edges/approved.json, status paper or higher). With no such rule the bot only WAITs or WATCHes. Paper records, never an order; execution_allowed is true only for testnet/live rules."
 }
